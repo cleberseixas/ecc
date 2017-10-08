@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+
+	<!-- nome da persistência. Colocar o nome do banco de dados -->
+	<persistence-unit name="ecc" transaction-type="RESOURCE_LOCAL">
+
+		<!-- provedor/implementacao do JPA -->
+
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+		<!-- Configuração do cache de segundo nível -->
+		<shared-cache-mode>ALL</shared-cache-mode>
+
+		<!-- entidade mapaeada -->
+		<properties>
+
+			<!-- Configuração para o PostGreSql: -->
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+
+			<!-- Acesso servidor porto velho -->
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost/astec_bd" />
+			<property name="javax.persistence.jdbc.user" value="postgres" />
+				<property name="javax.persistence.jdbc.password" value="postgres" />
+
+			<!-- propriedades do hibernate -->
+			<!-- Dialect para postgree -->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+
+			<!-- atualiza o banco, gera as tabelas se for preciso value: validade 
+				ou update Esta opção só fica ativa quando se está gerando as tabelas no banco. -->
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+
+			<!-- Configuração do cache de segundo nível SingletonEhCacheRegionFactory -->
+			<property name="hibernate.cache.region.factory_class"
+				value="org.hibernate.cache.ehcache.EhCacheRegionFactory" />
+			<property name="hibernate.cache.use_query_cache" value="true" />
+			<property name="hibernate.cache.use_second_level_cache"
+				value="true" />
+			<property name="hibernate.cache.use_query_cache" value="true" />
+
+			<property name="hibernate.cache.provider_class" value="net.sf.ehcache.hibernate.EhCacheProvider" />
+			<property name="hibernate.cache.use_structured_entries"
+				value="true" />
+
+
+			<!-- configuração do pool de conexão com c3po -->
+			<property name="hibernate.connection.provider_class"
+				value="org.hibernate.connection.C3P0ConnectionProvider" />
+			<property name="hibernate.c3p0.min_size" value="5" />  <!-- número mínimo de conexões -->
+			<property name="hibernate.c3p0.max_size" value="200" /> <!-- número máximo de conexões -->
+			<property name="hibernate.c3p0.max_statements" value="400" /> <!-- número máximo de conexões previamente preparadas -->
+			<property name="hibernate.c3p0.timeout" value="600" /> <!-- segundos tempo que uma conexão é removida por inatividade -->
+
+
+			<property name="hibernate.c3p0.idle_test_period" value="660" /> <!-- tempo em que as conexões serão verificadas -->
+			<property name="hibernate.c3p0.acquire_increment" value="1" /> <!-- número de conexões a serem abertas a cada solicitação -->
+			<!-- <property name="hibernate.c3p0.maxConnectionAge" value="900" /> mata 
+				as conexões após 20 minutos -->
+			<property name="hibernate.transaction.auto_close_session"
+				value="true" /> <!-- Fechar a sessão logo a pós a transação (automaticamente) -->
+
+			<!-- configurações para restaurar conexões com o banco de dados quando 
+				houver queda momentânea -->
+			<property name="hibernate.c3p0.acquireRetryAttempts" value="0" /> <!-- quantas vezes ficará tentando restabelecer a conexão. Se 0 tenta indefinidamente -->
+			<property name="hibernate.c3p0.acquireRetryDelay" value="2000" /> <!-- tempo em milisegundos que fará cada tentativa de restabelecer a conexão -->
+			<property name="hibernate.c3p0.breakAfterAcquireFailure"
+				value="false" /> <!-- se false, continua tentanto restabelecer. Se true, ao falhar, já cancela 
+				tudo! -->
+			<property name="hibernate.c3p0.preferredTestQuery" value="select 1" /> <!-- consulta padrão para ferificar se a conexão está ativa -->
+
+			<property name="hibernate.c3p0.testConnectionOnCheckout"
+				value="true" /> <!-- Valida a conexão quando solicitada pelo pool -->
+			<property name="hibernate.c3p0.testConnectionOnCheckin"
+				value="true" /> <!-- Valida a conexão ao ser utilizada -->
+			<property name="hibernate.connection.release_mode" value="AFTER_TRANSACTION" />
+
+			<!-- configurações do Envers -->
+			<property name="org.hibernate.envers.store_data_at_delete"
+				value="true" /> <!-- mantem auditado os atributos que foram apagados -->
+
+		</properties>
+	</persistence-unit>
+
+
+
+</persistence>

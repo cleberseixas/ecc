@@ -1,0 +1,7 @@
+Departamentos
+Cargos
+Funcionarios
+Cursos
+Gerência de Cursos
+Relatórios
+Estatisticas

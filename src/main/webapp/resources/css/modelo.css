@@ -1,0 +1,3532 @@
+body { overflow-x: hidden; }
+
+.circuloAzulList {
+	background-color: #1a8cff;
+	color: white;	
+	border-radius: 50%;
+	font-weight: bold;
+	padding: 2px;
+}
+
+.circuloVermelhoList {
+	background-color: #990000;
+	color: white;	
+	border-radius: 50%;
+	font-weight: bold;
+	padding: 2px;
+}
+
+.circuloLaranjaList {
+	background-color: #ff9900;
+	color: white;	
+	border-radius: 50%;
+	font-weight: bold;
+	padding: 2px;
+}
+
+.circuloVerdeList {
+	background-color: #003300;
+	color: white;	
+	border-radius: 50%;
+	font-weight: bold;
+	padding: 2px;
+}
+
+.circuloCinzaList {
+	background-color: #686b61;
+	color: white;	
+	border-radius: 50%;
+	font-weight: bold;
+	padding: 2px;
+}
+
+font-size: 1.1em;
+}
+
+h1, h2, h3 {
+	margin-top: 0;
+}
+
+h1 {
+	font-size: 1.6em;
+	font-weight: normal;
+}
+
+h2 {
+	font-size: 1.6em;
+}
+
+h3 {
+	font-size: 1em;
+	margin-top:20px;
+}
+
+
+img.left {
+	float: left;
+	margin: 0 20px 0 0;
+}
+
+img.right {
+	float: right;
+	margin: 0 0 0 20px;
+}
+
+/* Header */
+#header {
+    padding: 4px 0px;
+    height: 75px;
+    position: relative;
+}
+
+#logo {
+    text-align: left;
+}
+
+#globalthemeswitcher {
+    position:absolute;
+    top:5px;
+    right:50px;
+}
+
+/* Page */
+#page {
+	padding: 10px 0px;
+	background: #FFFFFF;
+}
+
+/* Content */
+#content {
+	width: 70%;
+    float:left;
+}
+
+.post {
+	padding-bottom: 15px;
+}
+
+.post h1 {
+	font-weight: normal;
+}
+
+.title {
+	height: 30px;
+	margin-left: 10px;
+	padding: 8px 0 0 20px;
+}
+
+.title a {
+	border-bottom: none;
+	color: #FFFFFF;
+}
+
+.title a:hover {
+	border-bottom: 1px dotted #000000;
+}
+
+.tag {
+	padding: 0 15px;
+}
+
+.entry {
+	padding: 0 20px;
+}
+
+.entry p {
+	line-height: 200%;
+}
+
+.links {
+	padding: 4px 0px;
+	text-align: right;
+	font-weight: bold;
+}
+
+.links a {
+	border: none;
+}
+
+.links a:hover {
+}
+
+#sidebar {
+	float: left;
+	width: 25%;
+	padding: 0 10px;
+	margin-left: -1px;
+    overflow: hidden;
+}
+
+#sidebar a.ui-state-hover, 
+#sidebar a.ui-state-highlight {
+    border:0 none;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+#sidebar table {
+    width: 100%;
+}
+
+#sidebar table td {
+    vertical-align: top;
+}
+
+#sidebar ul {
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar ul li {
+    list-style-type: none;
+    padding: 1px;
+}
+
+
+.homeText {
+	line-height: 175%;
+}
+
+.homeMenu {
+	width:200px;
+	float:left;
+	margin-right:10px
+}
+
+.themeMenu {
+    overflow: auto;
+    height:300px;
+    width:200px;
+}
+
+.dp-xml {
+    width:1000px;
+}
+
+.ui-themeswitcher a.ui-selectonemenu-label-container {
+    text-decoration: none !important;
+}
+
+.ui-widget {
+    font-size: 12px !important;
+}
+
+#box1 {
+	width:49.5%;
+	float: left;
+}
+
+#box2 {
+	width:49.5%;
+	float: right;
+}
+
+.Gildasio {
+text-align:center;
+}
+
+.Gildasio2 {
+margin-top: 4px;	
+}
+
+.ajax_status{
+	position: fixed;
+	top: 85px;
+	left: 10px;
+	width: 10px;
+	height: 10px;
+}
+
+#divFora {
+	width: 550px;
+	height: 60px;
+}
+
+#divLateralEsquerda {
+	position: relative;
+	width: 60px;
+	height: 60px;
+	float: left;
+}
+
+#divLateralEsquerda img {
+	position: absolute;
+	top: 8px;
+	left: 10px; 
+}
+
+#divLateralDireita {
+	width: 480px;
+	height: 60px;
+	float: right;
+}
+
+#divOrdemMissaoFora {
+	width: 100%;
+	height: 465px;
+}
+#divOrdemMissaoSuperior {
+	width: 100%;
+	height: 40px;
+	background-image:url(../resources/css/bg.png);
+	color:#FFFFFF;
+	top: 0px;
+	left: 0px;	
+}
+
+#divOrdemMissaoCentral {
+	width: 100%;
+	height: 370px;	
+}
+
+#divOrdemMissaoInferior {
+	width: 100%;
+	height: 40px;
+	background-image:url(../resources/css/bg.png) repeat-x;	
+	
+}
+
+.alinhaMarcelo {
+	top: 15px;
+	left: 20px;	
+	position: absolute;
+}
+
+
+.corPanel {
+	color: white;
+	font-weight: bold;
+}
+
+#divNotificacoes {
+	position: relative;
+	height: 217px;
+}
+
+#divAgnomNF img {
+	position: absolute;
+	right:10px;
+}
+
+#divOficios {
+	position: relative;
+	width: 625px;
+	height: 155px;
+}
+
+#divAgnomOF img {
+	position: absolute;
+	right:10px;
+}
+
+
+#divAgnomOM_Insere {
+	position:relative;
+	top:-18px;
+	float: right;
+}
+
+#divAgnomOM_Edita {
+	position:relative;
+	top:-10px;
+	float: right;
+}
+
+#divAgnomOM_UpLoad {	
+	position:relative;
+	float: right;
+	top: -40px;  
+}
+
+hr.ordemMissao {
+	text-align: left;
+}
+
+#divRedistribuicaoFora {
+	width: 100%;
+	height: 250px;
+}
+
+#divRedistribuicaoSuperior {
+	width: 100%;
+	height: 200px;
+}
+
+#divRedistribuicaoInferior {
+	margin-top:10px;
+	width: 100%;
+	height: 40px;
+}
+
+#divRedistribuicaoEsquerda {
+	width: 50%;
+	height: 200px;
+	position: relative;
+	float: left;
+	overflow-y:scroll;
+	overflow: auto;
+}
+
+#divRedistribuicaoDireita {
+	width: 45%;
+	height: 200px;
+	float: right;
+	margin-right: 10px;
+}
+
+#divRedistribuicaoEsquerdaInferior {
+	width: 67%;
+	height: 40px;
+	position: relative;
+	float: left;
+}
+
+#divRedistribuicaoDireitaInferior {
+	width: 33%;
+	height: 40px;
+	float: right;
+}
+
+#divPanelAvisos {
+	width: 50px;
+	height: 40px;
+	
+}
+
+.avisoDialogo {
+	margin-left: 7px;
+	font-size: 1.6em;
+	font-weight: normal;
+}
+
+#divProximosOficiais {
+	width: 100%;
+	height: 50px;
+}
+
+#divProximosOficiais01 {
+	width: 25%;
+	float: left;
+}
+
+#divProximosOficiais02 {
+	width: 25%;
+	float: left;
+	margin-top: 3px;	
+}
+
+#divProximosOficiais02 img {
+	margin-top:  -1px;
+	float: left;
+	margin: 0 2px 0 0;
+}
+
+#divProximosOficiais03 {
+	width: 25%;
+	float: left;
+	margin-top: 3px;	
+}
+
+#divProximosOficiais03 img {
+	margin-top:  -1px;
+	float: left;
+	margin: 0 2px 0 0;
+}
+
+
+#divProximosOficiais04 {
+	width: 25%;
+	float: left;
+	margin-top: 3px;	
+}
+
+#divProximosOficiais04 img {
+	margin-top:  -1px;
+	float: left;
+	margin: 0 2px 0 0;
+}
+
+.grid-login {
+	background-color: #f2f2f2;
+	border-radius: 8px;
+	border: 1px solid #ccc;
+	margin-top: 8px;
+	padding: 10px;
+}
+
+.negrito {
+	font-weight: bold;
+}
+
+.negrito_branco {
+	font-weight: bold;
+	color: white;
+}
+
+.centraliza {
+	text-align: center;
+}
+
+.centralizaNegrita {
+	text-align: center;
+	font-weight: bold;
+}
+
+.direitaNegrita {
+	text-align: right;
+	font-weight: bold;
+}
+
+
+#divOrdensForaSedeGeral {
+	width: 100%;
+	height: 40px;
+}
+
+#divOrdensForaSede01 {
+	width: 5%;
+	float: left;
+}
+
+
+#divOrdensForaSede02 {
+	width: 85%;
+	float: left;
+	font-weight: bold;
+	font-size: 10pt;
+	color: white;
+}
+
+#divOrdensForaSede03 {
+	width: 10%;
+	float: left;
+}
+
+#divPrintEtiquetaSuperior {
+	width: 100%;
+	height: 270px;
+}
+
+#divPrintEtiquetaInferior {
+	width: 100%;
+	height: 30px;	
+}
+
+.funga .ui-menuitem-text{
+	color:white;
+}
+
+.funga .ui-icon-triangle-1-s {
+    background: url(#{resource['imagens:seta-para-baixo.png']}) no-repeat;
+}
+
+
+#divGridNotificacoes {
+	position: relative;
+	margin-top: 5px;
+	width: 100%;
+	height: 220px;
+	background: #EEEEE0;
+	overflow: auto;
+}
+
+#divRodapeNotificacoes {
+	position: relative;
+	margin-top: 5px;
+	width: 100%;
+	height: 50px;
+}
+
+#divRodapeNotificacoes h1 {
+	float: right;
+	margin: 0 0 0 0;
+}
+
+.fontCalibri{
+	font-family: "calibri"
+}
+
+.fontConsolas {
+	font-family: "consolas"
+}
+
+.fontCourier {
+	font-family: "courier new"
+}
+
+.fontCourier_azul {
+	font-family: "courier new";
+	color: blue;
+}
+
+.fontCourier_vermelho {
+	font-family: "courier new";
+	color: #b30000;
+	
+}
+
+#divLoadingFora {
+	width: 100%;	
+}
+
+#divLoadingEsquerda {
+	width: 30%;
+	float: left;
+}
+
+#divLoadingDireita {
+	width: 70%;
+	float: right;
+}
+
+#divCheckOficial {
+	width: 100%;
+	height: 35px;	
+}
+
+#divParecer {
+	width: 100%;
+	height: 550px;
+}
+
+#divParecerSolicitacao {
+	width: 100%;
+	height: 490px;
+}
+
+#divParecerLateralDireita {
+	width: 100%;
+	height: 550px;
+}
+
+#divParecerLateralDireitaSolicitacao {
+	width: 100%;
+	height: 490px;
+}
+
+#divParecerLateralDireitaSolicitacao {
+	width: 100%;
+	height: 490px;
+}
+
+#divParecerLateralEsquerda {
+	width: 330px;
+	height: 550px;
+	float: left;
+	border-right: 1px solid #ccc;
+}
+
+#divParecerLateralEsquerdaSolicitacao {
+	width: 330px;
+	height: 490px;
+	float: left;
+	border-right: 1px solid #ccc;
+}
+
+#divParecerLateralEsquerdaSuperior {
+	width: 330px;
+	height: 175px;
+	float: left;
+	margin-bottom: 5px;
+}
+
+#divParecerLateralEsquerdaSuperiorSolicitacao {
+	width: 280px;
+	height: 175px;
+	float: left;
+	margin-bottom: 5px;
+}
+
+.divParecerCabecalho {
+	width: 280px;
+	height: 30px;
+	float: left;
+	margin-bottom: 5px;
+}
+
+.divParecerCabecalhoSolicitacao {
+	width: 280px;
+	height: 30px;
+	float: left;
+	margin-bottom: 5px;
+}
+
+
+.divParecerCorpo {
+	width: 280px;
+	height: 140px;
+	float: left;
+	overflow: auto;
+}
+
+.divParecerCorpoSolicitacao {
+	width: 310px;
+	height: 140px;
+	float: left;
+	overflow: auto;
+}
+
+#divParecer01 {
+	position: relative;
+	margin-top: 5px;
+	width: 40%;
+	height: 200px;
+	background: #EEEEE0;
+	overflow: auto;
+}
+
+.semBordaInterna td { 
+	border: none !important;
+	padding:0px !important;
+	margin:0px !important; 
+}
+
+.fonteParecer {
+	color: #18354e;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.fundoLabelAzul {
+	background-color: #1a8cff;
+	color: white;	
+	border-radius: 5px;
+	font-weight: bold;
+	padding: 3px;	
+}
+
+.fundoLabelLaranja {
+	background-color: #ff9900;
+	color: white;	
+	border-radius: 5px;
+	font-weight: bold;
+	padding: 3px;
+}
+
+.fundoLabelCinza {
+	background-color: #666666;
+	color: white;	
+	border-radius: 5px;
+	font-weight: bold;
+	padding: 3px;
+}
+
+.fundoLabelCinza2 {
+	background-color: #778899;
+	color: white;	
+	border-radius: 5px;
+	font-weight: bold;
+	padding: 3px;
+}
+
+.fundoLabelVerde {
+	background-color: #666633;
+	color: white;	
+	border-radius: 5px;
+	font-weight: bold;
+	padding: 3px;
+}
+
+.fundoLabelVerde2 {
+	background-color: #008000;
+	color: white;	
+	border-radius: 5px;
+	font-weight: bold;
+	padding: 3px;
+}
+
+.fundoLabelVerde3 {
+	background-color: #808000;
+	color: white;	
+	border-radius: 5px;
+	font-weight: bold;
+	padding: 3px;
+}
+
+.fundoLabelVerde4 {
+	background-color: #5F9EA0;
+	color: white;	
+	border-radius: 5px;
+	font-weight: bold;
+	padding: 3px;
+}
+
+.fundoLabelVermelho {
+	background-color: #cc3300;
+	color: white;	
+	border-radius: 5px;
+	font-weight: bold;
+	padding: 3px;
+}
+
+.fundoLabelVermelho2 {
+	background-color: #D2691E;
+	color: white;	
+	border-radius: 5px;
+	font-weight: bold;
+	padding: 3px;
+}
+
+.fundoLabelAmarelo {
+	background-color: #FFD700;
+	color: white;	
+	border-radius: 5px;
+	font-weight: bold;
+	padding: 3px;
+}
+
+.circulo {
+	background-color: #1a8cff;
+	color: white;	
+	border-radius: 50%;
+	font-weight: bold;
+	padding: 2px;
+	font-size: 10px;
+}
+
+.circuloVerde {
+	background-color: #008000;
+	color: white;	
+	border-radius: 50%;
+	font-weight: bold;
+	padding: 2px;
+	font-size: 10px;
+}
+
+.circuloLaranja {
+	background-color: #ff9900;
+	color: white;	
+	border-radius: 50%;
+	font-weight: bold;
+	padding: 2px;
+	font-size: 10px;
+}
+
+.circuloVermelho {
+	background-color: #cc3300;
+	color: white;	
+	border-radius: 50%;
+	font-weight: bold;
+	padding: 2px;
+	font-size: 10px;
+}
+
+.retangulo {
+	background-color: #008000;
+	color: white;	
+	font-weight: bold;
+	padding: 2px;
+	font-size: 9px;
+}
+
+.labelDataAnaliseParecer {
+	color: #003300;	
+	font-weight: bold;
+	font-size: 14px;
+}
+
+
+#divDetalhesFora {
+	width: 100%;
+	height: 100%;
+}
+
+#divDetalhesTop {
+	width: 100%;
+	height: 230px;
+}
+
+#divDetalhesBottom {
+	width: 100%;
+	height: 180px;
+}
+
+#divDetalhesBottomDivisao01 {
+	width: 240px;
+	height: 180px;
+	float: left;
+	overflow: auto;
+}
+
+#divDetalhesBottomDivisao02 {
+	width: 210px;
+	height: 180px;
+	float: left;
+	overflow: auto;
+}
+
+#divDetalhesBottomDivisao03 {
+	width: 210px;
+	height: 180px;
+	float: left;
+	overflow: auto;
+}
+
+#divEncaminharParecerEsquerda {
+	width: 175px;
+	height: 150px;
+	float: left;
+}
+
+#divEncaminharParecerDireita {
+	width: 645px;
+	height: 150px;
+}
+
+#divNovaMovimentacaoEsquerda {
+	width: 30%;
+	height: 370px;
+	float: left;
+	overflow: auto;
+	border-right: 1px solid #ccc;
+}
+
+#divNovaMovimentacaoDireita {
+	width: 68%;
+	height: 370px;
+	float: left;
+	margin-left: 10px;
+}
+
+#divNovaMovimentacaoEsquerdaChefe {
+	width: 270px;
+	height: 290px;
+	float: left;
+	overflow: auto;
+	border-right: 1px solid #ccc;
+}
+
+#divNovaMovimentacaoDireitaChefe {
+	width: 490px;
+	height: 290px;
+	float: left;
+	margin-left: 10px;
+}
+
+#divListarMovimentacoes {
+	width: 100%;
+	height: 325px;
+	overflow: auto;	
+}
+
+#divFlexivel {
+	width: 100%;
+	overflow: auto;
+	background-color: blue;
+}
+
+.list-group {
+	margin-bottom: 20px;
+	padding-left: 0
+}
+
+.list-group-item {
+	position: relative;
+	display: block;
+	padding: 10px 15px;
+	margin-bottom: -1px;
+	background-color: #fff;
+	border: 1px solid #ddd
+}
+
+.list-group-item:first-child {
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px
+}
+
+.list-group-item:last-child {
+	margin-bottom: 0;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px
+}
+
+.list-group-item>.badge {
+	float: right
+}
+
+.list-group-item>.badge+.badge {
+	margin-right: 5px
+}
+
+a.list-group-item {
+	color: #555
+}
+
+a.list-group-item .list-group-item-heading {
+	color: #333
+}
+
+a.list-group-item:hover,a.list-group-item:focus {
+	text-decoration: none;
+	background-color: #f5f5f5
+}
+
+a.list-group-item.active,a.list-group-item.active:hover,a.list-group-item.active:focus
+	{
+	z-index: 2;
+	color: #fff;
+	background-color: #428bca;
+	border-color: #428bca
+}
+
+a.list-group-item.active .list-group-item-heading,a.list-group-item.active:hover .list-group-item-heading,a.list-group-item.active:focus .list-group-item-heading
+	{
+	color: inherit
+}
+
+a.list-group-item.active .list-group-item-text,a.list-group-item.active:hover .list-group-item-text,a.list-group-item.active:focus .list-group-item-text
+	{
+	color: #e1edf7
+}
+
+.list-group-item-success {
+	color: #3c763d;
+	background-color: #dff0d8
+}
+
+a.list-group-item-success {
+	color: #3c763d
+}
+
+a.list-group-item-success .list-group-item-heading {
+	color: inherit
+}
+
+a.list-group-item-success:hover,a.list-group-item-success:focus {
+	color: #3c763d;
+	background-color: #d0e9c6
+}
+
+a.list-group-item-success.active,a.list-group-item-success.active:hover,a.list-group-item-success.active:focus
+	{
+	color: #fff;
+	background-color: #3c763d;
+	border-color: #3c763d
+}
+
+.list-group-item-info {
+	color: #31708f;
+	background-color: #d9edf7
+}
+
+a.list-group-item-info {
+	color: #31708f
+}
+
+a.list-group-item-info .list-group-item-heading {
+	color: inherit
+}
+
+a.list-group-item-info:hover,a.list-group-item-info:focus {
+	color: #31708f;
+	background-color: #c4e3f3
+}
+
+a.list-group-item-info.active,a.list-group-item-info.active:hover,a.list-group-item-info.active:focus
+	{
+	color: #fff;
+	background-color: #31708f;
+	border-color: #31708f
+}
+
+.list-group-item-warning {
+	color: #8a6d3b;
+	background-color: #fcf8e3
+}
+
+a.list-group-item-warning {
+	color: #8a6d3b
+}
+
+a.list-group-item-warning .list-group-item-heading {
+	color: inherit
+}
+
+a.list-group-item-warning:hover,a.list-group-item-warning:focus {
+	color: #8a6d3b;
+	background-color: #faf2cc
+}
+
+a.list-group-item-warning.active,a.list-group-item-warning.active:hover,a.list-group-item-warning.active:focus
+	{
+	color: #fff;
+	background-color: #8a6d3b;
+	border-color: #8a6d3b
+}
+
+.list-group-item-danger {
+	color: #a94442;
+	background-color: #f2dede
+}
+
+a.list-group-item-danger {
+	color: #a94442
+}
+
+a.list-group-item-danger .list-group-item-heading {
+	color: inherit
+}
+
+a.list-group-item-danger:hover,a.list-group-item-danger:focus {
+	color: #a94442;
+	background-color: #ebcccc
+}
+
+a.list-group-item-danger.active,a.list-group-item-danger.active:hover,a.list-group-item-danger.active:focus
+	{
+	color: #fff;
+	background-color: #a94442;
+	border-color: #a94442
+}
+
+.list-group-item-heading {
+	margin-top: 0;
+	margin-bottom: 5px
+}
+
+.list-group-item-text {
+	margin-bottom: 0;
+	line-height: 1.3
+}
+
+#divEstatisticaChefeFora {
+	width: 100%;
+	height: 300px;
+}
+
+#divEstatisticaChefeForaInferior {
+	width: 100%;
+	height: 500px;
+	margin-bottom: 10px;
+}
+
+#divEstatisticaChefeSuperiorEsquerda {
+	width: 369px;
+	height: 284px;
+	float: left;
+	margin-right: 10px;
+	border: 1px solid #c0c0c0;
+	border-radius:5px 5px 5px 5px;
+}
+
+#divEstatisticaChefeInferiorEsquerda_01 {
+	width: 632px;
+	height: 500px;
+	float: left;
+	margin-right: 10px;
+	overflow: auto;
+}
+
+#divEstatisticaChefeInferiorEsquerda {
+	width: 632px;
+	height: 500px;
+	float: left;
+	margin-right: 10px;
+	overflow: auto;
+}
+
+#divEstatisticaChefeInferiorEsquerda_01 {
+	width: 632px;
+	height: 50px;
+	margin-right: 10px;
+	overflow: auto;
+}
+
+#divEstatisticaChefeInferiorEsquerda_02 {
+	width: 632px;
+	height: 445px;
+	margin-right: 10px;
+	overflow: auto;
+}
+
+#divEstatisticaChefeSuperiorDireita {
+	width: 260px;
+	height: 300px;
+	float: left;
+}
+
+#divEstatisticaChefeInferiorDireita {
+	width: 607px;
+	height: 495px;
+	float: left;
+	overflow: auto;
+	position: relative;
+	background-color: white;
+	border-radius:5px 5px 5px 5px;
+	
+}
+
+#divEstatisticaPareceresConcluidos {
+	width: 607px;
+	height: 400px;
+	float: left;
+	position: relative;
+}
+
+#divEstatisticaPareceresConcluidos_01 {
+	width: 300px;
+	height: 300px;
+	float: left;
+	overflow: auto;
+	position: relative;
+}
+
+#divEstatisticaPareceresConcluidos_02 {
+	width: 300px;
+	height: 300px;
+	float: left;
+	overflow: auto;
+	position: relative;
+	background-color: yellow;
+}
+
+#divEstatisticaChefeInferiorDireita_Dentro {
+	height: 25px;
+	background-color: #336699;
+	margin-bottom: 5px;
+	vertical-align: middle;
+}
+
+#divEstatisticaChefeSuperiorDireitaResto {
+	width: 600px;
+	height: 278px;
+	float: left;
+	overflow: auto;
+	position: relative;
+	background-color: white;
+	border-radius:5px 5px 5px 5px;
+	padding: 5px;
+}
+
+#divEstatisticaChefeSuperiorEsquerda ul{
+	 display:block;
+	 font-family:"calibri", Helvetica, sans-serif;	
+	 margin-top:-2px;
+	
+	}
+
+#divEstatisticaChefeSuperiorEsquerda li{ 
+	list-style:none;
+	padding:8px 0 8px 5px;
+	border-top:1px solid #F4F4F4;
+	color:#446060;
+	margin-left:-40px;
+	
+	}
+	
+a{
+	text-decoration:none;
+	
+	}
+
+#box{
+	width:366px;
+	
+	border-radius:5px 5px 5px 5px;
+		
+	}
+
+#top-box-height{
+	height:80px;
+	background:orange;
+	width:368px;
+	border-radius:5px 5px 0 0;
+			
+	}
+
+#top-box-height h2{
+	margin:7px 0 0 0;
+	font-family: Calibri;
+}
+
+#top-box-height p{
+	margin:2px 0 0 0;
+}
+
+#top-box-botton{	
+	width:366px;
+	background:#fff;
+	border:1px solid #F4F4F4;
+	border-radius:0 0 5px 5px;
+}
+
+#imagen{
+	width:50px;
+	height:50px;
+	background:#fff;
+	border-radius:100%;
+	float:left;
+	margin:15px 5px 0 5px;
+	position:relative;
+	
+	}
+
+.nome {
+	 padding:5px 0 0 0; 
+	 color:#fff;
+	 font-family:"Bell Gothic Std", Helvetica, sans-serif;
+
+	}
+
+/*labels*/
+
+#label-verde p, #label-laranja p, #label-vermelho p, #label-azul p{
+	position:absolute;
+	margin:3px 0 0 3px;
+	}
+	
+#label-azul{
+	 height:20px;
+	 width:20px;
+	 background:#069;
+	 float:right;
+	 border-radius:100px;
+	 margin:-25px 5px 0 0;
+	 font-size:12px;
+	 color:#fff;
+	}
+
+#label-verde{
+	 height:20px;
+	 width:20px;
+	 background:#093;
+	 float:right;
+	 border-radius:100px;
+	 margin:-25px 5px 0 0;
+	 font-size:12px;
+	 color:#fff;
+	
+	}
+
+#label-laranja{
+	 height:20px;
+	 width:20px;
+	 background:#C60;
+	 float:right;
+	 border-radius:100px;
+	 margin:-25px 5px 0 0;
+	 font-size:12px;
+	 color:#fff;
+	
+	}
+
+#label-vermelho{
+	 height:20px;
+	 width:20px;
+	 background:#F00;
+	 float:right;
+	 border-radius:100px;
+	 margin:-25px 5px 0 0;
+	 font-size:12px;
+	 color:#fff;
+	
+	}
+
+#limpa{
+   clear:both;
+}
+
+#divTrabalhoAnalista_01_head {
+	width: 40px;
+	height: 15px;
+	position: relative;
+	float: left;
+}
+
+#divTrabalhoAnalista_02_head {
+	width: 290px;
+	height: 15px;
+	float: left;
+}
+
+#divTrabalhoAnalista_03_head {
+	width: 120px;
+	height: 15px;
+	float: left;
+	position: relative;
+}
+
+#divTrabalhoAnalista_04_head {
+	width: 120px;
+	height: 15px;
+	float: left;
+	position: relative;
+}
+
+#divTrabalhoAnalista_01 {
+	width: 40px;
+	height: 33px;
+	position: relative;
+	float: left;
+	top: 1%;
+}
+
+#divTrabalhoAnalista_02 {
+	width: 290px;
+	height: 33px;
+	float: left;
+}
+
+#divTrabalhoAnalista_03 {
+	width: 120px;
+	height: 33px;
+	float: left;
+	position: relative;
+	top: 3%;
+}
+
+#divTrabalhoAnalista_04 {
+	width: 120px;
+	height: 33px;
+	float: left;
+	position: relative;
+	top: 3%;
+}
+
+#divLista_01 {
+	width: 10%;
+	height: 20px;
+	position: relative;
+	float: left;
+}
+
+#divLista_02 {
+	width: 70%;
+	height: 20px;
+	float: left;
+}
+
+#divLista_03 {
+	width: 16%;
+	height: 20px;
+	float: left;
+	position: relative;
+	text-align: right;
+}
+
+#divTrabalhoAnalista_03_01_branco {
+	width: 30px;
+	height: 22px;
+	background-color: white;
+	border-radius:5px 5px 5px 5px;
+	background-color: white;
+}
+
+#divTrabalhoAnalista_03_01_azul {
+	width: 30px;
+	height: 22px;
+	background-color: white;
+	border-radius:5px 5px 5px 5px;
+	background-color: #1a8cff;
+}
+
+#divTrabalhoAnalista_03_01_verde {
+	width: 30px;
+	height: 22px;
+	border-radius:5px 5px 5px 5px;
+	background-color: #008000;
+}
+
+#divTrabalhoAnalista_03_01_vermelha {
+	width: 30px;
+	height: 22px;
+	background-color: white;
+	border-radius:5px 5px 5px 5px;
+	background-color: #990000;
+}
+
+#divTrabalhoAnalista_03_01_laranja {
+	width: 30px;
+	height: 22px;
+	background-color: white;
+	border-radius:5px 5px 5px 5px;
+	background-color: #ff9900;
+}
+
+.gridColum01 {
+	width: 15px;
+}
+
+.gridColum02 {
+	width: 370px;
+}
+
+.ui-inputfield .ui-calendar  {  
+ width: 65px !important;
+}
+
+.caixa {
+  position: relative;
+  border-radius: 3px;
+  background: #fffee6;
+  border-top: 3px solid #d2d6de;
+  margin-bottom: 2px;
+  padding-top: 10px;
+  padding-left: 5px;
+  width: 100%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  height: 35px;
+}
+
+.caixa {
+  position: relative;
+  border-radius: 3px;
+  background: #fffee6;
+  border-top: 3px solid #d2d6de;
+  margin-bottom: 2px;
+  padding-top: 10px;
+  padding-left: 5px;
+  width: 100%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  height: 35px;
+}
+
+.caixaClean {
+  position: relative;
+  border-radius: 3px;
+  border-top: 3px solid #d2d6de;
+  margin-bottom: 2px;
+  padding-top: 10px;
+  padding-left: 5px;
+  width: 100%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  height: 35px;
+}
+
+.caixaClean.caixa-azul {
+  background: #e6f3ff;
+  border-top-color: #3c8dbc;
+}
+
+.caixa.caixa-azul {
+  border-top-color: #3c8dbc;
+}
+
+.caixaClean.caixa-vermelha {
+  background: #ffe6e6;
+  border-top-color: #cc0000;
+}
+
+.caixa.caixa-vermelha {
+  border-top-color: #cc0000;
+}
+
+.caixa.caixa-verde {
+  border-top-color: #003300;
+}
+
+.caixaClean.caixa-verde2 {
+  background: #d8f3e5;
+  border-top-color: #336600;
+}
+
+.caixa.caixa-verde2 {
+  border-top-color: #336600;
+}
+
+.caixa.caixa-laranja {
+  border-top-color: #FF8C00;
+}
+
+#divBoxViagens {
+	width: 632px;
+	height: 368px;
+	float: left;
+	position: relative;
+	background-color: white;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #c0c0c0; 
+	margin-right: 6px;
+}
+
+#divBoxViagensSuperiorAzul {
+	width: 632px;
+	height: 60px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #e0e0d1;
+}
+
+#divBoxViagensHeader {
+	width: 632px;
+	height: 20px;
+	float: left;
+	position: relative;
+	margin-bottom: 5px;
+	background-color: #b7b795;
+}
+
+#divBoxViagensDentro {
+	width: 628px;
+	height: 270px;
+	float: left;
+	position: relative;
+	overflow: auto;
+}
+
+#divListaBoxViagens_01 {
+	width: 240px;
+	height: 20px;
+	position: relative;
+	float: left;
+}
+
+#divListaBoxViagens_02 {
+	width: 195px;
+	height: 20px;
+	float: left;
+}
+
+#divListaBoxViagens_03 {
+	width: 80px;
+	height: 20px;
+	float: left;
+	position: relative;
+}
+
+#divListaBoxViagens_04 {
+	width: 90px;
+	height: 20px;
+	float: left;
+	position: relative;
+}
+
+#divBoxDevolver {
+	width: 430px;
+	height: 449px;
+	float: left;
+	position: relative;
+	background-color: white;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #c0c0c0; 
+}
+
+#divBoxSuperiorAzulDevolver {
+	width: 430px;
+	height: 60px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #c6d9ec;
+	margin-bottom: 10px;
+}
+
+#divBoxDentroDevolver {
+	width: 413px;
+	height: 330px;
+	float: left;
+	overflow: auto;
+	position: relative;
+	margin-left: 10px;
+}
+
+#divBoxDentroDivisaoDevolver {
+	width: 430px;
+	height: 10px;
+	float: left;
+	overflow: auto;
+	position: relative;
+}
+
+#divBoxDentroBottomDevolver {
+	width: 430px;
+	height: 40px;
+	float: left;
+	overflow: auto;
+	position: relative;
+	background-color: #d9d9d9;
+	border-radius:0px 0px 3px 3px;
+}
+
+
+#divBox {
+	width: 300px;
+	height: 369px;
+	float: left;
+	position: relative;
+	background-color: white;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #c0c0c0; 
+}
+
+#divBoxDireita {
+	width: 300px;
+	height: 369px;
+	float: right;
+	position: relative;
+	background-color: white;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #c0c0c0; 
+}
+
+#divBoxSuperiorAzul {
+	width: 300px;
+	height: 60px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #c6d9ec;
+	margin-bottom: 10px;
+}
+
+#divBoxSuperiorVerde {
+	width: 300px;
+	height: 60px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #c2d6d6;
+	margin-bottom: 10px;
+}
+
+#divBoxSuperiorVerde2 {
+	width: 100%;
+	height: 60px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #d8f3e5;
+	margin-bottom: 10px;
+}
+
+#divBoxSuperiorJE {
+	width: 100%;
+	height: 60px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #b3cccc;
+	margin-bottom: 10px;
+}
+
+#divBoxSuperiorVermelho {
+	width: 100%;
+	height: 60px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #ffcccc;
+	margin-bottom: 10px;
+}
+
+#divBoxDentro {
+	width: 295px;
+	height: 220px;
+	float: left;
+	overflow: auto;
+	position: relative;
+}
+
+#divBoxSuperiorGeral {
+	width: 369px;
+	height: 60px;
+	float: left;
+	position: relative;
+	border-radius:4px 4px 0px 0px;
+ 	background-color: #e1e1d0;
+}
+
+#divBoxDentroGeral {
+	width: 369px;
+	height: 223px;
+	float: left;
+	overflow: auto;
+	position: relative;
+	background-color: white;
+	border-radius:0px 0px 4px 4px;
+}
+
+#divBoxMovimentacoesPareceres {
+	width: 251px;
+	height: 163px;
+	float: left;
+	overflow: auto;
+	position: relative;
+	background-color: #b3d9ff;
+	border-radius:4px 4px 4px 4px;
+}
+
+#divQuadroIndicativo_01 {
+	width: 167px;
+	height: 25px;
+	position: relative;
+	float: left;
+}
+
+#divQuadroIndicativo_02 {
+	width: 100px;
+	height: 25px;
+	float: left;
+}
+
+#divQuadroIndicativo_03 {
+	width: 100px;
+	height: 25px;
+	float: left;
+	position: relative;
+}
+
+#divQuadroIndicativoInside {
+	width: 30px;
+	height: 22px;
+	border-radius:5px 5px 5px 5px;
+	background-color: #336699;
+}
+
+#divQuadroIndicativoInside2 {
+	width: 30px;
+	height: 22px;
+	border-radius:5px 5px 5px 5px;
+	background-color: #800000;
+}
+
+#divBoxDentroDivisao {
+	width: 100%;
+	height: 10px;
+	float: left;
+	overflow: auto;
+	position: relative;
+}
+
+#divBoxDentroBottom {
+	width: 300px;
+	height: 70px;
+	float: left;
+	overflow: auto;
+	position: relative;
+	background-color: #d9d9d9;
+	border-radius:0px 0px 3px 3px;
+}
+
+#divAtividade {
+	width: 850px;
+	height: 550px;
+}
+
+#divAtividadeLateralDireita {
+	width: 565px;
+	height: 550px;
+	background-color: blue;
+	float: right;
+}
+
+#divAtividadeLateralEsquerda {
+position: relative;
+	width: 280px;
+	height: 550px;
+	float: left;
+	border-right: 1px solid #ccc;
+}
+
+.fundoLabelRetanguloLaranja {
+	background-color: #ff9900;
+	color: white;	
+	font-weight: bold;
+	padding: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.fundoLabelRetanguloLaranja2 {
+	background-color: #b36b00;
+	color: white;	
+	font-weight: bold;
+	padding: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	
+}
+
+.fundoLabelRetanguloVerde {
+	background-color: #39ac39;
+	color: white;	
+	font-weight: bold;
+	padding: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.fundoLabelRetanguloVerde2 {
+	background-color: #267326;
+	color: white;	
+	font-weight: bold;
+	padding: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.fundoLabelRetanguloVermelho {
+	background-color: #66c2ff;
+	color: white;	
+	font-weight: bold;
+	padding: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.fundoLabelRetanguloVermelho2 {
+	background-color: #008ae6;
+	color: white;	
+	font-weight: bold;
+	padding: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#divForaDevolver {
+	width: 875px;
+	height: 465px;
+}
+
+#divLateralEsquerdaDevolver {
+	position: relative;
+	width: 437px;
+	height: 465px;
+	float: left;
+}
+
+#divLateralDireitaDevolver {
+	width: 437px;
+	height: 465px;
+	float: right;
+}
+
+.tituloGrid{
+	width: 20%;
+}
+.botoesGrid{
+	width: 80%;
+}
+
+.tituloGridSolicitacao{
+	width: 17%;
+}
+.botoesGridSolicitacao{
+	width: 83%;
+}
+
+
+#divForaFinalizar {
+	width: 500px;
+	height: 120px;
+}
+
+#divLateralEsquerdaFinalizar {
+	position: relative;
+	width: 100px;
+	height: 120px;
+	float: left;
+}
+
+#divLateralDireitaFinalizar {
+	width: 400px;
+	height: 120px;
+	float: right;
+}
+
+#divForaModelo {
+	width: 805px;
+	height: 370px;
+}
+
+#divLateralEsquerdaModelo {
+	position: relative;
+	width: 210px;
+	height: 370px;
+	float: left;
+	border-right: 1px solid #ccc;
+}
+
+#divLateralDireitaModelo {
+	width: 580px;
+	height: 370px;
+	float: left;
+	margin-left:10px;
+}
+
+#divNovidades {
+	position: relative;
+	margin-top: 10px;
+	width: 100%;
+	height: 340px;
+	background: white;
+	overflow: auto;
+}
+
+#divGestaoBoxEsquerda {
+	width: 100%;
+	height: 369px;
+	float: left;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #c0c0c0;
+	background-color: white;
+}
+
+#divGestaoBoxDireita {
+	width: 100%;
+	height: 369px;
+	float: left;
+}
+
+#divGestaoBoxDireita2 {
+	margin-left:1%;
+	width: 27.3%;
+	height: 369px;
+	float: left;
+}
+
+#divGestaoBoxSuperiorAzul {
+	width: 550px;
+	height: 60px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #c6d9ec;
+	margin-bottom: 10px;
+}
+
+#divGestaoBoxSuperiorVermelho {
+	width: 100%;
+	height: 60px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #ffcccc;
+	margin-bottom: 10px;
+}
+
+#divGestaoBoxSuperiorVerde {
+	width: 100%;
+	height: 60px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #d8f3e5;
+	margin-bottom: 10px;
+}
+
+#divGestaoBoxSuperiorAzul2 {
+	width: 100%;
+	height: 60px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #ccddff;
+	margin-bottom: 10px;
+}
+
+#divGestaoBoxSuperiorAzul3 {
+	width: 100%;
+	height: 60px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #cce5ff;
+	margin-bottom: 10px;
+}
+
+#divGestaoBoxSuperiorLaranja {
+	width: 100%;
+	height: 60px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #ffecb3;
+	margin-bottom: 10px;
+}
+
+
+#divGestaoBoxDentro {
+	width: 100%;
+	height: 260px;
+	float: left;
+	overflow: auto;
+	position: relative;
+	background-color: white;
+}
+
+#divGestaoBoxDentroDivisao {
+	width: 100%;
+	height: 10px;
+	float: left;
+	overflow: auto;
+	position: relative;
+}
+
+#divGestaoBoxDentroBottom {
+	width: 100%;
+	height: 25px;
+	float: left;
+	overflow: auto;
+	position: relative;
+	background-color: #d9d9d9;
+	border-radius:0px 0px 3px 3px;
+	padding-top: 4px;
+}
+
+#divGestaoBox {
+	width: 100%;
+	height: 369px;
+	float: left;
+	position: relative;
+	background-color: white;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #c0c0c0; 
+}
+
+#divGestaoBoxJE {
+	width: 100%;
+	height: 267px;
+	float: left;
+	position: relative;
+	background-color: white;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #c0c0c0; 
+}
+
+#divGestaoBoxDentroGrid {
+	width: 99%;
+	height: 260px;
+	float: left;
+	overflow: auto;
+	position: relative;
+}
+
+#divGestaoBoxDentroBottomGrid {
+	width: 100%;
+	height: 25px;
+	float: left;
+	overflow: auto;
+	position: relative;
+	background-color: #d9d9d9;
+	border-radius:0px 0px 3px 3px;
+	padding-top: 4px;
+}
+
+#divGestaoBoxDentroBottomGrid2 {
+	width: 100%;
+	height: 26px;
+	float: left;
+	overflow: auto;
+	position: relative;
+	background-color: #d9d9d9;
+	border-radius:0px 0px 3px 3px;
+	padding-top: 4px;
+}
+
+
+#divGestao2 {
+	width: 100%;
+	height: 280px;
+}
+
+#divGestao2BoxDireita_01 {
+	width: 20%;
+	height: 300px;
+	float: left;
+}
+
+#divGestao2BoxDireita_02 {
+	width: 30%;
+	height: 300px;
+	float: left;
+	margin-left: 1%;
+}
+
+#divGestao2BoxDireita_03 {
+	width: 48%;
+	height: 280px;
+	float: left;
+	margin-left: 1%;
+}
+
+#divGestao2BoxDireita_04 {
+	width: 300px;
+	height: 300px;
+	float: left;
+	background: gray;
+}
+
+
+#divGestaoBoxViagem {
+	width: 100%;
+	height: 277px;
+	float: left;
+	position: relative;
+	background-color: white;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #c0c0c0; 
+}
+
+#divBoxSuperiorViagemAzul_01 {
+	width: 100%;
+	height: 60px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #B0C4DE;
+	margin-bottom: 10px;
+}
+
+#divGestaoBoxDentroGridViagem {
+	width: 100%;
+	height: 167px;
+	float: left;
+	overflow: auto;
+	position: relative;
+}
+
+#divGestaoBoxViagem2 {
+	width: 100%;
+	height: 277px;
+	float: left;
+	position: relative;
+	background-color: white;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #B0C4DE; 
+}
+
+#divBoxSuperiorViagemAzul {
+	width: 100%;
+	height: 30px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #B0C4DE;
+	margin-bottom: 10px;
+}
+
+#divGestaoBoxEsquerdaViagem {
+	width: 100%;
+	height: 278px;
+	float: left;
+	position: relative;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #c0c0c0;
+	background-color: white;
+}
+
+#divGestaoBoxSuperiorViagemAzul {
+	width: 100%;
+	height: 60px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #B0C4DE;
+	margin-bottom: 10px;
+}
+
+#divGestaoBoxDentroViagem {
+	width: 100%;
+	height: 200px;
+	float: left;
+	overflow: auto;
+	position: relative;
+	background-color: white;
+}
+
+#divGestaoBoxParadosNoNAT {
+	width: 100%;
+	height: 370px;
+	float: left;
+	position: relative;
+	background-color: white;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #B0C4DE; 
+}
+
+#divGestaoBoxParadosNoNATSuperiorVermelho {
+	width: 100%;
+	height: 30px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #ffcccc;
+	margin-bottom: 10px;
+}
+
+.gridColum01NAT {
+	width: 50px;
+}
+
+.gridColum02NAT {
+	width: 170px;
+}
+
+.gridColum03NAT {
+	width: 10px;
+}
+
+.gridColum04NAT {
+	width: 30px;
+}
+
+#divGestaoBoxParadosNoNATSuperiorVermelho2 {
+	width: 100%;
+	height: 24px;
+	float: left;
+	position: relative;
+ 	background-color: #ffcccc;
+	margin-bottom: 10px;
+}
+
+#divBoxColaboradores {
+	width: 100%;
+	height: 347px;
+	float: left;
+	position: relative;
+	background-color: white;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #c0c0c0; 
+	margin-right: 6px;
+}
+
+#divBoxColaboradoresSuperiorLaranja {
+	width: 100%;
+	height: 60px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #ffebcc;
+}
+
+#divBoxColaboradoresHeader {
+	width: 100%;
+	height: 20px;
+	float: left;
+	position: relative;
+	margin-bottom: 5px;
+	background-color: #ffad33;
+}
+
+#divListaBoxColaboradores_01 {
+	width: 32%;
+	height: 20px;
+	position: relative;
+	float: left;
+}
+
+#divListaBoxColaboradores_02 {
+	width: 16%;
+	height: 20px;
+	float: left;
+	position: relative;
+}
+
+#divListaBoxColaboradores_03 {
+	width: 16%;
+	height: 20px;
+	float: left;
+	position: relative;
+}
+
+#divListaBoxColaboradores_04 {
+	width: 17%;
+	height: 20px;
+	float: left;
+	position: relative;
+}
+
+#divListaBoxColaboradores_05 {
+	width: 10%;
+	height: 20px;
+	float: left;
+	position: relative;
+}
+
+#divBoxDentroDivisaoColaboradores {
+	width: 100%;
+	height: 10px;
+	float: left;
+	overflow: auto;
+	position: relative;
+}
+
+#divBoxColaboradoresDentro {
+	width: 100%;
+	height: 222px;
+	float: left;
+	position: relative;
+	overflow: auto;
+}
+
+#divGestaoBoxDentroBottomGridColaboradores {
+	width: 100%;
+	height: 30px;
+	float: left;
+	overflow: auto;
+	position: relative;
+	background-color: #d9d9d9;
+	border-radius:0px 0px 3px 3px;
+	padding-top: 3px;
+}
+
+#divBoxColaboradores2 {
+	width: 100%;
+	height: 349px;
+	float: left;
+	position: relative;
+	background-color: white;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #c0c0c0; 
+	margin-right: 6px; 
+}
+
+#divBoxSuperiorColaborador {
+	width: 100%;
+	height: 60px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #d4d4aa;
+	margin-bottom: 10px;
+}
+
+#divGestaoAnalistas {
+	width: 100%;
+	height: 349px;
+	float: left;
+}
+
+#divGestaoAnalistas2 {
+	width: 100%;
+	height: 349px;
+	float: left;
+	position: relative;
+	background-color: white;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #B0C4DE; 
+}
+
+#divGestaoAnalistas3 {
+	width: 100%;
+	height: 105px;
+	float: left;
+	position: relative;
+	background-color: #F5F5F5;
+}
+
+#divGestaoAnalistas4 {
+	width: 100%;
+	height: 180px;
+	float: left;
+	position: relative;
+	background-color: white;
+}
+
+#divBoxSuperiorAnalistaAzul {
+	width: 100%;
+	height: 30px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #B0C4DE;
+}
+
+#divBoxSuperiorAnalistaAzul2 {
+	width: 100%;
+	height: 23px;
+	float: left;
+	position: relative;
+ 	background-color: #B0C4DE;
+}
+
+/* ------------------------------------------ CSS para a pagina de gest√£o do Laudus -------------------------------------*/
+#divLinha01 {
+	width: 100%;
+	height: 60px;
+}
+
+#divLinha01_parte01 {
+	width: 33%;
+	height: 60px;
+	float: left;	
+}
+
+#divLinha01_parte02 {
+	width: 33%;
+	height: 60px;
+	float: left;	
+}
+
+#divLinha01_parte03 {
+	width: 31.7%;
+	height: 60px;
+	float: left;
+}
+
+#divLinha01_espaco {
+	width: 1%;
+	height: 60px;
+	float: left;
+}
+
+#divLinha02 {
+	width: 100%;
+	height: 375px;
+}
+
+#divLinha02_parte01 {
+	width: 40%;
+	height: 100%;
+	float: left;	
+}
+
+#divLinha02_parte02 {
+	width: 29%;
+	height: 100%;
+	float: left;	
+}
+
+#divLinha02_parte03 {
+	width: 29%;
+	height: 100%;
+	float: left;
+}
+
+#divLinha02_espaco {
+	width: 1%;
+	height: 100%;
+	float: left;
+}
+
+#divLinha03 {
+	width: 100%;
+	height: 375px;
+}
+
+#divLinha03_parte01 {
+	width: 40%;
+	height: 100%;
+	float: left;	
+}
+
+#divLinha03_parte02 {
+	width: 29%;
+	height: 100%;
+	float: left;	
+}
+
+#divLinha03_parte03 {
+	width: 29%;
+	height: 100%;
+	float: left;
+}
+
+#divLinha03_espaco {
+	width: 1%;
+	height: 100%;
+	float: left;
+}
+
+#divLinha04 {
+	width: 100%;
+	height: 365px;
+}
+
+#divLinha04_parte01 {
+	width: 50%;
+	height: 100%;
+	float: left;	
+}
+
+#divLinha04_parte02 {
+	width: 29%;
+	height: 100%;
+	float: left;	
+}
+
+#divLinha04_parte03 {
+	width: 19%;
+	height: 100%;
+	float: left;
+}
+
+#divLinha04_espaco {
+	width: 1%;
+	height: 100%;
+	float: left;
+}
+
+#divLinha01 {
+	width: 100%;
+	height: 60px;
+}
+
+#divLinha01_parte01 {
+	width: 33%;
+	height: 60px;
+	float: left;	
+}
+
+#divLinha01_parte02 {
+	width: 33%;
+	height: 60px;
+	float: left;	
+}
+
+#divLinha01_parte03 {
+	width: 31.7%;
+	height: 60px;
+	float: left;
+}
+
+#divLinha01_espaco {
+	width: 1%;
+	height: 60px;
+	float: left;
+}
+
+#divLinha05 {
+	width: 100%;
+	height: 475px;
+}
+
+#divLinha05_parte01 {
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+
+#divPareceresPorAnalista {
+	width: 100%;
+	height: 100%;
+	float: left;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #c0c0c0;
+	background-color: white;
+}
+
+#divLinha05_parte02 {
+	width: 49%;
+	height: 100%;
+	float: left;	
+}
+
+#divLinha05_espaco {
+	width: 1%;
+	height: 100%;
+	float: left;
+}
+
+#divBoxDentroPareceresAnalista {
+	width: 100%;
+	height: 367px;
+	float: left;
+	overflow: auto;
+	position: relative;
+	background-color: white;
+}
+
+/* ----------------------------------- CSS para a pagina de estat·tistica do analista ----------------------------------*/
+#divEstatistica01 {
+	width: 100%;
+	height: 50px;
+}
+
+#divEstatistica01_parte01 {
+	width: 33%;
+	height: 50px;
+	float: left;	
+}
+
+#divEstatistica01_parte02 {
+	width: 33%;
+	height: 50px;
+	float: left;	
+}
+
+#divEstatistica01_parte03 {
+	width: 32%;
+	height: 50px;
+	float: left;
+}
+
+#divLinhaEstatistica01_espaco {
+	width: 1%;
+	height: 50px;
+	float: left;
+}
+
+#divEstatistica02 {
+	width: 100%;
+	height: 260px;
+}
+
+#divEstatistica02_parte01 {
+	width: 28%;
+	height: 100%;
+	float: left;
+}
+
+#divEstatistica02_parte01_panel {
+	width: 100%;
+	height: 100%;
+	float: left;
+	position: relative;
+	background-color: white;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #B0C4DE; 
+}
+
+#divEstatistica02_parte01_panel_header {
+	width: 100%;
+	height: 30px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #B0C4DE;
+	margin-bottom: 10px;
+}
+
+#divEstatistica02_parte02 {
+	width: 32%;
+	height: 100%;
+	float: left;
+}
+
+#divEstatistica02_parte02_panel {
+	width: 100%;
+	height: 100%;
+	float: left;
+	position: relative;
+	background-color: white;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #c0c0c0; 
+}
+
+#divEstatistica02_parte02_panel_header {
+	width: 100%;
+	height: 60px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #d8f3e5;
+	margin-bottom: 10px;
+}
+
+#divEstatistica02_parte03 {
+	width: 38%;
+	height: 100%;
+	float: left;
+}
+
+#divLinhaEstatistica02_espaco {
+	width: 1%;
+	height: 100%;
+	float: left;
+}
+
+#divEstatistica02_parte03_panel {
+	width: 100%;
+	height: 260px;
+	float: left;
+	position: relative;
+	background-color: white;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #c0c0c0; 
+}
+
+#divEstatistica02_parte03_panel_header {
+	width: 100%;
+	height: 60px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #ffe6e6;
+	margin-bottom: 10px;
+}
+
+#divEstatistica02_parte03_panel_dentro {
+	width: 99%;
+	height: 151px;
+	float: left;
+	overflow: auto;
+	position: relative;
+}
+
+#divEstatistica02_parte03_panel_divisao {
+	width: 100%;
+	height: 10px;
+	float: left;
+	overflow: auto;
+	position: relative;
+}
+
+#divEstatistica02_parte03_panel_button {
+	width: 100%;
+	height: 25px;
+	float: left;
+	overflow: auto;
+	position: relative;
+	background-color: #d9d9d9;
+	border-radius:0px 0px 3px 3px;
+	padding-top: 4px;
+}
+
+#divBoxPedidosPromotoria {
+	width: 100%;
+	height: 100%;
+	float: left;
+	position: relative;
+	background-color: white;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #c0c0c0; 
+	margin-right: 6px;
+}
+
+#divBoxPedidosPromotoriaTop {
+	width: 100%;
+	height: 60px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #e0e0d1;
+}
+
+#divBoxPedidosPromotoriaHeader {
+	width: 100%;
+	height: 20px;
+	float: left;
+	position: relative;
+	margin-bottom: 5px;
+	background-color: #b7b795;
+}
+
+#divBoxPedidosPromotoria_01_header {
+	width: 28%;
+	height: 20px;
+	position: relative;
+	float: left;
+}
+
+#divBoxPedidosPromotoria_02_header {
+	width: 15%;
+	height: 20px;
+	float: left;
+}
+
+#divBoxPedidosPromotoria_03_header {
+	width: 13%;
+	height: 20px;
+	float: left;
+	position: relative;
+}
+
+#divBoxPedidosPromotoria_04_header {
+	width: 14%;
+	height: 20px;
+	float: left;
+	position: relative;
+}
+
+#divBoxPedidosPromotoria_05_header {
+	width: 14%;
+	height: 20px;
+	float: left;
+	position: relative;
+}
+
+#divBoxPedidosPromotoria_06_header {
+	width: 10%;
+	height: 20px;
+	float: left;
+	position: relative;
+}
+
+#divBoxPedidosPromotoria_01 {
+	width: 29%;
+	height: 20px;
+	position: relative;
+	float: left;
+}
+
+#divBoxPedidosPromotoria_02 {
+	width: 15%;
+	height: 20px;
+	float: left;
+}
+
+#divBoxPedidosPromotoria_03 {
+	width: 13%;
+	height: 20px;
+	float: left;
+	position: relative;
+}
+
+#divBoxPedidosPromotoria_04 {
+	width: 16%;
+	height: 20px;
+	float: left;
+	position: relative;
+}
+
+#divBoxPedidosPromotoria_05 {
+	width: 12%;
+	height: 20px;
+	float: left;
+	position: relative;
+}
+
+#divBoxPedidosPromotoria_06 {
+	width: 13%;
+	height: 20px;
+	float: left;
+	position: relative;
+}
+
+#divBoxPedidosPromotoriaDentro {
+	width: 100%;
+	height: 380px;
+	float: left;
+	position: relative;
+	overflow: auto;
+}
+
+.pedidosFundoLabelVerde {
+	background-color: #008000;
+	color: white;
+	width:30px;	
+	border-radius: 5px;
+	font-weight: bold;
+	padding: 3px;
+}
+
+.pedidosFundoLabelVermelho {
+	background-color: #cc3300;
+	color: white;	
+	border-radius: 5px;
+	font-weight: bold;
+	padding: 3px;
+}
+
+.pedidosFundoLabelLaranja {
+	background-color: #ff9900;
+	color: white;	
+	border-radius: 5px;
+	font-weight: bold;
+	padding: 3px;
+}
+
+#divGestaoBoxSolicitante {
+	width: 100%;
+	height: 269px;
+	float: left;
+	position: relative;
+	background-color: white;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #c0c0c0; 
+}
+
+#divLinhaSolicitante {
+	width: 100%;
+	height: 225px;
+}
+
+#divGestaoBoxDentroGridSolicitante {
+	width: 99%;
+	height: 143px;
+	float: left;
+	overflow: auto;
+	position: relative;
+}
+
+#divGestaoBoxEsquerdaSolicitante {
+	width: 100%;
+	height: 220px;
+	float: left;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #c0c0c0;
+	background-color: white;
+}
+
+#divSolicitante_parte01 {
+	width: 25%;
+	height: 100%;
+	float: left;	
+}
+
+#divSolicitante_parte02 {
+	width: 32%;
+	height: 100%;
+	float: left;
+}
+
+#divSolicitante_parte03 {
+	width: 41%;
+	height: 100%;
+	float: left;
+}
+
+#divSolicitante_espaco {
+	width: 1%;
+	height: 100%;
+	float: left;
+}
+
+#divQuadroAvisos {
+	width: 100%;
+	height: 163px;
+	float: left;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #c0c0c0;
+	background-color: #ffffe6;
+}
+
+#divCabecalhoQuadroAvisos {
+	width: 100%;
+	height: 30px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #e6b800;
+	margin-bottom: 2px;
+}
+
+#divInteriorQuadroAvisos {
+	width: 99%;
+	height: 127px;
+	float: left;
+	overflow: auto;
+	position: relative;
+}
+
+#divInteriorQuadroAvisos_parte01 {
+	width: 11%;
+	float: left;
+}
+
+#divInteriorQuadroAvisos_parte02 {
+	width: 89%;
+	float: right;
+}
+
+#divLista_01_solicitante {
+	width: 12%;
+	height: 20px;
+	position: relative;
+	float: left;
+}
+
+#divLista_02_solicitante {
+	width: 68%;
+	height: 20px;
+	float: left;
+}
+
+#divLista_03_solicitante {
+	width: 16%;
+	height: 20px;
+	float: left;
+	position: relative;
+	text-align: right;
+}
+
+.fundoLabelAvisoSoliciante {
+	background-color: #e68a00;
+	color: white;	
+	border-radius: 5px;
+	font-weight: bold;
+	padding: 2px;
+}
+
+.fundoLabelAvisoAnalistas {
+	background-color: #8a8a5c;
+	color: white;	
+	border-radius: 5px;
+	font-weight: bold;
+	padding: 2px;
+}
+
+#divModelos {
+	width: 100%;
+	height: 50px;
+	float: left;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #c0c0c0;
+	background-color: #fffae6;
+}
+
+#divPesquisaPareceres {
+	width: 100%;
+	height: 220px;
+	float: left;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #c0c0c0;
+	background-color: white;
+	
+}
+
+#divCabecalhoPesquisaPareceres {
+	width: 100%;
+	height: 60px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #B0C4DE;
+ 	margin-bottom: 5px;
+}
+
+#divPesquisaPareceresInterior {
+	width: 100%;
+	height: 130px;
+	float: left;
+	position: relative;
+ 	background-color: white;
+}
+
+#divExibePareceresPesquisa {
+	width: 100%;
+	height: 380px;
+	float: left;
+	overflow: auto;
+	position: relative;
+}
+
+#divPesquisaParecerBotton {
+	width: 100%;
+	height: 24px;
+	float: left;
+	overflow: auto;
+	position: relative;
+	background-color: #d9d9d9;
+	border-radius:0px 0px 3px 3px;
+	padding-top: 1px;
+}
+
+#divNovidadesTitulo {
+	width: 99%;
+	height: 22px;
+	float: left;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #b32d00;
+	background-color: #b32d00;
+	padding-top: 5px;
+}
+
+#divNovidadesTitulo2 {
+	width: 99%;
+	height: 22px;
+	float: left;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #ff9900;
+	background-color: #ff9900;
+	padding-top: 5px;
+}
+
+
+#divNovidadesLinha01 {
+	width: 99%;
+	height:70px;
+	float: left;
+}
+
+#divNovidadesLinha01_esquerda {
+	width: 264px;
+	height: 100%;
+	position: relative;
+	float: left;
+}
+
+#divNovidadesLinha01_direita {
+	font-family: calibri;
+	font-size:15px;
+	width: 470px;
+	height: 100%;
+	float: left;
+}
+
+#divNovidadesLinha02 {
+	width: 99%;
+	height:140px;
+	float: left;
+}
+
+#divNovidadesLinha02_esquerda {
+	width: 264px;
+	height: 100%;
+	position: relative;
+	float: left;
+}
+
+#divNovidadesLinha02_direita {
+	font-family: calibri;
+	font-size:15px;
+	width: 470px;
+	height: 100%;
+	float: left;
+}
+
+#divNovidadesLinha03 {
+	width: 80%;
+	height:185px;
+	float: left;
+}
+
+#divNovidadesLinha03_esquerda {
+	width: 326px;
+	height: 100%;
+	position: relative;
+	float: left;
+}
+
+#divNovidadesLinha03_direita {
+	font-family: calibri;
+	font-size:15px;
+	width: 260px;
+	height: 100%;
+	float: left;
+}
+
+#divDatabase {
+	width: 100%;
+	height: 110px;
+	float: left;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #c0c0c0;
+	background-color: white;
+}
+
+#divDatabaseCabecalho {
+	width: 100%;
+	height: 60px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #B0C4DE;
+ 	margin-bottom: 5px;
+}
+
+#divDatabaseInterior {
+	width: 100%;
+	height: 40px;
+	float: left;
+	position: relative;
+ 	background-color: white;
+}
+
+#divForaPesquisa {
+	width:100%;
+	height: 100%;
+	background-color: red;
+}
+
+#divEsquerdaPesquisa {
+	position: relative;
+	width: 35%;
+	height: 600px;
+	float: left;
+}
+
+#divDireitaPesquisa {
+	width: 64%;
+	height: 600px;
+	float: right;
+}
+
+#divBoxPesquisa {
+	width: 100%;
+	height: 323px;
+	float: left;
+	position: relative;
+	background-color: white;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #c0c0c0; 
+}
+
+#divBoxHeaderPesquisa {
+	width: 100%;
+	height: 50px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #c6d9eb;
+}
+
+#divBoxHeader02Pesquisa {
+	width: 100%;
+	height: 22px;
+	float: left;
+	position: relative;
+ 	background-color: #284e71;
+	margin-bottom: 5px;
+}
+
+#divBoxDentroPesquisa {
+	width: 97%;
+	height: 167px;
+	float: left;
+	overflow: auto;
+	position: relative;
+	margin-left: 10px;
+}
+
+#divBoxDentroDivisaoPesquisa {
+	width: 430px;
+	height: 10px;
+	float: left;
+	overflow: auto;
+	position: relative;
+}
+
+#divBoxTitlePesquisa {
+	width: 100%;
+	height: 65px;
+	float: left;
+	overflow: auto;
+	position: relative;
+	background-color: #efefef;
+	border-radius:0px 0px 3px 3px;
+	padding-top: 4px;
+}
+
+#divBoxTitlePesquisaEsquerda {
+	position: relative;
+	width: 60%;
+	height: 65px;
+	float: left;
+}
+
+#divBoxTitlePesquisaDireita {
+	margin-top: 15px;
+	width: 40%;
+	height: 45px;
+	float: right;
+}
+
+#divBoxPesquisaDownload {
+	width: 90%;
+	height: 75px;
+	float: left;
+	overflow: auto;
+	position: relative;
+	background-color: #737373;
+	border-radius:3px 3px 3px 3px;
+	padding-top: 4px;
+}
+
+#divBoxDemaisInformacoes{
+	width: 100%;
+	height: 180px;
+	float: left;
+	position: relative;
+	background-color: white;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #c0c0c0; 
+}
+
+#divBoxDemaisInformacoes01 {
+	position: relative;
+	width: 32%;
+	height: 120px;
+	float: left;
+	margin-left: 10px;
+}
+
+#divBoxDemaisInformacoes02 {
+	position: relative;
+	width: 32%;
+	height: 120px;
+	float: left;
+	
+}
+
+#divBoxDemaisInformacoes03 {
+	position: relative;
+	width: 32%;
+	height: 120px;
+	float: left;
+	
+}
+
+#divBoxDemaisInformacoesHeader {
+	width: 100%;
+	height: 25px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #c6d9eb;
+}
+
+#divBoxPesquisaTopo {
+	width: 100%;
+	height: 50px;
+	float: left;
+	overflow: auto;
+	position: relative;
+	border-top: 3px solid #d2d6de;
+	background-color: #fffee6;
+	border-top-color: #3c8dbc;
+	border-radius:5px 5px 0px 0px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	
+}
+
+#divBoxPesquisaTopoEsquerda {
+	position: relative;
+	width: 84%;
+	margin-left:1%;
+	height: 50px;
+	float: left;
+}
+
+#divBoxPesquisaTopoDireita {
+	width: 15%;
+	height: 50px;
+	float: right;
+	background-color: #3c8dbc;
+}
+
+#divBoxTitlePesquisaDireitaDentro {
+	width: 100%;
+	height: 511px;
+	float: left;
+	overflow: auto;
+	position: relative;
+	background-color: white;
+	border-radius:0px 0px 5px 5px;
+}
+
+#divFooterPesquisa {
+	width: 100%;
+	height: 25px;
+	float: left;
+	overflow: auto;
+	position: relative;
+	background-color: #cccccc;
+	border-radius:0px 0px 3px 3px;
+}
+
+#divAvisosAnalistas {
+	width: 100%;
+	height: 153px;
+	float: left;
+}
+
+#divAvisosAnalistas_01 {
+	width: 33%;
+	height: 100%;
+	float: left;
+}
+
+#divAvisosAnalistas_02 {
+	width: 29%;
+	height: 100%;
+	float: left;
+	margin-left: 10px;
+}
+
+#divMinhasFerias {
+	width: 100%;
+	height: 100%;
+	float: left;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #c0c0c0;
+	background-color: #ebebe0;
+}
+
+#divCabecalhoMinhasFerias {
+	width: 100%;
+	height: 30px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #ccccb3;
+}
+
+#divInteriorMinhasFerias {
+	width: 99%;
+	height: 127px;
+	float: left;
+	overflow: auto;
+	position: relative;
+}
+
+#divMinhasFeriasHeader {
+	width: 100%;
+	height: 20px;
+	float: left;
+	position: relative;
+	margin-bottom: 5px;
+	background-color: #b7b795;
+}
+
+#divInteriorMinhasFerias_parte01 {
+	width: 20%;
+	float: left;
+	margin-left:5px;
+}
+
+#divInteriorMinhasFerias_parte02 {
+	width: 20%;
+	float: left;
+}
+
+#divInteriorMinhasFerias_parte03 {
+	width: 10%;
+	float: left;
+}
+
+#divInteriorMinhasFerias_parte04 {
+	width: 48%;
+	float: left;
+}
+
+#divLinhaMinhasFerias {
+	width: 100%;
+	height: 20px;
+	float: left;
+	position: relative;
+	margin-bottom: 2px;
+	background-color: #blue;
+}
+
+#divQuadroAvisosAnalistas {
+	width: 100%;
+	height: 153px;
+	float: left;
+	border-radius:5px 5px 5px 5px;
+	border: 1px solid #c0c0c0;
+	background-color: #ffffe6;
+}
+
+#divCabecalhoQuadroAvisosAnalistas {
+	width: 100%;
+	height: 30px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+ 	background-color: #e6b800;
+	margin-bottom: 2px;
+}
+
+#divInteriorQuadroAvisosAnalistas {
+	width: 99%;
+	height: 117px;
+	float: left;
+	overflow: auto;
+	position: relative;
+}
+
+#divInteriorQuadroAvisos_parte01_Analistas {
+	width: 11%;
+	float: left;
+}
+
+#divInteriorQuadroAvisos_parte02_Analistas {
+	width: 89%;
+	float: right;
+}

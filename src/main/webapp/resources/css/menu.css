@@ -1,0 +1,316 @@
+#menubar{
+	height:50px;
+	background-repeat: repeat-x;
+	color:#FFFFFF;
+	font-family:"Lucida Grande", Tahoma, sans-serif;
+	padding-left:3px;
+	padding-top:-3px;
+	margin: -7px;
+	background-color: #336699;
+}
+
+#menubar ul{
+	list-style-type:none;
+	height:50px; /*alterar este valor*/
+	margin:0 auto;
+	width:100%;
+}
+
+#menubar li{
+	float:left;
+	margin-left: 5px;
+	
+}
+
+#menubar ul a{
+	padding-right:5px;
+	padding-left:3px;
+	display:block;
+	line-height:47px; /*alterar este valor*/
+	text-decoration: none;
+	font-family: Calibri, “Times New Roman”, Times, serif;
+	font-size:14px;
+	color:#fff;
+	opacity:0.5;
+	filter:alpha(opacity = 60);
+}
+
+#menubar ul li a img{
+	vertical-align:middle;
+	margin:0 10px 0 0;
+}
+
+#menubar ul li a:hover {
+	color:#000;
+	background:#d9e6f2;
+	opacity:1;
+	filter:alpha(opacity = 100);
+	border-bottom:3px solid orange;
+}
+
+/*Inicio do bloco de configuração da barra abaixo do menu*/
+#status{
+	height:33px;
+	background:#21415f;
+	font-family:calibri;
+	padding-left:3px;
+	padding-top:3px;
+	margin: -7px;
+	
+} /* remover a propriedade float do status*/
+
+#status h1{
+	font-size:12px;
+	color:#fff;
+}
+
+.labelLembrete {
+  position: absolute;
+  top: 7px;
+  text-align: center;
+  font-size: 11px;
+  margin-left: 28px;
+}
+
+.labelAviso {
+  position: absolute;
+  top: 55px;
+  text-align: center;
+  font-size: 11px;
+  margin-left: -12px;
+}
+
+.styleLabelAviso {
+  background-color: #ff9900;
+  border-radius: 5px;
+  padding: 1px 6px;
+}
+
+.styleLabelLembrete {
+  background-color: #ff9900;
+  border-radius: 5px;
+  padding: 1px 6px;
+  font-weight: bold;
+}
+
+#status h1 img{
+	vertical-align:middle;
+	float:left;
+	margin:-5px 10px 0 10px;
+}
+ 
+ #status h5{
+  font-weight:normal;
+  color:#fff;
+  font-size:14px;
+  margin:-3px 10px 0 1px;
+  float:left; /*acrescentar esta linha*/ 
+}
+
+/*Inicio do bloco css do usuario logado*/
+#img-usuario-logado h5{
+  float:right;
+  margin: -2px 15px 0 0;
+  color:white;
+}
+
+#img-usuario-logado h1 img{
+  float:right;
+}
+ 
+/*final do bloco de configuração da barra de menu*/
+
+.icone img{
+ float:left;
+ margin:5px 60px 0 1px;
+ }
+ 
+h2{
+ color:#fff;
+}
+
+#box-inferior{
+margin:2px 2px 2px 2px;
+color:orange;
+overflow-y:scroll;
+height:472px;
+
+}
+
+/*inserir no css*/
+#rodape{
+ margin:0 auto;
+ height:42px;
+ width:100%;
+ text-align:center;
+ background: url(imagens/bg-rodape.png) repeat-x;
+ padding:4px 0 0 0;
+ font-family:calibri;
+ border-top:outset;
+}
+
+#funcionarios{
+ height:35px;
+ float:left;
+ width:260px;
+ padding:0 25px 0 25px;
+ position:relative;
+ margin:0 0 0 55px;
+}
+
+#funcionarios img{
+vertical-align:middle;
+float:right;
+padding:1px 0 0 0;
+}
+
+#funcionarios h6, #cargo h6, #departamento h6, #pendencia h6{
+font-size:12px;
+float:left;
+position:absolute;
+bottom:3px;
+}
+
+#label h6{
+ position:absolute;
+ top:1px;
+ right:28px;
+ font-family:calibri;
+ font-size:11px;
+ color:#fff;
+
+}
+
+#label-cargo h6{
+ position:absolute;
+ top:3px;
+ right:28px;
+ font-family:calibri;
+ font-size:11px;
+ color:#fff;
+
+}
+
+#label-dpto h6{
+ position:absolute;
+ top:4px;
+ right:27px;
+ font-family:calibri;
+ font-size:11px;
+ color:#fff;
+
+}
+
+#label-pendencia h6{
+ position:absolute;
+ top:11px;
+ right:10px;
+ font-family:calibri;
+ font-size:11px;
+ color:blue;
+
+}
+
+
+#cargo{
+ height:35px;
+ float:left;
+ width:270px;
+ margin:0 0 0 10px;
+ padding:0 25px 0 25px;
+ position:relative;
+}
+
+#cargo img{
+vertical-align:middle;
+float:right;
+margin:2px 0 0 0;
+}
+
+#cargo h5, #departamento h5, #pendencia h5, #funcionarios h5{
+ font-size:12px;
+ font-family:calibri;
+ float:left;
+ margin:0 6px 0 0;
+ color:#fff;
+ position:absolute;
+ top:3px;
+}
+
+#departamento{
+ height:35px;
+ float:left;
+ width:265px;
+ margin:0 0 0 10px;
+ padding:0 25px 0 25px;
+ position:relative;
+}
+
+#departamento img{
+vertical-align:middle;
+float:right;
+margin:4px 0 0 0;
+}
+
+#pendencia{
+ height:35px;
+ float:left;
+ width:205px;
+ margin:0 0 0 10px;
+ position:relative;
+}
+
+#pendencia img{
+vertical-align:middle;
+float:right;
+margin:4px 0 0 0;
+}
+
+#div-clear{
+ clear:both;
+}
+
+/*Menu horizontal*/
+#menubar ul li{
+ display:block; 
+ position:relative;
+ z-index:99;
+}
+
+#menubar ul li ul{
+display:none;
+position:absolute;
+float:left;
+z-index:99;
+}
+
+#menubar ul li:hover ul{
+display:block;
+}
+
+#menubar ul li ul li{
+float:none;
+background-color: #336699;
+width: 230px;
+}
+
+#menu ul li ul li a{
+text-align:left;
+opacity:0.5;
+filter:alpha(opacity = 40);
+}
+
+#menubar ul{
+padding:0;
+}
+
+#menubar ul li ul li img{
+float:left;
+}
+
+#menu ul li ul li a:hover{
+opacity:1;
+filter:alpha(opacity = 100);
+}
+
+

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>ECCSLG</title>
+	<link rel="shortcut icon" href="resources/imagens/SLG.ico" />
+	<h:outputStylesheet library="css" name="bootstrap.min.css" />
+	<h:outputScript library="js" name="bootstrap.min.js" />
+	<h:outputStylesheet library="css" name="login.css" />
+</h:head>
+<h:body style="background-color:#3f729b">
+	<h1>
+		<img src="resources/imagens/logoSLG.png" style="margin-left:20px;" />
+	</h1>
+		<div class="container" align="center">
+		<div class="row">
+			<div class="col-md-4 col-md-offset-7">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+					<h:graphicImage library="imagens" name="cadeado.png" />&nbsp; Acesso
+					</div>
+					<div class="panel-body">
+						<p:messages autoUpdate="true" closable="true" />
+						<form id="login" method="post"
+							action="${request.contextPath}/j_spring_security_check">
+
+							<div class="form-group">
+								<label for="login" class="col-sm-3 control-label">
+									Usuário</label>
+								<div class="col-sm-9">
+									<input type='text' name='j_username' class="form-control">
+										<p:focus id='j_username' /> 
+									</input>
+									<br/>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="password" class="col-sm-3 control-label">
+									Senha</label>
+								<div class="col-sm-9">
+									<input type='password' name='j_password' class="form-control" />
+									<br/>
+								</div>
+							</div>
+							<div class="form-group last">
+								<div class="col-sm-offset-3 col-sm-9">
+									<input type="submit" value="Entrar"
+										class="btn btn-success btn-sm" />
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="panel-footer">Paróquia São Luiz Gonzaga</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</h:body>
+</html>

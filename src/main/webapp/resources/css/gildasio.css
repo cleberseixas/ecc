@@ -1,0 +1,340 @@
+
+body{
+font-size: 1.1em;
+}
+
+body img{
+border:0;
+
+}
+
+#menu{
+ background: url(../resources/imagens/bg.png);
+}
+
+
+#menu ul{
+ list-style-type:none;
+ background-image: url(../resources/imagens/bg.png);
+ height:54px;
+ margin:0 auto;
+
+}
+
+#menu ul li a:focus {
+color:#000;
+background:#CCC;
+opacity:1;
+filter:alpha(opacity = 100);
+border-bottom:3px solid orange;
+}
+
+
+#menu li{
+ float:left;
+ background-image: url(../resources/imagens/bg.png);
+}
+
+#menu ul a{
+background-repeat:no-repeat;
+padding-right:18px;
+padding-left:10px;
+display:block;
+line-height:51px;
+text-decoration: none;
+font-family: calibri,Times, serif;
+font-size:14px;
+color:#fff;
+text-align:center;
+opacity:0.5;
+filter:alpha(opacity = 60);
+}
+
+#menu ul li:last-child{
+ border-right:0;
+}
+
+#menu ul li a img{
+vertical-align:middle;
+margin:0 10px 0 0;
+}
+
+#menu ul li a:hover {
+color:#000;
+background:#CCC;
+opacity:1;
+filter:alpha(opacity = 100);
+border-bottom:3px solid orange;
+}
+
+.icone{
+ float:left;
+ margin:12px 60px 0 10px;
+ text-shadow:#FFF 1px 1px 1px;
+ color:#666666;
+}
+
+#box-inferior{
+padding:10px;
+color:#fff;
+}
+
+h1 {
+	font-size: 1.6em;
+	font-weight: normal;
+}
+
+h2{
+color:#fff;
+font-size: 1.6em;
+}
+
+h3 {
+	font-size: 1em;
+	margin-top:20px;
+}
+
+
+
+#globalthemeswitcher {
+    position:absolute;
+    top:5px;
+    right:50px;
+}
+
+/* Page */
+#page {
+	padding: 10px 0px;
+	background: #FFFFFF;
+}
+
+/* Content */
+#content {
+	width: 70%;
+    float:left;
+}
+
+.post {
+	padding-bottom: 15px;
+}
+
+.post h1 {
+	font-weight: normal;
+}
+
+.title {
+	height: 30px;
+	margin-left: 10px;
+	padding: 8px 0 0 20px;
+}
+
+.title a {
+	border-bottom: none;
+	color: #FFFFFF;
+}
+
+.title a:hover {
+	border-bottom: 1px dotted #000000;
+}
+
+.submenu-title {
+    padding: 4px 10px;
+}
+
+.submenu-content {
+    text-align:center;
+}
+
+.byline {
+	margin: -60px 20px 20px 20px;
+}
+
+.byline a {
+	color: #DC8700;
+}
+
+.tag {
+	padding: 0 15px;
+}
+
+.entry {
+	padding: 0 20px;
+}
+
+.entry p {
+	line-height: 200%;
+}
+
+.links {
+	padding: 4px 0px;
+	text-align: right;
+	font-weight: bold;
+}
+
+.links a {
+	border: none;
+}
+
+.links a:hover {
+}
+
+#sidebar {
+	float: left;
+	width: 25%;
+	padding: 0 10px;
+	margin-left: -1px;
+    overflow: hidden;
+}
+
+#sidebar a.ui-state-hover, 
+#sidebar a.ui-state-highlight {
+    border:0 none;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+#sidebar table {
+    width: 100%;
+}
+
+#sidebar table td {
+    vertical-align: top;
+}
+
+#sidebar ul {
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar ul li {
+    list-style-type: none;
+    padding: 1px;
+}
+
+/* Footer */
+#footer {
+	height: 70px;
+	margin: 0 auto;
+	padding: 0 20px;
+    font-size: 14px;
+}
+
+#footer p {
+	margin: 0;
+	padding: 25px 0 0 0;
+	text-align: center;
+}
+
+#footer a {
+    text-align: left;
+}
+
+#footer .link {
+	float: right;
+}
+
+#footer .copyright {
+	float: left;
+}
+
+.homeText {
+	line-height: 175%;
+}
+
+.homeMenu {
+	width:200px;
+	float:left;
+	margin-right:10px
+}
+
+.themeMenu {
+    overflow: auto;
+    height:300px;
+    width:200px;
+}
+
+.dp-xml {
+    width:1000px;
+}
+
+.ui-themeswitcher a.ui-selectonemenu-label-container {
+    text-decoration: none !important;
+}
+
+.ui-widget {
+    font-size: 12px !important;
+}
+
+#box1 {
+	width:49.5%;
+	float: left;
+}
+
+#box2 {
+	width:49.5%;
+	float: right;
+}
+
+.txt_dinamico{
+float:right;
+padding-top:20px;
+padding-right:5px;
+
+}
+
+#divPai {
+	height: 130px;
+	width: 685px;
+}
+
+#divEsquerda {
+	height: 340px;
+	width: 380px;
+	float: left;
+}
+
+#divDireitaSuperior {
+	height: 190px;
+	width: 290px;
+	float: left;
+	margin-left: 9px;
+}
+
+#divDireitaInferior {
+	height: 150px;
+	width: 290px;
+	float: left;
+	margin-top: 9px;
+	margin-left: 9px;
+}
+
+#status{
+height:33px;
+width:100%;
+background:#828282;
+float:left;
+font-family:calibri;
+}
+
+#status h1{
+ font-size:12px;
+ color:#fff;
+}
+
+#status h1 img{
+ vertical-align:middle;
+ float:left;
+ margin:4px 10px 0 10px;
+ }
+ 
+ #status h5{
+  color:#fff;
+  font-size:14px;
+  font-weight:normal;
+  padding:7px 0 0 0;
+
+}
+
+#menu ul li a:active{
+text-shadow:#FFF 1px 1px 1px;
+}

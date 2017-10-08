@@ -1,0 +1,60 @@
+body { 
+	
+	background: url(../resources/imagens/igreja.png) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color: #EBF3FE;
+}
+
+body img {
+	float:left;
+}
+
+.panel-default {
+	opacity: 0.9;
+	margin-top:30px;
+}
+
+.form-group.last { margin-bottom:0px; }
+
+footer {
+	font-size: 14px;
+	font-family: Lucida Sans;
+	font-weight: bold;
+	background-color: white; 
+	text-align: center;
+	position:  absolute; 
+	bottom:  0px; 
+	left: 0px;
+	color: #363636;
+	height: 4.5%;
+	width: 100%;
+	padding-top: 0.5%;
+}
+
+.acessoNegado {
+	text-shadow: #fff 1px 1px 1px;
+	font-family: Calibri;
+	font-size: 60px;
+	color: #323336;
+}
+
+#divFora {
+	width: 100%;
+	height: 100%;
+}
+
+#divEsquerda {
+	position: relative;
+	width: 25%;
+	height: 100%;
+	float: left;
+}
+
+#divDireita {
+	width: 75%;
+	height: 100%;
+	float: right;
+}
