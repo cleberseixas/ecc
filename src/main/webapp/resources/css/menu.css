@@ -1,5 +1,5 @@
 #menubar{
-	height:50px;
+	height:68px;
 	background-repeat: repeat-x;
 	color:#FFFFFF;
 	font-family:"Lucida Grande", Tahoma, sans-serif;
@@ -28,7 +28,7 @@
 	display:block;
 	line-height:47px; /*alterar este valor*/
 	text-decoration: none;
-	font-family: Calibri, “Times New Roman”, Times, serif;
+	font-family: Calibri, ï¿½Times New Romanï¿½, Times, serif;
 	font-size:14px;
 	color:#fff;
 	opacity:0.5;
@@ -48,7 +48,7 @@
 	border-bottom:3px solid orange;
 }
 
-/*Inicio do bloco de configuração da barra abaixo do menu*/
+/*Inicio do bloco de configuraï¿½ï¿½o da barra abaixo do menu*/
 #status{
 	height:33px;
 	background:#21415f;
@@ -118,7 +118,7 @@
   float:right;
 }
  
-/*final do bloco de configuração da barra de menu*/
+/*final do bloco de configuraï¿½ï¿½o da barra de menu*/
 
 .icone img{
  float:left;

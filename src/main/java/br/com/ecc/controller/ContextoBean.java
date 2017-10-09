@@ -1,7 +1,11 @@
 package br.com.ecc.controller;
 
 
+import br.com.ecc.model.Usuario;
+import br.com.ecc.repository.UsuarioRepository;
+
 import javax.enterprise.context.SessionScoped;
+import javax.faces.bean.ViewScoped;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
@@ -11,30 +15,31 @@ import java.io.Serializable;
 /**
  * Classe destinada à capturar o usuário logado, mantendo-o conhecido durante toda a sessão
  * 
- * @author Marcelo Douglas Silva dos Santos
- * @since 08/07/2013
- * @version Atualizada em 03/06/2015
+ * @author Cleber Seixas
+ * @since 08/10/2018
  * */
 
 @Named
-@SessionScoped
+@ViewScoped
 public class ContextoBean implements Serializable {
-	private static final long serialVersionUID = 1L;
-//	private UsuarioAstec usuarioLogado = null;
-//
-//	@Inject
-//	private UsuarioAstecRN usuarioRN;
+	private static final long serialVersionUID = 12L;
+
+	@Inject
+	private Usuario usuarioLogado = null;
+
+	@Inject
+	private UsuarioRepository usuarioRepository;
 	
-	//public UsuarioAstec getUsuarioLogado() {
+	public Usuario getUsuarioLogado() {
 		FacesContext context = FacesContext.getCurrentInstance();
 		ExternalContext external =  context.getExternalContext();
 		String login = external.getRemoteUser();
-//		if (this.usuarioLogado == null || !login.equals(this.usuarioLogado.getLogin())) {
-//			if (login != null) {
-//				this.usuarioLogado = usuarioRN.buscaPorLogin(login);
-//			}
-//		}
-//		return usuarioLogado;
-//		return null;
-//	}
+		if (this.usuarioLogado == null || !login.equals(this.usuarioLogado.getLogin())) {
+			if (login != null) {
+				//this.usuarioLogado = usuarioRepository.buscarPorLogin(login);
+				this.usuarioLogado.setNome("Cleber Seixas");
+			}
+		}
+		return usuarioLogado;
+	}
 }

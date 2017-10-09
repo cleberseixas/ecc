@@ -4,7 +4,7 @@ import javax.persistence.Persistence;
 
 public class GerarTabelas {
 	public static void main(String[] args) {
-		 Persistence.createEntityManagerFactory("astec");
+		 Persistence.createEntityManagerFactory("ecc");
 		 System.out.println("Sucesso!");
 	}	
 }	

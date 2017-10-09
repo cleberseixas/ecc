@@ -14,7 +14,7 @@ public class ConnectionFactory {
 	public static Connection getConnection() throws Exception{
 		try{
 			Class.forName("org.postgresql.Driver");
-			return DriverManager.getConnection("jdbc:postgresql://localhost:5432/astec_bd","postgres","postgres");
+			return DriverManager.getConnection("jdbc:postgresql://localhost:5432/ecc_bd","postgres","postgres");
 		}
 		catch (Exception e){
 		   throw new Exception(e.getMessage());

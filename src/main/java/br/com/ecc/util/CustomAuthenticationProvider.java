@@ -1,11 +1,12 @@
 package br.com.ecc.util;
 
+import br.com.ecc.model.Usuario;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
-//import org.springframework.security.core.GrantedAuthority;
-//imMort org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.EntityManager;
@@ -38,28 +39,27 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
         String senha = authentication.getCredentials().toString();
         
         //--------------------------------------------------------------------------------------------------
-        //trecho de código necessário pq não foi possível injetar um bean CDI para usuarioRN durante a 
+        //trecho de código necessário pq não foi possível injetar um bean CDI para usuarioRepository durante a
         //autenticação. Por conta disso, efetuamos a busca pelo usuario logado adicionando o a pesquia
         //diretamente no código. 
-//        UsuarioAstec usuario = null;
-//
-//        TypedQuery<UsuarioAstec> query = manager.createQuery("from UsuarioAstec where login = :LG and ativo = :ST", UsuarioAstec.class);
-//		query.setParameter("LG", cadastro);
-//		query.setParameter("ST", true);
-//		if (query.getResultList().size() > 0)
-//			usuario = query.getSingleResult();
-//        if (usuario == null)
-//        	return null;
-//        //--------------------------------------------------------------------------------------------------
-//
-//    	if (LdapUtil.login(cadastro, senha)){
-//    		String permissao = usuario.getPermissao();
-//
-//            List<GrantedAuthority> grantedAuths = new ArrayList<>();
-//            grantedAuths.add(new SimpleGrantedAuthority(permissao));
-//            Authentication auth = new UsernamePasswordAuthenticationToken(cadastro, senha, grantedAuths);
-//            return auth;
-//        }
+        Usuario usuario = null;
+
+        TypedQuery<Usuario> query = manager.createQuery("from Usuarios where login = :login and ativo = :status", Usuario.class);
+		query.setParameter("login", cadastro);
+		query.setParameter("status", true);
+		if (query.getResultList().size() > 0)
+			usuario = query.getSingleResult();
+        if (usuario == null)
+        	return null;
+        //--------------------------------------------------------------------------------------------------
+    	if (LdapUtil.login(cadastro, senha)){
+    		String permissao = usuario.getPermissao();
+
+            List<GrantedAuthority> grantedAuths = new ArrayList<>();
+            grantedAuths.add(new SimpleGrantedAuthority(permissao));
+            Authentication auth = new UsernamePasswordAuthenticationToken(cadastro, senha, grantedAuths);
+            return auth;
+        }
         return null;
     }
  
