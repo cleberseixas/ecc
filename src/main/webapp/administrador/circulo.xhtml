@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+<h:head>
+	<title>ECC-SLG</title>
+	<link rel="shortcut icon" href="../resources/imagens/SLG.ico" />
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+	<h:outputScript library="js" name="locale-primefaces.js" />
+	<h:outputScript library="js" name="bootstrap.min.js" />
+
+	<h:outputStylesheet library="css" name="modelo.css" />
+	<h:outputStylesheet library="css" name="menu.css" />
+	<h:outputStylesheet library="css" name="AdminLTE.css" />
+	<h:outputStylesheet library="css" name="font-awesome.min.css" />
+</h:head>
+
+<h:body style="background-color:#EBF3FE">
+	<h:form id="edicao">
+		<div id="menubar">
+			<li class="icone"><h:graphicImage library="imagens" name="logo_ECC.png" width="400" height="72" /></li>
+			<ul>
+				<li><a><h:graphicImage library="imagens/menu"
+									   style="width:35px; height:35px;" name="cadastros.png" />Cadastros</a>
+					<ul>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="circulos.png" />
+							<a style="color: #808080; background: #a0c0de; opacity: 1;
+							filter: alpha(opacity = 100); border-bottom: 3px solid #b1b1b1;">Círculos</a></li>
+
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="palestras.png" /><a
+								href="palestras.xhtml">Palestras</a>
+						</li>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="equipes.png" /><a
+								href="equipes.xhtml">Equipes</a></li>
+					</ul></li>
+			</ul>
+		</div>
+		<div id="status" style="...">
+			<div id="ico">
+				<h1>
+					<h:graphicImage library="imagens/menu" name="circulos.png"
+									width="25px" height="25px" />
+					<h5>
+						<b>Círculos</b>
+					</h5>
+					<p:commandButton type="button" value="Sair" icon="ui-icon-extlink"
+									 style="float: right; margin-right:5px; margin-top: -5px;"
+									 onclick="document.location='#{request.contextPath}/j_spring_security_logout'" />
+				</h1>
+			</div>
+			<div id="img-usuario-logado">
+				<h5>Usuário logado: #{contextoBean.usuarioLogado.nome}</h5>
+				<h1>
+					<h:graphicImage library="imagens/menu" name="usuarioLogado.png"
+									width="25px" height="25px" />
+				</h1>
+			</div>
+		</div>
+		<br />
+		<p:growl id="growl" showDetail="true" sticky="false" life="2000" showSummary="false" autoUpdate="true" />
+		<br />	
+		<center>	
+		<p:panel header="Cadastro de Círculos"
+			style="width:616px; background:#F1F2F5;">
+			<h:message />
+			<h:inputHidden value="#{circuloBean.circulo.id}" />
+			<h:panelGrid columns="2">
+				<h:outputLabel value="Descrição:" for="descricao" />
+				<p:inputText id="descricao" value="#{circuloBean.circulo.descricao}"
+					required="true" requiredMessage="O campo Descrição é obrigatório"
+					maxlength="50" style="width:250px;">
+					<p:focus for="descricao" />
+				</p:inputText>
+				<h:outputLabel value="Tempo de Casado:" for="tempoCasado" />
+				<p:inputText id="tempoCasado" value="#{circuloBean.circulo.tempoCasado}"
+							 required="true" requiredMessage="O campo Tempo de Casado é obrigatório"
+							 maxlength="10" style="width:35px;">
+				</p:inputText>
+				<h:outputLabel value="Total de Casais:" for="totalCasal" />
+				<p:inputText id="totalCasal" value="#{circuloBean.circulo.totalCasais}"
+							 required="true" requiredMessage="O campo Total de Casais é obrigatório"
+							 maxlength="10" style="width:35px;">
+				</p:inputText>
+				<h:outputLabel value="" />
+				<p:commandButton value="Salvar" action="#{circuloBean.salvar()}"
+					icon="ui-icon-disk" process="@form" update=":listagem :edicao">
+				</p:commandButton>
+			</h:panelGrid>
+		</p:panel>
+		</center>
+	</h:form>
+	<br />
+	<h:form id="listagem">
+		<center>
+		<p:dataTable value="#{circuloBean.lista}" var="circulo"
+			rendered="#{!empty circuloBean.lista}" style="width:620px;">
+			<p:column>
+				<f:facet name="header">Círculos</f:facet>
+				#{circulo.descricao}
+			</p:column>
+			<p:column>
+				<f:facet name="header">Tempo de Casado</f:facet>
+				#{circulo.tempoCasado}
+			</p:column>
+			<p:column>
+				<f:facet name="header">Total de Casais</f:facet>
+				#{circulo.totalCasais}
+			</p:column>
+			<p:column width="50">
+				<f:facet name="header">Ativo</f:facet>
+				<center>
+					<h:commandLink action="#{circuloBean.ativarInativar}">
+						<f:ajax execute="@this" render=":listagem" />
+						<h:graphicImage library="imagens"
+										name="#{circulo.ativo}.png" />
+						<f:setPropertyActionListener
+								target="#{circuloBean.circulo}" value="#{circulo}" />
+					</h:commandLink>
+				</center>
+			</p:column>
+			<p:column width="40" headerText="Editar">
+				<center>
+					<h:commandLink>
+						<f:ajax execute="@this" render=":edicao" />
+						<h:graphicImage library="imagens" name="alterar.png" />
+						<f:setPropertyActionListener target="#{circuloBean.circulo}"
+							value="#{circulo}" />
+					</h:commandLink>
+				</center>
+			</p:column>
+
+			<p:column width="40" headerText="Excluir">
+				<center>
+					<h:commandLink action="#{circuloBean.excluir}"
+						onclick="if (!confirm('Confirma a exclusão do Círculo #{circulo.id}?')) return false;">
+						<f:ajax execute="@this" render=":listagem" />
+						<h:graphicImage library="imagens" name="remover.png" />
+						<f:setPropertyActionListener target="#{circuloBean.circulo}"
+							value="#{circulo}" />
+					</h:commandLink>
+				</center>
+			</p:column>
+			<f:facet name="footer">
+				<p:outputLabel value="Quantidade de Círculos: #{circuloBean.lista.size()}"/>
+			</f:facet>
+		</p:dataTable>
+		</center>
+	</h:form>
+</h:body>
+</html>

@@ -1,5 +1,5 @@
 #menubar{
-	height:68px;
+	height:90px;
 	background-repeat: repeat-x;
 	color:#FFFFFF;
 	font-family:"Lucida Grande", Tahoma, sans-serif;
@@ -118,7 +118,7 @@
   float:right;
 }
  
-/*final do bloco de configura��o da barra de menu*/
+/*final do bloco de configuração da barra de menu*/
 
 .icone img{
  float:left;

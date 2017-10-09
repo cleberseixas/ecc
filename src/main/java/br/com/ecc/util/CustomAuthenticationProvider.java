@@ -44,7 +44,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
         //diretamente no código. 
         Usuario usuario = null;
 
-        TypedQuery<Usuario> query = manager.createQuery("from Usuarios where login = :login and ativo = :status", Usuario.class);
+        TypedQuery<Usuario> query = manager.createQuery("from Usuario where login = :login and ativo = :status", Usuario.class);
 		query.setParameter("login", cadastro);
 		query.setParameter("status", true);
 		if (query.getResultList().size() > 0)

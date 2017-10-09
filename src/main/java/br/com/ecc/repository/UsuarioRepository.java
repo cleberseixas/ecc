@@ -36,12 +36,12 @@ public class UsuarioRepository {
 	}
 
 	public List<Usuario> listar() {
-		TypedQuery<Usuario> query = manager.createQuery("from Usuarios order by nome", Usuario.class);
+		TypedQuery<Usuario> query = manager.createQuery("from Usuario order by nome", Usuario.class);
 		return query.getResultList();
 	}
 
 	public Usuario buscarPorLogin(String login) {
-		TypedQuery<Usuario> query = manager.createQuery("from Usuarios where login = :login", Usuario.class);
+		TypedQuery<Usuario> query = manager.createQuery("from Usuario where login = :login", Usuario.class);
 		query.setParameter("login", login);
 		if (query.getResultList().size() > 0)
 			return query.getSingleResult();
@@ -53,7 +53,7 @@ public class UsuarioRepository {
 		List<Usuario> listAux = new ArrayList<Usuario>();
 		Query query = null;
 		query = manager.createNativeQuery("select usuario, ativo, email, login, nome, perfil, senha, permissao "
-				+ "from usuarios "
+				+ "from Usuario "
 				+ "where special_like(nome, :nome) ");
 		query.setParameter("nome", "%"+nome+"%");
 		List lst = query.getResultList();

@@ -16,16 +16,17 @@ import java.io.Serializable;
  */
 @Audited
 @Entity
-@Table(uniqueConstraints=@UniqueConstraint(columnNames={"login"}, name="uk_login"))
-@SequenceGenerator(name = "usuarios", sequenceName = "seq_usuarios", allocationSize=1)
+@Table(name = "USUARIOS", uniqueConstraints=@UniqueConstraint(columnNames={"login"}, name="uk_login"))
+@SequenceGenerator(name = "seq_usuarios", sequenceName = "seq_usuarios", allocationSize=1)
 public class Usuario implements Serializable {
 	private static final long serialVersionUID = 5783412212859462833L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="seq_usuarios")
-	@Column(name="USUARIO")
+	@Column(name = "USUARIO", nullable = false)
 	private Long id;
 
-	@Column(name="nome", length=50)
+
+	@Column(name="NOME", length=50)
 	private String nome;
 
 	@Column(length=20)
@@ -39,6 +40,8 @@ public class Usuario implements Serializable {
 	
 	@Column(length=40)
 	private String permissao;
+
+	private boolean dirigente;
 	
 
 	public Long getId() {
@@ -103,6 +106,14 @@ public class Usuario implements Serializable {
 
 	public void setPermissao(String permissao) {
 		this.permissao = permissao;
+	}
+
+	public boolean getDirigente() {
+		return dirigente;
+	}
+
+	public void setDirigente(boolean dirigente) {
+		this.dirigente = dirigente;
 	}
 
 	@Override

@@ -2,10 +2,9 @@ package br.com.ecc.controller;
 
 
 import br.com.ecc.model.Usuario;
-import br.com.ecc.repository.UsuarioRepository;
+import br.com.ecc.service.UsuarioService;
 
 import javax.enterprise.context.SessionScoped;
-import javax.faces.bean.ViewScoped;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
@@ -20,7 +19,7 @@ import java.io.Serializable;
  * */
 
 @Named
-@ViewScoped
+@SessionScoped
 public class ContextoBean implements Serializable {
 	private static final long serialVersionUID = 12L;
 
@@ -28,7 +27,7 @@ public class ContextoBean implements Serializable {
 	private Usuario usuarioLogado = null;
 
 	@Inject
-	private UsuarioRepository usuarioRepository;
+	private UsuarioService usuarioService;
 	
 	public Usuario getUsuarioLogado() {
 		FacesContext context = FacesContext.getCurrentInstance();
@@ -36,8 +35,7 @@ public class ContextoBean implements Serializable {
 		String login = external.getRemoteUser();
 		if (this.usuarioLogado == null || !login.equals(this.usuarioLogado.getLogin())) {
 			if (login != null) {
-				//this.usuarioLogado = usuarioRepository.buscarPorLogin(login);
-				this.usuarioLogado.setNome("Cleber Seixas");
+				this.usuarioLogado = usuarioService.buscaPorLogin(login);
 			}
 		}
 		return usuarioLogado;
