@@ -10,10 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8b22dac-800f-408a-b5a8-ff04f4c56148" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/logoSLGOld.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/administrador/circulo.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/administrador/circulo.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/administrador/menu.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/administrador/menu.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/administrador/palestra.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/administrador/palestra.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/administrador/equipe.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/administrador/equipe.xhtml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -91,6 +88,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="modelo.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/modelo.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="329" column="8" lean-forward="false" selection-start-line="329" selection-start-column="8" selection-end-line="329" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="EquipeService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/service/EquipeService.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -121,16 +128,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="equipe.xhtml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="equipe.xhtml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/administrador/equipe.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="52" column="53" lean-forward="true" selection-start-line="52" selection-start-column="53" selection-end-line="52" selection-end-column="61" />
+            <state relative-caret-position="210">
+              <caret line="109" column="37" lean-forward="true" selection-start-line="109" selection-start-column="37" selection-end-line="109" selection-end-column="37" />
               <folding>
-                <marker date="1507583212066" expanded="true" signature="1348:1432" ph="{...}" />
-                <marker date="1507583212066" expanded="true" signature="1591:1675" ph="{...}" />
-                <marker date="1507583212066" expanded="true" signature="1837:1921" ph="{...}" />
-                <marker date="1507583212066" expanded="true" signature="2185:2269" ph="{...}" />
+                <marker date="1507586104326" expanded="true" signature="1348:1432" ph="{...}" />
+                <marker date="1507586104326" expanded="true" signature="1591:1675" ph="{...}" />
+                <marker date="1507586104326" expanded="true" signature="1837:1921" ph="{...}" />
+                <marker date="1507586104326" expanded="true" signature="2185:2269" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -172,28 +179,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="palestra.xhtml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="palestra.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/administrador/palestra.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
+            <state relative-caret-position="816">
               <caret line="48" column="4" lean-forward="true" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
               <folding>
                 <marker date="1507583222050" expanded="true" signature="1348:1432" ph="{...}" />
                 <marker date="1507583222050" expanded="true" signature="1592:1676" ph="{...}" />
                 <marker date="1507583222050" expanded="true" signature="1944:2028" ph="{...}" />
                 <marker date="1507583222050" expanded="true" signature="2184:2268" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Palestra.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/Palestra.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -236,6 +231,7 @@
       <find>i</find>
       <find>id.</find>
       <find>long</find>
+      <find>sigla</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -293,10 +289,10 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/service/EquipeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/converter/EquipeConverter.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EquipeBean.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/administrador/equipe.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/administrador/circulo.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/administrador/menu.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/administrador/palestra.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/administrador/equipe.xhtml" />
       </list>
     </option>
   </component>
@@ -1209,12 +1205,12 @@
       <option name="presentableId" value="Default" />
       <updated>1507484431748</updated>
       <workItem from="1507484438370" duration="27802000" />
-      <workItem from="1507548912317" duration="23285000" />
+      <workItem from="1507548912317" duration="25856000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51087000" />
+    <option name="totallyTimeSpent" value="53658000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1597" y="25" width="1446" height="852" extended-state="6" />
@@ -1451,14 +1447,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/modelo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="1577" column="16" lean-forward="true" selection-start-line="1577" selection-start-column="16" selection-end-line="1577" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1845,28 +1833,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/administrador/equipe.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="52" column="53" lean-forward="true" selection-start-line="52" selection-start-column="53" selection-end-line="52" selection-end-column="61" />
-          <folding>
-            <marker date="1507583212066" expanded="true" signature="1348:1432" ph="{...}" />
-            <marker date="1507583212066" expanded="true" signature="1591:1675" ph="{...}" />
-            <marker date="1507583212066" expanded="true" signature="1837:1921" ph="{...}" />
-            <marker date="1507583212066" expanded="true" signature="2185:2269" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/administrador/palestra.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
+        <state relative-caret-position="816">
           <caret line="48" column="4" lean-forward="true" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
           <folding>
             <marker date="1507583222050" expanded="true" signature="1348:1432" ph="{...}" />
             <marker date="1507583222050" expanded="true" signature="1592:1676" ph="{...}" />
             <marker date="1507583222050" expanded="true" signature="1944:2028" ph="{...}" />
             <marker date="1507583222050" expanded="true" signature="2184:2268" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/modelo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="329" column="8" lean-forward="false" selection-start-line="329" selection-start-column="8" selection-end-line="329" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/administrador/equipe.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="109" column="37" lean-forward="true" selection-start-line="109" selection-start-column="37" selection-end-line="109" selection-end-column="37" />
+          <folding>
+            <marker date="1507586104326" expanded="true" signature="1348:1432" ph="{...}" />
+            <marker date="1507586104326" expanded="true" signature="1591:1675" ph="{...}" />
+            <marker date="1507586104326" expanded="true" signature="1837:1921" ph="{...}" />
+            <marker date="1507586104326" expanded="true" signature="2185:2269" ph="{...}" />
           </folding>
         </state>
       </provider>

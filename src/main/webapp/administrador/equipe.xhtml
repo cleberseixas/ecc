@@ -84,33 +84,36 @@
 			style="width:616px; background:#F1F2F5;">
 			<h:message />
 			<h:inputHidden value="#{equipeBean.equipe.id}" />
-			<h:panelGrid columns="2">
-				<h:outputLabel value="Descrição:" for="descricao" />
+			<h:panelGrid columns="4">
+				<h:outputLabel value="Descrição" for="descricao" />
+				<h:outputLabel value="Sigla" for="sigla"/>
+				<h:outputLabel value="Mínimo" for="minimoCasal" />
+				<h:outputLabel value="Máximo" for="maximoCasal" />
 				<p:inputText id="descricao" value="#{equipeBean.equipe.descricao}"
 					required="true" requiredMessage="O campo Descrição é obrigatório"
 					maxlength="100" style="width:350px;">
 					<p:focus for="descricao" />
 				</p:inputText>
-				<h:outputLabel value="Sigla:" for="sigla" />
 				<p:inputText id="sigla" value="#{equipeBean.equipe.sigla}"
 							 required="true" requiredMessage="O campo Sigla é obrigatório"
-							 maxlength="5" style="width:35px;">
+							 maxlength="5" style="width:45px;">
 				</p:inputText>
-				<h:outputLabel value="Mínimo de Casais:" for="minimoCasal" />
 				<p:inputText id="minimoCasal" value="#{equipeBean.equipe.minimoCasal}"
 							 required="true" requiredMessage="O campo Mínimo de Casais é obrigatório"
-							 maxlength="10" style="width:35px;">
+							 maxlength="10" style="width:45px;">
 				</p:inputText>
-				<h:outputLabel value="Máximo de Casais:" for="maximoCasal" />
 				<p:inputText id="maximoCasal" value="#{equipeBean.equipe.maximoCasal}"
 							 required="true" requiredMessage="O campo Máximo de Casais é obrigatório"
-							 maxlength="10" style="width:35px;">
+							 maxlength="10" style="width:45px;">
 				</p:inputText>
-
+			</h:panelGrid>
+			<h:panelGrid columns="4">
 				<p:selectBooleanCheckbox value="#{equipeBean.equipe.automatica}" itemLabel="Automática?" style="margin-left:5px;" />
 				<p:selectBooleanCheckbox value="#{equipeBean.equipe.coordenador}" itemLabel="Coordenador?" style="margin-left:5px;" />
 				<p:selectBooleanCheckbox value="#{equipeBean.equipe.palestrante}" itemLabel="Palestrante?" style="margin-left:5px;" />
 				<p:selectBooleanCheckbox value="#{equipeBean.equipe.aptidao}" itemLabel="Aptidão?" style="margin-left:5px;" />
+			</h:panelGrid>
+			<h:panelGrid columns="2">
 				<h:outputLabel value="" />
 				<p:commandButton value="Salvar" action="#{equipeBean.salvar()}"
 					icon="ui-icon-disk" process="@form" update=":listagem :edicao">
