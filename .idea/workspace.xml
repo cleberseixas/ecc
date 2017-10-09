@@ -10,11 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8b22dac-800f-408a-b5a8-ff04f4c56148" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/cursos.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/CirculoBean.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/CirculoBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Circulo.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Circulo.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/logoSLGOld.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/administrador/circulo.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/administrador/circulo.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/administrador/menu.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/administrador/menu.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/administrador/palestra.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/administrador/palestra.xhtml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,11 +27,63 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ContextoBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/ContextoBean.java">
+      <file leaf-file-name="Equipe.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/Equipe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="11" lean-forward="false" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+            <state relative-caret-position="256">
+              <caret line="52" column="25" lean-forward="false" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1630#1631#0" expanded="true" />
+                <element signature="e#1655#1656#0" expanded="true" />
+                <element signature="e#1689#1690#0" expanded="true" />
+                <element signature="e#1717#1718#0" expanded="true" />
+                <element signature="e#1753#1754#0" expanded="true" />
+                <element signature="e#1785#1786#0" expanded="true" />
+                <element signature="e#1835#1836#0" expanded="true" />
+                <element signature="e#1877#1878#0" expanded="true" />
+                <element signature="e#1909#1910#0" expanded="true" />
+                <element signature="e#1937#1938#0" expanded="true" />
+                <element signature="e#1979#1980#0" expanded="true" />
+                <element signature="e#2013#2014#0" expanded="true" />
+                <element signature="e#2049#2050#0" expanded="true" />
+                <element signature="e#2083#2084#0" expanded="true" />
+                <element signature="e#2135#2136#0" expanded="true" />
+                <element signature="e#2181#2182#0" expanded="true" />
+                <element signature="e#2217#2218#0" expanded="true" />
+                <element signature="e#2251#2252#0" expanded="true" />
+                <element signature="e#2303#2304#0" expanded="true" />
+                <element signature="e#2349#2350#0" expanded="true" />
+                <element signature="e#2386#2387#0" expanded="true" />
+                <element signature="e#2419#2420#0" expanded="true" />
+                <element signature="e#2472#2473#0" expanded="true" />
+                <element signature="e#2516#2517#0" expanded="true" />
+                <element signature="e#2554#2555#0" expanded="true" />
+                <element signature="e#2588#2589#0" expanded="true" />
+                <element signature="e#2643#2644#0" expanded="true" />
+                <element signature="e#2689#2690#0" expanded="true" />
+                <element signature="e#2727#2728#0" expanded="true" />
+                <element signature="e#2761#2762#0" expanded="true" />
+                <element signature="e#2816#2817#0" expanded="true" />
+                <element signature="e#2862#2863#0" expanded="true" />
+                <element signature="e#2896#2897#0" expanded="true" />
+                <element signature="e#2926#2927#0" expanded="true" />
+                <element signature="e#2973#2974#0" expanded="true" />
+                <element signature="e#3011#3012#0" expanded="true" />
+                <element signature="e#3043#3044#0" expanded="true" />
+                <element signature="e#3071#3072#0" expanded="true" />
+                <element signature="e#3114#3115#0" expanded="true" />
+                <element signature="e#3148#3149#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EquipeRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EquipeRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-11">
+              <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -40,81 +91,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CirculoConverter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/converter/CirculoConverter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PalestraRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/repository/PalestraRepository.java">
+      <file leaf-file-name="EquipeService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/service/EquipeService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PalestraService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/service/PalestraService.java">
+      <file leaf-file-name="EquipeConverter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/converter/EquipeConverter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="119">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PalestraConverter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/converter/PalestraConverter.java">
+      <file leaf-file-name="EquipeBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EquipeBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="63" lean-forward="false" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="63" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="189">
+              <caret line="24" column="14" lean-forward="false" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PalestraBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/PalestraBean.java">
+      <file leaf-file-name="equipe.xhtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/administrador/equipe.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+            <state relative-caret-position="329">
+              <caret line="52" column="53" lean-forward="true" selection-start-line="52" selection-start-column="53" selection-end-line="52" selection-end-column="61" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu.xhtml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/administrador/menu.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="51" column="46" lean-forward="true" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
-              <folding>
-                <marker date="1507577007098" expanded="true" signature="1726:1811" ph="{...}" />
-                <marker date="1507577007098" expanded="true" signature="1956:2041" ph="{...}" />
-                <marker date="1507577007098" expanded="true" signature="2196:2281" ph="{...}" />
-                <marker date="1507577007098" expanded="true" signature="2587:2671" ph="{...}" />
-                <marker date="1507577007098" expanded="true" signature="2824:2908" ph="{...}" />
-                <marker date="1507577007098" expanded="true" signature="3062:3146" ph="{...}" />
-                <marker date="1507577007098" expanded="true" signature="3303:3387" ph="{...}" />
-                <marker date="1507577007098" expanded="true" signature="3569:3653" ph="{...}" />
-                <marker date="1507577007098" expanded="true" signature="3834:3918" ph="{...}" />
+                <marker date="1507583212066" expanded="true" signature="1348:1432" ph="{...}" />
+                <marker date="1507583212066" expanded="true" signature="1591:1675" ph="{...}" />
+                <marker date="1507583212066" expanded="true" signature="1837:1921" ph="{...}" />
+                <marker date="1507583212066" expanded="true" signature="2185:2269" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -123,36 +139,59 @@
       <file leaf-file-name="circulo.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/administrador/circulo.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="110" column="46" lean-forward="false" selection-start-line="110" selection-start-column="46" selection-end-line="110" selection-end-column="46" />
+            <state relative-caret-position="329">
+              <caret line="52" column="61" lean-forward="false" selection-start-line="52" selection-start-column="61" selection-end-line="52" selection-end-column="61" />
               <folding>
-                <marker date="1507574998262" expanded="true" signature="1348:1432" ph="{...}" />
-                <marker date="1507574998262" expanded="true" signature="1692:1776" ph="{...}" />
-                <marker date="1507574998262" expanded="true" signature="1938:2022" ph="{...}" />
+                <marker date="1507583216370" expanded="true" signature="1348:1432" ph="{...}" />
+                <marker date="1507583216370" expanded="true" signature="1692:1776" ph="{...}" />
+                <marker date="1507583216370" expanded="true" signature="1938:2022" ph="{...}" />
+                <marker date="1507583216370" expanded="true" signature="2178:2262" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="palestra.xhtml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="menu.xhtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/administrador/menu.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="329">
+              <caret line="60" column="61" lean-forward="false" selection-start-line="60" selection-start-column="61" selection-end-line="60" selection-end-column="61" />
+              <folding>
+                <marker date="1507583219870" expanded="true" signature="1726:1811" ph="{...}" />
+                <marker date="1507583219870" expanded="true" signature="1956:2041" ph="{...}" />
+                <marker date="1507583219870" expanded="true" signature="2196:2281" ph="{...}" />
+                <marker date="1507583219870" expanded="true" signature="2433:2517" ph="{...}" />
+                <marker date="1507583219870" expanded="true" signature="2837:2921" ph="{...}" />
+                <marker date="1507583219870" expanded="true" signature="3074:3158" ph="{...}" />
+                <marker date="1507583219870" expanded="true" signature="3312:3396" ph="{...}" />
+                <marker date="1507583219870" expanded="true" signature="3553:3637" ph="{...}" />
+                <marker date="1507583219870" expanded="true" signature="3819:3903" ph="{...}" />
+                <marker date="1507583219870" expanded="true" signature="4084:4168" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="palestra.xhtml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/administrador/palestra.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="103" column="103" lean-forward="false" selection-start-line="103" selection-start-column="103" selection-end-line="103" selection-end-column="103" />
+            <state relative-caret-position="193">
+              <caret line="48" column="4" lean-forward="true" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
               <folding>
-                <marker date="1507576215474" expanded="true" signature="1348:1432" ph="{...}" />
-                <marker date="1507576215474" expanded="true" signature="1592:1676" ph="{...}" />
-                <marker date="1507576215474" expanded="true" signature="1944:2028" ph="{...}" />
+                <marker date="1507583222050" expanded="true" signature="1348:1432" ph="{...}" />
+                <marker date="1507583222050" expanded="true" signature="1592:1676" ph="{...}" />
+                <marker date="1507583222050" expanded="true" signature="1944:2028" ph="{...}" />
+                <marker date="1507583222050" expanded="true" signature="2184:2268" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CirculoBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/CirculoBean.java">
+      <file leaf-file-name="Palestra.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/Palestra.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+            <state relative-caret-position="155">
+              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -196,6 +235,7 @@
       <find>id</find>
       <find>i</find>
       <find>id.</find>
+      <find>long</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -248,9 +288,15 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/converter/PalestraConverter.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/CirculoBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/PalestraBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EquipeRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Equipe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/service/EquipeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/converter/EquipeConverter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EquipeBean.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/administrador/equipe.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/administrador/circulo.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/administrador/palestra.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/administrador/menu.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/administrador/palestra.xhtml" />
       </list>
     </option>
   </component>
@@ -1163,12 +1209,12 @@
       <option name="presentableId" value="Default" />
       <updated>1507484431748</updated>
       <workItem from="1507484438370" duration="27802000" />
-      <workItem from="1507548912317" duration="17679000" />
+      <workItem from="1507548912317" duration="23285000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45481000" />
+    <option name="totallyTimeSpent" value="51087000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1597" y="25" width="1446" height="852" extended-state="6" />
@@ -1293,57 +1339,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/artifacts/ecc_war.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/artifacts/ecc_war_exploded.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1335">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/jboss/weld/servlet/weld-servlet/2.0.4.Final/weld-servlet-2.0.4.Final-sources.jar!/org/jboss/weld/bean/proxy/ProxyMethodHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/jboss/weld/servlet/weld-servlet/2.0.4.Final/weld-servlet-2.0.4.Final-sources.jar!/org/jboss/weld/el/WeldValueExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/primefaces/primefaces/5.3/primefaces-5.3-sources.jar!/org/primefaces/webapp/filter/FileUploadFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -1606,25 +1601,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/Usuario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="15" column="3" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="35" />
-          <folding>
-            <element signature="e#2047#2048#0" expanded="true" />
-            <element signature="e#2070#2071#0" expanded="true" />
-            <element signature="e#2118#2119#0" expanded="true" />
-            <element signature="e#2151#2152#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/service/CirculoService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="56" column="41" lean-forward="false" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1641,78 +1623,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/Circulo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1120#1121#0" expanded="true" />
-            <element signature="e#1145#1146#0" expanded="true" />
-            <element signature="e#1179#1180#0" expanded="true" />
-            <element signature="e#1207#1208#0" expanded="true" />
-            <element signature="e#1243#1244#0" expanded="true" />
-            <element signature="e#1275#1276#0" expanded="true" />
-            <element signature="e#1325#1326#0" expanded="true" />
-            <element signature="e#1367#1368#0" expanded="true" />
-            <element signature="e#1403#1404#0" expanded="true" />
-            <element signature="e#1437#1438#0" expanded="true" />
-            <element signature="e#1489#1490#0" expanded="true" />
-            <element signature="e#1535#1536#0" expanded="true" />
-            <element signature="e#1571#1572#0" expanded="true" />
-            <element signature="e#1605#1606#0" expanded="true" />
-            <element signature="e#1657#1658#0" expanded="true" />
-            <element signature="e#1703#1704#0" expanded="true" />
-            <element signature="e#1735#1736#0" expanded="true" />
-            <element signature="e#1763#1764#0" expanded="true" />
-            <element signature="e#1806#1807#0" expanded="true" />
-            <element signature="e#1840#1841#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/Palestra.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-19">
-          <caret line="67" column="37" lean-forward="false" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1006#1007#0" expanded="true" />
-            <element signature="e#1031#1032#0" expanded="true" />
-            <element signature="e#1065#1066#0" expanded="true" />
-            <element signature="e#1093#1094#0" expanded="true" />
-            <element signature="e#1129#1130#0" expanded="true" />
-            <element signature="e#1161#1162#0" expanded="true" />
-            <element signature="e#1211#1212#0" expanded="true" />
-            <element signature="e#1253#1254#0" expanded="true" />
-            <element signature="e#1285#1286#0" expanded="true" />
-            <element signature="e#1313#1314#0" expanded="true" />
-            <element signature="e#1356#1357#0" expanded="true" />
-            <element signature="e#1390#1391#0" expanded="true" />
-            <element signature="e#1422#1423#0" expanded="true" />
-            <element signature="e#1450#1451#0" expanded="true" />
-            <element signature="e#1493#1494#0" expanded="true" />
-            <element signature="e#1527#1528#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/repository/PalestraRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/service/PalestraService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
           <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1722,7 +1638,7 @@
         <state relative-caret-position="153">
           <caret line="9" column="63" lean-forward="false" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="63" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1742,7 +1658,7 @@
         <state relative-caret-position="153">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1752,7 +1668,7 @@
         <state relative-caret-position="238">
           <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1762,49 +1678,195 @@
         <state relative-caret-position="406">
           <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/Usuario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255">
+          <caret line="15" column="3" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/Circulo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="28" column="60" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="60" />
+          <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar!/javax/persistence/EntityManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="72" column="13" lean-forward="false" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/repository/PalestraRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/Palestra.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EquipeRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11">
+          <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/service/EquipeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/converter/EquipeConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EquipeBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="24" column="14" lean-forward="false" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/Equipe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="52" column="25" lean-forward="false" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1630#1631#0" expanded="true" />
+            <element signature="e#1655#1656#0" expanded="true" />
+            <element signature="e#1689#1690#0" expanded="true" />
+            <element signature="e#1717#1718#0" expanded="true" />
+            <element signature="e#1753#1754#0" expanded="true" />
+            <element signature="e#1785#1786#0" expanded="true" />
+            <element signature="e#1835#1836#0" expanded="true" />
+            <element signature="e#1877#1878#0" expanded="true" />
+            <element signature="e#1909#1910#0" expanded="true" />
+            <element signature="e#1937#1938#0" expanded="true" />
+            <element signature="e#1979#1980#0" expanded="true" />
+            <element signature="e#2013#2014#0" expanded="true" />
+            <element signature="e#2049#2050#0" expanded="true" />
+            <element signature="e#2083#2084#0" expanded="true" />
+            <element signature="e#2135#2136#0" expanded="true" />
+            <element signature="e#2181#2182#0" expanded="true" />
+            <element signature="e#2217#2218#0" expanded="true" />
+            <element signature="e#2251#2252#0" expanded="true" />
+            <element signature="e#2303#2304#0" expanded="true" />
+            <element signature="e#2349#2350#0" expanded="true" />
+            <element signature="e#2386#2387#0" expanded="true" />
+            <element signature="e#2419#2420#0" expanded="true" />
+            <element signature="e#2472#2473#0" expanded="true" />
+            <element signature="e#2516#2517#0" expanded="true" />
+            <element signature="e#2554#2555#0" expanded="true" />
+            <element signature="e#2588#2589#0" expanded="true" />
+            <element signature="e#2643#2644#0" expanded="true" />
+            <element signature="e#2689#2690#0" expanded="true" />
+            <element signature="e#2727#2728#0" expanded="true" />
+            <element signature="e#2761#2762#0" expanded="true" />
+            <element signature="e#2816#2817#0" expanded="true" />
+            <element signature="e#2862#2863#0" expanded="true" />
+            <element signature="e#2896#2897#0" expanded="true" />
+            <element signature="e#2926#2927#0" expanded="true" />
+            <element signature="e#2973#2974#0" expanded="true" />
+            <element signature="e#3011#3012#0" expanded="true" />
+            <element signature="e#3043#3044#0" expanded="true" />
+            <element signature="e#3071#3072#0" expanded="true" />
+            <element signature="e#3114#3115#0" expanded="true" />
+            <element signature="e#3148#3149#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/administrador/circulo.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="110" column="46" lean-forward="false" selection-start-line="110" selection-start-column="46" selection-end-line="110" selection-end-column="46" />
+        <state relative-caret-position="329">
+          <caret line="52" column="61" lean-forward="false" selection-start-line="52" selection-start-column="61" selection-end-line="52" selection-end-column="61" />
           <folding>
-            <marker date="1507574998262" expanded="true" signature="1348:1432" ph="{...}" />
-            <marker date="1507574998262" expanded="true" signature="1692:1776" ph="{...}" />
-            <marker date="1507574998262" expanded="true" signature="1938:2022" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/administrador/palestra.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="103" column="103" lean-forward="false" selection-start-line="103" selection-start-column="103" selection-end-line="103" selection-end-column="103" />
-          <folding>
-            <marker date="1507576215474" expanded="true" signature="1348:1432" ph="{...}" />
-            <marker date="1507576215474" expanded="true" signature="1592:1676" ph="{...}" />
-            <marker date="1507576215474" expanded="true" signature="1944:2028" ph="{...}" />
+            <marker date="1507583216370" expanded="true" signature="1348:1432" ph="{...}" />
+            <marker date="1507583216370" expanded="true" signature="1692:1776" ph="{...}" />
+            <marker date="1507583216370" expanded="true" signature="1938:2022" ph="{...}" />
+            <marker date="1507583216370" expanded="true" signature="2178:2262" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/administrador/menu.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="51" column="46" lean-forward="true" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
+        <state relative-caret-position="329">
+          <caret line="60" column="61" lean-forward="false" selection-start-line="60" selection-start-column="61" selection-end-line="60" selection-end-column="61" />
           <folding>
-            <marker date="1507577007098" expanded="true" signature="1726:1811" ph="{...}" />
-            <marker date="1507577007098" expanded="true" signature="1956:2041" ph="{...}" />
-            <marker date="1507577007098" expanded="true" signature="2196:2281" ph="{...}" />
-            <marker date="1507577007098" expanded="true" signature="2587:2671" ph="{...}" />
-            <marker date="1507577007098" expanded="true" signature="2824:2908" ph="{...}" />
-            <marker date="1507577007098" expanded="true" signature="3062:3146" ph="{...}" />
-            <marker date="1507577007098" expanded="true" signature="3303:3387" ph="{...}" />
-            <marker date="1507577007098" expanded="true" signature="3569:3653" ph="{...}" />
-            <marker date="1507577007098" expanded="true" signature="3834:3918" ph="{...}" />
+            <marker date="1507583219870" expanded="true" signature="1726:1811" ph="{...}" />
+            <marker date="1507583219870" expanded="true" signature="1956:2041" ph="{...}" />
+            <marker date="1507583219870" expanded="true" signature="2196:2281" ph="{...}" />
+            <marker date="1507583219870" expanded="true" signature="2433:2517" ph="{...}" />
+            <marker date="1507583219870" expanded="true" signature="2837:2921" ph="{...}" />
+            <marker date="1507583219870" expanded="true" signature="3074:3158" ph="{...}" />
+            <marker date="1507583219870" expanded="true" signature="3312:3396" ph="{...}" />
+            <marker date="1507583219870" expanded="true" signature="3553:3637" ph="{...}" />
+            <marker date="1507583219870" expanded="true" signature="3819:3903" ph="{...}" />
+            <marker date="1507583219870" expanded="true" signature="4084:4168" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/administrador/equipe.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="52" column="53" lean-forward="true" selection-start-line="52" selection-start-column="53" selection-end-line="52" selection-end-column="61" />
+          <folding>
+            <marker date="1507583212066" expanded="true" signature="1348:1432" ph="{...}" />
+            <marker date="1507583212066" expanded="true" signature="1591:1675" ph="{...}" />
+            <marker date="1507583212066" expanded="true" signature="1837:1921" ph="{...}" />
+            <marker date="1507583212066" expanded="true" signature="2185:2269" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/administrador/palestra.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="48" column="4" lean-forward="true" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+          <folding>
+            <marker date="1507583222050" expanded="true" signature="1348:1432" ph="{...}" />
+            <marker date="1507583222050" expanded="true" signature="1592:1676" ph="{...}" />
+            <marker date="1507583222050" expanded="true" signature="1944:2028" ph="{...}" />
+            <marker date="1507583222050" expanded="true" signature="2184:2268" ph="{...}" />
           </folding>
         </state>
       </provider>
