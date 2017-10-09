@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  * Classe responsável por interligar a view à regra de negócio - Círculo
- * @author 44260
+ * @author Cleber Seixas
  * @since 09/10/2017
  */
 @Named

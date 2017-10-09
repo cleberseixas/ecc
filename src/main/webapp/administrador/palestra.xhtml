@@ -30,15 +30,16 @@
 						<li><h:graphicImage library="imagens/menu"
 											style="width:30px; height:30px;
 								margin-left:10px; margin-top:8px; margin-right:9px;"
-											name="circulos.png" />
-							<a style="color: #808080; background: #a0c0de; opacity: 1;
-							filter: alpha(opacity = 100); border-bottom: 3px solid #b1b1b1;">Círculos</a></li>
+											name="circulos.png" /><a
+								href="circulo.xhtml">Circulos</a>
+						</li>
 
 						<li><h:graphicImage library="imagens/menu"
 											style="width:30px; height:30px;
 								margin-left:10px; margin-top:8px; margin-right:9px;"
-											name="palestras.png" /><a
-								href="palestra.xhtml">Palestras</a>
+											name="palestras.png" />
+							<a style="color: #808080; background: #a0c0de; opacity: 1;
+							filter: alpha(opacity = 100); border-bottom: 3px solid #b1b1b1;">Palestras</a>
 						</li>
 						<li><h:graphicImage library="imagens/menu"
 											style="width:30px; height:30px;
@@ -51,10 +52,10 @@
 		<div id="status" style="...">
 			<div id="ico">
 				<h1>
-					<h:graphicImage library="imagens/menu" name="circulos.png"
+					<h:graphicImage library="imagens/menu" name="palestras.png"
 									width="25px" height="25px" />
 					<h5>
-						<b>Círculos</b>
+						<b>Palestras</b>
 					</h5>
 					<p:commandButton type="button" value="Sair" icon="ui-icon-extlink"
 									 style="float: right; margin-right:5px; margin-top: -5px;"
@@ -73,29 +74,20 @@
 		<p:growl id="growl" showDetail="true" sticky="false" life="2000" showSummary="false" autoUpdate="true" />
 		<br />	
 		<center>	
-		<p:panel header="Cadastro de Círculos"
+		<p:panel header="Cadastro de Palestras"
 			style="width:616px; background:#F1F2F5;">
 			<h:message />
-			<h:inputHidden value="#{circuloBean.circulo.id}" />
+			<h:inputHidden value="#{palestraBean.palestra.id}" />
 			<h:panelGrid columns="2">
 				<h:outputLabel value="Descrição:" for="descricao" />
-				<p:inputText id="descricao" value="#{circuloBean.circulo.descricao}"
+				<p:inputText id="descricao" value="#{palestraBean.palestra.descricao}"
 					required="true" requiredMessage="O campo Descrição é obrigatório"
-					maxlength="50" style="width:250px;">
+					maxlength="100" style="width:350px;">
 					<p:focus for="descricao" />
 				</p:inputText>
-				<h:outputLabel value="Tempo de Casado:" for="tempoCasado" />
-				<p:inputText id="tempoCasado" value="#{circuloBean.circulo.tempoCasado}"
-							 required="true" requiredMessage="O campo Tempo de Casado é obrigatório"
-							 maxlength="10" style="width:35px;">
-				</p:inputText>
-				<h:outputLabel value="Total de Casais:" for="totalCasal" />
-				<p:inputText id="totalCasal" value="#{circuloBean.circulo.totalCasais}"
-							 required="true" requiredMessage="O campo Total de Casais é obrigatório"
-							 maxlength="10" style="width:35px;">
-				</p:inputText>
+				<p:selectBooleanCheckbox value="#{palestraBean.palestra.casal}" itemLabel="Casal?" style="margin-left:5px;" />
 				<h:outputLabel value="" />
-				<p:commandButton value="Salvar" action="#{circuloBean.salvar()}"
+				<p:commandButton value="Salvar" action="#{palestraBean.salvar()}"
 					icon="ui-icon-disk" process="@form" update=":listagem :edicao">
 				</p:commandButton>
 			</h:panelGrid>
@@ -105,29 +97,22 @@
 	<br />
 	<h:form id="listagem">
 		<center>
-		<p:dataTable value="#{circuloBean.lista}" var="circulo"
-			rendered="#{!empty circuloBean.lista}" style="width:620px;">
-			<p:column>
-				<f:facet name="header">Círculo</f:facet>
-				#{circulo.descricao}
-			</p:column>
-			<p:column>
-				<f:facet name="header">Tempo de Casado</f:facet>
-				#{circulo.tempoCasado}
-			</p:column>
-			<p:column>
-				<f:facet name="header">Total de Casais</f:facet>
-				#{circulo.totalCasais}
+		<p:dataTable value="#{palestraBean.lista}" var="palestra"
+			rendered="#{!empty palestraBean.lista}" style="width:620px;">
+			<p:column headerText="Descrição" width="100">
+				<p:outputLabel value="#{palestra.descricao}"/>
+				<h:graphicImage library="imagens" name="casais.png" width="15" height="15" rendered="#{palestra.casal}"
+								style="float: right;" title="Casais"/>
 			</p:column>
 			<p:column width="50">
 				<f:facet name="header">Ativo</f:facet>
 				<center>
-					<h:commandLink action="#{circuloBean.ativarInativar}">
+					<h:commandLink action="#{palestraBean.ativarInativar}">
 						<f:ajax execute="@this" render=":listagem" />
 						<h:graphicImage library="imagens"
-										name="#{circulo.ativo}.png" />
+										name="#{palestra.ativo}.png" />
 						<f:setPropertyActionListener
-								target="#{circuloBean.circulo}" value="#{circulo}" />
+								target="#{palestraBean.palestra}" value="#{palestra}" />
 					</h:commandLink>
 				</center>
 			</p:column>
@@ -136,25 +121,25 @@
 					<h:commandLink>
 						<f:ajax execute="@this" render=":edicao" />
 						<h:graphicImage library="imagens" name="alterar.png" />
-						<f:setPropertyActionListener target="#{circuloBean.circulo}"
-							value="#{circulo}" />
+						<f:setPropertyActionListener target="#{palestraBean.palestra}"
+							value="#{palestra}" />
 					</h:commandLink>
 				</center>
 			</p:column>
 
 			<p:column width="40" headerText="Excluir">
 				<center>
-					<h:commandLink action="#{circuloBean.excluir}"
-						onclick="if (!confirm('Confirma a exclusão do Círculo #{circulo.id}?')) return false;">
+					<h:commandLink action="#{palestraBean.excluir}"
+						onclick="if (!confirm('Confirma a exclusão da Palestra #{palestra.id}?')) return false;">
 						<f:ajax execute="@this" render=":listagem" />
 						<h:graphicImage library="imagens" name="remover.png" />
-						<f:setPropertyActionListener target="#{circuloBean.circulo}"
-							value="#{circulo}" />
+						<f:setPropertyActionListener target="#{palestraBean.palestra}"
+							value="#{palestra}" />
 					</h:commandLink>
 				</center>
 			</p:column>
 			<f:facet name="footer">
-				<p:outputLabel value="Quantidade de Círculos: #{circuloBean.lista.size()}"/>
+				<p:outputLabel value="Quantidade de Palestras: #{palestraBean.lista.size()}"/>
 			</f:facet>
 		</p:dataTable>
 		</center>

@@ -23,16 +23,16 @@ public class Circulo implements Serializable {
     @Column(name = "CIRCULO", nullable = false)
     private Long id;
 
-    @Column(name="DESCRICAO", length=50)
+    @Column(name="DESCRICAO", length=50, nullable = false)
     private String descricao;
 
-    @Column(name="TEMPO_CASADO", length=5)
+    @Column(name="TEMPO_CASADO", length=5, nullable = false)
     private Long tempoCasado;
 
-    @Column(name="TOTAL_CASAL", length=50)
+    @Column(name="TOTAL_CASAL", length=5, nullable = false)
     private Long totalCasais;
 
-    @Column(name="ATIVO", length=50)
+    @Column(name="ATIVO", nullable = false)
     private boolean ativo = true;
 
     public Long getId() {
