@@ -35,4 +35,9 @@ public class EquipeRepository {
 		TypedQuery<Equipe> query = manager.createQuery("from Equipe order by descricao", Equipe.class);
 		return query.getResultList();
 	}
+
+	public List<Equipe> listarEquipeDirigentes() {
+		TypedQuery<Equipe> query = manager.createQuery("from Equipe where automatica=false order by descricao", Equipe.class);
+		return query.getResultList();
+	}
 }

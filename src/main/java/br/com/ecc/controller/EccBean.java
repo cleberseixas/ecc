@@ -1,7 +1,11 @@
 package br.com.ecc.controller;
 
+import br.com.ecc.model.DirigenteEcc;
 import br.com.ecc.model.Ecc;
+import br.com.ecc.model.Equipe;
+import br.com.ecc.model.Ficha;
 import br.com.ecc.service.EccService;
+import br.com.ecc.service.EquipeService;
 import br.com.ecc.util.FacesMessages;
 import org.primefaces.context.RequestContext;
 import org.primefaces.event.SelectEvent;
@@ -10,6 +14,7 @@ import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -23,7 +28,14 @@ public class EccBean implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private Ecc ecc = new Ecc();
+
+	private Equipe equipe = new Equipe();
+
+	private Ficha casal = new Ficha();
+
 	private List<Ecc> listaEcc;
+
+	private List<Equipe> listaEquipe;
 
 	private boolean habilitaBotaoEditarEcc = true;
 
@@ -34,6 +46,26 @@ public class EccBean implements Serializable {
 
 	@Inject
 	private EccService eccService;
+
+	@Inject
+	private EquipeService equipeService;
+
+	public void salvaDirigente() {
+		List<DirigenteEcc> listAux = new ArrayList<DirigenteEcc>();
+		listAux.addAll(ecc.getDirigentes());
+		ecc.getDirigentes().clear();
+		DirigenteEcc dirigente = new DirigenteEcc();
+
+		dirigente.setEcc(this.ecc);
+		dirigente.setEquipe(this.equipe);
+		dirigente.setFicha(this.casal);
+
+		listAux.add(dirigente);
+		this.ecc.setDirigentes(listAux);
+		eccService.atualiza(this.ecc);
+//		parecerRN.atualiza(parecer);
+//		this.novoQuemPodeVer();
+	}
 
 	public void setListaEcc(List<Ecc> listaEcc) {
 		this.listaEcc = listaEcc;
@@ -46,12 +78,39 @@ public class EccBean implements Serializable {
 		return this.listaEcc;
 	}
 
+	public List<Equipe> getListaEquipe() {
+		if (this.listaEquipe == null) {
+			this.listaEquipe = equipeService.listarEquipeDirigentes();
+		}
+		return this.listaEquipe;
+	}
+
+	public void setListaEquipe(List<Equipe> listaEquipe) {
+		this.listaEquipe = listaEquipe;
+	}
+
 	public Ecc getEcc() {
 		return ecc;
 	}
 
-	public void setEcc(Ecc equipe) {
+	public void setEcc(Ecc ecc) {
 		this.ecc = ecc;
+	}
+
+	public Equipe getEquipe() {
+		return equipe;
+	}
+
+	public void setEquipe(Equipe equipe) {
+		this.equipe = equipe;
+	}
+
+	public Ficha getCasal() {
+		return casal;
+	}
+
+	public void setCasal(Ficha casal) {
+		this.casal = casal;
 	}
 
 	public void novoEcc() {
@@ -94,7 +153,10 @@ public class EccBean implements Serializable {
 		habilitaBotaoIncluiDirigentes = true;
 	}
 
-//Injetar Equipes e Casais (Encontreiros)
+	//Injetar Equipes e Casais (Encontreiros)
+	public void equipeDirigente() {
+
+	}
 
 	//Incluir as regras para salvar o Ecc (Equipes)
 	public void salvarEcc() {

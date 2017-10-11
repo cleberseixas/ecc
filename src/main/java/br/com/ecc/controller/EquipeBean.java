@@ -23,6 +23,8 @@ public class EquipeBean implements Serializable {
 	private Equipe equipe = new Equipe();
 	private List<Equipe> lista;
 
+	private List<Equipe> listaDirigentes;
+
 	@Inject
 	private EquipeService equipeService;
 	
@@ -65,4 +67,10 @@ public class EquipeBean implements Serializable {
 		this.equipe = equipe;
 	}
 
+	public List<Equipe> getListaDirigentes() {
+		if (this.listaDirigentes == null) {
+			this.listaDirigentes = equipeService.listarEquipeDirigentes();
+		}
+		return this.listaDirigentes;
+	}
 }

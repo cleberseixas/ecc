@@ -145,7 +145,7 @@
 												 update=":listagemEccs:confirmacaoExclusaoDialog"/>
 								<p:commandButton id="btnIncluiDirigentes" value="Inclui Dirigentes"
 												 icon="ui-icon-person" style="margin-left: 5px;"
-												 onclick="PF('dlgEditarEcc').show()" update=":cadEditarEcc"
+												 onclick="PF('dlgNovosDirigentes').show()" update=":cadNovosDirigentes"
 												 title="Adiciona dirigentes ao ECC selecionado."
 												 disabled="#{eccBean.habilitaBotaoIncluiDirigentes}"/>
 							</h:panelGroup>
@@ -322,59 +322,67 @@
 		<!-- ==================================================================================== -->
 		<!-- ========================= Diálogo para incluir Dirigentes ========================== -->
 		<!-- ==================================================================================== -->
-		<p:dialog id="dialogNovoEcc" header="Lançar novo ECC"
-				  modal="true" widgetVar="dlgNovoEcc"
-				  style="background-color:#EBF3FE" resizable="false" width="560px"
-				  height="224px">
-			<h:form id="cadNovoEcc">
-				<p:panel id="panelDadosEcc" style="background-color: #ffffe6">
+		<p:dialog id="dialogNovosDirigentes" header="Lançar Dirigentes"
+				  modal="true" widgetVar="dlgNovosDirigentes"
+				  style="background-color:#EBF3FE" resizable="false" width="890px"
+				  height="524px">
+			<h:form id="cadNovosDirigentes">
+				<p:panel id="panelDadosDirigentes" style="background-color: #ffffe6">
 					<h:message />
 					<h:inputHidden value="#{eccBean.ecc.id}" />
 					<h:panelGrid columns="3">
-						<h:outputLabel value="Número" for="numero" />
-						<h:outputLabel value="Local" for="local"/>
-						<h:outputLabel value="Total" for="total" />
-						<p:inputText id="numero" value="#{eccBean.ecc.numero}"
-									 requiredMessage="O campo Número do ECC é obrigatório"
-									 maxlength="10" style="width:35px;">
-						</p:inputText>
-						<p:inputText id="local" value="#{eccBean.ecc.local}"
-									 required="true" requiredMessage="O campo Local é obrigatório"
-									 maxlength="100" style="width:350px;">
-							<p:focus for="numero" />
-						</p:inputText>
-						<p:inputText id="total" value="#{eccBean.ecc.total}"
-									 required="true" requiredMessage="O campo Sigla é obrigatório"
-									 maxlength="5" style="width:45px;">
-						</p:inputText>
+						<h:outputLabel value="Nome do Casal" for="casal" />
+						<h:outputLabel value="Dirigente" for="equipe" />
+						<h:outputLabel value="" />
+						<p:selectOneMenu id="casal" value="#{eccBean.casal}"
+										 required="true"
+										 requiredMessage="Selecione o casal."
+										 style="width:435px" converter="fichaConverter"
+										 filter="true">
+							<f:selectItem itemLabel="Selecione" noSelectionOption="true" />
+							<f:selectItems value="#{fichaBean.listaEncontristas}"
+										   var="casal" itemValue="#{casal}"
+										   itemLabel="#{casal.nomeUsual}" />
+						</p:selectOneMenu>
+
+						<p:selectOneMenu id="equipe" converter="equipeConverter"
+										 required="true"
+										 requiredMessage="Selecione a Equipe."
+										 value="#{eccBean.equipe}" style="width:280px">
+							<f:selectItem itemLabel="Selecione a equipe" noSelectionOption="true" />
+							<f:selectItems value="#{equipeBean.listaDirigentes}"
+										   var="equipe" itemValue="#{equipe}"
+										   itemLabel="#{equipe.descricao}" />
+						</p:selectOneMenu>
+						<p:commandButton process="@this, equipe"
+										 action="#{eccBean.salvaDirigente()}"
+										 icon="ui-icon-check" title="Incluir Dirigente.."
+										 update=":cadNovosDirigentes:tabelaDirigentes" >
+							<p:collector unique="true"
+										 value="#{eccBean.equipe}"
+										 addTo="#{eccBean.ecc.dirigentes}" />
+						</p:commandButton>
 					</h:panelGrid>
 					<h:panelGrid columns="1">
-						<h:outputLabel value="Tema" for="tema" />
-						<p:inputText id="tema" value="#{eccBean.ecc.tema}"
-									 required="true" requiredMessage="O campo Tema é obrigatório"
-									 maxlength="200" style="width:458px;">
-						</p:inputText>
+						<p:dataTable id="tabelaDirigentes"
+									 style="margin-right: 10px; width:754px;"
+									 value="#{eccBean.ecc.dirigentes}" var="dirigente"
+									 emptyMessage="Não há Dirigentes cadastrados" rowIndexVar="index">
+							<p:column width="100%" headerText="Equipe de Dirigentes">
+								<p:outputLabel value="#{dirigente.equipe.descricao}" />
+								<p:outputLabel value="#{dirigente.ficha.nomeUsual}" />
+								<p:commandLink update=":cadNovosDirigentes:tabelaDirigentes"
+											   process="@this" style="float:right;" title="Excluir Dirigente...">
+									<h:graphicImage library="imagens" name="remover.png" />
+									<p:collector value="#{dirigente}"
+												 removeFrom="#{eccBean.ecc.dirigentes}"
+												 unique="true" />
+								</p:commandLink>
+							</p:column>
+
+						</p:dataTable>
 					</h:panelGrid>
 					<h:panelGrid columns="3">
-						<h:outputLabel value="Data Início" for="inicio" />
-						<h:outputLabel value="Data Fim" for="fim" />
-						<h:outputLabel value="Situação" for="situacao" />
-						<p:calendar id="inicio" mask="99/99/9999" requiredMessage="O Campo Data Início é obrigatório"
-									value="#{eccBean.ecc.dataInicio}"
-									pattern="dd/MM/yyyy"/>
-						<p:calendar id="fim" mask="99/99/9999" requiredMessage="O Campo Data Fim é obrigatório"
-									value="#{eccBean.ecc.dataFim}"
-									pattern="dd/MM/yyyy"/>
-						<p:selectOneMenu id="situacao" disabled="true"
-										 value="#{eccBean.ecc.situacao}" required="true"
-										 requiredMessage="O campo Situação é obrigatório" style="width:118px;">
-							<f:selectItem itemLabel="Selecione" noSelectionOption="true" />
-							<f:selectItem itemValue="ANDAMENTO" itemLabel="ANDAMENTO" />
-							<f:selectItem itemValue="ENCERRADO" itemLabel="ENCERRADO" />
-						</p:selectOneMenu>
-						<p:selectBooleanCheckbox value="#{eccBean.ecc.automatico}" itemLabel="Automático?" style="margin-left:5px;" />
-					</h:panelGrid>
-					<h:panelGrid columns="2">
 						<h:outputLabel value="" />
 						<p:commandButton value="Salvar" action="#{eccBean.salvarEcc()}"
 										 update=":listagemEccs @form" oncomplete="if(!args.validationFailed){PF('dlgNovoEcc').hide();}"

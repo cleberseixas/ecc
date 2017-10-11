@@ -6,6 +6,9 @@ public class Constantes {
 //	public static final String CAMINHO_MODELOS_SOLICITACOES = "c:/temp/laudus/modelos/";
 //	public static final String CAMINHO_ATIVIDADES_SERVIDOR = "c:/temp/laudus/atividades/";
 
+	public static final String ENCONTREIRO = "ENCONTREIRO";
+	public static final String ENCONTRISTA = "ENCONTRISTA";
+
 	public static final String CAMINHO_DOCUMENTOS_SERVIDOR = "/home/documentosLAUDUS/anexos/";
 	public static final String CAMINHO_PARECERES_SERVIDOR = "/home/documentosLAUDUS/pareceres/";
 	public static final String CAMINHO_MODELOS_SOLICITACOES = "/home/documentosLAUDUS/modelos/";

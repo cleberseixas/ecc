@@ -59,7 +59,11 @@ public class EccService implements Serializable {
 		ecc = eccRepository.carregar(ecc.getId());
 		this.eccRepository.excluir(ecc);
 	}		
-	
+
+	@Transactional
+	public void atualiza(Ecc ecc) {
+		eccRepository.salvar(ecc);
+	}
 	public Ecc carregar(Long id){
 		try {
 			return eccRepository.carregar(id);

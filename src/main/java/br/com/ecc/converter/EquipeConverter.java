@@ -6,6 +6,6 @@ import br.com.ecc.util.BaseConverter;
 
 import javax.faces.convert.FacesConverter;
 
-@FacesConverter(forClass=Equipe.class)
+@FacesConverter(forClass=Equipe.class, value="equipeConverter")
 public class EquipeConverter extends BaseConverter<Equipe, EquipeService> {
 }	

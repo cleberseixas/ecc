@@ -4,7 +4,10 @@ import org.hibernate.envers.Audited;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+
 /**
  * Classe que representa os ECCs do sistema.
  * Tudo funciona em função do ECC cadastrado, é ele que irá definir as equipes, circulos, encontristas
@@ -56,6 +59,11 @@ public class Ecc implements Serializable {
 
     @Column(name="ATIVO", nullable = false)
     private boolean ativo = true;
+
+    @ManyToMany(fetch= FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(joinColumns = @JoinColumn(name = "ECC"),
+            inverseJoinColumns = @JoinColumn(name = "FICHA"))
+    private List<DirigenteEcc> dirigentes= new ArrayList<DirigenteEcc>();
 
     public Long getId() {
         return id;
@@ -135,6 +143,14 @@ public class Ecc implements Serializable {
 
     public void setAtivo(boolean ativo) {
         this.ativo = ativo;
+    }
+
+    public List<DirigenteEcc> getDirigentes() {
+        return dirigentes;
+    }
+
+    public void setDirigentes(List<DirigenteEcc> dirigentes) {
+        this.dirigentes = dirigentes;
     }
 
     @Override

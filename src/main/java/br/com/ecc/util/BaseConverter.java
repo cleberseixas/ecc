@@ -50,7 +50,8 @@ public abstract class BaseConverter<T1, T2 > implements Converter {
 			try {
 				String classe = obj.getClass().getName();
 				classe = classe.substring(classe.lastIndexOf(".")+1,classe.length());
-				Long id = (Long) obj.getClass().getMethod("getId"+classe).invoke(obj);
+				Long id = (Long) obj.getClass().getMethod("getId").invoke(obj);
+				//Long id = (Long) obj.getClass().getMethod("getId"+classe).invoke(obj);
 				return id == null ? null : id.toString();
 			} catch (NoSuchMethodException | SecurityException e) {
 				throw new RuntimeException(e.toString());
