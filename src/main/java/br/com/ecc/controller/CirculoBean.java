@@ -5,6 +5,7 @@ import br.com.ecc.model.Circulo;
 import br.com.ecc.service.CirculoService;
 
 import javax.enterprise.context.RequestScoped;
+import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;

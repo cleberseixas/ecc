@@ -11,7 +11,7 @@
 		<intercept-url  pattern="/restrito/**" access="ROLE_USUARIO,ROLE_ADMINISTRADOR,ROLE_DIRIGENTE" />
 		<intercept-url pattern="/administrador/**" access="ROLE_ADMINISTRADOR"/>
 		<intercept-url pattern="/usuario/**" access="ROLE_USUARIO"/>
-		<intercept-url pattern="/dirigente/**" access="ROLE_DIRIGENTE"/>
+		<intercept-url pattern="/dirigente/**" access="ROLE_DIRIGENTE, ROLE_ADMINISTRADOR"/>
 		<form-login 
 		    login-page="/login.xhtml"
 			always-use-default-target="true" default-target-url="/administrador/menu.xhtml"

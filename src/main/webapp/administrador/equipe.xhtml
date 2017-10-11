@@ -127,15 +127,15 @@
 		<center>
 		<p:dataTable value="#{equipeBean.lista}" var="equipe"
 			rendered="#{!empty equipeBean.lista}" style="width:620px;">
-			<p:column headerText="Descrição" width="120">
+			<p:column headerText="Descrição" width="170">
 				<p:outputLabel value="#{equipe.descricao}"/>
 				<h:graphicImage library="imagens" name="automatica#{equipe.automatica}.png" width="15" height="15"
-								style="float: right;" />
+								style="float: right;" title="Automática - #{equipe.automatica}"/>
 				<h:graphicImage library="imagens" name="aptidao.png" width="15" height="15" rendered="#{equipe.aptidao}"
 								style="float: right;" title="Aptidão"/>
 
 			</p:column>
-			<p:column width="40">
+			<p:column width="20">
 				<f:facet name="header">Sigla</f:facet>
 				#{equipe.sigla}
 			</p:column>

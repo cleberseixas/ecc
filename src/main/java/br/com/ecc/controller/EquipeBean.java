@@ -1,9 +1,7 @@
 package br.com.ecc.controller;
 
 import br.com.ecc.model.Equipe;
-import br.com.ecc.model.Palestra;
 import br.com.ecc.service.EquipeService;
-import br.com.ecc.service.PalestraService;
 import br.com.ecc.util.FacesMessages;
 
 import javax.enterprise.context.RequestScoped;
