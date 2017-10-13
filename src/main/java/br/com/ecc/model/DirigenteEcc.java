@@ -34,12 +34,12 @@ public class DirigenteEcc implements Serializable{
     private Ecc ecc;
 
     @ManyToOne
-    @JoinColumn(name = "equipe", nullable = true, foreignKey=@ForeignKey(name = "fk_equipe"))
+    @JoinColumn(name = "equipe", nullable = false, foreignKey=@ForeignKey(name = "fk_equipe"))
     @NotNull(message="Selecione o Dirigente")
     private Equipe equipe;
 
     @ManyToOne
-    @JoinColumn(name = "ficha", nullable = true, foreignKey=@ForeignKey(name = "fk_ficha"))
+    @JoinColumn(name = "ficha", nullable = false, foreignKey=@ForeignKey(name = "fk_ficha"))
     @NotNull(message="Selecione o Casal Dirigente")
     private Ficha ficha;
 
