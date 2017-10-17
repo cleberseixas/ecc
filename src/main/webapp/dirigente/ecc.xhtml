@@ -166,6 +166,11 @@
 					<p:column headerText="Local" width="150">
 						<p:outputLabel value="#{ecc.local}"/>
 					</p:column>
+					<p:column width="50" headerText="Dirigentes">
+						#{ecc.dirigentes.size()}
+						<h:graphicImage library="imagens" name="casais.png" width="15" height="15" rendered="#{ecc.dirigentes.size() > 0}"
+										style="float: right;" title="Dirigentes"/>
+					</p:column>
 					<p:column headerText="Total" width="20">
 						<p:outputLabel value="#{ecc.total}"/>
 					</p:column>
@@ -357,7 +362,7 @@
 										 style="margin-left:10px;"
 										 action="#{eccBean.salvaDirigente()}" icon="ui-icon-check"
 										 title="Incluir um novo dirigente..."
-										 update="casal, equipe, tabelaDirigentes">
+										 update="casal, equipe, tabelaDirigentes, listagemEccs:eccs">
 						</p:commandButton>
 					</h:panelGrid>
 					<h:panelGrid columns="3">
@@ -375,7 +380,7 @@
 									<p:outputLabel value="#{dirigente.equipe.descricao}" />
 								</p:column>
 								<p:column headerText="Excluir" styleClass="Gildasio" width="40">
-									<p:commandLink update=":cadNovosDirigentes:tabelaDirigentes"
+									<p:commandLink update=":cadNovosDirigentes:tabelaDirigentes, , listagemEccs:eccs"
 												   process="@this" action="#{eccBean.removeDirigente()}">
 										<h:graphicImage library="imagens" name="remover.png" />
 										<f:setPropertyActionListener target="#{eccBean.dirigenteEcc}"

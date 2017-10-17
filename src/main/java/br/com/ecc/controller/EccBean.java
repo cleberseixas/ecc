@@ -55,6 +55,8 @@ public class EccBean implements Serializable {
 	private void novoDirigente() {
 		this.casal = new Ficha();
 		this.equipe = new Equipe();
+		//System.out.println("DIRIGENTES  "+this.ecc.getDirigentes().size());
+		//System.out.println("DIRIGENTES1 "+this.ecc.getQuantidadeDirigentes());
 	}
 
 	public void salvaDirigente() {
@@ -75,6 +77,9 @@ public class EccBean implements Serializable {
 	public void removeDirigente() {
 		this.ecc.getDirigentes().remove(dirigenteEcc);
 		eccService.atualiza(ecc);
+
+	//	System.out.println("DIRIGENTES  "+this.ecc.getDirigentes().size());
+	//	System.out.println("DIRIGENTES1 "+this.ecc.getQuantidadeDirigentes());
 	}
 
 	public void setListaEcc(List<Ecc> listaEcc) {

@@ -187,4 +187,14 @@ public class Ecc implements Serializable {
         result = 31 * result + (ativo ? 1 : 0);
         return result;
     }
+
+
+    /**
+     * Método que retona a auantidade de dirigentes de um ECC.
+     * @return quantidade de dirigentes fazem parte do ECC em questão
+     */
+    @Transient
+    public Integer getQuantidadeDirigentes() {
+        return this.dirigentes.size();
+    }
 }

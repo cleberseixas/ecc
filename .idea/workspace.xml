@@ -10,13 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8b22dac-800f-408a-b5a8-ff04f4c56148" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/DirigenteEcc.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Dirigente.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EccBean.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EccBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ecc.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ecc.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/DirigenteEccRepository.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/DirigenteEccRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EccRepository.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EccRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/DirigenteEccService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/DirigenteEccService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/dirigente/ecc.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/dirigente/ecc.xhtml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -46,11 +42,11 @@
       <file leaf-file-name="EccBean.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EccBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-165">
-              <caret line="66" column="39" lean-forward="true" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
+            <state relative-caret-position="-17">
+              <caret line="58" column="10" lean-forward="false" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1462#1473#0" expanded="true" />
+                <element signature="e#1609#1620#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -92,9 +88,10 @@
       <file leaf-file-name="EccService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/service/EccService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+            <state relative-caret-position="149">
+              <caret line="63" column="16" lean-forward="false" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
               <folding>
+                <element signature="e#1872#1873#0" expanded="true" />
                 <element signature="e#1904#1905#0" expanded="true" />
               </folding>
             </state>
@@ -104,19 +101,19 @@
       <file leaf-file-name="ecc.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/ecc.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6358">
-              <caret line="374" column="58" lean-forward="false" selection-start-line="374" selection-start-column="58" selection-end-line="374" selection-end-column="58" />
+            <state relative-caret-position="176">
+              <caret line="170" column="126" lean-forward="false" selection-start-line="170" selection-start-column="126" selection-end-line="170" selection-end-column="126" />
               <folding>
-                <marker date="1508188886503" expanded="true" signature="1354:1438" ph="{...}" />
-                <marker date="1508188886503" expanded="true" signature="1615:1699" ph="{...}" />
-                <marker date="1508188886503" expanded="true" signature="1861:1945" ph="{...}" />
-                <marker date="1508188886503" expanded="true" signature="2101:2185" ph="{...}" />
-                <marker date="1508188886503" expanded="true" signature="2500:2584" ph="{...}" />
-                <marker date="1508188886503" expanded="true" signature="2842:2926" ph="{...}" />
-                <marker date="1508188886503" expanded="true" signature="3080:3164" ph="{...}" />
-                <marker date="1508188886503" expanded="true" signature="3321:3405" ph="{...}" />
-                <marker date="1508188886503" expanded="true" signature="3587:3671" ph="{...}" />
-                <marker date="1508188886503" expanded="true" signature="3852:3936" ph="{...}" />
+                <marker date="1508272839615" expanded="true" signature="1354:1438" ph="{...}" />
+                <marker date="1508272839615" expanded="true" signature="1615:1699" ph="{...}" />
+                <marker date="1508272839615" expanded="true" signature="1861:1945" ph="{...}" />
+                <marker date="1508272839615" expanded="true" signature="2101:2185" ph="{...}" />
+                <marker date="1508272839615" expanded="true" signature="2500:2584" ph="{...}" />
+                <marker date="1508272839615" expanded="true" signature="2842:2926" ph="{...}" />
+                <marker date="1508272839615" expanded="true" signature="3080:3164" ph="{...}" />
+                <marker date="1508272839615" expanded="true" signature="3321:3405" ph="{...}" />
+                <marker date="1508272839615" expanded="true" signature="3587:3671" ph="{...}" />
+                <marker date="1508272839615" expanded="true" signature="3852:3936" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -137,11 +134,13 @@
       <file leaf-file-name="Ecc.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ecc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="175" column="13" lean-forward="true" selection-start-line="175" selection-start-column="13" selection-end-line="175" selection-end-column="13" />
+            <state relative-caret-position="2404">
+              <caret line="197" column="38" lean-forward="false" selection-start-line="197" selection-start-column="38" selection-end-line="197" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2240#2251#0" expanded="true" />
+                <element signature="e#5824#5825#0" expanded="true" />
+                <element signature="e#5869#5870#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -184,7 +183,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="578">
               <caret line="42" column="39" lean-forward="false" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -200,16 +201,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>c</find>
-      <find>ci</find>
-      <find>cir</find>
-      <find>circu</find>
-      <find>new</find>
-      <find>listagemEccs</find>
-      <find>dlgNovoEcc</find>
-      <find>listagemEccs:eccs</find>
-      <find>form</find>
-      <find>grow</find>
       <find>dlgEditarEcc</find>
       <find>circulos</find>
       <find>eDTAR</find>
@@ -230,6 +221,16 @@
       <find>circul</find>
       <find>circulo</find>
       <find>getDi</find>
+      <find>.size</find>
+      <find>Dirig</find>
+      <find>Excluir</find>
+      <find>confirmacaoExclusaoDialog</find>
+      <find>eccs</find>
+      <find>quantidade</find>
+      <find>quantid</find>
+      <find>Salvar</find>
+      <find>Incluir</find>
+      <find>size</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -289,14 +290,14 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/FichaBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/service/EccService.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EquipeBean.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/dirigente/ecc.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EccRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/DirigenteEccRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/model/DirigenteEcc.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/service/DirigenteEccService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Dirigente.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ecc.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EccBean.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Dirigente.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/dirigente/ecc.xhtml" />
       </list>
     </option>
   </component>
@@ -1154,12 +1155,12 @@
       <workItem from="1507484438370" duration="27802000" />
       <workItem from="1507548912317" duration="87973000" />
       <workItem from="1508246464519" duration="8000" />
-      <workItem from="1508246566223" duration="1897000" />
+      <workItem from="1508246566223" duration="6888000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117680000" />
+    <option name="totallyTimeSpent" value="122671000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1600" y="25" width="1440" height="850" extended-state="0" />
@@ -1187,7 +1188,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31456044" sideWeight="0.4939577" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31456044" sideWeight="0.4939577" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.4954683" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1265,22 +1266,10 @@
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/ecc/service/EccService.java</url>
-          <line>64</line>
-          <properties />
-          <option name="timeStamp" value="54" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EccRepository.java</url>
           <line>19</line>
           <properties />
           <option name="timeStamp" value="55" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EccBean.java</url>
-          <line>84</line>
-          <properties />
-          <option name="timeStamp" value="58" />
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="59" />
@@ -1605,7 +1594,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="42" column="39" lean-forward="false" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1647,52 +1638,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/ecc.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6358">
-          <caret line="374" column="58" lean-forward="false" selection-start-line="374" selection-start-column="58" selection-end-line="374" selection-end-column="58" />
-          <folding>
-            <marker date="1508188886503" expanded="true" signature="1354:1438" ph="{...}" />
-            <marker date="1508188886503" expanded="true" signature="1615:1699" ph="{...}" />
-            <marker date="1508188886503" expanded="true" signature="1861:1945" ph="{...}" />
-            <marker date="1508188886503" expanded="true" signature="2101:2185" ph="{...}" />
-            <marker date="1508188886503" expanded="true" signature="2500:2584" ph="{...}" />
-            <marker date="1508188886503" expanded="true" signature="2842:2926" ph="{...}" />
-            <marker date="1508188886503" expanded="true" signature="3080:3164" ph="{...}" />
-            <marker date="1508188886503" expanded="true" signature="3321:3405" ph="{...}" />
-            <marker date="1508188886503" expanded="true" signature="3587:3671" ph="{...}" />
-            <marker date="1508188886503" expanded="true" signature="3852:3936" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/service/EccService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding>
-            <element signature="e#1904#1905#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EccRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="e#395#396#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ecc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="175" column="13" lean-forward="true" selection-start-line="175" selection-start-column="13" selection-end-line="175" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2240#2251#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1707,13 +1658,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EccBean.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/service/EccService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-165">
-          <caret line="66" column="39" lean-forward="true" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
+        <state relative-caret-position="149">
+          <caret line="63" column="16" lean-forward="false" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
+          <folding>
+            <element signature="e#1872#1873#0" expanded="true" />
+            <element signature="e#1904#1905#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ecc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2404">
+          <caret line="197" column="38" lean-forward="false" selection-start-line="197" selection-start-column="38" selection-end-line="197" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1462#1473#0" expanded="true" />
+            <element signature="e#2240#2251#0" expanded="true" />
+            <element signature="e#5824#5825#0" expanded="true" />
+            <element signature="e#5869#5870#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/ecc.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="170" column="126" lean-forward="false" selection-start-line="170" selection-start-column="126" selection-end-line="170" selection-end-column="126" />
+          <folding>
+            <marker date="1508272839615" expanded="true" signature="1354:1438" ph="{...}" />
+            <marker date="1508272839615" expanded="true" signature="1615:1699" ph="{...}" />
+            <marker date="1508272839615" expanded="true" signature="1861:1945" ph="{...}" />
+            <marker date="1508272839615" expanded="true" signature="2101:2185" ph="{...}" />
+            <marker date="1508272839615" expanded="true" signature="2500:2584" ph="{...}" />
+            <marker date="1508272839615" expanded="true" signature="2842:2926" ph="{...}" />
+            <marker date="1508272839615" expanded="true" signature="3080:3164" ph="{...}" />
+            <marker date="1508272839615" expanded="true" signature="3321:3405" ph="{...}" />
+            <marker date="1508272839615" expanded="true" signature="3587:3671" ph="{...}" />
+            <marker date="1508272839615" expanded="true" signature="3852:3936" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EccBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="58" column="10" lean-forward="false" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1609#1620#0" expanded="true" />
           </folding>
         </state>
       </provider>
