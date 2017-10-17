@@ -334,6 +334,13 @@
 			<h:form id="cadNovosDirigentes">
 				<p:panel id="panelDadosDirigentes" style="background-color: #ffffe6">
 					<h:inputHidden value="#{eccBean.ecc.id}" />
+					<p:panel id="basic"
+							 style="background-color:#EBF3FE; width:767px;"
+							 visible="true">
+						<p:outputLabel
+								value="ECC nº #{eccBean.ecc.numero} - Tema: #{eccBean.ecc.tema}"
+								styleClass="negrito" style="margin-left:5px;" />
+					</p:panel>
 					<h:panelGrid columns="3">
 						<h:outputLabel value="Nome do Casal" for="casal" />
 						<h:outputLabel value="Dirigente" for="equipe" />
@@ -371,7 +378,7 @@
 									 value="#{eccBean.ecc.dirigentes}" var="dirigente"
 									 emptyMessage="Não há Dirigentes cadastrados" rowIndexVar="index">
 							<f:facet name="header">
-								<p:outputLabel value="Equipe de Dirigentes" />
+								<p:outputLabel value="Total de Dirigentes - #{eccBean.ecc.dirigentes.size()}" />
 							</f:facet>
 								<p:column headerText="Casal" width="200">
 									<p:outputLabel value="#{dirigente.ficha.nomeUsual}" />
