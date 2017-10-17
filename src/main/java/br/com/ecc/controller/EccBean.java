@@ -4,7 +4,6 @@ import br.com.ecc.model.Dirigente;
 import br.com.ecc.model.Ecc;
 import br.com.ecc.model.Equipe;
 import br.com.ecc.model.Ficha;
-import br.com.ecc.service.DirigenteEccService;
 import br.com.ecc.service.EccService;
 import br.com.ecc.service.EquipeService;
 import br.com.ecc.util.FacesMessages;
@@ -46,6 +45,8 @@ public class EccBean implements Serializable {
 
 	private boolean habilitaBotaoIncluiDirigentes = true;
 
+	private boolean habilitaBotaoDetalhesEcc = true;
+
 
 	@Inject
 	private EccService eccService;
@@ -55,8 +56,6 @@ public class EccBean implements Serializable {
 	private void novoDirigente() {
 		this.casal = new Ficha();
 		this.equipe = new Equipe();
-		//System.out.println("DIRIGENTES  "+this.ecc.getDirigentes().size());
-		//System.out.println("DIRIGENTES1 "+this.ecc.getQuantidadeDirigentes());
 	}
 
 	public void salvaDirigente() {
@@ -77,9 +76,6 @@ public class EccBean implements Serializable {
 	public void removeDirigente() {
 		this.ecc.getDirigentes().remove(dirigenteEcc);
 		eccService.atualiza(ecc);
-
-	//	System.out.println("DIRIGENTES  "+this.ecc.getDirigentes().size());
-	//	System.out.println("DIRIGENTES1 "+this.ecc.getQuantidadeDirigentes());
 	}
 
 	public void setListaEcc(List<Ecc> listaEcc) {
@@ -164,16 +160,26 @@ public class EccBean implements Serializable {
 		this.habilitaBotaoIncluiDirigentes = habilitaBotaoIncluiDirigentes;
 	}
 
+	public boolean isHabilitaBotaoDetalhesEcc() {
+		return habilitaBotaoDetalhesEcc;
+	}
+
+	public void setHabilitaBotaoDetalhesEcc(boolean habilitaBotaoDetalhesEcc) {
+		this.habilitaBotaoDetalhesEcc = habilitaBotaoDetalhesEcc;
+	}
+
 	private void habilitaTodosBotoesEcc() {
 		habilitaBotaoEditarEcc = false;
 		habilitaBotaoExcluirEcc = false;
 		habilitaBotaoIncluiDirigentes = false;
+		habilitaBotaoDetalhesEcc = false;
 	}
 
 	private void desabilitaTodosBotoesEcc() {
 		habilitaBotaoEditarEcc = true;
 		habilitaBotaoExcluirEcc = true;
 		habilitaBotaoIncluiDirigentes = true;
+		habilitaBotaoDetalhesEcc = false;
 	}
 
 	//Injetar Equipes e Casais (Encontreiros)
