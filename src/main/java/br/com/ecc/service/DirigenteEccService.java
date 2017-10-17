@@ -1,8 +1,6 @@
 package br.com.ecc.service;
 
-import br.com.ecc.model.Circulo;
-import br.com.ecc.model.DirigenteEcc;
-import br.com.ecc.repository.CirculoRepository;
+import br.com.ecc.model.Dirigente;
 import br.com.ecc.repository.DirigenteEccRepository;
 import br.com.ecc.util.FacesMessages;
 import br.com.ecc.util.NegocioException;
@@ -30,7 +28,7 @@ public class DirigenteEccService implements Serializable {
 	private DirigenteEccRepository dirigenteEccRepository;
 
 	@Transactional
-	public void salvar(DirigenteEcc dirigenteEcc){
+	public void salvar(Dirigente dirigenteEcc){
 		try{
 			this.dirigenteEccRepository.salvar(dirigenteEcc);
 			FacesMessages.info("Registro gravado");
@@ -40,12 +38,12 @@ public class DirigenteEccService implements Serializable {
 	}
 
 	@Transactional
-	public void excluir(DirigenteEcc dirigenteEcc){
+	public void excluir(Dirigente dirigenteEcc){
 		dirigenteEcc = dirigenteEccRepository.carregar(dirigenteEcc.getId());
 		this.dirigenteEccRepository.excluir(dirigenteEcc);
 	}		
 	
-	public DirigenteEcc carregar(Long id){
+	public Dirigente carregar(Long id){
 		try {
 			return dirigenteEccRepository.carregar(id);
 		}catch(NegocioException e){
@@ -54,7 +52,7 @@ public class DirigenteEccService implements Serializable {
 		}
 	}
 
-	public List<DirigenteEcc> listar(){
+	public List<Dirigente> listar(){
 		try {
 			return dirigenteEccRepository.listar();
 		} catch(NegocioException e){

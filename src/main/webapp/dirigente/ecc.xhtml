@@ -324,11 +324,10 @@
 		<!-- ==================================================================================== -->
 		<p:dialog id="dialogNovosDirigentes" header="Lançar Dirigentes"
 				  modal="true" widgetVar="dlgNovosDirigentes"
-				  style="background-color:#EBF3FE" resizable="false" width="890px"
+				  style="background-color:#EBF3FE" resizable="false" width="920px"
 				  height="524px">
 			<h:form id="cadNovosDirigentes">
 				<p:panel id="panelDadosDirigentes" style="background-color: #ffffe6">
-					<h:message />
 					<h:inputHidden value="#{eccBean.ecc.id}" />
 					<h:panelGrid columns="3">
 						<h:outputLabel value="Nome do Casal" for="casal" />
@@ -339,7 +338,7 @@
 										 requiredMessage="Selecione o casal."
 										 style="width:435px" converter="fichaConverter"
 										 filter="true">
-							<f:selectItem itemLabel="Selecione" noSelectionOption="true" />
+							<f:selectItem itemLabel="Selecione o casal" noSelectionOption="true" />
 							<f:selectItems value="#{fichaBean.listaEncontristas}"
 										   var="casal" itemValue="#{casal}"
 										   itemLabel="#{casal.nomeUsual}" />
@@ -354,41 +353,38 @@
 										   var="equipe" itemValue="#{equipe}"
 										   itemLabel="#{equipe.descricao}" />
 						</p:selectOneMenu>
-						<p:commandButton process="@this, equipe"
-										 action="#{eccBean.salvaDirigente()}"
-										 icon="ui-icon-check" title="Incluir Dirigente.."
-										 update=":cadNovosDirigentes:tabelaDirigentes" >
-							<p:collector unique="true"
-										 value="#{eccBean.equipe}"
-										 addTo="#{eccBean.ecc.dirigentes}" />
+						<p:commandButton process="@this, casal, equipe" value="Incluir"
+										 style="margin-left:10px;"
+										 action="#{eccBean.salvaDirigente()}" icon="ui-icon-check"
+										 title="Incluir um novo dirigente..."
+										 update="casal, equipe, tabelaDirigentes">
 						</p:commandButton>
-					</h:panelGrid>
-					<h:panelGrid columns="1">
-						<p:dataTable id="tabelaDirigentes"
-									 style="margin-right: 10px; width:754px;"
-									 value="#{eccBean.ecc.dirigentes}" var="dirigente"
-									 emptyMessage="Não há Dirigentes cadastrados" rowIndexVar="index">
-							<p:column width="100%" headerText="Equipe de Dirigentes">
-								<p:outputLabel value="#{dirigente.equipe.descricao}" />
-								<p:outputLabel value="#{dirigente.ficha.nomeUsual}" />
-								<p:commandLink update=":cadNovosDirigentes:tabelaDirigentes"
-											   process="@this" style="float:right;" title="Excluir Dirigente...">
-									<h:graphicImage library="imagens" name="remover.png" />
-									<p:collector value="#{dirigente}"
-												 removeFrom="#{eccBean.ecc.dirigentes}"
-												 unique="true" />
-								</p:commandLink>
-							</p:column>
-
-						</p:dataTable>
 					</h:panelGrid>
 					<h:panelGrid columns="3">
-						<h:outputLabel value="" />
-						<p:commandButton value="Salvar" action="#{eccBean.salvarEcc()}"
-										 update=":listagemEccs @form" oncomplete="if(!args.validationFailed){PF('dlgNovoEcc').hide();}"
-										 icon="ui-icon-disk" process="@form">
-						</p:commandButton>
+						<p:dataTable id="tabelaDirigentes"
+									 style="margin-right: 10px; width:770px;"
+									 value="#{eccBean.ecc.dirigentes}" var="dirigente"
+									 emptyMessage="Não há Dirigentes cadastrados" rowIndexVar="index">
+							<f:facet name="header">
+								<p:outputLabel value="Equipe de Dirigentes" />
+							</f:facet>
+								<p:column headerText="Casal" width="200">
+									<p:outputLabel value="#{dirigente.ficha.nomeUsual}" />
+								</p:column>
+								<p:column headerText="Equipe" width="200">
+									<p:outputLabel value="#{dirigente.equipe.descricao}" />
+								</p:column>
+								<p:column headerText="Excluir" styleClass="Gildasio" width="40">
+									<p:commandLink update=":cadNovosDirigentes:tabelaDirigentes"
+												   process="@this" action="#{eccBean.removeDirigente()}">
+										<h:graphicImage library="imagens" name="remover.png" />
+										<f:setPropertyActionListener target="#{eccBean.dirigenteEcc}"
+																	 value="#{dirigente}" />
+									</p:commandLink>
+								</p:column>
+						</p:dataTable>
 					</h:panelGrid>
+
 				</p:panel>
 			</h:form>
 		</p:dialog>

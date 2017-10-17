@@ -1,6 +1,6 @@
 package br.com.ecc.repository;
 
-import br.com.ecc.model.DirigenteEcc;
+import br.com.ecc.model.Dirigente;
 import br.com.ecc.model.Equipe;
 
 import javax.inject.Inject;
@@ -17,23 +17,20 @@ public class DirigenteEccRepository {
 		this.manager = manager;
 	}
 	
-	public void salvar(DirigenteEcc dirigenteEcc) {
-		if (dirigenteEcc.getId() == null)
-			manager.persist(dirigenteEcc);
-		else
+	public void salvar(Dirigente dirigenteEcc) {
 			manager.merge(dirigenteEcc);
 	}
 
-	public void excluir(DirigenteEcc dirigenteEcc) {
+	public void excluir(Dirigente dirigenteEcc) {
 		manager.remove(dirigenteEcc);
 	}
 
-	public DirigenteEcc carregar(Long id) {
-		return manager.find(DirigenteEcc.class, id);
+	public Dirigente carregar(Long id) {
+		return manager.find(Dirigente.class, id);
 	}
 
-	public List<DirigenteEcc> listar() {
-		TypedQuery<DirigenteEcc> query = manager.createQuery("from Equipe order by descricao", DirigenteEcc.class);
+	public List<Dirigente> listar() {
+		TypedQuery<Dirigente> query = manager.createQuery("from Equipe order by descricao", Dirigente.class);
 		return query.getResultList();
 	}
 

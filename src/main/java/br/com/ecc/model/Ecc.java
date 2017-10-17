@@ -60,10 +60,11 @@ public class Ecc implements Serializable {
     @Column(name="ATIVO", nullable = false)
     private boolean ativo = true;
 
+//    @OneToMany(mappedBy="ecc", fetch=FetchType.EAGER, cascade = CascadeType.ALL)
     @ManyToMany(fetch= FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(joinColumns = @JoinColumn(name = "ECC"),
-            inverseJoinColumns = @JoinColumn(name = "FICHA"))
-    private List<DirigenteEcc> dirigentes= new ArrayList<DirigenteEcc>();
+            inverseJoinColumns = @JoinColumn(name = "DIRIGENTE"))
+    private List<Dirigente> dirigentes= new ArrayList<Dirigente>();
 
     public Long getId() {
         return id;
@@ -145,11 +146,11 @@ public class Ecc implements Serializable {
         this.ativo = ativo;
     }
 
-    public List<DirigenteEcc> getDirigentes() {
+    public List<Dirigente> getDirigentes() {
         return dirigentes;
     }
 
-    public void setDirigentes(List<DirigenteEcc> dirigentes) {
+    public void setDirigentes(List<Dirigente> dirigentes) {
         this.dirigentes = dirigentes;
     }
 

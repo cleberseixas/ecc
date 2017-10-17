@@ -17,10 +17,7 @@ public class EccRepository {
 	}
 	
 	public void salvar(Ecc ecc) {
-		if (ecc.getId() == null)
-			manager.persist(ecc);
-		else
-			manager.merge(ecc);
+		manager.merge(ecc);
 	}
 
 	public void excluir(Ecc ecc) {

@@ -1,9 +1,10 @@
 package br.com.ecc.controller;
 
-import br.com.ecc.model.DirigenteEcc;
+import br.com.ecc.model.Dirigente;
 import br.com.ecc.model.Ecc;
 import br.com.ecc.model.Equipe;
 import br.com.ecc.model.Ficha;
+import br.com.ecc.service.DirigenteEccService;
 import br.com.ecc.service.EccService;
 import br.com.ecc.service.EquipeService;
 import br.com.ecc.util.FacesMessages;
@@ -33,6 +34,8 @@ public class EccBean implements Serializable {
 
 	private Ficha casal = new Ficha();
 
+	private Dirigente dirigenteEcc = new Dirigente();
+
 	private List<Ecc> listaEcc;
 
 	private List<Equipe> listaEquipe;
@@ -49,22 +52,29 @@ public class EccBean implements Serializable {
 
 	@Inject
 	private EquipeService equipeService;
+	private void novoDirigente() {
+		this.casal = new Ficha();
+		this.equipe = new Equipe();
+	}
 
 	public void salvaDirigente() {
-		List<DirigenteEcc> listAux = new ArrayList<DirigenteEcc>();
+		List<Dirigente> listAux = new ArrayList<Dirigente>();
 		listAux.addAll(ecc.getDirigentes());
 		ecc.getDirigentes().clear();
-		DirigenteEcc dirigente = new DirigenteEcc();
+		Dirigente dirigente = new Dirigente();
 
-		dirigente.setEcc(this.ecc);
 		dirigente.setEquipe(this.equipe);
 		dirigente.setFicha(this.casal);
 
 		listAux.add(dirigente);
 		this.ecc.setDirigentes(listAux);
-		eccService.atualiza(this.ecc);
-//		parecerRN.atualiza(parecer);
-//		this.novoQuemPodeVer();
+		eccService.atualiza(ecc);
+		this.novoDirigente();
+
+	}
+	public void removeDirigente() {
+		this.ecc.getDirigentes().remove(dirigenteEcc);
+		eccService.atualiza(ecc);
 	}
 
 	public void setListaEcc(List<Ecc> listaEcc) {
@@ -115,6 +125,14 @@ public class EccBean implements Serializable {
 
 	public void novoEcc() {
 		this.ecc = new Ecc();
+	}
+
+	public Dirigente getDirigenteEcc() {
+		return dirigenteEcc;
+	}
+
+	public void setDirigenteEcc(Dirigente dirigenteEcc) {
+		this.dirigenteEcc = dirigenteEcc;
 	}
 
 	public boolean isHabilitaBotaoEditarEcc() {
