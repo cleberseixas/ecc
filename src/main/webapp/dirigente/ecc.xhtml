@@ -332,15 +332,15 @@
 		<!-- ==================================================================================== -->
 		<!-- ========================= Diálogo para incluir Dirigentes ========================== -->
 		<!-- ==================================================================================== -->
-		<p:dialog id="dialogNovosDirigentes" header="Lançar Dirigentes"
+		<p:dialog id="dialogNovosDirigentes" header="Lançar Equipe de Dirigentes"
 				  modal="true" widgetVar="dlgNovosDirigentes"
 				  style="background-color:#EBF3FE" resizable="false" width="920px"
-				  height="524px">
+				  height="564px">
 			<h:form id="cadNovosDirigentes">
 				<p:panel id="panelDadosDirigentes" style="background-color: #ffffe6">
 					<h:inputHidden value="#{eccBean.ecc.id}" />
 					<p:panel id="basic"
-							 style="background-color:#EBF3FE; width:767px;"
+							 style="background-color:#EBF3FE; width:764px;"
 							 visible="true">
 						<p:outputLabel
 								value="ECC nº #{eccBean.ecc.numero} - Tema: #{eccBean.ecc.tema}"
@@ -348,7 +348,7 @@
 					</p:panel>
 					<h:panelGrid columns="3">
 						<h:outputLabel value="Nome do Casal" for="casal" />
-						<h:outputLabel value="Dirigente" for="equipe" />
+						<h:outputLabel value="Equipe" for="equipe" />
 						<h:outputLabel value="" />
 						<p:selectOneMenu id="casal" value="#{eccBean.casal}"
 										 required="true"
@@ -376,6 +376,15 @@
 										 title="Incluir um novo dirigente..."
 										 update="casal, equipe, tabelaDirigentes, listagemEccs:eccs">
 						</p:commandButton>
+					</h:panelGrid>
+					<h:panelGrid>
+						<p:panel id="informacao"
+								 style="background-color:#EBF3FE; width:764px;"
+								 visible="true">
+							<p:outputLabel
+									value="Equipes (Dirigentes, Sala e Supervisor de Círculo)"
+									styleClass="negrito" style="margin-left:5px;" />
+						</p:panel>
 					</h:panelGrid>
 					<h:panelGrid columns="3">
 						<p:dataTable id="tabelaDirigentes"
