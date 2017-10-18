@@ -59,7 +59,7 @@
 						<li><h:graphicImage library="imagens/menu"
 											style="width:30px; height:30px;
 								margin-left:10px; margin-top:8px; margin-right:9px;"
-											name="montagemEcc.png" />
+											name="ecc.png" />
 							<a style="color: #808080; background: #a0c0de; opacity: 1;
 							filter: alpha(opacity = 100); border-bottom: 3px solid #b1b1b1;">ECCs</a></li>
 						<li><h:graphicImage library="imagens/menu"
@@ -86,7 +86,7 @@
 						<li><h:graphicImage library="imagens/menu"
 											style="width:30px; height:30px;
 								margin-left:10px; margin-top:8px; margin-right:9px;"
-											name="circulos.png" /><a
+											name="montagemCirculos.png" /><a
 								href="montagemCirculos.xhtml">Círculos</a></li>
 
 					</ul>
@@ -96,7 +96,7 @@
 		<div id="status" style="...">
 			<div id="ico">
 				<h1>
-					<h:graphicImage library="imagens/menu" name="montagemEcc.png"
+					<h:graphicImage library="imagens/menu" name="ecc.png"
 									width="25px" height="25px" />
 					<h5>
 						<b>ECCs</b>
@@ -173,7 +173,7 @@
 					</p:column>
 					<p:column width="50" headerText="Dirigentes">
 						#{ecc.dirigentes.size()}
-						<h:graphicImage library="imagens" name="casais.png" width="15" height="15" rendered="#{ecc.dirigentes.size() > 0}"
+						<h:graphicImage library="imagens" name="dirigentes2.png" width="15" height="15" rendered="#{ecc.dirigentes.size() > 0}"
 										style="float: right;" title="Dirigentes"/>
 					</p:column>
 					<p:column headerText="Total" width="20">
@@ -396,6 +396,14 @@
 							</f:facet>
 								<p:column headerText="Casal" width="200">
 									<p:outputLabel value="#{dirigente.ficha.nomeUsual}" />
+									<h:graphicImage library="imagens" name="coordenador.png" width="15" height="15" rendered="#{dirigente.equipe.descricao eq 'COORDENADOR GERAL'}"
+													style="float: right;" title="Coordenador Geral"/>
+									<h:graphicImage library="imagens" name="dirigente.png" width="15" height="15" rendered="#{dirigente.equipe.descricao eq 'MONTAGEM'
+											or dirigente.equipe.descricao eq 'FICHA' or dirigente.equipe.descricao eq 'FINANÇAS'
+											or dirigente.equipe.descricao eq 'RECEPÇÃO DE PALESTRA/PALESTRA'
+											or dirigente.equipe.descricao eq 'PÓS ENCONTRO'}"
+													style="float: right;" title="Equipe Dirigente"/>
+
 								</p:column>
 								<p:column headerText="Equipe" width="200">
 									<p:outputLabel value="#{dirigente.equipe.descricao}" />
