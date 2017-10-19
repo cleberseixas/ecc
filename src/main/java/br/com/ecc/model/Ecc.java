@@ -60,9 +60,11 @@ public class Ecc implements Serializable {
     @Column(name="ATIVO", nullable = false)
     private boolean ativo = true;
 
-//    @OneToMany(mappedBy="ecc", fetch=FetchType.EAGER, cascade = CascadeType.ALL)
-    @ManyToMany(fetch= FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinTable(joinColumns = @JoinColumn(name = "ECC"),
+    //@OneToMany(mappedBy="ecc", fetch=FetchType.EAGER, cascade = CascadeType.ALL)
+
+    @ManyToMany(fetch= FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable(name = "ECCS_DIRIGENTES",
+            joinColumns = @JoinColumn(name = "ECC"),
             inverseJoinColumns = @JoinColumn(name = "DIRIGENTE"))
     private List<Dirigente> dirigentes= new ArrayList<Dirigente>();
 
@@ -161,31 +163,11 @@ public class Ecc implements Serializable {
 
         Ecc ecc = (Ecc) o;
 
-        if (automatico != ecc.automatico) return false;
-        if (ativo != ecc.ativo) return false;
-        if (id != null ? !id.equals(ecc.id) : ecc.id != null) return false;
-        if (numero != null ? !numero.equals(ecc.numero) : ecc.numero != null) return false;
-        if (local != null ? !local.equals(ecc.local) : ecc.local != null) return false;
-        if (total != null ? !total.equals(ecc.total) : ecc.total != null) return false;
-        if (tema != null ? !tema.equals(ecc.tema) : ecc.tema != null) return false;
-        if (dataInicio != null ? !dataInicio.equals(ecc.dataInicio) : ecc.dataInicio != null) return false;
-        if (dataFim != null ? !dataFim.equals(ecc.dataFim) : ecc.dataFim != null) return false;
-        return situacao != null ? situacao.equals(ecc.situacao) : ecc.situacao == null;
+        return id != null ? id.equals(ecc.id) : ecc.id == null;
     }
 
     @Override
     public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (numero != null ? numero.hashCode() : 0);
-        result = 31 * result + (local != null ? local.hashCode() : 0);
-        result = 31 * result + (total != null ? total.hashCode() : 0);
-        result = 31 * result + (tema != null ? tema.hashCode() : 0);
-        result = 31 * result + (automatico ? 1 : 0);
-        result = 31 * result + (dataInicio != null ? dataInicio.hashCode() : 0);
-        result = 31 * result + (dataFim != null ? dataFim.hashCode() : 0);
-        result = 31 * result + (situacao != null ? situacao.hashCode() : 0);
-        result = 31 * result + (ativo ? 1 : 0);
-        return result;
+        return id != null ? id.hashCode() : 0;
     }
-
 }

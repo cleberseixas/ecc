@@ -4,6 +4,7 @@ import br.com.ecc.model.Dirigente;
 import br.com.ecc.model.Ecc;
 import br.com.ecc.model.Equipe;
 import br.com.ecc.model.Ficha;
+import br.com.ecc.service.DirigenteEccService;
 import br.com.ecc.service.EccService;
 import br.com.ecc.service.EquipeService;
 import br.com.ecc.util.FacesMessages;
@@ -52,30 +53,41 @@ public class EccBean implements Serializable {
 	private EccService eccService;
 
 	@Inject
+	private DirigenteEccService dirigenteEccService;
+
+
+	@Inject
 	private EquipeService equipeService;
 	private void novoDirigente() {
 		this.casal = new Ficha();
 		this.equipe = new Equipe();
+		this.dirigenteEcc = new Dirigente();
 	}
 
 	public void salvaDirigente() {
 		List<Dirigente> listAux = new ArrayList<Dirigente>();
 		listAux.addAll(ecc.getDirigentes());
+
 		ecc.getDirigentes().clear();
-		Dirigente dirigente = new Dirigente();
+		dirigenteEcc.setEquipe(equipe);
+		dirigenteEcc.setFicha(casal);
+		dirigenteEcc.setEcc(ecc);
+		dirigenteEccService.salvar(dirigenteEcc);
 
-		dirigente.setEquipe(this.equipe);
-		dirigente.setFicha(this.casal);
-
-		listAux.add(dirigente);
+		listAux.add(dirigenteEcc);
 		this.ecc.setDirigentes(listAux);
-		eccService.atualiza(ecc);
+		eccService.atualiza(this.ecc);
 		this.novoDirigente();
-
+		removeDirigenteLimbo();
 	}
 	public void removeDirigente() {
 		this.ecc.getDirigentes().remove(dirigenteEcc);
 		eccService.atualiza(ecc);
+		removeDirigenteLimbo();
+	}
+
+	public void removeDirigenteLimbo() {
+		dirigenteEccService.removeDirigenteLimbo();
 	}
 
 	public void setListaEcc(List<Ecc> listaEcc) {
@@ -253,5 +265,11 @@ public class EccBean implements Serializable {
 		} else {
 			this.desabilitaTodosBotoesEcc();
 		}
+	}
+
+	public void removeDirigentesLimbo() {
+		System.out.println("aaaa");
+		dirigenteEccService.removeDirigenteLimbo();
+		System.out.println("BBBBB");
 	}
 }

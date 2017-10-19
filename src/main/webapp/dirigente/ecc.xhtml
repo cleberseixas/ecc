@@ -4,7 +4,8 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:p="http://primefaces.org/ui"
-	xmlns:c="http://java.sun.com/jsp/jstl/core">
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
 
 <h:head>
 	<title>ECC-SLG</title>
@@ -115,6 +116,11 @@
 			</div>
 		</div>
 		<br />
+		<p:ajaxStatus onstart="PF('statusDialog').show()" onsuccess="PF('statusDialog').hide()" />
+		<f:metadata>
+			<f:viewAction action="#{eccBean.removeDirigentesLimbo()}" />
+		</f:metadata>
+
 		<p:growl id="growl" showDetail="false" life="4000" autoUpdate="true" />
 		<br />
 				<p:dataTable id="eccs" value="#{eccBean.listaEcc}" var="ecc" rowIndexVar="index" selection="#{eccBean.ecc}"
@@ -150,6 +156,7 @@
 												 update=":listagemEccs:confirmacaoExclusaoDialog"/>
 								<p:commandButton id="btnIncluiDirigentes" value="Inclui Dirigentes"
 												 icon="ui-icon-person" style="margin-left: 5px;"
+												 process="@this"
 												 onclick="PF('dlgNovosDirigentes').show()" update=":cadNovosDirigentes"
 												 title="Adiciona dirigentes ao ECC selecionado."
 												 disabled="#{eccBean.habilitaBotaoIncluiDirigentes}"/>
@@ -337,6 +344,7 @@
 				  style="background-color:#EBF3FE" resizable="false" width="920px"
 				  height="564px">
 			<h:form id="cadNovosDirigentes">
+				<h:message />
 				<p:panel id="panelDadosDirigentes" style="background-color: #ffffe6">
 					<h:inputHidden value="#{eccBean.ecc.id}" />
 					<p:panel id="basic"
@@ -374,7 +382,7 @@
 										 style="margin-left:10px;"
 										 action="#{eccBean.salvaDirigente()}" icon="ui-icon-check"
 										 title="Incluir um novo dirigente..."
-										 update="casal, equipe, tabelaDirigentes, listagemEccs:eccs">
+										 update="casal, equipe, cadNovosDirigentes:tabelaDirigentes, listagemEccs:eccs">
 						</p:commandButton>
 					</h:panelGrid>
 					<h:panelGrid>
@@ -403,13 +411,12 @@
 											or dirigente.equipe.descricao eq 'RECEPÇÃO DE PALESTRA/PALESTRA'
 											or dirigente.equipe.descricao eq 'PÓS ENCONTRO'}"
 													style="float: right;" title="Equipe Dirigente"/>
-
 								</p:column>
 								<p:column headerText="Equipe" width="200">
 									<p:outputLabel value="#{dirigente.equipe.descricao}" />
 								</p:column>
 								<p:column headerText="Excluir" styleClass="Gildasio" width="40">
-									<p:commandLink update=":cadNovosDirigentes:tabelaDirigentes, , listagemEccs:eccs"
+									<p:commandLink update=":cadNovosDirigentes:tabelaDirigentes, listagemEccs:eccs"
 												   process="@this" action="#{eccBean.removeDirigente()}">
 										<h:graphicImage library="imagens" name="remover.png" />
 										<f:setPropertyActionListener target="#{eccBean.dirigenteEcc}"
@@ -421,6 +428,18 @@
 
 				</p:panel>
 			</h:form>
+		</p:dialog>
+		<p:dialog widgetVar="statusDialog" modal="true" draggable="false"
+				  closable="false" resizable="false" showHeader="false" width="250px">
+			<div id="divLoadingFora">
+				<div id="divLoadingEsquerda">
+					<h:graphicImage library="imagens" name="SLG.ico" width="60" height="60" />
+				</div>
+				<div id="divLoadingDireita">
+					<h:outputLabel value="Processando..." />
+					<h:graphicImage library="imagens" name="barra.gif" />
+				</div>
+			</div>
 		</p:dialog>
 </h:body>
 </html>

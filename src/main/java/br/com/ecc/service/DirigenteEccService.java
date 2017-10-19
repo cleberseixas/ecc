@@ -31,7 +31,7 @@ public class DirigenteEccService implements Serializable {
 	public void salvar(Dirigente dirigenteEcc){
 		try{
 			this.dirigenteEccRepository.salvar(dirigenteEcc);
-			FacesMessages.info("Registro gravado");
+			//FacesMessages.info("Registro gravado");
 		}catch(NegocioException e){
 			FacesMessages.error(e.getMessage());
 		}	
@@ -39,8 +39,9 @@ public class DirigenteEccService implements Serializable {
 
 	@Transactional
 	public void excluir(Dirigente dirigenteEcc){
-		dirigenteEcc = dirigenteEccRepository.carregar(dirigenteEcc.getId());
+		dirigenteEcc = dirigenteEccRepository.carregar(826L);
 		this.dirigenteEccRepository.excluir(dirigenteEcc);
+
 	}		
 	
 	public Dirigente carregar(Long id){
@@ -59,5 +60,10 @@ public class DirigenteEccService implements Serializable {
 			FacesMessages.error(e.getMessage());
 			return null;
 		}
-	}	
+	}
+
+	public void removeDirigenteLimbo() {
+		dirigenteEccRepository.removeDirigenteLimbo();
+	}
+
 }

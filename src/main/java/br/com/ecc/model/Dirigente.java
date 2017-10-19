@@ -5,6 +5,7 @@ import org.hibernate.envers.Audited;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * Classe que representa os Dirigentes por ECC.
@@ -34,6 +35,11 @@ public class Dirigente implements Serializable{
     private Equipe equipe;
 
     @ManyToOne
+    @JoinColumn(name = "ecc", nullable = false, foreignKey=@ForeignKey(name = "fk_ecc"))
+    @NotNull(message="Selecione o Casal Dirigente")
+    private Ecc ecc;
+
+    @ManyToOne
     @JoinColumn(name = "ficha", nullable = false, foreignKey=@ForeignKey(name = "fk_ficha"))
     @NotNull(message="Selecione o Casal Dirigente")
     private Ficha ficha;
@@ -54,6 +60,15 @@ public class Dirigente implements Serializable{
         this.equipe = equipe;
     }
 
+
+    public Ecc getEcc() {
+        return ecc;
+    }
+
+    public void setEcc(Ecc ecc) {
+        this.ecc = ecc;
+    }
+
     public Ficha getFicha() {
         return ficha;
     }
@@ -69,16 +84,11 @@ public class Dirigente implements Serializable{
 
         Dirigente dirigente = (Dirigente) o;
 
-        if (id != null ? !id.equals(dirigente.id) : dirigente.id != null) return false;
-        if (equipe != null ? !equipe.equals(dirigente.equipe) : dirigente.equipe != null) return false;
-        return ficha != null ? ficha.equals(dirigente.ficha) : dirigente.ficha == null;
+        return id != null ? id.equals(dirigente.id) : dirigente.id == null;
     }
 
     @Override
     public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (equipe != null ? equipe.hashCode() : 0);
-        result = 31 * result + (ficha != null ? ficha.hashCode() : 0);
-        return result;
+        return id != null ? id.hashCode() : 0;
     }
 }
