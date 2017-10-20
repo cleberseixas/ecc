@@ -83,7 +83,7 @@ public class EccBean implements Serializable {
 	public void removeDirigente() {
 		this.ecc.getDirigentes().remove(dirigenteEcc);
 		eccService.atualiza(ecc);
-		removeDirigenteLimbo();
+		//removeDirigenteLimbo();
 	}
 
 	public void removeDirigenteLimbo() {
@@ -268,8 +268,6 @@ public class EccBean implements Serializable {
 	}
 
 	public void removeDirigentesLimbo() {
-		System.out.println("aaaa");
 		dirigenteEccService.removeDirigenteLimbo();
-		System.out.println("BBBBB");
 	}
 }
