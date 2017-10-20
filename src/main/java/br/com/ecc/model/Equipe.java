@@ -139,30 +139,11 @@ public class Equipe implements Serializable{
 
         Equipe equipe = (Equipe) o;
 
-        if (id != equipe.id) return false;
-        if (automatica != equipe.automatica) return false;
-        if (coordenador != equipe.coordenador) return false;
-        if (palestrante != equipe.palestrante) return false;
-        if (aptidao != equipe.aptidao) return false;
-        if (ativo != equipe.ativo) return false;
-        if (descricao != null ? !descricao.equals(equipe.descricao) : equipe.descricao != null) return false;
-        if (sigla != null ? !sigla.equals(equipe.sigla) : equipe.sigla != null) return false;
-        if (minimoCasal != null ? !minimoCasal.equals(equipe.minimoCasal) : equipe.minimoCasal != null) return false;
-        return maximoCasal != null ? maximoCasal.equals(equipe.maximoCasal) : equipe.maximoCasal == null;
+        return id != null ? id.equals(equipe.id) : equipe.id == null;
     }
 
     @Override
     public int hashCode() {
-        int result = (int) (id ^ (id >>> 32));
-        result = 31 * result + (descricao != null ? descricao.hashCode() : 0);
-        result = 31 * result + (sigla != null ? sigla.hashCode() : 0);
-        result = 31 * result + (minimoCasal != null ? minimoCasal.hashCode() : 0);
-        result = 31 * result + (maximoCasal != null ? maximoCasal.hashCode() : 0);
-        result = 31 * result + (automatica ? 1 : 0);
-        result = 31 * result + (coordenador ? 1 : 0);
-        result = 31 * result + (palestrante ? 1 : 0);
-        result = 31 * result + (aptidao ? 1 : 0);
-        result = 31 * result + (ativo ? 1 : 0);
-        return result;
+        return id != null ? id.hashCode() : 0;
     }
 }

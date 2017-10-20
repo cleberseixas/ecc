@@ -71,18 +71,11 @@ public class Palestra implements Serializable {
 
         Palestra palestra = (Palestra) o;
 
-        if (casal != palestra.casal) return false;
-        if (ativo != palestra.ativo) return false;
-        if (id != null ? !id.equals(palestra.id) : palestra.id != null) return false;
-        return descricao != null ? descricao.equals(palestra.descricao) : palestra.descricao == null;
+        return id != null ? id.equals(palestra.id) : palestra.id == null;
     }
 
     @Override
     public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (descricao != null ? descricao.hashCode() : 0);
-        result = 31 * result + (casal ? 1 : 0);
-        result = 31 * result + (ativo ? 1 : 0);
-        return result;
+        return id != null ? id.hashCode() : 0;
     }
 }

@@ -32,6 +32,7 @@ public class FichaService implements Serializable {
 	@Transactional
 	public void salvar(Ficha ficha){
 		try{
+			ficha.setNomeUsual(ficha.getNomeUsualEle()+" E "+ficha.getNomeUsualEla());
 			this.fichaRepository.salvar(ficha);
 			FacesMessages.info("Registro gravado");
 		}catch(NegocioException e){

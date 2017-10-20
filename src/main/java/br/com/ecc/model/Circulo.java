@@ -82,20 +82,11 @@ public class Circulo implements Serializable {
 
         Circulo circulo = (Circulo) o;
 
-        if (ativo != circulo.ativo) return false;
-        if (id != null ? !id.equals(circulo.id) : circulo.id != null) return false;
-        if (descricao != null ? !descricao.equals(circulo.descricao) : circulo.descricao != null) return false;
-        if (tempoCasado != null ? !tempoCasado.equals(circulo.tempoCasado) : circulo.tempoCasado != null) return false;
-        return totalCasais != null ? totalCasais.equals(circulo.totalCasais) : circulo.totalCasais == null;
+        return id != null ? id.equals(circulo.id) : circulo.id == null;
     }
 
     @Override
     public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (descricao != null ? descricao.hashCode() : 0);
-        result = 31 * result + (tempoCasado != null ? tempoCasado.hashCode() : 0);
-        result = 31 * result + (totalCasais != null ? totalCasais.hashCode() : 0);
-        result = 31 * result + (ativo ? 1 : 0);
-        return result;
+        return id != null ? id.hashCode() : 0;
     }
 }

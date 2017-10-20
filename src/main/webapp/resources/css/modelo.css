@@ -1100,11 +1100,22 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:hover,a.list-gro
 	margin-bottom: 10px;
 }
 
-#divEstatisticaChefeSuperiorEsquerda {
-	width: 369px;
-	height: 284px;
+#divDadosHomem{
+	width: 855px;
+	height: 140px;
 	float: left;
-	margin-right: 10px;
+	margin: 10px;
+	margin-left: 5px;
+	border: 1px solid #c0c0c0;
+	border-radius:5px 5px 5px 5px;
+}
+
+#divDadosMulher{
+	width: 855px;
+	height: 140px;
+	float: left;
+	margin: 10px;
+	margin-left: 5px;
 	border: 1px solid #c0c0c0;
 	border-radius:5px 5px 5px 5px;
 }
@@ -1718,13 +1729,32 @@ a{
 	position: relative;
 }
 
-#divBoxSuperiorGeral {
-	width: 369px;
-	height: 60px;
+#divBoxDadosHomem {
+	width: 855px;
+	height: 30px;
 	float: left;
 	position: relative;
 	border-radius:4px 4px 0px 0px;
  	background-color: #e1e1d0;
+}
+
+#divBoxDadosMulher {
+	width: 855px;
+	height: 30px;
+	float: left;
+	position: relative;
+	border-radius:4px 4px 0px 0px;
+	background-color: #e1e1d0;
+}
+
+
+#divBoxDadosMulher {
+	width: 855px;
+	height: 30px;
+	float: left;
+	position: relative;
+	border-radius:4px 4px 0px 0px;
+	background-color: #e1e1d0;
 }
 
 #divBoxDentroGeral {
@@ -2631,7 +2661,7 @@ position: relative;
 	background-color: white;
 }
 
-/* ----------------------------------- CSS para a pagina de estatátistica do analista ----------------------------------*/
+/* ----------------------------------- CSS para a pagina de estatï¿½tistica do analista ----------------------------------*/
 #divEstatistica01 {
 	width: 100%;
 	height: 50px;
