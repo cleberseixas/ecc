@@ -50,6 +50,9 @@ public class Ficha implements Serializable {
     @Column(name="TELEFONE_ELE", length=40, nullable = false)
     private String telefoneEle;
 
+    @Column(name="FOTO_ELE", length=100, nullable = false)
+    private String fotoEle;
+
     @Column(name="NOME_ELA", length=100, nullable = false)
     private String nomeEla;
 
@@ -68,6 +71,9 @@ public class Ficha implements Serializable {
 
     @Column(name="TELEFONE_ELA", length=40, nullable = false)
     private String telefoneEla;
+
+    @Column(name="FOTO_ELA", length=100, nullable = false)
+    private String fotoEla;
 
     @Column(name="RUA", length=100, nullable = false)
     private String rua;
@@ -111,8 +117,10 @@ public class Ficha implements Serializable {
     @Column(name="TERCEIRA_ETAPA", length=5, nullable = true)
     private String terceiraEtapa;
 
-    @Column(name="ULTIMO_TRABALHO", length=60, nullable = false)
-    private String ultimoTrabalho="NENHUM";
+    //@Column(name="ULTIMO_TRABALHO", length=60, nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "equipe", nullable = true, foreignKey=@ForeignKey(name = "fk_ultimo_trabalho"))
+    private Equipe ultimoTrabalho;
 
     @Column(name="ATIVO", nullable = false)
     private boolean ativo = true;
@@ -189,6 +197,14 @@ public class Ficha implements Serializable {
         this.telefoneEle = telefoneEle;
     }
 
+    public String getFotoEle() {
+        return fotoEle;
+    }
+
+    public void setFotoEle(String fotoEle) {
+        this.fotoEle = fotoEle;
+    }
+
     public String getNomeEla() {
         return nomeEla;
     }
@@ -235,6 +251,14 @@ public class Ficha implements Serializable {
 
     public void setTelefoneEla(String telefoneEla) {
         this.telefoneEla = telefoneEla;
+    }
+
+    public String getFotoEla() {
+        return fotoEla;
+    }
+
+    public void setFotoEla(String fotoEla) {
+        this.fotoEla = fotoEla;
     }
 
     public String getRua() {
@@ -349,11 +373,11 @@ public class Ficha implements Serializable {
         this.terceiraEtapa = terceiraEtapa;
     }
 
-    public String getUltimoTrabalho() {
+    public Equipe getUltimoTrabalho() {
         return ultimoTrabalho;
     }
 
-    public void setUltimoTrabalho(String ultimoTrabalho) {
+    public void setUltimoTrabalho(Equipe ultimoTrabalho) {
         this.ultimoTrabalho = ultimoTrabalho;
     }
 

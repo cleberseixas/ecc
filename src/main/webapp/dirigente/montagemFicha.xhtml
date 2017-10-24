@@ -122,7 +122,7 @@
 		<p:ajaxStatus onstart="PF('statusDialog').show()" onsuccess="PF('statusDialog').hide()" />
 		<p:growl id="growl" showDetail="false" life="4000" autoUpdate="true" />
 		<br />
-				<p:dataTable id="eccs" value="#{fichaBean.listaFichas}" var="ficha" rowIndexVar="index" selection="#{fichaBean.ficha}"
+				<p:dataTable id="fichas" value="#{fichaBean.listaFichas}" var="ficha" rowIndexVar="index" selection="#{fichaBean.ficha}"
 							 selectionMode="single" rowKey="#{ficha.id}"
 							 emptyMessage="Não há Fichas de Encontristas/Encontreiros cadastradas" style="width:100%;">
 					<f:facet name="header">
@@ -138,14 +138,20 @@
 												 style="margin-right:15px; background-color:#a0c0de;"/>
 								<p:commandButton id="btnDetalhes" value="Detalhes"
 												 icon="ui-icon-newwin" style="margin-left: 5px;"
-												 onclick="PF('dlgEditarEcc').show()" update=":cadEditarEcc"
+												 onclick="PF('dlgEditarFicha').show()" update=":cadEditarFicha"
 												 title="Exibe todas as informações lançadas no ECC selecionado."
 												 disabled="#{eccBean.habilitaBotaoDetalhesEcc}"/>
 								<p:commandButton id="btnEditar" value="Editar"
 												 icon="ui-icon-pencil" style="margin-left: 5px;"
-												 onclick="PF('dlgEditarEcc').show()" update=":cadEditarEcc"
-												 title="Altera as informações do ECC selecionado."
-												 disabled="#{eccBean.habilitaBotaoEditarEcc}"/>
+												 onclick="PF('dlgEditarFicha').show()" update=":cadEditarFicha"
+												 title="Altera as informações da Ficha selecionada."
+												 disabled="#{fichaBean.habilitaBotaoEditarFicha}"/>
+								<p:commandButton id="btnAnexar" value="Anexar Foto"
+												 style="margin-left: 5px;" icon="ui-icon-link"
+												 onclick="PF('dlgUpload').show()" update=":formUpload"
+												 process="@this"
+												 title="Anexa a foto."
+												 disabled="#{fichaBean.habilitaBotaoFoto}" />
 								<p:commandButton id="btnExcluir" value="Excluir"
 												 icon="ui-icon-trash" style="margin-left: 5px;"
 												 disabled="#{eccBean.habilitaBotaoExcluirEcc}"
@@ -170,20 +176,22 @@
 						</h:panelGrid>
 					</f:facet>
 					<p:ajax event="rowSelect"
-							listener="#{eccBean.onRowSelectEcc}"
-							update="btnEditar btnExcluir btnIncluiDirigentes btnDetalhes btnIncluiAtividades" />
+							listener="#{fichaBean.onRowSelectEcc}"
+							update="btnEditar btnExcluir btnAnexar btnIncluiDirigentes btnDetalhes btnIncluiAtividades" />
 					<p:column headerText="1ª Etapa" width="30">
 						<p:outputLabel value="#{ficha.primeiraEtapa}"/>
 					</p:column>
-					<p:column width="150">
+					<p:column width="130">
 						<f:facet name="header">Nome Usual Casal</f:facet>
 						#{ficha.nomeUsual}
 					</p:column>
-					<p:column headerText="Situação" width="80">
+					<p:column headerText="Situação" width="70">
 						<p:outputLabel value="#{ficha.situacao}"/>
 					</p:column>
 					<p:column headerText="Nome Ele" width="200">
 						<p:outputLabel value="#{ficha.nomeEle}"/>
+						<h:graphicImage library="imagens" name="picture.png" rendered="#{ficha.fotoEle.length() > 0}"
+										style="width:20px; height:20px; float: right;" title="Foto dele"/>
 					</p:column>
 					<!--
 					<p:column headerText="Nascimento Ele" width="50">
@@ -200,9 +208,11 @@
 					</p:column>
 					<p:column headerText="Nome Ela" width="200">
 						<p:outputLabel value="#{ficha.nomeEla}"/>
+						<h:graphicImage library="imagens" name="picture.png" rendered="#{ficha.fotoEla.length() > 0}"
+										style="width:20px; height:20px; float: right;" title="Foto dela"/>
 					</p:column>
-					<p:column headerText="Último Trabalho" width="120">
-						<p:outputLabel value="#{ficha.ultimoTrabalho}"/>
+					<p:column headerText="Último Trabalho" width="140">
+						<p:outputLabel value="#{ficha.ultimoTrabalho.descricao}"/>
 					</p:column>
 					<!--
 					<p:column headerText="Nascimento Ela" width="50">
@@ -229,7 +239,7 @@
 						 widgetVar="confirmacaoExclusao" id="confirmacaoExclusaoDialog">
 			<p:commandButton value="Sim"
 							 onclick="PF('confirmacaoExclusao').hide();"
-							 action="#{eccBean.excluirEcc()}" update="eccs" />
+							 action="#{eccBean.excluirEcc()}" update="fichas" />
 			<p:button value="Não"
 					  onclick="PF('confirmacaoExclusao').hide(); return false;" />
 		</p:confirmDialog>
@@ -245,7 +255,7 @@
 				<p:panel id="panelDadosFicha" style="background-color: #ffffe6">
 						<h:message />
 						<h:inputHidden value="#{fichaBean.ficha.id}" />
-						<p:focus for="ultimoTrabalho" />
+						<p:focus for="situacao" />
 					<h:panelGrid columns="4">
 							<h:outputLabel value="Nome Usual Casal" for="nomeUsualCasal" />
 							<h:outputLabel value="Situação" for="situacao"/>
@@ -255,25 +265,25 @@
 										 maxlength="100" style="width:350px;" disabled="true">
 							</p:inputText>
 							<p:selectOneMenu id="situacao" disabled="false" required="true"
-											 value="#{eccBean.ecc.situacao}" style="width:90px;">
+											 value="#{fichaBean.ficha.situacao}" style="width:100px;">
 								<f:selectItem itemLabel="Selecione" noSelectionOption="true" />
 								<f:selectItem itemValue="ENCONTREIRO" itemLabel="ENCONTREIRO" />
 								<f:selectItem itemValue="ENCONTRISTA" itemLabel="ENCONTRISTA" />
 							</p:selectOneMenu>
-							<p:selectOneMenu id="ultimoTrabalho" disabled="false" required="true"
-												 value="#{eccBean.ecc.situacao}" style="width:350px;">
-									<f:selectItem itemLabel="Selecione" noSelectionOption="false" />
-									<f:selectItem itemValue="CANTO" itemLabel="CANTO" />
-									<f:selectItem itemValue="COORDENADOR GERAL" itemLabel="COORDENADOR GERAL" />
-									<f:selectItem itemValue="SOM E PROJEÇÃO" itemLabel="SOM E PROJEÇÃO" />
-									<f:selectItem itemValue="NENHUM" itemLabel="NENHUM" />
-								</p:selectOneMenu>
-							<p:selectBooleanCheckbox value="#{fichaBean.ficha.ativo}" itemLabel="Ativo?" style="margin-left:5px;" disabled="true"/>
+							<p:selectOneMenu id="ultimoTrabalho" converter="equipeConverter" required="true"
+								requiredMessage="Selecione a Equipe."
+								value="#{fichaBean.ficha.ultimoTrabalho}" style="width:270px">
+								<f:selectItem itemLabel="Selecione a equipe" noSelectionOption="true" />
+								<f:selectItems value="#{equipeBean.lista}"
+									   var="equipe" itemValue="#{equipe}"
+									   itemLabel="#{equipe.descricao}" />
+							</p:selectOneMenu>
+						<p:selectBooleanCheckbox value="#{fichaBean.ficha.ativo}" itemLabel="Ativo?" style="margin-left:5px;" disabled="true"/>
 					</h:panelGrid>
 					<!-- ========================= Dados do HOMEM ======================== -->
 					<div id="divDadosHomem" >
 						<div id="divBoxDadosHomem">
-							<h:panelGrid columns="4">
+							<h:panelGrid columns="3">
 								<h:graphicImage library="imagens" name="homem.png"
 											style="width:20px; height:20px;" /> Dados do Homem
 							</h:panelGrid>
@@ -292,6 +302,7 @@
 											 required="true" requiredMessage="O campo Nome Usual dele é obrigatório"
 											 maxlength="50" style="width:250px;">
 								</p:inputText>
+								<h:outputLabel value="" />
 							</h:panelGrid>
 							<h:panelGrid columns="3">
 								<h:outputLabel value="Profissão" for="profissaoEle" />
@@ -378,7 +389,7 @@
 									 maxlength="100" style="width:268px;">
 						</p:inputText>
 						<p:inputText id="cep" value="#{fichaBean.ficha.cep}" required="true" requiredMessage="O campo CEP é obrigatório"
-									 maxlength="10" style="width:90px;">
+									 maxlength="9" style="width:90px;">
 						</p:inputText>
 					</h:panelGrid>
 					<h:panelGrid columns="5">
@@ -409,10 +420,10 @@
 						<p:inputText id="etapa1" value="#{fichaBean.ficha.primeiraEtapa}" disabled="false"
 									 maxlength="10" style="width:75px;">
 						</p:inputText>
-						<p:inputText id="etapa2" value="#{fichaBean.ficha.segundaEtapa}" disabled="true"
+						<p:inputText id="etapa2" value="#{fichaBean.ficha.segundaEtapa}" disabled="false"
 									 maxlength="10" style="width:75px;">
 						</p:inputText>
-						<p:inputText id="etapa3" value="#{fichaBean.ficha.terceiraEtapa}" disabled="true"
+						<p:inputText id="etapa3" value="#{fichaBean.ficha.terceiraEtapa}" disabled="false"
 									 maxlength="10" style="width:75px;">
 						</p:inputText>
 
@@ -427,67 +438,263 @@
 				</p:panel>
 			</h:form>
 		</p:dialog>
-		<!-- ==================================================================================== -->
-		<!-- ========================= Diálogo para alterar um ECC ============================== -->
-		<!-- ==================================================================================== -->
-		<p:dialog id="dialogEditarEcc" header="Alterar ECC"
-				  modal="true" widgetVar="dlgEditarEcc"
-				  style="background-color:#EBF3FE" resizable="false" width="560px"
-				  height="222px">
-			<h:form id="cadEditarEcc">
-				<p:panel id="panelEditarEcc" style="background-color: #ffffe6">
-						<h:message />
-						<h:inputHidden value="#{eccBean.ecc.id}" />
-						<h:panelGrid columns="3">
-							<h:outputLabel value="Número" for="numero" />
-							<h:outputLabel value="Local" for="local"/>
-							<h:outputLabel value="Total" for="total" />
-							<p:inputText id="numero" value="#{eccBean.ecc.numero}"
-										 maxlength="10" style="width:35px;">
-							</p:inputText>
-							<p:inputText id="local" value="#{eccBean.ecc.local}"
-										 maxlength="100" style="width:350px;">
-								<p:focus for="numero" />
-							</p:inputText>
-							<p:inputText id="total" value="#{eccBean.ecc.total}"
-										 maxlength="5" style="width:45px;">
-							</p:inputText>
-						</h:panelGrid>
-						<h:panelGrid columns="1">
-							<h:outputLabel value="Tema" for="tema" />
-							<p:inputText id="tema" value="#{eccBean.ecc.tema}"
-										 maxlength="200" style="width:458px;">
-							</p:inputText>
-						</h:panelGrid>
-					<!--
-						<h:panelGrid columns="3">
-							<h:outputLabel value="Data Início" for="inicio" />
-							<h:outputLabel value="Data Fim" for="fim" />
-							<h:outputLabel value="Situação" for="situacao" />
-							<p:calendar id="inicio" mask="99/99/9999"
-										value="#{eccBean.ecc.dataInicio}"
-										pattern="dd/MM/yyyy"/>
-							<p:calendar id="fim" mask="99/99/9999"
-										value="#{eccBean.ecc.dataFim}"
-										pattern="dd/MM/yyyy"/>
-							<p:selectOneMenu id="situacao" disabled="true"
-											 value="#{eccBean.ecc.situacao}"
-											 requiredMessage="O campo Situação é obrigatório" style="width:118px;">
-								<f:selectItem itemLabel="Selecione" noSelectionOption="true" />
-								<f:selectItem itemValue="ANDAMENTO" itemLabel="ANDAMENTO" />
-								<f:selectItem itemValue="ENCERRADO" itemLabel="ENCERRADO" />
-							</p:selectOneMenu>
-							<p:selectBooleanCheckbox value="#{eccBean.ecc.automatico}" itemLabel="Automático?" style="margin-left:5px;" />
-						</h:panelGrid>
-						-->
+
+		<!-- ======================================================================= -->
+		<!-- Dialogo para realizar upload das fotos                                  -->
+		<!-- ======================================================================= -->
+		<p:dialog id="dialogUpload" header="Anexar fotos" modal="true"
+				  widgetVar="dlgUpload" width="710" style="background-color:#e1eaea"
+				  resizable="false" closable="false">
+			<h:form id="formUpload" enctype="multipart/form-data">
+				<h:message />
+				<h:panelGrid id="displayUpload">
+					<p:panel id="basic" style="background-color:#EBF3FE; width:671px;">
 						<h:panelGrid columns="2">
-							<h:outputLabel value="" />
-							<p:commandButton value="Alterar" style="margin-left: 10px;"
-											 action="#{eccBean.alterarEcc()}" icon="ui-icon-check"
-											 update=":listagemFichas @form" process="@form"
-											 oncomplete="if(!args.validationFailed){PF('dlgEditarEcc').hide();}" />
+							<p:outputLabel value="Nome do Casal : " styleClass="negrito"
+										   />
+							<p:outputLabel
+									value="#{fichaBean.ficha.nomeEle} E #{fichaBean.ficha.nomeEla}" />
+							<p:outputLabel value="Nome Usual do Casal: " styleClass="negrito"
+										    />
+							<p:outputLabel value="#{fichaBean.ficha.nomeUsual}" />
 						</h:panelGrid>
 					</p:panel>
+					<br />
+					<p:panel id="foto" style="background-color:#EBF3FE; width:671px;">
+						<h:panelGrid columns="2">
+							<p:outputLabel value="Tipo"/>
+							<p:selectOneButton style="margin-left:5px;" id="tipo"
+											   value="#{fichaBean.tipoFoto}">
+								<f:selectItem itemValue="HOMEM" itemLabel="HOMEM" />
+								<f:selectItem itemValue="MULHER" itemLabel="MULHER" />
+							</p:selectOneButton >
+							<p:outputLabel value="Foto"/>
+
+							<p:fileUpload label="Procurar..."
+										  value="#{fichaBean.uploadedFile}"
+										  allowTypes="/(\.|\/)(gif|jpe?g|png)$/"
+										  invalidFileMessage="São permitidas somente imagens (gif, jpeg, jpg e png)"
+										  auto="false" skinSimple="true"
+										  uploadLabel="Enviar" cancelLabel="Cancelar" style="width:621px;"
+										  fileLimit="2" mode="simple" multiple="false"
+										  sizeLimit="1024000"
+										  invalidSizeMessage="O arquivo deve ter no máximo 1 MB"
+										  update="fotoEleEla" process="tipo"/>
+						</h:panelGrid>
+					</p:panel>
+					<p:commandButton id="enviaFoto" ajax="false" value="Enviar" process="@this" update="fotoEleEla"
+									 actionListener="#{fichaBean.salvarFotoSimples}"/>
+					<br />
+					<h:panelGrid id="fotoEleEla" columns="2">
+						<p:outputLabel value="Homem" styleClass="negrito" rendered="#{fichaBean.ficha.fotoEle.length() > 0}"
+									   style="margin-left:10px;" />
+						<p:outputLabel value="Mulher" styleClass="negrito" rendered="#{fichaBean.ficha.fotoEla.length() > 0}"
+									   style="margin-left:10px;" />
+						<h:graphicImage library="imagens" name="fotos/#{fichaBean.ficha.fotoEle}" rendered="#{fichaBean.ficha.fotoEle.length() > 0}"
+										style="width:80px; height:80px;" />
+						<h:graphicImage library="imagens" name="fotos/#{fichaBean.ficha.fotoEla}" rendered="#{fichaBean.ficha.fotoEla.length() > 0}"
+										style="width:80px; height:80px;" />
+					</h:panelGrid>
+
+
+					<h:panelGrid columns="2">
+						<p:commandButton onclick="PF('dlgUpload').hide()" actionListener="#{fichaBean.alterarFicha}"
+										 update=":listagemFichas:fichas" process="@none"
+										 icon="ui-icon-closethick" value="Fechar" />
+					</h:panelGrid>
+				</h:panelGrid>
+			</h:form>
+		</p:dialog>
+		<!-- ==================================================================================== -->
+		<!-- ========================= Diálogo para alterar uma Ficha =========================== -->
+		<!-- ==================================================================================== -->
+		<p:dialog id="dlgEditaFicha" header="Alterar Ficha"
+				  modal="true" widgetVar="dlgEditarFicha"
+				  style="background-color:#EBF3FE" resizable="false" width="920px"
+				  height="690px">
+			<h:form id="cadEditarFicha">
+				<p:panel id="panelEditaFicha" style="background-color: #ffffe6">
+					<h:message />
+					<h:inputHidden value="#{fichaBean.ficha.id}" />
+					<p:focus for="ultimoTrabalho" />
+					<h:panelGrid columns="4">
+						<h:outputLabel value="Nome Usual Casal" for="nomeUsualCasal" />
+						<h:outputLabel value="Situação" for="situacao"/>
+						<h:outputLabel value="Último Trabalho" for="ultimoTrabalho" />
+						<h:outputLabel value="" />
+						<p:inputText id="nomeUsualCasal" value="#{fichaBean.ficha.nomeUsual}"
+									 maxlength="100" style="width:350px;" disabled="true">
+						</p:inputText>
+						<p:selectOneMenu id="situacao" disabled="false" required="true"
+										 value="#{fichaBean.ficha.situacao}" style="width:100px;">
+							<f:selectItem itemLabel="Selecione" noSelectionOption="true" />
+							<f:selectItem itemValue="ENCONTREIRO" itemLabel="ENCONTREIRO" />
+							<f:selectItem itemValue="ENCONTRISTA" itemLabel="ENCONTRISTA" />
+						</p:selectOneMenu>
+						<p:selectOneMenu id="ultimoTrabalho" converter="equipeConverter" required="true"
+										 requiredMessage="Selecione a Equipe."
+										 value="#{fichaBean.ficha.ultimoTrabalho}" style="width:270px">
+							<f:selectItem itemLabel="Selecione a equipe" noSelectionOption="true" />
+							<f:selectItems value="#{equipeBean.lista}"
+										   var="equipe" itemValue="#{equipe}"
+										   itemLabel="#{equipe.descricao}" />
+						</p:selectOneMenu>
+						<p:selectBooleanCheckbox value="#{fichaBean.ficha.ativo}" itemLabel="Ativo?" style="margin-left:5px;" disabled="true"/>
+					</h:panelGrid>
+					<!-- ========================= Dados do HOMEM ======================== -->
+					<div id="divDadosHomemEditar" >
+						<div id="divBoxDadosHomemEditar">
+							<h:panelGrid columns="4">
+								<h:graphicImage library="imagens" name="fotos/#{fichaBean.ficha.fotoEle}" rendered="#{fichaBean.ficha.fotoEle.length() > 0}"
+												style="width:80px; height:80px;" /> Dados do Homem
+							</h:panelGrid>
+							<h:panelGrid columns="3">
+								<h:outputLabel value="Ele" for="nomeEle" />
+								<h:outputLabel value="Nascimento" for="nascimentoEle" />
+								<h:outputLabel value="Nome Usual" for="usualEle" />
+								<p:inputText id="nomeEle" value="#{fichaBean.ficha.nomeEle}"
+											 maxlength="100" style="width:400px;">
+								</p:inputText>
+								<p:calendar id="nascimentoEle" mask="99/99/9999" requiredMessage="O Campo Data de Nascimento dele é obrigatório"
+											value="#{fichaBean.ficha.nascimentoEle}" required="true"
+											pattern="dd/MM/yyyy"/>
+								<p:inputText id="usualEle" value="#{fichaBean.ficha.nomeUsualEle}"
+											 required="true" requiredMessage="O campo Nome Usual dele é obrigatório"
+											 maxlength="50" style="width:250px;">
+								</p:inputText>
+							</h:panelGrid>
+							<h:panelGrid columns="3">
+								<h:outputLabel value="Profissão" for="profissaoEle" />
+								<h:outputLabel value="Telefone" for="telefoneEle" />
+								<h:outputLabel value="Religião" for="religiaoEle" />
+								<p:inputText id="profissaoEle" value="#{fichaBean.ficha.profissaoEle}"
+											 required="true" requiredMessage="O campo Profissão dele é obrigatório"
+											 maxlength="100" style="width:400px;">
+								</p:inputText>
+								<p:inputText id="telefoneEle" value="#{fichaBean.ficha.telefoneEle}"
+											 required="true" requiredMessage="O campo Nome Usual dele é obrigatório"
+											 maxlength="50" style="width:158px;">
+								</p:inputText>
+								<p:selectOneMenu id="religiaoEle"
+												 value="#{fichaBean.ficha.religiaoEle}" required="true" style="width:225px;">
+									<f:selectItem itemLabel="Selecione" noSelectionOption="true" />
+									<f:selectItem itemValue="CATÓLICO" itemLabel="CATÓLICO" />
+									<f:selectItem itemValue="ADVENTISTA" itemLabel="ADVENTISTA" />
+									<f:selectItem itemValue="EVANGÉLICO" itemLabel="EVANGÉLICO" />
+									<f:selectItem itemValue="NENHUM" itemLabel="NENHUM" />
+								</p:selectOneMenu>
+							</h:panelGrid>
+						</div>
+					</div>
+					<br></br>
+					<!-- ========================= Dados da MULHER ======================== -->
+					<div id="divDadosMulherEditar" >
+						<div id="divBoxDadosMulherEditar">
+							<h:panelGrid columns="4">
+								<h:graphicImage library="imagens" name="fotos/#{fichaBean.ficha.fotoEla}" rendered="#{fichaBean.ficha.fotoEla.length() > 0}"
+												style="width:80px; height:80px;" /> Dados da Mulher
+							</h:panelGrid>
+							<h:panelGrid columns="3">
+								<h:outputLabel value="Ela" for="nomeEla" />
+								<h:outputLabel value="Nascimento" for="nascimentoEla" />
+								<h:outputLabel value="Nome Usual" for="usualEla" />
+								<p:inputText id="nomeEla" value="#{fichaBean.ficha.nomeEla}"
+											 required="true" requiredMessage="O campo Nome dela é obrigatório"
+											 maxlength="100" style="width:400px;">
+								</p:inputText>
+								<p:calendar id="nascimentoEla" mask="99/99/9999" requiredMessage="O Campo Data de Nascimento dela é obrigatório"
+											value="#{fichaBean.ficha.nascimentoEla}" required="true"
+											pattern="dd/MM/yyyy"/>
+								<p:inputText id="usualEla" value="#{fichaBean.ficha.nomeUsualEla}"
+											 required="true" requiredMessage="O campo Nome Usual dela é obrigatório"
+											 maxlength="50" style="width:250px;">
+								</p:inputText>
+							</h:panelGrid>
+							<h:panelGrid columns="3">
+								<h:outputLabel value="Profissão" for="profissaoEla" />
+								<h:outputLabel value="Telefone" for="telefoneEla" />
+								<h:outputLabel value="Religião" for="religiaoEla" />
+								<p:inputText id="profissaoEla" value="#{fichaBean.ficha.profissaoEla}"
+											 required="true" requiredMessage="O campo Profissão dela é obrigatório"
+											 maxlength="100" style="width:400px;">
+								</p:inputText>
+								<p:inputText id="telefoneEla" value="#{fichaBean.ficha.telefoneEla}"
+											 required="true" requiredMessage="O campo Nome Usual dela é obrigatório"
+											 maxlength="50" style="width:158px;">
+								</p:inputText>
+								<p:selectOneMenu id="religiaoEla"
+												 value="#{fichaBean.ficha.religiaoEla}" required="true" style="width:225px;">
+									<f:selectItem itemLabel="Selecione" noSelectionOption="true" />
+									<f:selectItem itemValue="CATÓLICO" itemLabel="CATÓLICO" />
+									<f:selectItem itemValue="ADVENTISTA" itemLabel="ADVENTISTA" />
+									<f:selectItem itemValue="EVANGÉLICO" itemLabel="EVANGÉLICO" />
+									<f:selectItem itemValue="NENHUM" itemLabel="NENHUM" />
+								</p:selectOneMenu>
+							</h:panelGrid>
+						</div>
+					</div>
+					<h:panelGrid columns="4">
+						<h:outputLabel value="Rua" for="rua" />
+						<h:outputLabel value="Número" for="numero"/>
+						<h:outputLabel value="Complemento" for="complemento" />
+						<h:outputLabel value="CEP" for="cep" />
+						<p:inputText id="rua" value="#{fichaBean.ficha.rua}" required="true" requiredMessage="O campo Rua é obrigatório"
+									 maxlength="100" style="width:390px;">
+						</p:inputText>
+						<p:inputText id="numero" value="#{fichaBean.ficha.numero}" required="true" requiredMessage="O campo Número é obrigatório"
+									 maxlength="10" style="width:60px;">
+						</p:inputText>
+						<p:inputText id="complemento" value="#{fichaBean.ficha.complemento}"
+									 maxlength="100" style="width:268px;">
+						</p:inputText>
+						<p:inputText id="cep" value="#{fichaBean.ficha.cep}" required="true" requiredMessage="O campo CEP é obrigatório"
+									 maxlength="9" style="width:90px;">
+						</p:inputText>
+					</h:panelGrid>
+					<h:panelGrid columns="5">
+						<h:outputLabel value="Bairro" for="bairro"/>
+						<h:outputLabel value="Data Casamento" for="dataCasamento" />
+						<h:outputLabel value="" />
+						<h:outputLabel value="Qual Paróquia" for="paroquia" />
+						<h:outputLabel value="Nº Filhos" for="filhos" />
+						<p:inputText id="bairro" value="#{fichaBean.ficha.bairro}"
+									 maxlength="60" style="width:300px;" required="true" requiredMessage="O campo Bairro é obrigatório">
+						</p:inputText>
+						<p:calendar id="dataCasamento" mask="99/99/9999"
+									value="#{fichaBean.ficha.dataCasamento}"
+									pattern="dd/MM/yyyy"/>
+						<p:selectBooleanCheckbox value="#{fichaBean.ficha.casamentoReligioso}" itemLabel="Religioso?" style="margin-left:5px;" />
+						<p:inputText id="paroquia" value="#{fichaBean.ficha.paroquia}"
+									 maxlength="60" style="width:230px;">
+						</p:inputText>
+						<p:inputText id="filhos" value="#{fichaBean.ficha.qtdFilhos}"
+									 maxlength="10" style="width:43px;">
+						</p:inputText>
+
+					</h:panelGrid>
+					<h:panelGrid columns="3">
+						<h:outputLabel value="ECC - 1º Etapa" for="etapa1" />
+						<h:outputLabel value="ECC - 2º Etapa" for="etapa2" />
+						<h:outputLabel value="ECC - 3º Etapa" for="etapa3" />
+						<p:inputText id="etapa1" value="#{fichaBean.ficha.primeiraEtapa}" disabled="false"
+									 maxlength="10" style="width:75px;">
+						</p:inputText>
+						<p:inputText id="etapa2" value="#{fichaBean.ficha.segundaEtapa}" disabled="false"
+									 maxlength="10" style="width:75px;">
+						</p:inputText>
+						<p:inputText id="etapa3" value="#{fichaBean.ficha.terceiraEtapa}" disabled="false"
+									 maxlength="10" style="width:75px;">
+						</p:inputText>
+
+					</h:panelGrid>
+					<h:panelGrid columns="2">
+						<h:outputLabel value="" />
+						<p:commandButton value="Alterar" style="margin-left: 10px;"
+										 action="#{fichaBean.alterarFicha()}" icon="ui-icon-check"
+										 update=":listagemFichas @form" process="@form"
+										 oncomplete="if(!args.validationFailed){PF('dlgEditarFicha').hide();}" />
+					</h:panelGrid>
+				</p:panel>
 			</h:form>
 		</p:dialog>
 		<!-- ==================================================================================== -->
@@ -536,7 +743,7 @@
 										 style="margin-left:10px;"
 										 action="#{eccBean.salvaDirigente()}" icon="ui-icon-check"
 										 title="Incluir um novo dirigente..."
-										 update="casal, equipe, cadNovosDirigentes:tabelaDirigentes, listagemFichas:eccs">
+										 update="casal, equipe, cadNovosDirigentes:tabelaDirigentes, listagemFichas:fichas">
 						</p:commandButton>
 					</h:panelGrid>
 					<h:panelGrid>
@@ -570,7 +777,7 @@
 									<p:outputLabel value="#{dirigente.equipe.descricao}" />
 								</p:column>
 								<p:column headerText="Excluir" styleClass="Gildasio" width="40">
-									<p:commandLink update=":cadNovosDirigentes:tabelaDirigentes, listagemFichas:eccs"
+									<p:commandLink update=":cadNovosDirigentes:tabelaDirigentes, listagemFichas:fichas"
 												   process="@this" action="#{eccBean.removeDirigente()}">
 										<h:graphicImage library="imagens" name="remover.png" />
 										<f:setPropertyActionListener target="#{eccBean.dirigenteEcc}"

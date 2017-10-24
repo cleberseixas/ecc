@@ -1110,9 +1110,29 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:hover,a.list-gro
 	border-radius:5px 5px 5px 5px;
 }
 
+#divDadosHomemEditar{
+	width: 855px;
+	height: 190px;
+	float: left;
+	margin: 10px;
+	margin-left: 5px;
+	border: 1px solid #c0c0c0;
+	border-radius:5px 5px 5px 5px;
+}
+
 #divDadosMulher{
 	width: 855px;
 	height: 140px;
+	float: left;
+	margin: 10px;
+	margin-left: 5px;
+	border: 1px solid #c0c0c0;
+	border-radius:5px 5px 5px 5px;
+}
+
+#divDadosMulherEditar{
+	width: 855px;
+	height: 190px;
 	float: left;
 	margin: 10px;
 	margin-left: 5px;
@@ -1128,20 +1148,6 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:hover,a.list-gro
 	overflow: auto;
 }
 
-#divEstatisticaChefeInferiorEsquerda {
-	width: 632px;
-	height: 500px;
-	float: left;
-	margin-right: 10px;
-	overflow: auto;
-}
-
-#divEstatisticaChefeInferiorEsquerda_01 {
-	width: 632px;
-	height: 50px;
-	margin-right: 10px;
-	overflow: auto;
-}
 
 #divEstatisticaChefeInferiorEsquerda_02 {
 	width: 632px;
@@ -1738,6 +1744,15 @@ a{
  	background-color: #e1e1d0;
 }
 
+#divBoxDadosHomemEditar {
+	width: 855px;
+	height: 88px;
+	float: left;
+	position: relative;
+	border-radius:4px 4px 0px 0px;
+	background-color: #e1e1d0;
+}
+
 #divBoxDadosMulher {
 	width: 855px;
 	height: 30px;
@@ -1747,10 +1762,9 @@ a{
 	background-color: #e1e1d0;
 }
 
-
-#divBoxDadosMulher {
+#divBoxDadosMulherEditar {
 	width: 855px;
-	height: 30px;
+	height: 88px;
 	float: left;
 	position: relative;
 	border-radius:4px 4px 0px 0px;

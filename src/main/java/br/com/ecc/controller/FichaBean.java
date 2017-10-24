@@ -1,15 +1,20 @@
 package br.com.ecc.controller;
 
+import br.com.ecc.model.Equipe;
 import br.com.ecc.model.Ficha;
 import br.com.ecc.service.FichaService;
 import br.com.ecc.util.Constantes;
 import br.com.ecc.util.FacesMessages;
+import br.com.ecc.util.Util;
 import org.primefaces.context.RequestContext;
+import org.primefaces.event.FileUploadEvent;
+import org.primefaces.event.SelectEvent;
+import org.primefaces.model.UploadedFile;
 
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
-import java.io.Serializable;
+import java.io.*;
 import java.util.List;
 
 /**
@@ -24,11 +29,21 @@ public class FichaBean implements Serializable {
 
 	private Ficha ficha = new Ficha();
 
+	private Equipe ultimoTrabalho = new Equipe();
+
 	private List<Ficha> listaFichas;
 
 	private List<Ficha> listaEncontristas;
 
+	private UploadedFile uploadedFile;
+
+	private String tipoFoto = "HOMEM";
+
+	private String pathFoto = Constantes.CAMINHO_FOTOS_LOCAL;
+
 	private boolean habilitaBotaoEditarFicha = true;
+
+	private boolean habilitaBotaoFoto = true;
 
 	private boolean habilitaBotaoExcluirFicha = true;
 
@@ -46,12 +61,21 @@ public class FichaBean implements Serializable {
 		this.ficha = new Ficha();
 	}
 
+	public Equipe getUltimoTrabalho() {
+		return ultimoTrabalho;
+	}
+
+	public void setUltimoTrabalho(Equipe ultimoTrabalho) {
+		this.ultimoTrabalho = ultimoTrabalho;
+	}
+
 	private void habilitaTodosBotoesFicha() {
 		habilitaBotaoEditarFicha = false;
 		habilitaBotaoExcluirFicha = false;
 		habilitaBotaoIncluiAptidoes = false;
 		habilitaBotaoIncluiAtividades = false;
 		habilitaBotaoDetalhesFicha = false;
+		habilitaBotaoFoto = false;
 	}
 
 	private void desabilitaTodosBotoesFicha() {
@@ -60,15 +84,11 @@ public class FichaBean implements Serializable {
 		habilitaBotaoIncluiAptidoes = true;
 		habilitaBotaoIncluiAtividades = true;
 		habilitaBotaoDetalhesFicha = false;
+		habilitaBotaoFoto = true;
 	}
 
 	public void salvarFicha() {
 		try {
-//			if (this.ficha.getNomeEle().isEmpty()) {
-//				FacesMessages.error("Favor informar o nome dele");
-//				RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
-//				return;
-//			}
 			fichaService.salvar(ficha);
 			this.listaFichas = fichaService.listar();
 			this.ficha = new Ficha();
@@ -78,12 +98,17 @@ public class FichaBean implements Serializable {
 			RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
 		}
 	}
-	/*
-	eccService.salvar(ecc);
-		this.listaEcc = eccService.listar();
-		this.ecc = new Ecc();
-		desabilitaTodosBotoesEcc();
-	 */
+
+	public void alterarFicha() {
+		try {
+			fichaService.alterar(this.ficha);
+			desabilitaTodosBotoesFicha();
+		} catch (Exception e) {
+			FacesMessages.error(e.getMessage());
+			RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+		}
+	}
+
 
 	public void excluir() {
 		try {
@@ -93,6 +118,67 @@ public class FichaBean implements Serializable {
 		} catch (Exception e) {
 			FacesMessages.error("Não se pode remover um círculo que já está sendo utilizado");
 		}
+	}
+
+//	public void salvarFotoCompleta(FileUploadEvent event)  throws Exception {
+//		try {
+//			UploadedFile uploadedFile = event.getFile();
+//			String nomeFoto = uploadedFile.getFileName();
+//			//id_eleUsual_nomefile;
+//			nomeFoto = Util.removeAcentos(nomeFoto);
+//			//HOMEM
+//			if (tipoFoto.equals("HOMEM")) {
+//				nomeFoto = this.ficha.getId() + "_" + this.ficha.getNomeUsualEle() + "_" + nomeFoto;
+//				this.ficha.setFotoEle(nomeFoto);
+//			} else {
+//				nomeFoto = this.ficha.getId() + "_" + this.ficha.getNomeUsualEla() + "_" + nomeFoto;
+//				this.ficha.setFotoEla(nomeFoto);
+//			}
+//			File file = new File(Constantes.CAMINHO_FOTOS_LOCAL, nomeFoto);
+//			OutputStream out = new FileOutputStream(file);
+//			out.write(uploadedFile.getContents());
+//			out.close();
+//			fichaService.atualiza(ficha);
+//			setTipoFoto(null);
+//
+//		} catch (IOException e) {
+//		}
+//	}
+
+	public void salvarFotoSimples() {
+		try {
+			//UploadedFile uploadedFile = event.getFile();
+
+			String nomeFoto = uploadedFile.getFileName();
+
+			if (nomeFoto.trim().length() > 0) {
+				//id_eleUsual_nomefile;
+				nomeFoto = Util.removeAcentos(nomeFoto);
+
+				//HOMEM
+				if (tipoFoto.equals("HOMEM")) {
+					nomeFoto = this.ficha.getId()+"_"+this.ficha.getNomeUsualEle()+"_"+nomeFoto;
+					this.ficha.setFotoEle(nomeFoto);
+				} else
+				{
+					nomeFoto = this.ficha.getId()+"_"+this.ficha.getNomeUsualEla()+"_"+nomeFoto;
+					this.ficha.setFotoEla(nomeFoto);
+				}
+				File file = new File(Constantes.CAMINHO_FOTOS_LOCAL, nomeFoto);
+				OutputStream out = new FileOutputStream(file);
+				out.write(uploadedFile.getContents());
+				out.close();
+				fichaService.atualiza(ficha);
+			} else {
+				FacesMessages.error("Favor escolher a foto");
+			}
+
+
+		} catch(IOException e) {
+//			FacesContext.getCurrentInstance().addMessage(
+//					null, new FacesMessage(FacesMessage.SEVERITY_WARN, "Erro", e.getMessage()));
+		}
+
 	}
 
 
@@ -122,12 +208,44 @@ public class FichaBean implements Serializable {
 		return this.listaEncontristas;
 	}
 
+	public UploadedFile getUploadedFile() {
+		return uploadedFile;
+	}
+
+	public void setUploadedFile(UploadedFile uploadedFile) {
+		this.uploadedFile = uploadedFile;
+	}
+
+	public String getTipoFoto() {
+		return tipoFoto;
+	}
+
+	public void setTipoFoto(String tipoFoto) {
+		this.tipoFoto = tipoFoto;
+	}
+
+	public String getPathFoto() {
+		return pathFoto;
+	}
+
+	public void setPathFoto(String pathFoto) {
+		this.pathFoto = pathFoto;
+	}
+
 	public boolean isHabilitaBotaoEditarFicha() {
 		return habilitaBotaoEditarFicha;
 	}
 
 	public void setHabilitaBotaoEditarFicha(boolean habilitaBotaoEditarFicha) {
 		this.habilitaBotaoEditarFicha = habilitaBotaoEditarFicha;
+	}
+
+	public boolean isHabilitaBotaoFoto() {
+		return habilitaBotaoFoto;
+	}
+
+	public void setHabilitaBotaoFoto(boolean habilitaBotaoFoto) {
+		this.habilitaBotaoFoto = habilitaBotaoFoto;
 	}
 
 	public boolean isHabilitaBotaoExcluirFicha() {
@@ -161,4 +279,15 @@ public class FichaBean implements Serializable {
 	public void setHabilitaBotaoDetalhesFicha(boolean habilitaBotaoDetalhesFicha) {
 		this.habilitaBotaoDetalhesFicha = habilitaBotaoDetalhesFicha;
 	}
+
+	//habilita ou desabilita os botões disponívis na tabela da pagina montagemFicha.xhtml
+	public void onRowSelectEcc(SelectEvent selectEvent) {
+		this.ficha = (Ficha) selectEvent.getObject();
+		if (this.ficha.isAtivo()) {
+			this.habilitaTodosBotoesFicha();
+		} else {
+			this.desabilitaTodosBotoesFicha();
+		}
+	}
+
 }

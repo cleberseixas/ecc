@@ -32,12 +32,12 @@ public class EquipeRepository {
 	}
 
 	public List<Equipe> listar() {
-		TypedQuery<Equipe> query = manager.createQuery("from Equipe order by descricao", Equipe.class);
+		TypedQuery<Equipe> query = manager.createQuery("from Equipe where ativo=true order by descricao", Equipe.class);
 		return query.getResultList();
 	}
 
 	public List<Equipe> listarEquipeDirigentes() {
-		TypedQuery<Equipe> query = manager.createQuery("from Equipe where automatica=false and palestrante=false order by descricao", Equipe.class);
+		TypedQuery<Equipe> query = manager.createQuery("from Equipe where automatica=false and palestrante=false and ativo=true order by descricao", Equipe.class);
 		return query.getResultList();
 	}
 }

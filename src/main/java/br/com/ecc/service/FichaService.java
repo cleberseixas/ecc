@@ -7,6 +7,7 @@ import br.com.ecc.repository.FichaRepository;
 import br.com.ecc.util.FacesMessages;
 import br.com.ecc.util.NegocioException;
 import br.com.ecc.util.Transactional;
+import com.sun.xml.internal.messaging.saaj.soap.FastInfosetDataContentHandler;
 
 import javax.inject.Inject;
 import java.io.Serializable;
@@ -33,6 +34,19 @@ public class FichaService implements Serializable {
 	public void salvar(Ficha ficha){
 		try{
 			ficha.setNomeUsual(ficha.getNomeUsualEle()+" E "+ficha.getNomeUsualEla());
+			if (!ficha.getPrimeiraEtapa().contains("º")) {
+				ficha.setPrimeiraEtapa(ficha.getPrimeiraEtapa()+"º");
+			}
+			if (ficha.getSegundaEtapa().trim().length() > 0) {
+				if (!ficha.getSegundaEtapa().contains("º")) {
+					ficha.setSegundaEtapa(ficha.getSegundaEtapa()+"º");
+				}
+			}
+			if (ficha.getTerceiraEtapa().trim().length() > 0) {
+				if (!ficha.getTerceiraEtapa().contains("º")) {
+					ficha.setTerceiraEtapa(ficha.getTerceiraEtapa()+"º");
+				}
+			}
 			this.fichaRepository.salvar(ficha);
 			FacesMessages.info("Registro gravado");
 		}catch(NegocioException e){
@@ -44,7 +58,37 @@ public class FichaService implements Serializable {
 	public void excluir(Ficha ficha){
 		ficha = fichaRepository.carregar(ficha.getId());
 		this.fichaRepository.excluir(ficha);
-	}		
+	}
+
+	@Transactional
+	public void alterar(Ficha ficha){
+		try{
+			ficha.setNomeUsual(ficha.getNomeUsualEle()+" E "+ficha.getNomeUsualEla());
+			if (!ficha.getPrimeiraEtapa().contains("º")) {
+				ficha.setPrimeiraEtapa(ficha.getPrimeiraEtapa()+"º");
+			}
+			if (ficha.getSegundaEtapa().trim().length() > 0) {
+				if (!ficha.getSegundaEtapa().contains("º")) {
+					ficha.setSegundaEtapa(ficha.getSegundaEtapa()+"º");
+				}
+			}
+			if (ficha.getTerceiraEtapa().trim().length() > 0) {
+				if (!ficha.getTerceiraEtapa().contains("º")) {
+					ficha.setTerceiraEtapa(ficha.getTerceiraEtapa()+"º");
+				}
+			}
+			this.fichaRepository.salvar(ficha);
+			FacesMessages.info("Ficha alterada");
+		}catch(NegocioException e){
+			FacesMessages.error(e.getMessage());
+		}
+	}
+
+	@Transactional
+	public void atualiza(Ficha ficha){
+		fichaRepository.salvar(ficha);
+		FacesMessages.info("Foto salva");
+	}
 	
 	public Ficha carregar(Long id){
 		try {

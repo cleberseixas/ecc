@@ -225,7 +225,7 @@
 							<h:outputLabel value="Local" for="local"/>
 							<h:outputLabel value="Total" for="total" />
 							<p:inputText id="numero" value="#{eccBean.ecc.numero}"
-										 requiredMessage="O campo Número do ECC é obrigatório"
+										 required="true" requiredMessage="O campo Número do ECC é obrigatório"
 										 maxlength="10" style="width:35px;">
 							</p:inputText>
 							<p:inputText id="local" value="#{eccBean.ecc.local}"
@@ -234,7 +234,7 @@
 								<p:focus for="numero" />
 							</p:inputText>
 							<p:inputText id="total" value="#{eccBean.ecc.total}"
-										 required="true" requiredMessage="O campo Sigla é obrigatório"
+										 required="true" requiredMessage="O campo Total é obrigatório"
 										 maxlength="5" style="width:45px;">
 							</p:inputText>
 						</h:panelGrid>
@@ -249,15 +249,17 @@
 							<h:outputLabel value="Data Início" for="inicio" />
 							<h:outputLabel value="Data Fim" for="fim" />
 							<h:outputLabel value="Situação" for="situacao" />
-							<p:calendar id="inicio" mask="99/99/9999" requiredMessage="O Campo Data Início é obrigatório"
+							<p:calendar id="inicio" mask="99/99/9999"
+										required="true" requiredMessage="O Campo Data Início é obrigatório"
 										value="#{eccBean.ecc.dataInicio}"
 										pattern="dd/MM/yyyy"/>
-							<p:calendar id="fim" mask="99/99/9999" requiredMessage="O Campo Data Fim é obrigatório"
+							<p:calendar id="fim" mask="99/99/9999"
+										required="true" requiredMessage="O Campo Data Fim é obrigatório"
 										value="#{eccBean.ecc.dataFim}"
 										pattern="dd/MM/yyyy"/>
 							<p:selectOneMenu id="situacao" disabled="true"
-											 value="#{eccBean.ecc.situacao}" required="true"
-											 requiredMessage="O campo Situação é obrigatório" style="width:118px;">
+											 value="#{eccBean.ecc.situacao}"
+											 required="true" requiredMessage="O campo Situação é obrigatório" style="width:118px;">
 								<f:selectItem itemLabel="Selecione" noSelectionOption="true" />
 								<f:selectItem itemValue="ANDAMENTO" itemLabel="ANDAMENTO" />
 								<f:selectItem itemValue="ENCERRADO" itemLabel="ENCERRADO" />
@@ -290,19 +292,23 @@
 							<h:outputLabel value="Local" for="local"/>
 							<h:outputLabel value="Total" for="total" />
 							<p:inputText id="numero" value="#{eccBean.ecc.numero}"
+										 required="true" requiredMessage="O campo Número do ECC é obrigatório"
 										 maxlength="10" style="width:35px;">
 							</p:inputText>
 							<p:inputText id="local" value="#{eccBean.ecc.local}"
+										 required="true" requiredMessage="O campo Local é obrigatório"
 										 maxlength="100" style="width:350px;">
 								<p:focus for="numero" />
 							</p:inputText>
 							<p:inputText id="total" value="#{eccBean.ecc.total}"
+										 required="true" requiredMessage="O campo Total é obrigatório"
 										 maxlength="5" style="width:45px;">
 							</p:inputText>
 						</h:panelGrid>
 						<h:panelGrid columns="1">
 							<h:outputLabel value="Tema" for="tema" />
 							<p:inputText id="tema" value="#{eccBean.ecc.tema}"
+										 required="true" requiredMessage="O campo Tema é obrigatório"
 										 maxlength="200" style="width:458px;">
 							</p:inputText>
 						</h:panelGrid>
@@ -311,14 +317,16 @@
 							<h:outputLabel value="Data Fim" for="fim" />
 							<h:outputLabel value="Situação" for="situacao" />
 							<p:calendar id="inicio" mask="99/99/9999"
+										required="true" requiredMessage="O Campo Data Início é obrigatório"
 										value="#{eccBean.ecc.dataInicio}"
 										pattern="dd/MM/yyyy"/>
 							<p:calendar id="fim" mask="99/99/9999"
+										required="true" requiredMessage="O Campo Data Fim é obrigatório"
 										value="#{eccBean.ecc.dataFim}"
 										pattern="dd/MM/yyyy"/>
 							<p:selectOneMenu id="situacao" disabled="true"
 											 value="#{eccBean.ecc.situacao}"
-											 requiredMessage="O campo Situação é obrigatório" style="width:118px;">
+											 required="true" requiredMessage="O campo Situação é obrigatório" style="width:118px;">
 								<f:selectItem itemLabel="Selecione" noSelectionOption="true" />
 								<f:selectItem itemValue="ANDAMENTO" itemLabel="ANDAMENTO" />
 								<f:selectItem itemValue="ENCERRADO" itemLabel="ENCERRADO" />

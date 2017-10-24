@@ -209,36 +209,36 @@ public class EccBean implements Serializable {
 
 	public void alterarEcc() {
 		try {
-			if (this.ecc.getNumero().trim().length() <= 0) {
-				FacesMessages.error("Favor informar o número");
-				RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
-				return;
-			}
-			if (this.ecc.getLocal().isEmpty()) {
-				FacesMessages.error("Favor informar o local");
-				RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
-				return;
-			}
-			if (null == this.ecc.getTotal() || (this.ecc.getTotal().intValue() <= 0)) {
-				FacesMessages.error("Favor informar o total");
-				RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
-				return;
-			}
-			if (this.ecc.getTema().isEmpty()) {
-				FacesMessages.error("Favor informar o tema");
-				RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
-				return;
-			}
-			if (null == this.ecc.getDataInicio()) {
-				FacesMessages.error("Favor informar a data início");
-				RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
-				return;
-			}
-			if (null == this.ecc.getDataFim()) {
-				FacesMessages.error("Favor informar a data final");
-				RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
-				return;
-			}
+//			if (this.ecc.getNumero().trim().length() <= 0) {
+//				FacesMessages.error("Favor informar o número");
+//				RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+//				return;
+//			}
+//			if (this.ecc.getLocal().isEmpty()) {
+//				FacesMessages.error("Favor informar o local");
+//				RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+//				return;
+//			}
+//			if (null == this.ecc.getTotal() || (this.ecc.getTotal().intValue() <= 0)) {
+//				FacesMessages.error("Favor informar o total");
+//				RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+//				return;
+//			}
+////			if (this.ecc.getTema().isEmpty()) {
+////				FacesMessages.error("Favor informar o tema");
+////				RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+////				return;
+////			}
+//			if (null == this.ecc.getDataInicio()) {
+//				FacesMessages.error("Favor informar a data início");
+//				RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+//				return;
+//			}
+//			if (null == this.ecc.getDataFim()) {
+//				FacesMessages.error("Favor informar a data final");
+//				RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+//				return;
+//			}
 			eccService.alterar(this.ecc);
 			desabilitaTodosBotoesEcc();
 		} catch (Exception e) {
