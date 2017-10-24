@@ -119,7 +119,7 @@ public class Ficha implements Serializable {
 
     //@Column(name="ULTIMO_TRABALHO", length=60, nullable = false)
     @ManyToOne
-    @JoinColumn(name = "equipe", nullable = true, foreignKey=@ForeignKey(name = "fk_ultimo_trabalho"))
+    @JoinColumn(name = "EQUIPE", nullable = true, foreignKey=@ForeignKey(name = "fk_ultimo_trabalho"))
     private Equipe ultimoTrabalho;
 
     @Column(name="ATIVO", nullable = false)

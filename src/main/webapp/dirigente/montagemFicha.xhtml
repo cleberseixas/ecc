@@ -190,7 +190,7 @@
 					</p:column>
 					<p:column headerText="Nome Ele" width="200">
 						<p:outputLabel value="#{ficha.nomeEle}"/>
-						<h:graphicImage library="imagens" name="picture.png" rendered="#{ficha.fotoEle.length() > 0}"
+						<h:graphicImage library="imagens" name="photo.png" rendered="#{ficha.fotoEle.length() > 0}"
 										style="width:20px; height:20px; float: right;" title="Foto dele"/>
 					</p:column>
 					<!--
@@ -208,7 +208,7 @@
 					</p:column>
 					<p:column headerText="Nome Ela" width="200">
 						<p:outputLabel value="#{ficha.nomeEla}"/>
-						<h:graphicImage library="imagens" name="picture.png" rendered="#{ficha.fotoEla.length() > 0}"
+						<h:graphicImage library="imagens" name="photo.png" rendered="#{ficha.fotoEla.length() > 0}"
 										style="width:20px; height:20px; float: right;" title="Foto dela"/>
 					</p:column>
 					<p:column headerText="Último Trabalho" width="140">
@@ -461,7 +461,7 @@
 					</p:panel>
 					<br />
 					<p:panel id="foto" style="background-color:#EBF3FE; width:671px;">
-						<h:panelGrid columns="2">
+						<h:panelGrid columns="4">
 							<p:outputLabel value="Tipo"/>
 							<p:selectOneButton style="margin-left:5px;" id="tipo"
 											   value="#{fichaBean.tipoFoto}">
@@ -469,7 +469,6 @@
 								<f:selectItem itemValue="MULHER" itemLabel="MULHER" />
 							</p:selectOneButton >
 							<p:outputLabel value="Foto"/>
-
 							<p:fileUpload label="Procurar..."
 										  value="#{fichaBean.uploadedFile}"
 										  allowTypes="/(\.|\/)(gif|jpe?g|png)$/"
@@ -480,6 +479,14 @@
 										  sizeLimit="1024000"
 										  invalidSizeMessage="O arquivo deve ter no máximo 1 MB"
 										  update="fotoEleEla" process="tipo"/>
+							<p:fileUpload label="Procurar..." process="tipo" rendered="false"
+										  fileUploadListener="#{fichaBean.salvarFotoCompleta}" auto="false"
+										  uploadLabel="Enviar" cancelLabel="Cancelar" style="width:621px;"
+										  fileLimit="2" mode="advanced"
+										  fileLimitMessage="Apenas um arquivo pode ser enviado"
+										  sizeLimit="53145800"
+										  invalidSizeMessage="O arquivo deve ter no máximo 2 MB"
+										  update="fotoEleEla" />
 						</h:panelGrid>
 					</p:panel>
 					<p:commandButton id="enviaFoto" ajax="false" value="Enviar" process="@this" update="fotoEleEla"
@@ -490,9 +497,9 @@
 									   style="margin-left:10px;" />
 						<p:outputLabel value="Mulher" styleClass="negrito" rendered="#{fichaBean.ficha.fotoEla.length() > 0}"
 									   style="margin-left:10px;" />
-						<h:graphicImage library="imagens" name="fotos/#{fichaBean.ficha.fotoEle}" rendered="#{fichaBean.ficha.fotoEle.length() > 0}"
+						<h:graphicImage library="imagens" value="/image?imagem=#{fichaBean.ficha.fotoEle}"  rendered="#{fichaBean.ficha.fotoEle.length() > 0}"
 										style="width:80px; height:80px;" />
-						<h:graphicImage library="imagens" name="fotos/#{fichaBean.ficha.fotoEla}" rendered="#{fichaBean.ficha.fotoEla.length() > 0}"
+						<h:graphicImage library="imagens" value="/image?imagem=#{fichaBean.ficha.fotoEla}"  rendered="#{fichaBean.ficha.fotoEla.length() > 0}"
 										style="width:80px; height:80px;" />
 					</h:panelGrid>
 
@@ -545,7 +552,7 @@
 					<div id="divDadosHomemEditar" >
 						<div id="divBoxDadosHomemEditar">
 							<h:panelGrid columns="4">
-								<h:graphicImage library="imagens" name="fotos/#{fichaBean.ficha.fotoEle}" rendered="#{fichaBean.ficha.fotoEle.length() > 0}"
+								<h:graphicImage library="imagens" value="/image?imagem=#{fichaBean.ficha.fotoEle}" rendered="#{fichaBean.ficha.fotoEle.length() > 0}"
 												style="width:80px; height:80px;" /> Dados do Homem
 							</h:panelGrid>
 							<h:panelGrid columns="3">
@@ -591,7 +598,7 @@
 					<div id="divDadosMulherEditar" >
 						<div id="divBoxDadosMulherEditar">
 							<h:panelGrid columns="4">
-								<h:graphicImage library="imagens" name="fotos/#{fichaBean.ficha.fotoEla}" rendered="#{fichaBean.ficha.fotoEla.length() > 0}"
+								<h:graphicImage library="imagens" value="/image?imagem=#{fichaBean.ficha.fotoEla}"  rendered="#{fichaBean.ficha.fotoEla.length() > 0}"
 												style="width:80px; height:80px;" /> Dados da Mulher
 							</h:panelGrid>
 							<h:panelGrid columns="3">

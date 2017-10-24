@@ -6,7 +6,8 @@ public class Constantes {
 //	public static final String CAMINHO_MODELOS_SOLICITACOES = "c:/temp/laudus/modelos/";
 //	public static final String CAMINHO_ATIVIDADES_SERVIDOR = "c:/temp/laudus/atividades/";
 
-	public static final String CAMINHO_FOTOS_LOCAL = "/home/cleber/Downloads/fotosECC/fichas/";
+	public static final String CAMINHO_FOTOS_LOCAL = "D:/Usuários/44260/fotos/";
+	//public static final String CAMINHO_FOTOS_LOCAL = "/home/cleber/Downloads/fotosECC/fichas/";
 
 	public static final String ENCONTREIRO = "ENCONTREIRO";
 	public static final String ENCONTRISTA = "ENCONTRISTA";

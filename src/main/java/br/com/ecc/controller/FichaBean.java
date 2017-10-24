@@ -120,30 +120,28 @@ public class FichaBean implements Serializable {
 		}
 	}
 
-//	public void salvarFotoCompleta(FileUploadEvent event)  throws Exception {
-//		try {
-//			UploadedFile uploadedFile = event.getFile();
-//			String nomeFoto = uploadedFile.getFileName();
-//			//id_eleUsual_nomefile;
-//			nomeFoto = Util.removeAcentos(nomeFoto);
-//			//HOMEM
-//			if (tipoFoto.equals("HOMEM")) {
-//				nomeFoto = this.ficha.getId() + "_" + this.ficha.getNomeUsualEle() + "_" + nomeFoto;
-//				this.ficha.setFotoEle(nomeFoto);
-//			} else {
-//				nomeFoto = this.ficha.getId() + "_" + this.ficha.getNomeUsualEla() + "_" + nomeFoto;
-//				this.ficha.setFotoEla(nomeFoto);
-//			}
-//			File file = new File(Constantes.CAMINHO_FOTOS_LOCAL, nomeFoto);
-//			OutputStream out = new FileOutputStream(file);
-//			out.write(uploadedFile.getContents());
-//			out.close();
-//			fichaService.atualiza(ficha);
-//			setTipoFoto(null);
-//
-//		} catch (IOException e) {
-//		}
-//	}
+	public void salvarFotoCompleta(FileUploadEvent event) throws Exception {
+		try {
+			UploadedFile uploadedFile = event.getFile();
+			String nomeFoto = uploadedFile.getFileName();
+			//id_eleUsual_nomefile;
+			nomeFoto = Util.removeAcentos(nomeFoto);
+			//HOMEM
+			if (tipoFoto.equals("HOMEM")) {
+				nomeFoto = this.ficha.getId() + "_" + this.ficha.getNomeUsualEle() + "_" + nomeFoto;
+				this.ficha.setFotoEle(nomeFoto);
+			} else {
+				nomeFoto = this.ficha.getId() + "_" + this.ficha.getNomeUsualEla() + "_" + nomeFoto;
+				this.ficha.setFotoEla(nomeFoto);
+			}
+			File file = new File(Constantes.CAMINHO_FOTOS_LOCAL, nomeFoto);
+			OutputStream out = new FileOutputStream(file);
+			out.write(uploadedFile.getContents());
+			out.close();
+			fichaService.atualiza(ficha);
+		} catch (IOException e) {
+		}
+	}
 
 	public void salvarFotoSimples() {
 		try {
@@ -157,11 +155,10 @@ public class FichaBean implements Serializable {
 
 				//HOMEM
 				if (tipoFoto.equals("HOMEM")) {
-					nomeFoto = this.ficha.getId()+"_"+this.ficha.getNomeUsualEle()+"_"+nomeFoto;
+					nomeFoto = this.ficha.getId() + "_" + this.ficha.getNomeUsualEle() + "_" + nomeFoto;
 					this.ficha.setFotoEle(nomeFoto);
-				} else
-				{
-					nomeFoto = this.ficha.getId()+"_"+this.ficha.getNomeUsualEla()+"_"+nomeFoto;
+				} else {
+					nomeFoto = this.ficha.getId() + "_" + this.ficha.getNomeUsualEla() + "_" + nomeFoto;
 					this.ficha.setFotoEla(nomeFoto);
 				}
 				File file = new File(Constantes.CAMINHO_FOTOS_LOCAL, nomeFoto);
@@ -174,7 +171,7 @@ public class FichaBean implements Serializable {
 			}
 
 
-		} catch(IOException e) {
+		} catch (IOException e) {
 //			FacesContext.getCurrentInstance().addMessage(
 //					null, new FacesMessage(FacesMessage.SEVERITY_WARN, "Erro", e.getMessage()));
 		}
