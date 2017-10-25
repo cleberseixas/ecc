@@ -36,7 +36,17 @@ public class Util {
 		}
 		return nomeResult;
 	}
-	
+	public static String retornaPathFotoSistemaOperacional() {
+		String result = "";
+		String sistemaOperacional = System.getProperty("os.name");
+		if (sistemaOperacional.equals("Linux")) {
+			result = Constantes.CAMINHO_FOTOS_LINUX;
+		} else {
+			result = Constantes.CAMINHO_FOTOS_WINDOWS;
+		}
+		return result;
+	}
+
 	private static boolean validaNome(String nome) {
 		boolean valido = true;
 		String[] nomes = {"dos","das","de","da","e","do"};

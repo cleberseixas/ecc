@@ -32,7 +32,7 @@ public class EquipeRepository {
 	}
 
 	public List<Equipe> listar() {
-		TypedQuery<Equipe> query = manager.createQuery("from Equipe where ativo=true order by descricao", Equipe.class);
+		TypedQuery<Equipe> query = manager.createQuery("from Equipe order by descricao", Equipe.class);
 		return query.getResultList();
 	}
 

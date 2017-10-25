@@ -1,6 +1,7 @@
 package br.com.ecc.servlet;
 
 import br.com.ecc.util.Constantes;
+import br.com.ecc.util.Util;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,7 +20,7 @@ public class exibeFoto extends HttpServlet{
 
 
 	public void init() throws ServletException {
-	this.imagePath = Constantes.CAMINHO_FOTOS_LOCAL;
+	this.imagePath = Util.retornaPathFotoSistemaOperacional();
 	}
 
 	// Actions ------------------------------------------------------------------------------------

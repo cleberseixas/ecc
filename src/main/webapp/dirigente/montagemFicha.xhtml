@@ -21,6 +21,9 @@
 </h:head>
 
 <h:body style="background-color:#EBF3FE">
+	<f:metadata>
+		<f:viewAction action="#{fichaBean.verificaSO()}"/>
+	</f:metadata>
 	<h:form id="listagemFichas">
 		<div id="menubar">
 			<li class="icone"><h:graphicImage library="imagens" name="logo_ECC.png" width="400" height="72" /></li>
@@ -154,8 +157,8 @@
 												 disabled="#{fichaBean.habilitaBotaoFoto}" />
 								<p:commandButton id="btnExcluir" value="Excluir"
 												 icon="ui-icon-trash" style="margin-left: 5px;"
-												 disabled="#{eccBean.habilitaBotaoExcluirEcc}"
-												 title="Remove o ECC selecionado."
+												 disabled="#{fichaBean.habilitaBotaoExcluirFicha}"
+												 title="Remove a Ficha selecionada."
 												 oncomplete="PF('confirmacaoExclusao').show()" immediate="true"
 												 process="@this"
 												 update=":listagemFichas:confirmacaoExclusaoDialog"/>
@@ -190,7 +193,7 @@
 					</p:column>
 					<p:column headerText="Nome Ele" width="200">
 						<p:outputLabel value="#{ficha.nomeEle}"/>
-						<h:graphicImage library="imagens" name="photo.png" rendered="#{ficha.fotoEle.length() > 0}"
+						<h:graphicImage library="imagens" value="/image?imagem=#{ficha.fotoEle}" rendered="#{ficha.fotoEle.length() > 0}"
 										style="width:20px; height:20px; float: right;" title="Foto dele"/>
 					</p:column>
 					<!--
@@ -232,14 +235,14 @@
 					</p:column>
 				</p:dataTable>
 		<!-- ======================================================================= -->
-		<!-- Caixa de diálogo para confirmar exclusão do ECC				         -->
+		<!-- Caixa de diálogo para confirmar exclusão da Ficha				         -->
 		<!-- ======================================================================= -->
-		<p:confirmDialog header="Excluir ECC"
-						 message="Confirmar a exclusão do ECC com número #{eccBean.ecc.numero}?"
+		<p:confirmDialog header="Excluir Ficha"
+						 message="Confirmar a exclusão da Ficha do casal #{fichaBean.ficha.nomeUsual}?"
 						 widgetVar="confirmacaoExclusao" id="confirmacaoExclusaoDialog">
 			<p:commandButton value="Sim"
 							 onclick="PF('confirmacaoExclusao').hide();"
-							 action="#{eccBean.excluirEcc()}" update="fichas" />
+							 action="#{fichaBean.excluirFicha()}" update="fichas" />
 			<p:button value="Não"
 					  onclick="PF('confirmacaoExclusao').hide(); return false;" />
 		</p:confirmDialog>
@@ -270,8 +273,7 @@
 								<f:selectItem itemValue="ENCONTREIRO" itemLabel="ENCONTREIRO" />
 								<f:selectItem itemValue="ENCONTRISTA" itemLabel="ENCONTRISTA" />
 							</p:selectOneMenu>
-							<p:selectOneMenu id="ultimoTrabalho" converter="equipeConverter" required="true"
-								requiredMessage="Selecione a Equipe."
+							<p:selectOneMenu id="ultimoTrabalho" converter="equipeConverter"
 								value="#{fichaBean.ficha.ultimoTrabalho}" style="width:270px">
 								<f:selectItem itemLabel="Selecione a equipe" noSelectionOption="true" />
 								<f:selectItems value="#{equipeBean.lista}"
@@ -538,8 +540,7 @@
 							<f:selectItem itemValue="ENCONTREIRO" itemLabel="ENCONTREIRO" />
 							<f:selectItem itemValue="ENCONTRISTA" itemLabel="ENCONTRISTA" />
 						</p:selectOneMenu>
-						<p:selectOneMenu id="ultimoTrabalho" converter="equipeConverter" required="true"
-										 requiredMessage="Selecione a Equipe."
+						<p:selectOneMenu id="ultimoTrabalho" converter="equipeConverter"
 										 value="#{fichaBean.ficha.ultimoTrabalho}" style="width:270px">
 							<f:selectItem itemLabel="Selecione a equipe" noSelectionOption="true" />
 							<f:selectItems value="#{equipeBean.lista}"

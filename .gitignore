@@ -1,3 +1,10 @@
-/target
-
-/.idea
+# =======================================================
+# .gitignore
+# Lista de arquivos/pastas a serem ignorados pelo Git em sincronizações.
+#
+# Projeto ecc
+#
+# @since 08.10.2017
+# =======================================================
+target/
+.idea/

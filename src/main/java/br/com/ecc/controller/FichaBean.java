@@ -39,7 +39,7 @@ public class FichaBean implements Serializable {
 
 	private String tipoFoto = "HOMEM";
 
-	private String pathFoto = Constantes.CAMINHO_FOTOS_LOCAL;
+	private String pathFoto;
 
 	private boolean habilitaBotaoEditarFicha = true;
 
@@ -67,6 +67,10 @@ public class FichaBean implements Serializable {
 
 	public void setUltimoTrabalho(Equipe ultimoTrabalho) {
 		this.ultimoTrabalho = ultimoTrabalho;
+	}
+
+	public void verificaSO() {
+		pathFoto = Util.retornaPathFotoSistemaOperacional();
 	}
 
 	private void habilitaTodosBotoesFicha() {
@@ -110,14 +114,52 @@ public class FichaBean implements Serializable {
 	}
 
 
-	public void excluir() {
+	public void excluirFicha() {
 		try {
+			String fotoEle = ficha.getFotoEle();
+			String fotoEla = ficha.getFotoEla();
 			fichaService.excluir(ficha);
-			FacesMessages.info("Círculo excluído");
-			//this.lista = null;
+			FacesMessages.info("Ficha excluída");
+			excluirFoto(fotoEle, fotoEla);
+
+			this.listaFichas = fichaService.listar();
+			desabilitaTodosBotoesFicha();
 		} catch (Exception e) {
-			FacesMessages.error("Não se pode remover um círculo que já está sendo utilizado");
+			FacesMessages.error(e.getMessage());
 		}
+	}
+
+	private void excluirFoto(String ele, String ela) {
+		File fotoExcluirEle = new File(pathFoto, ele);
+		File fotoExcluirEla = new File(pathFoto, ela);
+		fotoExcluirEle.delete();
+		fotoExcluirEla.delete();
+	}
+
+	private String nomeFotoHM(String nomeFoto) {
+		File fotoExcluir = null;
+		Boolean temFoto = false;
+		//HOMEM
+		if (tipoFoto.equals("HOMEM")) {
+			if (null != ficha.getFotoEle()) {
+				temFoto = true;
+				fotoExcluir = new File(pathFoto, ficha.getFotoEle());
+			}
+			nomeFoto = this.ficha.getId() + "_" + this.ficha.getNomeUsualEle() + "_" + nomeFoto;
+			this.ficha.setFotoEle(nomeFoto);
+		} else {
+				if (null != ficha.getFotoEla()) {
+					temFoto = true;
+					fotoExcluir = new File(pathFoto, ficha.getFotoEla());
+				}
+			nomeFoto = this.ficha.getId() + "_" + this.ficha.getNomeUsualEla() + "_" + nomeFoto;
+			this.ficha.setFotoEla(nomeFoto);
+		}
+		if (temFoto) {
+			fotoExcluir.delete();
+		}
+
+		return nomeFoto;
 	}
 
 	public void salvarFotoCompleta(FileUploadEvent event) throws Exception {
@@ -126,15 +168,9 @@ public class FichaBean implements Serializable {
 			String nomeFoto = uploadedFile.getFileName();
 			//id_eleUsual_nomefile;
 			nomeFoto = Util.removeAcentos(nomeFoto);
-			//HOMEM
-			if (tipoFoto.equals("HOMEM")) {
-				nomeFoto = this.ficha.getId() + "_" + this.ficha.getNomeUsualEle() + "_" + nomeFoto;
-				this.ficha.setFotoEle(nomeFoto);
-			} else {
-				nomeFoto = this.ficha.getId() + "_" + this.ficha.getNomeUsualEla() + "_" + nomeFoto;
-				this.ficha.setFotoEla(nomeFoto);
-			}
-			File file = new File(Constantes.CAMINHO_FOTOS_LOCAL, nomeFoto);
+
+			nomeFotoHM(nomeFoto);
+			File file = new File(pathFoto, nomeFoto);
 			OutputStream out = new FileOutputStream(file);
 			out.write(uploadedFile.getContents());
 			out.close();
@@ -153,15 +189,8 @@ public class FichaBean implements Serializable {
 				//id_eleUsual_nomefile;
 				nomeFoto = Util.removeAcentos(nomeFoto);
 
-				//HOMEM
-				if (tipoFoto.equals("HOMEM")) {
-					nomeFoto = this.ficha.getId() + "_" + this.ficha.getNomeUsualEle() + "_" + nomeFoto;
-					this.ficha.setFotoEle(nomeFoto);
-				} else {
-					nomeFoto = this.ficha.getId() + "_" + this.ficha.getNomeUsualEla() + "_" + nomeFoto;
-					this.ficha.setFotoEla(nomeFoto);
-				}
-				File file = new File(Constantes.CAMINHO_FOTOS_LOCAL, nomeFoto);
+
+				File file = new File(pathFoto, nomeFotoHM(nomeFoto));
 				OutputStream out = new FileOutputStream(file);
 				out.write(uploadedFile.getContents());
 				out.close();
@@ -169,11 +198,7 @@ public class FichaBean implements Serializable {
 			} else {
 				FacesMessages.error("Favor escolher a foto");
 			}
-
-
 		} catch (IOException e) {
-//			FacesContext.getCurrentInstance().addMessage(
-//					null, new FacesMessage(FacesMessage.SEVERITY_WARN, "Erro", e.getMessage()));
 		}
 
 	}
