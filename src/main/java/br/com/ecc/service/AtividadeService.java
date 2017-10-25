@@ -1,6 +1,8 @@
 package br.com.ecc.service;
 
+import br.com.ecc.model.Atividade;
 import br.com.ecc.model.Dirigente;
+import br.com.ecc.repository.AtividadeRepository;
 import br.com.ecc.repository.DirigenteEccRepository;
 import br.com.ecc.util.FacesMessages;
 import br.com.ecc.util.NegocioException;
@@ -11,26 +13,25 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * Classe responsável por gerenciar as regras de negócio dos Dirigentes.
+ * Classe responsável por gerenciar as regras de negócio dos Circulos.
  * </br>-----------------------------------------------------------------------</br>
  *                      <b>Regras de negócio</b>
  * </br>-----------------------------------------------------------------------</br>
- * Dirigente nada mais é do que a Equipe de Dirigentes existentes em cada ECC.
- * Um Círculo obrigatoriamente faz parte do ECC.
+ * Atividades nada mais é do que qual a função do ENCONTREIRO no ECC.
  * </br>-----------------------------------------------------------------------</br>
  * @author Cleber Seixas
  * @since 25/10/2017
  */
-public class DirigenteEccService implements Serializable {
+public class AtividadeService implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Inject
-	private DirigenteEccRepository dirigenteEccRepository;
+	private AtividadeRepository atividadeRepository;
 
 	@Transactional
-	public void salvar(Dirigente dirigenteEcc){
+	public void salvar(Atividade atividade){
 		try{
-			this.dirigenteEccRepository.salvar(dirigenteEcc);
+			this.atividadeRepository.salvar(atividade);
 			//FacesMessages.info("Registro gravado");
 		}catch(NegocioException e){
 			FacesMessages.error(e.getMessage());
@@ -38,32 +39,32 @@ public class DirigenteEccService implements Serializable {
 	}
 
 	@Transactional
-	public void excluir(Dirigente dirigenteEcc){
-		dirigenteEcc = dirigenteEccRepository.carregar(dirigenteEcc.getId());
-		this.dirigenteEccRepository.excluir(dirigenteEcc);
+	public void excluir(Atividade atividade){
+		atividade = atividadeRepository.carregar(atividade.getId());
+		this.atividadeRepository.excluir(atividade);
 
 	}		
 	
-	public Dirigente carregar(Long id){
+	public Atividade carregar(Long id){
 		try {
-			return dirigenteEccRepository.carregar(id);
+			return atividadeRepository.carregar(id);
 		}catch(NegocioException e){
 			FacesMessages.error(e.getMessage());
 			return null;
 		}
 	}
 
-	public List<Dirigente> listar(){
+	public List<Atividade> listar(){
 		try {
-			return dirigenteEccRepository.listar();
+			return atividadeRepository.listar();
 		} catch(NegocioException e){
 			FacesMessages.error(e.getMessage());
 			return null;
 		}
 	}
 
-	public void removeDirigenteLimbo() {
-		dirigenteEccRepository.removeDirigenteLimbo();
+	public void removeAtividadeLimbo() {
+		atividadeRepository.removeAtividadeLimbo();
 	}
 
 }

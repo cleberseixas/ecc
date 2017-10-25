@@ -4,7 +4,9 @@ import org.hibernate.envers.Audited;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Classe que representa as Fichas (Encontristas e Encontreiros) do sistema.
@@ -124,6 +126,12 @@ public class Ficha implements Serializable {
 
     @Column(name="ATIVO", nullable = false)
     private boolean ativo = true;
+
+    @ManyToMany(fetch= FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(name = "FICHAS_ATIVIDADES",
+            joinColumns = @JoinColumn(name = "FICHA"),
+            inverseJoinColumns = @JoinColumn(name = "ATIVIDADE"))
+    private List<Atividade> atividades= new ArrayList<Atividade>();
 
     public Long getId() {
         return id;
@@ -387,6 +395,14 @@ public class Ficha implements Serializable {
 
     public void setAtivo(boolean ativo) {
         this.ativo = ativo;
+    }
+
+    public List<Atividade> getAtividades() {
+        return atividades;
+    }
+
+    public void setAtividades(List<Atividade> atividades) {
+        this.atividades = atividades;
     }
 
     @Override

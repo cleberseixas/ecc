@@ -165,15 +165,15 @@
 								<p:commandButton id="btnIncluiDirigentes" value="Inclui Aptidões"
 												 icon="ui-icon-note" style="margin-left: 5px;"
 												 process="@this"
-												 onclick="PF('dlgNovosDirigentes').show()" update=":cadNovosDirigentes"
+												 onclick="PF('dlgNovasAtividades').show()" update=":cadNovasAtividades"
 												 title="Adiciona dirigentes ao ECC selecionado."
 												 disabled="#{eccBean.habilitaBotaoIncluiDirigentes}"/>
 								<p:commandButton id="btnIncluiAtividades" value="Inclui Atividades"
 												 icon="ui-icon-mail-closed" style="margin-left: 5px;"
 												 process="@this"
-												 onclick="PF('dlgNovosDirigentes').show()" update=":cadNovosDirigentes"
-												 title="Adiciona dirigentes ao ECC selecionado."
-												 disabled="#{eccBean.habilitaBotaoIncluiDirigentes}"/>
+												 onclick="PF('dlgNovasAtividades').show()" update=":cadNovasAtividades"
+												 title="Adiciona aividades a ficha selecionada."
+												 disabled="#{fichaBean.habilitaBotaoIncluiAtividades}"/>
 
 							</h:panelGroup>
 						</h:panelGrid>
@@ -233,6 +233,12 @@
 					<p:column headerText="Telefone Ela" width="60">
 						<p:outputLabel value="#{ficha.telefoneEla}"/>
 					</p:column>
+					<p:column width="50" headerText="Atividades">
+						#{ficha.atividades.size()}
+						<h:graphicImage library="imagens" name="dirigentes2.png" width="15" height="15" rendered="#{ficha.atividades.size() > 0}"
+										style="float: right;" title="Atividades"/>
+					</p:column>
+
 				</p:dataTable>
 		<!-- ======================================================================= -->
 		<!-- Caixa de diálogo para confirmar exclusão da Ficha				         -->
@@ -452,12 +458,10 @@
 				<h:panelGrid id="displayUpload">
 					<p:panel id="basic" style="background-color:#EBF3FE; width:671px;">
 						<h:panelGrid columns="2">
-							<p:outputLabel value="Nome do Casal : " styleClass="negrito"
-										   />
+							<p:outputLabel value="Nome do Casal : " styleClass="negrito"/>
 							<p:outputLabel
 									value="#{fichaBean.ficha.nomeEle} E #{fichaBean.ficha.nomeEla}" />
-							<p:outputLabel value="Nome Usual do Casal: " styleClass="negrito"
-										    />
+							<p:outputLabel value="Nome Usual do Casal: " styleClass="negrito"/>
 							<p:outputLabel value="#{fichaBean.ficha.nomeUsual}" />
 						</h:panelGrid>
 					</p:panel>
@@ -706,52 +710,58 @@
 			</h:form>
 		</p:dialog>
 		<!-- ==================================================================================== -->
-		<!-- ========================= Diálogo para incluir Dirigentes ========================== -->
+		<!-- ========================= Diálogo para incluir Atividades ========================== -->
 		<!-- ==================================================================================== -->
-		<p:dialog id="dialogNovosDirigentes" header="Lançar Equipe de Dirigentes"
-				  modal="true" widgetVar="dlgNovosDirigentes"
+		<p:dialog id="dialogNovasAtividades" header="Lançar Atividades"
+				  modal="true" widgetVar="dlgNovasAtividades"
 				  style="background-color:#EBF3FE" resizable="false" width="920px"
 				  height="564px">
-			<h:form id="cadNovosDirigentes">
+			<h:form id="cadNovasAtividades">
 				<h:message />
-				<p:panel id="panelDadosDirigentes" style="background-color: #ffffe6">
-					<h:inputHidden value="#{eccBean.ecc.id}" />
+				<p:panel id="panelDadosAtividades" style="background-color: #ffffe6">
+					<h:inputHidden value="#{fichaBean.ficha.id}" />
 					<p:panel id="basic"
 							 style="background-color:#EBF3FE; width:764px;"
 							 visible="true">
-						<p:outputLabel
-								value="ECC nº #{eccBean.ecc.numero} - Tema: #{eccBean.ecc.tema}"
-								styleClass="negrito" style="margin-left:5px;" />
+						<h:panelGrid columns="2">
+							<p:outputLabel value="Nome do Casal : " styleClass="negrito"/>
+							<p:outputLabel value="#{fichaBean.ficha.nomeEle} E #{fichaBean.ficha.nomeEla}" />
+							<p:outputLabel value="Nome Usual do Casal: " styleClass="negrito"/>
+							<p:outputLabel value="#{fichaBean.ficha.nomeUsual}" />
+						</h:panelGrid>
 					</p:panel>
-					<h:panelGrid columns="3">
-						<h:outputLabel value="Nome do Casal" for="casal" />
-						<h:outputLabel value="Equipe" for="equipe" />
-						<h:outputLabel value="" />
-						<p:selectOneMenu id="casal" value="#{eccBean.casal}"
+					<br/>
+					<h:panelGrid columns="4">
+						<h:outputLabel value="ECC" for="ecc" />
+						<h:outputLabel value="Atividade" for="equipe" />
+						<h:outputLabel value=""/>
+						<h:outputLabel value=""/>
+						<p:selectOneMenu id="ecc" value="#{fichaBean.ecc}"
 										 required="true"
-										 requiredMessage="Selecione o casal."
-										 style="width:435px" converter="fichaConverter"
+										 requiredMessage="Selecione o ECC."
+										 style="width:105px" converter="eccConverter"
 										 filter="true">
-							<f:selectItem itemLabel="Selecione o casal" noSelectionOption="true" />
-							<f:selectItems value="#{fichaBean.listaEncontristas}"
-										   var="casal" itemValue="#{casal}"
-										   itemLabel="#{casal.nomeUsual}" />
+							<f:selectItem itemLabel="Selecione o ECC" noSelectionOption="true" />
+							<f:selectItems value="#{eccBean.listaEcc}"
+										   var="ecc" itemValue="#{ecc}"
+										   itemLabel="#{ecc.numero}" />
 						</p:selectOneMenu>
 
 						<p:selectOneMenu id="equipe" converter="equipeConverter"
 										 required="true"
-										 requiredMessage="Selecione a Equipe."
-										 value="#{eccBean.equipe}" style="width:280px">
-							<f:selectItem itemLabel="Selecione a equipe" noSelectionOption="true" />
-							<f:selectItems value="#{equipeBean.listaDirigentes}"
+										 requiredMessage="Selecione a Atividade."
+										 value="#{fichaBean.equipe}" style="width:280px">
+							<f:selectItem itemLabel="Selecione a atividade" noSelectionOption="true" />
+							<f:selectItems value="#{equipeBean.lista}"
 										   var="equipe" itemValue="#{equipe}"
 										   itemLabel="#{equipe.descricao}" />
 						</p:selectOneMenu>
-						<p:commandButton process="@this, casal, equipe" value="Incluir"
+						<p:selectBooleanCheckbox value="#{fichaBean.atividade.coordenador}" itemLabel="Coordenador?" style="margin-left:5px;" />
+						<p:commandButton process="@this, ecc, equipe" value="Incluir"
 										 style="margin-left:10px;"
-										 action="#{eccBean.salvaDirigente()}" icon="ui-icon-check"
-										 title="Incluir um novo dirigente..."
-										 update="casal, equipe, cadNovosDirigentes:tabelaDirigentes, listagemFichas:fichas">
+										 action="#{fichaBean.salvaAtividade()}" icon="ui-icon-check"
+										 title="Incluir uma nova atividade..."
+										 update="ecc, equipe, cadNovasAtividades:tabelaAtividades, listagemFichas:fichas">
 						</p:commandButton>
 					</h:panelGrid>
 					<h:panelGrid>
@@ -759,37 +769,32 @@
 								 style="background-color:#EBF3FE; width:764px;"
 								 visible="true">
 							<p:outputLabel
-									value="Equipes (Dirigentes, Sala e Supervisor de Círculo)"
+									value="Atividades realizadas pelo casal"
 									styleClass="negrito" style="margin-left:5px;" />
 						</p:panel>
 					</h:panelGrid>
 					<h:panelGrid columns="3">
-						<p:dataTable id="tabelaDirigentes"
+						<p:dataTable id="tabelaAtividades"
 									 style="margin-right: 10px; width:770px;"
-									 value="#{eccBean.ecc.dirigentes}" var="dirigente"
-									 emptyMessage="Não há Dirigentes cadastrados" rowIndexVar="index">
+									 value="#{fichaBean.ficha.atividades}" var="atividade"
+									 emptyMessage="Não há Atividades cadastradas" rowIndexVar="index">
 							<f:facet name="header">
-								<p:outputLabel value="Total de Dirigentes - #{eccBean.ecc.dirigentes.size()}" />
+								<p:outputLabel value="Total de Atividades - #{fichaBean.ficha.atividades.size()}" />
 							</f:facet>
-								<p:column headerText="Casal" width="200">
-									<p:outputLabel value="#{dirigente.ficha.nomeUsual}" />
-									<h:graphicImage library="imagens" name="coordenador.png" width="15" height="15" rendered="#{dirigente.equipe.descricao eq 'COORDENADOR GERAL'}"
-													style="float: right;" title="Coordenador Geral"/>
-									<h:graphicImage library="imagens" name="dirigente.png" width="15" height="15" rendered="#{dirigente.equipe.descricao eq 'MONTAGEM'
-											or dirigente.equipe.descricao eq 'FICHA' or dirigente.equipe.descricao eq 'FINANÇAS'
-											or dirigente.equipe.descricao eq 'RECEPÇÃO DE PALESTRA/PALESTRA'
-											or dirigente.equipe.descricao eq 'PÓS ENCONTRO'}"
-													style="float: right;" title="Equipe Dirigente"/>
+								<p:column headerText="ECC" width="40">
+									<p:outputLabel value="#{atividade.ecc.numero}" />
 								</p:column>
-								<p:column headerText="Equipe" width="200">
-									<p:outputLabel value="#{dirigente.equipe.descricao}" />
+								<p:column headerText="Atividade" width="200">
+									<p:outputLabel value="#{atividade.equipe.descricao}" />
+									<h:graphicImage library="imagens" name="coordenador.png" width="15" height="15" rendered="#{atividade.coordenador}"
+													style="float: right;" title="Coordenador"/>
 								</p:column>
 								<p:column headerText="Excluir" styleClass="Gildasio" width="40">
-									<p:commandLink update=":cadNovosDirigentes:tabelaDirigentes, listagemFichas:fichas"
-												   process="@this" action="#{eccBean.removeDirigente()}">
+									<p:commandLink update=":cadNovasAtividades:tabelaAtividades, listagemFichas:fichas"
+												   process="@this" action="#{fichaBean.removeAtividade()}">
 										<h:graphicImage library="imagens" name="remover.png" />
-										<f:setPropertyActionListener target="#{eccBean.dirigenteEcc}"
-																	 value="#{dirigente}" />
+										<f:setPropertyActionListener target="#{fichaBean.atividade}"
+																	 value="#{atividade}" />
 									</p:commandLink>
 								</p:column>
 						</p:dataTable>

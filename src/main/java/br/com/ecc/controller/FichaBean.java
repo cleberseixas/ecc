@@ -1,7 +1,10 @@
 package br.com.ecc.controller;
 
+import br.com.ecc.model.Atividade;
+import br.com.ecc.model.Ecc;
 import br.com.ecc.model.Equipe;
 import br.com.ecc.model.Ficha;
+import br.com.ecc.service.AtividadeService;
 import br.com.ecc.service.FichaService;
 import br.com.ecc.util.Constantes;
 import br.com.ecc.util.FacesMessages;
@@ -15,6 +18,7 @@ import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -30,6 +34,12 @@ public class FichaBean implements Serializable {
 	private Ficha ficha = new Ficha();
 
 	private Equipe ultimoTrabalho = new Equipe();
+
+	private Atividade atividade = new Atividade();
+
+	private Ecc ecc = new Ecc();
+
+	private Equipe equipe = new Equipe();
 
 	private List<Ficha> listaFichas;
 
@@ -57,8 +67,17 @@ public class FichaBean implements Serializable {
 	@Inject
 	private FichaService fichaService;
 
+	@Inject
+	private AtividadeService atividadeService;
+
 	public void novaFicha() {
 		this.ficha = new Ficha();
+	}
+
+	private void novaAtividade() {
+		this.ecc = new Ecc();
+		this.equipe = new Equipe();
+		this.atividade = new Atividade();
 	}
 
 	public Equipe getUltimoTrabalho() {
@@ -68,6 +87,129 @@ public class FichaBean implements Serializable {
 	public void setUltimoTrabalho(Equipe ultimoTrabalho) {
 		this.ultimoTrabalho = ultimoTrabalho;
 	}
+
+	public void setListaFichas(List<Ficha> listaFichas) {
+		this.listaFichas = listaFichas;
+	}
+
+	public Ficha getFicha() {
+		return ficha;
+	}
+
+	public void setFicha(Ficha ficha) {
+		this.ficha = ficha;
+	}
+
+	public Ecc getEcc() {
+		return ecc;
+	}
+
+	public void setEcc(Ecc ecc) {
+		this.ecc = ecc;
+	}
+
+	public Equipe getEquipe() {
+		return equipe;
+	}
+
+	public void setEquipe(Equipe equipe) {
+		this.equipe = equipe;
+	}
+
+	public Atividade getAtividade() {
+		return atividade;
+	}
+
+	public void setAtividade(Atividade atividade) {
+		this.atividade = atividade;
+	}
+
+	public List<Ficha> getListaEncontristas() {
+		if (this.listaEncontristas == null) {
+			this.listaEncontristas = fichaService.listarEncontreiroEncontrista(Constantes.ENCONTREIRO);
+		}
+		return this.listaEncontristas;
+	}
+
+	public UploadedFile getUploadedFile() {
+		return uploadedFile;
+	}
+
+	public void setUploadedFile(UploadedFile uploadedFile) {
+		this.uploadedFile = uploadedFile;
+	}
+
+	public String getTipoFoto() {
+		return tipoFoto;
+	}
+
+	public void setTipoFoto(String tipoFoto) {
+		this.tipoFoto = tipoFoto;
+	}
+
+	public String getPathFoto() {
+		return pathFoto;
+	}
+
+	public void setPathFoto(String pathFoto) {
+		this.pathFoto = pathFoto;
+	}
+
+	public List<Ficha> getListaFichas() {
+		if (this.listaFichas == null) {
+			this.listaFichas = fichaService.listar();
+		}
+		return this.listaFichas;
+	}
+
+	public boolean isHabilitaBotaoEditarFicha() {
+		return habilitaBotaoEditarFicha;
+	}
+
+	public void setHabilitaBotaoEditarFicha(boolean habilitaBotaoEditarFicha) {
+		this.habilitaBotaoEditarFicha = habilitaBotaoEditarFicha;
+	}
+
+	public boolean isHabilitaBotaoFoto() {
+		return habilitaBotaoFoto;
+	}
+
+	public void setHabilitaBotaoFoto(boolean habilitaBotaoFoto) {
+		this.habilitaBotaoFoto = habilitaBotaoFoto;
+	}
+
+	public boolean isHabilitaBotaoExcluirFicha() {
+		return habilitaBotaoExcluirFicha;
+	}
+
+	public void setHabilitaBotaoExcluirFicha(boolean habilitaBotaoExcluirFicha) {
+		this.habilitaBotaoExcluirFicha = habilitaBotaoExcluirFicha;
+	}
+
+	public boolean isHabilitaBotaoIncluiAptidoes() {
+		return habilitaBotaoIncluiAptidoes;
+	}
+
+	public void setHabilitaBotaoIncluiAptidoes(boolean habilitaBotaoIncluiAptidoes) {
+		this.habilitaBotaoIncluiAptidoes = habilitaBotaoIncluiAptidoes;
+	}
+
+	public boolean isHabilitaBotaoIncluiAtividades() {
+		return habilitaBotaoIncluiAtividades;
+	}
+
+	public void setHabilitaBotaoIncluiAtividades(boolean habilitaBotaoIncluiAtividades) {
+		this.habilitaBotaoIncluiAtividades = habilitaBotaoIncluiAtividades;
+	}
+
+	public boolean isHabilitaBotaoDetalhesFicha() {
+		return habilitaBotaoDetalhesFicha;
+	}
+
+	public void setHabilitaBotaoDetalhesFicha(boolean habilitaBotaoDetalhesFicha) {
+		this.habilitaBotaoDetalhesFicha = habilitaBotaoDetalhesFicha;
+	}
+
 
 	public void verificaSO() {
 		pathFoto = Util.retornaPathFotoSistemaOperacional();
@@ -112,7 +254,6 @@ public class FichaBean implements Serializable {
 			RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
 		}
 	}
-
 
 	public void excluirFicha() {
 		try {
@@ -203,105 +344,6 @@ public class FichaBean implements Serializable {
 
 	}
 
-
-	public List<Ficha> getListaFichas() {
-		if (this.listaFichas == null) {
-			this.listaFichas = fichaService.listar();
-		}
-		return this.listaFichas;
-	}
-
-	public void setListaFichas(List<Ficha> listaFichas) {
-		this.listaFichas = listaFichas;
-	}
-
-	public Ficha getFicha() {
-		return ficha;
-	}
-
-	public void setFicha(Ficha ficha) {
-		this.ficha = ficha;
-	}
-
-	public List<Ficha> getListaEncontristas() {
-		if (this.listaEncontristas == null) {
-			this.listaEncontristas = fichaService.listarEncontreiroEncontrista(Constantes.ENCONTREIRO);
-		}
-		return this.listaEncontristas;
-	}
-
-	public UploadedFile getUploadedFile() {
-		return uploadedFile;
-	}
-
-	public void setUploadedFile(UploadedFile uploadedFile) {
-		this.uploadedFile = uploadedFile;
-	}
-
-	public String getTipoFoto() {
-		return tipoFoto;
-	}
-
-	public void setTipoFoto(String tipoFoto) {
-		this.tipoFoto = tipoFoto;
-	}
-
-	public String getPathFoto() {
-		return pathFoto;
-	}
-
-	public void setPathFoto(String pathFoto) {
-		this.pathFoto = pathFoto;
-	}
-
-	public boolean isHabilitaBotaoEditarFicha() {
-		return habilitaBotaoEditarFicha;
-	}
-
-	public void setHabilitaBotaoEditarFicha(boolean habilitaBotaoEditarFicha) {
-		this.habilitaBotaoEditarFicha = habilitaBotaoEditarFicha;
-	}
-
-	public boolean isHabilitaBotaoFoto() {
-		return habilitaBotaoFoto;
-	}
-
-	public void setHabilitaBotaoFoto(boolean habilitaBotaoFoto) {
-		this.habilitaBotaoFoto = habilitaBotaoFoto;
-	}
-
-	public boolean isHabilitaBotaoExcluirFicha() {
-		return habilitaBotaoExcluirFicha;
-	}
-
-	public void setHabilitaBotaoExcluirFicha(boolean habilitaBotaoExcluirFicha) {
-		this.habilitaBotaoExcluirFicha = habilitaBotaoExcluirFicha;
-	}
-
-	public boolean isHabilitaBotaoIncluiAptidoes() {
-		return habilitaBotaoIncluiAptidoes;
-	}
-
-	public void setHabilitaBotaoIncluiAptidoes(boolean habilitaBotaoIncluiAptidoes) {
-		this.habilitaBotaoIncluiAptidoes = habilitaBotaoIncluiAptidoes;
-	}
-
-	public boolean isHabilitaBotaoIncluiAtividades() {
-		return habilitaBotaoIncluiAtividades;
-	}
-
-	public void setHabilitaBotaoIncluiAtividades(boolean habilitaBotaoIncluiAtividades) {
-		this.habilitaBotaoIncluiAtividades = habilitaBotaoIncluiAtividades;
-	}
-
-	public boolean isHabilitaBotaoDetalhesFicha() {
-		return habilitaBotaoDetalhesFicha;
-	}
-
-	public void setHabilitaBotaoDetalhesFicha(boolean habilitaBotaoDetalhesFicha) {
-		this.habilitaBotaoDetalhesFicha = habilitaBotaoDetalhesFicha;
-	}
-
 	//habilita ou desabilita os botões disponívis na tabela da pagina montagemFicha.xhtml
 	public void onRowSelectEcc(SelectEvent selectEvent) {
 		this.ficha = (Ficha) selectEvent.getObject();
@@ -312,4 +354,57 @@ public class FichaBean implements Serializable {
 		}
 	}
 
+	public void salvaAtividade() {
+		List<Atividade> listAux = new ArrayList<Atividade>();
+		listAux.addAll(ficha.getAtividades());
+
+		ficha.getAtividades().clear();
+
+		atividade.setFicha(ficha);
+		atividade.setEcc(ecc);
+		atividade.setEquipe(equipe);
+		atividadeService.salvar(atividade);
+
+
+		listAux.add(atividade);
+		this.ficha.setAtividades(listAux);
+		this.novaAtividade();
+		//removeAtividadeLimbo();
+	}
+
+	public void removeAtividade() {
+		this.ficha.getAtividades().remove(atividade);
+		fichaService.atualiza(ficha);
+	}
+
+	public void removeAtividadeLimbo() {
+		atividadeService.removeAtividadeLimbo();
+	}
+
 }
+
+/*
+CREATE TABLE aptidoes
+(
+  ficha_aptidao bigint NOT NULL,
+  ecc bigint NOT NULL,
+  ficha bigint NOT NULL,
+  equipe bigint NOT NULL,
+  coordenador boolean NOT NULL,
+  CONSTRAINT ficha_atividade_pkey PRIMARY KEY (ficha_atividade),
+  CONSTRAINT fk_ecc_ficha_atividade FOREIGN KEY (ecc)
+      REFERENCES eccs (ecc) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION,
+  CONSTRAINT fk_ficha_ficha_atividade FOREIGN KEY (ficha)
+      REFERENCES fichas (ficha) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION,
+  CONSTRAINT fk_equipe_ficha_atividade FOREIGN KEY (equipe)
+      REFERENCES equipes (equipe) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE fichas_atividades
+  OWNER TO postgres;
+ */

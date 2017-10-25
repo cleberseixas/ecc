@@ -6,6 +6,6 @@ import br.com.ecc.util.BaseConverter;
 
 import javax.faces.convert.FacesConverter;
 
-@FacesConverter(forClass=Ecc.class)
+@FacesConverter(forClass=Ecc.class, value="eccConverter")
 public class EccConverter extends BaseConverter<Ecc, EccService> {
 }	

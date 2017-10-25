@@ -36,7 +36,6 @@ public class Dirigente implements Serializable{
 
     @ManyToOne
     @JoinColumn(name = "ecc", nullable = false, foreignKey=@ForeignKey(name = "fk_ecc"))
-    @NotNull(message="Selecione o Casal Dirigente")
     private Ecc ecc;
 
     @ManyToOne

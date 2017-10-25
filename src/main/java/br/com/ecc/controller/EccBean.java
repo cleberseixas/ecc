@@ -58,37 +58,6 @@ public class EccBean implements Serializable {
 
 	@Inject
 	private EquipeService equipeService;
-	private void novoDirigente() {
-		this.casal = new Ficha();
-		this.equipe = new Equipe();
-		this.dirigenteEcc = new Dirigente();
-	}
-
-	public void salvaDirigente() {
-		List<Dirigente> listAux = new ArrayList<Dirigente>();
-		listAux.addAll(ecc.getDirigentes());
-
-		ecc.getDirigentes().clear();
-		dirigenteEcc.setEquipe(equipe);
-		dirigenteEcc.setFicha(casal);
-		dirigenteEcc.setEcc(ecc);
-		dirigenteEccService.salvar(dirigenteEcc);
-
-		listAux.add(dirigenteEcc);
-		this.ecc.setDirigentes(listAux);
-		eccService.atualiza(this.ecc);
-		this.novoDirigente();
-		removeDirigenteLimbo();
-	}
-	public void removeDirigente() {
-		this.ecc.getDirigentes().remove(dirigenteEcc);
-		eccService.atualiza(ecc);
-		//removeDirigenteLimbo();
-	}
-
-	public void removeDirigenteLimbo() {
-		dirigenteEccService.removeDirigenteLimbo();
-	}
 
 	public void setListaEcc(List<Ecc> listaEcc) {
 		this.listaEcc = listaEcc;
@@ -178,6 +147,38 @@ public class EccBean implements Serializable {
 
 	public void setHabilitaBotaoDetalhesEcc(boolean habilitaBotaoDetalhesEcc) {
 		this.habilitaBotaoDetalhesEcc = habilitaBotaoDetalhesEcc;
+	}
+
+	private void novoDirigente() {
+		this.casal = new Ficha();
+		this.equipe = new Equipe();
+		this.dirigenteEcc = new Dirigente();
+	}
+
+	public void salvaDirigente() {
+		List<Dirigente> listAux = new ArrayList<Dirigente>();
+		listAux.addAll(ecc.getDirigentes());
+
+		ecc.getDirigentes().clear();
+		dirigenteEcc.setEquipe(equipe);
+		dirigenteEcc.setFicha(casal);
+		dirigenteEcc.setEcc(ecc);
+		dirigenteEccService.salvar(dirigenteEcc);
+
+		listAux.add(dirigenteEcc);
+		this.ecc.setDirigentes(listAux);
+		eccService.atualiza(this.ecc);
+		this.novoDirigente();
+		removeDirigenteLimbo();
+	}
+	public void removeDirigente() {
+		this.ecc.getDirigentes().remove(dirigenteEcc);
+		eccService.atualiza(ecc);
+		//removeDirigenteLimbo();
+	}
+
+	public void removeDirigenteLimbo() {
+		dirigenteEccService.removeDirigenteLimbo();
 	}
 
 	private void habilitaTodosBotoesEcc() {
