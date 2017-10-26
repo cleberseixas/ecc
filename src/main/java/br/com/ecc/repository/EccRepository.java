@@ -32,4 +32,10 @@ public class EccRepository {
 		TypedQuery<Ecc> query = manager.createQuery("from Ecc order by numero desc", Ecc.class);
 		return query.getResultList();
 	}
+
+	public List<Ecc> listarEccAtividade() {
+		TypedQuery<Ecc> query = manager.createQuery("from Ecc where automatico=false order by numero", Ecc.class);
+		return query.getResultList();
+	}
+
 }

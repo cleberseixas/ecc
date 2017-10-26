@@ -14,7 +14,7 @@
 		<intercept-url pattern="/dirigente/**" access="ROLE_DIRIGENTE, ROLE_ADMINISTRADOR"/>
 		<form-login 
 		    login-page="/login.xhtml"
-			always-use-default-target="true" default-target-url="/administrador/menu.xhtml"
+			always-use-default-target="true" default-target-url="/publico/menu.xhtml"
 			authentication-failure-url="/login.xhtml?login_error=1" />
 		<logout 
 		    logout-success-url="/login.xhtml"

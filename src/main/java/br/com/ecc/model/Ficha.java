@@ -127,10 +127,12 @@ public class Ficha implements Serializable {
     @Column(name="ATIVO", nullable = false)
     private boolean ativo = true;
 
-    @ManyToMany(fetch= FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToMany(fetch= FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable(name = "FICHAS_ATIVIDADES",
             joinColumns = @JoinColumn(name = "FICHA"),
             inverseJoinColumns = @JoinColumn(name = "ATIVIDADE"))
+//    @JoinColumn(name = "ATIVIDADE", nullable = true, foreignKey=@ForeignKey(name = "fk_ultimo_trabalho"))
+
     private List<Atividade> atividades= new ArrayList<Atividade>();
 
     public Long getId() {

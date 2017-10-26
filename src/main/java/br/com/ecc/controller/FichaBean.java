@@ -49,6 +49,8 @@ public class FichaBean implements Serializable {
 
 	private String tipoFoto = "HOMEM";
 
+	private boolean ehCoordenador = false;
+
 	private String pathFoto;
 
 	private boolean habilitaBotaoEditarFicha = true;
@@ -147,6 +149,14 @@ public class FichaBean implements Serializable {
 		this.tipoFoto = tipoFoto;
 	}
 
+	public boolean isEhCoordenador() {
+		return ehCoordenador;
+	}
+
+	public void setEhCoordenador(boolean ehCoordenador) {
+		this.ehCoordenador = ehCoordenador;
+	}
+
 	public String getPathFoto() {
 		return pathFoto;
 	}
@@ -216,10 +226,15 @@ public class FichaBean implements Serializable {
 	}
 
 	private void habilitaTodosBotoesFicha() {
+		if (ficha.getSituacao().equals("ENCONTREIRO")) {
+			habilitaBotaoIncluiAptidoes = true;
+			habilitaBotaoIncluiAtividades = false;
+		}  else {
+			habilitaBotaoIncluiAptidoes = false;
+			habilitaBotaoIncluiAtividades = true;
+		}
 		habilitaBotaoEditarFicha = false;
 		habilitaBotaoExcluirFicha = false;
-		habilitaBotaoIncluiAptidoes = false;
-		habilitaBotaoIncluiAtividades = false;
 		habilitaBotaoDetalhesFicha = false;
 		habilitaBotaoFoto = false;
 	}
@@ -355,21 +370,31 @@ public class FichaBean implements Serializable {
 	}
 
 	public void salvaAtividade() {
-		List<Atividade> listAux = new ArrayList<Atividade>();
-		listAux.addAll(ficha.getAtividades());
+		boolean existeEcc = false;
+		for(Atividade ativ : ficha.getAtividades()) {
+			if (ativ.getEcc().getNumero().equals(ecc.getNumero())) {
+				existeEcc = true;
+			}
+		}
 
-		ficha.getAtividades().clear();
+		if (!existeEcc) {
+			List<Atividade> listAux = new ArrayList<Atividade>();
+			listAux.addAll(ficha.getAtividades());
+			ficha.getAtividades().clear();
 
-		atividade.setFicha(ficha);
-		atividade.setEcc(ecc);
-		atividade.setEquipe(equipe);
-		atividadeService.salvar(atividade);
+			atividade.setFicha(ficha);
+			atividade.setEcc(ecc);
+			atividade.setEquipe(equipe);
+			atividade.setCoordenador(isEhCoordenador());
+			listAux.add(atividade);
+			this.ficha.setAtividades(listAux);
+			fichaService.atualiza(ficha);
+			this.novaAtividade();
+			removeAtividadeLimbo();
 
-
-		listAux.add(atividade);
-		this.ficha.setAtividades(listAux);
-		this.novaAtividade();
-		//removeAtividadeLimbo();
+		} else {
+				FacesMessages.error("Já existe uma atividade cadastrada para o ECC selecionado");
+			}
 	}
 
 	public void removeAtividade() {

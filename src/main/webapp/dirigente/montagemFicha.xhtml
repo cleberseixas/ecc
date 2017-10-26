@@ -42,13 +42,13 @@
 											style="width:30px; height:30px;
 								margin-left:10px; margin-top:8px; margin-right:9px;"
 											name="palestras.png" /><a
-								href="palestra.xhtml">Palestras</a>
+								href="../administrador/palestra.xhtml">Palestras</a>
 						</li>
 						<li><h:graphicImage library="imagens/menu"
 											style="width:30px; height:30px;
 								margin-left:10px; margin-top:8px; margin-right:9px;"
 											name="equipes.png" /><a
-								href="equipe.xhtml">Equipes</a>
+								href="../administrador/equipe.xhtml">Equipes</a>
 						</li>
 						<li><h:graphicImage library="imagens/menu"
 											style="width:30px; height:30px;
@@ -167,7 +167,7 @@
 												 process="@this"
 												 onclick="PF('dlgNovasAtividades').show()" update=":cadNovasAtividades"
 												 title="Adiciona dirigentes ao ECC selecionado."
-												 disabled="#{eccBean.habilitaBotaoIncluiDirigentes}"/>
+												 disabled="#{fichaBean.habilitaBotaoIncluiAptidoes}"/>
 								<p:commandButton id="btnIncluiAtividades" value="Inclui Atividades"
 												 icon="ui-icon-mail-closed" style="margin-left: 5px;"
 												 process="@this"
@@ -742,7 +742,7 @@
 										 style="width:105px" converter="eccConverter"
 										 filter="true">
 							<f:selectItem itemLabel="Selecione o ECC" noSelectionOption="true" />
-							<f:selectItems value="#{eccBean.listaEcc}"
+							<f:selectItems value="#{eccBean.listaEccAtividades}"
 										   var="ecc" itemValue="#{ecc}"
 										   itemLabel="#{ecc.numero}" />
 						</p:selectOneMenu>
@@ -756,8 +756,8 @@
 										   var="equipe" itemValue="#{equipe}"
 										   itemLabel="#{equipe.descricao}" />
 						</p:selectOneMenu>
-						<p:selectBooleanCheckbox value="#{fichaBean.atividade.coordenador}" itemLabel="Coordenador?" style="margin-left:5px;" />
-						<p:commandButton process="@this, ecc, equipe" value="Incluir"
+						<p:selectBooleanCheckbox id="coordenador" value="#{fichaBean.ehCoordenador}" itemLabel="Coordenador?" style="margin-left:5px;" />
+						<p:commandButton process="@this, ecc, equipe coordenador" value="Incluir"
 										 style="margin-left:10px;"
 										 action="#{fichaBean.salvaAtividade()}" icon="ui-icon-check"
 										 title="Incluir uma nova atividade..."

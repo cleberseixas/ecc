@@ -40,6 +40,8 @@ public class EccBean implements Serializable {
 
 	private List<Equipe> listaEquipe;
 
+	private List<Ecc> listaEccAtividades;
+
 	private boolean habilitaBotaoEditarEcc = true;
 
 	private boolean habilitaBotaoExcluirEcc = true;
@@ -79,6 +81,14 @@ public class EccBean implements Serializable {
 
 	public void setListaEquipe(List<Equipe> listaEquipe) {
 		this.listaEquipe = listaEquipe;
+	}
+
+	public List<Ecc> getListaEccAtividades() {
+		return eccService.listarEccAtividades();
+	}
+
+	public void setListaEccAtividades(List<Ecc> listaEccAtividades) {
+		this.listaEccAtividades = listaEccAtividades;
 	}
 
 	public Ecc getEcc() {

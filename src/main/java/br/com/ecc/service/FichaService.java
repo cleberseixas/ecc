@@ -87,7 +87,7 @@ public class FichaService implements Serializable {
 	@Transactional
 	public void atualiza(Ficha ficha){
 		fichaRepository.salvar(ficha);
-		FacesMessages.info("Foto salva");
+		//FacesMessages.info("Foto salva");
 	}
 	
 	public Ficha carregar(Long id){
