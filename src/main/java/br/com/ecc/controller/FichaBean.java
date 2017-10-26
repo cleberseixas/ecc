@@ -229,18 +229,27 @@ public class FichaBean implements Serializable {
 		if (ficha.getSituacao().equals("ENCONTREIRO")) {
 			habilitaBotaoIncluiAptidoes = true;
 			habilitaBotaoIncluiAtividades = false;
+			if (ficha.getAtividades().size() > 0) {
+				habilitaBotaoExcluirFicha = true;
+			} else {
+				habilitaBotaoExcluirFicha = false;
+			}
 		}  else {
-			habilitaBotaoIncluiAptidoes = false;
-			habilitaBotaoIncluiAtividades = true;
-		}
+				habilitaBotaoIncluiAptidoes = false;
+				habilitaBotaoIncluiAtividades = true;
+//				if (ficha.getAptidoes().size > 0) {
+//					habilitaBotaoExcluirFicha = true;
+//				} else {
+//					habilitaBotaoExcluirFicha = false;
+//				}
+			}
 		habilitaBotaoEditarFicha = false;
-		habilitaBotaoExcluirFicha = false;
 		habilitaBotaoDetalhesFicha = false;
 		habilitaBotaoFoto = false;
 	}
 
 	private void desabilitaTodosBotoesFicha() {
-		habilitaBotaoEditarFicha = true;
+		habilitaBotaoEditarFicha = false;
 		habilitaBotaoExcluirFicha = true;
 		habilitaBotaoIncluiAptidoes = true;
 		habilitaBotaoIncluiAtividades = true;

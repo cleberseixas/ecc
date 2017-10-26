@@ -131,7 +131,7 @@
 					<f:facet name="header">
 						<h:panelGrid columns="2" styleClass="semBordaInterna"
 									 columnClasses="tituloGridSolicitacao, botoesGridSolicitacao">
-							<p:outputLabel value="Lista de Fichas de Encontristas/Encontreiros Cadastradas"
+							<p:outputLabel value="Lista de Encontristas/Encontreiros"
 										   style="float:left;" />
 							<h:panelGroup style="float:right;">
 								<p:commandButton action="#{fichaBean.novaFicha}"
@@ -181,7 +181,7 @@
 					<p:ajax event="rowSelect"
 							listener="#{fichaBean.onRowSelectEcc}"
 							update="btnEditar btnExcluir btnAnexar btnIncluiDirigentes btnDetalhes btnIncluiAtividades" />
-					<p:column headerText="1ª Etapa" width="30">
+					<p:column headerText="ECC" width="30">
 						<p:outputLabel value="#{ficha.primeiraEtapa}"/>
 					</p:column>
 					<p:column width="130">
@@ -258,7 +258,7 @@
 		<!-- ==================================================================================== -->
 		<p:dialog id="dlgNovaFicha" header="Lançar nova Ficha"
 				  modal="true" widgetVar="dlgNovaFicha"
-				  style="background-color:#EBF3FE" resizable="false" width="1060px"
+				  style="background-color:#EBF3FE" resizable="false" width="930px"
 				  height="570px">
 			<h:form id="cadNovaFicha">
 				<p:panel id="panelDadosFicha" style="background-color: #ffffe6">
@@ -551,14 +551,14 @@
 										   var="equipe" itemValue="#{equipe}"
 										   itemLabel="#{equipe.descricao}" />
 						</p:selectOneMenu>
-						<p:selectBooleanCheckbox value="#{fichaBean.ficha.ativo}" itemLabel="Ativo?" style="margin-left:5px;" disabled="true"/>
+						<p:selectBooleanCheckbox value="#{fichaBean.ficha.ativo}" itemLabel="Ativo?" style="margin-left:5px;" disabled="false"/>
 					</h:panelGrid>
 					<!-- ========================= Dados do HOMEM ======================== -->
 					<div id="divDadosHomemEditar" >
 						<div id="divBoxDadosHomemEditar">
 							<h:panelGrid columns="4">
 								<h:graphicImage library="imagens" value="/image?imagem=#{fichaBean.ficha.fotoEle}" rendered="#{fichaBean.ficha.fotoEle.length() > 0}"
-												style="width:80px; height:80px;" /> Dados do Homem
+												style="width:80px; height:80px;"/> Dados do Homem
 							</h:panelGrid>
 							<h:panelGrid columns="3">
 								<h:outputLabel value="Ele" for="nomeEle" />
@@ -774,7 +774,7 @@
 						</p:panel>
 					</h:panelGrid>
 					<h:panelGrid columns="3">
-						<p:dataTable id="tabelaAtividades"
+						<p:dataTable id="tabelaAtividades" sortBy="#{atividade.ecc.numero}"
 									 style="margin-right: 10px; width:770px;"
 									 value="#{fichaBean.ficha.atividades}" var="atividade"
 									 emptyMessage="Não há Atividades cadastradas" rowIndexVar="index">

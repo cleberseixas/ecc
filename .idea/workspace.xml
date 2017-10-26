@@ -10,16 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8b22dac-800f-408a-b5a8-ff04f4c56148" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EccBean.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EccBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/FichaBean.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/FichaBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ficha.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ficha.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EccRepository.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EccRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/EccService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/EccService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/FichaService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/FichaService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemFicha.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemFicha.xhtml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/administrador/menu.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/publico/menu.xhtml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -50,15 +43,25 @@
       <file leaf-file-name="FichaBean.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/FichaBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="227" column="16" lean-forward="false" selection-start-line="227" selection-start-column="16" selection-end-line="227" selection-end-column="16" />
+            <state relative-caret-position="137">
+              <caret line="251" column="40" lean-forward="false" selection-start-line="251" selection-start-column="40" selection-end-line="251" selection-end-column="40" />
               <folding>
                 <element signature="e#3249#3250#0" expanded="true" />
                 <element signature="e#3276#3277#0" expanded="true" />
                 <element signature="e#3332#3333#0" expanded="true" />
                 <element signature="e#3373#3374#0" expanded="true" />
-                <element signature="e#9356#9367#0" expanded="true" />
+                <element signature="e#9608#9619#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FichaService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/service/FichaService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="50" column="48" lean-forward="false" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -99,28 +102,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="montagemFicha.xhtml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="montagemFicha.xhtml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemFicha.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="60" column="52" lean-forward="true" selection-start-line="60" selection-start-column="52" selection-end-line="60" selection-end-column="52" />
+            <state relative-caret-position="190">
+              <caret line="776" column="36" lean-forward="false" selection-start-line="776" selection-start-column="36" selection-end-line="776" selection-end-column="36" />
               <folding>
-                <marker date="1508979758627" expanded="true" signature="1483:1567" ph="{...}" />
-                <marker date="1508979758627" expanded="true" signature="1744:1828" ph="{...}" />
-                <marker date="1508979758627" expanded="true" signature="2007:2091" ph="{...}" />
-                <marker date="1508979758627" expanded="true" signature="2264:2348" ph="{...}" />
-                <marker date="1508979758627" expanded="true" signature="2663:2747" ph="{...}" />
-                <marker date="1508979758627" expanded="true" signature="2893:2977" ph="{...}" />
-                <marker date="1508979758627" expanded="true" signature="3239:3323" ph="{...}" />
-                <marker date="1508979758627" expanded="true" signature="3488:3572" ph="{...}" />
-                <marker date="1508979758627" expanded="true" signature="3754:3838" ph="{...}" />
-                <marker date="1508979758627" expanded="true" signature="4019:4103" ph="{...}" />
+                <marker date="1508984710670" expanded="true" signature="1483:1567" ph="{...}" />
+                <marker date="1508984710670" expanded="true" signature="1744:1828" ph="{...}" />
+                <marker date="1508984710670" expanded="true" signature="2007:2091" ph="{...}" />
+                <marker date="1508984710670" expanded="true" signature="2264:2348" ph="{...}" />
+                <marker date="1508984710670" expanded="true" signature="2663:2747" ph="{...}" />
+                <marker date="1508984710670" expanded="true" signature="2893:2977" ph="{...}" />
+                <marker date="1508984710670" expanded="true" signature="3239:3323" ph="{...}" />
+                <marker date="1508984710670" expanded="true" signature="3488:3572" ph="{...}" />
+                <marker date="1508984710670" expanded="true" signature="3754:3838" ph="{...}" />
+                <marker date="1508984710670" expanded="true" signature="4019:4103" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
@@ -177,16 +180,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EccRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EccRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="36" column="85" lean-forward="false" selection-start-line="36" selection-start-column="85" selection-end-line="36" selection-end-column="85" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -198,9 +191,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ULTIMO</find>
-      <find>/image</find>
-      <find>photo</find>
       <find>dirig</find>
       <find>dlgNovosDirigentes</find>
       <find>btninclui</find>
@@ -220,7 +210,6 @@
       <find>login</find>
       <find>a</find>
       <find>at</find>
-      <find>atividades</find>
       <find>coordenador</find>
       <find>.size</find>
       <find>ativo</find>
@@ -228,6 +217,10 @@
       <find>removeAtividadeLimbo</find>
       <find>foto</find>
       <find>eq</find>
+      <find>nOME D</find>
+      <find>nOME DO CA</find>
+      <find>cadnova</find>
+      <find>atividades</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -288,13 +281,13 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/converter/EccConverter.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Atividade.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ficha.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/service/FichaService.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EccRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/service/EccService.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EccBean.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/FichaBean.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/dirigente/montagemFicha.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/FichaBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/service/FichaService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/dirigente/montagemFicha.xhtml" />
       </list>
     </option>
   </component>
@@ -1011,7 +1004,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="268538000" />
+    <option name="totallyTimeSpent" value="271827000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
@@ -1041,7 +1034,7 @@
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.4954683" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2734139" sideWeight="0.863388" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2734139" sideWeight="0.863388" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26963747" sideWeight="0.13661203" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1163,7 +1156,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/FichaBean.java</url>
-          <line>298</line>
+          <line>307</line>
           <properties />
           <option name="timeStamp" value="117" />
         </line-breakpoint>
@@ -1187,7 +1180,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/FichaBean.java</url>
-          <line>373</line>
+          <line>382</line>
           <properties />
           <option name="timeStamp" value="132" />
         </line-breakpoint>
@@ -1530,14 +1523,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/service/FichaService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="89" column="10" lean-forward="false" selection-start-line="89" selection-start-column="10" selection-end-line="89" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/administrador/equipe.xhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1627,39 +1612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/FichaBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="227" column="16" lean-forward="false" selection-start-line="227" selection-start-column="16" selection-end-line="227" selection-end-column="16" />
-          <folding>
-            <element signature="e#3249#3250#0" expanded="true" />
-            <element signature="e#3276#3277#0" expanded="true" />
-            <element signature="e#3332#3333#0" expanded="true" />
-            <element signature="e#3373#3374#0" expanded="true" />
-            <element signature="e#9356#9367#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemFicha.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="60" column="52" lean-forward="true" selection-start-line="60" selection-start-column="52" selection-end-line="60" selection-end-column="52" />
-          <folding>
-            <marker date="1508979758627" expanded="true" signature="1483:1567" ph="{...}" />
-            <marker date="1508979758627" expanded="true" signature="1744:1828" ph="{...}" />
-            <marker date="1508979758627" expanded="true" signature="2007:2091" ph="{...}" />
-            <marker date="1508979758627" expanded="true" signature="2264:2348" ph="{...}" />
-            <marker date="1508979758627" expanded="true" signature="2663:2747" ph="{...}" />
-            <marker date="1508979758627" expanded="true" signature="2893:2977" ph="{...}" />
-            <marker date="1508979758627" expanded="true" signature="3239:3323" ph="{...}" />
-            <marker date="1508979758627" expanded="true" signature="3488:3572" ph="{...}" />
-            <marker date="1508979758627" expanded="true" signature="3754:3838" ph="{...}" />
-            <marker date="1508979758627" expanded="true" signature="4019:4103" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1678,6 +1630,47 @@
           <folding>
             <marker date="1508980117987" expanded="true" signature="1395:1470" ph="SELECT login... USUARIOS" />
             <marker date="1508980117987" expanded="true" signature="1497:1574" ph="SELECT login... USUARIOS" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/FichaBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="251" column="40" lean-forward="false" selection-start-line="251" selection-start-column="40" selection-end-line="251" selection-end-column="40" />
+          <folding>
+            <element signature="e#3249#3250#0" expanded="true" />
+            <element signature="e#3276#3277#0" expanded="true" />
+            <element signature="e#3332#3333#0" expanded="true" />
+            <element signature="e#3373#3374#0" expanded="true" />
+            <element signature="e#9608#9619#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/service/FichaService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="50" column="48" lean-forward="false" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemFicha.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="776" column="36" lean-forward="false" selection-start-line="776" selection-start-column="36" selection-end-line="776" selection-end-column="36" />
+          <folding>
+            <marker date="1508984710670" expanded="true" signature="1483:1567" ph="{...}" />
+            <marker date="1508984710670" expanded="true" signature="1744:1828" ph="{...}" />
+            <marker date="1508984710670" expanded="true" signature="2007:2091" ph="{...}" />
+            <marker date="1508984710670" expanded="true" signature="2264:2348" ph="{...}" />
+            <marker date="1508984710670" expanded="true" signature="2663:2747" ph="{...}" />
+            <marker date="1508984710670" expanded="true" signature="2893:2977" ph="{...}" />
+            <marker date="1508984710670" expanded="true" signature="3239:3323" ph="{...}" />
+            <marker date="1508984710670" expanded="true" signature="3488:3572" ph="{...}" />
+            <marker date="1508984710670" expanded="true" signature="3754:3838" ph="{...}" />
+            <marker date="1508984710670" expanded="true" signature="4019:4103" ph="{...}" />
           </folding>
         </state>
       </provider>

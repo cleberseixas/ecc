@@ -48,7 +48,7 @@ public class FichaService implements Serializable {
 				}
 			}
 			this.fichaRepository.salvar(ficha);
-			FacesMessages.info("Registro gravado");
+			FacesMessages.info("Ficha cadastrada");
 		}catch(NegocioException e){
 			FacesMessages.error(e.getMessage());
 		}	
