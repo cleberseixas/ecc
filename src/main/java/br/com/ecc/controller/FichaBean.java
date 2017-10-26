@@ -80,6 +80,7 @@ public class FichaBean implements Serializable {
 		this.ecc = new Ecc();
 		this.equipe = new Equipe();
 		this.atividade = new Atividade();
+		this.ehCoordenador = false;
 	}
 
 	public Equipe getUltimoTrabalho() {

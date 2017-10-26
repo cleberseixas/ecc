@@ -34,19 +34,24 @@ public class FichaService implements Serializable {
 	public void salvar(Ficha ficha){
 		try{
 			ficha.setNomeUsual(ficha.getNomeUsualEle()+" E "+ficha.getNomeUsualEla());
-			if (!ficha.getPrimeiraEtapa().contains("º")) {
-				ficha.setPrimeiraEtapa(ficha.getPrimeiraEtapa()+"º");
-			}
-			if (ficha.getSegundaEtapa().trim().length() > 0) {
-				if (!ficha.getSegundaEtapa().contains("º")) {
-					ficha.setSegundaEtapa(ficha.getSegundaEtapa()+"º");
-				}
-			}
-			if (ficha.getTerceiraEtapa().trim().length() > 0) {
-				if (!ficha.getTerceiraEtapa().contains("º")) {
-					ficha.setTerceiraEtapa(ficha.getTerceiraEtapa()+"º");
-				}
-			}
+			primeiraSegundaTerceiraEtapa(ficha);
+//			if (!ficha.getSituacao().equals("ENCONTRISTA")) {
+//				if (ficha.getSegundaEtapa().trim().length() > 0) {
+//					if (!ficha.getPrimeiraEtapa().contains("º")) {
+//						ficha.setPrimeiraEtapa(ficha.getPrimeiraEtapa()+"º");
+//					}
+//				}
+//				if (ficha.getSegundaEtapa().trim().length() > 0) {
+//					if (!ficha.getSegundaEtapa().contains("º")) {
+//						ficha.setSegundaEtapa(ficha.getSegundaEtapa()+"º");
+//					}
+//				}
+//				if (ficha.getTerceiraEtapa().trim().length() > 0) {
+//					if (!ficha.getTerceiraEtapa().contains("º")) {
+//						ficha.setTerceiraEtapa(ficha.getTerceiraEtapa()+"º");
+//					}
+//				}
+//			}
 			this.fichaRepository.salvar(ficha);
 			FacesMessages.info("Ficha cadastrada");
 		}catch(NegocioException e){
@@ -64,8 +69,38 @@ public class FichaService implements Serializable {
 	public void alterar(Ficha ficha){
 		try{
 			ficha.setNomeUsual(ficha.getNomeUsualEle()+" E "+ficha.getNomeUsualEla());
-			if (!ficha.getPrimeiraEtapa().contains("º")) {
-				ficha.setPrimeiraEtapa(ficha.getPrimeiraEtapa()+"º");
+			primeiraSegundaTerceiraEtapa(ficha);
+
+//			if (!ficha.getSituacao().equals("ENCONTRISTA")) {
+//				if (ficha.getSegundaEtapa().trim().length() > 0) {
+//					if (!ficha.getPrimeiraEtapa().contains("º")) {
+//						ficha.setPrimeiraEtapa(ficha.getPrimeiraEtapa()+"º");
+//					}
+//				}
+//				if (ficha.getSegundaEtapa().trim().length() > 0) {
+//					if (!ficha.getSegundaEtapa().contains("º")) {
+//						ficha.setSegundaEtapa(ficha.getSegundaEtapa()+"º");
+//					}
+//				}
+//				if (ficha.getTerceiraEtapa().trim().length() > 0) {
+//					if (!ficha.getTerceiraEtapa().contains("º")) {
+//						ficha.setTerceiraEtapa(ficha.getTerceiraEtapa()+"º");
+//					}
+//				}
+//			}
+			this.fichaRepository.salvar(ficha);
+			FacesMessages.info("Ficha alterada");
+		}catch(NegocioException e){
+			FacesMessages.error(e.getMessage());
+		}
+	}
+
+	private void primeiraSegundaTerceiraEtapa(Ficha ficha) {
+		if (!ficha.getSituacao().equals("ENCONTRISTA")) {
+			if (ficha.getSegundaEtapa().trim().length() > 0) {
+				if (!ficha.getPrimeiraEtapa().contains("º")) {
+					ficha.setPrimeiraEtapa(ficha.getPrimeiraEtapa()+"º");
+				}
 			}
 			if (ficha.getSegundaEtapa().trim().length() > 0) {
 				if (!ficha.getSegundaEtapa().contains("º")) {
@@ -77,10 +112,6 @@ public class FichaService implements Serializable {
 					ficha.setTerceiraEtapa(ficha.getTerceiraEtapa()+"º");
 				}
 			}
-			this.fichaRepository.salvar(ficha);
-			FacesMessages.info("Ficha alterada");
-		}catch(NegocioException e){
-			FacesMessages.error(e.getMessage());
 		}
 	}
 

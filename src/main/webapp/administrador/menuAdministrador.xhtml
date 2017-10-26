@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+<h:head>
+	<title>ECC-SLG</title>
+	<link rel="shortcut icon" href="../resources/imagens/SLG.ico" />
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+	<h:outputScript library="js" name="locale-primefaces.js" />
+	<h:outputScript library="js" name="bootstrap.min.js" />
+
+	<h:outputStylesheet library="css" name="modelo.css" />
+	<h:outputStylesheet library="css" name="menu.css" />
+	<h:outputStylesheet library="css" name="AdminLTE.css" />
+	<h:outputStylesheet library="css" name="font-awesome.min.css" />
+</h:head>
+
+<script language="javascript">
+	var win = null;
+	function novaJanela(pagina,nome,w,h,scroll){
+		LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+		TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+		settings = 'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',resizable'
+		win = wind 	ow.open(pagina,nome,settings);
+	}
+</script>
+
+<h:body style="background-color:#3f729b">
+	<h:form id="listagem">
+		<div id="menubar">
+			<li class="icone"><h:graphicImage library="imagens" name="logo_ECC.png" width="400" height="72" /></li>
+			<ul>
+				<li><a><h:graphicImage library="imagens/menu"
+							style="width:35px; height:35px;" name="cadastros.png" />Cadastros</a>
+					<ul>
+						<li><h:graphicImage library="imagens/menu"
+								style="width:30px; height:30px; 
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+								name="circulos.png" /><a href="../administrador/circulo.xhtml">Circulos
+						</a></li>
+						<li><h:graphicImage library="imagens/menu"
+								style="width:30px; height:30px; 
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+								name="palestras.png" /><a
+							href="../administrador/palestra.xhtml">Palestras</a>
+						</li>
+						<li><h:graphicImage library="imagens/menu"
+								style="width:30px; height:30px; 
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+								name="equipes.png" /><a
+							href="../administrador/equipe.xhtml">Equipes</a>
+						</li>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="usuarios.png" /><a
+								href="usuario.xhtml">Usuários</a>
+						</li>
+					</ul>
+				</li>
+				<li><a><h:graphicImage library="imagens/menu"
+									   style="width:35px; height:35px;" name="montagem.png" />Montagem</a>
+					<ul>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="ecc.png" /><a href="../dirigente/ecc.xhtml">ECC
+						</a></li>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="fichas.png" /><a href="../dirigente/montagemFicha.xhtml">Fichas
+						</a></li>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="montagemEquipes.png" /><a href="../administrador/circulo.xhtml">Equipes
+						</a></li>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="montagemCasais.png" /><a
+								href="../dirigente/montagemEncontrista.xhtml">Encontristas</a>
+						</li>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="montagemPalestrantes.png" /><a
+								href="montagemPalestrantes.xhtml">Palestrantes</a></li>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="montagemCirculos.png" /><a
+								href="montagemCirculos.xhtml">Círculos</a></li>
+
+					</ul>
+				</li>
+			</ul>
+		</div>
+			<div id="status" style="...">
+				<div id="ico">
+					<h1>
+						<h:graphicImage library="imagens/menu" name="xx.png"
+										width="25px" height="25px" />
+						<h5>
+							<b>Menu</b>
+						</h5>
+						<p:commandButton type="button" value="Sair" icon="ui-icon-extlink"
+										 style="float: right; margin-right:5px; margin-top: -5px;"
+										 onclick="document.location='#{request.contextPath}/j_spring_security_logout'" />
+					</h1>
+				</div>
+				<div id="img-usuario-logado">
+					<h5>Usuário logado: #{contextoBean.usuarioLogado.nome}</h5>
+					<h1>
+						<h:graphicImage library="imagens/menu" name="usuarioLogado.png"
+										width="25px" height="25px" />
+					</h1>
+				</div>
+			</div>
+	</h:form>
+</h:body>
+</html>
