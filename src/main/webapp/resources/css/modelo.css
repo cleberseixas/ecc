@@ -1111,8 +1111,8 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:hover,a.list-gro
 }
 
 #divDadosHomemEditar{
-	width: 855px;
-	height: 190px;
+	width: 932px;
+	height: 110px;
 	float: left;
 	margin: 10px;
 	margin-left: 5px;
@@ -1131,8 +1131,8 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:hover,a.list-gro
 }
 
 #divDadosMulherEditar{
-	width: 855px;
-	height: 190px;
+	width: 932px;
+	height: 110px;
 	float: left;
 	margin: 10px;
 	margin-left: 5px;
@@ -1745,8 +1745,8 @@ a{
 }
 
 #divBoxDadosHomemEditar {
-	width: 855px;
-	height: 88px;
+	width: 932px;
+	height: 5px;
 	float: left;
 	position: relative;
 	border-radius:4px 4px 0px 0px;
@@ -1763,8 +1763,8 @@ a{
 }
 
 #divBoxDadosMulherEditar {
-	width: 855px;
-	height: 88px;
+	width: 932px;
+	height: 5px;
 	float: left;
 	position: relative;
 	border-radius:4px 4px 0px 0px;

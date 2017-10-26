@@ -135,6 +135,12 @@ public class Ficha implements Serializable {
 
     private List<Atividade> atividades= new ArrayList<Atividade>();
 
+    @ManyToMany(fetch= FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(name = "FICHAS_APTIDOES",
+            joinColumns = @JoinColumn(name = "FICHA"),
+            inverseJoinColumns = @JoinColumn(name = "APTIDAO"))
+    private List<Aptidao> aptidaos= new ArrayList<Aptidao>();
+
     public Long getId() {
         return id;
     }
@@ -405,6 +411,14 @@ public class Ficha implements Serializable {
 
     public void setAtividades(List<Atividade> atividades) {
         this.atividades = atividades;
+    }
+
+    public List<Aptidao> getAptidaos() {
+        return aptidaos;
+    }
+
+    public void setAptidaos(List<Aptidao> aptidaos) {
+        this.aptidaos = aptidaos;
     }
 
     @Override

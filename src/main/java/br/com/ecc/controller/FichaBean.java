@@ -1,9 +1,7 @@
 package br.com.ecc.controller;
 
-import br.com.ecc.model.Atividade;
-import br.com.ecc.model.Ecc;
-import br.com.ecc.model.Equipe;
-import br.com.ecc.model.Ficha;
+import br.com.ecc.model.*;
+import br.com.ecc.service.AptidaoService;
 import br.com.ecc.service.AtividadeService;
 import br.com.ecc.service.FichaService;
 import br.com.ecc.util.Constantes;
@@ -41,6 +39,8 @@ public class FichaBean implements Serializable {
 
 	private Equipe equipe = new Equipe();
 
+	private Aptidao aptidao = new Aptidao();
+
 	private List<Ficha> listaFichas;
 
 	private List<Ficha> listaEncontristas;
@@ -72,6 +72,9 @@ public class FichaBean implements Serializable {
 	@Inject
 	private AtividadeService atividadeService;
 
+	@Inject
+	private AptidaoService aptidaoService;
+
 	public void novaFicha() {
 		this.ficha = new Ficha();
 	}
@@ -81,6 +84,11 @@ public class FichaBean implements Serializable {
 		this.equipe = new Equipe();
 		this.atividade = new Atividade();
 		this.ehCoordenador = false;
+	}
+
+	private void novaAptidao() {
+		this.equipe = new Equipe();
+		this.aptidao = new Aptidao();
 	}
 
 	public Equipe getUltimoTrabalho() {
@@ -125,6 +133,14 @@ public class FichaBean implements Serializable {
 
 	public void setAtividade(Atividade atividade) {
 		this.atividade = atividade;
+	}
+
+	public Aptidao getAptidao() {
+		return aptidao;
+	}
+
+	public void setAptidao(Aptidao aptidao) {
+		this.aptidao = aptidao;
 	}
 
 	public List<Ficha> getListaEncontristas() {
@@ -238,11 +254,11 @@ public class FichaBean implements Serializable {
 		}  else {
 				habilitaBotaoIncluiAptidoes = false;
 				habilitaBotaoIncluiAtividades = true;
-//				if (ficha.getAptidoes().size > 0) {
-//					habilitaBotaoExcluirFicha = true;
-//				} else {
-//					habilitaBotaoExcluirFicha = false;
-//				}
+				if (ficha.getAptidaos().size() > 0) {
+					habilitaBotaoExcluirFicha = true;
+				} else {
+					habilitaBotaoExcluirFicha = false;
+				}
 			}
 		habilitaBotaoEditarFicha = false;
 		habilitaBotaoDetalhesFicha = false;
@@ -282,6 +298,8 @@ public class FichaBean implements Serializable {
 
 	public void excluirFicha() {
 		try {
+			removeAtividadeLimbo();
+			removeAptidaoLimbo();
 			String fotoEle = ficha.getFotoEle();
 			String fotoEla = ficha.getFotoEla();
 			fichaService.excluir(ficha);
@@ -296,10 +314,15 @@ public class FichaBean implements Serializable {
 	}
 
 	private void excluirFoto(String ele, String ela) {
-		File fotoExcluirEle = new File(pathFoto, ele);
-		File fotoExcluirEla = new File(pathFoto, ela);
-		fotoExcluirEle.delete();
-		fotoExcluirEla.delete();
+		if (null != ele) {
+			File fotoExcluirEle = new File(pathFoto, ele);
+			fotoExcluirEle.delete();
+		}
+		if (null != ela) {
+			File fotoExcluirEla = new File(pathFoto, ela);
+			fotoExcluirEla.delete();
+		}
+
 	}
 
 	private String nomeFotoHM(String nomeFoto) {
@@ -312,6 +335,7 @@ public class FichaBean implements Serializable {
 				fotoExcluir = new File(pathFoto, ficha.getFotoEle());
 			}
 			nomeFoto = this.ficha.getId() + "_" + this.ficha.getNomeUsualEle() + "_" + nomeFoto;
+			nomeFoto = Util.removeAcentos(nomeFoto);
 			this.ficha.setFotoEle(nomeFoto);
 		} else {
 				if (null != ficha.getFotoEla()) {
@@ -319,6 +343,7 @@ public class FichaBean implements Serializable {
 					fotoExcluir = new File(pathFoto, ficha.getFotoEla());
 				}
 			nomeFoto = this.ficha.getId() + "_" + this.ficha.getNomeUsualEla() + "_" + nomeFoto;
+			nomeFoto = Util.removeAcentos(nomeFoto);
 			this.ficha.setFotoEla(nomeFoto);
 		}
 		if (temFoto) {
@@ -416,30 +441,39 @@ public class FichaBean implements Serializable {
 		atividadeService.removeAtividadeLimbo();
 	}
 
-}
+	public void salvaAptidao() {
+		boolean existeAptidao = false;
+		for(Aptidao apti : ficha.getAptidaos()) {
+			if (apti.getEquipe().getId().equals(equipe.getId())) {
+				existeAptidao = true;
+			}
+		}
 
-/*
-CREATE TABLE aptidoes
-(
-  ficha_aptidao bigint NOT NULL,
-  ecc bigint NOT NULL,
-  ficha bigint NOT NULL,
-  equipe bigint NOT NULL,
-  coordenador boolean NOT NULL,
-  CONSTRAINT ficha_atividade_pkey PRIMARY KEY (ficha_atividade),
-  CONSTRAINT fk_ecc_ficha_atividade FOREIGN KEY (ecc)
-      REFERENCES eccs (ecc) MATCH SIMPLE
-      ON UPDATE NO ACTION ON DELETE NO ACTION,
-  CONSTRAINT fk_ficha_ficha_atividade FOREIGN KEY (ficha)
-      REFERENCES fichas (ficha) MATCH SIMPLE
-      ON UPDATE NO ACTION ON DELETE NO ACTION,
-  CONSTRAINT fk_equipe_ficha_atividade FOREIGN KEY (equipe)
-      REFERENCES equipes (equipe) MATCH SIMPLE
-      ON UPDATE NO ACTION ON DELETE NO ACTION
-)
-WITH (
-  OIDS=FALSE
-);
-ALTER TABLE fichas_atividades
-  OWNER TO postgres;
- */
+		if (!existeAptidao) {
+			List<Aptidao> listAux = new ArrayList<Aptidao>();
+			listAux.addAll(ficha.getAptidaos());
+			ficha.getAptidaos().clear();
+
+			aptidao.setFicha(ficha);
+			aptidao.setEquipe(equipe);
+			listAux.add(aptidao);
+			this.ficha.setAptidaos(listAux);
+			fichaService.atualiza(ficha);
+			this.novaAptidao();
+			removeAptidaoLimbo();
+
+		} else {
+			FacesMessages.error("Já existe uma aptidão cadastrada para o casal selecionado");
+		}
+	}
+
+	public void removeAptidao() {
+		this.ficha.getAptidaos().remove(aptidao);
+		fichaService.atualiza(ficha);
+	}
+
+	public void removeAptidaoLimbo() {
+		aptidaoService.removeAptidaoLimbo();
+	}
+
+}

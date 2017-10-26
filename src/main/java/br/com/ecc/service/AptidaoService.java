@@ -1,9 +1,7 @@
 package br.com.ecc.service;
 
-import br.com.ecc.model.Atividade;
-import br.com.ecc.model.Dirigente;
-import br.com.ecc.repository.AtividadeRepository;
-import br.com.ecc.repository.DirigenteEccRepository;
+import br.com.ecc.model.Aptidao;
+import br.com.ecc.repository.AptidaoRepository;
 import br.com.ecc.util.FacesMessages;
 import br.com.ecc.util.NegocioException;
 import br.com.ecc.util.Transactional;
@@ -13,25 +11,26 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * Classe responsável por gerenciar as regras de negócio das Atividades.
+ * Classe responsável por gerenciar as regras de negócio das Aptidões.
  * </br>-----------------------------------------------------------------------</br>
  *                      <b>Regras de negócio</b>
  * </br>-----------------------------------------------------------------------</br>
- * Atividades nada mais é do que qual a função do ENCONTREIRO no ECC.
+ * Aptidões nada mais é do que as Hbilidades dos ENCONTRISTAS,
+ * Usado para a montagem da equipe .
  * </br>-----------------------------------------------------------------------</br>
  * @author Cleber Seixas
- * @since 25/10/2017
+ * @since 26/10/2017
  */
-public class AtividadeService implements Serializable {
+public class AptidaoService implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Inject
-	private AtividadeRepository atividadeRepository;
+	private AptidaoRepository aptidaoRepository;
 
 	@Transactional
-	public void salvar(Atividade atividade){
+	public void salvar(Aptidao aptidao){
 		try{
-			this.atividadeRepository.salvar(atividade);
+			this.aptidaoRepository.salvar(aptidao);
 			//FacesMessages.info("Registro gravado");
 		}catch(NegocioException e){
 			FacesMessages.error(e.getMessage());
@@ -39,32 +38,32 @@ public class AtividadeService implements Serializable {
 	}
 
 	@Transactional
-	public void excluir(Atividade atividade){
-		atividade = atividadeRepository.carregar(atividade.getId());
-		this.atividadeRepository.excluir(atividade);
+	public void excluir(Aptidao aptidao){
+		aptidao = aptidaoRepository.carregar(aptidao.getId());
+		this.aptidaoRepository.excluir(aptidao);
 
 	}		
 	
-	public Atividade carregar(Long id){
+	public Aptidao carregar(Long id){
 		try {
-			return atividadeRepository.carregar(id);
+			return aptidaoRepository.carregar(id);
 		}catch(NegocioException e){
 			FacesMessages.error(e.getMessage());
 			return null;
 		}
 	}
 
-	public List<Atividade> listar(){
+	public List<Aptidao> listar(){
 		try {
-			return atividadeRepository.listar();
+			return aptidaoRepository.listar();
 		} catch(NegocioException e){
 			FacesMessages.error(e.getMessage());
 			return null;
 		}
 	}
 
-	public void removeAtividadeLimbo() {
-		atividadeRepository.removeAtividadeLimbo();
+	public void removeAptidaoLimbo() {
+		aptidaoRepository.removeAptidaoLimbo();
 	}
 
 }
