@@ -127,7 +127,7 @@ public class Ficha implements Serializable {
     @Column(name="ATIVO", nullable = false)
     private boolean ativo = true;
 
-    @ManyToMany(fetch= FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToMany(fetch= FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(name = "FICHAS_ATIVIDADES",
             joinColumns = @JoinColumn(name = "FICHA"),
             inverseJoinColumns = @JoinColumn(name = "ATIVIDADE"))

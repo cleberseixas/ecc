@@ -13,9 +13,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/FichaBean.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/FichaBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ficha.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ficha.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/AtividadeService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/AtividadeService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemFicha.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemFicha.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/modelo.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/modelo.css" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,64 +35,29 @@
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="ecc" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FichaBean.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FichaBean.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/FichaBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="301" column="33" lean-forward="false" selection-start-line="301" selection-start-column="33" selection-end-line="301" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2888#2889#0" expanded="true" />
-                <element signature="e#2909#2910#0" expanded="true" />
-                <element signature="e#2953#2954#0" expanded="true" />
-                <element signature="e#2982#2983#0" expanded="true" />
-                <element signature="e#5359#5360#0" expanded="true" />
-                <element signature="e#5417#5418#0" expanded="true" />
-                <element signature="e#10082#10093#0" expanded="true" />
-                <element signature="e#10720#10721#0" expanded="true" />
-                <element signature="e#10766#10767#0" expanded="true" />
-                <element signature="e#11034#11043#0" expanded="true" />
-                <element signature="e#11570#11571#0" expanded="true" />
-                <element signature="e#11612#11613#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TransactionImpl.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-entitymanager/4.3.11.Final/hibernate-entitymanager-4.3.11.Final-sources.jar!/org/hibernate/jpa/internal/TransactionImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="88" column="30" lean-forward="true" selection-start-line="88" selection-start-column="30" selection-end-line="88" selection-end-column="30" />
+            <state relative-caret-position="255">
+              <caret line="259" column="4" lean-forward="false" selection-start-line="259" selection-start-column="4" selection-end-line="259" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Util.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/util/Util.java">
+      <file leaf-file-name="InterceptionDecorationContext.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/jboss/weld/servlet/weld-servlet/2.0.4.Final/weld-servlet-2.0.4.Final-sources.jar!/org/jboss/weld/bean/proxy/InterceptionDecorationContext.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="149" column="0" lean-forward="true" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+            <state relative-caret-position="168">
+              <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#3890#3891#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Constantes.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/util/Constantes.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -103,15 +65,12 @@
       <file leaf-file-name="Ficha.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ficha.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="137" column="38" lean-forward="false" selection-start-line="137" selection-start-column="38" selection-end-line="137" selection-end-column="38" />
+            <state relative-caret-position="117">
+              <caret line="160" column="0" lean-forward="false" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
               <folding>
-                <element signature="e#4408#4419#0" expanded="true" />
-                <element signature="e#4700#4709#0" expanded="true" />
-                <element signature="e#10283#10284#0" expanded="true" />
-                <element signature="e#10314#10315#0" expanded="true" />
-                <element signature="e#10369#10370#0" expanded="true" />
-                <element signature="e#10409#10410#0" expanded="true" />
+                <element signature="e#4409#4420#0" expanded="true" />
+                <element signature="e#4701#4710#0" expanded="true" />
+                <element signature="e#5052#5053#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -120,49 +79,215 @@
       <file leaf-file-name="FichaService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/service/FichaService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="36" column="46" lean-forward="false" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="montagemFicha.xhtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemFicha.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="295" column="38" lean-forward="false" selection-start-line="295" selection-start-column="38" selection-end-line="295" selection-end-column="38" />
+            <state relative-caret-position="748">
+              <caret line="55" column="48" lean-forward="false" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
               <folding>
-                <marker date="1509033645766" expanded="true" signature="1498:1582" ph="{...}" />
-                <marker date="1509033645766" expanded="true" signature="1759:1843" ph="{...}" />
-                <marker date="1509033645766" expanded="true" signature="2022:2106" ph="{...}" />
-                <marker date="1509033645766" expanded="true" signature="2279:2363" ph="{...}" />
-                <marker date="1509033645766" expanded="true" signature="2691:2775" ph="{...}" />
-                <marker date="1509033645766" expanded="true" signature="2921:3005" ph="{...}" />
-                <marker date="1509033645766" expanded="true" signature="3267:3351" ph="{...}" />
-                <marker date="1509033645766" expanded="true" signature="3516:3600" ph="{...}" />
-                <marker date="1509033645766" expanded="true" signature="3782:3866" ph="{...}" />
-                <marker date="1509033645766" expanded="true" signature="4047:4131" ph="{...}" />
+                <marker date="1509070926656" expanded="true" signature="3878:3885" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modelo.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/modelo.css">
+      <file leaf-file-name="EccBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EccBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="1101" column="0" lean-forward="true" selection-start-line="1101" selection-start-column="0" selection-end-line="1101" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="3094">
+              <caret line="234" column="95" lean-forward="false" selection-start-line="234" selection-start-column="95" selection-end-line="234" selection-end-column="95" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1971#1972#0" expanded="true" />
+                <element signature="e#2017#2018#0" expanded="true" />
+                <element signature="e#2085#2086#0" expanded="true" />
+                <element signature="e#2136#2137#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Aptidao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/Aptidao.java">
+      <file leaf-file-name="montagemFicha.xhtml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemFicha.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+            <state relative-caret-position="412">
+              <caret line="932" column="7" lean-forward="true" selection-start-line="932" selection-start-column="7" selection-end-line="932" selection-end-column="7" />
+              <folding>
+                <marker date="1509070927570" expanded="true" signature="2691:2775" ph="{...}" />
+                <marker date="1509070927570" expanded="true" signature="2921:3005" ph="{...}" />
+                <marker date="1509070927570" expanded="true" signature="3267:3351" ph="{...}" />
+                <marker date="1509070927570" expanded="true" signature="3516:3600" ph="{...}" />
+                <marker date="1509070927570" expanded="true" signature="3782:3866" ph="{...}" />
+                <marker date="1509070927570" expanded="true" signature="4047:4131" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="74" lean-forward="false" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
+              <folding>
+                <marker date="1509070926846" expanded="true" signature="1052:1165" ph="..." />
+                <marker date="1509070926846" expanded="true" signature="1243:1643" ph="..." />
+                <marker date="1509070926846" expanded="true" signature="1275:1615" ph="..." />
+                <marker date="1509070926846" expanded="true" signature="1404:1479" ph="SELECT login... USUARIOS" />
+                <marker date="1509070926846" expanded="true" signature="1506:1583" ph="SELECT login... USUARIOS" />
+                <marker date="1509070926846" expanded="true" signature="1740:1999" ph="..." />
+                <marker date="1509070926846" expanded="true" signature="2014:2306" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="faces-config.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ecc.xhtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/ecc.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2890">
+              <caret line="174" column="141" lean-forward="false" selection-start-line="174" selection-start-column="100" selection-end-line="174" selection-end-column="141" />
+              <folding>
+                <marker date="1509070927246" expanded="true" signature="2373:4122" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="2376:2494" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="2415:2482" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="2504:4112" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="2515:2838" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="2554:2686" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="2573:2657" ph="{...}" />
+                <marker date="1509070927246" expanded="true" signature="2849:3075" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="2888:3023" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="2907:2991" ph="{...}" />
+                <marker date="1509070927246" expanded="true" signature="3053:3070" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="3086:3316" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="3125:3269" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="3144:3228" ph="{...}" />
+                <marker date="1509070927246" expanded="true" signature="3293:3311" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="3327:3582" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="3366:3509" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="3385:3469" ph="{...}" />
+                <marker date="1509070927246" expanded="true" signature="3512:3570" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="3593:3847" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="3632:3781" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="3651:3735" ph="{...}" />
+                <marker date="1509070927246" expanded="true" signature="3784:3842" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="3858:4100" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="3897:4042" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="3916:4000" ph="{...}" />
+                <marker date="1509070927246" expanded="true" signature="4045:4095" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="4172:4830" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="4190:4587" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="4199:4577" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="4259:4297" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="4307:4336" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="4409:4567" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="4620:4821" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="4693:4811" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="4763:4801" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="4947:5027" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="5223:8845" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="5371:7382" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="5432:7366" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="5560:5595" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="5638:7345" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="5692:5910" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="5970:6241" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="6297:6552" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="6610:6944" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="7021:7322" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="7414:7529" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="7556:7815" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="7747:7798" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="7861:7921" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="7968:8029" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="8080:8307" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="8238:8290" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="8353:8414" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="8466:8623" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="8514:8606" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="8672:8826" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="8717:8809" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="9123:9528" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="9305:9414" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="9440:9507" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="9884:12895" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="10046:12881" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="10113:12868" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="10215:11040" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="10432:10581" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="10642:10818" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="10879:11019" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="11072:11343" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="11180:11322" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="11375:12513" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="11592:11746" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="11793:11941" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="11996:12374" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="12545:12853" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="12651:12832" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="13238:16275" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="13404:16261" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="13472:16248" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="13574:14399" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="13791:13940" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="14001:14177" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="14238:14378" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="14431:14702" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="14539:14681" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="14734:15872" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="14951:15105" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="15152:15300" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="15355:15733" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="15904:16232" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="16006:16211" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="16640:20875" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="16818:20861" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="16910:20848" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="16985:17230" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="17085:17214" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="17261:18699" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="17464:17880" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="17763:17855" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="17945:18339" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="18219:18314" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="18410:18679" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="18718:19015" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="18750:18995" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="18853:18978" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="19046:20832" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="19088:20812" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="19305:19412" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="19462:20197" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="19680:19742" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="20116:20177" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="20248:20333" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="20406:20791" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="20496:20771" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="20704:20745" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="20944:21345" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="21047:21331" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="21081:21172" ph="..." />
+                <marker date="1509070927246" expanded="true" signature="21205:21321" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FichaRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/repository/FichaRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -179,7 +304,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>removeAtividadeLimboremoveAtividadeLimbo</find>
       <find>removeAtividadeLimbo</find>
       <find>foto</find>
       <find>eq</find>
@@ -209,6 +333,7 @@
       <find>divdados</find>
       <find>Nova ficha</find>
       <find>salvarfotos</find>
+      <find>ONRO</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -271,10 +396,10 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/service/AtividadeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/service/AptidaoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Aptidao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ficha.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/AptidaoRepository.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/dirigente/montagemFicha.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/css/modelo.css" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ficha.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/FichaBean.java" />
       </list>
     </option>
@@ -298,11 +423,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1600" />
-    <option name="y" value="25" />
-    <option name="width" value="1440" />
-    <option name="height" value="850" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1378" />
+    <option name="height" value="780" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -344,284 +467,127 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="publico" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dirigente" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="administrador" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="repository" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="ecc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ecc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ecc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ecc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ecc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ecc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ecc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ecc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ecc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ecc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ecc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ecc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ecc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ecc" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ecc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ecc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ecc" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ecc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ecc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ecc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ecc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ecc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ecc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ecc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ecc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="administrador" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ecc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ecc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="dirigente" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ecc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ecc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="publico" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ecc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ecc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ecc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ecc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -665,23 +631,223 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat">
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
-      <deployment />
-      <server-settings />
+    <configuration name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.23" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER" value="false" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="ecc:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/ecc" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_ecc_5" />
+      </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
       <predefined_log_file id="Tomcat Manager" enabled="false" />
       <predefined_log_file id="Tomcat Host Manager" enabled="false" />
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <output_file path="%IDEA_RUN:TOMCAT_HOME%/logs/localhost.2017-10-06.log" is_save="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <method />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51862" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="ecc:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/usr/bin/flashplayerdebugger" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/usr/bin/flashplayerdebugger" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="true" />
+      <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
-      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="" />
@@ -736,29 +902,6 @@
         <option name="SUPPORT_LIB_ENABLED" value="true" />
         <option name="INSTRUMENTATION_ENABLED" value="true" />
       </Profilers>
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
@@ -842,55 +985,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
-      <option name="BCName" value="" />
-      <option name="IOSSimulatorSdkPath" value="" />
-      <option name="adlOptions" value="" />
-      <option name="airProgramParameters" value="" />
-      <option name="appDescriptorForEmulator" value="Android" />
-      <option name="debugTransport" value="USB" />
-      <option name="debuggerSdkRaw" value="BC SDK" />
-      <option name="emulator" value="NexusOne" />
-      <option name="emulatorAdlOptions" value="" />
-      <option name="fastPackaging" value="true" />
-      <option name="fullScreenHeight" value="0" />
-      <option name="fullScreenWidth" value="0" />
-      <option name="launchUrl" value="false" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="/usr/bin/flashplayerdebugger" />
-        </LauncherParameters>
-      </option>
-      <option name="mobileRunTarget" value="Emulator" />
-      <option name="moduleName" value="" />
-      <option name="overriddenMainClass" value="" />
-      <option name="overriddenOutputFileName" value="" />
-      <option name="overrideMainClass" value="false" />
-      <option name="runTrusted" value="true" />
-      <option name="screenDpi" value="0" />
-      <option name="screenHeight" value="0" />
-      <option name="screenWidth" value="0" />
-      <option name="url" value="http://" />
-      <option name="usbDebugPort" value="7936" />
-      <method />
-    </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
-      <option name="BCName" value="" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="/usr/bin/flashplayerdebugger" />
-        </LauncherParameters>
-      </option>
-      <option name="moduleName" value="" />
-      <option name="trusted" value="true" />
-      <method />
-    </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -905,36 +999,6 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app" />
-      <setting name="passParentEnv" value="true" />
-      <setting name="launchBrowser" value="true" />
-      <setting name="launchBrowserUrl" value="" />
-      <setting name="depsClasspath" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -999,55 +1063,21 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method />
-    </configuration>
     <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -1063,83 +1093,6 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <configuration default="false" name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.47" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER" value="false" />
-      <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment>
-        <artifact name="ecc:war exploded">
-          <settings>
-            <option name="CONTEXT_PATH" value="/ecc" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_ecc_5" />
-      </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <output_file path="%IDEA_RUN:TOMCAT_HOME%/logs/localhost.2017-10-06.log" is_save="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="51862" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method>
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="ecc:war exploded" />
-        </option>
-      </method>
-    </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Tomcat" />
-    </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -1158,47 +1111,43 @@
       <workItem from="1508274758385" duration="112775000" />
       <workItem from="1508870137100" duration="131000" />
       <workItem from="1508870366659" duration="9030000" />
+      <workItem from="1509070941146" duration="5449000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="288844000" />
+    <option name="totallyTimeSpent" value="294286000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1600" y="25" width="1440" height="850" extended-state="0" />
-    <editor active="true" />
+    <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="22" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5060423" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32765958" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930514" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930514" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930514" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930514" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25106382" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37637794" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18014185" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32624114" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37308347" sideWeight="0.4939577" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3248227" sideWeight="0.4939577" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="24" side_tool="true" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.4954683" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3670977" sideWeight="0.479798" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5101523" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27416918" sideWeight="0.863388" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="20" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26963747" sideWeight="0.13661203" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24928162" sideWeight="0.52020204" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1209,32 +1158,26 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5060423" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32765958" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930514" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930514" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37649062" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32624114" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26916525" sideWeight="0.4939577" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="25" side_tool="true" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.4954683" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26916525" sideWeight="0.4939577" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26963747" sideWeight="0.863388" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="20" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26963747" sideWeight="0.13661203" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32755905" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="21" side_tool="false" content_ui="tabs" />
@@ -1267,8 +1210,8 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26916525" sideWeight="0.4939577" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.4954683" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1280,6 +1223,9 @@
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24928162" sideWeight="0.52020204" order="9" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -1336,7 +1282,7 @@
           <option name="timeStamp" value="136" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="139" />
+      <option name="time" value="140" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1449,13 +1395,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/jboss/weld/servlet/weld-servlet/2.0.4.Final/weld-servlet-2.0.4.Final-sources.jar!/org/jboss/weld/bean/proxy/InterceptionDecorationContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/service/DirigenteEccService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1481,7 +1420,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1489,7 +1427,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
           <caret line="84" column="5" lean-forward="true" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1497,26 +1434,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="145" column="0" lean-forward="false" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#11131#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1902#1922#0" expanded="false" />
-            <element signature="e#2503#2523#0" expanded="false" />
-            <element signature="e#2857#2882#0" expanded="false" />
-            <element signature="e#3396#3406#0" expanded="false" />
-            <element signature="e#3569#3570#0" expanded="false" />
-            <element signature="e#3637#3638#0" expanded="false" />
-            <element signature="e#5154#5155#0" expanded="false" />
-            <element signature="e#5188#5189#0" expanded="false" />
-            <element signature="e#5235#5236#0" expanded="false" />
-            <element signature="e#5264#5265#0" expanded="false" />
-            <element signature="e#5605#5606#0" expanded="false" />
-            <element signature="e#5634#5635#0" expanded="false" />
-            <element signature="e#11005#11006#0" expanded="false" />
-            <element signature="e#11033#11034#0" expanded="false" />
-            <element signature="e#11093#11094#0" expanded="false" />
-            <element signature="e#11127#11128#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1524,7 +1441,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1545,7 +1461,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
           <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1553,11 +1468,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
           <caret line="27" column="29" lean-forward="false" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1931#1932#0" expanded="true" />
-            <element signature="e#1959#1960#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1565,12 +1475,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
           <caret line="147" column="60" lean-forward="false" selection-start-line="147" selection-start-column="55" selection-end-line="147" selection-end-column="60" />
-          <folding>
-            <marker date="1507635391064" expanded="true" signature="1348:1432" ph="{...}" />
-            <marker date="1507635391064" expanded="true" signature="1591:1675" ph="{...}" />
-            <marker date="1507635391064" expanded="true" signature="1837:1921" ph="{...}" />
-            <marker date="1507635391064" expanded="true" signature="2185:2269" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1585,31 +1489,35 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
           <caret line="86" column="53" lean-forward="false" selection-start-line="86" selection-start-column="53" selection-end-line="86" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/Equipe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="149" column="0" lean-forward="true" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+        <state relative-caret-position="1768">
+          <caret line="149" column="0" lean-forward="false" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EquipeBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="238">
           <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EccBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="234" column="95" lean-forward="true" selection-start-line="234" selection-start-column="95" selection-end-line="234" selection-end-column="95" />
+        <state relative-caret-position="3094">
+          <caret line="234" column="95" lean-forward="false" selection-start-line="234" selection-start-column="95" selection-end-line="234" selection-end-column="95" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1971#1972#0" expanded="true" />
+            <element signature="e#2017#2018#0" expanded="true" />
+            <element signature="e#2085#2086#0" expanded="true" />
+            <element signature="e#2136#2137#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1627,8 +1535,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/repository/FichaRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="39" column="18" lean-forward="false" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+        <state relative-caret-position="527">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1637,7 +1545,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1645,18 +1552,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1781">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1509013508394" expanded="true" signature="1726:1811" ph="{...}" />
-            <marker date="1509013508394" expanded="true" signature="1973:2058" ph="{...}" />
-            <marker date="1509013508394" expanded="true" signature="2230:2315" ph="{...}" />
-            <marker date="1509013508394" expanded="true" signature="2484:2568" ph="{...}" />
-            <marker date="1509013508394" expanded="true" signature="2888:2972" ph="{...}" />
-            <marker date="1509013508394" expanded="true" signature="3122:3206" ph="{...}" />
-            <marker date="1509013508394" expanded="true" signature="3372:3456" ph="{...}" />
-            <marker date="1509013508394" expanded="true" signature="3630:3714" ph="{...}" />
-            <marker date="1509013508394" expanded="true" signature="3908:3992" ph="{...}" />
-            <marker date="1509013508394" expanded="true" signature="4173:4257" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1664,47 +1559,150 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="65" column="19" lean-forward="false" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="19" />
-          <folding>
-            <marker date="1509015277326" expanded="true" signature="1735:1820" ph="{...}" />
-            <marker date="1509015277326" expanded="true" signature="1982:2067" ph="{...}" />
-            <marker date="1509015277326" expanded="true" signature="2239:2324" ph="{...}" />
-            <marker date="1509015277326" expanded="true" signature="2493:2577" ph="{...}" />
-            <marker date="1509015277326" expanded="true" signature="2905:2989" ph="{...}" />
-            <marker date="1509015277326" expanded="true" signature="3139:3223" ph="{...}" />
-            <marker date="1509015277326" expanded="true" signature="3389:3473" ph="{...}" />
-            <marker date="1509015277326" expanded="true" signature="3647:3731" ph="{...}" />
-            <marker date="1509015277326" expanded="true" signature="3925:4009" ph="{...}" />
-            <marker date="1509015277326" expanded="true" signature="4190:4274" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/ecc.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="27" column="16" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="20" />
+        <state relative-caret-position="2890">
+          <caret line="174" column="141" lean-forward="false" selection-start-line="174" selection-start-column="100" selection-end-line="174" selection-end-column="141" />
           <folding>
-            <marker date="1509015629150" expanded="true" signature="1414:1498" ph="{...}" />
-            <marker date="1509015629150" expanded="true" signature="1675:1759" ph="{...}" />
-            <marker date="1509015629150" expanded="true" signature="1921:2005" ph="{...}" />
-            <marker date="1509015629150" expanded="true" signature="2161:2245" ph="{...}" />
-            <marker date="1509015629150" expanded="true" signature="2573:2657" ph="{...}" />
-            <marker date="1509015629150" expanded="true" signature="2907:2991" ph="{...}" />
-            <marker date="1509015629150" expanded="true" signature="3144:3228" ph="{...}" />
-            <marker date="1509015629150" expanded="true" signature="3385:3469" ph="{...}" />
-            <marker date="1509015629150" expanded="true" signature="3651:3735" ph="{...}" />
-            <marker date="1509015629150" expanded="true" signature="3916:4000" ph="{...}" />
+            <marker date="1509070927246" expanded="true" signature="2373:4122" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="2376:2494" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="2415:2482" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="2504:4112" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="2515:2838" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="2554:2686" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="2573:2657" ph="{...}" />
+            <marker date="1509070927246" expanded="true" signature="2849:3075" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="2888:3023" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="2907:2991" ph="{...}" />
+            <marker date="1509070927246" expanded="true" signature="3053:3070" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="3086:3316" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="3125:3269" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="3144:3228" ph="{...}" />
+            <marker date="1509070927246" expanded="true" signature="3293:3311" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="3327:3582" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="3366:3509" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="3385:3469" ph="{...}" />
+            <marker date="1509070927246" expanded="true" signature="3512:3570" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="3593:3847" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="3632:3781" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="3651:3735" ph="{...}" />
+            <marker date="1509070927246" expanded="true" signature="3784:3842" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="3858:4100" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="3897:4042" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="3916:4000" ph="{...}" />
+            <marker date="1509070927246" expanded="true" signature="4045:4095" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="4172:4830" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="4190:4587" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="4199:4577" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="4259:4297" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="4307:4336" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="4409:4567" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="4620:4821" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="4693:4811" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="4763:4801" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="4947:5027" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="5223:8845" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="5371:7382" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="5432:7366" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="5560:5595" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="5638:7345" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="5692:5910" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="5970:6241" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="6297:6552" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="6610:6944" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="7021:7322" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="7414:7529" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="7556:7815" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="7747:7798" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="7861:7921" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="7968:8029" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="8080:8307" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="8238:8290" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="8353:8414" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="8466:8623" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="8514:8606" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="8672:8826" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="8717:8809" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="9123:9528" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="9305:9414" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="9440:9507" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="9884:12895" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="10046:12881" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="10113:12868" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="10215:11040" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="10432:10581" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="10642:10818" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="10879:11019" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="11072:11343" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="11180:11322" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="11375:12513" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="11592:11746" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="11793:11941" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="11996:12374" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="12545:12853" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="12651:12832" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="13238:16275" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="13404:16261" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="13472:16248" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="13574:14399" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="13791:13940" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="14001:14177" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="14238:14378" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="14431:14702" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="14539:14681" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="14734:15872" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="14951:15105" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="15152:15300" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="15355:15733" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="15904:16232" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="16006:16211" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="16640:20875" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="16818:20861" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="16910:20848" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="16985:17230" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="17085:17214" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="17261:18699" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="17464:17880" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="17763:17855" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="17945:18339" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="18219:18314" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="18410:18679" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="18718:19015" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="18750:18995" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="18853:18978" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="19046:20832" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="19088:20812" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="19305:19412" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="19462:20197" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="19680:19742" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="20116:20177" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="20248:20333" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="20406:20791" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="20496:20771" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="20704:20745" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="20944:21345" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="21047:21331" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="21081:21172" ph="..." />
+            <marker date="1509070927246" expanded="true" signature="21205:21321" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="16" column="93" lean-forward="false" selection-start-line="16" selection-start-column="93" selection-end-line="16" selection-end-column="93" />
+        <state relative-caret-position="272">
+          <caret line="16" column="74" lean-forward="false" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
           <folding>
-            <marker date="1509015439922" expanded="true" signature="1404:1479" ph="SELECT login... USUARIOS" />
-            <marker date="1509015439922" expanded="true" signature="1506:1583" ph="SELECT login... USUARIOS" />
+            <marker date="1509070926846" expanded="true" signature="1052:1165" ph="..." />
+            <marker date="1509070926846" expanded="true" signature="1243:1643" ph="..." />
+            <marker date="1509070926846" expanded="true" signature="1275:1615" ph="..." />
+            <marker date="1509070926846" expanded="true" signature="1404:1479" ph="SELECT login... USUARIOS" />
+            <marker date="1509070926846" expanded="true" signature="1506:1583" ph="SELECT login... USUARIOS" />
+            <marker date="1509070926846" expanded="true" signature="1740:1999" ph="..." />
+            <marker date="1509070926846" expanded="true" signature="2014:2306" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1713,7 +1711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="23" column="73" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1721,18 +1718,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="64" column="64" lean-forward="false" selection-start-line="64" selection-start-column="64" selection-end-line="64" selection-end-column="64" />
-          <folding>
-            <marker date="1509016196598" expanded="true" signature="1348:1432" ph="{...}" />
-            <marker date="1509016196598" expanded="true" signature="1692:1776" ph="{...}" />
-            <marker date="1509016196598" expanded="true" signature="1938:2022" ph="{...}" />
-            <marker date="1509016196598" expanded="true" signature="2178:2262" ph="{...}" />
-            <marker date="1509016196598" expanded="true" signature="2577:2661" ph="{...}" />
-            <marker date="1509016196598" expanded="true" signature="2811:2895" ph="{...}" />
-            <marker date="1509016196598" expanded="true" signature="3061:3145" ph="{...}" />
-            <marker date="1509016196598" expanded="true" signature="3302:3386" ph="{...}" />
-            <marker date="1509016196598" expanded="true" signature="3568:3652" ph="{...}" />
-            <marker date="1509016196598" expanded="true" signature="3833:3917" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1740,26 +1725,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="33" column="25" lean-forward="false" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
-          <folding>
-            <marker date="1509013508000" expanded="true" signature="1726:1811" ph="{...}" />
-            <marker date="1509013508000" expanded="true" signature="1973:2058" ph="{...}" />
-            <marker date="1509013508000" expanded="true" signature="2230:2315" ph="{...}" />
-            <marker date="1509013508000" expanded="true" signature="2484:2568" ph="{...}" />
-            <marker date="1509013508000" expanded="true" signature="2888:2972" ph="{...}" />
-            <marker date="1509013508000" expanded="true" signature="3122:3206" ph="{...}" />
-            <marker date="1509013508000" expanded="true" signature="3372:3456" ph="{...}" />
-            <marker date="1509013508000" expanded="true" signature="3630:3714" ph="{...}" />
-            <marker date="1509013508000" expanded="true" signature="3908:3992" ph="{...}" />
-            <marker date="1509013508000" expanded="true" signature="4173:4257" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/service/FichaService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="36" column="46" lean-forward="false" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
-          <folding />
+        <state relative-caret-position="748">
+          <caret line="55" column="48" lean-forward="false" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
+          <folding>
+            <marker date="1509070926656" expanded="true" signature="3878:3885" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1775,22 +1750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ficha.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="137" column="38" lean-forward="false" selection-start-line="137" selection-start-column="38" selection-end-line="137" selection-end-column="38" />
-          <folding>
-            <element signature="e#4408#4419#0" expanded="true" />
-            <element signature="e#4700#4709#0" expanded="true" />
-            <element signature="e#10283#10284#0" expanded="true" />
-            <element signature="e#10314#10315#0" expanded="true" />
-            <element signature="e#10369#10370#0" expanded="true" />
-            <element signature="e#10409#10410#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1809,10 +1768,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
           <caret line="43" column="106" lean-forward="false" selection-start-line="43" selection-start-column="106" selection-end-line="43" selection-end-column="106" />
-          <folding>
-            <marker date="1509023685786" expanded="true" signature="1096:1175" ph="DELETE FROM " />
-            <marker date="1509023685786" expanded="true" signature="1139:1174" ph="SELECT APTID... FICHAS_APTIDOES" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1828,28 +1784,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
           <caret line="149" column="0" lean-forward="true" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemFicha.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="295" column="38" lean-forward="false" selection-start-line="295" selection-start-column="38" selection-end-line="295" selection-end-column="38" />
-          <folding>
-            <marker date="1509033645766" expanded="true" signature="1498:1582" ph="{...}" />
-            <marker date="1509033645766" expanded="true" signature="1759:1843" ph="{...}" />
-            <marker date="1509033645766" expanded="true" signature="2022:2106" ph="{...}" />
-            <marker date="1509033645766" expanded="true" signature="2279:2363" ph="{...}" />
-            <marker date="1509033645766" expanded="true" signature="2691:2775" ph="{...}" />
-            <marker date="1509033645766" expanded="true" signature="2921:3005" ph="{...}" />
-            <marker date="1509033645766" expanded="true" signature="3267:3351" ph="{...}" />
-            <marker date="1509033645766" expanded="true" signature="3516:3600" ph="{...}" />
-            <marker date="1509033645766" expanded="true" signature="3782:3866" ph="{...}" />
-            <marker date="1509033645766" expanded="true" signature="4047:4131" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1857,7 +1791,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="1101" column="0" lean-forward="true" selection-start-line="1101" selection-start-column="0" selection-end-line="1101" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1869,24 +1802,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/jboss/weld/servlet/weld-servlet/2.0.4.Final/weld-servlet-2.0.4.Final-sources.jar!/org/jboss/weld/bean/proxy/InterceptionDecorationContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+          <folding>
+            <element signature="e#3890#3891#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ficha.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="160" column="0" lean-forward="false" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
+          <folding>
+            <element signature="e#4409#4420#0" expanded="true" />
+            <element signature="e#4701#4710#0" expanded="true" />
+            <element signature="e#5052#5053#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/FichaBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="301" column="33" lean-forward="false" selection-start-line="301" selection-start-column="33" selection-end-line="301" selection-end-column="33" />
+        <state relative-caret-position="255">
+          <caret line="259" column="4" lean-forward="false" selection-start-line="259" selection-start-column="4" selection-end-line="259" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemFicha.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="932" column="7" lean-forward="true" selection-start-line="932" selection-start-column="7" selection-end-line="932" selection-end-column="7" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2888#2889#0" expanded="true" />
-            <element signature="e#2909#2910#0" expanded="true" />
-            <element signature="e#2953#2954#0" expanded="true" />
-            <element signature="e#2982#2983#0" expanded="true" />
-            <element signature="e#5359#5360#0" expanded="true" />
-            <element signature="e#5417#5418#0" expanded="true" />
-            <element signature="e#10082#10093#0" expanded="true" />
-            <element signature="e#10720#10721#0" expanded="true" />
-            <element signature="e#10766#10767#0" expanded="true" />
-            <element signature="e#11034#11043#0" expanded="true" />
-            <element signature="e#11570#11571#0" expanded="true" />
-            <element signature="e#11612#11613#0" expanded="true" />
+            <marker date="1509070927570" expanded="true" signature="2691:2775" ph="{...}" />
+            <marker date="1509070927570" expanded="true" signature="2921:3005" ph="{...}" />
+            <marker date="1509070927570" expanded="true" signature="3267:3351" ph="{...}" />
+            <marker date="1509070927570" expanded="true" signature="3516:3600" ph="{...}" />
+            <marker date="1509070927570" expanded="true" signature="3782:3866" ph="{...}" />
+            <marker date="1509070927570" expanded="true" signature="4047:4131" ph="{...}" />
           </folding>
         </state>
       </provider>

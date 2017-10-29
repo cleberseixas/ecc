@@ -257,7 +257,7 @@ public class FichaBean implements Serializable {
 				if (ficha.getAptidaos().size() > 0) {
 					habilitaBotaoExcluirFicha = true;
 				} else {
-					habilitaBotaoExcluirFicha = false;
+						habilitaBotaoExcluirFicha = false;
 				}
 			}
 		habilitaBotaoEditarFicha = false;
