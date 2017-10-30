@@ -17,7 +17,8 @@ import java.util.List;
 
 @Audited
 @Entity
-@Table(name = "FICHAS", uniqueConstraints=@UniqueConstraint(columnNames={"nome_usual"}, name="uk_nome_usual"))
+@Table(name = "FICHAS")
+//@Table(name = "FICHAS", uniqueConstraints=@UniqueConstraint(columnNames={"nome_usual"}, name="uk_nome_usual"))
 @SequenceGenerator(name = "seq_fichas", sequenceName = "seq_fichas", allocationSize=1)
 public class Ficha implements Serializable {
     private static final long serialVersionUID = 5783412212859462833L;
@@ -126,6 +127,9 @@ public class Ficha implements Serializable {
 
     @Column(name="ATIVO", nullable = false)
     private boolean ativo = true;
+
+    @Column(name="MOTIVO", length=20, nullable = true)
+    private String motivo;
 
     @ManyToMany(fetch= FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(name = "FICHAS_ATIVIDADES",
@@ -403,6 +407,14 @@ public class Ficha implements Serializable {
 
     public void setAtivo(boolean ativo) {
         this.ativo = ativo;
+    }
+
+    public String getMotivo() {
+        return motivo;
+    }
+
+    public void setMotivo(String motivo) {
+        this.motivo = motivo;
     }
 
     public List<Atividade> getAtividades() {

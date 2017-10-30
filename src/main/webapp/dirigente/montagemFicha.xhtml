@@ -93,7 +93,7 @@
 											style="width:30px; height:30px;
 								margin-left:10px; margin-top:8px; margin-right:9px;"
 											name="montagemPalestrantes.png" /><a
-								href="montagemPalestrantes.xhtml">Palestrantes</a></li>
+								href="montagemPalestrante.xhtml">Palestrantes</a></li>
 						<li><h:graphicImage library="imagens/menu"
 											style="width:30px; height:30px;
 								margin-left:10px; margin-top:8px; margin-right:9px;"
@@ -275,16 +275,18 @@
 							<h:outputLabel value="Último Trabalho" for="ultimoTrabalho" />
 							<h:outputLabel value="" />
 							<p:inputText id="nomeUsualCasal" value="#{fichaBean.ficha.nomeUsual}"
-										 maxlength="100" style="width:350px;" disabled="true">
+										 maxlength="100" style="width:330px;" disabled="true">
 							</p:inputText>
 							<p:selectOneMenu id="situacao" disabled="false" required="true"
-											 value="#{fichaBean.ficha.situacao}" style="width:100px;">
+											 value="#{fichaBean.ficha.situacao}" style="width:154px;">
 								<f:selectItem itemLabel="Selecione" noSelectionOption="true" />
 								<f:selectItem itemValue="ENCONTREIRO" itemLabel="ENCONTREIRO" />
 								<f:selectItem itemValue="ENCONTRISTA" itemLabel="ENCONTRISTA" />
+								<f:selectItem itemValue="PENDENTE" itemLabel="PENDENTE" />
+								<f:selectItem itemValue="AUSÊNCIA JUSTIFICADA" itemLabel="AUSÊNCIA JUSTIFICADA" />
 							</p:selectOneMenu>
 							<p:selectOneMenu id="ultimoTrabalho" converter="equipeConverter"
-								value="#{fichaBean.ficha.ultimoTrabalho}" style="width:270px">
+								value="#{fichaBean.ficha.ultimoTrabalho}" style="width:230px">
 								<f:selectItem itemLabel="Selecione a equipe" noSelectionOption="true" />
 								<f:selectItems value="#{equipeBean.lista}"
 									   var="equipe" itemValue="#{equipe}"
@@ -425,10 +427,11 @@
 						</p:inputText>
 
 					</h:panelGrid>
-					<h:panelGrid columns="3">
+					<h:panelGrid columns="4">
 						<h:outputLabel value="ECC - 1º Etapa" for="etapa1" />
 						<h:outputLabel value="ECC - 2º Etapa" for="etapa2" />
 						<h:outputLabel value="ECC - 3º Etapa" for="etapa3" />
+						<h:outputLabel value="Motivo" for="motivo" />
 						<p:inputText id="etapa1" value="#{fichaBean.ficha.primeiraEtapa}" disabled="false"
 									 maxlength="10" style="width:75px;">
 						</p:inputText>
@@ -437,6 +440,9 @@
 						</p:inputText>
 						<p:inputText id="etapa3" value="#{fichaBean.ficha.terceiraEtapa}" disabled="false"
 									 maxlength="10" style="width:75px;">
+						</p:inputText>
+						<p:inputText id="motivo" value="#{fichaBean.ficha.motivo}"
+									 maxlength="200" style="width:526px;" disabled="false">
 						</p:inputText>
 
 					</h:panelGrid>
@@ -540,16 +546,18 @@
 						<h:outputLabel value="Último Trabalho" for="ultimoTrabalho" />
 						<h:outputLabel value="" />
 						<p:inputText id="nomeUsualCasal" value="#{fichaBean.ficha.nomeUsual}"
-									 maxlength="100" style="width:350px;" disabled="true">
+									 maxlength="100" style="width:330px;" disabled="true">
 						</p:inputText>
 						<p:selectOneMenu id="situacao" disabled="false" required="true"
-										 value="#{fichaBean.ficha.situacao}" style="width:100px;">
+										 value="#{fichaBean.ficha.situacao}" style="width:154px;">
 							<f:selectItem itemLabel="Selecione" noSelectionOption="true" />
 							<f:selectItem itemValue="ENCONTREIRO" itemLabel="ENCONTREIRO" />
 							<f:selectItem itemValue="ENCONTRISTA" itemLabel="ENCONTRISTA" />
+							<f:selectItem itemValue="PENDENTE" itemLabel="PENDENTE" />
+							<f:selectItem itemValue="AUSÊNCIA JUSTIFICADA" itemLabel="AUSÊNCIA JUSTIFICADA" />
 						</p:selectOneMenu>
 						<p:selectOneMenu id="ultimoTrabalho" converter="equipeConverter"
-										 value="#{fichaBean.ficha.ultimoTrabalho}" style="width:270px">
+										 value="#{fichaBean.ficha.ultimoTrabalho}" style="width:230px">
 							<f:selectItem itemLabel="Selecione a equipe" noSelectionOption="true" />
 							<f:selectItems value="#{equipeBean.lista}"
 										   var="equipe" itemValue="#{equipe}"
@@ -723,10 +731,11 @@
 						</p:inputText>
 
 					</h:panelGrid>
-					<h:panelGrid columns="3">
+					<h:panelGrid columns="4">
 						<h:outputLabel value="ECC - 1º Etapa" for="etapa1" />
 						<h:outputLabel value="ECC - 2º Etapa" for="etapa2" />
 						<h:outputLabel value="ECC - 3º Etapa" for="etapa3" />
+						<h:outputLabel value="Motivo" for="motivo" />
 						<p:inputText id="etapa1" value="#{fichaBean.ficha.primeiraEtapa}" disabled="false"
 									 maxlength="10" style="width:75px;">
 						</p:inputText>
@@ -736,7 +745,9 @@
 						<p:inputText id="etapa3" value="#{fichaBean.ficha.terceiraEtapa}" disabled="false"
 									 maxlength="10" style="width:75px;">
 						</p:inputText>
-
+						<p:inputText id="motivo" value="#{fichaBean.ficha.motivo}"
+									 maxlength="200" style="width:526px;" disabled="false">
+						</p:inputText>
 					</h:panelGrid>
 					<h:panelGrid columns="2">
 						<h:outputLabel value="" />
@@ -789,7 +800,8 @@
 						<p:selectOneMenu id="equipe" converter="equipeConverter"
 										 required="true"
 										 requiredMessage="Selecione a Atividade."
-										 value="#{fichaBean.equipe}" style="width:280px">
+										 value="#{fichaBean.equipe}" style="width:280px"
+										 filter="true" filterMatchMode="contains">
 							<f:selectItem itemLabel="Selecione a Atividade" noSelectionOption="true" />
 							<f:selectItems value="#{equipeBean.lista}"
 										   var="equipe" itemValue="#{equipe}"
@@ -870,7 +882,8 @@
 						<p:selectOneMenu id="aptidao" converter="equipeConverter"
 										 required="true"
 										 requiredMessage="Selecione a Aptidão."
-										 value="#{fichaBean.equipe}" style="width:280px">
+										 value="#{fichaBean.equipe}" style="width:280px"
+										 filter="true" filterMatchMode="contains">
 							<f:selectItem itemLabel="Selecione a Aptidão" noSelectionOption="true" />
 							<f:selectItems value="#{equipeBean.lista}"
 										   var="equipe" itemValue="#{equipe}"

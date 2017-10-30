@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<title>ECC-SLG</title>
+	<link rel="shortcut icon" href="../resources/imagens/SLG.ico" />
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+	<h:outputScript library="js" name="locale-primefaces.js" />
+	<h:outputScript library="js" name="bootstrap.min.js" />
+
+	<h:outputStylesheet library="css" name="modelo.css" />
+	<h:outputStylesheet library="css" name="menu.css" />
+	<h:outputStylesheet library="css" name="AdminLTE.css" />
+	<h:outputStylesheet library="css" name="font-awesome.min.css" />
+</h:head>
+
+<h:body style="background-color:#EBF3FE">
+	<h:form id="listagemPalestrantes">
+		<div id="menubar">
+			<li class="icone"><h:graphicImage library="imagens" name="logo_ECC.png" width="400" height="72" /></li>
+			<ul>
+				<!--
+				<li>
+					<a><h:graphicImage library="imagens/menu"
+									   style="width:35px; height:35px;" name="cadastros.png" />Cadastros</a>
+					<ul>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="circulos.png" /><a
+								href="../administrador/circulo.xhtml">Circulos</a>
+						</li>
+
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="palestras.png" /><a
+								href="palestra.xhtml">Palestras</a>
+						</li>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="equipes.png" /><a
+								href="equipe.xhtml">Equipes</a>
+						</li>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="usuarios.png" /><a
+								href="usuario.xhtml">Usuários</a>
+						</li>
+					</ul>
+				</li>
+				-->
+				<li><a><h:graphicImage library="imagens/menu"
+									   style="width:35px; height:35px;" name="montagem.png" />Montagem</a>
+					<ul>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="ecc.png" /><a
+								href="ecc.xhtml">ECC</a>
+						</li>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="fichas.png" /><a href="montagemFicha.xhtml">Fichas
+						</a></li>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="montagemEquipes.png" /><a href="circulo.xhtml">Equipes
+						</a></li>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="montagemCasais.png" /><a
+								href="montagemEncontristas.xhtml">Encontristas</a>
+						</li>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="montagemPalestrantes.png" />
+							<a style="color: #808080; background: #a0c0de; opacity: 1;
+							filter: alpha(opacity = 100); border-bottom: 3px solid #b1b1b1;">Palestrantes</a>
+						</li>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="montagemCirculos.png" /><a
+								href="montagemCirculos.xhtml">Círculos</a></li>
+
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div id="status" style="...">
+			<div id="ico">
+				<h1>
+					<h:graphicImage library="imagens/menu" name="montagemPalestrantes.png"
+									width="25px" height="25px" />
+					<h5>
+						<b>Palestrantes</b>
+					</h5>
+					<p:commandButton type="button" value="Sair" icon="ui-icon-extlink"
+									 style="float: right; margin-right:5px; margin-top: -5px;"
+									 onclick="document.location='#{request.contextPath}/j_spring_security_logout'" />
+				</h1>
+			</div>
+			<div id="img-usuario-logado">
+				<h5>Usuário logado: #{contextoBean.usuarioLogado.nome}</h5>
+				<h1>
+					<h:graphicImage library="imagens/menu" name="usuarioLogado.png"
+									width="25px" height="25px" />
+				</h1>
+			</div>
+		</div>
+		<br />
+		<p:ajaxStatus onstart="PF('statusDialog').show()" onsuccess="PF('statusDialog').hide()" />
+
+		<p:growl id="growl" showDetail="false" life="4000" autoUpdate="true" />
+		<br />
+				<p:dataTable id="palestrantes" value="#{palestranteBean.listaPalestrante}" var="palestrante" rowIndexVar="index" selection="#{palestranteBean.palestrante}"
+							 selectionMode="single" rowKey="#{palestrante.id}"
+							 emptyMessage="Não há Palestrantes cadastrados" style="width:1120px;">
+					<f:facet name="header">
+						<h:panelGrid columns="2" styleClass="semBordaInterna"
+									 columnClasses="tituloGridSolicitacao, botoesGridSolicitacao">
+							<p:outputLabel value="Lista de Palestrantes Cadastrados"
+										   style="float:left;" />
+							<h:panelGroup style="float:right;">
+								<p:commandButton action="#{palestranteBean.novoPalestrante}"
+												 icon="ui-icon-document" value="Novo Palestrante"
+												 onclick="PF('dlgNovoPalestrante').show()" update=":cadNovoPalestrante"
+												 process="@this"
+												 style="margin-right:15px; background-color:#a0c0de;"/>
+								<p:commandButton id="btnEditar" value="Editar"
+												 icon="ui-icon-pencil" style="margin-left: 5px;"
+												 onclick="PF('dlgEditarPalestrante').show()" update=":cadEditarPalestrante"
+												 title="Altera as informações do Palestrante selecionado."
+												 disabled="#{palestranteBean.habilitaBotaoEditarPalestrante}"/>
+								<p:commandButton id="btnExcluir" value="Excluir"
+												 icon="ui-icon-trash" style="margin-left: 5px;"
+												 disabled="#{palestranteBean.habilitaBotaoExcluirPalestrante}"
+												 title="Remove o Palestrante selecionado."
+												 oncomplete="PF('confirmacaoExclusao').show()" immediate="true"
+												 process="@this"
+												 update=":listagemPalestrantes:confirmacaoExclusaoDialog"/>
+							</h:panelGroup>
+						</h:panelGrid>
+					</f:facet>
+					<p:ajax event="rowSelect"
+							listener="#{palestranteBean.onRowSelectPalestrante}"
+							update="btnEditar btnExcluir" />
+					<p:column width="30">
+						<f:facet name="header">Número</f:facet>
+						#{palestrante.ecc.numero}
+						<h:graphicImage library="imagens" name="cadeado.png" width="15" height="15" rendered="#{palestrante.ecc.situacao eq 'ENCERRADO'}"
+										style="float: right;" title="Encerrado"/>
+					</p:column>
+					<p:column headerText="Palestra" width="190">
+						<p:outputLabel value="#{palestrante.palestra.descricao}"/>
+					</p:column>
+					<p:column headerText="Palestrante" width="200" rendered="#{not palestrante.palestra.casal}">
+						<p:outputLabel value="#{palestrante.palestrante}"/>
+					</p:column>
+					<p:column headerText="Palestrante" width="350" rendered="#{palestrante.palestra.casal}">
+						<p:outputLabel value="#{palestrante.ficha.nomeUsual}"/>
+					</p:column>
+
+					<p:column headerText="Data" width="50">
+						<p:outputLabel value="#{palestrante.dataPalestra}">
+							<f:convertDateTime dateStyle="medium" pattern="dd/MM/yyyy" />
+						</p:outputLabel>
+					</p:column>
+				</p:dataTable>
+		<!-- ======================================================================= -->
+		<!-- Caixa de diálogo para confirmar exclusão do ECC				         -->
+		<!-- ======================================================================= -->
+		<p:confirmDialog header="Excluir ECC"
+						 message="Confirmar a exclusão da Palestra #{palestranteBean.palestrante.palestra.descricao}?"
+						 widgetVar="confirmacaoExclusao" id="confirmacaoExclusaoDialog">
+			<p:commandButton value="Sim"
+							 onclick="PF('confirmacaoExclusao').hide();"
+							 action="#{palestranteBean.excluirPalestra()}" update="palestrantes" />
+			<p:button value="Não"
+					  onclick="PF('confirmacaoExclusao').hide(); return false;" />
+		</p:confirmDialog>
+	</h:form>
+		<!-- ==================================================================================== -->
+		<!-- ====================== Diálogo para cadastrar novo Palestrante ===================== -->
+		<!-- ==================================================================================== -->
+		<p:dialog id="dialogNovoPalestrante" header="Lançar novo Palestrante"
+				  modal="true" widgetVar="dlgNovoPalestrante"
+				  style="background-color:#EBF3FE" resizable="false" width="760px"
+				  height="204px">
+			<h:form id="cadNovoPalestrante">
+				<p:panel id="panelDadosPalestrante" style="background-color: #ffffe6">
+						<h:message />
+						<h:inputHidden value="#{palestranteBean.palestrante.id}" />
+						<p:focus for="ecc" />
+						<h:panelGrid columns="3">
+							<h:outputLabel value="ECC" for="ecc" />
+							<h:outputLabel value="Palestra" for="palestra"/>
+							<h:outputLabel value="Data" for="data" />
+							<p:selectOneMenu id="ecc" value="#{palestranteBean.ecc}"
+											 required="true"
+											 requiredMessage="Selecione o ECC."
+											 style="width:105px" converter="eccConverter"
+											 filter="true">
+								<f:selectItem itemLabel="Selecione o ECC" noSelectionOption="true" />
+								<f:selectItems value="#{eccBean.listarEccAtivoEncerradoNao}"
+											   var="ecc" itemValue="#{ecc}"
+											   itemLabel="#{ecc.numero}" />
+							</p:selectOneMenu>
+							<p:selectOneMenu id="palestra" converter="palestraConverter"
+											 required="true"
+											 requiredMessage="Selecione a Palestra."
+											 value="#{palestranteBean.palestra}" style="width:370px"
+											 filter="true" filterMatchMode="contains">
+								<f:selectItem itemLabel="Selecione a Palestra" noSelectionOption="true" />
+								<f:selectItems value="#{palestraBean.lista}"
+											   var="palestra" itemValue="#{palestra}"
+											   itemLabel="#{palestra.descricao}" />
+								<p:ajax event="change" update="padreJovem casal" process="@this" listener="#{palestranteBean.onChangePalestra}" />
+							</p:selectOneMenu>
+							<p:calendar id="data" mask="99/99/9999"
+										required="true" requiredMessage="O Campo Data da Palestra é obrigatório"
+										value="#{palestranteBean.palestrante.dataPalestra}"
+										pattern="dd/MM/yyyy"/>
+						</h:panelGrid>
+						<h:panelGrid columns="1">
+							<h:outputLabel value="Padre/Jovem" for="padreJovem" />
+							<p:inputText id="padreJovem" value="#{palestranteBean.palestrante.palestrante}"
+										 maxlength="200" style="width:458px;"
+										 disabled="#{palestranteBean.palestra.casal}">
+							</p:inputText>
+						</h:panelGrid>
+						<h:panelGrid columns="1">
+							<h:outputLabel value="Nome do Casal" for="casal" />
+							<p:selectOneMenu id="casal" value="#{palestranteBean.ficha}" disabled="#{not palestranteBean.palestra.casal}"
+											 style="width:440px" converter="fichaConverter"
+											 filter="true" filterMatchMode="contains">
+								<f:selectItem itemLabel="Selecione o casal" noSelectionOption="true" />
+								<f:selectItems value="#{fichaBean.listaEncontristas}"
+											   var="casal" itemValue="#{casal}"
+											   itemLabel="#{casal.nomeUsual}" />
+							</p:selectOneMenu>
+						</h:panelGrid>
+						<h:panelGrid columns="2">
+							<h:outputLabel value="" />
+							<p:commandButton value="Salvar" action="#{palestranteBean.salvarPalestrante()}"
+											 update=":listagemPalestrantes @form" oncomplete="if(!args.validationFailed){PF('dlgNovoPalestrante').hide();}"
+											 icon="ui-icon-disk" process="@form">
+							</p:commandButton>
+						</h:panelGrid>
+				</p:panel>
+			</h:form>
+		</p:dialog>
+		<!-- ==================================================================================== -->
+		<!-- ===================== Diálogo para alterar um Palestrante +++======================= -->
+		<!-- ==================================================================================== -->
+		<p:dialog id="dialogEditarPalestrante" header="Alterar Palestrante"
+				  modal="true" widgetVar="dlgEditarPalestrante"
+				  style="background-color:#EBF3FE" resizable="false" width="760px"
+				  height="204px">
+			<h:form id="cadEditarPalestrante">
+				<p:panel id="panelEditarPalestrante" style="background-color: #ffffe6">
+						<h:message />
+						<h:inputHidden value="#{palestranteBean.palestrante.id}" />
+						<h:panelGrid columns="3">
+							<h:outputLabel value="ECC" for="ecc" />
+							<h:outputLabel value="Palestra" for="palestra"/>
+							<h:outputLabel value="Data" for="data" />
+							<p:selectOneMenu id="ecc" value="#{palestranteBean.palestrante.ecc}"
+											 required="true"
+											 requiredMessage="Selecione o ECC."
+											 style="width:105px" converter="eccConverter"
+											 filter="true">
+								<f:selectItem itemLabel="Selecione o ECC" noSelectionOption="true" />
+								<f:selectItems value="#{eccBean.listarEccAtivoEncerradoNao}"
+											   var="ecc" itemValue="#{ecc}"
+											   itemLabel="#{ecc.numero}" />
+							</p:selectOneMenu>
+							<p:selectOneMenu id="palestra" converter="palestraConverter"
+											 required="true"
+											 requiredMessage="Selecione a Palestra."
+											 value="#{palestranteBean.palestrante.palestra}" style="width:370px">
+								<f:selectItem itemLabel="Selecione a Palestra" noSelectionOption="true" />
+								<f:selectItems value="#{palestraBean.lista}"
+											   var="palestra" itemValue="#{palestra}"
+											   itemLabel="#{palestra.descricao}" />
+								<p:ajax event="change" update="padreJovem casal" process="@this" listener="#{palestranteBean.onChangePalestra}" />
+							</p:selectOneMenu>
+							<p:calendar id="data" mask="99/99/9999"
+										required="true" requiredMessage="O Campo Data da Palestra é obrigatório"
+										value="#{palestranteBean.palestrante.dataPalestra}"
+										pattern="dd/MM/yyyy"/>
+						</h:panelGrid>
+						<h:panelGrid columns="1">
+							<h:outputLabel value="Padre/Jovem" for="padreJovem" />
+							<p:inputText id="padreJovem" value="#{palestranteBean.palestrante.palestrante}"
+										 maxlength="200" style="width:458px;"
+										 disabled="#{palestranteBean.palestrante.palestra.casal}">
+							</p:inputText>
+						</h:panelGrid>
+						<h:panelGrid columns="1">
+							<h:outputLabel value="Nome do Casal" for="casal" />
+							<p:selectOneMenu id="casal" value="#{palestranteBean.palestrante.ficha}" disabled="#{not palestranteBean.palestrante.palestra.casal}"
+											 style="width:440px" converter="fichaConverter"
+											 filter="true" filterMatchMode="contains">
+								<f:selectItem itemLabel="Selecione o casal" noSelectionOption="true" />
+								<f:selectItems value="#{fichaBean.listaEncontristas}"
+											   var="casal" itemValue="#{casal}"
+											   itemLabel="#{casal.nomeUsual}" />
+							</p:selectOneMenu>
+						</h:panelGrid>
+						<h:panelGrid columns="2">
+							<h:outputLabel value="" />
+							<p:commandButton value="Alterar" style="margin-left: 10px;"
+											 action="#{palestranteBean.alterarPalestrante()}" icon="ui-icon-check"
+											 update=":listagemPalestrantes @form" process="@form"
+											 oncomplete="if(!args.validationFailed){PF('dlgEditarPalestrante').hide();}" />
+						</h:panelGrid>
+					</p:panel>
+			</h:form>
+		</p:dialog>
+		<p:dialog widgetVar="statusDialog" modal="true" draggable="false"
+				  closable="false" resizable="false" showHeader="false" width="250px">
+			<div id="divLoadingFora">
+				<div id="divLoadingEsquerda">
+					<h:graphicImage library="imagens" name="SLG.ico" width="60" height="60" />
+				</div>
+				<div id="divLoadingDireita">
+					<h:outputLabel value="Processando..." />
+					<h:graphicImage library="imagens" name="barra.gif" />
+				</div>
+			</div>
+		</p:dialog>
+</h:body>
+</html>

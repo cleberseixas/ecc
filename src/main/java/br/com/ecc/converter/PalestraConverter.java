@@ -6,6 +6,6 @@ import br.com.ecc.util.BaseConverter;
 
 import javax.faces.convert.FacesConverter;
 
-@FacesConverter(forClass=Palestra.class)
+@FacesConverter(forClass=Palestra.class, value="palestraConverter")
 public class PalestraConverter extends BaseConverter<Palestra, PalestraService> {
 }	

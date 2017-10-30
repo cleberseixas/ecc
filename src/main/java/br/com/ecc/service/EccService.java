@@ -82,6 +82,15 @@ public class EccService implements Serializable {
 		}
 	}
 
+	public List<Ecc> listarEccAtivoEncerradoNao(){
+		try {
+			return eccRepository.listarEccAtivoEncerradoNao();
+		} catch(NegocioException e){
+			FacesMessages.error(e.getMessage());
+			return null;
+		}
+	}
+
 	public List<Ecc> listarEccAtividades(){
 		try {
 			return eccRepository.listarEccAtividade();
