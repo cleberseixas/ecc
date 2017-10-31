@@ -65,6 +65,9 @@ public class FichaBean implements Serializable {
 
 	private boolean habilitaBotaoDetalhesFicha = true;
 
+	private String situacaoFicha = "TODAS";
+
+	private String nomeUsualCasalBusca = "";
 
 	@Inject
 	private FichaService fichaService;
@@ -237,6 +240,21 @@ public class FichaBean implements Serializable {
 		this.habilitaBotaoDetalhesFicha = habilitaBotaoDetalhesFicha;
 	}
 
+	public String getSituacaoFicha() {
+		return situacaoFicha;
+	}
+
+	public void setSituacaoFicha(String situacaoFicha) {
+		this.situacaoFicha = situacaoFicha;
+	}
+
+	public String getNomeUsualCasalBusca() {
+		return nomeUsualCasalBusca;
+	}
+
+	public void setNomeUsualCasalBusca(String nomeUsualCasalBusca) {
+		this.nomeUsualCasalBusca = nomeUsualCasalBusca;
+	}
 
 	public void verificaSO() {
 		pathFoto = Util.retornaPathFotoSistemaOperacional();
@@ -481,6 +499,10 @@ public class FichaBean implements Serializable {
 
 	public void removeAptidaoLimbo() {
 		aptidaoService.removeAptidaoLimbo();
+	}
+
+	public void filtraFicha() {
+		listaFichas = fichaService.filtraFichaSituacaoeNomeUsual(situacaoFicha, nomeUsualCasalBusca);
 	}
 
 }

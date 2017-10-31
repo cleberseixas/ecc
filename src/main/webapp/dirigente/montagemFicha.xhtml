@@ -159,8 +159,30 @@
 			</div>
 		</div>
 		<br />
+		<p:focus for="nomeUsualCasalBusca" />
 		<p:ajaxStatus onstart="PF('statusDialog').show()" onsuccess="PF('statusDialog').hide()" />
 		<p:growl id="growl" showDetail="false" life="4000" autoUpdate="true" />
+		<p:toolbar>
+			<f:facet name="left">
+				<h:panelGrid columns="7">
+					<p:outputLabel value="Nome Usual Casal:" />
+					<p:inputText id="nomeUsualCasalBusca" value="#{fichaBean.nomeUsualCasalBusca}"
+								 maxlength="100" style="width:330px;">
+					</p:inputText>
+					<p:selectOneButton style="margin-left:5px;" id="statusFicha"
+									   value="#{fichaBean.situacaoFicha}">
+						<f:selectItem itemLabel="TODAS" itemValue="TODAS" />
+						<f:selectItem itemLabel="ENCONTRISTA" itemValue="ENCONTRISTA" />
+						<f:selectItem itemLabel="ENCONTREIRO" itemValue="ENCONTREIRO" />
+						<f:selectItem itemLabel="PENDENTE" itemValue="PENDENTE" />
+						<f:selectItem itemLabel="AUSÊNCIA JUSTIFICADA" itemValue="AUSÊNCIA JUSTIFICADA" />
+					</p:selectOneButton >
+					<p:commandButton icon="ui-icon-search" update="fichas" process="@this statusFicha nomeUsualCasalBusca"
+									 action="#{fichaBean.filtraFicha()}"/>
+				</h:panelGrid>
+			</f:facet>
+
+		</p:toolbar>
 		<br />
 				<p:dataTable id="fichas" value="#{fichaBean.listaFichas}" var="ficha" rowIndexVar="index" selection="#{fichaBean.ficha}"
 							 selectionMode="single" rowKey="#{ficha.id}"
@@ -218,14 +240,17 @@
 					<p:ajax event="rowSelect"
 							listener="#{fichaBean.onRowSelectEcc}"
 							update="btnEditar btnExcluir btnAnexar btnIncluiAptidoes btnDetalhes btnIncluiAtividades" />
-					<p:column headerText="ECC" width="30">
+					<p:column headerText="ECC" width="20">
 						<p:outputLabel value="#{ficha.primeiraEtapa}"/>
 					</p:column>
 					<p:column width="130">
 						<f:facet name="header">Nome Usual Casal</f:facet>
 						#{ficha.nomeUsual}
+						<h:graphicImage library="imagens" name="inativo.png" rendered="#{not ficha.ativo}"
+										style="width:20px; height:20px; float: right;" title="Inativo"/>
+
 					</p:column>
-					<p:column headerText="Situação" width="70">
+					<p:column headerText="Situação" width="100">
 						<p:outputLabel value="#{ficha.situacao}"/>
 					</p:column>
 					<p:column headerText="Nome Ele" width="200">
@@ -248,8 +273,13 @@
 					</p:column>
 					<p:column headerText="Nome Ela" width="200">
 						<p:outputLabel value="#{ficha.nomeEla}"/>
+						<h:graphicImage library="imagens" value="/image?imagem=#{ficha.fotoEla}" rendered="#{ficha.fotoEla.length() > 0}"
+										style="width:20px; height:20px; float: right;" title="Foto dela"/>
+
+						<!--
 						<h:graphicImage library="imagens" name="photo.png" rendered="#{ficha.fotoEla.length() > 0}"
 										style="width:20px; height:20px; float: right;" title="Foto dela"/>
+						-->
 					</p:column>
 					<p:column headerText="Último Trabalho" width="140">
 						<p:outputLabel value="#{ficha.ultimoTrabalho.descricao}"/>
@@ -270,7 +300,7 @@
 					<p:column headerText="Telefone Ela" width="60">
 						<p:outputLabel value="#{ficha.telefoneEla}"/>
 					</p:column>
-					<p:column width="50" headerText="Atividades">
+					<p:column width="35" headerText="Atividades">
 						#{ficha.atividades.size()}
 						<h:graphicImage library="imagens" name="dirigentes2.png" width="15" height="15" rendered="#{ficha.atividades.size() > 0}"
 										style="float: right;" title="Atividades"/>

@@ -6,7 +6,7 @@
 						http://www.springframework.org/schema/security
 						http://www.springframework.org/schema/security/spring-security-3.1.xsd">
 
-	<http access-denied-page="/negado.xhtml">
+	<http access-denied-page="/publico/negado.xhtml">
 		
 		<intercept-url  pattern="/restrito/**" access="ROLE_USUARIO,ROLE_ADMINISTRADOR,ROLE_DIRIGENTE" />
 		<intercept-url pattern="/administrador/**" access="ROLE_ADMINISTRADOR"/>

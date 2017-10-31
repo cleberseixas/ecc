@@ -128,7 +128,7 @@ public class Ficha implements Serializable {
     @Column(name="ATIVO", nullable = false)
     private boolean ativo = true;
 
-    @Column(name="MOTIVO", length=20, nullable = true)
+    @Column(name="MOTIVO", length=200, nullable = true)
     private String motivo;
 
     @ManyToMany(fetch= FetchType.EAGER, cascade = CascadeType.ALL)

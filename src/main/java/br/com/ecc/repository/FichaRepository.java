@@ -42,4 +42,30 @@ public class FichaRepository {
 		query.setParameter("SITUACAO", parametro);
 		return query.getResultList();
 	}
+
+	public List<Ficha> filtraFichaSituacaoeNomeUsual(String situacao, String nomeUsualCasal) {
+		TypedQuery<Ficha> query = null;
+		if (situacao.equals("TODAS")) {
+			if (nomeUsualCasal.trim().length() > 0) {
+				query = manager.createQuery("from Ficha "
+						+" where nomeUsual like :NU order by nomeUsual", Ficha.class);
+				query.setParameter("NU", "%"+nomeUsualCasal+"%");
+			} else {
+				query = manager.createQuery("from Ficha order by nomeUsual", Ficha.class);
+			}
+		} else {
+			if (nomeUsualCasal.trim().length() > 0) {
+				query = manager.createQuery("from Ficha "
+						+ " where situacao = :SI "
+						+ " and nomeUsual like :NU order by nomeUsual", Ficha.class);
+				query.setParameter("SI", situacao);
+				query.setParameter("NU", "%" + nomeUsualCasal + "%");
+			} else {
+				query = manager.createQuery("from Ficha "
+						+" where situacao = :SI order by nomeUsual", Ficha.class);
+				query.setParameter("SI", situacao);
+			}
+		}
+		return query.getResultList();
+	}
 }
