@@ -69,5 +69,14 @@ public class EquipeService implements Serializable {
 		}
 	}
 
+	public List<Equipe> listarEquipeAutomatica(){
+		try {
+			return equipeRepository.listarEquipeAutomatica();
+		} catch(NegocioException e){
+			FacesMessages.error(e.getMessage());
+			return null;
+		}
+	}
+
 
 }

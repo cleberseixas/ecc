@@ -48,12 +48,12 @@ public class PalestranteBean implements Serializable {
 		this.ficha = new Ficha();
 	}
 	public void salvarPalestrante() {
-		if (null == this.getEcc()) {
+		if (null == this.ecc) {
 				FacesMessages.error("Favor informar o ECC");
 				RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
 				return;
 		}
-		if (null == this.getPalestra()) {
+		if (null == this.palestra) {
 			FacesMessages.error("Favor informar a Palestra");
 			RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
 			return;
@@ -65,7 +65,7 @@ public class PalestranteBean implements Serializable {
 		}
 
 		if (this.palestra.isCasal()) {
-			if (null == this.getFicha()) {
+			if (null == this.ficha) {
 				FacesMessages.error("Favor informar o Casal Palestrante");
 				RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
 				return;

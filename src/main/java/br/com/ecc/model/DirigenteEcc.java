@@ -21,7 +21,7 @@ import java.util.List;
 @Entity
 @Table(name = "DIRIGENTES")
 @SequenceGenerator(name = "seq_dirigentes", sequenceName = "seq_dirigentes", allocationSize=1)
-public class Dirigente implements Serializable{
+public class DirigenteEcc implements Serializable{
     private static final long serialVersionUID = 5783412212859462833L;
 
     @Id
@@ -81,7 +81,7 @@ public class Dirigente implements Serializable{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Dirigente dirigente = (Dirigente) o;
+        DirigenteEcc dirigente = (DirigenteEcc) o;
 
         return id != null ? id.equals(dirigente.id) : dirigente.id == null;
     }

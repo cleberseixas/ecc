@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<title>ECC-SLG</title>
+	<link rel="shortcut icon" href="../resources/imagens/SLG.ico" />
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+	<h:outputScript library="js" name="locale-primefaces.js" />
+	<h:outputScript library="js" name="bootstrap.min.js" />
+
+	<h:outputStylesheet library="css" name="modelo.css" />
+	<h:outputStylesheet library="css" name="menu.css" />
+	<h:outputStylesheet library="css" name="AdminLTE.css" />
+	<h:outputStylesheet library="css" name="font-awesome.min.css" />
+</h:head>
+
+<h:body style="background-color:#EBF3FE">
+	<h:form id="listagemEquipesEcc">
+		<div id="menubar">
+			<li class="icone"><h:graphicImage library="imagens" name="logo_ECC.png" width="400" height="72" /></li>
+			<ul>
+				<h:panelGroup rendered="#{contextoBean.usuarioLogado.perfil eq 'Administrador'}">
+					<li>
+						<a><h:graphicImage library="imagens/menu"
+										   style="width:35px; height:35px;" name="cadastros.png" />Cadastros</a>
+						<ul>
+							<li><h:graphicImage library="imagens/menu"
+												style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+												name="circulos.png" /><a
+									href="../administrador/circulo.xhtml">Circulos</a>
+							</li>
+
+							<li><h:graphicImage library="imagens/menu"
+												style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+												name="palestras.png" /><a
+									href="../administrador/palestra.xhtml">Palestras</a>
+							</li>
+							<li><h:graphicImage library="imagens/menu"
+												style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+												name="equipes.png" /><a
+									href="../administrador/equipe.xhtml">Equipes</a>
+							</li>
+							<li><h:graphicImage library="imagens/menu"
+												style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+												name="usuarios.png" /><a
+									href="usuario.xhtml">Usuários</a>
+							</li>
+						</ul>
+					</li>
+				</h:panelGroup>
+				<li><a><h:graphicImage library="imagens/menu"
+									   style="width:35px; height:35px;" name="montagem.png" />Montagem</a>
+					<ul>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="ecc.png" /><a
+								href="ecc.xhtml">ECC</a>
+						</li>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="fichas.png" /><a href="montagemFicha.xhtml">Fichas
+						</a></li>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="montagemEquipes.png" />
+						<a style="color: #808080; background: #a0c0de; opacity: 1;
+							filter: alpha(opacity = 100); border-bottom: 3px solid #b1b1b1;">Equipes</a>
+						</li>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="montagemCasais.png" /><a
+								href="montagemEncontristas.xhtml">Encontristas</a>
+						</li>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="montagemPalestrantes.png" />
+							<a href="montagemPalestrante.xhtml">Palestrantes</a>
+						</li>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="montagemCirculos.png" /><a
+								href="montagemCirculos.xhtml">Círculos</a></li>
+
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div id="status" style="...">
+			<div id="ico">
+				<h1>
+					<h:graphicImage library="imagens/menu" name="montagemEquipes.png"
+									width="25px" height="25px" />
+					<h5>
+						<b>Equipes</b>
+					</h5>
+					<p:commandButton type="button" value="Sair" icon="ui-icon-extlink"
+									 style="float: right; margin-right:5px; margin-top: -5px;"
+									 onclick="document.location='#{request.contextPath}/j_spring_security_logout'" />
+				</h1>
+			</div>
+			<div id="img-usuario-logado">
+				<h5>Usuário logado: #{contextoBean.usuarioLogado.nome}</h5>
+				<h1>
+					<h:graphicImage library="imagens/menu" name="usuarioLogado.png"
+									width="25px" height="25px" />
+				</h1>
+			</div>
+		</div>
+		<br />
+		<p:ajaxStatus onstart="PF('statusDialog').show()" onsuccess="PF('statusDialog').hide()" />
+		<f:metadata>
+			<f:viewAction action="#{equipeEccBean.removeCasaisLimbo()}" />
+		</f:metadata>
+
+		<p:growl id="growl" showDetail="false" life="4000" autoUpdate="true" />
+		<br />
+				<p:dataTable id="equipesEcc" value="#{equipeEccBean.listaEquipeEcc}" var="equipeEcc" rowIndexVar="index" selection="#{equipeEccBean.equipeEcc}"
+							 selectionMode="single" rowKey="#{equipeEcc.id}"
+							 emptyMessage="Não há Equipes cadastradas" style="width:1120px;">
+					<f:facet name="header">
+						<h:panelGrid columns="2" styleClass="semBordaInterna"
+									 columnClasses="tituloGridSolicitacao, botoesGridSolicitacao">
+							<p:outputLabel value="Lista de Equipes Cadastradas"
+										   style="float:left;" />
+							<h:panelGroup style="float:right;">
+								<p:commandButton action="#{equipeEccBean.novaEquipe}"
+												 icon="ui-icon-document" value="Nova Equipe"
+												 onclick="PF('dlgNovaEquipeEcc').show()" update=":cadNovaEquipeEcc"
+												 process="@this"
+												 style="margin-right:15px; background-color:#a0c0de;"/>
+								<p:commandButton id="btnEditar" value="Editar"
+												 icon="ui-icon-pencil" style="margin-left: 5px;"
+												 onclick="PF('dlgEditarEquipeEcc').show()" update=":cadEditarEquipeEcc"
+												 title="Altera as informações da Equipe selecionada."
+												 disabled="#{equipeEccBean.habilitaBotaoEditarEquipeEcc}"/>
+								<p:commandButton id="btnExcluir" value="Excluir"
+												 icon="ui-icon-trash" style="margin-left: 5px;"
+												 disabled="#{equipeEccBean.habilitaBotaoExcluirEquipeEcc}"
+												 title="Remove a Equipe selecionada."
+												 oncomplete="PF('confirmacaoExclusao').show()" immediate="true"
+												 process="@this"
+												 update=":listagemEquipesEcc:confirmacaoExclusaoDialog"/>
+								<p:commandButton id="btnIncluiCasais" value="Inclui Casais"
+												 icon="ui-icon-person" style="margin-left: 5px;"
+												 process="@this"
+												 onclick="PF('dlgNovosCasais').show()" update=":cadNovosCasais"
+												 title="Adiciona casais a Equipe selecionada."
+												 disabled="#{equipeEccBean.habilitaBotaoIncluiCasais}"/>
+							</h:panelGroup>
+						</h:panelGrid>
+					</f:facet>
+					<p:ajax event="rowSelect"
+							listener="#{equipeEccBean.onRowSelectEquipeEcc}"
+							update="btnEditar btnExcluir btnIncluiCasais" />
+					<p:column width="30">
+						<f:facet name="header">Número</f:facet>
+						#{equipeEcc.ecc.numero}
+						<h:graphicImage library="imagens" name="cadeado.png" width="15" height="15" rendered="#{palestrante.ecc.situacao eq 'ENCERRADO'}"
+										style="float: right;" title="Encerrado"/>
+					</p:column>
+					<p:column headerText="Equipe" width="190">
+						<p:outputLabel value="#{equipeEcc.equipe.descricao}"/>
+					</p:column>
+					<p:column headerText="Casal Coordenador" width="200">
+						<p:outputLabel value="#{equipeEcc.casalCoordenador.nomeUsual}"/>
+					</p:column>
+					<p:column headerText="Total" width="20">
+						<p:outputLabel value="#{equipeEcc.equipe.maximoCasal}"/>
+					</p:column>
+					<p:column width="50" headerText="Equipe">
+						#{equipeEcc.equipesEccCasais.size()}
+						<h:graphicImage library="imagens" name="dirigentes2.png" width="15" height="15" rendered="#{ecc.dirigentes.size() > 0}"
+										style="float: right;" title="Casais"/>
+					</p:column>
+				</p:dataTable>
+		<!-- ======================================================================= -->
+		<!-- Caixa de diálogo para confirmar exclusão da Equipe				         -->
+		<!-- ======================================================================= -->
+		<p:confirmDialog header="Excluir Equipe"
+						 message="Confirmar a exclusão da Equipe #{equipeEccBean.equipeEcc.equipe.descricao}?"
+						 widgetVar="confirmacaoExclusao" id="confirmacaoExclusaoDialog">
+			<p:commandButton value="Sim"
+							 onclick="PF('confirmacaoExclusao').hide();"
+							 action="#{equipeEccBean.excluirEquipe()}" update="equipesEcc" />
+			<p:button value="Não"
+					  onclick="PF('confirmacaoExclusao').hide(); return false;" />
+		</p:confirmDialog>
+	</h:form>
+		<!-- ==================================================================================== -->
+		<!-- ====================== Diálogo para cadastrar nova Equipe ECC ====================== -->
+		<!-- ==================================================================================== -->
+		<p:dialog id="dialogNovaEquipeEcc" header="Lançar nova Equipe"
+				  modal="true" widgetVar="dlgNovaEquipeEcc"
+				  style="background-color:#EBF3FE" resizable="false" width="590px"
+				  height="155px">
+			<h:form id="cadNovaEquipeEcc">
+				<p:panel id="panelDadosEquipeEcc" style="background-color: #ffffe6">
+						<h:message />
+						<h:inputHidden value="#{equipeEccBean.equipeEcc.id}" />
+						<p:focus for="ecc" />
+						<h:panelGrid columns="2">
+							<h:outputLabel value="ECC" for="ecc" />
+							<h:outputLabel value="Equipe" for="equipe"/>
+							<p:selectOneMenu id="ecc" value="#{equipeEccBean.ecc}"
+											 required="true"
+											 requiredMessage="Selecione o ECC."
+											 style="width:105px" converter="eccConverter"
+											 filter="true">
+								<f:selectItem itemLabel="Selecione o ECC" noSelectionOption="true" />
+								<f:selectItems value="#{eccBean.listarEccAtivoEncerradoNao}"
+											   var="ecc" itemValue="#{ecc}"
+											   itemLabel="#{ecc.numero}" />
+							</p:selectOneMenu>
+							<p:selectOneMenu id="equipe" converter="equipeConverter"
+											 required="true"
+											 requiredMessage="Selecione a Equipe."
+											 value="#{equipeEccBean.equipe}" style="width:370px"
+											 filter="true" filterMatchMode="contains">
+								<f:selectItem itemLabel="Selecione a Equipe" noSelectionOption="true" />
+								<f:selectItems value="#{equipeEccBean.listaEquipe}"
+											   var="equipe" itemValue="#{equipe}"
+											   itemLabel="#{equipe.descricao}" />
+							</p:selectOneMenu>
+						</h:panelGrid>
+						<h:panelGrid columns="1">
+							<h:outputLabel value="Casal Coordenador" for="casalCoordenador" />
+							<p:selectOneMenu id="casalCoordenador" value="#{equipeEccBean.casalCoordenador}"
+											 style="width:505px" converter="fichaConverter"
+											 filter="true" filterMatchMode="contains">
+								<f:selectItem itemLabel="Selecione o Casal Coordenador" noSelectionOption="true" />
+								<f:selectItems value="#{equipeEccBean.listaCasalCoordenador}"
+											   var="casal" itemValue="#{casal}"
+											   itemLabel="#{casal.nomeUsual}" />
+							</p:selectOneMenu>
+						</h:panelGrid>
+						<h:panelGrid columns="2">
+							<h:outputLabel value="" />
+							<p:commandButton value="Salvar" action="#{equipeEccBean.salvarEquipe}"
+											 update=":listagemEquipesEcc @form" oncomplete="if(!args.validationFailed){PF('dlgNovaEquipeEcc').hide();}"
+											 icon="ui-icon-disk" process="@form">
+							</p:commandButton>
+						</h:panelGrid>
+				</p:panel>
+			</h:form>
+		</p:dialog>
+		<!-- ==================================================================================== -->
+		<!-- ===================== Diálogo para alterar uma Equipe ECC ========================== -->
+		<!-- ==================================================================================== -->
+		<p:dialog id="dialogEditarEquipeEcc" header="Alterar Equipe"
+				  modal="true" widgetVar="dlgEditarEquipeEcc"
+				  style="background-color:#EBF3FE" resizable="false" width="590px"
+				  height="155px">
+			<h:form id="cadEditarEquipeEcc">
+				<p:panel id="panelEditarEquipeEcc" style="background-color: #ffffe6">
+					<h:message />
+					<h:inputHidden value="#{equipeEccBean.equipeEcc.id}" />
+					<p:focus for="ecc" />
+					<h:panelGrid columns="2">
+						<h:outputLabel value="ECC" for="ecc" />
+						<h:outputLabel value="Equipe" for="equipe"/>
+						<p:selectOneMenu id="ecc" value="#{equipeEccBean.equipeEcc.ecc}" disabled="true"
+										 required="true"
+										 requiredMessage="Selecione o ECC."
+										 style="width:105px" converter="eccConverter"
+										 filter="true">
+							<f:selectItem itemLabel="Selecione o ECC" noSelectionOption="true" />
+							<f:selectItems value="#{eccBean.listarEccAtivoEncerradoNao}"
+										   var="ecc" itemValue="#{ecc}"
+										   itemLabel="#{ecc.numero}" />
+						</p:selectOneMenu>
+						<p:selectOneMenu id="equipe" converter="equipeConverter" disabled="true"
+										 required="true"
+										 requiredMessage="Selecione a Equipe."
+										 value="#{equipeEccBean.equipeEcc.equipe}" style="width:370px"
+										 filter="true" filterMatchMode="contains">
+							<f:selectItem itemLabel="Selecione a Equipe" noSelectionOption="true" />
+							<f:selectItems value="#{equipeEccBean.listaEquipe}"
+										   var="equipe" itemValue="#{equipe}"
+										   itemLabel="#{equipe.descricao}" />
+						</p:selectOneMenu>
+					</h:panelGrid>
+					<h:panelGrid columns="1">
+						<h:outputLabel value="Casal Coordenador" for="casalCoordenador" />
+						<p:selectOneMenu id="casalCoordenador" value="#{equipeEccBean.equipeEcc.casalCoordenador}"
+										 style="width:505px" converter="fichaConverter"
+										 filter="true" filterMatchMode="contains">
+							<f:selectItem itemLabel="Selecione o Casal Coordenador" noSelectionOption="true" />
+							<f:selectItems value="#{equipeEccBean.listaCasalCoordenador}"
+										   var="casal" itemValue="#{casal}"
+										   itemLabel="#{casal.nomeUsual}" />
+						</p:selectOneMenu>
+					</h:panelGrid>
+					<h:panelGrid columns="2">
+						<h:outputLabel value="" />
+						<p:commandButton value="Alterar" action="#{equipeEccBean.alterarEquipe}"
+										 update=":listagemEquipesEcc @form" oncomplete="if(!args.validationFailed){PF('dlgEditarEquipeEcc').hide();}"
+										 icon="ui-icon-disk" process="@form">
+						</p:commandButton>
+					</h:panelGrid>
+				</p:panel>
+			</h:form>
+		</p:dialog>
+		<!-- ==================================================================================== -->
+		<!-- ========================= Diálogo para incluir Casais ============================== -->
+		<!-- ==================================================================================== -->
+		<p:dialog id="dialogNovosCasais" header="Lançar Casais na Equipe"
+				  modal="true" widgetVar="dlgNovosCasais"
+				  style="background-color:#EBF3FE" resizable="false" width="820px"
+				  height="464px">
+			<h:form id="cadNovosCasais">
+				<h:message />
+				<p:panel id="panelDadosCasais" style="background-color: #ffffe6">
+					<h:inputHidden value="#{equipeEccBean.equipeEcc.id}" />
+					<p:panel id="basic"
+							 style="background-color:#EBF3FE; width:764px;"
+							 visible="true">
+						<p:outputLabel
+								value="ECC nº #{equipeEccBean.equipeEcc.ecc.numero} - Tema: #{equipeEccBean.equipeEcc.ecc.tema}"
+								styleClass="negrito" style="margin-left:5px;" />
+					</p:panel>
+					<p:panel id="basic1"
+							 style="background-color:#EBF3FE; width:764px;"
+							 visible="true">
+						<p:outputLabel
+								value="Equipe: #{equipeEccBean.equipeEcc.equipe.descricao} - Máximo de Casais: #{equipeEccBean.equipeEcc.equipe.maximoCasal}"
+								styleClass="negrito" style="margin-left:5px;" />
+					</p:panel>
+
+					<h:panelGrid columns="2">
+						<h:outputLabel value="Nome do Casal" for="casal" />
+						<h:outputLabel value="" />
+						<p:selectOneMenu id="casal" value="#{equipeEccBean.casal}"
+										 required="true"
+										 requiredMessage="Selecione o casal."
+										 style="width:435px" converter="fichaConverter"
+										 filter="true" filterMatchMode="contains">
+							<f:selectItem itemLabel="Selecione o casal" noSelectionOption="true" />
+							<f:selectItems value="#{fichaBean.listaEncontristas}"
+										   var="casal" itemValue="#{casal}"
+										   itemLabel="#{casal.nomeUsual}" />
+						</p:selectOneMenu>
+						<p:commandButton process="@this, casal" value="Incluir"
+										 style="margin-left:10px;"
+										 action="#{equipeEccBean.salvaCasal()}" icon="ui-icon-check"
+										 title="Incluir um novo casal..."
+										 update="casal, cadNovosCasais:tabelaCasais, listagemEquipesEcc:equipesEcc">
+						</p:commandButton>
+					</h:panelGrid>
+					<h:panelGrid>
+						<p:panel id="informacao"
+								 style="background-color:#EBF3FE; width:764px;"
+								 visible="true">
+							<p:outputLabel
+									value="Membros da Equipe"
+									styleClass="negrito" style="margin-left:5px;" />
+						</p:panel>
+					</h:panelGrid>
+					<h:panelGrid columns="3">
+						<p:dataTable id="tabelaCasais"
+									 style="margin-right: 10px; width:770px;"
+									 value="#{equipeEccBean.equipeEcc.equipesEccCasais}" var="casal"
+									 emptyMessage="Não há Casais cadastrados" rowIndexVar="index">
+							<f:facet name="header">
+								<p:outputLabel value="Total de Casais - #{equipeEccBean.equipeEcc.equipesEccCasais.size()}" />
+							</f:facet>
+							<p:column headerText="Casal" width="200">
+								<p:outputLabel value="#{casal.ficha.nomeUsual}" />
+							</p:column>
+							<p:column headerText="Excluir" styleClass="Gildasio" width="40">
+								<p:commandLink update=":cadNovosCasais:tabelaCasais, listagemEquipesEcc:equipesEcc"
+											   process="@this" action="#{equipeEccBean.removeCasal()}">
+									<h:graphicImage library="imagens" name="remover.png" />
+									<f:setPropertyActionListener target="#{equipeEccBean.equipeEccCasal}"
+																 value="#{casal}" />
+								</p:commandLink>
+							</p:column>
+						</p:dataTable>
+					</h:panelGrid>
+
+				</p:panel>
+			</h:form>
+		</p:dialog>
+		<p:dialog widgetVar="statusDialog" modal="true" draggable="false"
+				  closable="false" resizable="false" showHeader="false" width="250px">
+			<div id="divLoadingFora">
+				<div id="divLoadingEsquerda">
+					<h:graphicImage library="imagens" name="SLG.ico" width="60" height="60" />
+				</div>
+				<div id="divLoadingDireita">
+					<h:outputLabel value="Processando..." />
+					<h:graphicImage library="imagens" name="barra.gif" />
+				</div>
+			</div>
+		</p:dialog>
+</h:body>
+</html>

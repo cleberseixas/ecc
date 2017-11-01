@@ -1,7 +1,9 @@
 package br.com.ecc.service;
 
 import br.com.ecc.model.DirigenteEcc;
+import br.com.ecc.model.EquipeEccCasal;
 import br.com.ecc.repository.DirigenteEccRepository;
+import br.com.ecc.repository.EquipeEccCasalRepository;
 import br.com.ecc.util.FacesMessages;
 import br.com.ecc.util.NegocioException;
 import br.com.ecc.util.Transactional;
@@ -11,7 +13,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * Classe responsável por gerenciar as regras de negócio dos Dirigentes.
+ * Classe responsável por gerenciar as regras de negócio dos Casais das Equipes.
  * </br>-----------------------------------------------------------------------</br>
  *                      <b>Regras de negócio</b>
  * </br>-----------------------------------------------------------------------</br>
@@ -21,16 +23,16 @@ import java.util.List;
  * @author Cleber Seixas
  * @since 25/10/2017
  */
-public class DirigenteEccService implements Serializable {
+public class EquipeEccCasalService implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Inject
-	private DirigenteEccRepository dirigenteEccRepository;
+	private EquipeEccCasalRepository equipeEccCasalRepository;
 
 	@Transactional
-	public void salvar(DirigenteEcc dirigenteEcc){
+	public void salvar(EquipeEccCasal equipeEccCasal){
 		try{
-			this.dirigenteEccRepository.salvar(dirigenteEcc);
+			this.equipeEccCasalRepository.salvar(equipeEccCasal);
 			//FacesMessages.info("Registro gravado");
 		}catch(NegocioException e){
 			FacesMessages.error(e.getMessage());
@@ -38,32 +40,32 @@ public class DirigenteEccService implements Serializable {
 	}
 
 	@Transactional
-	public void excluir(DirigenteEcc dirigenteEcc){
-		dirigenteEcc = dirigenteEccRepository.carregar(dirigenteEcc.getId());
-		this.dirigenteEccRepository.excluir(dirigenteEcc);
+	public void excluir(EquipeEccCasal equipeEccCasal){
+		equipeEccCasal = equipeEccCasalRepository.carregar(equipeEccCasal.getId());
+		this.equipeEccCasalRepository.excluir(equipeEccCasal);
 
 	}		
 	
-	public DirigenteEcc carregar(Long id){
+	public EquipeEccCasal carregar(Long id){
 		try {
-			return dirigenteEccRepository.carregar(id);
+			return equipeEccCasalRepository.carregar(id);
 		}catch(NegocioException e){
 			FacesMessages.error(e.getMessage());
 			return null;
 		}
 	}
 
-	public List<DirigenteEcc> listar(){
+	public List<EquipeEccCasal> listar(){
 		try {
-			return dirigenteEccRepository.listar();
+			return equipeEccCasalRepository.listar();
 		} catch(NegocioException e){
 			FacesMessages.error(e.getMessage());
 			return null;
 		}
 	}
 
-	public void removeDirigenteLimbo() {
-		dirigenteEccRepository.removeDirigenteLimbo();
+	public void removeCasaisLimbo() {
+		equipeEccCasalRepository.removeCasaisLimbo();
 	}
 
 }

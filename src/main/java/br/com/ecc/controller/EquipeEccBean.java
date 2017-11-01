@@ -1,0 +1,368 @@
+package br.com.ecc.controller;
+
+import br.com.ecc.model.*;
+import br.com.ecc.service.*;
+import br.com.ecc.util.FacesMessages;
+import org.primefaces.context.RequestContext;
+import org.primefaces.event.SelectEvent;
+
+import javax.faces.event.AjaxBehaviorEvent;
+import javax.faces.view.ViewScoped;
+import javax.inject.Inject;
+import javax.inject.Named;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Classe responsável por interligar a view à regra de negócio - EquipeEcc
+ * @author Cleber Seixas
+ * @since 01/11/2017
+ */
+@Named
+@ViewScoped
+public class EquipeEccBean implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	private EquipeEcc equipeEcc = new EquipeEcc();
+
+	private Ecc ecc = new Ecc();
+
+	private Equipe equipe = new Equipe();
+
+	private Ficha casalCoordenador = new Ficha();
+
+	private Ficha casal = new Ficha();
+
+	private EquipeEccCasal equipeEccCasal = new EquipeEccCasal();
+
+	private List<EquipeEcc> listaEquipeEcc;
+
+	private List<Equipe> listaEquipe;
+
+	private List<Ficha> listaCasalCoordenador;
+
+	private boolean habilitaBotaoEditarEquipeEcc = true;
+
+	private boolean habilitaBotaoExcluirEquipeEcc = true;
+
+	private boolean habilitaBotaoIncluiCasais = true;
+
+	@Inject
+	private EquipeEccService equipeEccService;
+
+	@Inject
+	private EquipeService equipeService;
+
+	@Inject
+	private EquipeEccCasalService equipeEccCasalService;
+
+	@Inject
+	private EccService eccService;
+
+	@Inject
+	private FichaService fichaService;
+
+	public EquipeEcc getEquipeEcc() {
+		return equipeEcc;
+	}
+
+	public void setEquipeEcc(EquipeEcc equipeEcc) {
+		this.equipeEcc = equipeEcc;
+	}
+
+	public Ecc getEcc() {
+		return ecc;
+	}
+
+	public void setEcc(Ecc ecc) {
+		this.ecc = ecc;
+	}
+
+	public Equipe getEquipe() {
+		return equipe;
+	}
+
+	public void setEquipe(Equipe equipe) {
+		this.equipe = equipe;
+	}
+
+	public Ficha getCasalCoordenador() {
+		return casalCoordenador;
+	}
+
+	public void setCasalCoordenador(Ficha casalCoordenador) {
+		this.casalCoordenador = casalCoordenador;
+	}
+
+	public Ficha getCasal() {
+		return casal;
+	}
+
+	public void setCasal(Ficha casal) {
+		this.casal = casal;
+	}
+
+	public EquipeEccCasal getEquipeEccCasal() {
+		return equipeEccCasal;
+	}
+
+	public void setEquipeEccCasal(EquipeEccCasal equipeEccCasal) {
+		this.equipeEccCasal = equipeEccCasal;
+	}
+
+	public List<EquipeEcc> getListaEquipeEcc() {
+		if (this.listaEquipeEcc == null) {
+			this.listaEquipeEcc = equipeEccService.listar();
+		}
+		return this.listaEquipeEcc;
+	}
+
+	public void setListaEquipeEcc(List<EquipeEcc> listaEquipeEcc) {
+		this.listaEquipeEcc = listaEquipeEcc;
+	}
+
+	public List<Equipe> getListaEquipe() {
+		if (this.listaEquipe == null) {
+			this.listaEquipe = equipeService.listarEquipeAutomatica();
+		}
+		return this.listaEquipe;
+	}
+
+	public void setListaEquipe(List<Equipe> listaEquipe) {
+		this.listaEquipe = listaEquipe;
+	}
+
+	public List<Ficha> getListaCasalCoordenador() {
+		if (this.listaCasalCoordenador == null) {
+			this.listaCasalCoordenador = fichaService.listarCasaisCoordenadores("a");
+		}
+		return this.listaCasalCoordenador;
+	}
+
+	public void setListaCasalCoordenador(List<Ficha> listaCasalCoordenador) {
+		this.listaCasalCoordenador = listaCasalCoordenador;
+	}
+
+	public boolean isHabilitaBotaoEditarEquipeEcc() {
+		return habilitaBotaoEditarEquipeEcc;
+	}
+
+	public void setHabilitaBotaoEditarEquipeEcc(boolean habilitaBotaoEditarEquipeEcc) {
+		this.habilitaBotaoEditarEquipeEcc = habilitaBotaoEditarEquipeEcc;
+	}
+
+	public boolean isHabilitaBotaoExcluirEquipeEcc() {
+		return habilitaBotaoExcluirEquipeEcc;
+	}
+
+	public void setHabilitaBotaoExcluirEquipeEcc(boolean habilitaBotaoExcluirEquipeEcc) {
+		this.habilitaBotaoExcluirEquipeEcc = habilitaBotaoExcluirEquipeEcc;
+	}
+
+	public boolean isHabilitaBotaoIncluiCasais() {
+		return habilitaBotaoIncluiCasais;
+	}
+
+	public void setHabilitaBotaoIncluiCasais(boolean habilitaBotaoIncluiCasais) {
+		this.habilitaBotaoIncluiCasais = habilitaBotaoIncluiCasais;
+	}
+
+	public EquipeService getEquipeService() {
+		return equipeService;
+	}
+
+	public void setEquipeService(EquipeService equipeService) {
+		this.equipeService = equipeService;
+	}
+
+	public EquipeEccCasalService getEquipeEccCasalService() {
+		return equipeEccCasalService;
+	}
+
+	public void setEquipeEccCasalService(EquipeEccCasalService equipeEccCasalService) {
+		this.equipeEccCasalService = equipeEccCasalService;
+	}
+
+	public EccService getEccService() {
+		return eccService;
+	}
+
+	public void setEccService(EccService eccService) {
+		this.eccService = eccService;
+	}
+
+	public FichaService getFichaService() {
+		return fichaService;
+	}
+
+	public void setFichaService(FichaService fichaService) {
+		this.fichaService = fichaService;
+	}
+
+	private void habilitaTodosBotoesEquipeEcc() {
+		habilitaBotaoEditarEquipeEcc = false;
+		habilitaBotaoExcluirEquipeEcc = false;
+		habilitaBotaoIncluiCasais = false;
+	}
+
+	private void desabilitaTodosBotoesEquipeEcc() {
+		habilitaBotaoEditarEquipeEcc = true;
+		habilitaBotaoExcluirEquipeEcc = true;
+		habilitaBotaoIncluiCasais = true;
+	}
+
+	public void novaEquipe() {
+		this.equipeEcc = new EquipeEcc();
+		this.ecc = new Ecc();
+		this.equipe = new Equipe();
+		this.casalCoordenador = new Ficha();
+	}
+
+	private void novoCasal() {
+		this.casal = new Ficha();
+		this.equipeEccCasal = new EquipeEccCasal();
+	}
+
+	private void verificaQuantidadeCasalPorEquipe() {
+		int maximo = equipeEcc.getEquipe().getMaximoCasal().intValue();
+		int total = equipeEcc.getEquipesEccCasais().size();
+		int falta = maximo - total;
+		//Não pode mais incluir
+		if (falta == 0) {
+			FacesMessages.error("Equipe já possui a quantidade máxima de casais.");
+			RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+			return;
+		}
+	}
+
+	public void salvaCasal() {
+		int maximo = equipeEcc.getEquipe().getMaximoCasal().intValue();
+		int total = equipeEcc.getEquipesEccCasais().size();
+		int falta = maximo - total;
+		//Não pode mais incluir
+		if (falta == 0) {
+			FacesMessages.error("Equipe já possui a quantidade máxima de casais.");
+			RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+			this.novoCasal();
+			return;
+
+		} else
+		if (equipeEccService.casalJaExisteEccCoordenadorOuEquipe(equipeEcc.getEcc().getId(), casal.getId())) {
+			FacesMessages.error("Casal já faz parte de outra equipe neste ECC.");
+			RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+			this.novoCasal();
+			return;
+		} else {
+				List<EquipeEccCasal> listAux = new ArrayList<EquipeEccCasal>();
+				listAux.addAll(equipeEcc.getEquipesEccCasais());
+
+				equipeEcc.getEquipesEccCasais().clear();
+				equipeEccCasal.setEquipe(equipeEcc.getEquipe());
+				equipeEccCasal.setFicha(casal);
+				equipeEccCasal.setEquipeEcc(equipeEcc);
+				equipeEccCasalService.salvar(equipeEccCasal);
+
+				listAux.add(equipeEccCasal);
+				this.equipeEcc.setEquipesEccCasais(listAux);
+				equipeEccService.atualiza(this.equipeEcc);
+				this.novoCasal();
+				removeCasaisLimbo();
+			}
+	}
+
+	public void removeCasal() {
+		this.equipeEcc.getEquipesEccCasais().remove(equipeEccCasal);
+		equipeEccService.atualiza(equipeEcc);
+	}
+
+
+	public void removeCasaisLimbo() {
+		equipeEccCasalService.removeCasaisLimbo();
+	}
+
+	public void salvarEquipe() {
+		if (null == this.ecc) {
+			FacesMessages.error("Favor informar o ECC");
+			RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+			return;
+		}
+		if (null == this.equipe) {
+			FacesMessages.error("Favor informar a Equipe");
+			RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+			return;
+		}
+
+		if (null == this.casalCoordenador) {
+			FacesMessages.error("Favor informar o Nome do Casal Coordenador");
+			RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+			return;
+		}
+		if (equipeEccService.casalJaExisteEccCoordenadorOuEquipe(ecc.getId(), casalCoordenador.getId())) {
+			FacesMessages.error("Casal já faz parte de outra equipe neste ECC.");
+			RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+			novaEquipe();
+			return;
+		} else if (equipeEccService.equipeJaExisteEcc(ecc.getId(), equipe.getId())) {
+				FacesMessages.error("Equipe já cadastrada para este ECC.");
+				novaEquipe();
+				RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+				return;
+			} else {
+					equipeEcc.setEcc(ecc);
+					equipeEcc.setEquipe(equipe);
+					equipeEcc.setCasalCoordenador(casalCoordenador);
+
+					equipeEccService.salvar(equipeEcc);
+					this.listaEquipeEcc = equipeEccService.listar();
+					novaEquipe();
+					desabilitaTodosBotoesEquipeEcc();
+				}
+	}
+
+	public void alterarEquipe() {
+		try {
+			if (null == this.equipeEcc.getCasalCoordenador()) {
+				FacesMessages.error("Favor informar o Nome do Casal Coordenador");
+				RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+				return;
+			}
+			if (equipeEccService.casalJaExisteEccCoordenadorOuEquipe(equipeEcc.getEcc().getId(), this.equipeEcc.getCasalCoordenador().getId())) {
+				FacesMessages.error("Casal já faz parte de outra equipe neste ECC.");
+				RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+				novaEquipe();
+				return;
+			} else {
+				equipeEccService.alterar(this.equipeEcc);
+			}
+
+		} catch (Exception e) {
+			FacesMessages.error(e.getMessage());
+			RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+		}
+	}
+
+	public void excluirEquipe() {
+		try {
+			equipeEccService.excluir(equipeEcc);
+			FacesMessages.info("Equipe excluída");
+			this.listaEquipeEcc = equipeEccService.listar();
+			desabilitaTodosBotoesEquipeEcc();
+			removeCasaisLimbo();
+		} catch (Exception e) {
+			FacesMessages.error(e.getMessage());
+		}
+	}
+
+	//habilita ou desabilita os botões disponívis na tabela da pagina montagemEquipe.xhtml
+	public void onRowSelectEquipeEcc(SelectEvent selectEvent) {
+		this.equipeEcc = (EquipeEcc) selectEvent.getObject();
+		if (this.ecc.getSituacao().equals("ANDAMENTO")) {
+			this.habilitaTodosBotoesEquipeEcc();
+		} else {
+			this.desabilitaTodosBotoesEquipeEcc();
+		}
+	}
+
+
+}

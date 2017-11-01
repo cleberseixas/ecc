@@ -297,8 +297,6 @@ public class FichaBean implements Serializable {
 			if (ficha.getSituacao().equals("AUSÊNCIA JUSTIFICADA")) {
 				if (ficha.getMotivo().isEmpty()) {
 				FacesMessages.error("Favor informar o motivo da ausência");
-//				RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
-//				return;
 				}
 			}
 			fichaService.salvar(ficha);

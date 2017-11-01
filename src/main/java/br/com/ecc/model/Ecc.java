@@ -66,7 +66,7 @@ public class Ecc implements Serializable {
     @JoinTable(name = "ECCS_DIRIGENTES",
             joinColumns = @JoinColumn(name = "ECC"),
             inverseJoinColumns = @JoinColumn(name = "DIRIGENTE"))
-    private List<Dirigente> dirigentes= new ArrayList<Dirigente>();
+    private List<DirigenteEcc> dirigentes= new ArrayList<DirigenteEcc>();
 
     public Long getId() {
         return id;
@@ -148,11 +148,11 @@ public class Ecc implements Serializable {
         this.ativo = ativo;
     }
 
-    public List<Dirigente> getDirigentes() {
+    public List<DirigenteEcc> getDirigentes() {
         return dirigentes;
     }
 
-    public void setDirigentes(List<Dirigente> dirigentes) {
+    public void setDirigentes(List<DirigenteEcc> dirigentes) {
         this.dirigentes = dirigentes;
     }
 

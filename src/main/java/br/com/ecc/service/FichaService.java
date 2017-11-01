@@ -148,13 +148,6 @@ public class FichaService implements Serializable {
 		}
 	}
 
-	/**
-	 * Método utilizado para filtrar as fichas
-	 * Por padrão tras todas as fichas (ativas/inativas) com situação TODAS
-	 * @param situacao - Define a situação da FICHA (ENCONTREIRO, ENCONTRISTA, PENDENTE OU AUSÊNCIA JUSTIFICADA).
-	 * @param nomeUsualCasal - Nome usual do casal.
-	 * @return List com as Fichas.
-	 */
 	public List<Ficha> filtraFichaSituacaoeNomeUsual(String situacao, String nomeUsualCasal){
 		try {
 			return fichaRepository.filtraFichaSituacaoeNomeUsual(situacao, nomeUsualCasal);
@@ -164,5 +157,13 @@ public class FichaService implements Serializable {
 		}
 	}
 
+	public List<Ficha> listarCasaisCoordenadores(String equipe){
+		try {
+			return fichaRepository.listarCasaisCoordenadores(equipe);
+		} catch(NegocioException e){
+			FacesMessages.error(e.getMessage());
+			return null;
+		}
+	}
 
 }

@@ -1,10 +1,12 @@
 package br.com.ecc.repository;
 
-import br.com.ecc.model.Dirigente;
+import br.com.ecc.model.DirigenteEcc;
 import br.com.ecc.model.Equipe;
 
 import javax.inject.Inject;
-import javax.persistence.*;
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 import java.util.List;
 
 public class DirigenteEccRepository {
@@ -16,11 +18,11 @@ public class DirigenteEccRepository {
 		this.manager = manager;
 	}
 	
-	public void salvar(Dirigente dirigenteEcc) {
+	public void salvar(DirigenteEcc dirigenteEcc) {
 		manager.merge(dirigenteEcc);
 	}
 
-	public void excluir(Dirigente dirigenteEcc) {
+	public void excluir(DirigenteEcc dirigenteEcc) {
 //		Object c= manager.merge(dirigenteEcc);
 //		manager.remove(c);
 //		manager.remove(manager.getReference(Dirigente.class, dirigenteEcc.getId()));
@@ -28,12 +30,12 @@ public class DirigenteEccRepository {
 		manager.remove(dirigenteEcc);
 	}
 
-	public Dirigente carregar(Long id) {
-		return manager.find(Dirigente.class, id);
+	public DirigenteEcc carregar(Long id) {
+		return manager.find(DirigenteEcc.class, id);
 	}
 
-	public List<Dirigente> listar() {
-		TypedQuery<Dirigente> query = manager.createQuery("from Equipe order by descricao", Dirigente.class);
+	public List<DirigenteEcc> listar() {
+		TypedQuery<DirigenteEcc> query = manager.createQuery("from Equipe order by descricao", DirigenteEcc.class);
 		return query.getResultList();
 	}
 

@@ -41,6 +41,11 @@ public class EquipeRepository {
 		return query.getResultList();
 	}
 
+	public List<Equipe> listarEquipeAutomatica() {
+		TypedQuery<Equipe> query = manager.createQuery("from Equipe where automatica=true and palestrante=false and ativo=true order by descricao", Equipe.class);
+		return query.getResultList();
+	}
+
 	public List<Equipe> listarAtividades() {
 		TypedQuery<Equipe> query = manager.createQuery("from Equipe where ativo=true order by descricao", Equipe.class);
 		return query.getResultList();

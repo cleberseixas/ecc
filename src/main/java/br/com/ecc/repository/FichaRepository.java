@@ -1,7 +1,6 @@
 package br.com.ecc.repository;
 
 import br.com.ecc.model.Ficha;
-import br.com.ecc.util.Constantes;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
@@ -43,6 +42,13 @@ public class FichaRepository {
 		return query.getResultList();
 	}
 
+	/**
+	 * Método utilizado para filtrar as fichas
+	 * Por padrão tras todas as fichas (ativas/inativas) com situação TODAS
+	 * @param situacao - Define a situação da FICHA (ENCONTREIRO, ENCONTRISTA, PENDENTE OU AUSÊNCIA JUSTIFICADA).
+	 * @param nomeUsualCasal - Nome usual do casal.
+	 * @return List com as Fichas.
+	 */
 	public List<Ficha> filtraFichaSituacaoeNomeUsual(String situacao, String nomeUsualCasal) {
 		TypedQuery<Ficha> query = null;
 		if (situacao.equals("TODAS")) {
@@ -68,4 +74,18 @@ public class FichaRepository {
 		}
 		return query.getResultList();
 	}
+
+	/**
+	 * Método que busca os casais que podem ser COORDENADOR de EQUIPE.
+	 * Utilizado no caso de uso MONTAGEM DAS EQUIPES (LITURGIA E VIGILIA, VISITAÇÃO, ACOLHIDA, ETC
+	 * CASAL_COORDENADOR : Casal que já foi membro de equipe.
+	 * @return List com as Fichas.
+	 */
+
+	public List<Ficha> listarCasaisCoordenadores(String equipe) {
+		TypedQuery<Ficha> query = manager.createQuery("from Ficha where situacao='ENCONTREIRO' order by nomeUsual", Ficha.class);
+		//query.setParameter("SITUACAO", equipe);
+		return query.getResultList();
+	}
+
 }

@@ -1,9 +1,6 @@
 package br.com.ecc.controller;
 
-import br.com.ecc.model.Dirigente;
-import br.com.ecc.model.Ecc;
-import br.com.ecc.model.Equipe;
-import br.com.ecc.model.Ficha;
+import br.com.ecc.model.*;
 import br.com.ecc.service.DirigenteEccService;
 import br.com.ecc.service.EccService;
 import br.com.ecc.service.EquipeService;
@@ -34,7 +31,7 @@ public class EccBean implements Serializable {
 
 	private Ficha casal = new Ficha();
 
-	private Dirigente dirigenteEcc = new Dirigente();
+	private DirigenteEcc dirigenteEcc = new DirigenteEcc();
 
 	private List<Ecc> listaEcc;
 
@@ -129,11 +126,11 @@ public class EccBean implements Serializable {
 		this.ecc = new Ecc();
 	}
 
-	public Dirigente getDirigenteEcc() {
+	public DirigenteEcc getDirigenteEcc() {
 		return dirigenteEcc;
 	}
 
-	public void setDirigenteEcc(Dirigente dirigenteEcc) {
+	public void setDirigenteEcc(DirigenteEcc dirigenteEcc) {
 		this.dirigenteEcc = dirigenteEcc;
 	}
 
@@ -172,11 +169,11 @@ public class EccBean implements Serializable {
 	private void novoDirigente() {
 		this.casal = new Ficha();
 		this.equipe = new Equipe();
-		this.dirigenteEcc = new Dirigente();
+		this.dirigenteEcc = new DirigenteEcc();
 	}
 
 	public void salvaDirigente() {
-		List<Dirigente> listAux = new ArrayList<Dirigente>();
+		List<DirigenteEcc> listAux = new ArrayList<DirigenteEcc>();
 		listAux.addAll(ecc.getDirigentes());
 
 		ecc.getDirigentes().clear();
