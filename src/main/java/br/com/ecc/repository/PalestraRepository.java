@@ -35,4 +35,9 @@ public class PalestraRepository {
 		TypedQuery<Palestra> query = manager.createQuery("from Palestra order by descricao", Palestra.class);
 		return query.getResultList();
 	}
+
+	public List<Palestra> listarAtivas() {
+		TypedQuery<Palestra> query = manager.createQuery("from Palestra where ativo=true order by descricao", Palestra.class);
+		return query.getResultList();
+	}
 }

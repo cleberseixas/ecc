@@ -37,7 +37,7 @@ public class FichaRepository {
 	}
 
 	public List<Ficha> listarEncontreiroEncontrista(String parametro) {
-		TypedQuery<Ficha> query = manager.createQuery("from Ficha where situacao= :SITUACAO order by nomeUsual", Ficha.class);
+		TypedQuery<Ficha> query = manager.createQuery("from Ficha where situacao= :SITUACAO and ativo=true order by nomeUsual", Ficha.class);
 		query.setParameter("SITUACAO", parametro);
 		return query.getResultList();
 	}
@@ -83,7 +83,7 @@ public class FichaRepository {
 	 */
 
 	public List<Ficha> listarCasaisCoordenadores(String equipe) {
-		TypedQuery<Ficha> query = manager.createQuery("from Ficha where situacao='ENCONTREIRO' order by nomeUsual", Ficha.class);
+		TypedQuery<Ficha> query = manager.createQuery("from Ficha where situacao='ENCONTREIRO' and ativo=true order by nomeUsual", Ficha.class);
 		//query.setParameter("SITUACAO", equipe);
 		return query.getResultList();
 	}

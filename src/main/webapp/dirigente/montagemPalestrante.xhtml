@@ -172,6 +172,10 @@
 					</p:column>
 					<p:column headerText="Palestrante" width="350" rendered="#{palestrante.palestra.casal}">
 						<p:outputLabel value="#{palestrante.ficha.nomeUsual}"/>
+						<h:graphicImage library="imagens" value="/image?imagem=#{palestrante.ficha.fotoEla}" rendered="#{palestrante.ficha.fotoEla.length() > 0}"
+										style="width:20px; height:20px; float: right;" title="Foto dela"/>
+						<h:graphicImage library="imagens" value="/image?imagem=#{palestrante.ficha.fotoEle}" rendered="#{palestrante.ficha.fotoEle.length() > 0}"
+										style="width:20px; height:20px; float: right;" title="Foto dele"/>
 					</p:column>
 
 					<p:column headerText="Data" width="50">
@@ -225,7 +229,7 @@
 											 value="#{palestranteBean.palestra}" style="width:370px"
 											 filter="true" filterMatchMode="contains">
 								<f:selectItem itemLabel="Selecione a Palestra" noSelectionOption="true" />
-								<f:selectItems value="#{palestraBean.lista}"
+								<f:selectItems value="#{palestraBean.listaAtivas}"
 											   var="palestra" itemValue="#{palestra}"
 											   itemLabel="#{palestra.descricao}" />
 								<p:ajax event="change" update="padreJovem casal" process="@this" listener="#{palestranteBean.onChangePalestra}" />
@@ -293,7 +297,7 @@
 											 requiredMessage="Selecione a Palestra."
 											 value="#{palestranteBean.palestrante.palestra}" style="width:370px">
 								<f:selectItem itemLabel="Selecione a Palestra" noSelectionOption="true" />
-								<f:selectItems value="#{palestraBean.lista}"
+								<f:selectItems value="#{palestraBean.listaAtivas}"
 											   var="palestra" itemValue="#{palestra}"
 											   itemLabel="#{palestra.descricao}" />
 								<p:ajax event="change" update="padreJovem casal" process="@this" listener="#{palestranteBean.onChangePalestra}" />

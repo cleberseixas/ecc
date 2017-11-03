@@ -60,5 +60,15 @@ public class PalestraService implements Serializable {
 			FacesMessages.error(e.getMessage());
 			return null;
 		}
-	}	
+	}
+
+
+	public List<Palestra> listarAtivas(){
+		try {
+			return palestraRepository.listarAtivas();
+		} catch(NegocioException e){
+			FacesMessages.error(e.getMessage());
+			return null;
+		}
+	}
 }

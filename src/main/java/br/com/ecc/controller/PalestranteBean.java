@@ -121,7 +121,7 @@ public class PalestranteBean implements Serializable {
 
 	public void onChangePalestra(AjaxBehaviorEvent event) {
 		//this.palestra = (Palestra) event.getSource().
-		System.out.println("Palestra :"+this.palestra.isCasal());
+		//System.out.println("Palestra :"+this.palestra.isCasal());
 	}
 
 	//habilita ou desabilita os botões disponívis na tabela da pagina ecc.xhtml

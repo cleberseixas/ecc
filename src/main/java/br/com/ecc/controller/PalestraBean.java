@@ -23,6 +23,8 @@ public class PalestraBean implements Serializable {
 	private Palestra palestra = new Palestra();
 	private List<Palestra> lista;
 
+	private List<Palestra> listaAtivas;
+
 	@Inject
 	private PalestraService palestraService;
 	
@@ -55,6 +57,18 @@ public class PalestraBean implements Serializable {
 			this.lista = palestraService.listar();
 		}
 		return this.lista;
+	}
+
+	public List<Palestra> getListaAtivas() {
+		if (this.listaAtivas == null) {
+			this.listaAtivas = palestraService.listarAtivas();
+		}
+		return this.listaAtivas;
+
+	}
+
+	public void setListaAtivas(List<Palestra> listaAtivas) {
+		this.listaAtivas = listaAtivas;
 	}
 
 	public Palestra getPalestra() {

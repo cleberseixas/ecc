@@ -322,18 +322,20 @@ public class EquipeEccBean implements Serializable {
 
 	public void alterarEquipe() {
 		try {
-			if (null == this.equipeEcc.getCasalCoordenador()) {
+			if (null == this.getCasalCoordenador()) {
 				FacesMessages.error("Favor informar o Nome do Casal Coordenador");
 				RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
 				return;
 			}
-			if (equipeEccService.casalJaExisteEccCoordenadorOuEquipe(equipeEcc.getEcc().getId(), this.equipeEcc.getCasalCoordenador().getId())) {
+			if (equipeEccService.casalJaExisteEccCoordenadorOuEquipe(equipeEcc.getEcc().getId(), this.getCasalCoordenador().getId())) {
 				FacesMessages.error("Casal já faz parte de outra equipe neste ECC.");
 				RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
-				novaEquipe();
+				//novaEquipe();
 				return;
 			} else {
+				this.equipeEcc.setCasalCoordenador(this.casalCoordenador);
 				equipeEccService.alterar(this.equipeEcc);
+				this.casalCoordenador = new Ficha();
 			}
 
 		} catch (Exception e) {
@@ -357,11 +359,16 @@ public class EquipeEccBean implements Serializable {
 	//habilita ou desabilita os botões disponívis na tabela da pagina montagemEquipe.xhtml
 	public void onRowSelectEquipeEcc(SelectEvent selectEvent) {
 		this.equipeEcc = (EquipeEcc) selectEvent.getObject();
-		if (this.ecc.getSituacao().equals("ANDAMENTO")) {
+		if (this.equipeEcc.getEcc().getSituacao().equals("ANDAMENTO")) {
 			this.habilitaTodosBotoesEquipeEcc();
 		} else {
 			this.desabilitaTodosBotoesEquipeEcc();
 		}
+	}
+
+	public void onChangeCasalCoordenador(AjaxBehaviorEvent event) {
+//		this.casalCoordenador = (Ficha) event.getSource();
+		System.out.println("Photo :"+this.casalCoordenador.getFotoEle());
 	}
 
 

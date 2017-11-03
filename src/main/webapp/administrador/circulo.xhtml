@@ -128,11 +128,17 @@
 					maxlength="50" style="width:250px;">
 					<p:focus for="descricao" />
 				</p:inputText>
-				<h:outputLabel value="Tempo de Casado:" for="tempoCasado" />
-				<p:inputText id="tempoCasado" value="#{circuloBean.circulo.tempoCasado}"
-							 required="true" requiredMessage="O campo Tempo de Casado é obrigatório"
+				<h:outputLabel value="Anos de Casado Mínimo:" for="tempoCasadoMínimo" />
+				<p:inputText id="tempoCasadoMínimo" value="#{circuloBean.circulo.tempoCasadoMinimo}"
+							 required="true" requiredMessage="O campo ano de casado mínimo é obrigatório"
 							 maxlength="10" style="width:35px;">
 				</p:inputText>
+				<h:outputLabel value="Anos de Casado Máximo:" for="tempoCasadoMaximo" />
+				<p:inputText id="tempoCasadoMaximo" value="#{circuloBean.circulo.tempoCasadoMaximo}"
+							 required="true" requiredMessage="O campo ano de casado máximo é obrigatório"
+							 maxlength="10" style="width:35px;">
+				</p:inputText>
+
 				<h:outputLabel value="Total de Casais:" for="totalCasal" />
 				<p:inputText id="totalCasal" value="#{circuloBean.circulo.totalCasais}"
 							 required="true" requiredMessage="O campo Total de Casais é obrigatório"
@@ -156,11 +162,16 @@
 				#{circulo.descricao}
 			</p:column>
 			<p:column>
-				<f:facet name="header">Tempo de Casado</f:facet>
-				#{circulo.tempoCasado}
+				<f:facet name="header">Mínimo</f:facet>
+				#{circulo.tempoCasadoMinimo}
 			</p:column>
 			<p:column>
-				<f:facet name="header">Total de Casais</f:facet>
+				<f:facet name="header">Máximo</f:facet>
+				#{circulo.tempoCasadoMaximo}
+			</p:column>
+
+			<p:column>
+				<f:facet name="header">Casais</f:facet>
 				#{circulo.totalCasais}
 			</p:column>
 			<p:column width="50">

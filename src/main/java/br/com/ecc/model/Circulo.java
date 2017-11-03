@@ -26,8 +26,11 @@ public class Circulo implements Serializable {
     @Column(name="DESCRICAO", length=50, nullable = false)
     private String descricao;
 
-    @Column(name="TEMPO_CASADO", length=5, nullable = false)
-    private Long tempoCasado;
+    @Column(name="TEMPO_CASADO_MINIMO", length=5, nullable = false)
+    private Long tempoCasadoMinimo;
+
+    @Column(name="TEMPO_CASADO_MAXIMO", length=5, nullable = false)
+    private Long tempoCasadoMaximo;
 
     @Column(name="TOTAL_CASAL", length=5, nullable = false)
     private Long totalCasais;
@@ -51,12 +54,20 @@ public class Circulo implements Serializable {
         this.descricao = descricao;
     }
 
-    public Long getTempoCasado() {
-        return tempoCasado;
+    public Long getTempoCasadoMinimo() {
+        return tempoCasadoMinimo;
     }
 
-    public void setTempoCasado(Long tempoCasado) {
-        this.tempoCasado = tempoCasado;
+    public void setTempoCasadoMinimo(Long tempoCasadoMinimo) {
+        this.tempoCasadoMinimo = tempoCasadoMinimo;
+    }
+
+    public Long getTempoCasadoMaximo() {
+        return tempoCasadoMaximo;
+    }
+
+    public void setTempoCasadoMaximo(Long tempoCasadoMaximo) {
+        this.tempoCasadoMaximo = tempoCasadoMaximo;
     }
 
     public Long getTotalCasais() {

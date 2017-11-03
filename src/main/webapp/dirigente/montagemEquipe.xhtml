@@ -171,7 +171,7 @@
 					<p:column width="30">
 						<f:facet name="header">Número</f:facet>
 						#{equipeEcc.ecc.numero}
-						<h:graphicImage library="imagens" name="cadeado.png" width="15" height="15" rendered="#{palestrante.ecc.situacao eq 'ENCERRADO'}"
+						<h:graphicImage library="imagens" name="cadeado.png" width="15" height="15" rendered="#{equipeEcc.ecc.situacao eq 'ENCERRADO'}"
 										style="float: right;" title="Encerrado"/>
 					</p:column>
 					<p:column headerText="Equipe" width="190">
@@ -179,6 +179,11 @@
 					</p:column>
 					<p:column headerText="Casal Coordenador" width="200">
 						<p:outputLabel value="#{equipeEcc.casalCoordenador.nomeUsual}"/>
+						<h:graphicImage library="imagens" value="/image?imagem=#{equipeEcc.casalCoordenador.fotoEla}" rendered="#{equipeEcc.casalCoordenador.fotoEla.length() > 0}"
+										style="width:20px; height:20px; float: right;" title="Foto dela"/>
+						<h:graphicImage library="imagens" value="/image?imagem=#{equipeEcc.casalCoordenador.fotoEle}" rendered="#{equipeEcc.casalCoordenador.fotoEle.length() > 0}"
+										style="width:20px; height:20px; float: right;" title="Foto dele"/>
+
 					</p:column>
 					<p:column headerText="Total" width="20">
 						<p:outputLabel value="#{equipeEcc.equipe.maximoCasal}"/>
@@ -208,7 +213,8 @@
 		<p:dialog id="dialogNovaEquipeEcc" header="Lançar nova Equipe"
 				  modal="true" widgetVar="dlgNovaEquipeEcc"
 				  style="background-color:#EBF3FE" resizable="false" width="590px"
-				  height="155px">
+				  height="255px">
+
 			<h:form id="cadNovaEquipeEcc">
 				<p:panel id="panelDadosEquipeEcc" style="background-color: #ffffe6">
 						<h:message />
@@ -238,6 +244,16 @@
 											   itemLabel="#{equipe.descricao}" />
 							</p:selectOneMenu>
 						</h:panelGrid>
+						<h:panelGrid id="fotoEleEla" columns="2">
+							<p:outputLabel value="Homem" styleClass="negrito" rendered="#{equipeEccBean.casalCoordenador.fotoEle.length() > 0}"
+										   style="margin-left:10px;" />
+							<p:outputLabel value="Mulher" styleClass="negrito" rendered="#{equipeEccBean.casalCoordenador.fotoEla.length() > 0}"
+										   style="margin-left:10px;" />
+							<h:graphicImage library="imagens" value="/image?imagem=#{equipeEccBean.casalCoordenador.fotoEle}"  rendered="#{equipeEccBean.casalCoordenador.fotoEle.length() > 0}"
+											style="width:80px; height:80px;" />
+							<h:graphicImage library="imagens" value="/image?imagem=#{equipeEccBean.casalCoordenador.fotoEla}"  rendered="#{equipeEccBean.casalCoordenador.fotoEla.length() > 0}"
+											style="width:80px; height:80px;" />
+						</h:panelGrid>
 						<h:panelGrid columns="1">
 							<h:outputLabel value="Casal Coordenador" for="casalCoordenador" />
 							<p:selectOneMenu id="casalCoordenador" value="#{equipeEccBean.casalCoordenador}"
@@ -247,6 +263,7 @@
 								<f:selectItems value="#{equipeEccBean.listaCasalCoordenador}"
 											   var="casal" itemValue="#{casal}"
 											   itemLabel="#{casal.nomeUsual}" />
+								<p:ajax event="change" update="fotoEleEla" process="@this" listener="#{equipeEccBean.onChangeCasalCoordenador}"/>
 							</p:selectOneMenu>
 						</h:panelGrid>
 						<h:panelGrid columns="2">
@@ -265,7 +282,7 @@
 		<p:dialog id="dialogEditarEquipeEcc" header="Alterar Equipe"
 				  modal="true" widgetVar="dlgEditarEquipeEcc"
 				  style="background-color:#EBF3FE" resizable="false" width="590px"
-				  height="155px">
+				  height="275px">
 			<h:form id="cadEditarEquipeEcc">
 				<p:panel id="panelEditarEquipeEcc" style="background-color: #ffffe6">
 					<h:message />
@@ -295,15 +312,29 @@
 										   itemLabel="#{equipe.descricao}" />
 						</p:selectOneMenu>
 					</h:panelGrid>
+					<h:panelGrid id="fotoEleEla" columns="2">
+						<p:outputLabel value="Homem" styleClass="negrito" rendered="#{equipeEccBean.casalCoordenador.fotoEle.length() > 0}"
+									   style="margin-left:10px;" />
+						<p:outputLabel value="Mulher" styleClass="negrito" rendered="#{equipeEccBean.casalCoordenador.fotoEla.length() > 0}"
+									   style="margin-left:10px;" />
+						<h:graphicImage library="imagens" value="/image?imagem=#{equipeEccBean.casalCoordenador.fotoEle}" rendered="#{equipeEccBean.casalCoordenador.fotoEle.length() > 0}"
+										style="width:80px; height:80px;" />
+						<h:graphicImage library="imagens" value="/image?imagem=#{equipeEccBean.casalCoordenador.fotoEla}" rendered="#{equipeEccBean.casalCoordenador.fotoEla.length() > 0}"
+										style="width:80px; height:80px;" />
+					</h:panelGrid>
+					<h:panelGrid columns="1">
+					<p:outputLabel value="Casal Coordenador: #{equipeEccBean.equipeEcc.casalCoordenador.nomeUsual}" styleClass="negrito" />
+					</h:panelGrid>
 					<h:panelGrid columns="1">
 						<h:outputLabel value="Casal Coordenador" for="casalCoordenador" />
-						<p:selectOneMenu id="casalCoordenador" value="#{equipeEccBean.equipeEcc.casalCoordenador}"
+						<p:selectOneMenu id="casalCoordenador" value="#{equipeEccBean.casalCoordenador}"
 										 style="width:505px" converter="fichaConverter"
 										 filter="true" filterMatchMode="contains">
 							<f:selectItem itemLabel="Selecione o Casal Coordenador" noSelectionOption="true" />
 							<f:selectItems value="#{equipeEccBean.listaCasalCoordenador}"
 										   var="casal" itemValue="#{casal}"
 										   itemLabel="#{casal.nomeUsual}" />
+							<p:ajax event="change" update="fotoEleEla" process="@this" listener="#{equipeEccBean.onChangeCasalCoordenador}"/>
 						</p:selectOneMenu>
 					</h:panelGrid>
 					<h:panelGrid columns="2">
@@ -322,7 +353,7 @@
 		<p:dialog id="dialogNovosCasais" header="Lançar Casais na Equipe"
 				  modal="true" widgetVar="dlgNovosCasais"
 				  style="background-color:#EBF3FE" resizable="false" width="820px"
-				  height="464px">
+				  height="564px">
 			<h:form id="cadNovosCasais">
 				<h:message />
 				<p:panel id="panelDadosCasais" style="background-color: #ffffe6">
@@ -341,7 +372,16 @@
 								value="Equipe: #{equipeEccBean.equipeEcc.equipe.descricao} - Máximo de Casais: #{equipeEccBean.equipeEcc.equipe.maximoCasal}"
 								styleClass="negrito" style="margin-left:5px;" />
 					</p:panel>
-
+					<h:panelGrid id="fotoCasalEleEla" columns="2">
+						<p:outputLabel value="Homem" styleClass="negrito" rendered="#{equipeEccBean.casal.fotoEle.length() > 0}"
+									   style="margin-left:10px;" />
+						<p:outputLabel value="Mulher" styleClass="negrito" rendered="#{equipeEccBean.casal.fotoEla.length() > 0}"
+									   style="margin-left:10px;" />
+						<h:graphicImage library="imagens" value="/image?imagem=#{equipeEccBean.casal.fotoEle}" rendered="#{equipeEccBean.casal.fotoEle.length() > 0}"
+										style="width:80px; height:80px;" />
+						<h:graphicImage library="imagens" value="/image?imagem=#{equipeEccBean.casal.fotoEla}" rendered="#{equipeEccBean.casal.fotoEla.length() > 0}"
+										style="width:80px; height:80px;" />
+					</h:panelGrid>
 					<h:panelGrid columns="2">
 						<h:outputLabel value="Nome do Casal" for="casal" />
 						<h:outputLabel value="" />
@@ -354,6 +394,7 @@
 							<f:selectItems value="#{fichaBean.listaEncontristas}"
 										   var="casal" itemValue="#{casal}"
 										   itemLabel="#{casal.nomeUsual}" />
+							<p:ajax event="change" update="fotoCasalEleEla" process="@this" listener="#{equipeEccBean.onChangeCasalCoordenador}"/>
 						</p:selectOneMenu>
 						<p:commandButton process="@this, casal" value="Incluir"
 										 style="margin-left:10px;"
@@ -381,6 +422,10 @@
 							</f:facet>
 							<p:column headerText="Casal" width="200">
 								<p:outputLabel value="#{casal.ficha.nomeUsual}" />
+								<h:graphicImage library="imagens" value="/image?imagem=#{casal.ficha.fotoEla}" rendered="#{casal.ficha.fotoEla.length() > 0}"
+												style="width:20px; height:20px; float: right;" title="Foto dela"/>
+								<h:graphicImage library="imagens" value="/image?imagem=#{casal.ficha.fotoEle}" rendered="#{casal.ficha.fotoEle.length() > 0}"
+												style="width:20px; height:20px; float: right;" title="Foto dele"/>
 							</p:column>
 							<p:column headerText="Excluir" styleClass="Gildasio" width="40">
 								<p:commandLink update=":cadNovosCasais:tabelaCasais, listagemEquipesEcc:equipesEcc"
