@@ -217,9 +217,6 @@
 										style="width:20px; height:20px; float: right;" title="Inativo"/>
 
 					</p:column>
-					<p:column headerText="Situação" width="100">
-						<p:outputLabel value="#{ficha.situacao}"/>
-					</p:column>
 					<p:column headerText="Nome Ele" width="200">
 						<p:outputLabel value="#{ficha.nomeEle}"/>
 						<h:graphicImage library="imagens" value="/image?imagem=#{ficha.fotoEle}" rendered="#{ficha.fotoEle.length() > 0}"
@@ -267,11 +264,22 @@
 					<p:column headerText="Telefone Ela" width="60">
 						<p:outputLabel value="#{ficha.telefoneEla}"/>
 					</p:column>
-					<p:column width="35" headerText="Atividades">
+					<p:column width="40" headerText="Atividades">
 						#{ficha.atividades.size()}
 						<h:graphicImage library="imagens" name="dirigentes2.png" width="15" height="15" rendered="#{ficha.atividades.size() > 0}"
 										style="float: right;" title="Atividades"/>
 					</p:column>
+					<p:column headerText="Situação" width="40">
+						<h:graphicImage library="imagens" name="encontreiro.png" rendered="#{ficha.situacao eq 'ENCONTREIRO'}"
+										style="width:20px; height:20px; float: right;" title="Encontreiro"/>
+						<h:graphicImage library="imagens" name="encontrista.png" rendered="#{ficha.situacao eq 'ENCONTRISTA'}"
+										style="width:20px; height:20px; float: right;" title="Encontrista"/>
+						<h:graphicImage library="imagens" name="pendente.png" rendered="#{ficha.situacao eq 'PENDENTE'}"
+										style="width:20px; height:20px; float: right;" title="Pendente"/>
+						<h:graphicImage library="imagens" name="ausenciaJustificada.png" rendered="#{ficha.situacao eq 'AUSÊNCIA JUSTIFICADA'}"
+										style="width:20px; height:20px; float: right;" title="Ausência Justificada"/>
+					</p:column>
+
 
 				</p:dataTable>
 		<!-- ======================================================================= -->
@@ -578,7 +586,7 @@
 						<p:inputText id="nomeUsualCasal" value="#{fichaBean.ficha.nomeUsual}"
 									 maxlength="100" style="width:330px;" disabled="true">
 						</p:inputText>
-						<p:selectOneMenu id="situacao" disabled="false" required="true"
+						<p:selectOneMenu id="situacao" disabled="#{fichaBean.ficha.situacao eq 'ENCONTREIRO'}" required="true"
 										 value="#{fichaBean.ficha.situacao}" style="width:154px;">
 							<f:selectItem itemLabel="Selecione" noSelectionOption="true" />
 							<f:selectItem itemValue="ENCONTREIRO" itemLabel="ENCONTREIRO" />
