@@ -38,6 +38,11 @@ public class EquipeEccCasal implements Serializable{
     @NotNull(message="Selecione o Nome do Casal da Equipe")
     private Ficha ficha;
 
+    @ManyToOne
+    @JoinColumn(name = "ecc", nullable = false, foreignKey=@ForeignKey(name = "fk_equipe_ecc_casal_ecc"))
+    @NotNull(message="Selecione o ecc")
+    private Ecc ecc;
+
     public Long getId() {
         return id;
     }
@@ -68,6 +73,14 @@ public class EquipeEccCasal implements Serializable{
 
     public void setFicha(Ficha ficha) {
         this.ficha = ficha;
+    }
+
+    public Ecc getEcc() {
+        return ecc;
+    }
+
+    public void setEcc(Ecc ecc) {
+        this.ecc = ecc;
     }
 
     @Override

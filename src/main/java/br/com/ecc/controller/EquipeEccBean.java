@@ -259,6 +259,7 @@ public class EquipeEccBean implements Serializable {
 
 				equipeEcc.getEquipesEccCasais().clear();
 				equipeEccCasal.setEquipe(equipeEcc.getEquipe());
+				equipeEccCasal.setEcc(equipeEcc.getEcc());
 				equipeEccCasal.setFicha(casal);
 				equipeEccCasal.setEquipeEcc(equipeEcc);
 				equipeEccCasalService.salvar(equipeEccCasal);
