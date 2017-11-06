@@ -46,7 +46,7 @@ public class EquipeEccBean implements Serializable {
 
 	private boolean habilitaBotaoExcluirEquipeEcc = true;
 
-	private boolean habilitaBotaoIncluiCasais = true;
+	private boolean habilitaBotaoIncluiCasaisEncontreiros = true;
 
 	@Inject
 	private EquipeEccService equipeEccService;
@@ -160,12 +160,12 @@ public class EquipeEccBean implements Serializable {
 		this.habilitaBotaoExcluirEquipeEcc = habilitaBotaoExcluirEquipeEcc;
 	}
 
-	public boolean isHabilitaBotaoIncluiCasais() {
-		return habilitaBotaoIncluiCasais;
+	public boolean isHabilitaBotaoIncluiCasaisEncontreiros() {
+		return habilitaBotaoIncluiCasaisEncontreiros;
 	}
 
-	public void setHabilitaBotaoIncluiCasais(boolean habilitaBotaoIncluiCasais) {
-		this.habilitaBotaoIncluiCasais = habilitaBotaoIncluiCasais;
+	public void setHabilitaBotaoIncluiCasaisEncontreiros(boolean habilitaBotaoIncluiCasaisEncontreiros) {
+		this.habilitaBotaoIncluiCasaisEncontreiros = habilitaBotaoIncluiCasaisEncontreiros;
 	}
 
 	public EquipeService getEquipeService() {
@@ -203,13 +203,13 @@ public class EquipeEccBean implements Serializable {
 	private void habilitaTodosBotoesEquipeEcc() {
 		habilitaBotaoEditarEquipeEcc = false;
 		habilitaBotaoExcluirEquipeEcc = false;
-		habilitaBotaoIncluiCasais = false;
+		habilitaBotaoIncluiCasaisEncontreiros = false;
 	}
 
 	private void desabilitaTodosBotoesEquipeEcc() {
 		habilitaBotaoEditarEquipeEcc = true;
 		habilitaBotaoExcluirEquipeEcc = true;
-		habilitaBotaoIncluiCasais = true;
+		habilitaBotaoIncluiCasaisEncontreiros = true;
 	}
 
 	public void novaEquipe() {
@@ -222,18 +222,6 @@ public class EquipeEccBean implements Serializable {
 	private void novoCasal() {
 		this.casal = new Ficha();
 		this.equipeEccCasal = new EquipeEccCasal();
-	}
-
-	private void verificaQuantidadeCasalPorEquipe() {
-		int maximo = equipeEcc.getEquipe().getMaximoCasal().intValue();
-		int total = equipeEcc.getEquipesEccCasais().size();
-		int falta = maximo - total;
-		//Não pode mais incluir
-		if (falta == 0) {
-			FacesMessages.error("Equipe já possui a quantidade máxima de casais.");
-			RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
-			return;
-		}
 	}
 
 	public void salvaCasal() {
@@ -279,7 +267,7 @@ public class EquipeEccBean implements Serializable {
 
 
 	public void removeCasaisLimbo() {
-		equipeEccCasalService.removeCasaisLimbo();
+		equipeEccCasalService.removeCasaisEncontreirosLimbo();
 	}
 
 	public void salvarEquipe() {

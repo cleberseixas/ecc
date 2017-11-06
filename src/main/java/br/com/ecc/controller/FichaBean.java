@@ -45,6 +45,8 @@ public class FichaBean implements Serializable {
 
 	private List<Ficha> listaEncontristas;
 
+	private List<Ficha> listaEncontreiros;
+
 	private UploadedFile uploadedFile;
 
 	private String tipoFoto = "HOMEM";
@@ -151,6 +153,13 @@ public class FichaBean implements Serializable {
 			this.listaEncontristas = fichaService.listarEncontreiroEncontrista(Constantes.ENCONTREIRO);
 		}
 		return this.listaEncontristas;
+	}
+
+	public List<Ficha> getListaEncontreiros() {
+		if (this.listaEncontreiros == null) {
+			this.listaEncontreiros = fichaService.listarEncontreiroEncontrista(Constantes.ENCONTRISTA);
+		}
+		return this.listaEncontreiros;
 	}
 
 	public UploadedFile getUploadedFile() {

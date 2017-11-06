@@ -1,8 +1,8 @@
 package br.com.ecc.service;
 
-import br.com.ecc.model.DirigenteEcc;
+import br.com.ecc.model.EncontristaEccCasal;
 import br.com.ecc.model.EquipeEccCasal;
-import br.com.ecc.repository.DirigenteEccRepository;
+import br.com.ecc.repository.EncontristaEccCasalRepository;
 import br.com.ecc.repository.EquipeEccCasalRepository;
 import br.com.ecc.util.FacesMessages;
 import br.com.ecc.util.NegocioException;
@@ -13,58 +13,57 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * Classe responsável por gerenciar as regras de negócio dos Casais das Equipes.
+ * Classe responsável por gerenciar as regras de negócio dos Casais dos ECCs.
  * </br>-----------------------------------------------------------------------</br>
  *                      <b>Regras de negócio</b>
  * </br>-----------------------------------------------------------------------</br>
- * Nada mais é do que os casais (ENCONTREIROS) que irão trabalhar nas equipes.
+ * Casais nãda mais é do que os ENCONTRISTAS(casais que vão participar do ECC)
  * </br>-----------------------------------------------------------------------</br>
  * @author Cleber Seixas
- * @since 01/11/2017
+ * @since 11/11/2017
  */
-public class EquipeEccCasalService implements Serializable {
+public class EncontristaEccCasalService implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Inject
-	private EquipeEccCasalRepository equipeEccCasalRepository;
+	private EncontristaEccCasalRepository encontristaEccCasalRepository;
 
 	@Transactional
-	public void salvar(EquipeEccCasal equipeEccCasal){
+	public void salvar(EncontristaEccCasal encontristaEccCasal){
 		try{
-			this.equipeEccCasalRepository.salvar(equipeEccCasal);
-			//FacesMessages.info("Registro gravado");
+			this.encontristaEccCasalRepository.salvar(encontristaEccCasal);
 		}catch(NegocioException e){
 			FacesMessages.error(e.getMessage());
 		}	
 	}
 
 	@Transactional
-	public void excluir(EquipeEccCasal equipeEccCasal){
-		equipeEccCasal = equipeEccCasalRepository.carregar(equipeEccCasal.getId());
-		this.equipeEccCasalRepository.excluir(equipeEccCasal);
+	public void excluir(EncontristaEccCasal encontristaEccCasal){
+		encontristaEccCasal = encontristaEccCasalRepository.carregar(encontristaEccCasal.getId());
+		this.encontristaEccCasalRepository.excluir(encontristaEccCasal);
 
 	}		
 	
-	public EquipeEccCasal carregar(Long id){
+	public EncontristaEccCasal carregar(Long id){
 		try {
-			return equipeEccCasalRepository.carregar(id);
+			return encontristaEccCasalRepository.carregar(id);
 		}catch(NegocioException e){
 			FacesMessages.error(e.getMessage());
 			return null;
 		}
 	}
 
-	public List<EquipeEccCasal> listar(){
+	public List<EncontristaEccCasal> listar(){
 		try {
-			return equipeEccCasalRepository.listar();
+			return encontristaEccCasalRepository.listar();
 		} catch(NegocioException e){
 			FacesMessages.error(e.getMessage());
 			return null;
 		}
 	}
 
-	public void removeCasaisEncontreirosLimbo() {
-		equipeEccCasalRepository.removeCasaisEncontreirosLimbo();
+	public void removeCasaisEncontristasLimbo() {
+		encontristaEccCasalRepository.removeCasaisEncontristasLimbo();
 	}
 
 }

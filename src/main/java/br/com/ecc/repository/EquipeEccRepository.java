@@ -4,7 +4,6 @@ import br.com.ecc.model.EquipeEcc;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
-import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
@@ -68,15 +67,4 @@ public class EquipeEccRepository {
 		return (query.getSingleResult() > 0 ? true : false);
 	}
 
-	/**
-	 * Método responsável por excluir os registros da tabela DIRIGENTES, que estão no LIMBO,
-	 * que são inseridos pelo mapeamento ManyToMany
-	 * chamado ao abrir a tela ECCs e após salvar ou remover algum dirigente;
-	 */
-	public void removeDirigenteLimbo() {
-		manager.getTransaction().begin();
-		Query query = manager.createNativeQuery("DELETE FROM DIRIGENTES WHERE DIRIGENTE NOT IN (SELECT DIRIGENTE FROM ECCS_DIRIGENTES)");
-		query.executeUpdate();
-		manager.getTransaction().commit();
-	}
 }

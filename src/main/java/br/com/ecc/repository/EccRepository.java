@@ -34,7 +34,7 @@ public class EccRepository {
 	}
 
 	public List<Ecc> listarEccAtivoEncerradoNao() {
-		TypedQuery<Ecc> query = manager.createQuery("from Ecc where ativo=true and ativo=true order by numero desc", Ecc.class);
+		TypedQuery<Ecc> query = manager.createQuery("from Ecc where ativo=true and situacao='ANDAMENTO' order by numero desc", Ecc.class);
 		return query.getResultList();
 	}
 

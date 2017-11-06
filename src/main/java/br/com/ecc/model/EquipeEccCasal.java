@@ -9,7 +9,7 @@ import java.io.Serializable;
 /**
  * Classe que representa os Casais por Equipe em um determinado ECC.
  * @author Cleber Seixas
- * @since 11/10/2017
+ * @since 01/11/2017
  */
 
 @Audited

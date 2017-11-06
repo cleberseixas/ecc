@@ -83,7 +83,7 @@
 											style="width:30px; height:30px;
 								margin-left:10px; margin-top:8px; margin-right:9px;"
 											name="montagemCasais.png" /><a
-								href="montagemEncontristas.xhtml">Encontristas</a>
+								href="../dirigente/montagemEncontrista.xhtml">Encontristas</a>
 						</li>
 						<li><h:graphicImage library="imagens/menu"
 											style="width:30px; height:30px;
@@ -156,18 +156,18 @@
 												 oncomplete="PF('confirmacaoExclusao').show()" immediate="true"
 												 process="@this"
 												 update=":listagemEquipesEcc:confirmacaoExclusaoDialog"/>
-								<p:commandButton id="btnIncluiCasais" value="Inclui Casais"
+								<p:commandButton id="btnIncluiCasaisEncontreiros" value="Inclui Casais"
 												 icon="ui-icon-person" style="margin-left: 5px;"
 												 process="@this"
 												 onclick="PF('dlgNovosCasais').show()" update=":cadNovosCasais"
 												 title="Adiciona casais a Equipe selecionada."
-												 disabled="#{equipeEccBean.habilitaBotaoIncluiCasais}"/>
+												 disabled="#{equipeEccBean.habilitaBotaoIncluiCasaisEncontreiros}"/>
 							</h:panelGroup>
 						</h:panelGrid>
 					</f:facet>
 					<p:ajax event="rowSelect"
 							listener="#{equipeEccBean.onRowSelectEquipeEcc}"
-							update="btnEditar btnExcluir btnIncluiCasais" />
+							update="btnEditar btnExcluir btnIncluiCasaisEncontreiros" />
 					<p:column width="30">
 						<f:facet name="header">Número</f:facet>
 						#{equipeEcc.ecc.numero}
@@ -190,8 +190,6 @@
 					</p:column>
 					<p:column width="50" headerText="Equipe">
 						#{equipeEcc.equipesEccCasais.size()}
-						<h:graphicImage library="imagens" name="dirigentes2.png" width="15" height="15" rendered="#{ecc.dirigentes.size() > 0}"
-										style="float: right;" title="Casais"/>
 					</p:column>
 				</p:dataTable>
 		<!-- ======================================================================= -->
