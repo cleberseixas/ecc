@@ -42,6 +42,18 @@ public class FichaRepository {
 		return query.getResultList();
 	}
 
+	public List<Ficha> listarEncontristaEcc(Long ecc) {
+		TypedQuery<Ficha> query = manager.createQuery("from Ficha fi "+
+//				" inner join ec.ficha fi "+
+				" where fi.ativo=true "+
+				" and fi.situacao = 'ENCONTRISTA'"+
+				" and fi.id in ("+
+				" select ec.ficha.id from EncontristaEccCasal ec "+
+				" where ec.ecc.id =:ECC) order by fi.nomeUsual", Ficha.class);
+		query.setParameter("ECC", ecc);
+		return query.getResultList();
+	}
+
 	/**
 	 * Método utilizado para filtrar as fichas
 	 * Por padrão tras todas as fichas (ativas/inativas) com situação TODAS

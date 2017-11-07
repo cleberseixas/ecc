@@ -148,6 +148,17 @@ public class FichaService implements Serializable {
 		}
 	}
 
+	public List<Ficha> listarEncontristaEcc(Long ecc){
+		try {
+			return fichaRepository.listarEncontristaEcc(ecc);
+		} catch(NegocioException e){
+			FacesMessages.error(e.getMessage());
+			return null;
+		}
+	}
+
+
+
 	public List<Ficha> filtraFichaSituacaoeNomeUsual(String situacao, String nomeUsualCasal){
 		try {
 			return fichaRepository.filtraFichaSituacaoeNomeUsual(situacao, nomeUsualCasal);
@@ -156,6 +167,7 @@ public class FichaService implements Serializable {
 			return null;
 		}
 	}
+
 
 	public List<Ficha> listarCasaisCoordenadores(String equipe){
 		try {

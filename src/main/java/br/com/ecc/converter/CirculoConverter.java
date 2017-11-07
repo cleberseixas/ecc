@@ -6,6 +6,6 @@ import br.com.ecc.service.CirculoService;
 
 import javax.faces.convert.FacesConverter;
 
-@FacesConverter(forClass=Circulo.class)
+@FacesConverter(forClass=Circulo.class, value = "circuloConverter")
 public class CirculoConverter extends BaseConverter<Circulo, CirculoService> {
 }	

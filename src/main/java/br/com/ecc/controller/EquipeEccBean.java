@@ -58,6 +58,9 @@ public class EquipeEccBean implements Serializable {
 	private EquipeEccCasalService equipeEccCasalService;
 
 	@Inject
+	private CirculoEccService circuloEccService;
+
+	@Inject
 	private EccService eccService;
 
 	@Inject
@@ -235,29 +238,33 @@ public class EquipeEccBean implements Serializable {
 			this.novoCasal();
 			return;
 
-		} else
-		if (equipeEccService.casalJaExisteEccCoordenadorOuEquipe(equipeEcc.getEcc().getId(), casal.getId())) {
-			FacesMessages.error("Casal já faz parte de outra equipe neste ECC.");
-			RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
-			this.novoCasal();
-			return;
-		} else {
-				List<EquipeEccCasal> listAux = new ArrayList<EquipeEccCasal>();
-				listAux.addAll(equipeEcc.getEquipesEccCasais());
+		} else if (equipeEccService.casalJaExisteEccCoordenadorOuEquipe(equipeEcc.getEcc().getId(), casal.getId())) {
+					FacesMessages.error("Casal já faz parte de outra equipe neste ECC.");
+					RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+					this.novoCasal();
+					return;
+				} else if (circuloEccService.casalJaExisteEccCoordenadorCirculo(equipeEcc.getEcc().getId(), casal.getId())) {
+							FacesMessages.error("Casal já faz parte de um Círculo(Coordenador) neste ECC.");
+							RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+							this.novoCasal();
+							return;
+						} else {
+							List<EquipeEccCasal> listAux = new ArrayList<EquipeEccCasal>();
+							listAux.addAll(equipeEcc.getEquipesEccCasais());
 
-				equipeEcc.getEquipesEccCasais().clear();
-				equipeEccCasal.setEquipe(equipeEcc.getEquipe());
-				equipeEccCasal.setEcc(equipeEcc.getEcc());
-				equipeEccCasal.setFicha(casal);
-				equipeEccCasal.setEquipeEcc(equipeEcc);
-				equipeEccCasalService.salvar(equipeEccCasal);
+							equipeEcc.getEquipesEccCasais().clear();
+							equipeEccCasal.setEquipe(equipeEcc.getEquipe());
+							equipeEccCasal.setEcc(equipeEcc.getEcc());
+							equipeEccCasal.setFicha(casal);
+							equipeEccCasal.setEquipeEcc(equipeEcc);
+							equipeEccCasalService.salvar(equipeEccCasal);
 
-				listAux.add(equipeEccCasal);
-				this.equipeEcc.setEquipesEccCasais(listAux);
-				equipeEccService.atualiza(this.equipeEcc);
-				this.novoCasal();
-				removeCasaisLimbo();
-			}
+							listAux.add(equipeEccCasal);
+							this.equipeEcc.setEquipesEccCasais(listAux);
+							equipeEccService.atualiza(this.equipeEcc);
+							this.novoCasal();
+							removeCasaisLimbo();
+						}
 	}
 
 	public void removeCasal() {
@@ -292,21 +299,26 @@ public class EquipeEccBean implements Serializable {
 			RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
 			novaEquipe();
 			return;
+		} else if (circuloEccService.casalJaExisteEccCoordenadorCirculo(ecc.getId(), casalCoordenador.getId()))  {
+			FacesMessages.error("Casal já faz parte de um Círculo(Coordenador) neste ECC.");
+			RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+			novaEquipe();
+			return;
 		} else if (equipeEccService.equipeJaExisteEcc(ecc.getId(), equipe.getId())) {
-				FacesMessages.error("Equipe já cadastrada para este ECC.");
-				novaEquipe();
-				RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
-				return;
-			} else {
-					equipeEcc.setEcc(ecc);
-					equipeEcc.setEquipe(equipe);
-					equipeEcc.setCasalCoordenador(casalCoordenador);
-
-					equipeEccService.salvar(equipeEcc);
-					this.listaEquipeEcc = equipeEccService.listar();
+					FacesMessages.error("Equipe já cadastrada para este ECC.");
 					novaEquipe();
-					desabilitaTodosBotoesEquipeEcc();
-				}
+					RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+					return;
+				} else {
+						equipeEcc.setEcc(ecc);
+						equipeEcc.setEquipe(equipe);
+						equipeEcc.setCasalCoordenador(casalCoordenador);
+
+						equipeEccService.salvar(equipeEcc);
+						this.listaEquipeEcc = equipeEccService.listar();
+						novaEquipe();
+						desabilitaTodosBotoesEquipeEcc();
+						}
 	}
 
 	public void alterarEquipe() {
