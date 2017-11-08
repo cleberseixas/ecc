@@ -60,6 +60,19 @@ public class CirculoEccCasalService implements Serializable {
 		}
 	}
 
+	public Long casalEncontristaExistenteCircunoNoEcc(Long ecc, Long casal){
+		try {
+			return circuloEccCasalRepository.casalEncontristaExistenteCircunoNoEcc(ecc, casal);
+		} catch(NegocioException e){
+			FacesMessages.error(e.getMessage());
+			return null;
+		}
+	}
+
+	public void removeCasalCirculoQuandoRemoveEncontristaLista(Long casal) {
+		circuloEccCasalRepository.removeCasalCirculoQuandoRemoveEncontristaLista(casal);
+	}
+
 	public void removeCasaisEncontristasLimbo() {
 		circuloEccCasalRepository.removeCasaisEncontristasLimbo();
 	}

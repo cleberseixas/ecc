@@ -50,6 +50,9 @@ public class EncontristaEccBean implements Serializable {
 	@Inject
 	private FichaService fichaService;
 
+	@Inject
+	private CirculoEccCasalService circuloEccCasalService;
+
 	public EncontristaEcc getEncontristaEcc() {
 		return encontristaEcc;
 	}
@@ -110,7 +113,11 @@ public class EncontristaEccBean implements Serializable {
 	}
 
 	private void habilitaTodosBotoesEnconstristaEcc() {
-		habilitaBotaoExcluirEncontristaEcc = false;
+		if (this.encontristaEcc.getEncontristasEccCasais().size() > 0) {
+			habilitaBotaoExcluirEncontristaEcc = true;
+		} else {
+			habilitaBotaoExcluirEncontristaEcc = false;
+		}
 		habilitaBotaoIncluiCasaisEncontristas = false;
 	}
 
@@ -153,7 +160,7 @@ public class EncontristaEccBean implements Serializable {
 	public void excluirEncontrista() {
 		try {
 			encontristaEccService.excluir(encontristaEcc);
-			FacesMessages.info("Encontrista excluído");
+			FacesMessages.info("Encontristas excluídos");
 			this.listaEncontristaEcc = encontristaEccService.listar();
 			desabilitaTodosBotoesEnconstristaEcc();
 			removeCasaisLimbo();
@@ -210,6 +217,9 @@ public class EncontristaEccBean implements Serializable {
 	}
 	public void removeCasal() {
 		this.encontristaEcc.getEncontristasEccCasais().remove(encontristaEccCasal);
+		Long idEncontristaCirculo = circuloEccCasalService.casalEncontristaExistenteCircunoNoEcc(encontristaEcc.getEcc().getId(), encontristaEccCasal.getFicha().getId());
+		if (idEncontristaCirculo > 0)
+			circuloEccCasalService.removeCasalCirculoQuandoRemoveEncontristaLista(idEncontristaCirculo);
 		encontristaEccService.atualiza(encontristaEcc);
 	}
 
