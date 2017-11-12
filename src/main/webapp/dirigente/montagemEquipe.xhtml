@@ -178,7 +178,7 @@
 						<p:outputLabel value="#{equipeEcc.equipe.descricao}"/>
 					</p:column>
 					<p:column headerText="Casal Coordenador" width="200">
-						<p:outputLabel value="#{equipeEcc.casalCoordenador.nomeUsual}"/>
+						<p:outputLabel value="#{equipeEcc.casalCoordenador.primeiraEtapa} - #{equipeEcc.casalCoordenador.nomeUsual}"/>
 						<h:graphicImage library="imagens" value="/image?imagem=#{equipeEcc.casalCoordenador.fotoEla}" rendered="#{equipeEcc.casalCoordenador.fotoEla.length() > 0}"
 										style="width:20px; height:20px; float: right;" title="Foto dela"/>
 						<h:graphicImage library="imagens" value="/image?imagem=#{equipeEcc.casalCoordenador.fotoEle}" rendered="#{equipeEcc.casalCoordenador.fotoEle.length() > 0}"
@@ -260,7 +260,7 @@
 								<f:selectItem itemLabel="Selecione o Casal Coordenador" noSelectionOption="true" />
 								<f:selectItems value="#{equipeEccBean.listaCasalCoordenador}"
 											   var="casal" itemValue="#{casal}"
-											   itemLabel="#{casal.nomeUsual}" />
+											   itemLabel="#{casal.primeiraEtapa} - #{casal.nomeUsual}" />
 								<p:ajax event="change" update="fotoEleEla" process="@this" listener="#{equipeEccBean.onChangeCasalCoordenador}"/>
 							</p:selectOneMenu>
 						</h:panelGrid>
@@ -331,7 +331,7 @@
 							<f:selectItem itemLabel="Selecione o Casal Coordenador" noSelectionOption="true" />
 							<f:selectItems value="#{equipeEccBean.listaCasalCoordenador}"
 										   var="casal" itemValue="#{casal}"
-										   itemLabel="#{casal.nomeUsual}" />
+										   itemLabel="#{casal.primeiraEtapa} - #{casal.nomeUsual}" />
 							<p:ajax event="change" update="fotoEleEla" process="@this" listener="#{equipeEccBean.onChangeCasalCoordenador}"/>
 						</p:selectOneMenu>
 					</h:panelGrid>
@@ -391,7 +391,7 @@
 							<f:selectItem itemLabel="Selecione o casal" noSelectionOption="true" />
 							<f:selectItems value="#{fichaBean.listaEncontristas}"
 										   var="casal" itemValue="#{casal}"
-										   itemLabel="#{casal.nomeUsual}" />
+										   itemLabel="#{casal.primeiraEtapa} - #{casal.nomeUsual}" />
 							<p:ajax event="change" update="fotoCasalEleEla" process="@this" listener="#{equipeEccBean.onChangeCasalCoordenador}"/>
 						</p:selectOneMenu>
 						<p:commandButton process="@this, casal" value="Incluir"
@@ -419,7 +419,7 @@
 								<p:outputLabel value="Total de Casais - #{equipeEccBean.equipeEcc.equipesEccCasais.size()}" />
 							</f:facet>
 							<p:column headerText="Casal" width="200">
-								<p:outputLabel value="#{casal.ficha.nomeUsual}" />
+								<p:outputLabel value="#{casal.ficha.primeiraEtapa} - #{casal.ficha.nomeUsual}" />
 								<h:graphicImage library="imagens" value="/image?imagem=#{casal.ficha.fotoEla}" rendered="#{casal.ficha.fotoEla.length() > 0}"
 												style="width:20px; height:20px; float: right;" title="Foto dela"/>
 								<h:graphicImage library="imagens" value="/image?imagem=#{casal.ficha.fotoEle}" rendered="#{casal.ficha.fotoEle.length() > 0}"
