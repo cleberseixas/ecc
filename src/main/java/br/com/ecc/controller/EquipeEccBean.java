@@ -66,6 +66,10 @@ public class EquipeEccBean implements Serializable {
 	@Inject
 	private FichaService fichaService;
 
+	@Inject
+	private
+	DirigenteEccService dirigenteEccService;
+
 	public EquipeEcc getEquipeEcc() {
 		return equipeEcc;
 	}
@@ -248,23 +252,28 @@ public class EquipeEccBean implements Serializable {
 							RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
 							this.novoCasal();
 							return;
-						} else {
-							List<EquipeEccCasal> listAux = new ArrayList<EquipeEccCasal>();
-							listAux.addAll(equipeEcc.getEquipesEccCasais());
+						} else if (dirigenteEccService.casalJaExisteEccDirigente(equipeEcc.getEcc().getId(), casal.getId(), equipeEcc.getEquipe().getId())) {
+								FacesMessages.error("Casal já faz parte da Equipe de Dirigentes neste ECC.");
+								RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+								this.novoCasal();
+								return;
+							} else {
+									List<EquipeEccCasal> listAux = new ArrayList<EquipeEccCasal>();
+									listAux.addAll(equipeEcc.getEquipesEccCasais());
 
-							equipeEcc.getEquipesEccCasais().clear();
-							equipeEccCasal.setEquipe(equipeEcc.getEquipe());
-							equipeEccCasal.setEcc(equipeEcc.getEcc());
-							equipeEccCasal.setFicha(casal);
-							equipeEccCasal.setEquipeEcc(equipeEcc);
-							equipeEccCasalService.salvar(equipeEccCasal);
+									equipeEcc.getEquipesEccCasais().clear();
+									equipeEccCasal.setEquipe(equipeEcc.getEquipe());
+									equipeEccCasal.setEcc(equipeEcc.getEcc());
+									equipeEccCasal.setFicha(casal);
+									equipeEccCasal.setEquipeEcc(equipeEcc);
+									equipeEccCasalService.salvar(equipeEccCasal);
 
-							listAux.add(equipeEccCasal);
-							this.equipeEcc.setEquipesEccCasais(listAux);
-							equipeEccService.atualiza(this.equipeEcc);
-							this.novoCasal();
-							removeCasaisLimbo();
-						}
+									listAux.add(equipeEccCasal);
+									this.equipeEcc.setEquipesEccCasais(listAux);
+									equipeEccService.atualiza(this.equipeEcc);
+									this.novoCasal();
+									removeCasaisLimbo();
+								   }
 	}
 
 	public void removeCasal() {
@@ -309,16 +318,21 @@ public class EquipeEccBean implements Serializable {
 					novaEquipe();
 					RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
 					return;
-				} else {
-						equipeEcc.setEcc(ecc);
-						equipeEcc.setEquipe(equipe);
-						equipeEcc.setCasalCoordenador(casalCoordenador);
+				} else if (dirigenteEccService.casalJaExisteEccDirigente(ecc.getId(), casalCoordenador.getId(), equipe.getId())) {
+							FacesMessages.error("Casal já faz parte da Equipe de Dirigentes neste ECC.");
+							RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+							this.novoCasal();
+							return;
+						} else {
+								equipeEcc.setEcc(ecc);
+								equipeEcc.setEquipe(equipe);
+								equipeEcc.setCasalCoordenador(casalCoordenador);
 
-						equipeEccService.salvar(equipeEcc);
-						this.listaEquipeEcc = equipeEccService.listar();
-						novaEquipe();
-						desabilitaTodosBotoesEquipeEcc();
-						}
+								equipeEccService.salvar(equipeEcc);
+								this.listaEquipeEcc = equipeEccService.listar();
+								novaEquipe();
+								desabilitaTodosBotoesEquipeEcc();
+								}
 	}
 
 	public void alterarEquipe() {
@@ -333,11 +347,15 @@ public class EquipeEccBean implements Serializable {
 				RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
 				//novaEquipe();
 				return;
-			} else {
-				this.equipeEcc.setCasalCoordenador(this.casalCoordenador);
-				equipeEccService.alterar(this.equipeEcc);
-				this.casalCoordenador = new Ficha();
-			}
+			} else if (dirigenteEccService.casalJaExisteEccDirigente(equipeEcc.getEcc().getId(), this.casalCoordenador.getId(), equipeEcc.getEquipe().getId())) {
+						FacesMessages.error("Casal já faz parte da Equipe de Dirigentes neste ECC.");
+						RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+						return;
+					} else {
+						this.equipeEcc.setCasalCoordenador(this.casalCoordenador);
+						equipeEccService.alterar(this.equipeEcc);
+						this.casalCoordenador = new Ficha();
+					}
 
 		} catch (Exception e) {
 			FacesMessages.error(e.getMessage());

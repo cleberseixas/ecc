@@ -1,9 +1,7 @@
 package br.com.ecc.controller;
 
 import br.com.ecc.model.*;
-import br.com.ecc.service.DirigenteEccService;
-import br.com.ecc.service.EccService;
-import br.com.ecc.service.EquipeService;
+import br.com.ecc.service.*;
 import br.com.ecc.util.FacesMessages;
 import org.primefaces.context.RequestContext;
 import org.primefaces.event.SelectEvent;
@@ -59,6 +57,12 @@ public class EccBean implements Serializable {
 
 	@Inject
 	private EquipeService equipeService;
+
+	@Inject
+	private EquipeEccService equipeEccService;
+
+	@Inject
+	private CirculoEccService circuloEccService;
 
 	public void setListaEcc(List<Ecc> listaEcc) {
 		this.listaEcc = listaEcc;
@@ -173,25 +177,42 @@ public class EccBean implements Serializable {
 	}
 
 	public void salvaDirigente() {
-		List<DirigenteEcc> listAux = new ArrayList<DirigenteEcc>();
-		listAux.addAll(ecc.getDirigentes());
+		if (dirigenteEccService.casalJaExisteEccDirigente(ecc.getId(), casal.getId(), equipe.getId())) {
+			FacesMessages.error("Casal/Equipe já faz parte da Equipe de Dirigentes neste ECC.");
+			RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+			this.novoDirigente();
+			return;
+		} else if (equipeEccService.casalJaExisteEccCoordenadorOuEquipe(ecc.getId(), casal.getId())) {
+					FacesMessages.error("Casal já faz parte de outra equipe neste ECC.");
+					RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+					this.novoDirigente();
+					return;
+				} else if (circuloEccService.casalJaExisteEccCoordenadorCirculo(ecc.getId(), casal.getId())) {
+							FacesMessages.error("Casal já faz parte de um Círculo(Coordenador) neste ECC.");
+							RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+							this.novoDirigente();
+							return;
+						} else {
+							List<DirigenteEcc> listAux = new ArrayList<DirigenteEcc>();
+							listAux.addAll(ecc.getDirigentes());
 
-		ecc.getDirigentes().clear();
-		dirigenteEcc.setEquipe(equipe);
-		dirigenteEcc.setFicha(casal);
-		dirigenteEcc.setEcc(ecc);
-		dirigenteEccService.salvar(dirigenteEcc);
+							ecc.getDirigentes().clear();
+							dirigenteEcc.setEquipe(equipe);
+							dirigenteEcc.setFicha(casal);
+							dirigenteEcc.setEcc(ecc);
+							dirigenteEccService.salvar(dirigenteEcc);
 
-		listAux.add(dirigenteEcc);
-		this.ecc.setDirigentes(listAux);
-		eccService.atualiza(this.ecc);
-		this.novoDirigente();
-		removeDirigenteLimbo();
+							listAux.add(dirigenteEcc);
+							this.ecc.setDirigentes(listAux);
+							eccService.atualiza(this.ecc);
+							this.novoDirigente();
+							removeDirigenteLimbo();
+						}
 	}
 	public void removeDirigente() {
 		this.ecc.getDirigentes().remove(dirigenteEcc);
 		eccService.atualiza(ecc);
-		//removeDirigenteLimbo();
+		removeDirigenteLimbo();
 	}
 
 	public void removeDirigenteLimbo() {

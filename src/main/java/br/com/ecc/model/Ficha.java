@@ -131,6 +131,14 @@ public class Ficha implements Serializable {
     @Column(name="MOTIVO", length=200, nullable = true)
     private String motivo;
 
+    @Temporal(TemporalType.DATE)
+    @Column(name="DATA_CADASTRO", nullable = false)
+    private Date dataCadastro;
+
+    @Temporal(TemporalType.DATE)
+    @Column(name="DATA_ALTERACAO", nullable = true)
+    private Date dataAlteracao;
+
     @ManyToMany(fetch= FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(name = "FICHAS_ATIVIDADES",
             joinColumns = @JoinColumn(name = "FICHA"),
@@ -415,6 +423,22 @@ public class Ficha implements Serializable {
 
     public void setMotivo(String motivo) {
         this.motivo = motivo;
+    }
+
+    public Date getDataCadastro() {
+        return dataCadastro;
+    }
+
+    public void setDataCadastro(Date dataCadastro) {
+        this.dataCadastro = dataCadastro;
+    }
+
+    public Date getDataAlteracao() {
+        return dataAlteracao;
+    }
+
+    public void setDataAlteracao(Date dataAlteracao) {
+        this.dataAlteracao = dataAlteracao;
     }
 
     public List<Atividade> getAtividades() {

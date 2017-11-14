@@ -5,6 +5,7 @@ import br.com.ecc.model.Ficha;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
+import java.util.Date;
 import java.util.List;
 
 public class FichaRepository {
@@ -19,8 +20,7 @@ public class FichaRepository {
 	public void salvar(Ficha ficha) {
 		if (ficha.getId() == null)
 			manager.persist(ficha);
-		else
-			manager.merge(ficha);
+		else manager.merge(ficha);
 	}
 
 	public void excluir(Ficha ficha) {
@@ -32,7 +32,7 @@ public class FichaRepository {
 	}
 
 	public List<Ficha> listar() {
-		TypedQuery<Ficha> query = manager.createQuery("from Ficha order by nomeUsual", Ficha.class);
+		TypedQuery<Ficha> query = manager.createQuery("from Ficha order by primeiraEtapa desc", Ficha.class);
 		return query.getResultList();
 	}
 
@@ -49,7 +49,7 @@ public class FichaRepository {
 				" and fi.situacao = 'ENCONTRISTA'"+
 				" and fi.id in ("+
 				" select ec.ficha.id from EncontristaEccCasal ec "+
-				" where ec.ecc.id =:ECC) order by fi.nomeUsual", Ficha.class);
+				" where ec.ecc.id =:ECC) order by fi.primeiraEtapa desc, fi.nomeUsual", Ficha.class);
 		query.setParameter("ECC", ecc);
 		return query.getResultList();
 	}
@@ -95,7 +95,7 @@ public class FichaRepository {
 	 */
 
 	public List<Ficha> listarCasaisCoordenadores(String equipe) {
-		TypedQuery<Ficha> query = manager.createQuery("from Ficha where situacao='ENCONTREIRO' and ativo=true order by nomeUsual", Ficha.class);
+		TypedQuery<Ficha> query = manager.createQuery("from Ficha where situacao='ENCONTREIRO' and ativo=true order by primeiraEtapa desc, nomeUsual", Ficha.class);
 		//query.setParameter("SITUACAO", equipe);
 		return query.getResultList();
 	}

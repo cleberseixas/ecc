@@ -23,10 +23,6 @@ public class DirigenteEccRepository {
 	}
 
 	public void excluir(DirigenteEcc dirigenteEcc) {
-//		Object c= manager.merge(dirigenteEcc);
-//		manager.remove(c);
-//		manager.remove(manager.getReference(Dirigente.class, dirigenteEcc.getId()));
-//		//manager.remove(manager.getReference(Dirigente.class, dirigenteEcc.getId()));
 		manager.remove(dirigenteEcc);
 	}
 
@@ -42,6 +38,23 @@ public class DirigenteEccRepository {
 	public List<Equipe> listarEquipeDirigentes() {
 		TypedQuery<Equipe> query = manager.createQuery("from Equipe where automatica=false order by descricao", Equipe.class);
 		return query.getResultList();
+	}
+
+	/**
+	 * Método que verifica se o Casal/Equipe já faz parte da EQUIPE (DIRIGENTE)
+	 * @param ecc - ID do ECC
+	 * @param casal - ID do Casal
+	 * @param equipe - ID da equipe
+	 * @return
+	 */
+	public boolean casalJaExisteEccDirigente(Long ecc, Long casal, Long equipe) {
+		TypedQuery<Long> query = manager.createQuery("select count(id) from DirigenteEcc " +
+				" where ecc.id = :ECC" +
+				" and (ficha.id = :CASAL or equipe.id = :EQUIPE)", Long.class);
+		query.setParameter("ECC", ecc);
+		query.setParameter("CASAL", casal);
+		query.setParameter("EQUIPE", equipe);
+		return (query.getSingleResult() > 0 ? true : false);
 	}
 
 	/**

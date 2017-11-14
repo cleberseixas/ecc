@@ -62,6 +62,15 @@ public class DirigenteEccService implements Serializable {
 		}
 	}
 
+	public boolean casalJaExisteEccDirigente(Long ecc, Long casal, Long equipe) {
+		try {
+			return dirigenteEccRepository.casalJaExisteEccDirigente(ecc, casal, equipe);
+		} catch (NegocioException e) {
+			FacesMessages.error(e.getMessage());
+			return true;
+		}
+	}
+
 	public void removeDirigenteLimbo() {
 		dirigenteEccRepository.removeDirigenteLimbo();
 	}

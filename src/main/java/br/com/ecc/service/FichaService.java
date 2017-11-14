@@ -11,6 +11,7 @@ import com.sun.xml.internal.messaging.saaj.soap.FastInfosetDataContentHandler;
 
 import javax.inject.Inject;
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -34,24 +35,8 @@ public class FichaService implements Serializable {
 	public void salvar(Ficha ficha){
 		try{
 			ficha.setNomeUsual(ficha.getNomeUsualEle()+" E "+ficha.getNomeUsualEla());
+			ficha.setDataCadastro(new Date());
 			primeiraSegundaTerceiraEtapa(ficha);
-//			if (!ficha.getSituacao().equals("ENCONTRISTA")) {
-//				if (ficha.getSegundaEtapa().trim().length() > 0) {
-//					if (!ficha.getPrimeiraEtapa().contains("º")) {
-//						ficha.setPrimeiraEtapa(ficha.getPrimeiraEtapa()+"º");
-//					}
-//				}
-//				if (ficha.getSegundaEtapa().trim().length() > 0) {
-//					if (!ficha.getSegundaEtapa().contains("º")) {
-//						ficha.setSegundaEtapa(ficha.getSegundaEtapa()+"º");
-//					}
-//				}
-//				if (ficha.getTerceiraEtapa().trim().length() > 0) {
-//					if (!ficha.getTerceiraEtapa().contains("º")) {
-//						ficha.setTerceiraEtapa(ficha.getTerceiraEtapa()+"º");
-//					}
-//				}
-//			}
 			this.fichaRepository.salvar(ficha);
 			FacesMessages.info("Ficha cadastrada");
 		}catch(NegocioException e){
@@ -69,25 +54,9 @@ public class FichaService implements Serializable {
 	public void alterar(Ficha ficha){
 		try{
 			ficha.setNomeUsual(ficha.getNomeUsualEle()+" E "+ficha.getNomeUsualEla());
+			if (ficha.getSituacao().equals("PENDENTE") || ficha.getSituacao().equals("AUSÊNCIA JUSTIFICADA"))
+				ficha.setDataAlteracao(new Date());
 			primeiraSegundaTerceiraEtapa(ficha);
-
-//			if (!ficha.getSituacao().equals("ENCONTRISTA")) {
-//				if (ficha.getSegundaEtapa().trim().length() > 0) {
-//					if (!ficha.getPrimeiraEtapa().contains("º")) {
-//						ficha.setPrimeiraEtapa(ficha.getPrimeiraEtapa()+"º");
-//					}
-//				}
-//				if (ficha.getSegundaEtapa().trim().length() > 0) {
-//					if (!ficha.getSegundaEtapa().contains("º")) {
-//						ficha.setSegundaEtapa(ficha.getSegundaEtapa()+"º");
-//					}
-//				}
-//				if (ficha.getTerceiraEtapa().trim().length() > 0) {
-//					if (!ficha.getTerceiraEtapa().contains("º")) {
-//						ficha.setTerceiraEtapa(ficha.getTerceiraEtapa()+"º");
-//					}
-//				}
-//			}
 			this.fichaRepository.salvar(ficha);
 			FacesMessages.info("Ficha alterada");
 		}catch(NegocioException e){
@@ -97,7 +66,7 @@ public class FichaService implements Serializable {
 
 	private void primeiraSegundaTerceiraEtapa(Ficha ficha) {
 		if (!ficha.getSituacao().equals("ENCONTRISTA")) {
-			if (ficha.getSegundaEtapa().trim().length() > 0) {
+			if (ficha.getPrimeiraEtapa().trim().length() > 0) {
 				if (!ficha.getPrimeiraEtapa().contains("º")) {
 					ficha.setPrimeiraEtapa(ficha.getPrimeiraEtapa()+"º");
 				}

@@ -262,7 +262,7 @@
 										 style="width:435px" converter="fichaConverter"
 										 filter="true" filterMatchMode="contains">
 							<f:selectItem itemLabel="Selecione o casal" noSelectionOption="true" />
-							<f:selectItems value="#{fichaBean.listaEncontreiros}"
+							<f:selectItems value="#{fichaBean.listaEncontristas}"
 										   var="casal" itemValue="#{casal}"
 										   itemLabel="#{casal.nomeUsual}" />
 							<p:ajax event="change" update="fotoCasalEleEla" process="@this" listener="#{encontristaEccBean.onChangeCasalEncontreiro}"/>

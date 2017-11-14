@@ -69,6 +69,9 @@ public class CirculoEccBean implements Serializable {
 	private FichaService fichaService;
 
 	@Inject
+	private DirigenteEccService dirigenteEccService;
+
+	@Inject
 	private EncontristaEccCasalService encontristaEccCasalService;
 
 	public CirculoEcc getCirculoEcc() {
@@ -277,25 +280,30 @@ public class CirculoEccBean implements Serializable {
 			novoCirculo();
 			return;
 		} else if (equipeEccService.casalJaExisteEccCoordenadorOuEquipe(ecc.getId(), casalCoordenador.getId())) {
-			FacesMessages.error("Casal já faz parte de uma Equipe(Coordenador ou Membro) neste ECC.");
-			RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
-			novoCirculo();
-			return;
-		} else if (circuloEccService.circuloJaExisteEcc(ecc.getId(), circulo.getId())) {
-				FacesMessages.error("Círculo já cadastrado para este ECC.");
-				novoCirculo();
-				RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
-				return;
-			} else {
-				circuloEcc.setEcc(ecc);
-				circuloEcc.setCirculo(circulo);
-				circuloEcc.setCasalCoordenador(casalCoordenador);
+					FacesMessages.error("Casal já faz parte de uma Equipe(Coordenador ou Membro) neste ECC.");
+					RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+					novoCirculo();
+					return;
+				} else if (circuloEccService.circuloJaExisteEcc(ecc.getId(), circulo.getId())) {
+							FacesMessages.error("Círculo já cadastrado para este ECC.");
+							RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+							novoCirculo();
+							return;
+						} else if (dirigenteEccService.casalJaExisteEccDirigente(ecc.getId(), casalCoordenador.getId(), 0L)) {
+									FacesMessages.error("Casal já faz parte da Equipe de Dirigentes neste ECC.");
+									RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+									novoCirculo();
+									return;
+								} else {
+										circuloEcc.setEcc(ecc);
+										circuloEcc.setCirculo(circulo);
+										circuloEcc.setCasalCoordenador(casalCoordenador);
 
-				circuloEccService.salvar(circuloEcc);
-				this.listaCirculoEcc = circuloEccService.listar();
-				novoCirculo();
-				desabilitaTodosBotoesCirculoEcc();
-			}
+										circuloEccService.salvar(circuloEcc);
+										this.listaCirculoEcc = circuloEccService.listar();
+										novoCirculo();
+										desabilitaTodosBotoesCirculoEcc();
+										}
 	}
 
 	public void alterarCirculo() {
@@ -309,11 +317,15 @@ public class CirculoEccBean implements Serializable {
 				FacesMessages.error("Casal já é Coordenador de outro círculo neste ECC.");
 				RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
 				return;
-			} else {
-				this.circuloEcc.setCasalCoordenador(this.casalCoordenador);
-				circuloEccService.alterar(this.circuloEcc);
-				this.casalCoordenador = new Ficha();
-			}
+			} else if (dirigenteEccService.casalJaExisteEccDirigente(circuloEcc.getEcc().getId(), this.casalCoordenador.getId(), 0L)) {
+						FacesMessages.error("Casal já faz parte da Equipe de Dirigentes neste ECC.");
+						RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+						return;
+					} else {
+							this.circuloEcc.setCasalCoordenador(this.casalCoordenador);
+							circuloEccService.alterar(this.circuloEcc);
+							this.casalCoordenador = new Ficha();
+							}
 
 		} catch (Exception e) {
 			FacesMessages.error(e.getMessage());

@@ -82,6 +82,10 @@ public class FichaBean implements Serializable {
 
 	public void novaFicha() {
 		this.ficha = new Ficha();
+		Equipe nenhum = new Equipe();
+		nenhum.setId(29L);
+		nenhum.setDescricao("NENHUM");
+		this.ficha.setUltimoTrabalho(nenhum);
 	}
 
 	private void novaAtividade() {
@@ -148,14 +152,14 @@ public class FichaBean implements Serializable {
 		this.aptidao = aptidao;
 	}
 
-	public List<Ficha> getListaEncontristas() {
+	public List<Ficha> getListaEncontreiros() {
 		if (this.listaEncontristas == null) {
 			this.listaEncontristas = fichaService.listarEncontreiroEncontrista(Constantes.ENCONTREIRO);
 		}
 		return this.listaEncontristas;
 	}
 
-	public List<Ficha> getListaEncontreiros() {
+	public List<Ficha> getListaEncontristas() {
 		if (this.listaEncontreiros == null) {
 			this.listaEncontreiros = fichaService.listarEncontreiroEncontrista(Constantes.ENCONTRISTA);
 		}

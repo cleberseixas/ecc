@@ -191,7 +191,7 @@
 										style="float: right;" title="Laranja"/>
 					</p:column>
 					<p:column headerText="Casal Coordenador" width="200">
-						<p:outputLabel value="#{circuloEcc.casalCoordenador.nomeUsual}"/>
+						<p:outputLabel value="#{circuloEcc.casalCoordenador.primeiraEtapa} - #{circuloEcc.casalCoordenador.nomeUsual}"/>
 						<h:graphicImage library="imagens" value="/image?imagem=#{circuloEcc.casalCoordenador.fotoEla}" rendered="#{circuloEcc.casalCoordenador.fotoEla.length() > 0}"
 										style="width:20px; height:20px; float: right;" title="Foto dela"/>
 						<h:graphicImage library="imagens" value="/image?imagem=#{circuloEcc.casalCoordenador.fotoEle}" rendered="#{circuloEcc.casalCoordenador.fotoEle.length() > 0}"
@@ -273,7 +273,7 @@
 								<f:selectItem itemLabel="Selecione o Casal Coordenador" noSelectionOption="true" />
 								<f:selectItems value="#{circuloEccBean.listaCasalCoordenador}"
 											   var="casal" itemValue="#{casal}"
-											   itemLabel="#{casal.nomeUsual}" />
+											   itemLabel="#{casal.primeiraEtapa} - #{casal.nomeUsual}" />
 								<p:ajax event="change" update="fotoEleEla" process="@this" listener="#{circuloEccBean.onChangeCasalCoordenador}"/>
 							</p:selectOneMenu>
 						</h:panelGrid>

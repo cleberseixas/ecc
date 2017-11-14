@@ -87,51 +87,6 @@ public class Util {
 		return calendar.get(Calendar.HOUR_OF_DAY) <= 12 ? "Bom dia." : "Boa tarde.";
 	}
 	
-	
-	public static String getPreencheZerosEsquerdaNumeroParecer(int numero) {
-		String strNum = ""+numero;
-		String result = "";
-		for (int i = 0; i < 3-strNum.length(); i++) {
-			result += "0";
-		}
-		return result+strNum;
-	}
-	
-	public static String getQuantidadePareceresFormatados(Long numero) {
-		return numero == 0 ? "--" : numero < 10 ? "0"+numero : ""+numero;
-	}
-	
-	public static String getFormataNumerosZeroNaFrente(int numero) {
-		return numero == 0 ? "Não há" : numero < 10 ? "0"+numero : ""+numero;
-	}
-
-	public static String getFormataNumerosZeroNaFrente(Long numero) {
-		return numero == 0 ? "Não há" : numero < 10 ? "0"+numero : ""+numero;
-	}
-	
-	public static String getTextoPareceresConcluidos(String tipo) {
-		if (tipo.equals("Todos")) {
-			return "Lista de todos os pareceres finalizados";
-		} else if (tipo.equals("Parecer concluído")) {
-			return "Lista de todos os pareceres concluídos";
-		} else if (tipo.equals("Parecer arquivado")) {
-			return "Lista de todos os pareceres arquivados";
-		} else {
-			return "Lista de todos os pareceres cancelados";
-		}
-	}
-
-	public static String getTextoAtividadesAvulsasConcluidas(String tipo) {
-		if (tipo.equals("Todos")) {
-			return "Lista de todos as atividades finalizadas";
-		} else if (tipo.equals("Concluido")) {
-			return "Lista de todos as atividades concluídas";
-		} else {
-			return "Lista de todas as atividades canceladas";
-		}
-	}
-
-	
 	public static Date strToDate(String data) {
 		try {
 			SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
@@ -156,21 +111,6 @@ public class Util {
 			return "0"+numero;
 		} else {
 			return ""+numero;
-		}
-	}
-	
-	public static String formataMediaDiasConclusaoParecer(BigInteger numero) {
-		if (numero != null) {
-			Integer n = new Integer(numero.intValue());
-			if (n == 0) {
-				return "01 dia";
-			} else if (n < 10) {
-				return "0"+n+" dias";
-			} else {
-				return n+" dias";
-			}
-		} else {
-			return "--";
 		}
 	}
 	
@@ -280,83 +220,7 @@ public class Util {
 		}
 		return result;
 	}
-	
-	public static String resultadoPergunta_1(String chave) {
-		String result;
-		switch (chave) {
-		case "R1":
-			result = Constantes.RESPOSTA_1_PERGUNTA_1;
-			break;
-		case "R2":
-			result = Constantes.RESPOSTA_2_PERGUNTA_1;
-			break;
-		case "R3":
-			result = Constantes.RESPOSTA_3_PERGUNTA_1;
-			break;			
-		default:
-			result = "Sem resposta";
-			break;
-		}
-		return result;
-	}
-	
-	public static String resultadoPergunta_2(String chave) {
-		String result;
-		switch (chave) {
-		case "R1":
-			result = Constantes.RESPOSTA_1_PERGUNTA_2;
-			break;
-		case "R2":
-			result = Constantes.RESPOSTA_2_PERGUNTA_2;
-			break;
-		case "R3":
-			result = Constantes.RESPOSTA_3_PERGUNTA_3;
-			break;			
-		default:
-			result = "Sem resposta";
-			break;
-		}
-		return result;
-	}
-	
-	public static String resultadoPergunta_3(String chave) {
-		String result;
-		switch (chave) {
-		case "R1":
-			result = Constantes.RESPOSTA_1_PERGUNTA_3;
-			break;
-		case "R2":
-			result = Constantes.RESPOSTA_2_PERGUNTA_3;
-			break;
-		case "R3":
-			result = Constantes.RESPOSTA_3_PERGUNTA_3;
-			break;			
-		default:
-			result = "Sem resposta";
-			break;
-		}
-		return result;
-	}
-	
-	public static String resultadoPergunta_4(String chave) {
-		String result;
-		switch (chave) {
-		case "R1":
-			result = Constantes.RESPOSTA_1_PERGUNTA_4;
-			break;
-		case "R2":
-			result = Constantes.RESPOSTA_2_PERGUNTA_4;
-			break;
-		case "R3":
-			result = Constantes.RESPOSTA_3_PERGUNTA_4;
-			break;			
-		default:
-			result = "Sem resposta";
-			break;
-		}
-		return result;
-	}
-	
+
 	private static String removeMascaras(String numero) {
 		String apenasNumeros = "";
 		String digitos = "0123456789";
@@ -370,47 +234,4 @@ public class Util {
 		}
 		return apenasNumeros;
 	}
-	
-	private static String formataNumeroTJ(String numero) {
-		String bloco1 = numero.substring(0,7);
-		String bloco2 = numero.substring(7,9);
-		String bloco3 = numero.substring(9,13);
-		String bloco4 = numero.substring(13,14);
-		String bloco5 = numero.substring(14,16);
-		String bloco6 = numero.substring(16,20);
-		return bloco1+"-"+bloco2+"."+bloco3+"."+bloco4+"."+bloco5+"."+bloco6;
-	}
-	
-	private static String formataNumeroSEI(String numero) {
-		String bloco1 = numero.substring(0,2);
-		String bloco2 = numero.substring(2,4);
-		String bloco3 = numero.substring(4,13);
-		String bloco4 = numero.substring(13,20);
-		String bloco5 = numero.substring(20,24);
-		String bloco6 = numero.substring(24,26);
-		return bloco1+"."+bloco2+"."+bloco3+"."+bloco4+"/"+bloco5+"-"+bloco6;
-	}
-	
-	public static String formataNumeroProcedimento(String numero) {
-		String numeroFormatado = "";
-		numero = numero.trim();
-		String numeroAux = removeMascaras(numero);
-		if (numero.equals("")) {
-			numeroFormatado = "----------------";
-		} else if (numeroAux.length() == 16) {
-			numeroFormatado = numero + "[P]";
-		} else if (numeroAux.length() == 20) {
-			numeroFormatado = formataNumeroTJ(numeroAux) + "[J]";
-		} else if (numeroAux.length() == 26) {
-			numeroFormatado = formataNumeroSEI(numeroAux) + "[S]";
-		} else {
-			numeroFormatado = "----------------";
-		}
-		return numeroFormatado;
-	}
-	
-	
-	
-	
-
 }

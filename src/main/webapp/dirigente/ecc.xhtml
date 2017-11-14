@@ -375,9 +375,9 @@
 										 style="width:435px" converter="fichaConverter"
 										 filter="true" filterMatchMode="contains">
 							<f:selectItem itemLabel="Selecione o casal" noSelectionOption="true" />
-							<f:selectItems value="#{fichaBean.listaEncontristas}"
+							<f:selectItems value="#{fichaBean.listaEncontreiros}"
 										   var="casal" itemValue="#{casal}"
-										   itemLabel="#{casal.nomeUsual}" />
+										   itemLabel="#{casal.primeiraEtapa} - #{casal.nomeUsual}" />
 						</p:selectOneMenu>
 
 						<p:selectOneMenu id="equipe" converter="equipeConverter"
@@ -415,7 +415,7 @@
 								<p:outputLabel value="Total de Dirigentes - #{eccBean.ecc.dirigentes.size()}" />
 							</f:facet>
 								<p:column headerText="Casal" width="200">
-									<p:outputLabel value="#{dirigente.ficha.nomeUsual}" />
+									<p:outputLabel value="#{dirigente.ficha.primeiraEtapa} - #{dirigente.ficha.nomeUsual}" />
 									<h:graphicImage library="imagens" name="coordenador.png" width="15" height="15" rendered="#{dirigente.equipe.descricao eq 'COORDENADOR GERAL'}"
 													style="float: right;" title="Coordenador Geral"/>
 									<h:graphicImage library="imagens" name="dirigente.png" width="15" height="15" rendered="#{dirigente.equipe.descricao eq 'MONTAGEM'

@@ -39,7 +39,7 @@ public class EccRepository {
 	}
 
 	public List<Ecc> listarEccAtividade() {
-		TypedQuery<Ecc> query = manager.createQuery("from Ecc where automatico=false order by numero", Ecc.class);
+		TypedQuery<Ecc> query = manager.createQuery("from Ecc where ativo=true and automatico=false and situacao='ANDAMENTO' order by numero", Ecc.class);
 		return query.getResultList();
 	}
 
