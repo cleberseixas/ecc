@@ -1,9 +1,7 @@
 package br.com.ecc.service;
 
 import br.com.ecc.model.Atividade;
-import br.com.ecc.model.Dirigente;
 import br.com.ecc.repository.AtividadeRepository;
-import br.com.ecc.repository.DirigenteEccRepository;
 import br.com.ecc.util.FacesMessages;
 import br.com.ecc.util.NegocioException;
 import br.com.ecc.util.Transactional;

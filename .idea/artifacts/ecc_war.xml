@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="war" name="ecc:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
+    <output-path>$USER_HOME$/Downloads/ecc_sw</output-path>
     <root id="archive" name="ecc-0.0.1-SNAPSHOT.war">
       <element id="artifact" artifact-name="ecc:war exploded" />
     </root>
