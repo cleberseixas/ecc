@@ -29,11 +29,13 @@ public class exibeFoto extends HttpServlet{
 		String requestedImage = request.getParameter("imagem");
 		File image = new File(imagePath, requestedImage);
 
-		String contentType = getServletContext().getMimeType(image.getName());
-		response.reset();
-		response.setContentType(contentType);
-		response.setHeader("Content-Length", String.valueOf(image.length()));
+		if (image.exists()) {
+			String contentType = getServletContext().getMimeType(image.getName());
+			response.reset();
+			response.setContentType(contentType);
+			response.setHeader("Content-Length", String.valueOf(image.length()));
 
-		Files.copy(image.toPath(), response.getOutputStream());
+			Files.copy(image.toPath(), response.getOutputStream());
+		}
 	}
 }

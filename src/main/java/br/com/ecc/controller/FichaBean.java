@@ -352,11 +352,13 @@ public class FichaBean implements Serializable {
 	private void excluirFoto(String ele, String ela) {
 		if (null != ele) {
 			File fotoExcluirEle = new File(pathFoto, ele);
-			fotoExcluirEle.delete();
+			if (fotoExcluirEle.exists())
+				fotoExcluirEle.delete();
 		}
 		if (null != ela) {
 			File fotoExcluirEla = new File(pathFoto, ela);
-			fotoExcluirEla.delete();
+			if (fotoExcluirEla.exists())
+				fotoExcluirEla.delete();
 		}
 
 	}
@@ -411,12 +413,9 @@ public class FichaBean implements Serializable {
 			//UploadedFile uploadedFile = event.getFile();
 
 			String nomeFoto = uploadedFile.getFileName();
-
 			if (nomeFoto.trim().length() > 0) {
 				//id_eleUsual_nomefile;
 				nomeFoto = Util.removeAcentos(nomeFoto);
-
-
 				File file = new File(pathFoto, nomeFotoHM(nomeFoto));
 				OutputStream out = new FileOutputStream(file);
 				out.write(uploadedFile.getContents());
@@ -426,6 +425,7 @@ public class FichaBean implements Serializable {
 				FacesMessages.error("Favor escolher a foto");
 			}
 		} catch (IOException e) {
+			FacesMessages.error("Erro na gravação da foto "+e.getMessage());
 		}
 
 	}

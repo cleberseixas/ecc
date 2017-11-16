@@ -24,6 +24,7 @@ public class FichaRepository {
 	}
 
 	public void excluir(Ficha ficha) {
+		//manager.remove(manager.getReference(Objeto.class, objeto.getId()));
 		manager.remove(ficha);
 	}
 
