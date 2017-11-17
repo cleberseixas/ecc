@@ -153,11 +153,14 @@
 		<br />
 				<p:dataTable id="fichas" value="#{fichaBean.listaFichas}" var="ficha" rowIndexVar="index" selection="#{fichaBean.ficha}"
 							 selectionMode="single" rowKey="#{ficha.id}"
-							 emptyMessage="Não há Fichas de Encontristas/Encontreiros cadastradas" style="width:100%;">
+							 emptyMessage="Não há Fichas de Encontristas/Encontreiros cadastradas" style="width:100%;"
+							 rows="10" paginator="true" paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+							 rowsPerPageTemplate="10,20,30,40,50"
+				currentPageReportTemplate="Registro(s) {startRecord} a {endRecord} de um total de {totalRecords} - Página {currentPage} de {totalPages}">
 					<f:facet name="header">
 						<h:panelGrid columns="2" styleClass="semBordaInterna"
 									 columnClasses="tituloGridSolicitacao, botoesGridSolicitacao">
-							<p:outputLabel value="Lista de Encontristas/Encontreiros - #{fichaBean.listaFichas.size()}"
+							<p:outputLabel value="Fichas de Casais"
 										   style="float:left;" />
 							<h:panelGroup style="float:right;">
 								<p:commandButton action="#{fichaBean.novaFicha}"
@@ -475,10 +478,10 @@
 						<p:inputText id="etapa1" value="#{fichaBean.ficha.primeiraEtapa}" disabled="false"
 									 maxlength="10" style="width:75px;">
 						</p:inputText>
-						<p:inputText id="etapa2" value="#{fichaBean.ficha.segundaEtapa}" rendered="false"
+						<p:inputText id="etapa2" value="#{fichaBean.ficha.segundaEtapa}" rendered="true"
 									 maxlength="10" style="width:75px;">
 						</p:inputText>
-						<p:inputText id="etapa3" value="#{fichaBean.ficha.terceiraEtapa}" rendered="false"
+						<p:inputText id="etapa3" value="#{fichaBean.ficha.terceiraEtapa}" rendered="true"
 									 maxlength="10" style="width:75px;">
 						</p:inputText>
 						<p:inputText id="motivo" value="#{fichaBean.ficha.motivo}"
@@ -773,16 +776,16 @@
 					</h:panelGrid>
 					<h:panelGrid columns="4">
 						<h:outputLabel value="ECC - 1º Etapa" for="etapa1" />
-						<h:outputLabel value="ECC - 2º Etapa" for="etapa2" />
-						<h:outputLabel value="ECC - 3º Etapa" for="etapa3" />
+						<h:outputLabel value="ECC - 2º Etapa" for="etapa2" rendered="true"/>
+						<h:outputLabel value="ECC - 3º Etapa" for="etapa3" rendered="true"/>
 						<h:outputLabel value="Motivo" for="motivo" />
 						<p:inputText id="etapa1" value="#{fichaBean.ficha.primeiraEtapa}" disabled="false"
 									 maxlength="10" style="width:75px;">
 						</p:inputText>
-						<p:inputText id="etapa2" value="#{fichaBean.ficha.segundaEtapa}" disabled="false"
+						<p:inputText id="etapa2" value="#{fichaBean.ficha.segundaEtapa}" rendered="true"
 									 maxlength="10" style="width:75px;">
 						</p:inputText>
-						<p:inputText id="etapa3" value="#{fichaBean.ficha.terceiraEtapa}" disabled="false"
+						<p:inputText id="etapa3" value="#{fichaBean.ficha.terceiraEtapa}" rendered="true"
 									 maxlength="10" style="width:75px;">
 						</p:inputText>
 						<p:inputText id="motivo" value="#{fichaBean.ficha.motivo}"
@@ -900,7 +903,7 @@
 		<p:dialog id="dialogNovasAptidoes" header="Lançar Aptidões"
 				  modal="true" widgetVar="dlgNovasAptidoes"
 				  style="background-color:#EBF3FE" resizable="false" width="820px"
-				  height="380px">
+				  height="550px">
 			<h:form id="cadNovasAptidoes">
 				<h:message />
 				<p:panel id="panelDadosAptidoes" style="background-color: #ffffe6">
@@ -946,7 +949,7 @@
 						</p:panel>
 					</h:panelGrid>
 					<h:panelGrid columns="3">
-						<p:dataTable id="tabelaAptidoes" scrollable="true" scrollHeight="143"
+						<p:dataTable id="tabelaAptidoes" scrollable="true" scrollHeight="310"
 									 style="margin-right: 10px; width:770px;"
 									 value="#{fichaBean.ficha.aptidaos}" var="aptidao"
 									 emptyMessage="Não há Aptidões cadastradas" rowIndexVar="index">
