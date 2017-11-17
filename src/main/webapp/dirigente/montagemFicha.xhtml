@@ -157,7 +157,7 @@
 					<f:facet name="header">
 						<h:panelGrid columns="2" styleClass="semBordaInterna"
 									 columnClasses="tituloGridSolicitacao, botoesGridSolicitacao">
-							<p:outputLabel value="Lista de Encontristas/Encontreiros"
+							<p:outputLabel value="Lista de Encontristas/Encontreiros - #{fichaBean.listaFichas.size()}"
 										   style="float:left;" />
 							<h:panelGroup style="float:right;">
 								<p:commandButton action="#{fichaBean.novaFicha}"
@@ -365,7 +365,7 @@
 											 maxlength="100" style="width:400px;">
 								</p:inputText>
 								<p:inputText id="telefoneEle" value="#{fichaBean.ficha.telefoneEle}"
-											 required="true" requiredMessage="O campo Nome Usual dele é obrigatório"
+											 required="true" requiredMessage="O campo Telefone dele é obrigatório"
 											 maxlength="50" style="width:158px;">
 								</p:inputText>
 								<p:selectOneMenu id="religiaoEle"
@@ -375,6 +375,7 @@
 									<f:selectItem itemValue="ADVENTISTA" itemLabel="ADVENTISTA" />
 									<f:selectItem itemValue="EVANGÉLICO" itemLabel="EVANGÉLICO" />
 									<f:selectItem itemValue="NENHUM" itemLabel="NENHUM" />
+									<f:selectItem itemValue="NENHUM" itemLabel="OUTRA" />
 								</p:selectOneMenu>
 							</h:panelGrid>
 						</div>
@@ -412,7 +413,7 @@
 											 maxlength="100" style="width:400px;">
 								</p:inputText>
 								<p:inputText id="telefoneEla" value="#{fichaBean.ficha.telefoneEla}"
-											 required="true" requiredMessage="O campo Nome Usual dela é obrigatório"
+											 required="true" requiredMessage="O campo Telefone dela é obrigatório"
 											 maxlength="50" style="width:158px;">
 								</p:inputText>
 								<p:selectOneMenu id="religiaoEla"
@@ -422,6 +423,7 @@
 									<f:selectItem itemValue="ADVENTISTA" itemLabel="ADVENTISTA" />
 									<f:selectItem itemValue="EVANGÉLICO" itemLabel="EVANGÉLICO" />
 									<f:selectItem itemValue="NENHUM" itemLabel="NENHUM" />
+									<f:selectItem itemValue="NENHUM" itemLabel="OUTRA" />
 								</p:selectOneMenu>
 							</h:panelGrid>
 						</div>
@@ -467,16 +469,16 @@
 					</h:panelGrid>
 					<h:panelGrid columns="4">
 						<h:outputLabel value="ECC - 1º Etapa" for="etapa1" />
-						<h:outputLabel value="ECC - 2º Etapa" for="etapa2" />
-						<h:outputLabel value="ECC - 3º Etapa" for="etapa3" />
+						<h:outputLabel value="ECC - 2º Etapa" for="etapa2" rendered="false"/>
+						<h:outputLabel value="ECC - 3º Etapa" for="etapa3" rendered="false"/>
 						<h:outputLabel value="Motivo" for="motivo" />
 						<p:inputText id="etapa1" value="#{fichaBean.ficha.primeiraEtapa}" disabled="false"
 									 maxlength="10" style="width:75px;">
 						</p:inputText>
-						<p:inputText id="etapa2" value="#{fichaBean.ficha.segundaEtapa}" disabled="false"
+						<p:inputText id="etapa2" value="#{fichaBean.ficha.segundaEtapa}" rendered="false"
 									 maxlength="10" style="width:75px;">
 						</p:inputText>
-						<p:inputText id="etapa3" value="#{fichaBean.ficha.terceiraEtapa}" disabled="false"
+						<p:inputText id="etapa3" value="#{fichaBean.ficha.terceiraEtapa}" rendered="false"
 									 maxlength="10" style="width:75px;">
 						</p:inputText>
 						<p:inputText id="motivo" value="#{fichaBean.ficha.motivo}"

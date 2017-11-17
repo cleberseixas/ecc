@@ -19,8 +19,13 @@
 			<!-- Configuração para o PostGreSql: -->
 			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
 
-			<!-- Acesso servidor porto velho -->
-			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost/ecc_bd" />
+			<!-- Acesso servidor LOCAL -->
+			<!--
+
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost/ecc_bd1" />
+			-->
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://179.155.225.37:5400/ecc_bd" />
+
 			<property name="javax.persistence.jdbc.user" value="postgres" />
 				<property name="javax.persistence.jdbc.password" value="postgres" />
 
