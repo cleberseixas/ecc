@@ -1089,7 +1089,7 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:hover,a.list-gro
 	line-height: 1.3
 }
 
-#divEstatisticaChefeFora {
+#divEstatisticaECC {
 	width: 100%;
 	height: 300px;
 }
@@ -1109,7 +1109,7 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:hover,a.list-gro
 	border-radius:5px 5px 5px 5px;
 }
 
-#divEstatisticaChefeInferiorEsquerda_01 {
+#divEstatisticaECCSuperiorEsquerda_01 {
 	width: 632px;
 	height: 500px;
 	float: left;
@@ -1117,7 +1117,7 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:hover,a.list-gro
 	overflow: auto;
 }
 
-#divEstatisticaChefeInferiorEsquerda {
+#divEstatisticaeECCSuperiorEsquerda {
 	width: 632px;
 	height: 500px;
 	float: left;
@@ -1139,7 +1139,7 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:hover,a.list-gro
 	overflow: auto;
 }
 
-#divEstatisticaChefeSuperiorDireita {
+#divEstatisticaFichaSuperiorDireita {
 	width: 260px;
 	height: 300px;
 	float: left;
