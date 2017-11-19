@@ -6,6 +6,9 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 
 public class AptidaoRepository {
@@ -45,4 +48,36 @@ public class AptidaoRepository {
 		query.executeUpdate();
 		manager.getTransaction().commit();
 	}
+
+	/**
+	 * Método que lista as aptidões agrupadas
+	 */
+
+	@SuppressWarnings("rawtypes")
+	public List<br.com.ecc.model.util.Aptidao> totalPorAptidao() {
+		String sql = "";
+		Query query = null;
+//		if (idAptidao > 0) {
+//			sql = "select eq.descricao, count(ap.*) from aptidoes ap "
+//					+ " inner join equipes eq on eq.equipe = ap.equipe "
+//					+ " where ap.equipe =:APTIDAO group by 1 order by 1";
+//			query = manager.createNativeQuery(sql);
+//			query.setParameter("APTIDAO", idAptidao);
+		sql = "select eq.descricao, count(ap.*) from aptidoes ap "
+			+ " inner join equipes eq on eq.equipe = ap.equipe group by 1 order by 1";
+		query = manager.createNativeQuery(sql);
+		List lst = query.getResultList();
+		Iterator iter = lst.iterator();
+		List<br.com.ecc.model.util.Aptidao> lista = new ArrayList<br.com.ecc.model.util.Aptidao>();
+		br.com.ecc.model.util.Aptidao aptidao = null;
+		while (iter.hasNext()) {
+			aptidao = new br.com.ecc.model.util.Aptidao();
+			Object[] obj = (Object[])iter.next();
+			aptidao.setAptidao(obj[0].toString());
+			aptidao.setQuantidade(Integer.valueOf(obj[1].toString()));
+			lista.add(aptidao);
+		}
+		return lista;
+	}
+
 }

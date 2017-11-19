@@ -65,4 +65,12 @@ public class AtividadeService implements Serializable {
 		atividadeRepository.removeAtividadeLimbo();
 	}
 
+	public List<br.com.ecc.model.util.Atividade> totalPorAtividade() {
+		try {
+			return atividadeRepository.totalPorAtividade();
+		} catch(NegocioException e){
+			FacesMessages.error(e.getMessage());
+			return null;
+		}
+	}
 }

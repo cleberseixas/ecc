@@ -37,6 +37,11 @@
 		<div id="menubar">
 			<li class="icone"><h:graphicImage library="imagens" name="logo_ECC.png" width="400" height="72" /></li>
 			<ul>
+				<li><a style="color: #808080; background: #a0c0de; opacity: 1; filter: alpha(opacity = 100);
+					border-bottom: 1px solid #a0c0de;">
+					<h:graphicImage library="imagens/menu"
+									style="width:35px; height:35px;" name="estatisticas.png" />Indicadores
+				</a></li>
 				<h:panelGroup rendered="#{contextoBean.usuarioLogado.perfil eq 'Administrador'}">
 					<li>
 						<a><h:graphicImage library="imagens/menu"
@@ -140,26 +145,23 @@
 			onsuccess="PF('statusDialog').hide()" />
 		<p:growl id="growl" showDetail="false" life="2000" />
 		<br />
-		<br />
-		<div id="divEstatisticaECCFichasAptidoesAtividades">
-			<!-- Inicio da DIV Estatísticas ECC -->
-			<div id="divEstatisticaECC">
+		<div id="divEstatisticaECCAptidaoAtividades">
+			<div id="divEstatisticaECC2">
 				<div id="divBoxSuperiorGeral">
+					<!--
 					<h:panelGrid columns="3">
 						<h:graphicImage library="imagens/menu" name="ecc.png"
-							style="margin-top:5px;width:30px; height:30px;" />
+										style="margin-top:5px;width:30px; height:30px;" />
 						<h:panelGroup>
-							<h:outputLabel value="ECC"
-								style="font-size:13px; color: #737373" />
-							<br />
 							<h:outputLabel value="Quadro Indicativo"
-								style="font-size:13px; 	font-weight: bold;" />
+										   style="font-size:13px; 	font-weight: bold;" />
 						</h:panelGroup>
 					</h:panelGrid>
 				</div>
+				-->
 				<div id="divEstatisticaECCSuperiorEsquerda">
 					<div id="divEstatisticaECCSuperiorEsquerda_01">
-						<div class="caixa caixa-azul" style="width: 626px;">
+						<div class="caixa caixa-azul" style="width: 620px;">
 							<h:outputLabel value="Tabela de ECC "
 										   styleClass="negrito" style="font-size:15px;" />
 							<p:selectOneMenu id="ecc" value="#{estatisticaBean.eccFiltro}"
@@ -177,14 +179,14 @@
 							</p:commandLink>
 						</div>
 					</div>
-					<div id="divEstatisticaChefeSuperiorEsquerda_02">
+					<div id="divEstatisticaECCSuperiorEsquerda_02">
 						<p:dataTable id="tabelaECC" var="ecc"
 									 value="#{estatisticaBean.listaDosEccs}"
 									 emptyMessage="Não há ECCs">
 							<p:columnGroup type="header">
 								<p:row>
 									<p:column rowspan="1" headerText="Casal" />
-									<p:column colspan="1" headerText="Equipe" width="250px;" />
+									<p:column colspan="1" headerText="Equipe" width="220px;" />
 								</p:row>
 							</p:columnGroup>
 
@@ -204,7 +206,7 @@
 									<h:graphicImage library="imagens" value="/image?imagem=#{dirigentes.ficha.fotoEle}" rendered="#{dirigentes.ficha.fotoEle.length() > 0}"
 													style="width:20px; height:20px; float: right;" title="Foto dele"/>
 								</p:column>
-								<p:column style="text-align:right">
+								<p:column style="text-align:left">
 									<h:outputText value="#{dirigentes.equipe.descricao}" />
 								</p:column>
 								<p:columnGroup type="footer">
@@ -220,65 +222,128 @@
 					</div>
 				</div>
 			</div>
-			<div id="divBoxSuperiorGeral">
-				<h:panelGrid columns="3">
-					<h:graphicImage library="imagens/menu" name="montagemCasais.png"
-									style="margin-top:5px;width:30px; height:30px;" />
-					<h:panelGroup>
-						<h:outputLabel value="Fichas"
-									   style="font-size:13px; color: #737373" />
-						<br />
-						<h:outputLabel value="Quadro por Situação"
-									   style="font-size:13px; 	font-weight: bold;" />
-					</h:panelGroup>
-				</h:panelGrid>
-			</div>
-			<!-- Inicio da DIV Fichas -->
-			<div id="divEstatisticaFichaSuperiorDireita">
-				<div class="info-box" style="width: 250px; height: 60px;">
+			<!-- DIV ENCONTREIROS E ENCOTNRISTAS -->
+			<div id="divEstatisticaEncontreiroEncontrista">
+				<div class="info-box" style="width: 195px; height: 60px;">
 					<span class="info-box-icon bg-aqua">
 						<h:graphicImage library="imagens"
 										style="width:35px; height:35px;" name="encontreiro.png" />
 					</span>
 					<div class="info-box-content">
 						<span class="info-box-text"><b><font size="3px">ENCONTREIROS</font></b></span>
-						<span class="info-box-text">NOVAS MOVIMENTAÇÕES</span>
 						<span class="info-box-number">
-              				<a href="../chefe/parecerAnaliseChefe.xhtml" style="color:black;">#{estatisticaBean.numeroNovosMovimentos}</a>
+              				#{estatisticaBean.numeroEncontreiros}
               			</span>
 					</div>
 				</div>
-
-				<div class="info-box" style="width: 250px;">
-					<span class="info-box-icon bg-yellow">
-						<h:graphicImage library="imagens/menu"
-										style="width:35px; height:35px;" name="logoParecer.png" />
-					</span>
+				<div class="info-box" style="width: 195px;">
+						<span class="info-box-icon bg-yellow">
+							<h:graphicImage library="imagens"
+											style="width:35px; height:35px;" name="encontrista.png" />
+						</span>
 					<div class="info-box-content">
-						<span class="info-box-text"><b><font size="3px">PARECERES</font></b></span>
-						<span class="info-box-text">Movimentações em aberto há mais de 07 dias</span>
+						<span class="info-box-text"><b><font size="3px">ENCONTRISTAS</font></b></span>
 						<span class="info-box-number">
-              				<a href="../chefe/parecerAnaliseChefe.xhtml" style="color:black;">#{estatisticaBean.numeroMovimentosParados}</a>
-              			</span>
-					</div>
-				</div>
-
-				<div class="info-box" style="width: 250px;">
-					<span class="info-box-icon bg-red">
-						<h:graphicImage library="imagens/menu"
-										style="width:35px; height:35px;" name="logoAtividades2.png" />
-					</span>
-					<div class="info-box-content">
-						<span class="info-box-text"><b><font size="3px">ATIVIDADES</font></b></span>
-						<span class="info-box-text">NOVAS ATIVIDADES</span>
-						<span class="info-box-number">
-              				<a href="../chefe/../chefe/atividadeAnaliseChefe.xhtml" style="color:black;">#{estatisticaBean.numeroNovasAtividades}</a>
-              			</span>
+								#{estatisticaBean.numeroEncontristas}
+							</span>
 					</div>
 				</div>
 			</div>
-
+			<!-- DIV APTIDÕES -->
+			<div id="divEstatisticaAptidaoSuperiorDireita">
+					<div id="divEstatisticaAptiaoDireita_01">
+						<div class="caixa caixa-laranja" style="width: 420px;">
+							<p:selectOneMenu id="aptidao" value="#{estatisticaBean.aptidaoFiltro}"
+											 style="width:250px;margin-left:100px;display: inline-table">
+								<f:selectItem itemLabel="TODAS"/>
+								<f:selectItems value="#{equipeBean.lista}"
+											   var="aptidao" itemValue="#{aptidao.descricao}"
+											   itemLabel="#{aptidao.descricao}" />
+								<p:ajax listener="#{estatisticaBean.filtraPorAptidao()}"
+										event="change" update="tabelaAptidoes" />
+							</p:selectOneMenu>
+							<p:commandLink actionListener="#{estatisticaBean.imprimirEcc}"
+										   target="_blank" ajax="false" immediate="true">
+								<p:button icon="ui-icon-print" style="margin-left: 5px;" />
+							</p:commandLink>
+						</div>
+					</div>
+					<div id="divBoxAptidao">
+						<h:panelGrid columns="3">
+							<h:panelGroup>
+								<h:outputLabel value="Aptidão" style="font-size:15px; color: #737373" />
+								<br />
+								<h:outputLabel value="Total de Casais por Aptidão"
+											   styleClass="negrito" style="font-size:15px;" />
+							</h:panelGroup>
+						</h:panelGrid>
+					<div id="divDadosAptidao">
+						<h:panelGroup id="tabelaAptidoes">
+							<c:forEach items="#{estatisticaBean.listaDasAptidoes}"
+									   var="result" varStatus="count">
+								<div id="divLista_02">
+									<p:outputLabel value="#{result.aptidao}" styleClass="negrito" />
+								</div>
+								<div id="divLista_03">
+									<p:outputLabel value="#{result.quantidade}" />
+								</div>
+								<div id="limpa" />
+								<hr	style="border: 1px; border-top: 1px solid #ccc; margin-left: 10px; width: 94%" />
+							</c:forEach>
+						</h:panelGroup>
+					</div>
+				</div>
+			</div>
 		</div>
+		</div>
+
+		<!-- DIV ATIVIDADES -->
+		<div id="divEstatisticaEstaticaInferior">
+		<div id="divEstatisticaChefeInferiorEsquerda">
+			<div id="divEstatisticaAtividadeInferiorEsquerda">
+				<div class="caixa caixa-verde" style="width: 420px;">
+					<p:selectOneMenu id="atividade" value="#{estatisticaBean.atividadeFiltro}"
+									 style="width:250px;margin-left:100px;display: inline-table">
+						<f:selectItem itemLabel="TODAS"/>
+						<f:selectItems value="#{equipeBean.lista}"
+									   var="atividade" itemValue="#{atividade.descricao}"
+									   itemLabel="#{atividade.descricao}" />
+						<p:ajax listener="#{estatisticaBean.filtraPorAtividade()}"
+								event="change" update="tabelaAtividades" />
+					</p:selectOneMenu>
+					<p:commandLink actionListener="#{estatisticaBean.imprimirEcc}"
+								   target="_blank" ajax="false" immediate="true">
+						<p:button icon="ui-icon-print" style="margin-left: 5px;" />
+					</p:commandLink>
+				</div>
+			</div>
+			<div id="divBoxAptidao">
+				<h:panelGrid columns="3">
+					<h:panelGroup>
+						<h:outputLabel value="Atividade" style="font-size:15px; color: #737373" />
+						<br />
+						<h:outputLabel value="Total de Casais por Atividade"
+									   styleClass="negrito" style="font-size:15px;" />
+					</h:panelGroup>
+				</h:panelGrid>
+				<div id="divDadosAptidao">
+					<h:panelGroup id="tabelaAtividades">
+						<c:forEach items="#{estatisticaBean.listaDasAtividades}"
+								   var="result" varStatus="count">
+							<div id="divLista_02">
+								<p:outputLabel value="#{result.atividade}" styleClass="negrito" />
+							</div>
+							<div id="divLista_03">
+								<p:outputLabel value="#{result.quantidade}" />
+							</div>
+							<div id="limpa" />
+							<hr	style="border: 1px; border-top: 1px solid #ccc; margin-left: 10px; width: 94%" />
+						</c:forEach>
+					</h:panelGroup>
+				</div>
+			</div>
+		</div>
+	</div>
 	</h:form>
 	<p:dialog widgetVar="statusDialog" modal="true" draggable="false"
 			  closable="false" resizable="false" showHeader="false" width="250px">

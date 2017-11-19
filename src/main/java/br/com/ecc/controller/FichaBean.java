@@ -444,7 +444,10 @@ public class FichaBean implements Serializable {
 		boolean existeEcc = false;
 		for(Atividade ativ : ficha.getAtividades()) {
 			if (ativ.getEcc().getNumero().equals(ecc.getNumero())) {
-				existeEcc = true;
+				//Se não existir que trabalhou como PALESTRANTE
+				if (!ativ.getEquipe().getId().equals(8L))
+					if (!equipe.getId().equals(8L))
+						existeEcc = true;
 			}
 		}
 

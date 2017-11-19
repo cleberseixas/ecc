@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+<h:head>
+	<title>ECC-SLG</title>
+	<link rel="shortcut icon" href="../resources/imagens/laudus.ico" />
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+	<h:outputScript library="js" name="locale-primefaces.js" />
+	<h:outputScript library="js" name="bootstrap.min.js" />
+
+	<h:outputStylesheet library="css" name="modelo.css" />
+	<h:outputStylesheet library="css" name="menu.css" />
+	<h:outputStylesheet library="css" name="AdminLTE.css" />
+	<h:outputStylesheet library="css" name="font-awesome.min.css" />
+</h:head>
+
+<script language="javascript">
+	var win = null;
+	function novaJanela(pagina,nome,w,h,scroll){
+		LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+		TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+		settings = 'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',resizable'
+		win = window.open(pagina,nome,settings);
+	}
+</script>
+<f:metadata>
+	<f:viewAction action="#{estatisticaBean.indicadoresIniciais()}" />
+</f:metadata>
+
+<h:body style="background-color:#EBF3FE">
+	<h:form id="listagem">
+		<div id="menubar">
+			<li class="icone"><h:graphicImage library="imagens" name="logo_ECC.png" width="400" height="72" /></li>
+			<ul>
+				<li><a style="color: #808080; background: #a0c0de; opacity: 1; filter: alpha(opacity = 100);
+					border-bottom: 1px solid #a0c0de;">
+					<h:graphicImage library="imagens/menu"
+									style="width:35px; height:35px;" name="estatisticas.png" />Indicadores
+				</a></li>
+				<h:panelGroup rendered="#{contextoBean.usuarioLogado.perfil eq 'Administrador'}">
+					<li>
+						<a><h:graphicImage library="imagens/menu"
+										   style="width:35px; height:35px;" name="cadastros.png" />Cadastros</a>
+						<ul>
+							<li><h:graphicImage library="imagens/menu"
+												style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+												name="circulos.png" /><a
+									href="../administrador/circulo.xhtml">Circulos</a>
+							</li>
+
+							<li><h:graphicImage library="imagens/menu"
+												style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+												name="palestras.png" /><a
+									href="../administrador/palestra.xhtml">Palestras</a>
+							</li>
+							<li><h:graphicImage library="imagens/menu"
+												style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+												name="equipes.png" /><a
+									href="../administrador/equipe.xhtml">Equipes</a>
+							</li>
+							<li><h:graphicImage library="imagens/menu"
+												style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+												name="usuarios.png" /><a
+									href="usuario.xhtml">Usuários</a>
+							</li>
+						</ul>
+					</li>
+				</h:panelGroup>
+				<li><a><h:graphicImage library="imagens/menu"
+									   style="width:35px; height:35px;" name="montagem.png" />Montagem</a>
+					<ul>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="ecc.png" />
+							<a href="../dirigente/ecc.xhtml">ECC</a>
+						</li>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="fichas.png" />
+							<a href="../dirigente/montagemFicha.xhtml">Fichas</a>
+						</li>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="montagemEquipes.png" />
+							<a href="../dirigente/montagemEquipe.xhtml">Equipes</a>
+						</li>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="montagemCasais.png" />
+							<a style="color: #808080; background: #a0c0de; opacity: 1;
+							filter: alpha(opacity = 100); border-bottom: 3px solid #b1b1b1;">Encontristas</a>
+
+						</li>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="montagemPalestrantes.png" />
+							<a href="../dirigente/montagemPalestrante.xhtml">Palestrantes</a>
+						</li>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="montagemCirculos.png" />
+							<a href="../dirigente/montagemCirculo.xhtml">Círculos</a></li>
+
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div id="status" style="margin-top: 5px;">
+			<div id="ico">
+				<h1>
+					<h:graphicImage library="imagens/menu" name="estatisticas.png"
+						width="25px" height="25px" />
+					<h5>
+						<b>Indicadores</b>
+					</h5>
+					<p:commandButton type="button" value="Sair" icon="ui-icon-extlink"
+						style="float: right; margin-right:5px; margin-top: -5px;"
+						onclick="document.location='#{request.contextPath}/j_spring_security_logout'" />
+				</h1>
+			</div>
+			<div id="img-usuario-logado">
+				<h5>Usuário logado: #{contextoBean.usuarioLogado.nome}</h5>
+				<h1>
+					<h:graphicImage library="imagens/menu" name="usuarioLogado.png"
+						width="25px" height="25px" />
+				</h1>
+			</div>
+		</div>
+		<p:ajaxStatus onstart="PF('statusDialog').show()"
+			onsuccess="PF('statusDialog').hide()" />
+		<p:growl id="growl" showDetail="false" life="2000" />
+		<br />
+		<div id="divEstatisticaECCFora">
+			<!-- Inicio da DIV Estatísticas ECC -->
+			<div id="divEstatisticaSuperiorEsquerda">
+				<div id="divBoxSuperiorGeral">
+					<h:panelGrid columns="3">
+						<h:graphicImage library="imagens/menu" name="ecc.png"
+										style="margin-top:5px;width:30px; height:30px;" />
+						<h:panelGroup>
+							<h:outputLabel value="Quadro Indicativo"
+										   style="font-size:13px; 	font-weight: bold;" />
+						</h:panelGroup>
+					</h:panelGrid>
+				</div>
+				<div id="divEstatisticaECCSuperiorEsquerda">
+					<div id="divEstatisticaECCSuperiorEsquerda_01">
+						<div class="caixa caixa-azul" style="width: 626px;">
+							<h:outputLabel value="Tabela de ECC "
+										   styleClass="negrito" style="font-size:15px;" />
+							<p:selectOneMenu id="ecc" value="#{estatisticaBean.eccFiltro}"
+											 style="width:105px;margin-left:350px;display: inline-table">
+								<f:selectItem itemLabel="TODOS"/>
+								<f:selectItems value="#{eccBean.listaEcc}"
+											   var="ecc" itemValue="#{ecc.numero}"
+											   itemLabel="#{ecc.numero}" />
+								<p:ajax listener="#{estatisticaBean.filtraPorEcc()}"
+										event="change" update="tabelaECC" />
+							</p:selectOneMenu>
+							<p:commandLink actionListener="#{estatisticaBean.imprimirEcc}"
+										   target="_blank" ajax="false" immediate="true">
+								<p:button icon="ui-icon-print" style="margin-left: 5px;" />
+							</p:commandLink>
+						</div>
+					</div>
+					<div id="divEstatisticaChefeSuperiorEsquerda_02">
+						<p:dataTable id="tabelaECC" var="ecc"
+									 value="#{estatisticaBean.listaDosEccs}"
+									 emptyMessage="Não há ECCs">
+							<p:columnGroup type="header">
+								<p:row>
+									<p:column rowspan="1" headerText="Casal" />
+									<p:column colspan="1" headerText="Equipe" width="220px;" />
+								</p:row>
+							</p:columnGroup>
+
+							<p:subTable var="dirigentes" value="#{ecc.dirigentes}">
+								<f:facet name="header">
+									<h:panelGrid columns="2" styleClass="semBordaInterna"
+												 columnClasses="gridColum01, gridColum02">
+										<h:graphicImage library="imagens" name="logoDirigenteMenor.png" />
+										<h:outputText
+												value="#{ecc.numero} | #{ecc.tema}" />
+									</h:panelGrid>
+								</f:facet>
+								<p:column>
+									<h:outputText value="#{dirigentes.ficha.nomeUsual}" />
+									<h:graphicImage library="imagens" value="/image?imagem=#{dirigentes.ficha.fotoEla}" rendered="#{dirigentes.ficha.fotoEla.length() > 0}"
+													style="width:20px; height:20px; float: right;" title="Foto dela"/>
+									<h:graphicImage library="imagens" value="/image?imagem=#{dirigentes.ficha.fotoEle}" rendered="#{dirigentes.ficha.fotoEle.length() > 0}"
+													style="width:20px; height:20px; float: right;" title="Foto dele"/>
+								</p:column>
+								<p:column style="text-align:left">
+									<h:outputText value="#{dirigentes.equipe.descricao}" />
+								</p:column>
+								<p:columnGroup type="footer">
+									<p:row>
+										<p:column footerText="Total: "
+												  style="text-align:right; background-color:#adc2eb;" />
+										<p:column footerText="#{ecc.dirigentes.size()}"
+												  style="text-align:right; background-color:#adc2eb;" />
+									</p:row>
+								</p:columnGroup>
+							</p:subTable>
+						</p:dataTable>
+					</div>
+				</div>
+				<!-- Inicio da DIV Fichas -->
+				<div id="divEstatisticaFichaSuperiorDireita">
+					<div class="info-box" style="width: 250px; height: 60px;">
+					<span class="info-box-icon bg-aqua">
+						<h:graphicImage library="imagens"
+										style="width:35px; height:35px;" name="encontreiro.png" />
+					</span>
+						<div class="info-box-content">
+							<span class="info-box-text"><b><font size="3px">ENCONTREIROS</font></b></span>
+							<span class="info-box-number">
+              				#{estatisticaBean.numeroEncontreiros}
+              			</span>
+						</div>
+					</div>
+					<div class="info-box" style="width: 250px;">
+						<span class="info-box-icon bg-yellow">
+							<h:graphicImage library="imagens"
+											style="width:35px; height:35px;" name="encontrista.png" />
+						</span>
+						<div class="info-box-content">
+							<span class="info-box-text"><b><font size="3px">ENCONTRISTAS</font></b></span>
+							<span class="info-box-number">
+								#{estatisticaBean.numeroEncontristas}
+							</span>
+						</div>
+					</div>
+				</div>
+				<div id="divEstatisticaSuperiorEsquerda">
+					<div id="divEstatisticaECCSuperiorEsquerda">
+						<div id="divEstatisticaECCSuperiorEsquerda_01">
+							<div class="caixa caixa-laranja" style="width: 500px;">
+								<p:selectOneMenu id="aptidao" value="#{estatisticaBean.aptidaoFiltro}"
+												 style="width:250px;margin-left:180px;display: inline-table">
+									<f:selectItem itemLabel="TODAS"/>
+									<f:selectItems value="#{equipeBean.lista}"
+												   var="aptidao" itemValue="#{aptidao.descricao}"
+												   itemLabel="#{aptidao.descricao}" />
+									<p:ajax listener="#{estatisticaBean.filtraPorAptidao()}"
+											event="change" update="tabelaAptidoes" />
+								</p:selectOneMenu>
+								<p:commandLink actionListener="#{estatisticaBean.imprimirEcc}"
+											   target="_blank" ajax="false" immediate="true">
+									<p:button icon="ui-icon-print" style="margin-left: 5px;" />
+								</p:commandLink>
+							</div>
+						</div>
+						<div id="divBoxSuperiorViagemAzul_01">
+							<h:panelGrid columns="3">
+								<h:panelGroup>
+									<h:outputLabel value="Aptidão" style="font-size:15px; color: #737373" />
+									<br />
+									<h:outputLabel value="Total de Casais por Aptidão"
+												   styleClass="negrito" style="font-size:15px;" />
+								</h:panelGroup>
+							</h:panelGrid>
+						</div>
+						<div id="divGestaoBoxDentroGridViagem">
+							<h:panelGroup id="tabelaAptidoes">
+								<c:forEach items="#{estatisticaBean.listaDasAptidoes}"
+										   var="result" varStatus="count">
+									<div id="divLista_02">
+										<p:outputLabel value="#{result.aptidao}" styleClass="negrito" />
+									</div>
+									<div id="divLista_03">
+										<p:outputLabel value="#{result.quantidade}" />
+									</div>
+									<div id="limpa" />
+									<hr	style="border: 1px; border-top: 1px solid #ccc; margin-left: 10px; width: 94%" />
+								</c:forEach>
+							</h:panelGroup>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</h:form>
+	<p:dialog widgetVar="statusDialog" modal="true" draggable="false"
+			  closable="false" resizable="false" showHeader="false" width="250px">
+		<div id="divLoadingFora">
+			<div id="divLoadingEsquerda">
+				<h:graphicImage library="imagens" name="SLG.ico" width="60" height="60" />
+			</div>
+			<div id="divLoadingDireita">
+				<h:outputLabel value="Processando..." />
+				<h:graphicImage library="imagens" name="barra.gif" />
+			</div>
+		</div>
+	</p:dialog>
+</h:body>
+</html>

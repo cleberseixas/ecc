@@ -8,6 +8,15 @@ body { overflow-x: hidden; }
 	padding: 2px;
 }
 
+
+#divBoxSuperiorGeral {
+	width: 626px;
+	height: 60px;
+	position: relative;
+	border-radius:4px 4px 0px 0px;
+	background-color: #e1e1d0;
+}
+
 .circuloVermelhoList {
 	background-color: #990000;
 	color: white;	
@@ -1089,32 +1098,28 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:hover,a.list-gro
 	line-height: 1.3
 }
 
-#divEstatisticaECC {
+#divEstatisticaECCFora {
 	width: 100%;
 	height: 300px;
+}
+
+#divEstatisticaECCAptidaoAtividades {
+	width: 100%;
+	height: 300px;
+}
+
+#divEstatisticaECC {
+	position:relative;
+	width: 632px;
+	height: 208px;
+	background-color: green;
+	float: left;
 }
 
 #divEstatisticaChefeForaInferior {
 	width: 100%;
 	height: 500px;
 	margin-bottom: 10px;
-}
-
-#divEstatisticaChefeSuperiorEsquerda {
-	width: 369px;
-	height: 284px;
-	float: left;
-	margin-right: 10px;
-	border: 1px solid #c0c0c0;
-	border-radius:5px 5px 5px 5px;
-}
-
-#divEstatisticaECCSuperiorEsquerda_01 {
-	width: 632px;
-	height: 500px;
-	float: left;
-	margin-right: 10px;
-	overflow: auto;
 }
 
 #divEstatisticaeECCSuperiorEsquerda {
@@ -1125,16 +1130,16 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:hover,a.list-gro
 	overflow: auto;
 }
 
-#divEstatisticaChefeInferiorEsquerda_01 {
-	width: 632px;
-	height: 50px;
+divEstatisticaECCSuperiorEsquerda_01{
+	width: 626px;
+	height: 220px;
 	margin-right: 10px;
 	overflow: auto;
 }
 
-#divEstatisticaChefeInferiorEsquerda_02 {
+#divEstatisticaChefeInferiorEsquerda_01 {
 	width: 632px;
-	height: 445px;
+	height: 50px;
 	margin-right: 10px;
 	overflow: auto;
 }
@@ -1718,7 +1723,7 @@ a{
 	position: relative;
 }
 
-#divBoxSuperiorGeral {
+#divEstatisticaECC {
 	width: 369px;
 	height: 60px;
 	float: left;
@@ -1728,7 +1733,7 @@ a{
 }
 
 #divBoxDentroGeral {
-	width: 369px;
+	width: 620px;
 	height: 223px;
 	float: left;
 	overflow: auto;

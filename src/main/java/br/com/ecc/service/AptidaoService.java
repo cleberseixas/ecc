@@ -66,4 +66,13 @@ public class AptidaoService implements Serializable {
 		aptidaoRepository.removeAptidaoLimbo();
 	}
 
+	public List<br.com.ecc.model.util.Aptidao> totalPorAptidao() {
+		try {
+			return aptidaoRepository.totalPorAptidao();
+		} catch(NegocioException e){
+			FacesMessages.error(e.getMessage());
+			return null;
+		}
+	}
+
 }

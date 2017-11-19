@@ -1,5 +1,57 @@
 body { overflow-x: hidden; }
 
+#divBoxSuperiorGeral {
+	width: 626px;
+	height: 60px;
+	position: relative;
+	border-radius:4px 4px 0px 0px;
+	background-color: #e1e1d0;
+}
+
+#divEstatisticaECC {
+	width: 369px;
+	height: 284px;
+	float: left;
+	margin-right: 10px;
+	border: 1px solid #c0c0c0;
+	border-radius:5px 5px 5px 5px;
+}
+
+#divEstatisticaECCSuperiorEsquerda {
+	width: 632px;
+	/*
+	height: 269px;
+	*/
+	float: left;
+	margin-right: 10px;
+	overflow: auto;
+}
+
+#divEstatisticaAptidaoSuperiorDireita {
+	width: 480px;
+	height: 262px;
+	float: left;
+	margin-right: 10px;
+	overflow: auto;
+}
+
+#divEstatisticaECCAptidaoDireita {
+	width: 432px;
+	height: 500px;
+	float: left;
+	margin-right: 10px;
+	overflow: auto;
+}
+
+#divEstatisticaECCAptidaoDireita_1 {
+	width: 432px;
+	height: 500px;
+	float: left;
+	margin-right: 10px;
+	overflow: auto;
+}
+
+
 .circuloAzulList {
 	background-color: #1a8cff;
 	color: white;	
@@ -599,65 +651,6 @@ hr.ordemMissao {
 	height: 550px;
 }
 
-#divParecerLateralDireitaSolicitacao {
-	width: 100%;
-	height: 490px;
-}
-
-#divParecerLateralDireitaSolicitacao {
-	width: 100%;
-	height: 490px;
-}
-
-#divParecerLateralEsquerda {
-	width: 330px;
-	height: 550px;
-	float: left;
-	border-right: 1px solid #ccc;
-}
-
-#divParecerLateralEsquerdaSolicitacao {
-	width: 330px;
-	height: 490px;
-	float: left;
-	border-right: 1px solid #ccc;
-}
-
-#divParecerLateralEsquerdaSuperior {
-	width: 330px;
-	height: 175px;
-	float: left;
-	margin-bottom: 5px;
-}
-
-#divParecerLateralEsquerdaSuperiorSolicitacao {
-	width: 280px;
-	height: 175px;
-	float: left;
-	margin-bottom: 5px;
-}
-
-.divParecerCabecalho {
-	width: 280px;
-	height: 30px;
-	float: left;
-	margin-bottom: 5px;
-}
-
-.divParecerCabecalhoSolicitacao {
-	width: 280px;
-	height: 30px;
-	float: left;
-	margin-bottom: 5px;
-}
-
-
-.divParecerCorpo {
-	width: 280px;
-	height: 140px;
-	float: left;
-	overflow: auto;
-}
 
 .divParecerCorpoSolicitacao {
 	width: 310px;
@@ -1089,12 +1082,12 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:hover,a.list-gro
 	line-height: 1.3
 }
 
-#divEstatisticaChefeFora {
+#divEstatisticaECCAptidaoAtividades {
 	width: 100%;
 	height: 300px;
 }
 
-#divEstatisticaChefeForaInferior {
+#divEstatisticaEstaticaInferior {
 	width: 100%;
 	height: 500px;
 	margin-bottom: 10px;
@@ -1140,6 +1133,14 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:hover,a.list-gro
 	border-radius:5px 5px 5px 5px;
 }
 
+#divEstatisticaAtividadeInferiorEsquerda {
+	width: 480px;
+	height: 50px;
+	float: left;
+	margin-right: 10px;
+	overflow: auto;
+}
+
 #divEstatisticaChefeInferiorEsquerda_01 {
 	width: 632px;
 	height: 500px;
@@ -1148,16 +1149,22 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:hover,a.list-gro
 	overflow: auto;
 }
 
-
-#divEstatisticaChefeSuperiorEsquerda_02 {
-	width: 632px;
-	height: 445px;
+divEstatisticaECCSuperiorEsquerda_01{
+	width: 626px;
+	height: 340px;
 	margin-right: 10px;
 	overflow: auto;
 }
 
-#divEstatisticaChefeSuperiorDireita {
-	width: 260px;
+#divEstatisticaECCSuperiorEsquerda_02 {
+	width: 626px;
+	height: 278px;
+	margin-right: 10px;
+	overflow: auto;
+}
+
+#divEstatisticaEncontreiroEncontrista {
+	width: 200px;
 	height: 300px;
 	float: left;
 }
@@ -1482,7 +1489,7 @@ a{
   padding-left: 5px;
   width: 100%;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  height: 35px;
+  height: 30px;
 }
 
 .caixa {
@@ -1495,7 +1502,7 @@ a{
   padding-left: 5px;
   width: 100%;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  height: 35px;
+  height: 30px;
 }
 
 .caixaClean {
@@ -1772,7 +1779,7 @@ a{
 }
 
 #divBoxDentroGeral {
-	width: 369px;
+	width: 670px;
 	height: 223px;
 	float: left;
 	overflow: auto;
@@ -2215,9 +2222,9 @@ position: relative;
 	border: 1px solid #c0c0c0; 
 }
 
-#divBoxSuperiorViagemAzul_01 {
-	width: 100%;
-	height: 60px;
+#divBoxAptidao {
+	width: 424px;
+	height: 50px;
 	float: left;
 	position: relative;
 	border-radius:3px 3px 0px 0px;
@@ -2225,8 +2232,8 @@ position: relative;
 	margin-bottom: 10px;
 }
 
-#divGestaoBoxDentroGridViagem {
-	width: 100%;
+#divDadosAptidao {
+	width: 450px;
 	height: 167px;
 	float: left;
 	overflow: auto;

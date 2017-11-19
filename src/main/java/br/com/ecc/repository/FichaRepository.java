@@ -67,10 +67,10 @@ public class FichaRepository {
 		if (situacao.equals("TODAS")) {
 			if (nomeUsualCasal.trim().length() > 0) {
 				query = manager.createQuery("from Ficha "
-						+" where nomeUsual like :NU order by nomeUsual", Ficha.class);
+						+" where nomeUsual like :NU order by primeiraEtapa desc", Ficha.class);
 				query.setParameter("NU", "%"+nomeUsualCasal+"%");
 			} else {
-				query = manager.createQuery("from Ficha order by nomeUsual", Ficha.class);
+				query = manager.createQuery("from Ficha order by primeiraEtapa desc", Ficha.class);
 			}
 		} else {
 			if (nomeUsualCasal.trim().length() > 0) {
@@ -81,7 +81,7 @@ public class FichaRepository {
 				query.setParameter("NU", "%" + nomeUsualCasal + "%");
 			} else {
 				query = manager.createQuery("from Ficha "
-						+" where situacao = :SI order by nomeUsual", Ficha.class);
+						+" where situacao = :SI order by primeiraEtapa desc", Ficha.class);
 				query.setParameter("SI", situacao);
 			}
 		}
