@@ -161,42 +161,51 @@ public class EstatisticaBean implements Serializable {
 	public void filtraPorEcc() {
 		List<Ecc> aux = new ArrayList<Ecc>();
 		listaDosEccs = listaDosEccsAuxiliar;
-		if (!eccFiltro.equals("")) {
-			for (Ecc ecc : listaDosEccs) {
-				if (ecc.getNumero().equals(eccFiltro)) {
-					aux.add(ecc);
+		if (null != eccFiltro) {
+			if (!eccFiltro.equals("")) {
+				for (Ecc ecc : listaDosEccs) {
+					if (ecc.getNumero().equals(eccFiltro)) {
+						aux.add(ecc);
+					}
 				}
+				listaDosEccs = aux;
 			}
-			listaDosEccs = aux;
 		}
+
 	}
 
 	public void filtraPorAptidao() {
 		List<Aptidao> aux = new ArrayList<Aptidao>();
 		listaDasAptidoes = listaDasAptidoesAuxiliar;
-		if (!aptidaoFiltro.equals("")) {
-			for (Aptidao aptidao : listaDasAptidoes) {
-				//ID da aptidao
-				if (aptidao.getAptidao().equals(aptidaoFiltro)) {
-					aux.add(aptidao);
+		if (null != aptidaoFiltro) {
+			if (!aptidaoFiltro.equals("")) {
+				for (Aptidao aptidao : listaDasAptidoes) {
+					//ID da aptidao
+					if (aptidao.getAptidao().equals(aptidaoFiltro)) {
+						aux.add(aptidao);
+					}
 				}
+				listaDasAptidoes = aux;
 			}
-			listaDasAptidoes = aux;
 		}
+
 	}
 
 	public void filtraPorAtividade() {
 		List<Atividade> aux = new ArrayList<Atividade>();
 		listaDasAtividades = listaDasAtividadesAuxiliar;
-		if (!atividadeFiltro.equals("")) {
-			for (Atividade atividade : listaDasAtividades) {
-				//ID da atividade
-				if (atividade.getAtividade().equals(atividadeFiltro)) {
-					aux.add(atividade);
+		if (null != atividadeFiltro) {
+			if (!atividadeFiltro.equals("")) {
+				for (Atividade atividade : listaDasAtividades) {
+					//ID da atividade
+					if (atividade.getAtividade().equals(atividadeFiltro)) {
+						aux.add(atividade);
+					}
 				}
+				listaDasAtividades = aux;
 			}
-			listaDasAtividades = aux;
 		}
+
 	}
 
 

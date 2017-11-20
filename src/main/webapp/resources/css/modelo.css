@@ -2,7 +2,6 @@ body { overflow-x: hidden; }
 
 #divBoxSuperiorGeral {
 	width: 626px;
-	height: 60px;
 	position: relative;
 	border-radius:4px 4px 0px 0px;
 	background-color: #e1e1d0;
@@ -18,18 +17,16 @@ body { overflow-x: hidden; }
 }
 
 #divEstatisticaECCSuperiorEsquerda {
-	width: 632px;
-	/*
-	height: 269px;
-	*/
+	width: 560px;
+	height: 306px;
 	float: left;
 	margin-right: 10px;
 	overflow: auto;
 }
 
 #divEstatisticaAptidaoSuperiorDireita {
-	width: 480px;
-	height: 262px;
+	width: 330px;
+	height: 306px;
 	float: left;
 	margin-right: 10px;
 	overflow: auto;
@@ -1087,7 +1084,7 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:hover,a.list-gro
 	height: 300px;
 }
 
-#divEstatisticaEstaticaInferior {
+#divEstatisticaAtividadeEncontristaEquipeSuperiorDireita {
 	width: 100%;
 	height: 500px;
 	margin-bottom: 10px;
@@ -1141,6 +1138,13 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:hover,a.list-gro
 	overflow: auto;
 }
 
+#divEstatisticaChefeInferiorEsquerda {
+	width: 330px;
+	height: 500px;
+	float: left;
+	margin-right: 10px;
+	overflow: auto;
+}
 #divEstatisticaChefeInferiorEsquerda_01 {
 	width: 632px;
 	height: 500px;
@@ -1157,14 +1161,14 @@ divEstatisticaECCSuperiorEsquerda_01{
 }
 
 #divEstatisticaECCSuperiorEsquerda_02 {
-	width: 626px;
+	width: 545px;
 	height: 278px;
 	margin-right: 10px;
 	overflow: auto;
 }
 
 #divEstatisticaEncontreiroEncontrista {
-	width: 200px;
+	width: 135px;
 	height: 300px;
 	float: left;
 }
@@ -2223,8 +2227,8 @@ position: relative;
 }
 
 #divBoxAptidao {
-	width: 424px;
-	height: 50px;
+	width: 325px;
+	height: 40px;
 	float: left;
 	position: relative;
 	border-radius:3px 3px 0px 0px;
@@ -2233,8 +2237,26 @@ position: relative;
 }
 
 #divDadosAptidao {
-	width: 450px;
-	height: 167px;
+	width: 325px;
+	height: 204px;
+	float: left;
+	overflow: auto;
+	position: relative;
+}
+
+#divBoxAtividade {
+	width: 325px;
+	height: 40px;
+	float: left;
+	position: relative;
+	border-radius:3px 3px 0px 0px;
+	background-color: #B0C4DE;
+	margin-bottom: 10px;
+}
+
+#divDadosAtividade {
+	width: 325px;
+	height: 204px;
 	float: left;
 	overflow: auto;
 	position: relative;

@@ -889,7 +889,7 @@
 								</p:column>
 								<p:column headerText="Excluir" styleClass="Gildasio" width="40">
 									<p:commandLink update=":cadNovasAtividades:tabelaAtividades, listagemFichas:fichas"
-												   process="@this" action="#{fichaBean.removeAtividade()}">
+												   process="@this" action="#{fichaBean.removeAtividade()}" rendered="#{atividade.ecc.situacao eq 'ANDAMENTO'}">
 										<h:graphicImage library="imagens" name="remover.png" />
 										<f:setPropertyActionListener target="#{fichaBean.atividade}"
 																	 value="#{atividade}" />
