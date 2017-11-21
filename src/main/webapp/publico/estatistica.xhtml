@@ -145,8 +145,8 @@
 		<br />
 		<div id="divEstatisticaECCAptidaoAtividades">
 			<div id="divEstatisticaECC2">
+				<!--
 				<div id="divBoxSuperiorGeral">
-					<!--
 					<h:panelGrid columns="3">
 						<h:graphicImage library="imagens/menu" name="ecc.png"
 										style="margin-top:5px;width:30px; height:30px;" />
@@ -159,11 +159,11 @@
 				-->
 				<div id="divEstatisticaECCSuperiorEsquerda">
 					<div id="divEstatisticaECCSuperiorEsquerda_01">
-						<div class="caixa caixa-azul" style="width: 539px;">
+						<div class="caixa caixa-azul" style="width: 500px;">
 							<h:outputLabel value="Tabela de ECC "
 										   styleClass="negrito" style="font-size:15px;" />
 							<p:selectOneMenu id="ecc" value="#{estatisticaBean.eccFiltro}"
-											 style="width:105px;margin-left:260px;display: inline-table">
+											 style="width:105px;margin-left:230px;display: inline-table">
 								<f:selectItem itemLabel="TODOS"/>
 								<f:selectItems value="#{eccBean.listaEcc}"
 											   var="ecc" itemValue="#{ecc.numero}"
@@ -178,7 +178,7 @@
 						</div>
 					</div>
 					<div id="divEstatisticaECCSuperiorEsquerda_02">
-						<p:dataTable id="tabelaECC" var="ecc"
+						<p:dataTable id="tabelaECC" var="ecc" style="width: 510px; height: 260px;"
 									 value="#{estatisticaBean.listaDosEccs}"
 									 emptyMessage="Não há ECCs">
 							<p:columnGroup type="header">
@@ -295,7 +295,7 @@
 			</div>
 			<!-- DIV ATIVIDADES -->
 			<div id="divEstatisticaAtividadeEncontristaEquipeSuperiorDireita">
-				<div id="divEstatisticaChefeInferiorEsquerda">
+				<div id="divEstatisticaAtividadeEncontristaEquipeSuperiorDireita_01">
 					<div class="caixa caixa-verde" style="width: 320px;">
 						<p:selectOneMenu id="atividade" value="#{estatisticaBean.atividadeFiltro}"
 										 style="width:250px;margin-left:5px;display: inline-table">
@@ -337,9 +337,75 @@
 						</div>
 					</div>
 				</div>
+				<!--
 			</div>
+			-->
 		</div>
 	</div>
+	<div id="divEstatisticaChefeForaInferior">
+		<div id="divEstatisticaChefeInferiorEsquerda">
+				<div id="divEstatisticaChefeInferiorEsquerda_01">
+					<div class="caixa caixa-azul" style="width: 539px;">
+						<h:outputLabel value="Tabela de ECC "
+									   styleClass="negrito" style="font-size:15px;" />
+							<p:selectOneMenu id="ecc1" value="#{estatisticaBean.eccFiltro}"
+										 style="width:105px;margin-left:260px;display: inline-table">
+							<f:selectItem itemLabel="TODOS"/>
+							<f:selectItems value="#{eccBean.listaEcc}"
+										   var="ecc" itemValue="#{ecc.numero}"
+										   itemLabel="#{ecc.numero}" />
+								<p:ajax listener="#{estatisticaBean.filtraPorEcc()}"
+									event="change" update="tabelaECC1" />
+						</p:selectOneMenu>
+						<p:commandLink actionListener="#{estatisticaBean.imprimirEcc}"
+									   target="_blank" ajax="false" immediate="true">
+							<p:button icon="ui-icon-print" style="margin-left: 5px;" />
+						</p:commandLink>
+					</div>
+				</div>
+				<div id="divEstatisticaChefeInferiorEsquerda_02">
+					<p:dataTable id="tabelaECC1" var="ecc"
+								 value="#{estatisticaBean.listaDosEccs}"
+								 emptyMessage="Não há ECCs">
+						<p:columnGroup type="header">
+							<p:row>
+								<p:column rowspan="1" headerText="Casal" width="220px;"/>
+								<p:column colspan="1" headerText="Equipe" width="195px;" />
+							</p:row>
+						</p:columnGroup>
+						<p:subTable var="dirigentes1" value="#{ecc.dirigentes}">
+							<f:facet name="header">
+								<h:panelGrid columns="2" styleClass="semBordaInterna"
+											 columnClasses="gridColum01, gridColum02">
+									<h:graphicImage library="imagens" name="logoDirigenteMenor.png" />
+									<h:outputText
+											value="#{ecc.numero} | #{ecc.tema}" />
+								</h:panelGrid>
+							</f:facet>
+							<p:column>
+								<h:outputText value="#{dirigentes.ficha.nomeUsual}" />
+								<h:graphicImage library="imagens" value="/image?imagem=#{dirigentes.ficha.fotoEla}" rendered="#{dirigentes.ficha.fotoEla.length() > 0}"
+												style="width:20px; height:20px; float: right;" title="Foto dela"/>
+								<h:graphicImage library="imagens" value="/image?imagem=#{dirigentes.ficha.fotoEle}" rendered="#{dirigentes.ficha.fotoEle.length() > 0}"
+												style="width:20px; height:20px; float: right;" title="Foto dele"/>
+							</p:column>
+							<p:column style="text-align:left">
+								<h:outputText value="#{dirigentes.equipe.descricao}" />
+							</p:column>
+							<p:columnGroup type="footer">
+								<p:row>
+									<p:column footerText="Total: "
+											  style="text-align:right; background-color:#adc2eb;" />
+									<p:column footerText="#{ecc.dirigentes.size()}"
+											  style="text-align:right; background-color:#adc2eb;" />
+								</p:row>
+							</p:columnGroup>
+						</p:subTable>
+					</p:dataTable>
+				</div>
+		</div>
+	</div>
+
 
 	</h:form>
 	<p:dialog widgetVar="statusDialog" modal="true" draggable="false"

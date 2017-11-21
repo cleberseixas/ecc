@@ -11,31 +11,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d8b22dac-800f-408a-b5a8-ff04f4c56148" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EccBean.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EccBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ecc.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ecc.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/AptidaoRepository.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/AptidaoRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/AtividadeRepository.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/AtividadeRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/CirculoEccRepository.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/CirculoEccRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/DirigenteEccRepository.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/DirigenteEccRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EccRepository.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EccRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EncontristaEccCasalRepository.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EncontristaEccCasalRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EquipeEccCasalRepository.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EquipeEccCasalRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EquipeEccRepository.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EquipeEccRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/FichaRepository.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/FichaRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/PalestranteRepository.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/PalestranteRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/AtividadeService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/AtividadeService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/CirculoEccService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/CirculoEccService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/DirigenteEccService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/DirigenteEccService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/EccService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/EccService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/EncontristaEccCasalService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/EncontristaEccCasalService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/EquipeEccCasalService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/EquipeEccCasalService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/EquipeEccService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/EquipeEccService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/FichaService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/FichaService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/PalestranteService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/PalestranteService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/dirigente/ecc.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/dirigente/ecc.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemEncontrista.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemEncontrista.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemFicha.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemFicha.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemPalestrante.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemPalestrante.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/publico/estatistica.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/publico/estatistica.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/modelo.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/modelo.css" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -66,45 +45,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EccBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EccBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EccService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/service/EccService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="64" column="27" lean-forward="false" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2334#2335#0" expanded="true" />
-                <element signature="e#2366#2367#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EccRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EccRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-              <folding>
-                <element signature="e#425#426#0" expanded="true" />
-                <element signature="e#450#451#0" expanded="true" />
-                <marker date="1511212464407" expanded="true" signature="1507:1612" ph="UPDATE FICHA... " />
-                <marker date="1511212464407" expanded="true" signature="1507:1615" ph="UPDATE ECCS " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Ecc.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ecc.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -127,20 +67,30 @@
       <file leaf-file-name="montagemPalestrante.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemPalestrante.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="132" column="79" lean-forward="false" selection-start-line="132" selection-start-column="79" selection-end-line="132" selection-end-column="79" />
+            <state relative-caret-position="306">
+              <caret line="135" column="29" lean-forward="false" selection-start-line="135" selection-start-column="29" selection-end-line="135" selection-end-column="29" />
               <folding>
-                <marker date="1510932829189" expanded="true" signature="1691:1775" ph="{...}" />
-                <marker date="1510932829189" expanded="true" signature="1957:2041" ph="{...}" />
-                <marker date="1510932829189" expanded="true" signature="2225:2309" ph="{...}" />
-                <marker date="1510932829189" expanded="true" signature="2487:2571" ph="{...}" />
-                <marker date="1510932829189" expanded="true" signature="2916:3000" ph="{...}" />
-                <marker date="1510932829189" expanded="true" signature="3145:3229" ph="{...}" />
-                <marker date="1510932829189" expanded="true" signature="3382:3466" ph="{...}" />
-                <marker date="1510932829189" expanded="true" signature="3630:3714" ph="{...}" />
-                <marker date="1510932829189" expanded="true" signature="3908:3992" ph="{...}" />
-                <marker date="1510932829189" expanded="true" signature="4274:4358" ph="{...}" />
+                <marker date="1511288110504" expanded="true" signature="1691:1775" ph="{...}" />
+                <marker date="1511288110504" expanded="true" signature="1957:2041" ph="{...}" />
+                <marker date="1511288110504" expanded="true" signature="2225:2309" ph="{...}" />
+                <marker date="1511288110504" expanded="true" signature="2487:2571" ph="{...}" />
+                <marker date="1511288110504" expanded="true" signature="2916:3000" ph="{...}" />
+                <marker date="1511288110504" expanded="true" signature="3145:3229" ph="{...}" />
+                <marker date="1511288110504" expanded="true" signature="3382:3466" ph="{...}" />
+                <marker date="1511288110504" expanded="true" signature="3630:3714" ph="{...}" />
+                <marker date="1511288110504" expanded="true" signature="3908:3992" ph="{...}" />
+                <marker date="1511288110504" expanded="true" signature="4274:4358" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="persistence.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="98" lean-forward="false" selection-start-line="22" selection-start-column="98" selection-end-line="22" selection-end-column="98" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -175,43 +125,63 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ecc.xhtml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/ecc.xhtml">
+      <file leaf-file-name="estatistica.xhtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/publico/estatistica.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="146" column="98" lean-forward="false" selection-start-line="146" selection-start-column="98" selection-end-line="146" selection-end-column="98" />
+            <state relative-caret-position="137">
+              <caret line="345" column="48" lean-forward="true" selection-start-line="345" selection-start-column="48" selection-end-line="345" selection-end-column="48" />
               <folding>
-                <marker date="1511271047916" expanded="true" signature="1683:1767" ph="{...}" />
-                <marker date="1511271047916" expanded="true" signature="1949:2033" ph="{...}" />
-                <marker date="1511271047916" expanded="true" signature="2217:2301" ph="{...}" />
-                <marker date="1511271047916" expanded="true" signature="2479:2563" ph="{...}" />
-                <marker date="1511271047916" expanded="true" signature="2908:2992" ph="{...}" />
-                <marker date="1511271047916" expanded="true" signature="3242:3326" ph="{...}" />
-                <marker date="1511271047916" expanded="true" signature="3479:3563" ph="{...}" />
-                <marker date="1511271047916" expanded="true" signature="3727:3811" ph="{...}" />
-                <marker date="1511271047916" expanded="true" signature="4005:4089" ph="{...}" />
-                <marker date="1511271047916" expanded="true" signature="4269:4353" ph="{...}" />
+                <marker date="1511301879868" expanded="true" signature="2204:2288" ph="{...}" />
+                <marker date="1511301879868" expanded="true" signature="2470:2554" ph="{...}" />
+                <marker date="1511301879868" expanded="true" signature="2738:2822" ph="{...}" />
+                <marker date="1511301879868" expanded="true" signature="3000:3084" ph="{...}" />
+                <marker date="1511301879868" expanded="true" signature="3429:3513" ph="{...}" />
+                <marker date="1511301879868" expanded="true" signature="3671:3755" ph="{...}" />
+                <marker date="1511301879868" expanded="true" signature="3929:4013" ph="{...}" />
+                <marker date="1511301879868" expanded="true" signature="4198:4282" ph="{...}" />
+                <marker date="1511301879868" expanded="true" signature="4476:4560" ph="{...}" />
+                <marker date="1511301879868" expanded="true" signature="4760:4844" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="estatistica.xhtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/publico/estatistica.xhtml">
+      <file leaf-file-name="modelo2.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/modelo2.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+            <state relative-caret-position="164">
+              <caret line="1398" column="1" lean-forward="false" selection-start-line="1398" selection-start-column="1" selection-end-line="1398" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modelo.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/modelo.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="239">
+              <caret line="1154" column="23" lean-forward="false" selection-start-line="1154" selection-start-column="23" selection-end-line="1154" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="montagemFicha.xhtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemFicha.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="168" column="153" lean-forward="true" selection-start-line="166" selection-start-column="29" selection-end-line="168" selection-end-column="153" />
               <folding>
-                <marker date="1511269329424" expanded="true" signature="2204:2288" ph="{...}" />
-                <marker date="1511269329424" expanded="true" signature="2470:2554" ph="{...}" />
-                <marker date="1511269329424" expanded="true" signature="2738:2822" ph="{...}" />
-                <marker date="1511269329424" expanded="true" signature="3000:3084" ph="{...}" />
-                <marker date="1511269329424" expanded="true" signature="3429:3513" ph="{...}" />
-                <marker date="1511269329424" expanded="true" signature="3671:3755" ph="{...}" />
-                <marker date="1511269329424" expanded="true" signature="3929:4013" ph="{...}" />
-                <marker date="1511269329424" expanded="true" signature="4198:4282" ph="{...}" />
-                <marker date="1511269329424" expanded="true" signature="4476:4560" ph="{...}" />
-                <marker date="1511269329424" expanded="true" signature="4760:4844" ph="{...}" />
+                <marker date="1511267290184" expanded="true" signature="1767:1851" ph="{...}" />
+                <marker date="1511267290184" expanded="true" signature="2033:2117" ph="{...}" />
+                <marker date="1511267290184" expanded="true" signature="2301:2385" ph="{...}" />
+                <marker date="1511267290184" expanded="true" signature="2563:2647" ph="{...}" />
+                <marker date="1511267290184" expanded="true" signature="2992:3076" ph="{...}" />
+                <marker date="1511267290184" expanded="true" signature="3222:3306" ph="{...}" />
+                <marker date="1511267290184" expanded="true" signature="3568:3652" ph="{...}" />
+                <marker date="1511267290184" expanded="true" signature="3824:3908" ph="{...}" />
+                <marker date="1511267290184" expanded="true" signature="4102:4186" ph="{...}" />
+                <marker date="1511267290184" expanded="true" signature="4366:4450" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -228,19 +198,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>divEstatisticaAtividadeEncontristaEquipeInferior</find>
-      <find>divEstatisticaECCSuperiorEsquerda_02</find>
-      <find>confirmacaoExclusao</find>
-      <find>EXCLUIR</find>
-      <find>excluir</find>
-      <find>getDataFormatada</find>
-      <find>c</find>
-      <find>cou</find>
-      <find>count</find>
-      <find>uqery</find>
-      <find>uqer</find>
-      <find>uqe</find>
-      <find>uq</find>
       <find>u</find>
       <find>q</find>
       <find>que</find>
@@ -258,6 +215,19 @@
       <find>ENCONTRISTAS</find>
       <find>ENCON</find>
       <find>encerrar</find>
+      <find>#divEstatisticaECCSuperiorEsquerda</find>
+      <find>tabelaEcc</find>
+      <find>tabelaECC</find>
+      <find>ui-datatable-data ui-widget-content</find>
+      <find>#divEstatisticaECCSuperiorEsquerda_02</find>
+      <find>divEstatisticaatividade</find>
+      <find>divestatisticachefefo</find>
+      <find>divEstatisticaChefeInferiorEsquerda</find>
+      <find>divEstatisticaChefeInferiorEsquerda_01</find>
+      <find>#divEstatisticaChefeInferiorEsquerda_01</find>
+      <find>paginator</find>
+      <find>#divEstatisticaChefeInferiorEsquerda</find>
+      <find>divLista_02</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -287,7 +257,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/dirigente/menuDirigente.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/dirigente/montagemCirculo.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/dirigente/montagemEquipe.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/dirigente/montagemPalestrante.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/administrador/circulo.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/administrador/equipe.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/administrador/palestra.xhtml" />
@@ -297,11 +266,9 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/model/util/Aptidao.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/css/modelo2.css" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/FichaBean.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/model/util/Atividade.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/service/AptidaoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EstatisticaBean.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/modelo.css" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/AptidaoRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/DirigenteEccRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EquipeEccRepository.java" />
@@ -322,12 +289,15 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/FichaRepository.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/dirigente/montagemEncontrista.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/dirigente/montagemFicha.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/publico/estatistica.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EccBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/service/EccService.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ecc.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/PalestranteRepository.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/dirigente/ecc.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/dirigente/montagemPalestrante.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/publico/estatistica.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/modelo.css" />
       </list>
     </option>
   </component>
@@ -431,58 +401,6 @@
               <option name="myItemId" value="webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -528,32 +446,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dirigente" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -577,134 +469,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="repository" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1262,10 +1026,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="548395000" />
+    <option name="totallyTimeSpent" value="557524000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1597" y="25" width="1446" height="852" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1289,12 +1054,12 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956153" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27015558" sideWeight="0.4939577" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27015558" sideWeight="0.4939577" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32904148" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.4954683" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956153" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18025751" sideWeight="0.863388" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25965664" sideWeight="0.863388" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26963747" sideWeight="0.13661203" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32673267" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1419,30 +1184,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/repository/PalestraRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ficha.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="125" column="33" lean-forward="false" selection-start-line="125" selection-start-column="19" selection-end-line="125" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/EquipeEcc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/repository/DirigenteEccRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
@@ -1790,44 +1531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemFicha.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="95" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-          <folding>
-            <marker date="1511267290184" expanded="true" signature="1767:1851" ph="{...}" />
-            <marker date="1511267290184" expanded="true" signature="2033:2117" ph="{...}" />
-            <marker date="1511267290184" expanded="true" signature="2301:2385" ph="{...}" />
-            <marker date="1511267290184" expanded="true" signature="2563:2647" ph="{...}" />
-            <marker date="1511267290184" expanded="true" signature="2992:3076" ph="{...}" />
-            <marker date="1511267290184" expanded="true" signature="3222:3306" ph="{...}" />
-            <marker date="1511267290184" expanded="true" signature="3568:3652" ph="{...}" />
-            <marker date="1511267290184" expanded="true" signature="3824:3908" ph="{...}" />
-            <marker date="1511267290184" expanded="true" signature="4102:4186" ph="{...}" />
-            <marker date="1511267290184" expanded="true" signature="4366:4450" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/publico/estatistica.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
-          <folding>
-            <marker date="1511269329424" expanded="true" signature="2204:2288" ph="{...}" />
-            <marker date="1511269329424" expanded="true" signature="2470:2554" ph="{...}" />
-            <marker date="1511269329424" expanded="true" signature="2738:2822" ph="{...}" />
-            <marker date="1511269329424" expanded="true" signature="3000:3084" ph="{...}" />
-            <marker date="1511269329424" expanded="true" signature="3429:3513" ph="{...}" />
-            <marker date="1511269329424" expanded="true" signature="3671:3755" ph="{...}" />
-            <marker date="1511269329424" expanded="true" signature="3929:4013" ph="{...}" />
-            <marker date="1511269329424" expanded="true" signature="4198:4282" ph="{...}" />
-            <marker date="1511269329424" expanded="true" signature="4476:4560" ph="{...}" />
-            <marker date="1511269329424" expanded="true" signature="4760:4844" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EccBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1878,25 +1581,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemPalestrante.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="132" column="79" lean-forward="false" selection-start-line="132" selection-start-column="79" selection-end-line="132" selection-end-column="79" />
-          <folding>
-            <marker date="1510932829189" expanded="true" signature="1691:1775" ph="{...}" />
-            <marker date="1510932829189" expanded="true" signature="1957:2041" ph="{...}" />
-            <marker date="1510932829189" expanded="true" signature="2225:2309" ph="{...}" />
-            <marker date="1510932829189" expanded="true" signature="2487:2571" ph="{...}" />
-            <marker date="1510932829189" expanded="true" signature="2916:3000" ph="{...}" />
-            <marker date="1510932829189" expanded="true" signature="3145:3229" ph="{...}" />
-            <marker date="1510932829189" expanded="true" signature="3382:3466" ph="{...}" />
-            <marker date="1510932829189" expanded="true" signature="3630:3714" ph="{...}" />
-            <marker date="1510932829189" expanded="true" signature="3908:3992" ph="{...}" />
-            <marker date="1510932829189" expanded="true" signature="4274:4358" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/PalestranteBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -1921,10 +1605,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="98" lean-forward="false" selection-start-line="22" selection-start-column="98" selection-end-line="22" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/ecc.xhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
-          <caret line="146" column="98" lean-forward="false" selection-start-line="146" selection-start-column="98" selection-end-line="146" selection-end-column="98" />
+          <caret line="420" column="89" lean-forward="false" selection-start-line="420" selection-start-column="89" selection-end-line="420" selection-end-column="89" />
           <folding>
             <marker date="1511271047916" expanded="true" signature="1683:1767" ph="{...}" />
             <marker date="1511271047916" expanded="true" signature="1949:2033" ph="{...}" />
@@ -1937,6 +1629,79 @@
             <marker date="1511271047916" expanded="true" signature="4005:4089" ph="{...}" />
             <marker date="1511271047916" expanded="true" signature="4269:4353" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemFicha.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="168" column="153" lean-forward="true" selection-start-line="166" selection-start-column="29" selection-end-line="168" selection-end-column="153" />
+          <folding>
+            <marker date="1511267290184" expanded="true" signature="1767:1851" ph="{...}" />
+            <marker date="1511267290184" expanded="true" signature="2033:2117" ph="{...}" />
+            <marker date="1511267290184" expanded="true" signature="2301:2385" ph="{...}" />
+            <marker date="1511267290184" expanded="true" signature="2563:2647" ph="{...}" />
+            <marker date="1511267290184" expanded="true" signature="2992:3076" ph="{...}" />
+            <marker date="1511267290184" expanded="true" signature="3222:3306" ph="{...}" />
+            <marker date="1511267290184" expanded="true" signature="3568:3652" ph="{...}" />
+            <marker date="1511267290184" expanded="true" signature="3824:3908" ph="{...}" />
+            <marker date="1511267290184" expanded="true" signature="4102:4186" ph="{...}" />
+            <marker date="1511267290184" expanded="true" signature="4366:4450" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemPalestrante.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="135" column="29" lean-forward="false" selection-start-line="135" selection-start-column="29" selection-end-line="135" selection-end-column="29" />
+          <folding>
+            <marker date="1511288110504" expanded="true" signature="1691:1775" ph="{...}" />
+            <marker date="1511288110504" expanded="true" signature="1957:2041" ph="{...}" />
+            <marker date="1511288110504" expanded="true" signature="2225:2309" ph="{...}" />
+            <marker date="1511288110504" expanded="true" signature="2487:2571" ph="{...}" />
+            <marker date="1511288110504" expanded="true" signature="2916:3000" ph="{...}" />
+            <marker date="1511288110504" expanded="true" signature="3145:3229" ph="{...}" />
+            <marker date="1511288110504" expanded="true" signature="3382:3466" ph="{...}" />
+            <marker date="1511288110504" expanded="true" signature="3630:3714" ph="{...}" />
+            <marker date="1511288110504" expanded="true" signature="3908:3992" ph="{...}" />
+            <marker date="1511288110504" expanded="true" signature="4274:4358" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/modelo2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="1398" column="1" lean-forward="false" selection-start-line="1398" selection-start-column="1" selection-end-line="1398" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/publico/estatistica.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="345" column="48" lean-forward="true" selection-start-line="345" selection-start-column="48" selection-end-line="345" selection-end-column="48" />
+          <folding>
+            <marker date="1511301879868" expanded="true" signature="2204:2288" ph="{...}" />
+            <marker date="1511301879868" expanded="true" signature="2470:2554" ph="{...}" />
+            <marker date="1511301879868" expanded="true" signature="2738:2822" ph="{...}" />
+            <marker date="1511301879868" expanded="true" signature="3000:3084" ph="{...}" />
+            <marker date="1511301879868" expanded="true" signature="3429:3513" ph="{...}" />
+            <marker date="1511301879868" expanded="true" signature="3671:3755" ph="{...}" />
+            <marker date="1511301879868" expanded="true" signature="3929:4013" ph="{...}" />
+            <marker date="1511301879868" expanded="true" signature="4198:4282" ph="{...}" />
+            <marker date="1511301879868" expanded="true" signature="4476:4560" ph="{...}" />
+            <marker date="1511301879868" expanded="true" signature="4760:4844" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/modelo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="1154" column="23" lean-forward="false" selection-start-line="1154" selection-start-column="23" selection-end-line="1154" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
