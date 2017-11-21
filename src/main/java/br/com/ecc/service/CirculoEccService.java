@@ -105,4 +105,13 @@ public class CirculoEccService implements Serializable {
 		}
 	}
 
+	public List<CirculoEcc> circulosPorEcc(Long ecc) {
+		try {
+			return circuloEccRepository.circulosPorEcc(ecc);
+		} catch(NegocioException e){
+			FacesMessages.error(e.getMessage());
+			return null;
+		}
+	}
+
 }

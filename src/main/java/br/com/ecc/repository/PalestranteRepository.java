@@ -32,7 +32,18 @@ public class PalestranteRepository {
 	}
 
 	public List<Palestrante> listar() {
-		TypedQuery<Palestrante> query = manager.createQuery("from Palestrante order by dataPalestra desc", Palestrante.class);
+		TypedQuery<Palestrante> query = manager.createQuery("from Palestrante order by ecc.numero desc, dataPalestra", Palestrante.class);
+		return query.getResultList();
+	}
+
+	/**
+	 * Método que Percorre todos os PALESTRANTES por ECC para atualizar na tabela ATIVIDADES
+	 * @param ecc - ID do ECC
+	 * @return
+	 */
+	public List<Palestrante> palestrantesPorEcc(Long ecc) {
+		TypedQuery<Palestrante> query = manager.createQuery("from Palestrante where ficha.id > 0 and ecc.id =:ECC", Palestrante.class);
+		query.setParameter("ECC", ecc);
 		return query.getResultList();
 	}
 }

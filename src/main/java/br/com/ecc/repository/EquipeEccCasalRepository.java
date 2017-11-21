@@ -47,4 +47,15 @@ public class EquipeEccCasalRepository {
 		query.executeUpdate();
 		manager.getTransaction().commit();
 	}
+
+	/**
+	 * Método que Percorre todos as EQUIPES(CASAIS) por ECC para atualizar na tabela ATIVIDADES
+	 * @param ecc - ID do ECC
+	 * @return
+	 */
+	public List<EquipeEccCasal> casaisMembrosPorEcc(Long ecc) {
+		TypedQuery<EquipeEccCasal> query = manager.createQuery("from EquipeEccCasal where ecc.id =:ECC", EquipeEccCasal.class);
+		query.setParameter("ECC", ecc);
+		return query.getResultList();
+	}
 }

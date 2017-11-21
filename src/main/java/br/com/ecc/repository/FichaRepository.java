@@ -4,6 +4,7 @@ import br.com.ecc.model.Ficha;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import java.util.Date;
 import java.util.List;
@@ -99,6 +100,21 @@ public class FichaRepository {
 		TypedQuery<Ficha> query = manager.createQuery("from Ficha where situacao='ENCONTREIRO' and ativo=true order by primeiraEtapa desc, nomeUsual", Ficha.class);
 		//query.setParameter("SITUACAO", equipe);
 		return query.getResultList();
+	}
+
+	/**
+	 * Método que atualiza a SITUAÇÃO = ENCONTREIRO, PRIMEIRAETAPA de todos os casais que realizaram o ECC
+	 * @param fichas - ID das fichas separados por vírgula (10,20,30)
+	 * @param etapa - etapa do ECC 30º, 31º
+	 */	public void atualizaSituacaoEPrimeiraEtapa(Long fichas, String etapa) {
+		manager.getTransaction().begin();
+
+		Query query = manager.createNativeQuery("UPDATE FICHAS SET SITUACAO = 'ENCONTREIRO', PRIMEIRA_ETAPA=:ETAPA WHERE FICHA IN (:FI)");
+		query.setParameter("ETAPA", etapa);
+		//query.setParameter("FI", 2);
+		query.setParameter("FI", fichas);
+		query.executeUpdate();
+		manager.getTransaction().commit();
 	}
 
 }

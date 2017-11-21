@@ -47,6 +47,8 @@ public class EccBean implements Serializable {
 
 	private boolean habilitaBotaoDetalhesEcc = true;
 
+	private boolean habilitaBotaoEncerrarEcc = true;
+
 
 	@Inject
 	private EccService eccService;
@@ -63,6 +65,21 @@ public class EccBean implements Serializable {
 
 	@Inject
 	private CirculoEccService circuloEccService;
+
+	@Inject
+	private AtividadeService atividadeService;
+
+	@Inject
+	private EquipeEccCasalService equipeEccCasalService;
+
+	@Inject
+	private PalestranteService palestranteService;
+
+	@Inject
+	private FichaService fichaService;
+
+	@Inject
+	private EncontristaEccCasalService encontristaEccCasalService;
 
 	public void setListaEcc(List<Ecc> listaEcc) {
 		this.listaEcc = listaEcc;
@@ -170,6 +187,14 @@ public class EccBean implements Serializable {
 		this.habilitaBotaoDetalhesEcc = habilitaBotaoDetalhesEcc;
 	}
 
+	public boolean isHabilitaBotaoEncerrarEcc() {
+		return habilitaBotaoEncerrarEcc;
+	}
+
+	public void setHabilitaBotaoEncerrarEcc(boolean habilitaBotaoEncerrarEcc) {
+		this.habilitaBotaoEncerrarEcc = habilitaBotaoEncerrarEcc;
+	}
+
 	private void novoDirigente() {
 		this.casal = new Ficha();
 		this.equipe = new Equipe();
@@ -221,7 +246,15 @@ public class EccBean implements Serializable {
 
 	private void habilitaTodosBotoesEcc() {
 		habilitaBotaoEditarEcc = false;
-		habilitaBotaoExcluirEcc = false;
+		if (this.ecc.getDirigentes().size() > 0) {
+			habilitaBotaoExcluirEcc = true;
+			habilitaBotaoEncerrarEcc = false;
+		}
+		else {
+			habilitaBotaoExcluirEcc = false;
+			habilitaBotaoEncerrarEcc = true;
+		}
+
 		habilitaBotaoIncluiDirigentes = false;
 		habilitaBotaoDetalhesEcc = false;
 	}
@@ -231,11 +264,7 @@ public class EccBean implements Serializable {
 		habilitaBotaoExcluirEcc = true;
 		habilitaBotaoIncluiDirigentes = true;
 		habilitaBotaoDetalhesEcc = false;
-	}
-
-	//Injetar Equipes e Casais (Encontreiros)
-	public void equipeDirigente() {
-
+		habilitaBotaoEncerrarEcc = true;
 	}
 
 	//Incluir as regras para salvar o Ecc (Equipes)
@@ -296,6 +325,102 @@ public class EccBean implements Serializable {
 			FacesMessages.error(e.getMessage());
 		}
 	}
+
+	public void encerrarEcc() {
+		try {
+			atividadeService.removeAtividadeLimbo();
+			atualizaDirigentes();
+			atualizaEquipesCoordenadores();
+			atualizaEquipesCasais();
+			atualizaCirculos();
+			atualizaPalestrantes();
+			atualizaEncontristas();
+			//eccService.atualizaSituacaoEcc(ecc.getId(), "cleber");
+			eccService.encerrar(ecc);
+			//FacesMessages.info("ECC encerrado com sucesso");
+			this.listaEcc = eccService.listar();
+			desabilitaTodosBotoesEcc();
+		} catch (Exception e) {
+			FacesMessages.error(e.getMessage());
+		}
+	}
+
+	private void atualizaDirigentes() {
+		List<DirigenteEcc> dirigentes = dirigenteEccService.dirigentesPorEcc(ecc.getId());
+		for (DirigenteEcc dirigente : dirigentes) {
+            Long ecc = dirigente.getEcc().getId();
+            Long ficha = dirigente.getFicha().getId();
+            Long equipe = dirigente.getEquipe().getId();
+            Boolean coordenador = dirigente.getEquipe().isCoordenador();
+            System.out.println("ECC "+ecc+" FICHA "+ficha+" EQUIPE "+equipe+ " COORDENADOR "+coordenador);
+            atividadeService.insereAtividade(ecc, ficha, equipe, coordenador, true);
+        }
+	}
+
+	private void atualizaEquipesCoordenadores() {
+		List<EquipeEcc> equipes = equipeEccService.equipesPorEcc(ecc.getId());
+		for (EquipeEcc equipe : equipes) {
+			Long ecc = equipe.getEcc().getId();
+			Long coordenador = equipe.getCasalCoordenador().getId();
+			Long idEquipe = equipe.getEquipe().getId();
+			System.out.println("ECC "+ecc+" COORDENADOR "+coordenador+" EQUIPE "+idEquipe+ " COORDENADOR "+true);
+			atividadeService.insereAtividade(ecc, coordenador, idEquipe, true, true);
+		}
+	}
+
+	private void atualizaEquipesCasais() {
+		List<EquipeEccCasal> casais = equipeEccCasalService.casaisMembrosPorEcc(ecc.getId());
+		for (EquipeEccCasal casal : casais) {
+			Long ecc = casal.getEcc().getId();
+			Long ficha = casal.getFicha().getId();
+			Long equipe = casal.getEquipe().getId();
+			System.out.println("ECC "+ecc+" CASAL "+ficha+" EQUIPE "+equipe+ " COORDENADOR "+false);
+			atividadeService.insereAtividade(ecc, ficha, equipe, false, true);
+		}
+	}
+
+	private void atualizaCirculos() {
+		List<CirculoEcc> circulos = circuloEccService.circulosPorEcc(ecc.getId());
+		for (CirculoEcc circulo : circulos) {
+			Long ecc = circulo.getEcc().getId();
+			Long coordenador = circulo.getCasalCoordenador().getId();
+			Long equipe = 21L;
+			System.out.println("ECC "+ecc+" FICHA "+coordenador+" EQUIPE "+equipe+ " COORDENADOR "+true);
+			atividadeService.insereAtividade(ecc, coordenador, equipe, true, true);
+		}
+	}
+
+	private void atualizaPalestrantes() {
+		List<Palestrante> palestrantes = palestranteService.palestrantesPorEcc(ecc.getId());
+		for (Palestrante palestrante : palestrantes) {
+			Long ecc = palestrante.getEcc().getId();
+			Long ficha = palestrante.getFicha().getId();
+			Long equipe = 8L;
+			System.out.println("ECC "+ecc+" FICHA "+ficha+" EQUIPE "+equipe+ " COORDENADOR "+false);
+			atividadeService.insereAtividade(ecc, ficha, equipe, false, false);
+		}
+	}
+
+	private void atualizaEncontristas() {
+		List<EncontristaEccCasal> encontristas = encontristaEccCasalService.encontristasPorEcc(ecc.getId());
+		String numeroEcc = ecc.getNumero();
+		String fichas = "";
+		int total = 0;
+		for (EncontristaEccCasal encontrista : encontristas) {
+			fichaService.atualizaSituacaoEPrimeiraEtapa(encontrista.getFicha().getId(), numeroEcc);
+//			fichas = fichas +"'"+encontrista.getFicha().getId()+"',";
+//			total++;
+		}
+		if (fichas.contains(",") && total > 0) {
+			fichas = fichas.substring(0, fichas.length()-1);
+			System.out.println("FICHAS "+fichas);
+//		fichaService.atualizaSituacaoEPrimeiraEtapa(fichas, numeroEcc);
+		}
+
+	}
+
+
+
 	//habilita ou desabilita os botões disponívis na tabela da pagina ecc.xhtml
 	public void onRowSelectEcc(SelectEvent selectEvent) {
 		this.ecc = (Ecc) selectEvent.getObject();

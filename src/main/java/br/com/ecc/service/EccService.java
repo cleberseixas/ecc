@@ -1,5 +1,6 @@
 package br.com.ecc.service;
 
+import br.com.ecc.controller.ContextoBean;
 import br.com.ecc.model.Ecc;
 import br.com.ecc.repository.EccRepository;
 import br.com.ecc.util.FacesMessages;
@@ -8,6 +9,7 @@ import br.com.ecc.util.Transactional;
 
 import javax.inject.Inject;
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -27,6 +29,10 @@ public class EccService implements Serializable {
 
 	@Inject
 	private EccRepository eccRepository;
+
+	@Inject
+	ContextoBean contextoBean;
+
 
 	@Transactional
 	public void salvar(Ecc ecc){
@@ -50,6 +56,20 @@ public class EccService implements Serializable {
 			this.eccRepository.salvar(ecc);
 			FacesMessages.info("ECC alterado");
 		}catch(NegocioException e){
+			FacesMessages.error(e.getMessage());
+		}
+	}
+
+
+	@Transactional
+	public void encerrar(Ecc ecc) {
+		try {
+			ecc.setDataEncerramento(new Date());
+			ecc.setUsuarioEncerrou(contextoBean.getUsuarioLogado().getLogin());
+			ecc.setSituacao("ENCERRADO");
+			this.eccRepository.salvar(ecc);
+			FacesMessages.info("ECC encerrado");
+		} catch(NegocioException e) {
 			FacesMessages.error(e.getMessage());
 		}
 	}
@@ -99,4 +119,11 @@ public class EccService implements Serializable {
 			return null;
 		}
 	}
+
+	public void atualizaSituacaoEcc(Long ecc, String usuario) {
+		eccRepository.atualizaSituacaoEcc(ecc, usuario);
+	}
+
+
+
 }

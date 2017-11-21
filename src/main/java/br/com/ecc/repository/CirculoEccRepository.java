@@ -79,4 +79,15 @@ public class CirculoEccRepository {
 		return (query.getSingleResult() > 0 ? true : false);
 	}
 
+	/**
+	 * Método que Percorre todos as CIRCULOS por ECC para atualizar na tabela ATIVIDADES
+	 * @param ecc - ID do ECC
+	 * @return
+	 */
+	public List<CirculoEcc> circulosPorEcc(Long ecc) {
+		TypedQuery<CirculoEcc> query = manager.createQuery("from CirculoEcc where ecc.id =:ECC", CirculoEcc.class);
+		query.setParameter("ECC", ecc);
+		return query.getResultList();
+	}
+
 }

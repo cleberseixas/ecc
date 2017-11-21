@@ -69,4 +69,15 @@ public class DirigenteEccRepository {
 		query.executeUpdate();
 		manager.getTransaction().commit();
 	}
+
+	/**
+	 * Método que Percorre todos os DIRIGENTES por ECC para atualizar na tabela ATIVIDADES
+	 * @param ecc - ID do ECC
+	 * @return
+	 */
+	public List<DirigenteEcc> dirigentesPorEcc(Long ecc) {
+		TypedQuery<DirigenteEcc> query = manager.createQuery("from DirigenteEcc where ecc.id =:ECC", DirigenteEcc.class);
+		query.setParameter("ECC", ecc);
+		return query.getResultList();
+	}
 }

@@ -132,6 +132,12 @@
 		<br />
 		<p:focus for="nomeUsualCasalBusca" />
 		<p:ajaxStatus onstart="PF('statusDialog').show()" onsuccess="PF('statusDialog').hide()" />
+		<!--
+		<f:metadata>
+			<f:viewAction action="#{fichaBean.removeAtividadeLimbo()}" />
+			<f:viewAction action="#{fichaBean.removeAptidaoLimbo()}" />
+		</f:metadata>
+		-->
 		<p:growl id="growl" showDetail="false" life="4000" autoUpdate="true" />
 		<p:toolbar>
 			<f:facet name="left">
@@ -476,8 +482,8 @@
 					</h:panelGrid>
 					<h:panelGrid columns="4">
 						<h:outputLabel value="ECC - 1º Etapa" for="etapa1" />
-						<h:outputLabel value="ECC - 2º Etapa" for="etapa2" rendered="false"/>
-						<h:outputLabel value="ECC - 3º Etapa" for="etapa3" rendered="false"/>
+						<h:outputLabel value="ECC - 2º Etapa" for="etapa2" rendered="true"/>
+						<h:outputLabel value="ECC - 3º Etapa" for="etapa3" rendered="true"/>
 						<h:outputLabel value="Motivo" for="motivo" />
 						<p:inputText id="etapa1" value="#{fichaBean.ficha.primeiraEtapa}" disabled="false"
 									 maxlength="10" style="width:75px;">

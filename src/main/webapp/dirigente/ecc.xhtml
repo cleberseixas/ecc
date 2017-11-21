@@ -144,7 +144,7 @@
 												 onclick="PF('dlgNovoEcc').show()" update=":cadNovoEcc"
 												 process="@this"
 												 style="margin-right:15px; background-color:#a0c0de;"/>
-								<p:commandButton id="btnDetalhes" value="Detalhes"
+								<p:commandButton id="btnDetalhes" value="Detalhes" rendered="false"
 												 icon="ui-icon-newwin" style="margin-left: 5px;"
 												 onclick="PF('dlgEditarEcc').show()" update=":cadEditarEcc"
 												 title="Exibe todas as informações lançadas no ECC selecionado."
@@ -167,12 +167,19 @@
 												 onclick="PF('dlgNovosDirigentes').show()" update=":cadNovosDirigentes"
 												 title="Adiciona dirigentes ao ECC selecionado."
 												 disabled="#{eccBean.habilitaBotaoIncluiDirigentes}"/>
+								<p:commandButton id="btnEncerrar" value="Encerrar ECC"
+												 icon="ui-icon-locked" style="margin-left: 5px;"
+												 disabled="#{eccBean.habilitaBotaoEncerrarEcc}"
+												 oncomplete="PF('confirmacaoEncerrar').show()" immediate="true"
+												 process="@this"
+												 update=":listagemEccs:confirmacaoEncerrarDialog"
+												 title="Encerra o ECC selecionado."/>
 							</h:panelGroup>
 						</h:panelGrid>
 					</f:facet>
 					<p:ajax event="rowSelect"
 							listener="#{eccBean.onRowSelectEcc}"
-							update="btnEditar btnExcluir btnIncluiDirigentes btnDetalhes" />
+							update="btnEditar btnExcluir btnIncluiDirigentes btnDetalhes btnEncerrar" />
 					<p:column width="30">
 						<f:facet name="header">Número</f:facet>
 						#{ecc.numero}
@@ -215,6 +222,19 @@
 							 action="#{eccBean.excluirEcc()}" update="eccs" />
 			<p:button value="Não"
 					  onclick="PF('confirmacaoExclusao').hide(); return false;" />
+		</p:confirmDialog>
+
+		<!-- ======================================================================= -->
+		<!-- Caixa de diálogo para confirmaço de ENCERRAMENTO do ECC		         -->
+		<!-- ======================================================================= -->
+		<p:confirmDialog header="Encerrar ECC"
+						 message="Confirmar o encerramento do ECC com número #{eccBean.ecc.numero}?"
+						 widgetVar="confirmacaoEncerrar" id="confirmacaoEncerrarDialog">
+			<p:commandButton value="Sim"
+							 onclick="PF('confirmacaoEncerrar').hide();"
+							 action="#{eccBean.encerrarEcc()}" update="eccs" />
+			<p:button value="Não"
+					  onclick="PF('confirmacaoEncerrar').hide(); return false;" />
 		</p:confirmDialog>
 	</h:form>
 		<!-- ==================================================================================== -->

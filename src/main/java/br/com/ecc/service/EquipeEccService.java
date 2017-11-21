@@ -1,5 +1,6 @@
 package br.com.ecc.service;
 
+import br.com.ecc.model.Equipe;
 import br.com.ecc.model.EquipeEcc;
 import br.com.ecc.repository.EquipeEccRepository;
 import br.com.ecc.util.FacesMessages;
@@ -98,5 +99,12 @@ public class EquipeEccService implements Serializable {
 		}
 	}
 
-
+	public List<EquipeEcc> equipesPorEcc(Long ecc) {
+		try {
+			return equipeEccRepository.equipesPorEcc(ecc);
+		} catch(NegocioException e){
+			FacesMessages.error(e.getMessage());
+			return null;
+		}
+	}
 }

@@ -75,4 +75,12 @@ public class DirigenteEccService implements Serializable {
 		dirigenteEccRepository.removeDirigenteLimbo();
 	}
 
+	public List<DirigenteEcc> dirigentesPorEcc(Long ecc) {
+		try {
+			return dirigenteEccRepository.dirigentesPorEcc(ecc);
+		} catch(NegocioException e){
+			FacesMessages.error(e.getMessage());
+			return null;
+		}
+	}
 }

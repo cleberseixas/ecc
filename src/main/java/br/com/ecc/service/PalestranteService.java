@@ -69,5 +69,14 @@ public class PalestranteService implements Serializable {
 			FacesMessages.error(e.getMessage());
 			return null;
 		}
-	}	
+	}
+
+	public List<Palestrante> palestrantesPorEcc(Long ecc) {
+		try {
+			return palestranteRepository.palestrantesPorEcc(ecc);
+		} catch(NegocioException e){
+			FacesMessages.error(e.getMessage());
+			return null;
+		}
+	}
 }

@@ -57,12 +57,6 @@ public class AptidaoRepository {
 	public List<br.com.ecc.model.util.Aptidao> totalPorAptidao() {
 		String sql = "";
 		Query query = null;
-//		if (idAptidao > 0) {
-//			sql = "select eq.descricao, count(ap.*) from aptidoes ap "
-//					+ " inner join equipes eq on eq.equipe = ap.equipe "
-//					+ " where ap.equipe =:APTIDAO group by 1 order by 1";
-//			query = manager.createNativeQuery(sql);
-//			query.setParameter("APTIDAO", idAptidao);
 		sql = "select eq.descricao, count(ap.*) from aptidoes ap "
 			+ " inner join equipes eq on eq.equipe = ap.equipe group by 1 order by 1";
 		query = manager.createNativeQuery(sql);

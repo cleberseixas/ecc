@@ -147,4 +147,8 @@ public class FichaService implements Serializable {
 		}
 	}
 
+	public void atualizaSituacaoEPrimeiraEtapa(Long fichas, String etapa) {
+		fichaRepository.atualizaSituacaoEPrimeiraEtapa(fichas, etapa);
+	}
+
 }

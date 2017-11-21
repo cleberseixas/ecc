@@ -60,6 +60,13 @@ public class Ecc implements Serializable {
     @Column(name="ATIVO", nullable = false)
     private boolean ativo = true;
 
+    @Temporal(TemporalType.DATE)
+    @Column(name="DATA_ENCERRAMENTO", nullable = true)
+    private Date dataEncerramento;
+
+    @Column(name="USUARIO_ENCERROU", length=20, nullable = true)
+    private String usuarioEncerrou;
+
     //@OneToMany(mappedBy="ecc", fetch=FetchType.EAGER, cascade = CascadeType.ALL)
 
     @ManyToMany(fetch= FetchType.LAZY, cascade = CascadeType.ALL)
@@ -146,6 +153,22 @@ public class Ecc implements Serializable {
 
     public void setAtivo(boolean ativo) {
         this.ativo = ativo;
+    }
+
+    public Date getDataEncerramento() {
+        return dataEncerramento;
+    }
+
+    public void setDataEncerramento(Date dataEncerramento) {
+        this.dataEncerramento = dataEncerramento;
+    }
+
+    public String getUsuarioEncerrou() {
+        return usuarioEncerrou;
+    }
+
+    public void setUsuarioEncerrou(String usuarioEncerrou) {
+        this.usuarioEncerrou = usuarioEncerrou;
     }
 
     public List<DirigenteEcc> getDirigentes() {

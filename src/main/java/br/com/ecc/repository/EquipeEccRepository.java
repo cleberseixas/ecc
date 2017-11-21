@@ -67,4 +67,17 @@ public class EquipeEccRepository {
 		return (query.getSingleResult() > 0 ? true : false);
 	}
 
+	/**
+	 * Método que Percorre todos as EQUIPES por ECC para atualizar na tabela ATIVIDADES
+	 * @param ecc - ID do ECC
+	 * @return
+	 */
+	public List<EquipeEcc> equipesPorEcc(Long ecc) {
+		TypedQuery<EquipeEcc> query = manager.createQuery("from EquipeEcc where ecc.id =:ECC", EquipeEcc.class);
+		query.setParameter("ECC", ecc);
+		return query.getResultList();
+	}
+
 }
+
+

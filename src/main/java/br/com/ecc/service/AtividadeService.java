@@ -73,4 +73,8 @@ public class AtividadeService implements Serializable {
 			return null;
 		}
 	}
+
+	public void insereAtividade(Long ecc, Long ficha, Long equipe, boolean coordenador, boolean atualizaUltimoTrabalho) {
+		atividadeRepository.insereAtividade(ecc, ficha, equipe, coordenador, atualizaUltimoTrabalho);
+	}
 }

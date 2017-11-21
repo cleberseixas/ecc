@@ -66,4 +66,12 @@ public class EncontristaEccCasalService implements Serializable {
 		encontristaEccCasalRepository.removeCasaisEncontristasLimbo();
 	}
 
+	public List<EncontristaEccCasal> encontristasPorEcc(Long ecc) {
+		try {
+			return encontristaEccCasalRepository.encontristasPorEcc(ecc);
+		} catch(NegocioException e){
+			FacesMessages.error(e.getMessage());
+			return null;
+		}
+	}
 }

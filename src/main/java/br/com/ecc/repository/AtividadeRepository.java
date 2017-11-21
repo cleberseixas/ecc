@@ -1,6 +1,7 @@
 package br.com.ecc.repository;
 
 import br.com.ecc.model.Atividade;
+import br.com.ecc.model.DirigenteEcc;
 import br.com.ecc.model.util.Aptidao;
 
 import javax.inject.Inject;
@@ -72,5 +73,66 @@ public class AtividadeRepository {
 			lista.add(atividade);
 		}
 		return lista;
+	}
+
+	/**
+	 * Método que Insere na tabela ATIVIDADES todas as atividades na hora de ENCERRAR O ECC
+	 * @param ecc - ID do ECC
+	 * @param ficha - ID da FICHA
+	 * @param equipe - ID do EQUIPE
+	 * @param coordenador - SE O CASAL FOI OU NÃO COORDENADOR na EQUIPE
+	 * @param atualizaUltimoTrabalho - true - atualiza ULTIMO_TRABALHO
+	 */
+	public void insereAtividade(Long ecc, Long ficha, Long equipe, boolean coordenador, boolean atualizaUltimoTrabalho) {
+		manager.getTransaction().begin();
+		//Insere a Atividade
+		Query query = manager.createNativeQuery("INSERT INTO ATIVIDADES "
+				+" (ECC, FICHA, EQUIPE, COORDENADOR) "
+				+" VALUES "
+				+" (:ECC, :FICHA, :EQUIPE, :COOR)", DirigenteEcc.class);
+		query.setParameter("ECC", ecc);
+		query.setParameter("FICHA", ficha);
+		query.setParameter("EQUIPE", equipe);
+		query.setParameter("COOR", coordenador);
+		query.executeUpdate();
+		manager.getTransaction().commit();
+
+		manager.getTransaction().begin();
+		TypedQuery<Long> query1 = manager.createQuery("SELECT MAX(id) FROM Atividade "
+				+" WHERE ecc.id =:ECC AND ficha.id =:FICHA AND equipe.id =:EQUIPE", Long.class);
+		query1.setParameter("ECC", ecc);
+		query1.setParameter("FICHA", ficha);
+		query1.setParameter("EQUIPE", equipe);
+
+		Long id = query1.getSingleResult();
+		Query query2 = manager.createNativeQuery("INSERT INTO FICHAS_ATIVIDADES"
+				+" (FICHA, ATIVIDADE) "
+				+" VALUES "
+				+" (:FICHA, :ATIV)");
+		query2.setParameter("FICHA", ficha);
+		query2.setParameter("ATIV", id);
+		query2.executeUpdate();
+
+		if (!atualizaUltimoTrabalho) {
+			TypedQuery<Long> query4 = manager.createQuery("SELECT COUNT(id) FROM Atividade "
+					+" WHERE ecc.id =:ECC AND ficha.id =:FICHA ", Long.class);
+			query4.setParameter("ECC", ecc);
+			query4.setParameter("FICHA", ficha);
+
+			Long idEquipe = query4.getSingleResult();
+			//Se inseriu PALESTRANTE, atualiza ULTIMO_TRABALHO
+			if (idEquipe == 1) {
+				Query query5 = manager.createNativeQuery("UPDATE FICHAS SET EQUIPE =:ULT WHERE FICHA =:FICHA");
+				query5.setParameter("ULT", equipe);
+				query5.setParameter("FICHA", ficha);
+				query5.executeUpdate();
+			}
+		} else {
+				Query query3 = manager.createNativeQuery("UPDATE FICHAS SET EQUIPE =:ULT WHERE FICHA =:FICHA");
+				query3.setParameter("ULT", equipe);
+				query3.setParameter("FICHA", ficha);
+				query3.executeUpdate();
+			}
+		manager.getTransaction().commit();
 	}
 }

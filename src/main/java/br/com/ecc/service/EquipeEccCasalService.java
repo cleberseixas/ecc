@@ -67,4 +67,12 @@ public class EquipeEccCasalService implements Serializable {
 		equipeEccCasalRepository.removeCasaisEncontreirosLimbo();
 	}
 
+	public List<EquipeEccCasal> casaisMembrosPorEcc(Long ecc) {
+		try {
+			return equipeEccCasalRepository.casaisMembrosPorEcc(ecc);
+		} catch(NegocioException e){
+			FacesMessages.error(e.getMessage());
+			return null;
+		}
+	}
 }
