@@ -20,7 +20,7 @@
 			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
 
 			<!-- Acesso servidor LOCAL -->
-			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost/ecc_bd1" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost/ecc_bd" />
 			<!-- Acesso servidor BRAGA
 			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://179.155.225.37:5400/ecc_bd" />
  			-->

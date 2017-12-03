@@ -12,6 +12,7 @@ import org.primefaces.event.FileUploadEvent;
 import org.primefaces.event.SelectEvent;
 import org.primefaces.model.UploadedFile;
 
+import javax.faces.event.AjaxBehaviorEvent;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -69,7 +70,11 @@ public class FichaBean implements Serializable {
 
 	private String situacaoFicha = "TODAS";
 
-	private String nomeUsualCasalBusca = "";
+	private String nomeEleOuNomeUsualCasalBusca = "";
+
+	private String tipoBusca = "NOME USUAL CASAL";
+
+	private String labelBusca = "Nome Usual Casal";
 
 	@Inject
 	private FichaService fichaService;
@@ -261,12 +266,28 @@ public class FichaBean implements Serializable {
 		this.situacaoFicha = situacaoFicha;
 	}
 
-	public String getNomeUsualCasalBusca() {
-		return nomeUsualCasalBusca;
+	public String getTipoBusca() {
+		return tipoBusca;
 	}
 
-	public void setNomeUsualCasalBusca(String nomeUsualCasalBusca) {
-		this.nomeUsualCasalBusca = nomeUsualCasalBusca;
+	public void setTipoBusca(String tipoBusca) {
+		this.tipoBusca = tipoBusca;
+	}
+
+	public String getLabelBusca() {
+		return labelBusca;
+	}
+
+	public void setLabelBusca(String labelBusca) {
+		this.labelBusca = labelBusca;
+	}
+
+	public String getNomeEleOuNomeUsualCasalBusca() {
+		return nomeEleOuNomeUsualCasalBusca;
+	}
+
+	public void setNomeEleOuNomeUsualCasalBusca(String nomeEleOuNomeUsualCasalBusca) {
+		this.nomeEleOuNomeUsualCasalBusca = nomeEleOuNomeUsualCasalBusca;
 	}
 
 	public void verificaSO() {
@@ -516,7 +537,15 @@ public class FichaBean implements Serializable {
 	}
 
 	public void filtraFicha() {
-		listaFichas = fichaService.filtraFichaSituacaoeNomeUsual(situacaoFicha, nomeUsualCasalBusca);
+		listaFichas = fichaService.filtraFichaSituacaoNomeEleElaENomeUsual(situacaoFicha, this.tipoBusca, nomeEleOuNomeUsualCasalBusca);
+	}
+
+	public void onChangeTipoBusca(AjaxBehaviorEvent event) {
+		if (this.tipoBusca.equals("NOME USUAL CASAL"))
+			this.labelBusca = "Nome Usual Casal";
+		else if (this.tipoBusca.equals("NOME DELE"))
+				this.labelBusca = "Nome Dele";
+			else this.labelBusca = "Nome Dela";
 	}
 
 }

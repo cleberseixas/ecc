@@ -1,13 +1,10 @@
 package br.com.ecc.service;
 
-import br.com.ecc.model.Circulo;
 import br.com.ecc.model.Ficha;
-import br.com.ecc.repository.CirculoRepository;
 import br.com.ecc.repository.FichaRepository;
 import br.com.ecc.util.FacesMessages;
 import br.com.ecc.util.NegocioException;
 import br.com.ecc.util.Transactional;
-import com.sun.xml.internal.messaging.saaj.soap.FastInfosetDataContentHandler;
 
 import javax.inject.Inject;
 import java.io.Serializable;
@@ -128,9 +125,9 @@ public class FichaService implements Serializable {
 
 
 
-	public List<Ficha> filtraFichaSituacaoeNomeUsual(String situacao, String nomeUsualCasal){
+	public List<Ficha> filtraFichaSituacaoNomeEleElaENomeUsual(String situacao, String tipoBusca, String valorBusca){
 		try {
-			return fichaRepository.filtraFichaSituacaoeNomeUsual(situacao, nomeUsualCasal);
+			return fichaRepository.filtraFichaSituacaoNomeEleElaENomeUsual(situacao, tipoBusca, valorBusca);
 		} catch(NegocioException e){
 			FacesMessages.error(e.getMessage());
 			return null;

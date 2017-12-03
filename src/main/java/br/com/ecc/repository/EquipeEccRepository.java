@@ -29,7 +29,7 @@ public class EquipeEccRepository {
 	}
 
 	public List<EquipeEcc> listar() {
-		TypedQuery<EquipeEcc> query = manager.createQuery("from EquipeEcc order by ecc.numero desc", EquipeEcc.class);
+		TypedQuery<EquipeEcc> query = manager.createQuery("from EquipeEcc order by ecc.numero desc, equipe.descricao ", EquipeEcc.class);
 		return query.getResultList();
 	}
 

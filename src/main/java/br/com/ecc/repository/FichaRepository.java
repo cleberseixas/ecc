@@ -60,26 +60,43 @@ public class FichaRepository {
 	 * Método utilizado para filtrar as fichas
 	 * Por padrão tras todas as fichas (ativas/inativas) com situação TODAS
 	 * @param situacao - Define a situação da FICHA (ENCONTREIRO, ENCONTRISTA, PENDENTE OU AUSÊNCIA JUSTIFICADA).
-	 * @param nomeUsualCasal - Nome usual do casal.
+	 * @param tipoBusca - Nome usual do casal.
+	 * @param valorBusca - Nome usual do casal.
 	 * @return List com as Fichas.
 	 */
-	public List<Ficha> filtraFichaSituacaoeNomeUsual(String situacao, String nomeUsualCasal) {
+	public List<Ficha> filtraFichaSituacaoNomeEleElaENomeUsual(String situacao, String tipoBusca, String valorBusca) {
 		TypedQuery<Ficha> query = null;
 		if (situacao.equals("TODAS")) {
-			if (nomeUsualCasal.trim().length() > 0) {
-				query = manager.createQuery("from Ficha "
-						+" where nomeUsual like :NU order by primeiraEtapa desc", Ficha.class);
-				query.setParameter("NU", "%"+nomeUsualCasal+"%");
+			if (valorBusca.trim().length() > 0) {
+				if (tipoBusca.equals("NOME USUAL CASAL")) {
+					query = manager.createQuery("from Ficha "
+							+ " where nomeUsual like :NU order by primeiraEtapa desc", Ficha.class);
+				} else if (tipoBusca.equals("NOME DELE"))
+							query = manager.createQuery("from Ficha "
+								+ " where nomeEle like :NU order by primeiraEtapa desc", Ficha.class);
+						else
+							query = manager.createQuery("from Ficha "
+								+ " where nomeEla like :NU order by primeiraEtapa desc", Ficha.class);
+				query.setParameter("NU", "%" + valorBusca + "%");
 			} else {
 				query = manager.createQuery("from Ficha order by primeiraEtapa desc", Ficha.class);
 			}
 		} else {
-			if (nomeUsualCasal.trim().length() > 0) {
-				query = manager.createQuery("from Ficha "
-						+ " where situacao = :SI "
-						+ " and nomeUsual like :NU order by nomeUsual", Ficha.class);
+			if (valorBusca.trim().length() > 0) {
+				if (tipoBusca.equals("NOME USUAL CASAL")) {
+					query = manager.createQuery("from Ficha "
+							+ " where situacao = :SI "
+							+ " and nomeUsual like :NU order by nomeUsual", Ficha.class);
+				} else if (tipoBusca.equals("NOME DELE"))
+							query = manager.createQuery("from Ficha "
+									+ " where situacao = :SI "
+									+ " and nomeEle like :NU order by primeiraEtapa desc", Ficha.class);
+						else
+							query = manager.createQuery("from Ficha "
+									+ " where situacao = :SI "
+									+ " and nomeEla like :NU order by primeiraEtapa desc", Ficha.class);
 				query.setParameter("SI", situacao);
-				query.setParameter("NU", "%" + nomeUsualCasal + "%");
+				query.setParameter("NU", "%" + valorBusca + "%");
 			} else {
 				query = manager.createQuery("from Ficha "
 						+" where situacao = :SI order by primeiraEtapa desc", Ficha.class);

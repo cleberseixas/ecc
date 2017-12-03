@@ -169,7 +169,7 @@
 		<center>
 		<p:dataTable value="#{equipeBean.lista}" var="equipe"
 			rendered="#{!empty equipeBean.lista}" style="width:620px;">
-			<p:column headerText="Descrição" width="170">
+			<p:column headerText="Descrição" width="180">
 				<p:outputLabel value="#{equipe.descricao}"/>
 				<h:graphicImage library="imagens" name="automatica#{equipe.automatica}.png" width="15" height="15"
 								style="float: right;" title="Automática - #{equipe.automatica}"/>
@@ -181,6 +181,11 @@
 				<f:facet name="header">Sigla</f:facet>
 				#{equipe.sigla}
 			</p:column>
+			<p:column width="30">
+				<f:facet name="header">Máximo</f:facet>
+				#{equipe.maximoCasal}
+			</p:column>
+
 			<p:column width="50">
 				<f:facet name="header">Ativo</f:facet>
 				<center>

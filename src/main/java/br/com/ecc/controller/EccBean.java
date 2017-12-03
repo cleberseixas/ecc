@@ -202,7 +202,7 @@ public class EccBean implements Serializable {
 	}
 
 	public void salvaDirigente() {
-		if (dirigenteEccService.casalJaExisteEccDirigente(ecc.getId(), casal.getId(), equipe.getId())) {
+		if (dirigenteEccService.casalJaExisteEccDirigente(ecc.getId(), casal.getId(), equipe.getId()) && equipe.getId() != 12L) {
 			FacesMessages.error("Casal/Equipe já faz parte da Equipe de Dirigentes neste ECC.");
 			RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
 			this.novoDirigente();

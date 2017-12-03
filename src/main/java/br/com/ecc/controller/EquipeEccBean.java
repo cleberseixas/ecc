@@ -389,6 +389,4 @@ public class EquipeEccBean implements Serializable {
 //		this.casalCoordenador = (Ficha) event.getSource();
 		System.out.println("Photo :"+this.casalCoordenador.getFotoEle());
 	}
-
-
 }

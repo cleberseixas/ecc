@@ -208,8 +208,6 @@ public class EstatisticaBean implements Serializable {
 
 	}
 
-
-
 	public void imprimiEcc() {
 
 	}

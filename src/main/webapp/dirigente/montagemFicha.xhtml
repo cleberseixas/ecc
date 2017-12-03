@@ -141,9 +141,18 @@
 		<p:growl id="growl" showDetail="false" life="4000" autoUpdate="true" />
 		<p:toolbar>
 			<f:facet name="left">
-				<h:panelGrid columns="7">
-					<p:outputLabel value="Nome Usual Casal:" />
-					<p:inputText id="nomeUsualCasalBusca" value="#{fichaBean.nomeUsualCasalBusca}"
+				<h:panelGrid columns="9">
+					<p:outputLabel value="Tipo:" />
+					<p:selectOneMenu id="tipoBusca" value="#{fichaBean.tipoBusca}"
+									 style="width:130px;">
+						<f:selectItem itemLabel="NOME USUAL CASAL" itemValue="NOME USUAL CASAL"/>
+						<f:selectItem itemLabel="NOME DELA" itemValue="NOME DELA"/>
+						<f:selectItem itemLabel="NOME DELE" itemValue="NOME DELE"/>
+						<p:ajax listener="#{fichaBean.onChangeTipoBusca}" update="idBusca"
+								event="change"/>
+					</p:selectOneMenu>
+						<p:outputLabel id="idBusca" style="margin-left:30px;" value="#{fichaBean.labelBusca}:" />
+					<p:inputText id="nomeUsualCasalBusca" value="#{fichaBean.nomeEleOuNomeUsualCasalBusca}"
 								 maxlength="100" style="width:330px;">
 					</p:inputText>
 					<p:selectOneButton style="margin-left:5px;" id="statusFicha"
@@ -164,8 +173,8 @@
 				<p:dataTable id="fichas" value="#{fichaBean.listaFichas}" var="ficha" rowIndexVar="index" selection="#{fichaBean.ficha}"
 							 selectionMode="single" rowKey="#{ficha.id}"
 							 emptyMessage="Não há Fichas de Encontristas/Encontreiros cadastradas" style="width:100%;"
-							 rows="10" paginator="true" paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
-							 rowsPerPageTemplate="10,20,30,40,50" paginatorPosition="top"
+							 rows="12" paginator="true" paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+							 rowsPerPageTemplate="12,24,36,48,60" paginatorPosition="top"
 				currentPageReportTemplate="Registro(s) {startRecord} a {endRecord} de um total de {totalRecords} - Página {currentPage} de {totalPages}">
 					<f:facet name="header">
 						<h:panelGrid columns="2" styleClass="semBordaInterna"
@@ -207,7 +216,7 @@
 												 onclick="PF('dlgNovasAptidoes').show()" update=":cadNovasAptidoes"
 												 title="Adiciona aptidões a ficha selecionada."
 												 disabled="#{fichaBean.habilitaBotaoIncluiAptidoes}"/>
-								<p:commandButton id="btnIncluiAtividades" value="Inclui Atividades"
+								<p:commandButton id="btnIncluiAtividades" value="Atividades"
 												 icon="ui-icon-mail-closed" style="margin-left: 5px;"
 												 process="@this"
 												 onclick="PF('dlgNovasAtividades').show()" update=":cadNovasAtividades"
@@ -220,8 +229,17 @@
 					<p:ajax event="rowSelect"
 							listener="#{fichaBean.onRowSelectEcc}"
 							update="btnEditar btnExcluir btnAnexar btnIncluiAptidoes btnDetalhes btnIncluiAtividades" />
-					<p:column headerText="ECC" width="20">
+					<p:column headerText="ECC" width="30">
 						<p:outputLabel value="#{ficha.primeiraEtapa}"/>
+						<h:graphicImage library="imagens" name="encontreiro.png" rendered="#{ficha.situacao eq 'ENCONTREIRO'}"
+										style="width:20px; height:20px; float: right;" title="Encontreiro"/>
+						<h:graphicImage library="imagens" name="encontrista.png" rendered="#{ficha.situacao eq 'ENCONTRISTA'}"
+										style="width:20px; height:20px; float: right;" title="Encontrista"/>
+						<h:graphicImage library="imagens" name="pendente.png" rendered="#{ficha.situacao eq 'PENDENTE'}"
+										style="width:20px; height:20px; float: right;" title="Pendente"/>
+						<h:graphicImage library="imagens" name="ausenciaJustificada.png" rendered="#{ficha.situacao eq 'AUSÊNCIA JUSTIFICADA'}"
+										style="width:20px; height:20px; float: right;" title="Ausência Justificada"/>
+
 					</p:column>
 					<p:column width="130">
 						<f:facet name="header">Nome Usual Casal</f:facet>
@@ -230,59 +248,31 @@
 										style="width:20px; height:20px; float: right;" title="Inativo"/>
 
 					</p:column>
-					<p:column headerText="Nome Ele" width="200">
+					<p:column headerText="Nome Ele" width="213">
 						<p:outputLabel value="#{ficha.nomeEle}"/>
 						<h:graphicImage library="imagens" value="/image?imagem=#{ficha.fotoEle}" rendered="#{ficha.fotoEle.length() > 0}"
 										style="width:20px; height:20px; float: right;" title="Foto dele"/>
 					</p:column>
-					<!--
-					<p:column headerText="Nascimento Ele" width="50">
-						<p:outputLabel value="#{ficha.nascimentoEle}">
-							<f:convertDateTime dateStyle="medium" pattern="dd/MM/yyyy" />
-						</p:outputLabel>
-					</p:column>
-					<p:column headerText="Profissão Ele" width="350">
-						<p:outputLabel value="#{ficha.nomeEle}"/>
-					</p:column>
-					-->
-					<p:column headerText="Telefone Ele" width="60">
+					<p:column headerText="Telefone Ele" width="55">
 						<p:outputLabel value="#{ficha.telefoneEle}"/>
 					</p:column>
-					<p:column headerText="Nome Ela" width="200">
+					<p:column headerText="Nome Ela" width="220">
 						<p:outputLabel value="#{ficha.nomeEla}"/>
 						<h:graphicImage library="imagens" value="/image?imagem=#{ficha.fotoEla}" rendered="#{ficha.fotoEla.length() > 0}"
 										style="width:20px; height:20px; float: right;" title="Foto dela"/>
-
-						<!--
-						<h:graphicImage library="imagens" name="photo.png" rendered="#{ficha.fotoEla.length() > 0}"
-										style="width:20px; height:20px; float: right;" title="Foto dela"/>
-						-->
 					</p:column>
-					<p:column headerText="Último Trabalho" width="140">
+					<p:column headerText="Último Trabalho" width="170">
 						<p:outputLabel value="#{ficha.ultimoTrabalho.descricao}"/>
 					</p:column>
-					<!--
-					<p:column headerText="Nascimento Ela" width="50">
-						<p:outputLabel value="#{ficha.nascimentoEla}">
-							<f:convertDateTime dateStyle="medium" pattern="dd/MM/yyyy" />
-						</p:outputLabel>
-					</p:column>
-					<p:column headerText="Profissão Ela" width="350">
-						<p:outputLabel value="#{ficha.nomeEla}"/>
-					</p:column>
-					<p:column headerText="Profissão Ela" width="350">
-						<p:outputLabel value="#{ficha.nomeEla}"/>
-					</p:column>
-					-->
-					<p:column headerText="Telefone Ela" width="60">
+					<p:column headerText="Telefone Ela" width="55">
 						<p:outputLabel value="#{ficha.telefoneEla}"/>
 					</p:column>
-					<p:column width="40" headerText="Atividades">
+					<p:column width="37" headerText="Atividades">
 						#{ficha.atividades.size()}
 						<h:graphicImage library="imagens" name="dirigentes2.png" width="15" height="15" rendered="#{ficha.atividades.size() > 0}"
 										style="float: right;" title="Atividades"/>
 					</p:column>
-					<p:column headerText="Situação" width="40">
+					<p:column headerText="Situação" width="30" rendered="false">
 						<h:graphicImage library="imagens" name="encontreiro.png" rendered="#{ficha.situacao eq 'ENCONTREIRO'}"
 										style="width:20px; height:20px; float: right;" title="Encontreiro"/>
 						<h:graphicImage library="imagens" name="encontrista.png" rendered="#{ficha.situacao eq 'ENCONTRISTA'}"
@@ -484,7 +474,7 @@
 						<h:outputLabel value="ECC - 1º Etapa" for="etapa1" />
 						<h:outputLabel value="ECC - 2º Etapa" for="etapa2" rendered="true"/>
 						<h:outputLabel value="ECC - 3º Etapa" for="etapa3" rendered="true"/>
-						<h:outputLabel value="Motivo" for="motivo" />
+						<h:outputLabel value="Observação/Motivo" for="observacaoMotivo" />
 						<p:inputText id="etapa1" value="#{fichaBean.ficha.primeiraEtapa}" disabled="false"
 									 maxlength="10" style="width:75px;">
 						</p:inputText>
@@ -494,7 +484,7 @@
 						<p:inputText id="etapa3" value="#{fichaBean.ficha.terceiraEtapa}" rendered="true"
 									 maxlength="10" style="width:75px;">
 						</p:inputText>
-						<p:inputText id="motivo" value="#{fichaBean.ficha.motivo}"
+						<p:inputText id="observacaoMotivo" value="#{fichaBean.ficha.motivo}"
 									 maxlength="200" style="width:526px;" disabled="false">
 						</p:inputText>
 
@@ -788,7 +778,7 @@
 						<h:outputLabel value="ECC - 1º Etapa" for="etapa1" />
 						<h:outputLabel value="ECC - 2º Etapa" for="etapa2" rendered="true"/>
 						<h:outputLabel value="ECC - 3º Etapa" for="etapa3" rendered="true"/>
-						<h:outputLabel value="Motivo" for="motivo" />
+						<h:outputLabel value="Observação/Motivo" for="observacaoMotivo" />
 						<p:inputText id="etapa1" value="#{fichaBean.ficha.primeiraEtapa}" disabled="false"
 									 maxlength="10" style="width:75px;">
 						</p:inputText>
@@ -798,7 +788,7 @@
 						<p:inputText id="etapa3" value="#{fichaBean.ficha.terceiraEtapa}" rendered="true"
 									 maxlength="10" style="width:75px;">
 						</p:inputText>
-						<p:inputText id="motivo" value="#{fichaBean.ficha.motivo}"
+						<p:inputText id="observacaoMotivo" value="#{fichaBean.ficha.motivo}"
 									 maxlength="200" style="width:526px;" disabled="false">
 						</p:inputText>
 					</h:panelGrid>
@@ -818,7 +808,7 @@
 		<p:dialog id="dialogNovasAtividades" header="Lançar Atividades"
 				  modal="true" widgetVar="dlgNovasAtividades"
 				  style="background-color:#EBF3FE" resizable="false" width="820px"
-				  height="380px">
+				  height="520px">
 			<h:form id="cadNovasAtividades">
 				<h:message />
 				<p:panel id="panelDadosAtividades" style="background-color: #ffffe6">
@@ -878,7 +868,7 @@
 						</p:panel>
 					</h:panelGrid>
 					<h:panelGrid columns="3">
-						<p:dataTable id="tabelaAtividades" sortBy="#{atividade.ecc.numero}" scrollable="true" scrollHeight="143"
+						<p:dataTable id="tabelaAtividades" sortOrder="descending" sortBy="#{atividade.ecc.numero}" scrollable="true" scrollHeight="285"
 									 style="margin-right: 10px; width:770px;"
 									 value="#{fichaBean.ficha.atividades}" var="atividade"
 									 emptyMessage="Não há Atividades cadastradas" rowIndexVar="index">
