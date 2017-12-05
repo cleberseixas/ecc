@@ -1152,13 +1152,19 @@ divEstatisticaECCSuperiorEsquerda_01{
 
 #divEstatisticaChefeInferiorDireita {
 	width: 607px;
+	height: 50px;
+	float: right;
+	overflow: auto;
+}
+
+#divEstatisticaChefeInferiorDireita_01 {
+	width: 607px;
 	height: 495px;
-	float: left;
+	float: right;
 	overflow: auto;
 	position: relative;
 	background-color: white;
 	border-radius:5px 5px 5px 5px;
-	
 }
 
 #divEstatisticaPareceresConcluidos {

@@ -1,12 +1,11 @@
 package br.com.ecc.controller;
 
+import br.com.ecc.model.CirculoEcc;
 import br.com.ecc.model.Ecc;
+import br.com.ecc.model.EquipeEcc;
 import br.com.ecc.model.util.Aptidao;
 import br.com.ecc.model.util.Atividade;
-import br.com.ecc.service.AptidaoService;
-import br.com.ecc.service.AtividadeService;
-import br.com.ecc.service.EccService;
-import br.com.ecc.service.FichaService;
+import br.com.ecc.service.*;
 import br.com.ecc.util.Constantes;
 
 import javax.enterprise.context.SessionScoped;
@@ -39,6 +38,13 @@ public class EstatisticaBean implements Serializable {
 
 	private List<Atividade> listaDasAtividadesAuxiliar;
 
+	private List<CirculoEcc> listaDosCirculos;
+
+	private List<CirculoEcc> listaDosCirculosAuxiliar;
+
+	private List<EquipeEcc> listaDasEquipes;
+
+	private List<EquipeEcc> listaDasEquipesAuxiliar;
 
 	private int numeroEncontristas;
 
@@ -55,6 +61,12 @@ public class EstatisticaBean implements Serializable {
 
 	@Inject
 	private AtividadeService atividadeService;
+
+	@Inject
+	private CirculoEccService circuloEccService;
+
+	@Inject
+	private EquipeEccService equipeEccService;
 
 	public String getEccFiltro() {
 		return eccFiltro;
@@ -112,6 +124,38 @@ public class EstatisticaBean implements Serializable {
 		this.listaDasAptidoesAuxiliar = listaDasAptidoesAuxiliar;
 	}
 
+	public List<CirculoEcc> getListaDosCirculos() {
+		return listaDosCirculos;
+	}
+
+	public void setListaDosCirculos(List<CirculoEcc> listaDosCirculos) {
+		this.listaDosCirculos = listaDosCirculos;
+	}
+
+	public List<CirculoEcc> getListaDosCirculosAuxiliar() {
+		return listaDosCirculosAuxiliar;
+	}
+
+	public void setListaDosCirculosAuxiliar(List<CirculoEcc> listaDosCirculosAuxiliar) {
+		this.listaDosCirculosAuxiliar = listaDosCirculosAuxiliar;
+	}
+
+	public List<EquipeEcc> getListaDasEquipes() {
+		return listaDasEquipes;
+	}
+
+	public void setListaDasEquipes(List<EquipeEcc> listaDasEquipes) {
+		this.listaDasEquipes = listaDasEquipes;
+	}
+
+	public List<EquipeEcc> getListaDasEquipesAuxiliar() {
+		return listaDasEquipesAuxiliar;
+	}
+
+	public void setListaDasEquipesAuxiliar(List<EquipeEcc> listaDasEquipesAuxiliar) {
+		this.listaDasEquipesAuxiliar = listaDasEquipesAuxiliar;
+	}
+
 	public List<Atividade> getListaDasAtividades() {
 		return listaDasAtividades;
 	}
@@ -156,6 +200,12 @@ public class EstatisticaBean implements Serializable {
 
 		listaDasAtividades = atividadeService.totalPorAtividade();
 		listaDasAtividadesAuxiliar = listaDasAtividades;
+
+		listaDosCirculos = circuloEccService.listar();
+		listaDosCirculosAuxiliar = listaDosCirculos;
+
+		listaDasEquipes = equipeEccService.listar();
+		listaDasEquipesAuxiliar = listaDasEquipes;
 	}
 
 	public void filtraPorEcc() {
@@ -203,6 +253,38 @@ public class EstatisticaBean implements Serializable {
 					}
 				}
 				listaDasAtividades = aux;
+			}
+		}
+
+	}
+
+	public void filtraPorEncontristasCirculos() {
+		List<CirculoEcc> aux = new ArrayList<CirculoEcc>();
+		listaDosCirculos = listaDosCirculosAuxiliar;
+		if (null != eccFiltro) {
+			if (!eccFiltro.equals("")) {
+				for (CirculoEcc circuloEcc : listaDosCirculos) {
+					if (circuloEcc.getEcc().getNumero().equals(eccFiltro)) {
+						aux.add(circuloEcc);
+					}
+				}
+				listaDosCirculos = aux;
+			}
+		}
+
+	}
+
+	public void filtraPorEquipes() {
+		List<EquipeEcc> aux = new ArrayList<EquipeEcc>();
+		listaDasEquipes = listaDasEquipesAuxiliar;
+		if (null != eccFiltro) {
+			if (!eccFiltro.equals("")) {
+				for (EquipeEcc equipeEcc : listaDasEquipes) {
+					if (equipeEcc.getEcc().getNumero().equals(eccFiltro)) {
+						aux.add(equipeEcc);
+					}
+				}
+				listaDasEquipes = aux;
 			}
 		}
 

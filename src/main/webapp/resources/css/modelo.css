@@ -1162,14 +1162,14 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:hover,a.list-gro
 }
 
 #divEstatisticaChefeInferiorEsquerda_01 {
-	width: 545px;
+	width: 543px;
 	height: 50px;
 	float: left;
 	margin-right: 10px;
 	overflow: auto;
 }
 #divEstatisticaChefeInferiorEsquerda_02 {
-	width: 545px;
+	width: 550px;
 	height: 445px;
 	margin-right: 10px;
 	overflow: auto;
@@ -1183,7 +1183,7 @@ divEstatisticaECCSuperiorEsquerda_01{
 }
 
 #divEstatisticaECCSuperiorEsquerda_02 {
-	width: 545px;
+	width: 550px;
 	height: 255px;
 	margin-right: 10px;
 	overflow: auto;
@@ -1196,14 +1196,24 @@ divEstatisticaECCSuperiorEsquerda_01{
 }
 
 #divEstatisticaChefeInferiorDireita {
-	width: 607px;
-	height: 495px;
+	width: 540px;
+	height: 50px;
 	float: left;
 	overflow: auto;
-	position: relative;
+	position: absolute;
+	margin-left: 570px;
+}
+
+#divEstatisticaChefeInferiorDireita_01 {
+	width: 540px;
+	height: 445px;
+	float: left;
+	overflow: auto;
+	position: absolute;
+	margin-left: 570px;
+	margin-top: 50px;
 	background-color: white;
 	border-radius:5px 5px 5px 5px;
-	
 }
 
 #divEstatisticaPareceresConcluidos {
@@ -2250,7 +2260,7 @@ position: relative;
 
 #divBoxAptidao {
 	width: 325px;
-	height: 40px;
+	height: 50px;
 	float: left;
 	position: relative;
 	border-radius:3px 3px 0px 0px;
@@ -2268,7 +2278,7 @@ position: relative;
 
 #divBoxAtividade {
 	width: 325px;
-	height: 40px;
+	height: 50px;
 	float: left;
 	position: relative;
 	border-radius:3px 3px 0px 0px;

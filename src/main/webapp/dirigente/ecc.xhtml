@@ -450,6 +450,10 @@
 											or dirigente.equipe.descricao eq 'RECEPÇÃO DE PALESTRA/PALESTRA'
 											or dirigente.equipe.descricao eq 'PÓS ENCONTRO'}"
 													style="float: right;" title="Equipe Dirigente"/>
+									<h:graphicImage library="imagens" value="/image?imagem=#{dirigente.ficha.fotoEla}" rendered="#{dirigente.ficha.fotoEla.length() > 0}"
+													style="width:20px; height:20px; float: right;" title="Foto dela"/>
+									<h:graphicImage library="imagens" value="/image?imagem=#{dirigente.ficha.fotoEle}" rendered="#{dirigente.ficha.fotoEle.length() > 0}"
+													style="width:20px; height:20px; float: right;" title="Foto dele"/>
 								</p:column>
 								<p:column headerText="Equipe" width="200">
 									<p:outputLabel value="#{dirigente.equipe.descricao}" />
