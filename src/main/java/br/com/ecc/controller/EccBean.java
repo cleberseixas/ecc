@@ -262,7 +262,7 @@ public class EccBean implements Serializable {
 	private void desabilitaTodosBotoesEcc() {
 		habilitaBotaoEditarEcc = true;
 		habilitaBotaoExcluirEcc = true;
-		habilitaBotaoIncluiDirigentes = true;
+		habilitaBotaoIncluiDirigentes = false;
 		habilitaBotaoDetalhesEcc = false;
 		habilitaBotaoEncerrarEcc = true;
 	}

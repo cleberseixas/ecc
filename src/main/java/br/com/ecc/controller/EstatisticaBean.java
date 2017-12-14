@@ -22,6 +22,8 @@ public class EstatisticaBean implements Serializable {
 
 	private String eccFiltro;
 
+	private String equipeFiltro;
+
 	private String aptidaoFiltro;
 
 	private String atividadeFiltro;
@@ -74,6 +76,14 @@ public class EstatisticaBean implements Serializable {
 
 	public void setEccFiltro(String eccFiltro) {
 		this.eccFiltro = eccFiltro;
+	}
+
+	public String getEquipeFiltro() {
+		return equipeFiltro;
+	}
+
+	public void setEquipeFiltro(String equipeFiltro) {
+		this.equipeFiltro = equipeFiltro;
 	}
 
 	public String getAptidaoFiltro() {
@@ -288,6 +298,16 @@ public class EstatisticaBean implements Serializable {
 			}
 		}
 
+		if (null != equipeFiltro) {
+			if (!equipeFiltro.equals("")) {
+				for (EquipeEcc equipeEcc : listaDasEquipes) {
+					if (equipeEcc.getEquipe().getDescricao().equals(equipeFiltro)) {
+						aux.add(equipeEcc);
+					}
+				}
+				listaDasEquipes = aux;
+			}
+		}
 	}
 
 	public void imprimiEcc() {

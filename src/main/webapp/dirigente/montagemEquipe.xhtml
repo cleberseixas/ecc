@@ -163,7 +163,7 @@
 												 oncomplete="PF('confirmacaoExclusao').show()" immediate="true"
 												 process="@this"
 												 update=":listagemEquipesEcc:confirmacaoExclusaoDialog"/>
-								<p:commandButton id="btnIncluiCasaisEncontreiros" value="Inclui Casais"
+								<p:commandButton id="btnIncluiCasaisEncontreiros" value="Casais"
 												 icon="ui-icon-person" style="margin-left: 5px;"
 												 process="@this"
 												 onclick="PF('dlgNovosCasais').show()" update=":cadNovosCasais"
@@ -364,14 +364,14 @@
 				<p:panel id="panelDadosCasais" style="background-color: #ffffe6">
 					<h:inputHidden value="#{equipeEccBean.equipeEcc.id}" />
 					<p:panel id="basic"
-							 style="background-color:#EBF3FE; width:764px;"
+							 style="background-color:#EBF3FE; width:765px;"
 							 visible="true">
 						<p:outputLabel
 								value="ECC nº #{equipeEccBean.equipeEcc.ecc.numero} - Tema: #{equipeEccBean.equipeEcc.ecc.tema}"
 								styleClass="negrito" style="margin-left:5px;" />
 					</p:panel>
 					<p:panel id="basic1"
-							 style="background-color:#EBF3FE; width:764px;"
+							 style="background-color:#EBF3FE; width:765px;"
 							 visible="true">
 						<p:outputLabel
 								value="Equipe: #{equipeEccBean.equipeEcc.equipe.descricao} - Máximo de Casais: #{equipeEccBean.equipeEcc.equipe.maximoCasal}"
@@ -401,7 +401,7 @@
 										   itemLabel="#{casal.primeiraEtapa} - #{casal.nomeUsual}" />
 							<p:ajax event="change" update="fotoCasalEleEla" process="@this" listener="#{equipeEccBean.onChangeCasalCoordenador}"/>
 						</p:selectOneMenu>
-						<p:commandButton process="@this, casal" value="Incluir"
+						<p:commandButton process="@this, casal" value="Incluir" rendered="#{equipeEcc.ecc.situacao eq 'ANDAMENTO'}"
 										 style="margin-left:10px;"
 										 action="#{equipeEccBean.salvaCasal()}" icon="ui-icon-check"
 										 title="Incluir um novo casal..."
@@ -410,7 +410,7 @@
 					</h:panelGrid>
 					<h:panelGrid>
 						<p:panel id="informacao"
-								 style="background-color:#EBF3FE; width:764px;"
+								 style="background-color:#EBF3FE; width:763px;"
 								 visible="true">
 							<p:outputLabel
 									value="Membros da Equipe"
@@ -432,7 +432,7 @@
 								<h:graphicImage library="imagens" value="/image?imagem=#{casal.ficha.fotoEle}" rendered="#{casal.ficha.fotoEle.length() > 0}"
 												style="width:20px; height:20px; float: right;" title="Foto dele"/>
 							</p:column>
-							<p:column headerText="Excluir" styleClass="Gildasio" width="40">
+							<p:column headerText="Excluir" styleClass="Gildasio" width="40" rendered="#{equipeEccBean.equipeEcc.ecc.situacao eq 'ANDAMENTO'}">
 								<p:commandLink update=":cadNovosCasais:tabelaCasais, listagemEquipesEcc:equipesEcc"
 											   process="@this" action="#{equipeEccBean.removeCasal()}">
 									<h:graphicImage library="imagens" name="remover.png" />

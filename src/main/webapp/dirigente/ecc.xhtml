@@ -164,7 +164,7 @@
 												 oncomplete="PF('confirmacaoExclusao').show()" immediate="true"
 												 process="@this"
 												 update=":listagemEccs:confirmacaoExclusaoDialog"/>
-								<p:commandButton id="btnIncluiDirigentes" value="Inclui Dirigentes"
+								<p:commandButton id="btnIncluiDirigentes" value="Dirigentes"
 												 icon="ui-icon-person" style="margin-left: 5px;"
 												 process="@this"
 												 onclick="PF('dlgNovosDirigentes').show()" update=":cadNovosDirigentes"
@@ -386,7 +386,7 @@
 				<p:panel id="panelDadosDirigentes" style="background-color: #ffffe6">
 					<h:inputHidden value="#{eccBean.ecc.id}" />
 					<p:panel id="basic"
-							 style="background-color:#EBF3FE; width:764px;"
+							 style="background-color:#EBF3FE; width:766px;"
 							 visible="true">
 						<p:outputLabel
 								value="ECC nº #{eccBean.ecc.numero} - Tema: #{eccBean.ecc.tema}"
@@ -417,7 +417,7 @@
 										   var="equipe" itemValue="#{equipe}"
 										   itemLabel="#{equipe.descricao}" />
 						</p:selectOneMenu>
-						<p:commandButton process="@this, casal, equipe" value="Incluir"
+						<p:commandButton process="@this, casal, equipe" value="Incluir" rendered="#{eccBean.ecc.situacao eq 'ANDAMENTO'}"
 										 style="margin-left:10px;"
 										 action="#{eccBean.salvaDirigente()}" icon="ui-icon-check"
 										 title="Incluir um novo dirigente..."
@@ -426,7 +426,7 @@
 					</h:panelGrid>
 					<h:panelGrid>
 						<p:panel id="informacao"
-								 style="background-color:#EBF3FE; width:764px;"
+								 style="background-color:#EBF3FE; width:765px;"
 								 visible="true">
 							<p:outputLabel
 									value="Equipes (Dirigentes, Sala e Supervisor de Círculo)"
@@ -435,7 +435,7 @@
 					</h:panelGrid>
 					<h:panelGrid columns="3">
 						<p:dataTable id="tabelaDirigentes"
-									 style="margin-right: 10px; width:770px;"
+									 style="margin-right: 10px; width:771px;"
 									 value="#{eccBean.ecc.dirigentes}" var="dirigente"
 									 emptyMessage="Não há Dirigentes cadastrados" rowIndexVar="index">
 							<f:facet name="header">
@@ -458,7 +458,7 @@
 								<p:column headerText="Equipe" width="200">
 									<p:outputLabel value="#{dirigente.equipe.descricao}" />
 								</p:column>
-								<p:column headerText="Excluir" styleClass="Gildasio" width="40">
+								<p:column headerText="Excluir" styleClass="Gildasio" width="40" rendered="#{eccBean.ecc.situacao eq 'ANDAMENTO'}">
 									<p:commandLink update=":cadNovosDirigentes:tabelaDirigentes, listagemEccs:eccs"
 												   process="@this" action="#{eccBean.removeDirigente()}">
 										<h:graphicImage library="imagens" name="remover.png" />

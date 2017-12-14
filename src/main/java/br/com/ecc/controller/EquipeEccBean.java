@@ -216,7 +216,7 @@ public class EquipeEccBean implements Serializable {
 	private void desabilitaTodosBotoesEquipeEcc() {
 		habilitaBotaoEditarEquipeEcc = true;
 		habilitaBotaoExcluirEquipeEcc = true;
-		habilitaBotaoIncluiCasaisEncontreiros = true;
+		habilitaBotaoIncluiCasaisEncontreiros = false;
 	}
 
 	public void novaEquipe() {
