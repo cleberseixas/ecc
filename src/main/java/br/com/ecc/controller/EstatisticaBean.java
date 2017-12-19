@@ -24,6 +24,8 @@ public class EstatisticaBean implements Serializable {
 
 	private String equipeFiltro;
 
+	private String circuloFiltro;
+
 	private String aptidaoFiltro;
 
 	private String atividadeFiltro;
@@ -84,6 +86,14 @@ public class EstatisticaBean implements Serializable {
 
 	public void setEquipeFiltro(String equipeFiltro) {
 		this.equipeFiltro = equipeFiltro;
+	}
+
+	public String getCirculoFiltro() {
+		return circuloFiltro;
+	}
+
+	public void setCirculoFiltro(String circuloFiltro) {
+		this.circuloFiltro = circuloFiltro;
 	}
 
 	public String getAptidaoFiltro() {
@@ -282,6 +292,17 @@ public class EstatisticaBean implements Serializable {
 			}
 		}
 
+		if (null != circuloFiltro) {
+			if (!circuloFiltro.equals("")) {
+				for (CirculoEcc circuloEcc : listaDosCirculos) {
+					if (circuloEcc.getCirculo().getDescricao().equals(circuloFiltro)) {
+						aux.add(circuloEcc);
+					}
+				}
+				listaDosCirculos = aux;
+			}
+		}
+
 	}
 
 	public void filtraPorEquipes() {
@@ -310,7 +331,59 @@ public class EstatisticaBean implements Serializable {
 		}
 	}
 
-	public void imprimiEcc() {
+	public void imprimirAptidao() {
+		/*
+		try {
+			UIComponent link = event.getComponent();
+			UIParameter param_01 = (UIParameter) link.findComponent("dataInicial");
+			UIParameter param_02 = (UIParameter) link.findComponent("dataFinal");
+			Date dI = (Date) param_01.getValue();
+			Date dF = (Date) param_02.getValue();
+			estatisticaRN.imprimirProdutividade(dI, dF);
+		} catch (Exception ex) {
+			System.err.println("O arquivo não foi gerado corretamente!"+ex.getMessage());
+		}
+		 */
+	}
+
+	/**
+	 * Imprime a tabela de produtividade.
+	 * @param dI - Data inicial da pesquisa.
+	 * @param dF - Data final da pesquisa.
+	 * @throws Exception Possíveis erros durante o procedimento de impressão.
+	 */
+	/*
+	public void imprimirProdutividade(Date dI, Date dF) throws Exception  {
+		byte[] arquivo = new byte[0];
+		FacesContext facesContext = FacesContext.getCurrentInstance();
+		HttpServletResponse response = (HttpServletResponse) facesContext.getExternalContext().getResponse();
+		Connection conexao = ConnectionFactory.getConnection();
+
+		ServletContext ctx = (ServletContext) FacesContext.getCurrentInstance().getExternalContext().getContext();
+		File f = new File(ctx.getRealPath("/resources/imagens/NAT.png"));
+		BufferedImage img = ImageIO.read(f);
+
+		HashMap<String,Object> map = new HashMap<>();
+		map.put("IMG", img);
+		map.put("pDataInicial", dI);
+		map.put("pDataFinal", dF);
+
+		String caminho = facesContext.getExternalContext().getRealPath("relatorios");
+		caminho = caminho + File.separator + "printProdutividade.jasper";
+
+		JasperPrint print = JasperFillManager.fillReport(caminho, map, conexao);
+		arquivo = JasperExportManager.exportReportToPdf(print);
+		response.setContentType("application/pdf");
+		response.setContentLength(arquivo.length);
+		OutputStream saida = response.getOutputStream();
+		saida.write(arquivo, 0, arquivo.length);
+		saida.flush();
+		saida.close();
+		FacesContext.getCurrentInstance().responseComplete();
+	}
+	 */
+
+	public void imprimirEcc() {
 
 	}
 }

@@ -164,7 +164,7 @@
 												 oncomplete="PF('confirmacaoExclusao').show()" immediate="true"
 												 process="@this"
 												 update=":listagemCirculosEcc:confirmacaoExclusaoDialog"/>
-								<p:commandButton id="btnIncluiCasaisEncontristas" value="Inclui Casais"
+								<p:commandButton id="btnIncluiCasaisEncontristas" value="Casais"
 												 icon="ui-icon-person" style="margin-left: 5px;"
 												 process="@this"
 												 onclick="PF('dlgNovosCasais').show()" update=":cadNovosCasais"
@@ -414,7 +414,7 @@
 										   itemLabel="#{casal.nomeUsual}" />
 							<p:ajax event="change" update="fotoCasalEleEla" process="@this" listener="#{circuloEccBean.onChangeCasalCoordenador}"/>
 						</p:selectOneMenu>
-						<p:commandButton process="@this, casal" value="Incluir"
+						<p:commandButton process="@this, casal" value="Incluir" rendered="#{circuloEccBean.circuloEcc.ecc.situacao eq 'ANDAMENTO'}"
 										 style="margin-left:10px;"
 										 action="#{circuloEccBean.salvaCasal()}" icon="ui-icon-check"
 										 title="Incluir um novo casal..."
@@ -445,7 +445,7 @@
 								<h:graphicImage library="imagens" value="/image?imagem=#{casal.ficha.fotoEle}" rendered="#{casal.ficha.fotoEle.length() > 0}"
 												style="width:20px; height:20px; float: right;" title="Foto dele"/>
 							</p:column>
-							<p:column headerText="Excluir" styleClass="Gildasio" width="40">
+							<p:column headerText="Excluir" styleClass="Gildasio" width="40" rendered="#{circuloEccBean.circuloEcc.ecc.situacao eq 'ANDAMENTO'}">
 								<p:commandLink update=":cadNovosCasais:tabelaCasais, listagemCirculosEcc:circulosEcc"
 											   process="@this" action="#{circuloEccBean.removeCasal()}">
 									<h:graphicImage library="imagens" name="remover.png" />

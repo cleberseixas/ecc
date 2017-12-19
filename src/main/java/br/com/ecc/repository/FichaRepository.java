@@ -34,7 +34,7 @@ public class FichaRepository {
 	}
 
 	public List<Ficha> listar() {
-		TypedQuery<Ficha> query = manager.createQuery("from Ficha order by primeiraEtapa desc", Ficha.class);
+		TypedQuery<Ficha> query = manager.createQuery("from Ficha order by primeiraEtapa desc, nomeUsual", Ficha.class);
 		return query.getResultList();
 	}
 

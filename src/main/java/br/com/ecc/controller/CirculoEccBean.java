@@ -197,7 +197,7 @@ public class CirculoEccBean implements Serializable {
 	private void desabilitaTodosBotoesCirculoEcc() {
 		habilitaBotaoEditarCirculoEcc = true;
 		habilitaBotaoExcluirCirculoEcc = true;
-		habilitaBotaoIncluiCasaisEncontristas = true;
+		habilitaBotaoIncluiCasaisEncontristas = false;
 	}
 
 	public void novoCirculo() {

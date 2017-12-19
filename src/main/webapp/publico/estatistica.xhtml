@@ -335,11 +335,20 @@
 				<div id="divEstatisticaChefeInferiorEsquerda">
 					<!-- DIV ENCONTRISTAS/CÍRCULOS -->
 					<div id="divEstatisticaChefeInferiorEsquerda_01">
-						<div class="caixa caixa-verde" style="width: 524px;">
+						<div class="caixa caixa-verde" style="width: 522px;">
 							<h:outputLabel value="Encontristas/Círculos"
 										   styleClass="negrito" style="font-size:15px;" />
+							<p:selectOneMenu id="circulo" value="#{estatisticaBean.circuloFiltro}"
+											 style="width:130px;margin-left:40px;display: inline-table">
+								<f:selectItem itemLabel="TODOS"/>
+								<f:selectItems value="#{circuloEccBean.listaCirculo}"
+											   var="circulo" itemValue="#{circulo.descricao}"
+											   itemLabel="#{circulo.descricao}" />
+								<p:ajax listener="#{estatisticaBean.filtraPorEncontristasCirculos()}"
+										event="change" update="tabelaEncontristasCirculos" />
+							</p:selectOneMenu>
 							<p:selectOneMenu id="ecc1" value="#{estatisticaBean.eccFiltro}"
-											 style="width:105px;margin-left:196px;display: inline-table">
+											 style="width:80px;margin-left:24px;display: inline-table">
 								<f:selectItem itemLabel="TODOS"/>
 								<f:selectItems value="#{eccBean.listaEcc}"
 											   var="ecc" itemValue="#{ecc.numero}"
