@@ -137,7 +137,7 @@
 				<p:dataTable id="equipesEcc" value="#{equipeEccBean.listaEquipeEcc}" var="equipeEcc" rowIndexVar="index" selection="#{equipeEccBean.equipeEcc}"
 							 selectionMode="single" rowKey="#{equipeEcc.id}"
 							 emptyMessage="Não há Equipes cadastradas" style="width:1120px;"
-							 rows="14" paginator="true" paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+							 paginator="false" paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
 							 rowsPerPageTemplate="14,28,42,56,70" paginatorPosition="top"
 							 currentPageReportTemplate="Registro(s) {startRecord} a {endRecord} de um total de {totalRecords} - Página {currentPage} de {totalPages}">
 					<f:facet name="header">
@@ -401,7 +401,7 @@
 										   itemLabel="#{casal.primeiraEtapa} - #{casal.nomeUsual}" />
 							<p:ajax event="change" update="fotoCasalEleEla" process="@this" listener="#{equipeEccBean.onChangeCasalCoordenador}"/>
 						</p:selectOneMenu>
-						<p:commandButton process="@this, casal" value="Incluir" rendered="#{equipeEcc.ecc.situacao eq 'ANDAMENTO'}"
+						<p:commandButton process="@this, casal" value="Incluir" rendered="#{equipeEccBean.equipeEcc.ecc.situacao eq 'ANDAMENTO'}"
 										 style="margin-left:10px;"
 										 action="#{equipeEccBean.salvaCasal()}" icon="ui-icon-check"
 										 title="Incluir um novo casal..."
