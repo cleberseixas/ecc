@@ -8,9 +8,15 @@ import br.com.ecc.model.util.Atividade;
 import br.com.ecc.service.*;
 import br.com.ecc.util.Constantes;
 
+import javax.faces.component.UIParameter;
+import javax.faces.event.ActionEvent;
+
 import javax.enterprise.context.SessionScoped;
+import javax.faces.component.UIComponent;
+import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -53,6 +59,8 @@ public class EstatisticaBean implements Serializable {
 	private int numeroEncontristas;
 
 	private int numeroEncontreiros;
+
+	private String urlRelatorio;
 
 	@Inject
 	private EccService eccService;
@@ -208,6 +216,14 @@ public class EstatisticaBean implements Serializable {
 		this.numeroEncontreiros = numeroEncontreiros;
 	}
 
+	public String getUrlRelatorio() {
+		return urlRelatorio;
+	}
+
+	public void setUrlRelatorio(String urlRelatorio) {
+		this.urlRelatorio = urlRelatorio;
+	}
+
 	public void indicadoresIniciais() {
 		listaDosEccs = eccService.listar();
 		listaDosEccsAuxiliar = listaDosEccs;
@@ -331,21 +347,6 @@ public class EstatisticaBean implements Serializable {
 		}
 	}
 
-	public void imprimirAptidao() {
-		/*
-		try {
-			UIComponent link = event.getComponent();
-			UIParameter param_01 = (UIParameter) link.findComponent("dataInicial");
-			UIParameter param_02 = (UIParameter) link.findComponent("dataFinal");
-			Date dI = (Date) param_01.getValue();
-			Date dF = (Date) param_02.getValue();
-			estatisticaRN.imprimirProdutividade(dI, dF);
-		} catch (Exception ex) {
-			System.err.println("O arquivo não foi gerado corretamente!"+ex.getMessage());
-		}
-		 */
-	}
-
 	/**
 	 * Imprime a tabela de produtividade.
 	 * @param dI - Data inicial da pesquisa.
@@ -386,4 +387,38 @@ public class EstatisticaBean implements Serializable {
 	public void imprimirEcc() {
 
 	}
+
+	public void imprimirCasalPorAptidao(ActionEvent event) throws IOException {
+		try {
+			UIComponent link = event.getComponent();
+			UIParameter param_01 = (UIParameter) link.findComponent("ID_APTIDAO");
+
+			int aptidao = (int) param_01.getValue();
+
+			urlRelatorio = Constantes.URL_BIRT+"/rptAptidoes.rptdesign&aptidao="+aptidao;
+
+			//urlRelatorio = "http://10.20.12.173:8090/ecc/relatorios/100.pdf";
+
+			//FacesContext.getCurrentInstance().getExternalContext().redirect(urlRelatorio);
+		} catch (Exception ex) {
+			System.err.println("O arquivo não foi gerado corretamente!");
+		}
+
+
+	}
+
+	/*
+	public void imprimirPareceresConcluidosCidade(ActionEvent event) {
+		try {
+			UIComponent link = event.getComponent();
+			UIParameter param_01 = (UIParameter) link.findComponent("DI_Cidade");
+			UIParameter param_02 = (UIParameter) link.findComponent("DF_Cidade");
+			Date dI = (Date) param_01.getValue();
+			Date dF = (Date) param_02.getValue();
+			estatisticaRN.imprimirPareceresConcluidosCidade(dI, dF);
+		} catch (Exception ex) {
+			System.err.println("O arquivo não foi gerado corretamente!");
+		}
+	}
+	 */
 }

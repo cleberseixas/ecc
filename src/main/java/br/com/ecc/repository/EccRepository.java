@@ -35,8 +35,19 @@ public class EccRepository {
 		return query.getResultList();
 	}
 
+	public List<Ecc> listarUltimoEcc() {
+		TypedQuery<Ecc> query = manager.createQuery("from Ecc where ativo=true order by numero desc", Ecc.class).setMaxResults(1);
+		return query.getResultList();
+	}
+
 	public List<Ecc> listarEccAtivoEncerradoNao() {
 		TypedQuery<Ecc> query = manager.createQuery("from Ecc where ativo=true and situacao='ANDAMENTO' order by numero desc", Ecc.class);
+		return query.getResultList();
+	}
+
+	private List<Ecc> listaEccPorFiltroEncerradoAndamento(String situacao) {
+		TypedQuery<Ecc> query = manager.createQuery("from Ecc where ativo=true and situacao=:SITUACAO order by numero desc", Ecc.class);
+		query.setParameter("SITUACAO", situacao);
 		return query.getResultList();
 	}
 
@@ -58,6 +69,29 @@ public class EccRepository {
 		query.setParameter("USUARIO", usuario);
 		query.executeUpdate();
 		manager.getTransaction().commit();
+	}
+
+	/**
+	 * Método utilizado para filtrar os ECCs
+	 * Por padrão tras todas as ECCs que não estão encerrados, com situação ANDAMENTO
+	 * @param ecc - Define qual ECC (31º, 30º, 29° ou TODOS).
+	 * @param statusEcc - Define qual o Status do ECC (ANDAMENTO, ENCERRADO, TODOS), por padrão trás os em ANDAMENTO.
+	 * @return List com os ECCs.
+	 */
+	public List<Ecc> filtraEccPorEccStatus(Long ecc, String statusEcc) {
+		TypedQuery<Ecc> query = null;
+		if (ecc > 0) {
+			query = manager.createQuery("from Ecc where id =:ID", Ecc.class);
+			query.setParameter("ID", ecc);
+			return query.getResultList();
+		} else {
+			if (statusEcc.equals("TODOS")) {
+				return listar();
+			}
+			else {
+				return listaEccPorFiltroEncerradoAndamento(statusEcc);
+			}
+		}
 	}
 
 }

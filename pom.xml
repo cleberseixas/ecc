@@ -79,6 +79,12 @@
             <version>4.3.11.Final</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.primefaces.extensions/primefaces-extensions -->
+        <dependency>
+            <groupId>org.primefaces.extensions</groupId>
+            <artifactId>primefaces-extensions</artifactId>
+            <version>3.1.0</version>
+        </dependency>
 
         <dependency>
             <groupId>postgresql</groupId>

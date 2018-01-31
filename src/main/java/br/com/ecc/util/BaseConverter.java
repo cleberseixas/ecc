@@ -27,7 +27,8 @@ public abstract class BaseConverter<T1, T2 > implements Converter {
 	public Object getAsObject(FacesContext context, UIComponent component, String value) {
 		T1 retorno = null;
 		
-		if (null != value &&  value.trim().length() > 0 && !value.equals("Selecione")) {
+		if (null != value &&  value.trim().length() > 0 && !value.contains("Selecione")) {
+			//if (null != value &&  value.trim().length() > 0 && !value.equals("Selecione")) {
 			try {
 				Method	m = objRep.getClass().getMethod("carregar", new Class[]{Long.class});
 				retorno = (T1) m.invoke(objRep, new Long(value));

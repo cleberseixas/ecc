@@ -102,6 +102,16 @@ public class EccService implements Serializable {
 		}
 	}
 
+	public List<Ecc> listarUltimoEcc(){
+		try {
+			return eccRepository.listarUltimoEcc();
+		} catch(NegocioException e){
+			FacesMessages.error(e.getMessage());
+			return null;
+		}
+	}
+
+
 	public List<Ecc> listarEccAtivoEncerradoNao(){
 		try {
 			return eccRepository.listarEccAtivoEncerradoNao();
@@ -124,6 +134,13 @@ public class EccService implements Serializable {
 		eccRepository.atualizaSituacaoEcc(ecc, usuario);
 	}
 
-
+	public List<Ecc> filtraEccPorEccStatus(Long ecc, String statusEcc) {
+		try {
+			return eccRepository.filtraEccPorEccStatus(ecc, statusEcc);
+		} catch(NegocioException e){
+			FacesMessages.error(e.getMessage());
+			return null;
+		}
+	}
 
 }

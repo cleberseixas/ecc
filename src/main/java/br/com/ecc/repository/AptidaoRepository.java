@@ -57,8 +57,8 @@ public class AptidaoRepository {
 	public List<br.com.ecc.model.util.Aptidao> totalPorAptidao() {
 		String sql = "";
 		Query query = null;
-		sql = "select eq.descricao, count(ap.*) from aptidoes ap "
-			+ " inner join equipes eq on eq.equipe = ap.equipe group by 1 order by 1";
+		sql = "select eq.equipe, eq.descricao, count(ap.*) from aptidoes ap "
+			+ " inner join equipes eq on eq.equipe = ap.equipe group by 1,2 order by 2";
 		query = manager.createNativeQuery(sql);
 		List lst = query.getResultList();
 		Iterator iter = lst.iterator();
@@ -67,8 +67,9 @@ public class AptidaoRepository {
 		while (iter.hasNext()) {
 			aptidao = new br.com.ecc.model.util.Aptidao();
 			Object[] obj = (Object[])iter.next();
-			aptidao.setAptidao(obj[0].toString());
-			aptidao.setQuantidade(Integer.valueOf(obj[1].toString()));
+			aptidao.setIdAptidao(Integer.valueOf(obj[0].toString()));
+			aptidao.setAptidao(obj[1].toString());
+			aptidao.setQuantidade(Integer.valueOf(obj[2].toString()));
 			lista.add(aptidao);
 		}
 		return lista;

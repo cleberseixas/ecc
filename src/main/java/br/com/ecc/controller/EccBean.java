@@ -33,6 +33,8 @@ public class EccBean implements Serializable {
 
 	private List<Ecc> listaEcc;
 
+	private List<Ecc> listaUltimoEcc;
+
 	private List<Equipe> listaEquipe;
 
 	private List<Ecc> listaEccAtividades;
@@ -49,6 +51,9 @@ public class EccBean implements Serializable {
 
 	private boolean habilitaBotaoEncerrarEcc = true;
 
+	private Ecc idEcc;
+
+	private String statusEcc = "ANDAMENTO";
 
 	@Inject
 	private EccService eccService;
@@ -85,11 +90,21 @@ public class EccBean implements Serializable {
 		this.listaEcc = listaEcc;
 	}
 
+	public void setListaUltimoEcc(List<Ecc> listaUltimoEcc) {
+		this.listaUltimoEcc = listaUltimoEcc;
+	}
+
 	public List<Ecc> getListaEcc() {
 		if (this.listaEcc == null) {
 			this.listaEcc = eccService.listar();
 		}
 		return this.listaEcc;
+	}
+	public List<Ecc> getListaUltimoEcc() {
+		if (this.listaUltimoEcc == null) {
+			this.listaUltimoEcc = eccService.listarUltimoEcc();
+		}
+		return this.listaUltimoEcc;
 	}
 
 	public List<Equipe> getListaEquipe() {
@@ -195,6 +210,22 @@ public class EccBean implements Serializable {
 		this.habilitaBotaoEncerrarEcc = habilitaBotaoEncerrarEcc;
 	}
 
+	public Ecc getIdEcc() {
+		return idEcc;
+	}
+
+	public void setIdEcc(Ecc idEcc) {
+		this.idEcc = idEcc;
+	}
+
+	public String getStatusEcc() {
+		return statusEcc;
+	}
+
+	public void setStatusEcc(String statusEcc) {
+		this.statusEcc = statusEcc;
+	}
+
 	private void novoDirigente() {
 		this.casal = new Ficha();
 		this.equipe = new Equipe();
@@ -270,7 +301,7 @@ public class EccBean implements Serializable {
 	//Incluir as regras para salvar o Ecc (Equipes)
 	public void salvarEcc() {
 		eccService.salvar(ecc);
-		this.listaEcc = eccService.listar();
+		this.listaUltimoEcc = eccService.listarUltimoEcc();
 		this.ecc = new Ecc();
 		desabilitaTodosBotoesEcc();
 	}
@@ -319,7 +350,7 @@ public class EccBean implements Serializable {
 		try {
 			eccService.excluir(ecc);
 			FacesMessages.info("ECC excluído");
-			this.listaEcc = eccService.listar();
+			this.listaUltimoEcc = eccService.listarUltimoEcc();
 			desabilitaTodosBotoesEcc();
 		} catch (Exception e) {
 			FacesMessages.error(e.getMessage());
@@ -338,7 +369,7 @@ public class EccBean implements Serializable {
 			//eccService.atualizaSituacaoEcc(ecc.getId(), "cleber");
 			eccService.encerrar(ecc);
 			//FacesMessages.info("ECC encerrado com sucesso");
-			this.listaEcc = eccService.listar();
+			this.listaUltimoEcc = eccService.listarUltimoEcc();
 			desabilitaTodosBotoesEcc();
 		} catch (Exception e) {
 			FacesMessages.error(e.getMessage());
@@ -433,5 +464,15 @@ public class EccBean implements Serializable {
 
 	public void removeDirigentesLimbo() {
 		dirigenteEccService.removeDirigenteLimbo();
+	}
+
+	public void filtraEcc() {
+
+		if (null != idEcc) {
+			listaUltimoEcc = eccService.filtraEccPorEccStatus(idEcc.getId(), statusEcc);
+		} else {
+			listaUltimoEcc = eccService.filtraEccPorEccStatus(0L, statusEcc);
+		}
+
 	}
 }

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:p="http://primefaces.org/ui"
-	xmlns:c="http://java.sun.com/jsp/jstl/core">
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:p="http://primefaces.org/ui"
+	  xmlns:c="http://java.sun.com/jsp/jstl/core"
+	  xmlns:pe="http://primefaces.org/ui/extensions">
 
 <h:head>
 	<title>ECC-SLG</title>
@@ -245,14 +246,15 @@
 								<f:selectItem itemLabel="TODAS"/>
 								<f:selectItems value="#{equipeBean.lista}"
 											   var="aptidao" itemValue="#{aptidao.descricao}"
-											   itemLabel="#{aptidao.descricao}" />
+											   itemLabel="#{aptidao.descricao}">
+								</f:selectItems>
 								<p:ajax listener="#{estatisticaBean.filtraPorAptidao()}"
-										event="change" update="tabelaAptidoes" />
+										event="change" update="tabelaAptidoes btnImprimirAptidao"/>
 							</p:selectOneMenu>
-							<p:commandLink actionListener="#{estatisticaBean.imprimirEcc}"
-										   target="_blank" ajax="false" immediate="true">
-								<p:button icon="ui-icon-print" style="margin-left: 5px;" />
-							</p:commandLink>
+							<p:commandButton id="btnImprimirAptidao" actionListener="#{estatisticaBean.imprimirCasalPorAptidao}"
+										   oncomplete="PF('exibiPDF').show()" icon="ui-icon-print" style="margin-left: 5px;"
+										   ajax="true" update="fileUpload">
+							</p:commandButton>
 						</div>
 					</div>
 					<div id="divBoxAptidao">
@@ -269,13 +271,17 @@
 								<c:forEach items="#{estatisticaBean.listaDasAptidoes}"
 										   var="result" varStatus="count">
 									<div id="divLista_02">
-										<p:commandLink actionListener="#{estatisticaBean.imprimirEcc}"
-													   target="_blank" ajax="false" immediate="true">
-											<p:outputLabel value="#{result.aptidao}" styleClass="negrito" />
-										</p:commandLink>
+											<p:outputLabel value="#{result.aptidao}" styleClass="negrito"/>
 									</div>
 									<div id="divLista_03">
 										<p:outputLabel value="#{result.quantidade}" />
+									</div>
+									<div id="divLista_03">
+									<p:commandLink actionListener="#{estatisticaBean.imprimirCasalPorAptidao}" rendered="false"
+												   target="_blank" ajax="false" immediate="true">
+										<p:button icon="ui-icon-print" style="margin-left: 5px;" />
+										<f:param id="ID_APTIDAO" value="#{result.idAptidao}"/>
+									</p:commandLink>
 									</div>
 									<div id="limpa" />
 									<hr	style="border: 1px; border-top: 1px solid #ccc; margin-left: 10px; width: 94%" />
@@ -494,6 +500,11 @@
 				<h:graphicImage library="imagens" name="barra.gif" />
 			</div>
 		</div>
+	</p:dialog>
+	<p:dialog widgetVar="exibiPDF" modal="true" draggable="false"
+			  closable="true" resizable="false" showHeader="true" width="1200px" height="620">
+		<pe:documentViewer id = "fileUpload"
+				height="600" url="${estatisticaBean.urlRelatorio}"/>
 	</p:dialog>
 </h:body>
 </html>
