@@ -36,7 +36,7 @@ public class EccRepository {
 	}
 
 	public List<Ecc> listarUltimoEcc() {
-		TypedQuery<Ecc> query = manager.createQuery("from Ecc where ativo=true order by numero desc", Ecc.class).setMaxResults(1);
+		TypedQuery<Ecc> query = manager.createQuery("from Ecc where ativo=true and situacao='ENCERRADO' order by numero desc", Ecc.class).setMaxResults(1);
 		return query.getResultList();
 	}
 

@@ -43,7 +43,7 @@ public class EquipeEcc implements Serializable{
     @NotNull(message="Selecione o Casal Coordenador")
     private Ficha casalCoordenador;
 
-    @ManyToMany(fetch= FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToMany(fetch= FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(name = "EQUIPES_ECCS_CASAIS_CASAIS",
             joinColumns = @JoinColumn(name = "EQUIPE_ECC"),
             inverseJoinColumns = @JoinColumn(name = "EQUIPE_ECC_CASAL"))

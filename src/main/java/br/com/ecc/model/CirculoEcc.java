@@ -42,7 +42,7 @@ public class CirculoEcc implements Serializable{
     @NotNull(message="Selecione o Casal Coordenador")
     private Ficha casalCoordenador;
 
-    @ManyToMany(fetch= FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToMany(fetch= FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(name = "CIRCULOS_ECCS_ENCONTRISTAS_ENCONTRISTAS",
             joinColumns = @JoinColumn(name = "CIRCULO_ECC"),
             inverseJoinColumns = @JoinColumn(name = "CIRCULO_ECC_ENCONTRISTA"))

@@ -7,6 +7,7 @@ import br.com.ecc.model.util.Aptidao;
 import br.com.ecc.model.util.Atividade;
 import br.com.ecc.service.*;
 import br.com.ecc.util.Constantes;
+import org.omnifaces.util.Faces;
 
 import javax.faces.component.UIParameter;
 import javax.faces.event.ActionEvent;
@@ -14,6 +15,7 @@ import javax.faces.event.ActionEvent;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
+import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.IOException;
@@ -22,7 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Named
-@SessionScoped
+@ViewScoped
 public class EstatisticaBean implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -224,7 +226,29 @@ public class EstatisticaBean implements Serializable {
 		this.urlRelatorio = urlRelatorio;
 	}
 
+	public void setarURLBirtNosRelatorios() {
+
+		String urlAplicacao = Faces.getRequest().getRequestURL().toString();
+		System.out.println("C A M I N H O  D A  A P L I C A Ç Ã O : "+urlAplicacao);
+
+		if (urlAplicacao.contains("179.155.225.37")) {
+			urlRelatorio = Constantes.URL_BIRT_SERVER;
+		} else {
+			urlRelatorio = Constantes.URL_BIRT_LOCAL;
+		}
+		System.out.println("URL DO RELATÓRIO : "+urlRelatorio);
+	}
+
+	public String filtraUltimoEcc() {
+		List<Ecc> lista = eccService.listarUltimoEcc();
+		return lista.get(0).getNumero();
+	}
+
 	public void indicadoresIniciais() {
+		setarURLBirtNosRelatorios();
+
+
+
 		listaDosEccs = eccService.listar();
 		listaDosEccsAuxiliar = listaDosEccs;
 
@@ -242,6 +266,12 @@ public class EstatisticaBean implements Serializable {
 
 		listaDasEquipes = equipeEccService.listar();
 		listaDasEquipesAuxiliar = listaDasEquipes;
+
+		this.eccFiltro= filtraUltimoEcc();
+		filtraPorEquipes();
+		filtraPorEncontristasCirculos();
+
+
 	}
 
 	public void filtraPorEcc() {
@@ -310,6 +340,7 @@ public class EstatisticaBean implements Serializable {
 
 		if (null != circuloFiltro) {
 			if (!circuloFiltro.equals("")) {
+				aux = new ArrayList<CirculoEcc>();
 				for (CirculoEcc circuloEcc : listaDosCirculos) {
 					if (circuloEcc.getCirculo().getDescricao().equals(circuloFiltro)) {
 						aux.add(circuloEcc);
@@ -337,6 +368,7 @@ public class EstatisticaBean implements Serializable {
 
 		if (null != equipeFiltro) {
 			if (!equipeFiltro.equals("")) {
+				aux = new ArrayList<EquipeEcc>();
 				for (EquipeEcc equipeEcc : listaDasEquipes) {
 					if (equipeEcc.getEquipe().getDescricao().equals(equipeFiltro)) {
 						aux.add(equipeEcc);
@@ -395,9 +427,11 @@ public class EstatisticaBean implements Serializable {
 
 			int aptidao = (int) param_01.getValue();
 
-			urlRelatorio = Constantes.URL_BIRT+"/rptAptidoes.rptdesign&aptidao="+aptidao;
+			//urlRelatorio = Constantes.URL_BIRT_LOCAL+"/rptAptidoes.rptdesign&aptidao="+aptidao;
 
-			//urlRelatorio = "http://10.20.12.173:8090/ecc/relatorios/100.pdf";
+
+			urlRelatorio += "/rptAptidoes.rptdesign&aptidao="+aptidao;
+
 
 			//FacesContext.getCurrentInstance().getExternalContext().redirect(urlRelatorio);
 		} catch (Exception ex) {
