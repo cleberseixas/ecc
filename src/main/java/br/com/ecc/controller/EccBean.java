@@ -53,7 +53,7 @@ public class EccBean implements Serializable {
 
 	private Ecc idEcc;
 
-	private String statusEcc = "ANDAMENTO";
+	private String statusEcc = "ENCERRADO";
 
 	@Inject
 	private EccService eccService;
@@ -473,6 +473,5 @@ public class EccBean implements Serializable {
 		} else {
 			listaUltimoEcc = eccService.filtraEccPorEccStatus(0L, statusEcc);
 		}
-
 	}
 }

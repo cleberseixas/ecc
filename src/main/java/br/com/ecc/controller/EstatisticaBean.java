@@ -249,7 +249,7 @@ public class EstatisticaBean implements Serializable {
 
 
 
-		listaDosEccs = eccService.listar();
+		listaDosEccs = eccService.listaEccPorFiltroEncerradoAndamento("ENCERRADO");
 		listaDosEccsAuxiliar = listaDosEccs;
 
 		numeroEncontreiros = fichaService.listarEncontreiroEncontrista(Constantes.ENCONTREIRO).size();

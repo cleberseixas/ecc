@@ -1,6 +1,5 @@
 package br.com.ecc.service;
 
-import br.com.ecc.model.Equipe;
 import br.com.ecc.model.EquipeEcc;
 import br.com.ecc.repository.EquipeEccRepository;
 import br.com.ecc.util.FacesMessages;
@@ -81,6 +80,15 @@ public class EquipeEccService implements Serializable {
 		}
 	}
 
+	public List<EquipeEcc> listarUltimaEquipeEcc(){
+		try {
+			return equipeEccRepository.listarUltimaEquipeEcc();
+		} catch(NegocioException e){
+			FacesMessages.error(e.getMessage());
+			return null;
+		}
+	}
+
 	public boolean equipeJaExisteEcc(Long ecc, Long equipe) {
 		try {
 			return equipeEccRepository.equipeJaExisteEcc(ecc, equipe);
@@ -107,4 +115,14 @@ public class EquipeEccService implements Serializable {
 			return null;
 		}
 	}
+
+	public List<EquipeEcc> filtraEquipePorEccStatus(Long ecc, String statusEcc) {
+		try {
+			return equipeEccRepository.filtraEquipePorEccStatus(ecc, statusEcc);
+		} catch(NegocioException e){
+			FacesMessages.error(e.getMessage());
+			return null;
+		}
+	}
+
 }

@@ -48,6 +48,12 @@ public class EquipeEccBean implements Serializable {
 
 	private boolean habilitaBotaoIncluiCasaisEncontreiros = true;
 
+	private Ecc idEcc;
+
+	private List<EquipeEcc> listaUltimaEquipeEcc;
+
+	private String statusEcc = "ENCERRADO";
+
 	@Inject
 	private EquipeEccService equipeEccService;
 
@@ -173,6 +179,33 @@ public class EquipeEccBean implements Serializable {
 
 	public void setHabilitaBotaoIncluiCasaisEncontreiros(boolean habilitaBotaoIncluiCasaisEncontreiros) {
 		this.habilitaBotaoIncluiCasaisEncontreiros = habilitaBotaoIncluiCasaisEncontreiros;
+	}
+
+	public Ecc getIdEcc() {
+		return idEcc;
+	}
+
+	public void setIdEcc(Ecc idEcc) {
+		this.idEcc = idEcc;
+	}
+
+	public List<EquipeEcc> getListaUltimaEquipeEcc() {
+		if (this.listaUltimaEquipeEcc == null) {
+			this.listaUltimaEquipeEcc = equipeEccService.listarUltimaEquipeEcc();
+		}
+		return this.listaUltimaEquipeEcc;
+	}
+
+	public void setListaUltimaEquipeEcc(List<EquipeEcc> listaUltimaEquipeEcc) {
+		this.listaUltimaEquipeEcc = listaUltimaEquipeEcc;
+	}
+
+	public String getStatusEcc() {
+		return statusEcc;
+	}
+
+	public void setStatusEcc(String statusEcc) {
+		this.statusEcc = statusEcc;
 	}
 
 	public EquipeService getEquipeService() {
@@ -329,7 +362,8 @@ public class EquipeEccBean implements Serializable {
 								equipeEcc.setCasalCoordenador(casalCoordenador);
 
 								equipeEccService.salvar(equipeEcc);
-								this.listaEquipeEcc = equipeEccService.listar();
+								//this.listaEquipeEcc = equipeEccService.listar();
+								this.listaUltimaEquipeEcc = equipeEccService.listarUltimaEquipeEcc();
 								novaEquipe();
 								desabilitaTodosBotoesEquipeEcc();
 								}
@@ -367,7 +401,8 @@ public class EquipeEccBean implements Serializable {
 		try {
 			equipeEccService.excluir(equipeEcc);
 			FacesMessages.info("Equipe excluída");
-			this.listaEquipeEcc = equipeEccService.listar();
+			//this.listaEquipeEcc = equipeEccService.listar();
+			this.listaUltimaEquipeEcc = equipeEccService.listarUltimaEquipeEcc();
 			desabilitaTodosBotoesEquipeEcc();
 			removeCasaisLimbo();
 		} catch (Exception e) {
@@ -388,5 +423,14 @@ public class EquipeEccBean implements Serializable {
 	public void onChangeCasalCoordenador(AjaxBehaviorEvent event) {
 //		this.casalCoordenador = (Ficha) event.getSource();
 		System.out.println("Photo :"+this.casalCoordenador.getFotoEle());
+	}
+
+	public void filtraEquipecc() {
+
+		if (null != idEcc) {
+			listaUltimaEquipeEcc = equipeEccService.filtraEquipePorEccStatus(idEcc.getId(), statusEcc);
+		} else {
+			listaUltimaEquipeEcc = equipeEccService.filtraEquipePorEccStatus(0L, statusEcc);
+		}
 	}
 }

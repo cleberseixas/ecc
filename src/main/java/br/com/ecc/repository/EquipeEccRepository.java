@@ -1,10 +1,12 @@
 package br.com.ecc.repository;
 
 import br.com.ecc.model.EquipeEcc;
+import br.com.ecc.util.Util;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
+import java.util.Date;
 import java.util.List;
 
 public class EquipeEccRepository {
@@ -30,6 +32,13 @@ public class EquipeEccRepository {
 
 	public List<EquipeEcc> listar() {
 		TypedQuery<EquipeEcc> query = manager.createQuery("from EquipeEcc order by ecc.numero desc, equipe.descricao ", EquipeEcc.class);
+		return query.getResultList();
+	}
+
+	public List<EquipeEcc> listarUltimaEquipeEcc() {
+		TypedQuery<EquipeEcc> query = manager.createQuery("from EquipeEcc ec where ec.ecc.id in (select ee.id from Ecc ee where extract(year from ee.dataFim) = :ANO_ANTERIOR)", EquipeEcc.class);
+		query.setParameter("ANO_ANTERIOR", Util.getAno(new Date()) - 1);
+		//TypedQuery<EquipeEcc> query = manager.createQuery("from EquipeEcc ee where ee.ecc.id in (select e.id from Ecc e where date_trunc('Year', e.dataFim) = '2017-01-01')", EquipeEcc.class);
 		return query.getResultList();
 	}
 
@@ -76,6 +85,36 @@ public class EquipeEccRepository {
 		TypedQuery<EquipeEcc> query = manager.createQuery("from EquipeEcc where ecc.id =:ECC", EquipeEcc.class);
 		query.setParameter("ECC", ecc);
 		return query.getResultList();
+	}
+
+	public List<EquipeEcc> listaEccPorFiltroEncerradoAndamento(String situacao) {
+		TypedQuery<EquipeEcc> query = manager.createQuery("from EquipeEcc ec where ec.ecc.id in (select ee.id from Ecc ee where ee.ativo=true and ee.situacao=:SITUACAO) order by ec.ecc.numero desc)", EquipeEcc.class);
+		//TypedQuery<EquipeEcc> query = manager.createQuery("from EquipeEcc ec where ec.ecc.id in (select ee.id from Ecc ee where extract(year from e.dataFim) = :ANO_ANTERIOR)", EquipeEcc.class);
+		query.setParameter("SITUACAO", situacao);
+		return query.getResultList();
+	}
+
+	/**
+	 * Método utilizado para filtrar as Equipes por ECCs
+	 * Por padrão tras todas as EQUIPES do Ultimo ECC ENCERRADO, último ANO
+	 * @param ecc - Define qual ECC (31º, 30º, 29° ou TODOS).
+	 * @param statusEcc - Define qual o Status do ECC (ANDAMENTO, ENCERRADO, TODOS), por padrão trás os em ANDAMENTO.
+	 * @return List com as EQUIPES.
+	 */
+	public List<EquipeEcc> filtraEquipePorEccStatus(Long ecc, String statusEcc) {
+		TypedQuery<EquipeEcc> query = null;
+		if (ecc > 0) {
+			query = manager.createQuery("from EquipeEcc where ecc.id =:ID", EquipeEcc.class);
+			query.setParameter("ID", ecc);
+			return query.getResultList();
+		} else {
+			if (statusEcc.equals("TODOS")) {
+				return listar();
+			}
+			else {
+				return listaEccPorFiltroEncerradoAndamento(statusEcc);
+			}
+		}
 	}
 
 }

@@ -7,201 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4f27b79-4439-4b09-81a0-92c5d0903466" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/main.iml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__bouncycastle_bctsp_jdk14_138.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/SLG.ico" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/SLG.ico" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/alterar.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/alterar.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/aptidao.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/aptidao.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/ausenciaJustificada.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/ausenciaJustificada.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/automaticafalse.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/automaticafalse.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/automaticatrue.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/automaticatrue.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/barra.gif" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/barra.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/blue.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/blue.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/cadeado.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/cadeado.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/casais.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/casais.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/casais1.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/casais1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/coordenador.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/coordenador.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/dirigente.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/dirigente.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/dirigentes.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/dirigentes.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/dirigentes1.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/dirigentes1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/dirigentes2.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/dirigentes2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/download.jpg" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/download.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/encontreiro.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/encontreiro.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/encontrista.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/encontrista.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/false.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/false.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/green.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/green.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/homem.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/homem.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/igreja.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/igreja.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/inativo.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/inativo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/logoDirigenteMenor.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/logoDirigenteMenor.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/logoECC.jpg" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/logoECC.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/logo_ECC.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/logo_ECC.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/cadastros.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/cadastros.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/circulos.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/circulos.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/ecc.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/ecc.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/equipes.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/equipes.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/estatisticas.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/estatisticas.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/fichas.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/fichas.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/logo_ECCMenu.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/logo_ECCMenu.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/montagem.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/montagem.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/montagemCasais.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/montagemCasais.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/montagemCirculos.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/montagemCirculos.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/montagemEquipes.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/montagemEquipes.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/montagemPalestrantes.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/montagemPalestrantes.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/palestras.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/palestras.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/usuarioLogado.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/usuarioLogado.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/usuarios.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/menu/usuarios.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/mulher.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/mulher.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/orange.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/orange.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/pendente.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/pendente.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/photo.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/photo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/picture.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/picture.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/pink.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/pink.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/red.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/red.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/remover.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/remover.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/true.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/true.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/imagens/yellow.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/imagens/yellow.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/login/ajuda.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/login/ajuda.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/ecc_war.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/ecc_war.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/ecc_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/ecc_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecc.iml" afterPath="$PROJECT_DIR$/ecc.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/CirculoBean.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/CirculoBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/CirculoEccBean.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/CirculoEccBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/ContextoBean.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/ContextoBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EccBean.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EccBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EncontristaEccBean.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EncontristaEccBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EquipeBean.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EquipeBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EquipeEccBean.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EquipeEccBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EstatisticaBean.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EstatisticaBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/FichaBean.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/FichaBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/PalestraBean.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/PalestraBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/PalestranteBean.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/PalestranteBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/RedistribuicaoBean.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/RedistribuicaoBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/converter/CirculoConverter.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/converter/CirculoConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/converter/CirculoEccConverter.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/converter/CirculoEccConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/converter/EccConverter.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/converter/EccConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/converter/EncontristaEccConverter.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/converter/EncontristaEccConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/converter/EquipeConverter.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/converter/EquipeConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/converter/EquipeEccConverter.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/converter/EquipeEccConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/converter/FichaConverter.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/converter/FichaConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/converter/PalestraConverter.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/converter/PalestraConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/converter/PalestranteConverter.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/converter/PalestranteConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/converter/UsuarioConverter.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/converter/UsuarioConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Aptidao.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Aptidao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Atividade.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Atividade.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Circulo.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Circulo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/CirculoEcc.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/CirculoEcc.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/CirculoEccCasal.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/CirculoEccCasal.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/DirigenteEcc.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/DirigenteEcc.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ecc.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ecc.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/EncontristaEcc.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/EncontristaEcc.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/EncontristaEccCasal.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/EncontristaEccCasal.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Equipe.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Equipe.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/EquipeEcc.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/EquipeEcc.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/EquipeEccCasal.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/EquipeEccCasal.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ficha.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ficha.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Palestra.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Palestra.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Palestrante.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Palestrante.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Usuario.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Usuario.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/util/Aptidao.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/util/Aptidao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/util/Atividade.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/util/Atividade.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/AptidaoRepository.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/AptidaoRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/AtividadeRepository.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/AtividadeRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/CirculoEccCasalRepository.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/CirculoEccCasalRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/CirculoEccRepository.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/CirculoEccRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/CirculoRepository.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/CirculoRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/DirigenteEccRepository.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/DirigenteEccRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EccRepository.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EccRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EncontristaEccCasalRepository.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EncontristaEccCasalRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EncontristaEccRepository.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EncontristaEccRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EquipeEccCasalRepository.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EquipeEccCasalRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EquipeEccRepository.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EquipeEccRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EquipeRepository.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EquipeRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/FichaRepository.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/FichaRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/PalestraRepository.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/PalestraRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/PalestranteRepository.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/PalestranteRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/UsuarioRepository.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/UsuarioRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/AptidaoService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/AptidaoService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/AtividadeService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/AtividadeService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/CirculoEccCasalService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/CirculoEccCasalService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/CirculoEccService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/CirculoEccService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/CirculoService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/CirculoService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/DirigenteEccService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/DirigenteEccService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/EccService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/EccService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/EncontristaEccCasalService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/EncontristaEccCasalService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/EncontristaEccService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/EncontristaEccService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/EquipeEccCasalService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/EquipeEccCasalService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/EquipeEccService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/EquipeEccService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/EquipeService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/EquipeService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/FichaService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/FichaService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/PalestraService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/PalestraService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/PalestranteService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/PalestranteService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/UsuarioService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/service/UsuarioService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/servlet/exibeFoto.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/servlet/exibeFoto.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/BaseConverter.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/BaseConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/CDILocator.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/CDILocator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/ConnectionFactory.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/ConnectionFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/Constantes.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/Constantes.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/ContextoUtil.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/ContextoUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/ConversorPDF.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/ConversorPDF.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/CustomAuthenticationProvider.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/CustomAuthenticationProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/EntityManagerProducer.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/EntityManagerProducer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/FacesMessages.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/FacesMessages.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/GerarTabelas.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/GerarTabelas.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/JpaUtil.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/JpaUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/LdapUtil.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/LdapUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/Mail.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/Mail.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/NegocioException.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/NegocioException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/PDF.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/PDF.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/TransactionInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/TransactionInterceptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/Transactional.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/Transactional.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/Util.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/Util.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/META-INF/context.xml" afterPath="$PROJECT_DIR$/src/main/webapp/META-INF/context.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/logging.properties" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/logging.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/administrador/circulo.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/administrador/circulo.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/administrador/equipe.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/administrador/equipe.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/administrador/menuAdministrador.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/administrador/menuAdministrador.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/administrador/palestra.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/administrador/palestra.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/dirigente/ecc.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/dirigente/ecc.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/dirigente/menuDirigente.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/dirigente/menuDirigente.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemCirculo.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemCirculo.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemEncontrista.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemEncontrista.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemEquipe.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemEquipe.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemFicha.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemFicha.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemPalestrante.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemPalestrante.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/login.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/login.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/publico/estatistica.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/publico/estatistica.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/publico/estatisticaChefe.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/publico/estatisticaChefe.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/publico/estatisticaOld.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/publico/estatisticaOld.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/publico/menu.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/publico/menu.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/publico/negado.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/publico/negado.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/relatorios/rptAptidoes.rptconfig" afterPath="$PROJECT_DIR$/src/main/webapp/relatorios/rptAptidoes.rptconfig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/relatorios/rptAptidoes.rptdesign" afterPath="$PROJECT_DIR$/src/main/webapp/relatorios/rptAptidoes.rptdesign" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/AdminLTE.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/AdminLTE.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/AdminLTE.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/AdminLTE.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/gildasio.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/gildasio.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/ionicons.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/ionicons.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/ionicons.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/ionicons.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/login.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/login.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/menu.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/menu.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/modelo.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/modelo.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/modelo2.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/modelo2.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/locale-primefaces.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/locale-primefaces.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/restrito/redistribuir.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/restrito/redistribuir.xhtml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -216,33 +32,30 @@
       <file leaf-file-name="EstatisticaBean.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EstatisticaBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="249" column="0" lean-forward="false" selection-start-line="249" selection-start-column="0" selection-end-line="249" selection-end-column="0" />
+            <state relative-caret-position="242">
+              <caret line="234" column="46" lean-forward="true" selection-start-line="234" selection-start-column="46" selection-end-line="234" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ecc.xhtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/ecc.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="149" column="59" lean-forward="true" selection-start-line="149" selection-start-column="59" selection-end-line="149" selection-end-column="59" />
               <folding>
-                <element signature="e#3933#3934#0" expanded="true" />
-                <element signature="e#3962#3963#0" expanded="true" />
-                <element signature="e#8621#8632#0" expanded="true" />
+                <marker date="1517255795420" expanded="true" signature="1683:1767" ph="{...}" />
+                <marker date="1517255795420" expanded="true" signature="1949:2033" ph="{...}" />
+                <marker date="1517255795420" expanded="true" signature="2217:2301" ph="{...}" />
+                <marker date="1517255795420" expanded="true" signature="2479:2563" ph="{...}" />
+                <marker date="1517255795420" expanded="true" signature="2908:2992" ph="{...}" />
+                <marker date="1517255795420" expanded="true" signature="3242:3326" ph="{...}" />
+                <marker date="1517255795420" expanded="true" signature="3479:3563" ph="{...}" />
+                <marker date="1517255795420" expanded="true" signature="3727:3811" ph="{...}" />
+                <marker date="1517255795420" expanded="true" signature="4005:4089" ph="{...}" />
+                <marker date="1517255795420" expanded="true" signature="4269:4353" ph="{...}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RedistribuicaoBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/RedistribuicaoBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Faces.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/omnifaces/omnifaces/1.6/omnifaces-1.6-sources.jar!/org/omnifaces/util/Faces.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="73" column="19" lean-forward="false" selection-start-line="73" selection-start-column="19" selection-end-line="73" selection-end-column="19" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -251,20 +64,8 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/service/EccService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="208">
-              <caret line="106" column="45" lean-forward="false" selection-start-line="106" selection-start-column="45" selection-end-line="106" selection-end-column="45" />
+              <caret line="148" column="4" lean-forward="false" selection-start-line="148" selection-start-column="4" selection-end-line="156" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EccRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EccRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="42" column="51" lean-forward="false" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
-              <folding>
-                <marker date="1517570568020" expanded="true" signature="2016:2124" ph="UPDATE ECCS " />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -272,39 +73,51 @@
       <file leaf-file-name="Constantes.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/util/Constantes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state relative-caret-position="239">
+              <caret line="22" column="117" lean-forward="false" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="117" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CirculoEcc.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/CirculoEcc.java">
+      <file leaf-file-name="EquipeEccBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EquipeEccBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="44" column="38" lean-forward="false" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="estatistica.xhtml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/publico/estatistica.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+            <state relative-caret-position="294">
+              <caret line="430" column="60" lean-forward="true" selection-start-line="430" selection-start-column="60" selection-end-line="430" selection-end-column="60" />
               <folding>
-                <marker date="1517581272007" expanded="true" signature="2259:2343" ph="{...}" />
-                <marker date="1517581272007" expanded="true" signature="2525:2609" ph="{...}" />
-                <marker date="1517581272007" expanded="true" signature="2793:2877" ph="{...}" />
-                <marker date="1517581272007" expanded="true" signature="3055:3139" ph="{...}" />
-                <marker date="1517581272007" expanded="true" signature="3484:3568" ph="{...}" />
-                <marker date="1517581272007" expanded="true" signature="3726:3810" ph="{...}" />
-                <marker date="1517581272007" expanded="true" signature="3984:4068" ph="{...}" />
-                <marker date="1517581272007" expanded="true" signature="4253:4337" ph="{...}" />
-                <marker date="1517581272007" expanded="true" signature="4531:4615" ph="{...}" />
-                <marker date="1517581272007" expanded="true" signature="4815:4899" ph="{...}" />
+                <element signature="e#4284#4285#0" expanded="true" />
+                <element signature="e#4303#4304#0" expanded="true" />
+                <element signature="e#4339#4340#0" expanded="true" />
+                <element signature="e#4364#4365#0" expanded="true" />
+                <element signature="e#4742#4743#0" expanded="true" />
+                <element signature="e#4765#4766#0" expanded="true" />
+                <element signature="e#4812#4813#0" expanded="true" />
+                <element signature="e#4845#4846#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EccRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EccRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="51" column="5" lean-forward="true" selection-start-line="47" selection-start-column="4" selection-end-line="51" selection-end-column="5" />
+              <folding>
+                <marker date="1518727259923" expanded="true" signature="2015:2123" ph="UPDATE ECCS " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EquipeEccService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/service/EquipeEccService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="118" column="4" lean-forward="false" selection-start-line="118" selection-start-column="4" selection-end-line="125" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -313,19 +126,43 @@
       <file leaf-file-name="EquipeEccRepository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EquipeEccRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="31" column="22" lean-forward="false" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+            <state relative-caret-position="285">
+              <caret line="105" column="22" lean-forward="true" selection-start-line="105" selection-start-column="22" selection-end-line="105" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EquipeEcc.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/EquipeEcc.java">
+      <file leaf-file-name="montagemEquipe.xhtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemEquipe.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="37" column="42" lean-forward="true" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
-              <folding />
+            <state relative-caret-position="75">
+              <caret line="351" column="87" lean-forward="false" selection-start-line="351" selection-start-column="87" selection-end-line="351" selection-end-column="87" />
+              <folding>
+                <marker date="1518777239354" expanded="true" signature="1689:1773" ph="{...}" />
+                <marker date="1518777239354" expanded="true" signature="1955:2039" ph="{...}" />
+                <marker date="1518777239354" expanded="true" signature="2223:2307" ph="{...}" />
+                <marker date="1518777239354" expanded="true" signature="2485:2569" ph="{...}" />
+                <marker date="1518777239354" expanded="true" signature="2914:2998" ph="{...}" />
+                <marker date="1518777239354" expanded="true" signature="3143:3227" ph="{...}" />
+                <marker date="1518777239354" expanded="true" signature="3380:3464" ph="{...}" />
+                <marker date="1518777239354" expanded="true" signature="3735:3819" ph="{...}" />
+                <marker date="1518777239354" expanded="true" signature="4013:4097" ph="{...}" />
+                <marker date="1518777239354" expanded="true" signature="4284:4368" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EccBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EccBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="53" column="4" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="22" />
+              <folding>
+                <element signature="e#4904#4905#0" expanded="true" />
+                <element signature="e#4927#4928#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -337,13 +174,25 @@
       <find>filtraPor</find>
       <find>filtrapor</find>
       <find>CAMINHO_FOTOS_WINDOWS</find>
-      <find>Equipes</find>
       <find>listaDasEquipes</find>
       <find>Public String</find>
       <find>Encontristas/</find>
       <find>LOGIN</find>
       <find>Dirigentes</find>
       <find>indicadores</find>
+      <find>listaEccPorFiltroEncerradoAndamento</find>
+      <find>Encontristas</find>
+      <find>equipeFiltro</find>
+      <find>ECC</find>
+      <find>Equipes</find>
+      <find>habilitaBotaoIncluiCasaisEncontreiros</find>
+      <find>listaul</find>
+      <find>lista</find>
+      <find>salvar</find>
+      <find>public date</find>
+      <find>simple</find>
+      <find>urlRelatorio</find>
+      <find>listar</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -360,14 +209,20 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EquipeEccRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/model/EquipeEcc.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/model/CirculoEcc.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EccRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/RedistribuicaoBean.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EstatisticaBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/service/EccService.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/util/Constantes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EstatisticaBean.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/publico/estatistica.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/util/Util.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EccBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EccRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/service/EquipeEccService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EquipeEccBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EquipeEccRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/dirigente/montagemEquipe.xhtml" />
       </list>
     </option>
   </component>
@@ -388,10 +243,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="28" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="x" value="1917" />
+    <option name="y" value="-1" />
+    <option name="width" value="1606" />
+    <option name="height" value="880" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -409,9 +264,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -461,22 +317,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="ecc" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ecc" type="b2602c69:ProjectViewProjectNode" />
               <item name="ecc" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ecc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="ecc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ecc" type="b2602c69:ProjectViewProjectNode" />
@@ -491,13 +341,12 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="publico" type="462c0819:PsiDirectoryNode" />
+              <item name="dirigente" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -754,15 +603,16 @@
       <workItem from="1517488687526" duration="156000" />
       <workItem from="1517488874885" duration="278000" />
       <workItem from="1517491739714" duration="5660000" />
-      <workItem from="1517518145822" duration="16767000" />
+      <workItem from="1517518145822" duration="24846000" />
+      <workItem from="1518018724183" duration="18208000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26180000" />
+    <option name="totallyTimeSpent" value="52467000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="260" y="28" width="1926" height="1058" extended-state="6" />
+    <frame x="1917" y="-1" width="1606" height="880" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -777,21 +627,20 @@
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39914164" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39893618" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33798283" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33776596" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18783352" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21010639" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22908624" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -800,6 +649,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -853,12 +703,135 @@
           <properties />
           <option name="timeStamp" value="46" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EquipeEccRepository.java</url>
+          <line>90</line>
+          <properties />
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EquipeEccBean.java</url>
+          <line>432</line>
+          <properties />
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EquipeEccBean.java</url>
+          <line>373</line>
+          <properties />
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="47" />
+      <option name="time" value="55" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EstatisticaBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="97" column="25" lean-forward="false" selection-start-line="97" selection-start-column="13" selection-end-line="97" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/service/EccService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2010">
+          <caret line="134" column="63" lean-forward="false" selection-start-line="134" selection-start-column="63" selection-end-line="134" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EccRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" column="21" lean-forward="false" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
+          <folding>
+            <marker date="1518727259923" expanded="true" signature="2015:2123" ph="UPDATE ECCS " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/util/Constantes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EquipeEccBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1425">
+          <caret line="133" column="50" lean-forward="false" selection-start-line="133" selection-start-column="50" selection-end-line="133" selection-end-column="50" />
+          <folding>
+            <element signature="e#4284#4285#0" expanded="true" />
+            <element signature="e#4303#4304#0" expanded="true" />
+            <element signature="e#4339#4340#0" expanded="true" />
+            <element signature="e#4364#4365#0" expanded="true" />
+            <element signature="e#4742#4743#0" expanded="true" />
+            <element signature="e#4765#4766#0" expanded="true" />
+            <element signature="e#4812#4813#0" expanded="true" />
+            <element signature="e#4845#4846#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/service/EquipeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="73" column="42" lean-forward="false" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EquipeRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="44" column="23" lean-forward="false" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/Equipe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EccBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <folding>
+            <element signature="e#4904#4905#0" expanded="true" />
+            <element signature="e#4927#4928#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/publico/estatistica.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6705">
+          <caret line="447" column="0" lean-forward="true" selection-start-line="447" selection-start-column="0" selection-end-line="447" selection-end-column="0" />
+          <folding>
+            <marker date="1517919956819" expanded="true" signature="2259:2343" ph="{...}" />
+            <marker date="1517919956819" expanded="true" signature="2525:2609" ph="{...}" />
+            <marker date="1517919956819" expanded="true" signature="2793:2877" ph="{...}" />
+            <marker date="1517919956819" expanded="true" signature="3055:3139" ph="{...}" />
+            <marker date="1517919956819" expanded="true" signature="3484:3568" ph="{...}" />
+            <marker date="1517919956819" expanded="true" signature="3726:3810" ph="{...}" />
+            <marker date="1517919956819" expanded="true" signature="3984:4068" ph="{...}" />
+            <marker date="1517919956819" expanded="true" signature="4253:4337" ph="{...}" />
+            <marker date="1517919956819" expanded="true" signature="4531:4615" ph="{...}" />
+            <marker date="1517919956819" expanded="true" signature="4815:4899" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
@@ -879,11 +852,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5955">
           <caret line="397" column="44" lean-forward="false" selection-start-line="397" selection-start-column="44" selection-end-line="397" selection-end-column="44" />
-          <folding>
-            <element signature="e#3933#3934#0" expanded="true" />
-            <element signature="e#3962#3963#0" expanded="true" />
-            <element signature="e#8621#8632#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -939,9 +908,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="369">
           <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-          <folding>
-            <element signature="e#3911#3912#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -967,7 +933,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
           <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -975,7 +940,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
           <caret line="920" column="0" lean-forward="false" selection-start-line="920" selection-start-column="0" selection-end-line="920" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -983,7 +947,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -991,9 +954,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <element signature="e#1271#1272#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1001,9 +961,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <element signature="e#1479#1480#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1011,9 +968,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#315#316#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1037,54 +991,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EccBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="33" column="19" lean-forward="false" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EquipeEccBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="38" column="21" lean-forward="true" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ecc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="75" column="4" lean-forward="false" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/service/EquipeEccService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="76" column="43" lean-forward="false" selection-start-line="76" selection-start-column="43" selection-end-line="76" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EquipeEccRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="31" column="22" lean-forward="false" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/EquipeEcc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="37" column="42" lean-forward="true" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/CirculoEcc.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="343">
@@ -1093,29 +999,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/service/EccService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="106" column="45" lean-forward="false" selection-start-line="106" selection-start-column="45" selection-end-line="106" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EccRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="42" column="51" lean-forward="false" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
-          <folding>
-            <marker date="1517570568020" expanded="true" signature="2016:2124" ph="UPDATE ECCS " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/omnifaces/omnifaces/1.6/omnifaces-1.6-sources.jar!/org/omnifaces/util/Faces.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
           <caret line="73" column="19" lean-forward="false" selection-start-line="73" selection-start-column="19" selection-end-line="73" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1127,41 +1014,195 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/util/Constantes.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/service/EquipeService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="975">
+          <caret line="73" column="42" lean-forward="false" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EstatisticaBean.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EquipeRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="249" column="0" lean-forward="false" selection-start-line="249" selection-start-column="0" selection-end-line="249" selection-end-column="0" />
-          <folding>
-            <element signature="e#3933#3934#0" expanded="true" />
-            <element signature="e#3962#3963#0" expanded="true" />
-            <element signature="e#8621#8632#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="495">
+          <caret line="44" column="23" lean-forward="false" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/Equipe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/publico/estatistica.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+        <state relative-caret-position="392">
+          <caret line="453" column="53" lean-forward="true" selection-start-line="453" selection-start-column="53" selection-end-line="453" selection-end-column="53" />
           <folding>
-            <marker date="1517581272007" expanded="true" signature="2259:2343" ph="{...}" />
-            <marker date="1517581272007" expanded="true" signature="2525:2609" ph="{...}" />
-            <marker date="1517581272007" expanded="true" signature="2793:2877" ph="{...}" />
-            <marker date="1517581272007" expanded="true" signature="3055:3139" ph="{...}" />
-            <marker date="1517581272007" expanded="true" signature="3484:3568" ph="{...}" />
-            <marker date="1517581272007" expanded="true" signature="3726:3810" ph="{...}" />
-            <marker date="1517581272007" expanded="true" signature="3984:4068" ph="{...}" />
-            <marker date="1517581272007" expanded="true" signature="4253:4337" ph="{...}" />
-            <marker date="1517581272007" expanded="true" signature="4531:4615" ph="{...}" />
-            <marker date="1517581272007" expanded="true" signature="4815:4899" ph="{...}" />
+            <marker date="1517919956819" expanded="true" signature="2259:2343" ph="{...}" />
+            <marker date="1517919956819" expanded="true" signature="2525:2609" ph="{...}" />
+            <marker date="1517919956819" expanded="true" signature="2793:2877" ph="{...}" />
+            <marker date="1517919956819" expanded="true" signature="3055:3139" ph="{...}" />
+            <marker date="1517919956819" expanded="true" signature="3484:3568" ph="{...}" />
+            <marker date="1517919956819" expanded="true" signature="3726:3810" ph="{...}" />
+            <marker date="1517919956819" expanded="true" signature="3984:4068" ph="{...}" />
+            <marker date="1517919956819" expanded="true" signature="4253:4337" ph="{...}" />
+            <marker date="1517919956819" expanded="true" signature="4531:4615" ph="{...}" />
+            <marker date="1517919956819" expanded="true" signature="4815:4899" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/EquipeEcc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="33" column="14" lean-forward="false" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ecc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="54" column="24" lean-forward="false" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/util/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/ecc.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="149" column="59" lean-forward="true" selection-start-line="149" selection-start-column="59" selection-end-line="149" selection-end-column="59" />
+          <folding>
+            <marker date="1517255795420" expanded="true" signature="1683:1767" ph="{...}" />
+            <marker date="1517255795420" expanded="true" signature="1949:2033" ph="{...}" />
+            <marker date="1517255795420" expanded="true" signature="2217:2301" ph="{...}" />
+            <marker date="1517255795420" expanded="true" signature="2479:2563" ph="{...}" />
+            <marker date="1517255795420" expanded="true" signature="2908:2992" ph="{...}" />
+            <marker date="1517255795420" expanded="true" signature="3242:3326" ph="{...}" />
+            <marker date="1517255795420" expanded="true" signature="3479:3563" ph="{...}" />
+            <marker date="1517255795420" expanded="true" signature="3727:3811" ph="{...}" />
+            <marker date="1517255795420" expanded="true" signature="4005:4089" ph="{...}" />
+            <marker date="1517255795420" expanded="true" signature="4269:4353" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EccRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="51" column="5" lean-forward="true" selection-start-line="47" selection-start-column="4" selection-end-line="51" selection-end-column="5" />
+          <folding>
+            <marker date="1518727259923" expanded="true" signature="2015:2123" ph="UPDATE ECCS " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/service/EccService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="148" column="4" lean-forward="false" selection-start-line="148" selection-start-column="4" selection-end-line="156" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EccBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="53" column="4" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="22" />
+          <folding>
+            <element signature="e#4904#4905#0" expanded="true" />
+            <element signature="e#4927#4928#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/jboss/weld/servlet/weld-servlet/2.0.4.Final/weld-servlet-2.0.4.Final-sources.jar!/org/jboss/weld/interceptor/chain/AbstractInterceptionChain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/repository/EquipeEccRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="105" column="22" lean-forward="true" selection-start-line="105" selection-start-column="22" selection-end-line="105" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemEquipe.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="351" column="87" lean-forward="false" selection-start-line="351" selection-start-column="87" selection-end-line="351" selection-end-column="87" />
+          <folding>
+            <marker date="1518777239354" expanded="true" signature="1689:1773" ph="{...}" />
+            <marker date="1518777239354" expanded="true" signature="1955:2039" ph="{...}" />
+            <marker date="1518777239354" expanded="true" signature="2223:2307" ph="{...}" />
+            <marker date="1518777239354" expanded="true" signature="2485:2569" ph="{...}" />
+            <marker date="1518777239354" expanded="true" signature="2914:2998" ph="{...}" />
+            <marker date="1518777239354" expanded="true" signature="3143:3227" ph="{...}" />
+            <marker date="1518777239354" expanded="true" signature="3380:3464" ph="{...}" />
+            <marker date="1518777239354" expanded="true" signature="3735:3819" ph="{...}" />
+            <marker date="1518777239354" expanded="true" signature="4013:4097" ph="{...}" />
+            <marker date="1518777239354" expanded="true" signature="4284:4368" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EstatisticaBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="234" column="46" lean-forward="true" selection-start-line="234" selection-start-column="46" selection-end-line="234" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/util/Constantes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="22" column="117" lean-forward="false" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="117" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EquipeEccBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="430" column="60" lean-forward="true" selection-start-line="430" selection-start-column="60" selection-end-line="430" selection-end-column="60" />
+          <folding>
+            <element signature="e#4284#4285#0" expanded="true" />
+            <element signature="e#4303#4304#0" expanded="true" />
+            <element signature="e#4339#4340#0" expanded="true" />
+            <element signature="e#4364#4365#0" expanded="true" />
+            <element signature="e#4742#4743#0" expanded="true" />
+            <element signature="e#4765#4766#0" expanded="true" />
+            <element signature="e#4812#4813#0" expanded="true" />
+            <element signature="e#4845#4846#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/service/EquipeEccService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="118" column="4" lean-forward="false" selection-start-line="118" selection-start-column="4" selection-end-line="125" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

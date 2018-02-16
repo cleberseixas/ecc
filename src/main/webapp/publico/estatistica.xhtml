@@ -154,13 +154,13 @@
 							<p:selectOneMenu id="ecc" value="#{estatisticaBean.eccFiltro}"
 											 style="width:105px;margin-left:277px;display: inline-table">
 								<f:selectItem itemLabel="TODOS"/>
-								<f:selectItems value="#{eccBean.listaEcc}"
+								<f:selectItems value="#{estatisticaBean.listaDosEccs}"
 											   var="ecc" itemValue="#{ecc.numero}"
 											   itemLabel="#{ecc.numero}" />
 								<p:ajax listener="#{estatisticaBean.filtraPorEcc()}"
 										event="change" update="tabelaECC" />
 							</p:selectOneMenu>
-							<p:commandLink actionListener="#{estatisticaBean.imprimirEcc}"
+							<p:commandLink actionListener="#{estatisticaBean.imprimirEcc}" rendered="false"
 										   target="_blank" ajax="false" immediate="true">
 								<p:button icon="ui-icon-print" style="margin-left: 5px;" />
 							</p:commandLink>
@@ -356,7 +356,7 @@
 							<p:selectOneMenu id="ecc1" value="#{estatisticaBean.eccFiltro}"
 											 style="width:80px;margin-left:24px;display: inline-table">
 								<f:selectItem itemLabel="TODOS"/>
-								<f:selectItems value="#{eccBean.listaEcc}"
+								<f:selectItems value="#{estatisticaBean.listaDosEccs}"
 											   var="ecc" itemValue="#{ecc.numero}"
 											   itemLabel="#{ecc.numero}" />
 								<p:ajax listener="#{estatisticaBean.filtraPorEncontristasCirculos()}"
@@ -442,10 +442,11 @@
 							<p:ajax listener="#{estatisticaBean.filtraPorEquipes()}"
 									event="change" update="tabelaEquipes" />
 						</p:selectOneMenu>
-						<p:commandLink actionListener="#{estatisticaBean.imprimirEcc}"
-									   target="_blank" ajax="false" immediate="true">
-							<p:button icon="ui-icon-print" style="margin-left: 5px;" />
-						</p:commandLink>
+						<p:commandButton type="button" icon="ui-icon-print" style="margin-left: 5px;">
+							<p:printer target="tabelaEquipes"/>
+						</p:commandButton>
+
+
 					</div>
 				</div>
 				<div id="divEstatisticaChefeInferiorDireita_01">
@@ -462,7 +463,7 @@
 								<h:panelGrid columns="3" styleClass="semBordaInterna"
 											 columnClasses="gridColum01 gridColum02 gridColum02">
 									<h:outputText
-											value="#{equipe.equipe.descricao} | #{equipe.casalCoordenador.nomeUsual}" />
+											value="#{equipe.ecc.numero} | #{equipe.equipe.descricao} | #{equipe.casalCoordenador.nomeUsual}" />
 									<h:graphicImage library="imagens" value="/image?imagem=#{equipe.casalCoordenador.fotoEle}" rendered="#{equipe.casalCoordenador.fotoEle.length() > 0}"
 													style="width:20px; height:20px; float: right;" title="Foto dela"/>
 									<h:graphicImage library="imagens" value="/image?imagem=#{equipe.casalCoordenador.fotoEla}" rendered="#{equipe.casalCoordenador.fotoEla.length() > 0}"

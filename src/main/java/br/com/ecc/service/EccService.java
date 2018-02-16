@@ -130,6 +130,18 @@ public class EccService implements Serializable {
 		}
 	}
 
+	public List<Ecc> listaEccPorFiltroEncerradoAndamento(String situacao){
+		try {
+			return eccRepository.listaEccPorFiltroEncerradoAndamento(situacao);
+		} catch(NegocioException e){
+			FacesMessages.error(e.getMessage());
+			return null;
+		}
+	}
+
+
+
+
 	public void atualizaSituacaoEcc(Long ecc, String usuario) {
 		eccRepository.atualizaSituacaoEcc(ecc, usuario);
 	}

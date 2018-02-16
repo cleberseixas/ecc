@@ -134,7 +134,28 @@
 
 		<p:growl id="growl" showDetail="false" life="4000" autoUpdate="true" />
 		<br />
-				<p:dataTable id="equipesEcc" value="#{equipeEccBean.listaEquipeEcc}" var="equipeEcc" rowIndexVar="index" selection="#{equipeEccBean.equipeEcc}"
+		<p:toolbar>
+			<f:facet name="left">
+				<h:panelGrid columns="5">
+					<p:outputLabel value="ECC:" />
+					<p:selectOneMenu id="lbECC" value="#{equipeEccBean.idEcc}" converter="eccConverter"
+									 style="width:110px;">
+						<f:selectItem itemLabel="Selecione o ECC." noSelectionOption="true"/>
+						<f:selectItems value="#{eccBean.listaEcc}"
+									   var="ecc" itemValue="#{ecc}" itemLabel="#{ecc.numero}"/>
+					</p:selectOneMenu>
+					<p:selectOneButton style="margin-left:5px;" id="statusECC"
+									   value="#{equipeEccBean.statusEcc}">
+						<f:selectItem itemLabel="TODOS" itemValue="TODOS" />
+						<f:selectItem itemLabel="ANDAMENTO" itemValue="ANDAMENTO" />
+						<f:selectItem itemLabel="ENCERRADO" itemValue="ENCERRADO" />
+					</p:selectOneButton >
+					<p:commandButton icon="ui-icon-search" update="equipesEcc" process="@this statusECC lbECC"
+									 action="#{equipeEccBean.filtraEquipecc()}"/>
+				</h:panelGrid>
+			</f:facet>
+		</p:toolbar>
+				<p:dataTable id="equipesEcc" value="#{equipeEccBean.listaUltimaEquipeEcc}" var="equipeEcc" rowIndexVar="index" selection="#{equipeEccBean.equipeEcc}"
 							 selectionMode="single" rowKey="#{equipeEcc.id}"
 							 emptyMessage="Não há Equipes cadastradas" style="width:1120px;"
 							 paginator="false" paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"

@@ -17,7 +17,7 @@ public class Util {
 		calendar.setTime(data);
 		return calendar.get(Calendar.YEAR);
 	}
-	
+
 	public static String getPrimeiroNome(String nome) {
 		return nome.substring(0,nome.indexOf(" "));
 	}
