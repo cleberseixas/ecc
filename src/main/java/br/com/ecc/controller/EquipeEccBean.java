@@ -425,7 +425,7 @@ public class EquipeEccBean implements Serializable {
 		System.out.println("Photo :"+this.casalCoordenador.getFotoEle());
 	}
 
-	public void filtraEquipecc() {
+	public void filtraEquipeEcc() {
 
 		if (null != idEcc) {
 			listaUltimaEquipeEcc = equipeEccService.filtraEquipePorEccStatus(idEcc.getId(), statusEcc);

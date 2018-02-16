@@ -53,6 +53,12 @@ public class EncontristaEccBean implements Serializable {
 	@Inject
 	private CirculoEccCasalService circuloEccCasalService;
 
+	private Ecc idEcc;
+
+	private List<EncontristaEcc> listaUltimoEncontristaEcc;
+
+	private String statusEcc = "ENCERRADO";
+
 	public EncontristaEcc getEncontristaEcc() {
 		return encontristaEcc;
 	}
@@ -112,6 +118,33 @@ public class EncontristaEccBean implements Serializable {
 		this.habilitaBotaoIncluiCasaisEncontristas = habilitaBotaoIncluiCasaisEncontristas;
 	}
 
+	public Ecc getIdEcc() {
+		return idEcc;
+	}
+
+	public void setIdEcc(Ecc idEcc) {
+		this.idEcc = idEcc;
+	}
+
+	public List<EncontristaEcc> getListaUltimoEncontristaEcc() {
+		if (this.listaUltimoEncontristaEcc == null) {
+			this.listaUltimoEncontristaEcc = encontristaEccService.listarUltimoEncontristaEcc();
+		}
+		return this.listaUltimoEncontristaEcc;
+	}
+
+	public void setListaUltimoEncontristaEcc(List<EncontristaEcc> listaUltimoEncontristaEcc) {
+		this.listaUltimoEncontristaEcc = listaUltimoEncontristaEcc;
+	}
+
+	public String getStatusEcc() {
+		return statusEcc;
+	}
+
+	public void setStatusEcc(String statusEcc) {
+		this.statusEcc = statusEcc;
+	}
+
 	private void habilitaTodosBotoesEnconstristaEcc() {
 		if (this.encontristaEcc.getEncontristasEccCasais().size() > 0) {
 			habilitaBotaoExcluirEncontristaEcc = true;
@@ -151,7 +184,8 @@ public class EncontristaEccBean implements Serializable {
 			encontristaEcc.setEcc(ecc);
 
 			encontristaEccService.salvar(encontristaEcc);
-			this.listaEncontristaEcc = encontristaEccService.listar();
+			this.listaUltimoEncontristaEcc = encontristaEccService.listarUltimoEncontristaEcc();
+			//this.listaEncontristaEcc = encontristaEccService.listar();
 			novoEncontrista();
 			desabilitaTodosBotoesEnconstristaEcc();
 		}
@@ -161,7 +195,8 @@ public class EncontristaEccBean implements Serializable {
 		try {
 			encontristaEccService.excluir(encontristaEcc);
 			FacesMessages.info("Encontristas excluídos");
-			this.listaEncontristaEcc = encontristaEccService.listar();
+			//this.listaEncontristaEcc = encontristaEccService.listar();
+			this.listaUltimoEncontristaEcc = encontristaEccService.listarUltimoEncontristaEcc();
 			desabilitaTodosBotoesEnconstristaEcc();
 			removeCasaisLimbo();
 		} catch (Exception e) {
@@ -229,5 +264,14 @@ public class EncontristaEccBean implements Serializable {
 	}
 
 	public void onChangeCasalEncontreiro(AjaxBehaviorEvent event) {
+	}
+
+	public void filtraEncontristaEcc() {
+
+		if (null != idEcc) {
+			listaUltimoEncontristaEcc = encontristaEccService.filtraEncontristaPorEccStatus(idEcc.getId(), statusEcc);
+		} else {
+			listaUltimoEncontristaEcc = encontristaEccService.filtraEncontristaPorEccStatus(0L, statusEcc);
+		}
 	}
 }

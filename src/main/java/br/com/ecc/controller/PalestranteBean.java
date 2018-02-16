@@ -27,11 +27,20 @@ public class PalestranteBean implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private Palestrante palestrante = new Palestrante();
+
 	private Ecc ecc = new Ecc();
+
 	private Palestra palestra = new Palestra();
+
 	private Ficha ficha = new Ficha();
 
 	private List<Palestrante> listaPalestrante;
+
+	private Ecc idEcc;
+
+	private List<Palestrante> listaUltimoPalestrante;
+
+	private String statusEcc = "ENCERRADO";
 
 	private boolean habilitaBotaoEditarPalestrante = true;
 
@@ -84,7 +93,8 @@ public class PalestranteBean implements Serializable {
 		}
 
 		palestranteService.salvar(palestrante);
-		this.listaPalestrante = palestranteService.listar();
+		//this.listaPalestrante = palestranteService.listar();
+		this.listaUltimoPalestrante = palestranteService.listarUltimoPalestranteEcc();
 		novoPalestrante();
 	}
 
@@ -92,7 +102,8 @@ public class PalestranteBean implements Serializable {
 		try {
 		palestranteService.alterar(this.palestrante);
 		desabilitaTodosBotoesPalestrante();
-		this.listaPalestrante = palestranteService.listar();
+		//this.listaPalestrante = palestranteService.listar();
+		this.listaUltimoPalestrante = palestranteService.listarUltimoPalestranteEcc();
 	} catch (Exception e) {
 		FacesMessages.error(e.getMessage());
 		RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
@@ -103,7 +114,8 @@ public class PalestranteBean implements Serializable {
 		try {
 			palestranteService.excluir(palestrante);
 			FacesMessages.info("Palestrante excluído");
-			this.listaPalestrante = palestranteService.listar();
+			//this.listaPalestrante = palestranteService.listar();
+			this.listaUltimoPalestrante = palestranteService.listarUltimoPalestranteEcc();
 		} catch (Exception e) {
 			FacesMessages.error("Não se pode remover um palestrante que já está sendo utilizado");
 		}
@@ -144,6 +156,33 @@ public class PalestranteBean implements Serializable {
 			this.listaPalestrante = palestranteService.listar();
 		}
 		return this.listaPalestrante;
+	}
+
+	public Ecc getIdEcc() {
+		return idEcc;
+	}
+
+	public void setIdEcc(Ecc idEcc) {
+		this.idEcc = idEcc;
+	}
+
+	public List<Palestrante> getListaUltimoPalestrante() {
+		if (this.listaUltimoPalestrante == null) {
+			this.listaUltimoPalestrante = palestranteService.listarUltimoPalestranteEcc();
+		}
+		return this.listaUltimoPalestrante;
+	}
+
+	public void setListaUltimoPalestrante(List<Palestrante> listaUltimoPalestrante) {
+		this.listaUltimoPalestrante = listaUltimoPalestrante;
+	}
+
+	public String getStatusEcc() {
+		return statusEcc;
+	}
+
+	public void setStatusEcc(String statusEcc) {
+		this.statusEcc = statusEcc;
 	}
 
 	public Palestrante getPalestrante() {
@@ -193,4 +232,14 @@ public class PalestranteBean implements Serializable {
 	public void setHabilitaBotaoExcluirPalestrante(boolean habilitaBotaoExcluirPalestrante) {
 		this.habilitaBotaoExcluirPalestrante = habilitaBotaoExcluirPalestrante;
 	}
+
+	public void filtraPalestranteEcc() {
+
+		if (null != idEcc) {
+			listaUltimoPalestrante = palestranteService.filtraPalestrantePorEccStatus(idEcc.getId(), statusEcc);
+		} else {
+			listaUltimoPalestrante = palestranteService.filtraPalestrantePorEccStatus(0L, statusEcc);
+		}
+	}
+
 }

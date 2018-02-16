@@ -37,7 +37,7 @@ public class EquipeEccRepository {
 
 	public List<EquipeEcc> listarUltimaEquipeEcc() {
 		TypedQuery<EquipeEcc> query = manager.createQuery("from EquipeEcc ec where ec.ecc.id in (select ee.id from Ecc ee where extract(year from ee.dataFim) = :ANO_ANTERIOR)", EquipeEcc.class);
-		query.setParameter("ANO_ANTERIOR", Util.getAno(new Date()) - 1);
+		query.setParameter("ANO_ANTERIOR", Util.retornaAnoAnterior());
 		//TypedQuery<EquipeEcc> query = manager.createQuery("from EquipeEcc ee where ee.ecc.id in (select e.id from Ecc e where date_trunc('Year', e.dataFim) = '2017-01-01')", EquipeEcc.class);
 		return query.getResultList();
 	}

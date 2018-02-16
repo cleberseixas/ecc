@@ -1,6 +1,5 @@
 package br.com.ecc.service;
 
-import br.com.ecc.model.Palestra;
 import br.com.ecc.model.Palestrante;
 import br.com.ecc.repository.PalestranteRepository;
 import br.com.ecc.util.FacesMessages;
@@ -71,9 +70,27 @@ public class PalestranteService implements Serializable {
 		}
 	}
 
+	public List<Palestrante> listarUltimoPalestranteEcc(){
+		try {
+			return palestranteRepository.listarUltimoPalestranteEcc();
+		} catch(NegocioException e){
+			FacesMessages.error(e.getMessage());
+			return null;
+		}
+	}
+
 	public List<Palestrante> palestrantesPorEcc(Long ecc) {
 		try {
 			return palestranteRepository.palestrantesPorEcc(ecc);
+		} catch(NegocioException e){
+			FacesMessages.error(e.getMessage());
+			return null;
+		}
+	}
+
+	public List<Palestrante> filtraPalestrantePorEccStatus(Long ecc, String statusEcc) {
+		try {
+			return palestranteRepository.filtraPalestrantePorEccStatus(ecc, statusEcc);
 		} catch(NegocioException e){
 			FacesMessages.error(e.getMessage());
 			return null;

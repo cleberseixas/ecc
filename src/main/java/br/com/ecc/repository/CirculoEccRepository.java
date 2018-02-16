@@ -1,6 +1,7 @@
 package br.com.ecc.repository;
 
 import br.com.ecc.model.CirculoEcc;
+import br.com.ecc.util.Util;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
@@ -32,6 +33,13 @@ public class CirculoEccRepository {
 		TypedQuery<CirculoEcc> query = manager.createQuery("from CirculoEcc order by ecc.numero desc", CirculoEcc.class);
 		return query.getResultList();
 	}
+
+	public List<CirculoEcc> listaUltimoCirculoEcc() {
+		TypedQuery<CirculoEcc> query = manager.createQuery("from CirculoEcc ce where ce.ecc.id in (select ee.id from Ecc ee where extract(year from ee.dataFim) = :ANO_ANTERIOR)", CirculoEcc.class);
+		query.setParameter("ANO_ANTERIOR", Util.retornaAnoAnterior());
+		return query.getResultList();
+	}
+
 
 	/**
      * Método que verifica se já existe o Círculo CADASTRADO NO MESMO ECC
@@ -88,6 +96,36 @@ public class CirculoEccRepository {
 		TypedQuery<CirculoEcc> query = manager.createQuery("from CirculoEcc where ecc.id =:ECC", CirculoEcc.class);
 		query.setParameter("ECC", ecc);
 		return query.getResultList();
+	}
+
+	public List<CirculoEcc> listaCirculoEccPorFiltroEncerradoAndamento(String situacao) {
+		TypedQuery<CirculoEcc> query = manager.createQuery("from CirculoEcc ce where ce.ecc.id in (select ee.id from Ecc ee where ee.ativo=true and ee.situacao=:SITUACAO) order by ce.ecc.numero desc)", CirculoEcc.class);
+		query.setParameter("SITUACAO", situacao);
+		return query.getResultList();
+	}
+
+
+	/**
+	 * Método utilizado para filtrar os CIRCULOS
+	 * Por padrão tras todos os CIRCULOS do ÚLTIMO ECC que estão encerrados, com situação ENCERRADO
+	 * @param ecc - Define qual ECC (31º, 30º, 29° ou TODOS).
+	 * @param statusEcc - Define qual o Status do ECC (ANDAMENTO, ENCERRADO, TODOS), por padrão trás os ENCERRADO.
+	 * @return List com os Circulos.
+	 */
+	public List<CirculoEcc> filtraCirculoPorEccStatus(Long ecc, String statusEcc) {
+		TypedQuery<CirculoEcc> query = null;
+		if (ecc > 0) {
+			query = manager.createQuery("from CirculoEcc where ecc.id =:ID", CirculoEcc.class);
+			query.setParameter("ID", ecc);
+			return query.getResultList();
+		} else {
+			if (statusEcc.equals("TODOS")) {
+				return listar();
+			}
+			else {
+				return listaCirculoEccPorFiltroEncerradoAndamento(statusEcc);
+			}
+		}
 	}
 
 }

@@ -44,6 +44,12 @@ public class CirculoEccBean implements Serializable {
 
 	private List<Ficha> listaEncontreiros;
 
+	private Ecc idEcc;
+
+	private List<CirculoEcc> listaUltimoCirculo;
+
+	private String statusEcc = "ENCERRADO";
+
 	private boolean habilitaBotaoEditarCirculoEcc = true;
 
 	private boolean habilitaBotaoExcluirCirculoEcc = true;
@@ -113,6 +119,34 @@ public class CirculoEccBean implements Serializable {
 			}
 		}
 		return this.listaEncontreiros;
+	}
+
+	public Ecc getIdEcc() {
+		return idEcc;
+	}
+
+	public void setIdEcc(Ecc idEcc) {
+		this.idEcc = idEcc;
+	}
+
+	public List<CirculoEcc> getListaUltimoCirculo() {
+		if (this.listaUltimoCirculo == null) {
+			this.listaUltimoCirculo = circuloEccService.listaUltimoCirculoEcc();
+		}
+		return this.listaUltimoCirculo;
+
+	}
+
+	public void setListaUltimoCirculo(List<CirculoEcc> listaUltimoCirculo) {
+		this.listaUltimoCirculo = listaUltimoCirculo;
+	}
+
+	public String getStatusEcc() {
+		return statusEcc;
+	}
+
+	public void setStatusEcc(String statusEcc) {
+		this.statusEcc = statusEcc;
 	}
 
 	public Ficha getEncontrista() {
@@ -300,7 +334,8 @@ public class CirculoEccBean implements Serializable {
 										circuloEcc.setCasalCoordenador(casalCoordenador);
 
 										circuloEccService.salvar(circuloEcc);
-										this.listaCirculoEcc = circuloEccService.listar();
+										//this.listaCirculoEcc = circuloEccService.listar();
+										this.listaUltimoCirculo = circuloEccService.listaUltimoCirculoEcc();
 										novoCirculo();
 										desabilitaTodosBotoesCirculoEcc();
 										}
@@ -324,6 +359,7 @@ public class CirculoEccBean implements Serializable {
 					} else {
 							this.circuloEcc.setCasalCoordenador(this.casalCoordenador);
 							circuloEccService.alterar(this.circuloEcc);
+							this.listaUltimoCirculo = circuloEccService.listaUltimoCirculoEcc();
 							this.casalCoordenador = new Ficha();
 							}
 
@@ -337,7 +373,8 @@ public class CirculoEccBean implements Serializable {
 		try {
 			circuloEccService.excluir(circuloEcc);
 			FacesMessages.info("Circulo excluído");
-			this.listaCirculoEcc = circuloEccService.listar();
+			//this.listaCirculoEcc = circuloEccService.listar();
+			this.listaUltimoCirculo = circuloEccService.listaUltimoCirculoEcc();
 			desabilitaTodosBotoesCirculoEcc();
 			removeCasaisLimbo();
 		} catch (Exception e) {
@@ -356,5 +393,14 @@ public class CirculoEccBean implements Serializable {
 	}
 
 	public void onChangeCasalCoordenador(AjaxBehaviorEvent event) {
+	}
+
+	public void filtraCirculoEcc() {
+
+		if (null != idEcc) {
+			listaUltimoCirculo = circuloEccService.filtraCirculoPorEccStatus(idEcc.getId(), statusEcc);
+		} else {
+			listaUltimoCirculo = circuloEccService.filtraCirculoPorEccStatus(0L, statusEcc);
+		}
 	}
 }

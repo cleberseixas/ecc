@@ -135,7 +135,28 @@
 
 		<p:growl id="growl" showDetail="false" life="4000" autoUpdate="true" />
 		<br />
-				<p:dataTable id="circulosEcc" value="#{circuloEccBean.listaCirculoEcc}" var="circuloEcc" rowIndexVar="index" selection="#{circuloEccBean.circuloEcc}"
+		<p:toolbar>
+			<f:facet name="left">
+				<h:panelGrid columns="5">
+					<p:outputLabel value="ECC:" />
+					<p:selectOneMenu id="lbECC" value="#{circuloEccBean.idEcc}" converter="eccConverter"
+									 style="width:110px;">
+						<f:selectItem itemLabel="Selecione o ECC." noSelectionOption="true"/>
+						<f:selectItems value="#{eccBean.listaEcc}"
+									   var="ecc" itemValue="#{ecc}" itemLabel="#{ecc.numero}"/>
+					</p:selectOneMenu>
+					<p:selectOneButton style="margin-left:5px;" id="statusECC"
+									   value="#{circuloEccBean.statusEcc}">
+						<f:selectItem itemLabel="TODOS" itemValue="TODOS" />
+						<f:selectItem itemLabel="ANDAMENTO" itemValue="ANDAMENTO" />
+						<f:selectItem itemLabel="ENCERRADO" itemValue="ENCERRADO" />
+					</p:selectOneButton >
+					<p:commandButton icon="ui-icon-search" update="circulosEcc" process="@this statusECC lbECC"
+									 action="#{circuloEccBean.filtraCirculoEcc()}"/>
+				</h:panelGrid>
+			</f:facet>
+		</p:toolbar>
+				<p:dataTable id="circulosEcc" value="#{circuloEccBean.listaUltimoCirculo}" var="circuloEcc" rowIndexVar="index" selection="#{circuloEccBean.circuloEcc}"
 							 selectionMode="single" rowKey="#{circuloEcc.id}"
 							 emptyMessage="Não há Círculos cadastrados" style="width:1120px;"
 							 paginator="false" paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"

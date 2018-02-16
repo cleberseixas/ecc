@@ -78,6 +78,15 @@ public class CirculoEccService implements Serializable {
 		}
 	}
 
+	public List<CirculoEcc> listaUltimoCirculoEcc(){
+		try {
+			return circuloEccRepository.listaUltimoCirculoEcc();
+		} catch(NegocioException e){
+			FacesMessages.error(e.getMessage());
+			return null;
+		}
+	}
+
 	public boolean circuloJaExisteEcc(Long ecc, Long circulo) {
 		try {
 			return circuloEccRepository.circuloJaExisteEcc(ecc, circulo);
@@ -108,6 +117,16 @@ public class CirculoEccService implements Serializable {
 	public List<CirculoEcc> circulosPorEcc(Long ecc) {
 		try {
 			return circuloEccRepository.circulosPorEcc(ecc);
+		} catch(NegocioException e){
+			FacesMessages.error(e.getMessage());
+			return null;
+		}
+	}
+
+
+	public List<CirculoEcc> filtraCirculoPorEccStatus(Long ecc, String statusEcc) {
+		try {
+			return circuloEccRepository.filtraCirculoPorEccStatus(ecc, statusEcc);
 		} catch(NegocioException e){
 			FacesMessages.error(e.getMessage());
 			return null;

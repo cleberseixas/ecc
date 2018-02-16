@@ -77,6 +77,15 @@ public class EncontristaEccService implements Serializable {
 		}
 	}
 
+	public List<EncontristaEcc> listarUltimoEncontristaEcc(){
+		try {
+			return encontristaEccRepository.listarUltimoEncontristaEcc();
+		} catch(NegocioException e){
+			FacesMessages.error(e.getMessage());
+			return null;
+		}
+	}
+
 	public boolean jaExisteEcc(Long ecc) {
 		try {
 			return encontristaEccRepository.jaExisteEcc(ecc);
@@ -92,6 +101,15 @@ public class EncontristaEccService implements Serializable {
 		} catch (NegocioException e) {
 			FacesMessages.error(e.getMessage());
 			return true;
+		}
+	}
+
+	public List<EncontristaEcc> filtraEncontristaPorEccStatus(Long ecc, String statusEcc) {
+		try {
+			return encontristaEccRepository.filtraEncontristaPorEccStatus(ecc, statusEcc);
+		} catch(NegocioException e){
+			FacesMessages.error(e.getMessage());
+			return null;
 		}
 	}
 }

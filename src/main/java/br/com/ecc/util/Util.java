@@ -18,6 +18,10 @@ public class Util {
 		return calendar.get(Calendar.YEAR);
 	}
 
+	public static int retornaAnoAnterior() {
+		return Util.getAno(new Date()) - 1;
+	}
+
 	public static String getPrimeiroNome(String nome) {
 		return nome.substring(0,nome.indexOf(" "));
 	}

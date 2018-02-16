@@ -130,7 +130,28 @@
 
 		<p:growl id="growl" showDetail="false" life="4000" autoUpdate="true" />
 		<br />
-				<p:dataTable id="palestrantes" value="#{palestranteBean.listaPalestrante}" var="palestrante" rowIndexVar="index" selection="#{palestranteBean.palestrante}"
+		<p:toolbar>
+			<f:facet name="left">
+				<h:panelGrid columns="5">
+					<p:outputLabel value="ECC:" />
+					<p:selectOneMenu id="lbECC" value="#{palestranteBean.idEcc}" converter="eccConverter"
+									 style="width:110px;">
+						<f:selectItem itemLabel="Selecione o ECC." noSelectionOption="true"/>
+						<f:selectItems value="#{eccBean.listaEcc}"
+									   var="ecc" itemValue="#{ecc}" itemLabel="#{ecc.numero}"/>
+					</p:selectOneMenu>
+					<p:selectOneButton style="margin-left:5px;" id="statusECC"
+									   value="#{palestranteBean.statusEcc}">
+						<f:selectItem itemLabel="TODOS" itemValue="TODOS" />
+						<f:selectItem itemLabel="ANDAMENTO" itemValue="ANDAMENTO" />
+						<f:selectItem itemLabel="ENCERRADO" itemValue="ENCERRADO" />
+					</p:selectOneButton >
+					<p:commandButton icon="ui-icon-search" update="palestrantes" process="@this statusECC lbECC"
+									 action="#{palestranteBean.filtraPalestranteEcc()}"/>
+				</h:panelGrid>
+			</f:facet>
+		</p:toolbar>
+				<p:dataTable id="palestrantes" value="#{palestranteBean.listaUltimoPalestrante}" var="palestrante" rowIndexVar="index" selection="#{palestranteBean.palestrante}"
 							 selectionMode="single" rowKey="#{palestrante.id}"
 							 emptyMessage="Não há Palestrantes cadastrados" style="width:1120px;"
 							 paginator="false" paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
