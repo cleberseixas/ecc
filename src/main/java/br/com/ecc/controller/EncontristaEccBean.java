@@ -3,6 +3,7 @@ package br.com.ecc.controller;
 import br.com.ecc.model.*;
 import br.com.ecc.service.*;
 import br.com.ecc.util.FacesMessages;
+import br.com.ecc.util.Util;
 import org.primefaces.context.RequestContext;
 import org.primefaces.event.SelectEvent;
 
@@ -10,6 +11,7 @@ import javax.faces.event.AjaxBehaviorEvent;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -38,6 +40,8 @@ public class EncontristaEccBean implements Serializable {
 
 	private boolean habilitaBotaoIncluiCasaisEncontristas = true;
 
+	private boolean habilitaBotaoImprimirCasaisEncontristas = true;
+
 	@Inject
 	private EncontristaEccService encontristaEccService;
 
@@ -58,6 +62,8 @@ public class EncontristaEccBean implements Serializable {
 	private List<EncontristaEcc> listaUltimoEncontristaEcc;
 
 	private String statusEcc = "ENCERRADO";
+
+	private String urlRelatorio;
 
 	public EncontristaEcc getEncontristaEcc() {
 		return encontristaEcc;
@@ -118,6 +124,14 @@ public class EncontristaEccBean implements Serializable {
 		this.habilitaBotaoIncluiCasaisEncontristas = habilitaBotaoIncluiCasaisEncontristas;
 	}
 
+	public boolean isHabilitaBotaoImprimirCasaisEncontristas() {
+		return habilitaBotaoImprimirCasaisEncontristas;
+	}
+
+	public void setHabilitaBotaoImprimirCasaisEncontristas(boolean habilitaBotaoImprimirCasaisEncontristas) {
+		this.habilitaBotaoImprimirCasaisEncontristas = habilitaBotaoImprimirCasaisEncontristas;
+	}
+
 	public Ecc getIdEcc() {
 		return idEcc;
 	}
@@ -145,7 +159,16 @@ public class EncontristaEccBean implements Serializable {
 		this.statusEcc = statusEcc;
 	}
 
+	public String getUrlRelatorio() {
+		return urlRelatorio;
+	}
+
+	public void setUrlRelatorio(String urlRelatorio) {
+		this.urlRelatorio = urlRelatorio;
+	}
+
 	private void habilitaTodosBotoesEnconstristaEcc() {
+		habilitaBotaoImprimirCasaisEncontristas = true;
 		if (this.encontristaEcc.getEncontristasEccCasais().size() > 0) {
 			habilitaBotaoExcluirEncontristaEcc = true;
 		} else {
@@ -157,6 +180,7 @@ public class EncontristaEccBean implements Serializable {
 	private void desabilitaTodosBotoesEnconstristaEcc() {
 		habilitaBotaoExcluirEncontristaEcc = true;
 		habilitaBotaoIncluiCasaisEncontristas = true;
+		habilitaBotaoImprimirCasaisEncontristas = false;
 	}
 
 	public void novoEncontrista() {
@@ -272,6 +296,19 @@ public class EncontristaEccBean implements Serializable {
 			listaUltimoEncontristaEcc = encontristaEccService.filtraEncontristaPorEccStatus(idEcc.getId(), statusEcc);
 		} else {
 			listaUltimoEncontristaEcc = encontristaEccService.filtraEncontristaPorEccStatus(0L, statusEcc);
+		}
+	}
+
+	public void imprimirEncontristas() throws IOException {
+		try {
+			System.out.println("ECC " + encontristaEcc.getEcc().getId());
+
+			urlRelatorio = Util.retornaURLRelatorio();
+
+			urlRelatorio += "/rptEncontristas.rptdesign&ecc=" + encontristaEcc.getEcc().getId();
+			System.out.println(urlRelatorio);
+		} catch (Exception ex) {
+			System.err.println("O arquivo não foi gerado corretamente!");
 		}
 	}
 }

@@ -2,6 +2,7 @@ package br.com.ecc.util;
 
 import org.joda.time.DateTime;
 import org.joda.time.Days;
+import org.omnifaces.util.Faces;
 
 import java.math.BigInteger;
 import java.text.DateFormat;
@@ -237,5 +238,20 @@ public class Util {
 			}
 		}
 		return apenasNumeros;
+	}
+
+	public static String retornaURLRelatorio() {
+		String urlAplicacao = Faces.getRequest().getRequestURL().toString();
+		String urlRelatorio = "";
+
+		System.out.println("C A M I N H O  D A  A P L I C A Ç Ã O : " + urlAplicacao);
+
+		if (urlAplicacao.contains("179.155.225.37")) {
+			urlRelatorio = Constantes.URL_BIRT_SERVER;
+		} else {
+			urlRelatorio = Constantes.URL_BIRT_LOCAL;
+		}
+		System.out.println("URL DO RELATÓRIO : " + urlRelatorio);
+		return urlRelatorio;
 	}
 }

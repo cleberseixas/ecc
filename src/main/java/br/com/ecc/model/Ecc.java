@@ -69,7 +69,7 @@ public class Ecc implements Serializable {
 
     //@OneToMany(mappedBy="ecc", fetch=FetchType.EAGER, cascade = CascadeType.ALL)
 
-    @ManyToMany(fetch= FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToMany(fetch= FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(name = "ECCS_DIRIGENTES",
             joinColumns = @JoinColumn(name = "ECC"),
             inverseJoinColumns = @JoinColumn(name = "DIRIGENTE"))

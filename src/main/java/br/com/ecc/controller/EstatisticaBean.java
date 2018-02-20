@@ -7,14 +7,11 @@ import br.com.ecc.model.util.Aptidao;
 import br.com.ecc.model.util.Atividade;
 import br.com.ecc.service.*;
 import br.com.ecc.util.Constantes;
-import org.omnifaces.util.Faces;
+import br.com.ecc.util.Util;
 
+import javax.faces.component.UIComponent;
 import javax.faces.component.UIParameter;
 import javax.faces.event.ActionEvent;
-
-import javax.enterprise.context.SessionScoped;
-import javax.faces.component.UIComponent;
-import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -27,6 +24,8 @@ import java.util.List;
 @ViewScoped
 public class EstatisticaBean implements Serializable {
 	private static final long serialVersionUID = 1L;
+
+	private String filtroEncontrista;
 
 	private String eccFiltro;
 
@@ -81,6 +80,14 @@ public class EstatisticaBean implements Serializable {
 
 	@Inject
 	private EquipeEccService equipeEccService;
+
+	public String getFiltroEncontrista() {
+		return filtroEncontrista;
+	}
+
+	public void setFiltroEncontrista(String filtroEncontrista) {
+		this.filtroEncontrista = filtroEncontrista;
+	}
 
 	public String getEccFiltro() {
 		return eccFiltro;
@@ -227,16 +234,7 @@ public class EstatisticaBean implements Serializable {
 	}
 
 	public void setarURLBirtNosRelatorios() {
-
-		String urlAplicacao = Faces.getRequest().getRequestURL().toString();
-		System.out.println("C A M I N H O  D A  A P L I C A Ç Ã O : "+urlAplicacao);
-
-		if (urlAplicacao.contains("179.155.225.37")) {
-			urlRelatorio = Constantes.URL_BIRT_SERVER;
-		} else {
-			urlRelatorio = Constantes.URL_BIRT_LOCAL;
-		}
-		System.out.println("URL DO RELATÓRIO : "+urlRelatorio);
+		urlRelatorio = Util.retornaURLRelatorio();
 	}
 
 	public String filtraUltimoEcc() {
@@ -247,9 +245,8 @@ public class EstatisticaBean implements Serializable {
 	public void indicadoresIniciais() {
 		setarURLBirtNosRelatorios();
 
-
-
-		listaDosEccs = eccService.listaEccPorFiltroEncerradoAndamento("ENCERRADO");
+		//listaDosEccs = eccService.listaEccPorFiltroEncerradoAndamento("ENCERRADO");
+		listaDosEccs = eccService.listar();
 		listaDosEccsAuxiliar = listaDosEccs;
 
 		numeroEncontreiros = fichaService.listarEncontreiroEncontrista(Constantes.ENCONTREIRO).size();
@@ -268,6 +265,9 @@ public class EstatisticaBean implements Serializable {
 		listaDasEquipesAuxiliar = listaDasEquipes;
 
 		this.eccFiltro= filtraUltimoEcc();
+		this.filtroEncontrista = this.eccFiltro;
+		//this.eccFiltro= filtraUltimoEcc();
+		filtraPorEcc();
 		filtraPorEquipes();
 		filtraPorEncontristasCirculos();
 
@@ -332,10 +332,11 @@ public class EstatisticaBean implements Serializable {
 				for (CirculoEcc circuloEcc : listaDosCirculos) {
 					if (circuloEcc.getEcc().getNumero().equals(eccFiltro)) {
 						aux.add(circuloEcc);
-					}
+						filtroEncontrista = circuloEcc.getEcc().getId().toString();
+					} else filtroEncontrista = circuloEcc.getEcc().getId().toString();
 				}
 				listaDosCirculos = aux;
-			}
+			} else filtroEncontrista = "";
 		}
 
 		if (null != circuloFiltro) {
@@ -427,19 +428,13 @@ public class EstatisticaBean implements Serializable {
 
 			int aptidao = (int) param_01.getValue();
 
-			//urlRelatorio = Constantes.URL_BIRT_LOCAL+"/rptAptidoes.rptdesign&aptidao="+aptidao;
-
-
 			urlRelatorio += "/rptAptidoes.rptdesign&aptidao="+aptidao;
-
-
 			//FacesContext.getCurrentInstance().getExternalContext().redirect(urlRelatorio);
 		} catch (Exception ex) {
 			System.err.println("O arquivo não foi gerado corretamente!");
 		}
-
-
 	}
+
 
 	/*
 	public void imprimirPareceresConcluidosCidade(ActionEvent event) {

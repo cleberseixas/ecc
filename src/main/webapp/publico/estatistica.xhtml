@@ -154,16 +154,15 @@
 							<p:selectOneMenu id="ecc" value="#{estatisticaBean.eccFiltro}"
 											 style="width:105px;margin-left:277px;display: inline-table">
 								<f:selectItem itemLabel="TODOS"/>
-								<f:selectItems value="#{estatisticaBean.listaDosEccs}"
+								<f:selectItems value="#{eccBean.listaEcc}"
 											   var="ecc" itemValue="#{ecc.numero}"
 											   itemLabel="#{ecc.numero}" />
 								<p:ajax listener="#{estatisticaBean.filtraPorEcc()}"
 										event="change" update="tabelaECC" />
 							</p:selectOneMenu>
-							<p:commandLink actionListener="#{estatisticaBean.imprimirEcc}" rendered="false"
-										   target="_blank" ajax="false" immediate="true">
-								<p:button icon="ui-icon-print" style="margin-left: 5px;" />
-							</p:commandLink>
+							<p:commandButton type="button" icon="ui-icon-print" style="margin-left: 5px;">
+								<p:printer target="tabelaECC"/>
+							</p:commandButton>
 						</div>
 					</div>
 					<div id="divEstatisticaECCSuperiorEsquerda_02">
@@ -356,16 +355,15 @@
 							<p:selectOneMenu id="ecc1" value="#{estatisticaBean.eccFiltro}"
 											 style="width:80px;margin-left:24px;display: inline-table">
 								<f:selectItem itemLabel="TODOS"/>
-								<f:selectItems value="#{estatisticaBean.listaDosEccs}"
+								<f:selectItems value="#{eccBean.listaEcc}"
 											   var="ecc" itemValue="#{ecc.numero}"
 											   itemLabel="#{ecc.numero}" />
 								<p:ajax listener="#{estatisticaBean.filtraPorEncontristasCirculos()}"
 										event="change" update="tabelaEncontristasCirculos" />
 							</p:selectOneMenu>
-							<p:commandLink actionListener="#{estatisticaBean.imprimirEcc}"
-										   target="_blank" ajax="false" immediate="true">
-								<p:button icon="ui-icon-print" style="margin-left: 5px;" />
-							</p:commandLink>
+							<p:commandButton type="button" icon="ui-icon-print" style="margin-left: 5px;" rendered="true">
+								<p:printer target="tabelaEncontristasCirculos"/>
+							</p:commandButton>
 						</div>
 					</div>
 					<div id="divEstatisticaChefeInferiorEsquerda_02">
@@ -399,7 +397,7 @@
 														style="width:20px; height:20px; float: right;" title="Foto dele"/>
 										<h:graphicImage library="imagens" value="/image?imagem=#{circulo.casalCoordenador.fotoEla}" rendered="#{circulo.casalCoordenador.fotoEla.length() > 0}"
 														style="width:20px; height:20px; float: left;" title="Foto dela"/>
-
+										<f:param id="ID_ECC" value="2"/>
 									</h:panelGrid>
 								</f:facet>
 								<p:column>
@@ -445,8 +443,6 @@
 						<p:commandButton type="button" icon="ui-icon-print" style="margin-left: 5px;">
 							<p:printer target="tabelaEquipes"/>
 						</p:commandButton>
-
-
 					</div>
 				</div>
 				<div id="divEstatisticaChefeInferiorDireita_01">
@@ -472,7 +468,7 @@
 								</h:panelGrid>
 							</f:facet>
 							<p:column>
-								<h:outputText value="#{equipeCasais.ficha.nomeUsual}" />
+								<h:outputText value="#{equipeCasais.ficha.nomeUsual} - #{equipeCasais.ficha.telefoneEle} / #{equipeCasais.ficha.telefoneEla}" />
 								<h:graphicImage library="imagens" value="/image?imagem=#{equipeCasais.ficha.fotoEla}" rendered="#{equipeCasais.ficha.fotoEla.length() > 0}"
 												style="width:20px; height:20px; float: right;" title="Foto dela"/>
 								<h:graphicImage library="imagens" value="/image?imagem=#{equipeCasais.ficha.fotoEle}" rendered="#{equipeCasais.ficha.fotoEle.length() > 0}"
