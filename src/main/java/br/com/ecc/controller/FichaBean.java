@@ -296,7 +296,7 @@ public class FichaBean implements Serializable {
 
 	private void habilitaTodosBotoesFicha() {
 		if (ficha.getSituacao().equals("ENCONTREIRO")) {
-			habilitaBotaoIncluiAptidoes = true;
+			//habilitaBotaoIncluiAptidoes = true;
 			habilitaBotaoIncluiAtividades = false;
 			if (ficha.getAtividades().size() > 0) {
 				habilitaBotaoExcluirFicha = true;
@@ -304,8 +304,7 @@ public class FichaBean implements Serializable {
 				habilitaBotaoExcluirFicha = false;
 			}
 		}  else {
-				habilitaBotaoIncluiAptidoes = false;
-				habilitaBotaoIncluiAtividades = true;
+				//habilitaBotaoIncluiAptidoes = false;
 				if (ficha.getAptidaos().size() > 0) {
 					habilitaBotaoExcluirFicha = true;
 				} else {
@@ -315,6 +314,7 @@ public class FichaBean implements Serializable {
 		habilitaBotaoEditarFicha = false;
 		habilitaBotaoDetalhesFicha = false;
 		habilitaBotaoFoto = false;
+		habilitaBotaoIncluiAptidoes = false;
 	}
 
 	private void desabilitaTodosBotoesFicha() {

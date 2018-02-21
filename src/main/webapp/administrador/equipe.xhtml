@@ -126,11 +126,12 @@
 			style="width:616px; background:#F1F2F5;">
 			<h:message />
 			<h:inputHidden value="#{equipeBean.equipe.id}" />
-			<h:panelGrid columns="4">
+			<h:panelGrid columns="5">
 				<h:outputLabel value="Descrição" for="descricao" />
 				<h:outputLabel value="Sigla" for="sigla"/>
 				<h:outputLabel value="Mínimo" for="minimoCasal" />
 				<h:outputLabel value="Máximo" for="maximoCasal" />
+				<h:outputLabel value="Ordem" for="ordemImpressao" />
 				<p:inputText id="descricao" value="#{equipeBean.equipe.descricao}"
 					required="true" requiredMessage="O campo Descrição é obrigatório"
 					maxlength="100" style="width:350px;">
@@ -148,6 +149,11 @@
 							 required="true" requiredMessage="O campo Máximo de Casais é obrigatório"
 							 maxlength="10" style="width:45px;">
 				</p:inputText>
+				<p:inputText id="ordemImpressao" value="#{equipeBean.equipe.ordemImpressao}"
+							 required="false" requiredMessage="O campo Ordem de Impressão é obrigatório"
+							 maxlength="3" style="width:45px;">
+				</p:inputText>
+
 			</h:panelGrid>
 			<h:panelGrid columns="4">
 				<p:selectBooleanCheckbox value="#{equipeBean.equipe.automatica}" itemLabel="Automática?" style="margin-left:5px;" />
@@ -185,6 +191,11 @@
 				<f:facet name="header">Máximo</f:facet>
 				#{equipe.maximoCasal}
 			</p:column>
+			<p:column width="30">
+				<f:facet name="header">Ordem</f:facet>
+				#{equipe.ordemImpressao}
+			</p:column>
+
 
 			<p:column width="50">
 				<f:facet name="header">Ativo</f:facet>

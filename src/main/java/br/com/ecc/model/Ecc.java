@@ -67,6 +67,16 @@ public class Ecc implements Serializable {
     @Column(name="USUARIO_ENCERROU", length=20, nullable = true)
     private String usuarioEncerrou;
 
+    @Column(name="DIRETOR_ESPIRITUAL", length=60, nullable = true)
+    private String diretorEspiritual;
+
+    @Column(name="ENDERECO_DIRETOR", length=60, nullable = true)
+    private String enderecoDiretor;
+
+    @Column(name="TELEFONE_DIRETOR", length=40, nullable = true)
+    private String telefoneDiretor;
+
+
     //@OneToMany(mappedBy="ecc", fetch=FetchType.EAGER, cascade = CascadeType.ALL)
 
     @ManyToMany(fetch= FetchType.EAGER, cascade = CascadeType.ALL)
@@ -169,6 +179,30 @@ public class Ecc implements Serializable {
 
     public void setUsuarioEncerrou(String usuarioEncerrou) {
         this.usuarioEncerrou = usuarioEncerrou;
+    }
+
+    public String getDiretorEspiritual() {
+        return diretorEspiritual;
+    }
+
+    public void setDiretorEspiritual(String diretorEspiritual) {
+        this.diretorEspiritual = diretorEspiritual;
+    }
+
+    public String getEnderecoDiretor() {
+        return enderecoDiretor;
+    }
+
+    public void setEnderecoDiretor(String enderecoDiretor) {
+        this.enderecoDiretor = enderecoDiretor;
+    }
+
+    public String getTelefoneDiretor() {
+        return telefoneDiretor;
+    }
+
+    public void setTelefoneDiretor(String telefoneDiretor) {
+        this.telefoneDiretor = telefoneDiretor;
     }
 
     public List<DirigenteEcc> getDirigentes() {

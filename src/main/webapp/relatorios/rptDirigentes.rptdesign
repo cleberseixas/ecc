@@ -3,24 +3,10 @@
     <property name="author">44260 - Cleber de Oliveira Seixas</property>
     <property name="comments">Copyright (c) 2007 &lt;&lt;Your Company Name here>></property>
     <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201606072122</property>
-    <text-property name="title">Relatório de Encontristas</text-property>
+    <text-property name="title">Relatório de Dirigentes</text-property>
     <html-property name="description">Provides instructions for building a customer listing report.</html-property>
-    <list-property name="propertyBindings">
-        <structure>
-            <property name="name">queryText</property>
-            <property name="id">249</property>
-        </structure>
-        <structure>
-            <property name="name">queryTimeOut</property>
-            <property name="id">249</property>
-        </structure>
-        <structure>
-            <property name="name">rowFetchSize</property>
-            <property name="id">249</property>
-        </structure>
-    </list-property>
     <property name="units">cm</property>
-    <text-property name="displayName">Relatório de Encontristas</text-property>
+    <text-property name="displayName">Relatório de Dirigentes</text-property>
     <property name="iconFile">/templates/first_report.gif</property>
     <property name="cheatSheet">org.eclipse.birt.report.designer.ui.cheatsheet.firstreport</property>
     <property name="layoutPreference">auto layout</property>
@@ -29,7 +15,6 @@
         <scalar-parameter name="ecc" id="806">
             <text-property name="promptText">ECC</text-property>
             <property name="valueType">static</property>
-            <property name="isRequired">true</property>
             <property name="dataType">decimal</property>
             <property name="distinct">true</property>
             <list-property name="selectionList"/>
@@ -65,25 +50,8 @@
         </oda-data-source>
     </data-sources>
     <data-sets>
-        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="DSEncontristas" id="249">
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="DSDirigentes" id="249">
             <property name="nullsOrdering">nulls lowest</property>
-            <list-property name="computedColumns">
-                <structure>
-                    <property name="name">rownum</property>
-                    <property name="dataType">integer</property>
-                    <property name="aggregateFunction">RUNNINGCOUNT</property>
-                </structure>
-                <structure>
-                    <property name="name">colnum</property>
-                    <expression name="expression">2 - BirtMath.mod(row["rownum"],2)</expression>
-                    <property name="dataType">integer</property>
-                </structure>
-                <structure>
-                    <property name="name">clubeRownum</property>
-                    <expression name="expression">BirtMath.ceiling(row["rownum"],2)</expression>
-                    <property name="dataType">integer</property>
-                </structure>
-            </list-property>
             <list-property name="columnHints">
                 <structure>
                     <property name="columnName">ecc</property>
@@ -144,6 +112,36 @@
                     <property name="analysis">measure</property>
                     <text-property name="displayName">ano</text-property>
                     <text-property name="heading">ano</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">diretor</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">diretor</text-property>
+                    <text-property name="heading">diretor</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">padre</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">padre</text-property>
+                    <text-property name="heading">padre</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">end_padre</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">end_padre</text-property>
+                    <text-property name="heading">end_padre</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">tel_padre</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">tel_padre</text-property>
+                    <text-property name="heading">tel_padre</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">casal</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">casal</text-property>
+                    <text-property name="heading">casal</text-property>
                 </structure>
                 <structure>
                     <property name="columnName">ele</property>
@@ -236,38 +234,48 @@
                     </structure>
                     <structure>
                         <property name="position">11</property>
-                        <property name="name">ele</property>
+                        <property name="name">diretor</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">12</property>
-                        <property name="name">ela</property>
+                        <property name="name">padre</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">13</property>
-                        <property name="name">endereco</property>
+                        <property name="name">end_padre</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">14</property>
-                        <property name="name">telefone</property>
+                        <property name="name">tel_padre</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">15</property>
-                        <property name="name">rownum</property>
-                        <property name="dataType">integer</property>
+                        <property name="name">casal</property>
+                        <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">16</property>
-                        <property name="name">colnum</property>
-                        <property name="dataType">integer</property>
+                        <property name="name">ele</property>
+                        <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">17</property>
-                        <property name="name">clubeRownum</property>
-                        <property name="dataType">integer</property>
+                        <property name="name">ela</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">18</property>
+                        <property name="name">endereco</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">19</property>
+                        <property name="name">telefone</property>
+                        <property name="dataType">string</property>
                     </structure>
                 </list-property>
             </structure>
@@ -346,27 +354,62 @@
                 </structure>
                 <structure>
                     <property name="position">11</property>
+                    <property name="name">diretor</property>
+                    <property name="nativeName">diretor</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">padre</property>
+                    <property name="nativeName">padre</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">end_padre</property>
+                    <property name="nativeName">end_padre</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">tel_padre</property>
+                    <property name="nativeName">tel_padre</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">casal</property>
+                    <property name="nativeName">casal</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">16</property>
                     <property name="name">ele</property>
                     <property name="nativeName">ele</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
-                    <property name="position">12</property>
+                    <property name="position">17</property>
                     <property name="name">ela</property>
                     <property name="nativeName">ela</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
-                    <property name="position">13</property>
+                    <property name="position">18</property>
                     <property name="name">endereco</property>
                     <property name="nativeName">endereco</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
-                    <property name="position">14</property>
+                    <property name="position">19</property>
                     <property name="name">telefone</property>
                     <property name="nativeName">telefone</property>
                     <property name="dataType">string</property>
@@ -392,119 +435,35 @@
 		  WHEN extract(MONTH from EC.DATA_FIM) = 12 THEN 'DEZEMBRO'
 		END AS MES,
 		extract(YEAR from EC.DATA_FIM)ANO,
-	    FI.NOME_ELE||' - '||FI.NOME_USUAL_ELE AS ELE,
-		FI.NOME_ELA||' - '||FI.NOME_USUAL_ELA AS ELA,        CONCAT_WS(', ', FI.RUA::TEXT, FI.NUMERO::TEXT, FI.COMPLEMENTO::TEXT, FI.BAIRRO::TEXT) AS ENDERECO,
+		'DIRETOR ESPIRITUAL' AS DIRETOR,
+		EC.DIRETOR_ESPIRITUAL AS PADRE,
+		EC.ENDERECO_DIRETOR END_PADRE,
+		EC.TELEFONE_DIRETOR AS TEL_PADRE,		
+		CASE 
+		 WHEN DI.EQUIPE = 13 THEN 'CASAL PALESTRA'
+		ELSE
+		 'CASAL '||EQ.DESCRICAO
+		END AS CASAL,
+		FI.NOME_ELE||' - '||FI.NOME_USUAL_ELE AS ELE,
+		FI.NOME_ELA||' - '||FI.NOME_USUAL_ELA AS ELA,
+		CONCAT_WS(', ', FI.RUA::TEXT, FI.NUMERO::TEXT, FI.COMPLEMENTO::TEXT, FI.BAIRRO::TEXT) AS ENDERECO,
 		FI.TELEFONE_ELE||' / '||FI.TELEFONE_ELA AS TELEFONE
 
 	FROM 
 	ECCS EC 
-	INNER JOIN ENCONTRISTAS_ECCS_CASAIS EE ON EE.ECC = EC.ECC
-	INNER JOIN FICHAS FI ON FI.FICHA = EE.FICHA
+	INNER JOIN DIRIGENTES DI ON DI.ECC = EC.ECC
+	INNER JOIN EQUIPES EQ ON EQ.EQUIPE = DI.EQUIPE
+	INNER JOIN FICHAS FI ON FI.FICHA = DI.FICHA
 	WHERE 
-		EC.ECC = ?
-	ORDER BY FI.NOME_ELE
-]]></xml-property>
-            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
-  <Version>2.0</Version>
-  <DataSetParameters>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name></design:name>
-            <design:position>1</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
-          <design:precision>0</design:precision>
-          <design:scale>0</design:scale>
-          <design:nullability>Unknown</design:nullability>
-        </design:attributes>
-      </design:ParameterDefinition>
-    </parameter>
-  </DataSetParameters>
-</model:DesignValues>]]></xml-property>
+	  DI.EQUIPE IN (6, 5, 13, 7, 9)
+	  AND
+	  EC.ECC = ?
+ORDER BY EQ.ORDEM, FI.NOME_ELE]]></xml-property>
         </oda-data-set>
     </data-sets>
     <cubes>
         <tabular-cube name="Data Cube - DSEncontristas" id="630">
-            <property name="dimensions">
-                <tabular-dimension name="row" id="724">
-                    <property name="defaultHierarchy">NewTabularHierarchy</property>
-                    <property name="hierarchies">
-                        <tabular-hierarchy name="NewTabularHierarchy" id="725">
-                            <property name="levels">
-                                <tabular-level name="rownum" id="726">
-                                    <property name="dataType">integer</property>
-                                    <property name="columnName">rownum</property>
-                                </tabular-level>
-                            </property>
-                        </tabular-hierarchy>
-                    </property>
-                </tabular-dimension>
-                <tabular-dimension name="coluna" id="727">
-                    <property name="defaultHierarchy">NewTabularHierarchy1</property>
-                    <property name="hierarchies">
-                        <tabular-hierarchy name="NewTabularHierarchy1" id="728">
-                            <property name="levels">
-                                <tabular-level name="colnum" id="729">
-                                    <property name="dataType">integer</property>
-                                    <property name="columnName">colnum</property>
-                                </tabular-level>
-                            </property>
-                        </tabular-hierarchy>
-                    </property>
-                </tabular-dimension>
-                <tabular-dimension name="CubeRow" id="730">
-                    <property name="defaultHierarchy">NewTabularHierarchy2</property>
-                    <property name="hierarchies">
-                        <tabular-hierarchy name="NewTabularHierarchy2" id="731">
-                            <property name="levels">
-                                <tabular-level name="clubeRownum" id="732">
-                                    <property name="dataType">integer</property>
-                                    <property name="columnName">clubeRownum</property>
-                                </tabular-level>
-                            </property>
-                        </tabular-hierarchy>
-                    </property>
-                </tabular-dimension>
-            </property>
-            <property name="measureGroups">
-                <tabular-measure-group name="Summary Field" id="637">
-                    <property name="measures">
-                        <tabular-measure name="ele" id="640">
-                            <property name="function">first</property>
-                            <property name="isCalculated">false</property>
-                            <expression name="measureExpression" type="javascript">dataSetRow["ele"]</expression>
-                            <property name="dataType">string</property>
-                            <property name="isVisible">true</property>
-                        </tabular-measure>
-                        <tabular-measure name="ela" id="767">
-                            <property name="function">first</property>
-                            <property name="isCalculated">false</property>
-                            <expression name="measureExpression" type="javascript">dataSetRow["ela"]</expression>
-                            <property name="dataType">string</property>
-                            <property name="isVisible">true</property>
-                        </tabular-measure>
-                        <tabular-measure name="endereco" id="773">
-                            <property name="function">first</property>
-                            <property name="isCalculated">false</property>
-                            <expression name="measureExpression" type="javascript">dataSetRow["endereco"]</expression>
-                            <property name="dataType">string</property>
-                            <property name="isVisible">true</property>
-                        </tabular-measure>
-                        <tabular-measure name="telefone" id="774">
-                            <property name="function">first</property>
-                            <property name="isCalculated">false</property>
-                            <expression name="measureExpression" type="javascript">dataSetRow["telefone"]</expression>
-                            <property name="dataType">string</property>
-                            <property name="isVisible">true</property>
-                        </tabular-measure>
-                    </property>
-                </tabular-measure-group>
-            </property>
-            <property name="dataSet">DSEncontristas</property>
+            <property name="dataSet">DSDirigentes</property>
         </tabular-cube>
     </cubes>
     <styles>
@@ -591,7 +550,7 @@
                         <property name="fontSize">12pt</property>
                         <property name="fontWeight">bold</property>
                         <property name="textAlign">center</property>
-                        <property name="dataSet">DSEncontristas</property>
+                        <property name="dataSet">DSDirigentes</property>
                         <list-property name="boundDataColumns">
                             <structure>
                                 <property name="name">numero</property>
@@ -618,7 +577,7 @@
                         <property name="marginTop">0pt</property>
                         <property name="textAlign">center</property>
                         <property name="contentType">auto</property>
-                        <text-property name="content"><![CDATA[ENCONTRISTAS]]></text-property>
+                        <text-property name="content"><![CDATA[EQUIPE DE DIRIGENTE DO ECC NA PARÓQUIA]]></text-property>
                     </text>
                     <text id="801">
                         <property name="fontSize">11pt</property>
@@ -632,189 +591,138 @@
                 </cell>
             </row>
         </grid>
-        <extended-item extensionName="Crosstab" extensionVersion="3.7.0" id="733">
-            <property name="cube">Data Cube - DSEncontristas</property>
-            <property name="measures">
-                <extended-item extensionName="MeasureView" id="750">
-                    <property name="measure">ele</property>
-                    <property name="detail">
-                        <extended-item extensionName="AggregationCell" id="751">
-                            <property name="aggregationOnRow">CubeRow/clubeRownum</property>
-                            <property name="aggregationOnColumn">coluna/colnum</property>
-                            <property name="borderTopStyle">none</property>
-                            <property name="borderLeftStyle">none</property>
-                            <property name="borderBottomStyle">none</property>
-                            <property name="borderRightStyle">none</property>
-                            <property name="height">3.2014583333333335cm</property>
-                            <property name="width">9.789583333333333cm</property>
-                            <property name="content">
-                                <data id="752">
-                                    <property name="fontWeight">bold</property>
-                                    <property name="textAlign">left</property>
-                                    <property name="resultSetColumn">ele_CubeRow/clubeRownum_coluna/colnum</property>
-                                </data>
-                                <data id="770">
-                                    <property name="fontWeight">bold</property>
-                                    <property name="textAlign">left</property>
-                                    <property name="resultSetColumn">ela_CubeRow/clubeRownum_coluna/colnum</property>
-                                </data>
-                                <data id="783">
-                                    <property name="textAlign">left</property>
-                                    <property name="resultSetColumn">endereco_CubeRow/clubeRownum_coluna/colnum</property>
-                                </data>
-                                <data id="789">
-                                    <property name="textAlign">left</property>
-                                    <property name="resultSetColumn">telefone_CubeRow/clubeRownum_coluna/colnum</property>
-                                </data>
-                                <text id="804">
-                                    <property name="contentType">auto</property>
-                                    <text-property name="content"><![CDATA[    ]]></text-property>
-                                </text>
-                            </property>
-                        </extended-item>
-                    </property>
-                    <property name="header">
-                        <extended-item extensionName="CrosstabCell" id="753">
-                            <property name="borderTopStyle">none</property>
-                            <property name="borderLeftStyle">none</property>
-                            <property name="borderBottomStyle">none</property>
-                            <property name="borderRightStyle">none</property>
-                        </extended-item>
-                    </property>
-                </extended-item>
-            </property>
-            <property name="rows">
-                <extended-item extensionName="CrosstabView" id="735">
-                    <property name="views">
-                        <extended-item extensionName="DimensionView" id="745">
-                            <property name="dimension">CubeRow</property>
-                            <property name="levels">
-                                <extended-item extensionName="LevelView" name="NewLevel View2" id="746">
-                                    <property name="level">CubeRow/clubeRownum</property>
-                                    <property name="member">
-                                        <extended-item extensionName="CrosstabCell" id="747">
-                                            <property name="verticalAlign">top</property>
-                                            <property name="borderTopStyle">none</property>
-                                            <property name="borderLeftStyle">none</property>
-                                            <property name="borderBottomStyle">none</property>
-                                            <property name="borderRightStyle">none</property>
-                                            <property name="width">0cm</property>
-                                        </extended-item>
-                                    </property>
-                                </extended-item>
-                            </property>
-                        </extended-item>
-                    </property>
-                </extended-item>
-            </property>
-            <property name="columns">
-                <extended-item extensionName="CrosstabView" id="762">
-                    <property name="views">
-                        <extended-item extensionName="DimensionView" id="740">
-                            <property name="dimension">coluna</property>
-                            <property name="levels">
-                                <extended-item extensionName="LevelView" name="NewLevel View1" id="741">
-                                    <property name="level">coluna/colnum</property>
-                                    <property name="member">
-                                        <extended-item extensionName="CrosstabCell" id="742">
-                                            <property name="borderTopStyle">none</property>
-                                            <property name="borderLeftStyle">none</property>
-                                            <property name="borderBottomStyle">none</property>
-                                            <property name="borderRightStyle">none</property>
-                                            <property name="height">0.714375cm</property>
-                                        </extended-item>
-                                    </property>
-                                </extended-item>
-                            </property>
-                        </extended-item>
-                    </property>
-                </extended-item>
-            </property>
-            <property name="header">
-                <extended-item extensionName="CrosstabCell" id="748">
-                    <property name="verticalAlign">top</property>
-                    <property name="borderTopStyle">none</property>
-                    <property name="borderLeftStyle">none</property>
-                    <property name="borderBottomStyle">none</property>
-                    <property name="borderRightStyle">none</property>
-                </extended-item>
-            </property>
-            <property name="hideMeasureHeader">true</property>
-            <property name="borderTopStyle">none</property>
-            <property name="borderLeftStyle">none</property>
-            <property name="borderBottomStyle">none</property>
-            <property name="borderRightStyle">none</property>
+        <table id="878">
+            <property name="dataSet">DSDirigentes</property>
             <list-property name="boundDataColumns">
                 <structure>
-                    <property name="name">colnum</property>
-                    <expression name="expression">dimension["coluna"]["colnum"]</expression>
-                    <property name="dataType">integer</property>
-                </structure>
-                <structure>
-                    <property name="name">clubeRownum</property>
-                    <expression name="expression">dimension["CubeRow"]["clubeRownum"]</expression>
-                    <property name="dataType">integer</property>
-                </structure>
-                <structure>
-                    <property name="name">ele_CubeRow/clubeRownum</property>
-                    <expression name="expression">measure["ele"]</expression>
+                    <property name="name">casal</property>
+                    <text-property name="displayName">casal</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["casal"]</expression>
                     <property name="dataType">string</property>
-                    <simple-property-list name="aggregateOn">
-                        <value>CubeRow/clubeRownum</value>
-                    </simple-property-list>
-                    <property name="aggregateFunction">FIRST</property>
                 </structure>
                 <structure>
-                    <property name="name">ele_CubeRow/clubeRownum_coluna/colnum</property>
+                    <property name="name">ele</property>
+                    <text-property name="displayName">ele</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ele"]</expression>
                     <property name="dataType">string</property>
-                    <simple-property-list name="aggregateOn">
-                        <value>CubeRow/clubeRownum</value>
-                        <value>coluna/colnum</value>
-                    </simple-property-list>
-                    <property name="aggregateFunction">FIRST</property>
-                    <list-property name="arguments">
-                        <structure>
-                            <property name="name">Expression</property>
-                            <expression name="value" type="javascript">measure["ele"]</expression>
-                        </structure>
-                    </list-property>
                 </structure>
                 <structure>
-                    <property name="name">ela_CubeRow/clubeRownum_coluna/colnum</property>
+                    <property name="name">ela</property>
+                    <text-property name="displayName">ela</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ela"]</expression>
                     <property name="dataType">string</property>
-                    <simple-property-list name="aggregateOn">
-                        <value>CubeRow/clubeRownum</value>
-                        <value>coluna/colnum</value>
-                    </simple-property-list>
-                    <property name="aggregateFunction">FIRST</property>
-                    <list-property name="arguments">
-                        <structure>
-                            <property name="name">Expression</property>
-                            <expression name="value" type="javascript">measure["ela"]</expression>
-                        </structure>
-                    </list-property>
                 </structure>
                 <structure>
-                    <property name="name">endereco_CubeRow/clubeRownum_coluna/colnum</property>
-                    <expression name="expression">measure["endereco"]</expression>
+                    <property name="name">endereco</property>
+                    <text-property name="displayName">endereco</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["endereco"]</expression>
                     <property name="dataType">string</property>
-                    <simple-property-list name="aggregateOn">
-                        <value>CubeRow/clubeRownum</value>
-                        <value>coluna/colnum</value>
-                    </simple-property-list>
-                    <property name="aggregateFunction">FIRST</property>
                 </structure>
                 <structure>
-                    <property name="name">telefone_CubeRow/clubeRownum_coluna/colnum</property>
-                    <expression name="expression">measure["telefone"]</expression>
+                    <property name="name">telefone</property>
+                    <text-property name="displayName">telefone</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["telefone"]</expression>
                     <property name="dataType">string</property>
-                    <simple-property-list name="aggregateOn">
-                        <value>CubeRow/clubeRownum</value>
-                        <value>coluna/colnum</value>
-                    </simple-property-list>
-                    <property name="aggregateFunction">FIRST</property>
+                </structure>
+                <structure>
+                    <property name="name">diretor</property>
+                    <text-property name="displayName">diretor</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["diretor"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">padre</property>
+                    <text-property name="displayName">padre</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["padre"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">end_padre</property>
+                    <text-property name="displayName">end_padre</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["end_padre"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">tel_padre</property>
+                    <text-property name="displayName">tel_padre</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["tel_padre"]</expression>
+                    <property name="dataType">string</property>
                 </structure>
             </list-property>
-        </extended-item>
+            <column id="887"/>
+            <header>
+                <row id="879">
+                    <cell id="880">
+                        <data id="895">
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">left</property>
+                            <property name="resultSetColumn">diretor</property>
+                        </data>
+                        <data id="896">
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">left</property>
+                            <property name="resultSetColumn">padre</property>
+                        </data>
+                        <data id="897">
+                            <property name="textAlign">left</property>
+                            <property name="resultSetColumn">end_padre</property>
+                        </data>
+                        <data id="898">
+                            <property name="textAlign">left</property>
+                            <property name="resultSetColumn">tel_padre</property>
+                        </data>
+                        <text id="899">
+                            <property name="fontFamily">serif</property>
+                            <property name="fontSize">15pt</property>
+                            <property name="textAlign">left</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[   ]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="882">
+                    <cell id="883">
+                        <data id="884">
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">left</property>
+                            <property name="resultSetColumn">casal</property>
+                        </data>
+                        <data id="888">
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">left</property>
+                            <property name="resultSetColumn">ele</property>
+                        </data>
+                        <data id="889">
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">left</property>
+                            <property name="resultSetColumn">ela</property>
+                        </data>
+                        <data id="890">
+                            <property name="textAlign">left</property>
+                            <property name="resultSetColumn">endereco</property>
+                        </data>
+                        <data id="893">
+                            <property name="textAlign">left</property>
+                            <property name="resultSetColumn">telefone</property>
+                        </data>
+                        <text id="894">
+                            <property name="fontFamily">serif</property>
+                            <property name="fontSize">15pt</property>
+                            <property name="textAlign">left</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[   ]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="885">
+                    <property name="height">0.635cm</property>
+                    <cell id="886"/>
+                </row>
+            </footer>
+        </table>
     </body>
 </report>

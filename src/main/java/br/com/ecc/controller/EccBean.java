@@ -3,12 +3,14 @@ package br.com.ecc.controller;
 import br.com.ecc.model.*;
 import br.com.ecc.service.*;
 import br.com.ecc.util.FacesMessages;
+import br.com.ecc.util.Util;
 import org.primefaces.context.RequestContext;
 import org.primefaces.event.SelectEvent;
 
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -51,9 +53,13 @@ public class EccBean implements Serializable {
 
 	private boolean habilitaBotaoEncerrarEcc = true;
 
+	private boolean habilitaBotaoImprimirDirigentes = true;
+
 	private Ecc idEcc;
 
 	private String statusEcc = "ENCERRADO";
+
+	private String urlRelatorio;
 
 	@Inject
 	private EccService eccService;
@@ -210,6 +216,14 @@ public class EccBean implements Serializable {
 		this.habilitaBotaoEncerrarEcc = habilitaBotaoEncerrarEcc;
 	}
 
+	public boolean isHabilitaBotaoImprimirDirigentes() {
+		return habilitaBotaoImprimirDirigentes;
+	}
+
+	public void setHabilitaBotaoImprimirDirigentes(boolean habilitaBotaoImprimirDirigentes) {
+		this.habilitaBotaoImprimirDirigentes = habilitaBotaoImprimirDirigentes;
+	}
+
 	public Ecc getIdEcc() {
 		return idEcc;
 	}
@@ -224,6 +238,14 @@ public class EccBean implements Serializable {
 
 	public void setStatusEcc(String statusEcc) {
 		this.statusEcc = statusEcc;
+	}
+
+	public String getUrlRelatorio() {
+		return urlRelatorio;
+	}
+
+	public void setUrlRelatorio(String urlRelatorio) {
+		this.urlRelatorio = urlRelatorio;
 	}
 
 	private void novoDirigente() {
@@ -288,6 +310,7 @@ public class EccBean implements Serializable {
 
 		habilitaBotaoIncluiDirigentes = false;
 		habilitaBotaoDetalhesEcc = false;
+		habilitaBotaoImprimirDirigentes = true;
 	}
 
 	private void desabilitaTodosBotoesEcc() {
@@ -296,6 +319,7 @@ public class EccBean implements Serializable {
 		habilitaBotaoIncluiDirigentes = false;
 		habilitaBotaoDetalhesEcc = false;
 		habilitaBotaoEncerrarEcc = true;
+		habilitaBotaoImprimirDirigentes = false;
 	}
 
 	//Incluir as regras para salvar o Ecc (Equipes)
@@ -472,6 +496,19 @@ public class EccBean implements Serializable {
 			listaUltimoEcc = eccService.filtraEccPorEccStatus(idEcc.getId(), statusEcc);
 		} else {
 			listaUltimoEcc = eccService.filtraEccPorEccStatus(0L, statusEcc);
+		}
+	}
+
+	public void imprimirDirigentes() throws IOException {
+		try {
+			System.out.println("ECC " + ecc.getId());
+
+			urlRelatorio = Util.retornaURLRelatorio();
+
+			urlRelatorio += "/rptDirigentes.rptdesign&ecc=" + ecc.getId();
+			System.out.println(urlRelatorio);
+		} catch (Exception ex) {
+			System.err.println("O arquivo não foi gerado corretamente!");
 		}
 	}
 }

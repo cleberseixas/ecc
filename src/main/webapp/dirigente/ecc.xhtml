@@ -4,8 +4,7 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:p="http://primefaces.org/ui"
-	xmlns:c="http://java.sun.com/jsp/jstl/core"
-	xmlns:ui="http://java.sun.com/jsf/facelets">
+	xmlns:pe="http://primefaces.org/ui/extensions">
 
 <h:head>
 	<title>ECC-SLG</title>
@@ -198,12 +197,17 @@
 												 process="@this"
 												 update=":listagemEccs:confirmacaoEncerrarDialog"
 												 title="Encerra o ECC selecionado."/>
+								<p:commandButton id="btnImprimirDirigentes" action="#{eccBean.imprimirDirigentes}"
+												 oncomplete="PF('exibiPDF').show()"
+												 disabled="#{eccBean.habilitaBotaoImprimirDirigentes}"
+												 icon="ui-icon-print" value="Imprimir Dirigentes" style="margin-left: 5px;"
+												 ajax="true" update="fileUpload"/>
 							</h:panelGroup>
 						</h:panelGrid>
 					</f:facet>
 					<p:ajax event="rowSelect"
 							listener="#{eccBean.onRowSelectEcc}"
-							update="btnEditar btnExcluir btnIncluiDirigentes btnDetalhes btnEncerrar" />
+							update="btnEditar btnExcluir btnIncluiDirigentes btnDetalhes btnEncerrar btnImprimirDirigentes" />
 					<p:column width="30">
 						<f:facet name="header">Número</f:facet>
 						#{ecc.numero}
@@ -216,6 +220,10 @@
 					<p:column headerText="Local" width="150">
 						<p:outputLabel value="#{ecc.local}"/>
 					</p:column>
+					<p:column headerText="Diretor Espiritual" width="150">
+						<p:outputLabel value="#{ecc.diretorEspiritual}"/>
+					</p:column>
+
 					<p:column width="50" headerText="Dirigentes">
 						#{ecc.dirigentes.size()}
 						<h:graphicImage library="imagens" name="dirigentes2.png" width="15" height="15" rendered="#{ecc.dirigentes.size() > 0}"
@@ -267,7 +275,7 @@
 		<p:dialog id="dialogNovoEcc" header="Lançar novo ECC"
 				  modal="true" widgetVar="dlgNovoEcc"
 				  style="background-color:#EBF3FE" resizable="false" width="560px"
-				  height="224px">
+				  height="320px">
 			<h:form id="cadNovoEcc">
 				<p:panel id="panelDadosEcc" style="background-color: #ffffe6">
 						<h:message />
@@ -294,7 +302,26 @@
 							<h:outputLabel value="Tema" for="tema" />
 							<p:inputText id="tema" value="#{eccBean.ecc.tema}"
 										 required="true" requiredMessage="O campo Tema é obrigatório"
-										 maxlength="200" style="width:458px;">
+										 maxlength="200" style="width:459px;">
+							</p:inputText>
+						</h:panelGrid>
+						<h:panelGrid columns="2">
+							<h:outputLabel value="Diretor Espiritual" for="diretorEspiritual" />
+							<h:outputLabel value="Telefone Diretor" for="telefoneDiretor" />
+							<p:inputText id="diretorEspiritual" value="#{eccBean.ecc.diretorEspiritual}"
+										 required="true" requiredMessage="O campo Diretor Espiritual é obrigatório"
+										 maxlength="50" style="width:287px;">
+							</p:inputText>
+							<p:inputText id="telefoneDiretor" value="#{eccBean.ecc.telefoneDiretor}"
+										 required="true" requiredMessage="O campo Telefone é obrigatório"
+										 maxlength="30" style="width:158px;">
+							</p:inputText>
+						</h:panelGrid>
+						<h:panelGrid columns="1">
+							<h:outputLabel value="Endereço Diretor" for="enderecoDiretor" />
+							<p:inputText id="enderecoDiretor" value="#{eccBean.ecc.enderecoDiretor}"
+										 required="true" requiredMessage="O campo Endereço é obrigatório"
+										 maxlength="60" style="width:459px;">
 							</p:inputText>
 						</h:panelGrid>
 						<h:panelGrid columns="3">
@@ -334,7 +361,7 @@
 		<p:dialog id="dialogEditarEcc" header="Alterar ECC"
 				  modal="true" widgetVar="dlgEditarEcc"
 				  style="background-color:#EBF3FE" resizable="false" width="560px"
-				  height="222px">
+				  height="322px">
 			<h:form id="cadEditarEcc">
 				<p:panel id="panelEditarEcc" style="background-color: #ffffe6">
 						<h:message />
@@ -362,6 +389,25 @@
 							<p:inputText id="tema" value="#{eccBean.ecc.tema}"
 										 required="true" requiredMessage="O campo Tema é obrigatório"
 										 maxlength="200" style="width:458px;">
+							</p:inputText>
+						</h:panelGrid>
+						<h:panelGrid columns="2">
+							<h:outputLabel value="Diretor Espiritual" for="diretorEspiritual" />
+							<h:outputLabel value="Telefone Diretor" for="telefoneDiretor" />
+							<p:inputText id="diretorEspiritual" value="#{eccBean.ecc.diretorEspiritual}"
+										 required="true" requiredMessage="O campo Diretor Espiritual é obrigatório"
+										 maxlength="50" style="width:287px;">
+							</p:inputText>
+							<p:inputText id="telefoneDiretor" value="#{eccBean.ecc.telefoneDiretor}"
+										 required="true" requiredMessage="O campo Telefone é obrigatório"
+										 maxlength="30" style="width:158px;">
+							</p:inputText>
+						</h:panelGrid>
+						<h:panelGrid columns="1">
+							<h:outputLabel value="Endereço Diretor" for="enderecoDiretor" />
+							<p:inputText id="enderecoDiretor" value="#{eccBean.ecc.enderecoDiretor}"
+										 required="true" requiredMessage="O campo Endereço é obrigatório"
+										 maxlength="60" style="width:459px;">
 							</p:inputText>
 						</h:panelGrid>
 						<h:panelGrid columns="3">
@@ -504,6 +550,11 @@
 					<h:graphicImage library="imagens" name="barra.gif" />
 				</div>
 			</div>
+		</p:dialog>
+		<p:dialog widgetVar="exibiPDF" modal="true" draggable="false"
+				  closable="true" resizable="false" showHeader="true" width="1200px" height="620">
+			<pe:documentViewer id = "fileUpload"
+								   height="600" url="${eccBean.urlRelatorio}"/>
 		</p:dialog>
 </h:body>
 </html>
