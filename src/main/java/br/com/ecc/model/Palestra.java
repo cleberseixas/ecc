@@ -32,6 +32,9 @@ public class Palestra implements Serializable {
     @Column(name="ATIVO", nullable = false)
     private boolean ativo = true;
 
+    @Column(name="ORDEM", length=4)
+    private Long ordemImpressao;
+
     public Long getId() {
         return id;
     }
@@ -62,6 +65,14 @@ public class Palestra implements Serializable {
 
     public void setAtivo(boolean ativo) {
         this.ativo = ativo;
+    }
+
+    public Long getOrdemImpressao() {
+        return ordemImpressao;
+    }
+
+    public void setOrdemImpressao(Long ordemImpressao) {
+        this.ordemImpressao = ordemImpressao;
     }
 
     @Override

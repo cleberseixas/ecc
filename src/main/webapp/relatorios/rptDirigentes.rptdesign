@@ -501,7 +501,7 @@ ORDER BY EQ.ORDEM, FI.NOME_ELE]]></xml-property>
             <property name="type">a4</property>
             <property name="orientation">portrait</property>
             <property name="topMargin">0.5291666666666667cm</property>
-            <property name="leftMargin">1cm</property>
+            <property name="leftMargin">2cm</property>
             <property name="bottomMargin">0.5cm</property>
             <property name="rightMargin">0.5cm</property>
             <property name="height">11in</property>

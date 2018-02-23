@@ -168,7 +168,7 @@ public class EncontristaEccBean implements Serializable {
 	}
 
 	private void habilitaTodosBotoesEnconstristaEcc() {
-		habilitaBotaoImprimirCasaisEncontristas = true;
+		habilitaBotaoImprimirCasaisEncontristas = false;
 		if (this.encontristaEcc.getEncontristasEccCasais().size() > 0) {
 			habilitaBotaoExcluirEncontristaEcc = true;
 		} else {

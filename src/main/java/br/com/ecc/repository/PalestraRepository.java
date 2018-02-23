@@ -32,7 +32,7 @@ public class PalestraRepository {
 	}
 
 	public List<Palestra> listar() {
-		TypedQuery<Palestra> query = manager.createQuery("from Palestra order by descricao", Palestra.class);
+		TypedQuery<Palestra> query = manager.createQuery("from Palestra order by ordemImpressao", Palestra.class);
 		return query.getResultList();
 	}
 

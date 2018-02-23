@@ -128,10 +128,15 @@
 			<h:inputHidden value="#{palestraBean.palestra.id}" />
 			<h:panelGrid columns="2">
 				<h:outputLabel value="Descrição:" for="descricao" />
+				<h:outputLabel value="Ordem" for="ordemImpressao" />
 				<p:inputText id="descricao" value="#{palestraBean.palestra.descricao}"
 					required="true" requiredMessage="O campo Descrição é obrigatório"
 					maxlength="100" style="width:350px;">
 					<p:focus for="descricao" />
+				</p:inputText>
+				<p:inputText id="ordemImpressao" value="#{palestraBean.palestra.ordemImpressao}"
+							 required="false" requiredMessage="O campo Ordem de Impressão é obrigatório"
+							 maxlength="3" style="width:45px;">
 				</p:inputText>
 				<p:selectBooleanCheckbox value="#{palestraBean.palestra.casal}" itemLabel="Casal?" style="margin-left:5px;" />
 				<h:outputLabel value="" />
@@ -151,6 +156,10 @@
 				<p:outputLabel value="#{palestra.descricao}"/>
 				<h:graphicImage library="imagens" name="casais.png" width="15" height="15" rendered="#{palestra.casal}"
 								style="float: right;" title="Casais"/>
+			</p:column>
+			<p:column width="30">
+				<f:facet name="header">Ordem</f:facet>
+				#{palestra.ordemImpressao}
 			</p:column>
 			<p:column width="50">
 				<f:facet name="header">Ativo</f:facet>

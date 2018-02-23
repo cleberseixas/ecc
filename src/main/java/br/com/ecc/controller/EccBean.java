@@ -55,6 +55,10 @@ public class EccBean implements Serializable {
 
 	private boolean habilitaBotaoImprimirDirigentes = true;
 
+	private boolean  habilitaBotaoImprimirEquipes = true;
+
+	private boolean  habilitaBotaoImprimirPalestrantes = true;
+
 	private Ecc idEcc;
 
 	private String statusEcc = "ENCERRADO";
@@ -224,6 +228,22 @@ public class EccBean implements Serializable {
 		this.habilitaBotaoImprimirDirigentes = habilitaBotaoImprimirDirigentes;
 	}
 
+	public boolean isHabilitaBotaoImprimirEquipes() {
+		return habilitaBotaoImprimirEquipes;
+	}
+
+	public void setHabilitaBotaoImprimirEquipes(boolean habilitaBotaoImprimirEquipes) {
+		this.habilitaBotaoImprimirEquipes = habilitaBotaoImprimirEquipes;
+	}
+
+	public boolean isHabilitaBotaoImprimirPalestrantes() {
+		return habilitaBotaoImprimirPalestrantes;
+	}
+
+	public void setHabilitaBotaoImprimirPalestrantes(boolean habilitaBotaoImprimirPalestrantes) {
+		this.habilitaBotaoImprimirPalestrantes = habilitaBotaoImprimirPalestrantes;
+	}
+
 	public Ecc getIdEcc() {
 		return idEcc;
 	}
@@ -310,7 +330,9 @@ public class EccBean implements Serializable {
 
 		habilitaBotaoIncluiDirigentes = false;
 		habilitaBotaoDetalhesEcc = false;
-		habilitaBotaoImprimirDirigentes = true;
+		habilitaBotaoImprimirDirigentes = false;
+		habilitaBotaoImprimirEquipes = false;
+		habilitaBotaoImprimirPalestrantes = false;
 	}
 
 	private void desabilitaTodosBotoesEcc() {
@@ -320,6 +342,8 @@ public class EccBean implements Serializable {
 		habilitaBotaoDetalhesEcc = false;
 		habilitaBotaoEncerrarEcc = true;
 		habilitaBotaoImprimirDirigentes = false;
+		habilitaBotaoImprimirEquipes = false;
+		habilitaBotaoImprimirPalestrantes = false;
 	}
 
 	//Incluir as regras para salvar o Ecc (Equipes)
@@ -487,6 +511,7 @@ public class EccBean implements Serializable {
 	}
 
 	public void removeDirigentesLimbo() {
+		urlRelatorio = Util.retornaURLRelatorio();
 		dirigenteEccService.removeDirigenteLimbo();
 	}
 
@@ -501,11 +526,25 @@ public class EccBean implements Serializable {
 
 	public void imprimirDirigentes() throws IOException {
 		try {
-			System.out.println("ECC " + ecc.getId());
-
-			urlRelatorio = Util.retornaURLRelatorio();
-
 			urlRelatorio += "/rptDirigentes.rptdesign&ecc=" + ecc.getId();
+			System.out.println(urlRelatorio);
+		} catch (Exception ex) {
+			System.err.println("O arquivo não foi gerado corretamente!");
+		}
+	}
+
+	public void imprimirEquipes() throws IOException {
+		try {
+			urlRelatorio += "/rptEquipes.rptdesign&ecc=" + ecc.getId();
+			System.out.println(urlRelatorio);
+		} catch (Exception ex) {
+			System.err.println("O arquivo não foi gerado corretamente!");
+		}
+	}
+
+	public void imprimirPalestrantes() throws IOException {
+		try {
+			urlRelatorio += "/rptPalestrantes.rptdesign&ecc=" + ecc.getId();
 			System.out.println(urlRelatorio);
 		} catch (Exception ex) {
 			System.err.println("O arquivo não foi gerado corretamente!");

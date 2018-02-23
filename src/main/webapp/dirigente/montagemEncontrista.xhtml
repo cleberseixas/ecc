@@ -163,7 +163,7 @@
 					<f:facet name="header">
 						<h:panelGrid columns="2" styleClass="semBordaInterna"
 									 columnClasses="tituloGridSolicitacao, botoesGridSolicitacao">
-							<p:outputLabel value="Lista de Encontristas Cadastrados"
+							<p:outputLabel value="Encontristas Cadastrados"
 										   style="float:left;" />
 							<h:panelGroup style="float:right;">
 								<p:commandButton action="#{encontristaEccBean.novoEncontrista}"
@@ -358,9 +358,9 @@
 			</div>
 		</p:dialog>
 		<p:dialog widgetVar="exibiPDF" modal="true" draggable="false"
-				  closable="true" resizable="false" showHeader="true" width="1200px" height="620">
+				  closable="true" resizable="false" showHeader="true" width="1200px" height="760">
 			<pe:documentViewer id = "fileUpload"
-							   height="600" url="${encontristaEccBean.urlRelatorio}"/>
+							   height="800" url="${eccBean.urlRelatorio}"/>
 		</p:dialog>
 
 </h:body>

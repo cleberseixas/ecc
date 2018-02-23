@@ -159,7 +159,7 @@
 					<f:facet name="header">
 						<h:panelGrid columns="2" styleClass="semBordaInterna"
 									 columnClasses="tituloGridSolicitacao, botoesGridSolicitacao">
-							<p:outputLabel value="Lista de ECCs Cadastrados"
+							<p:outputLabel value="ECCs Cadastrados"
 										   style="float:left;" />
 							<h:panelGroup style="float:right;">
 								<p:commandButton action="#{eccBean.novoEcc}"
@@ -200,14 +200,26 @@
 								<p:commandButton id="btnImprimirDirigentes" action="#{eccBean.imprimirDirigentes}"
 												 oncomplete="PF('exibiPDF').show()"
 												 disabled="#{eccBean.habilitaBotaoImprimirDirigentes}"
-												 icon="ui-icon-print" value="Imprimir Dirigentes" style="margin-left: 5px;"
+												 icon="ui-icon-print" value="Dirigentes" style="margin-left: 5px;"
 												 ajax="true" update="fileUpload"/>
+								<p:commandButton id="btnImprimirEquipes" action="#{eccBean.imprimirEquipes}"
+												 oncomplete="PF('exibiPDF').show()"
+												 disabled="#{eccBean.habilitaBotaoImprimirEquipes}"
+												 icon="ui-icon-print" value="Equipes" style="margin-left: 5px;"
+												 ajax="true" update="fileUpload"/>
+								<p:commandButton id="btnImprimirPalestrantes" action="#{eccBean.imprimirPalestrantes}"
+												 oncomplete="PF('exibiPDF').show()"
+												 disabled="#{eccBean.habilitaBotaoImprimirPalestrantes}"
+												 icon="ui-icon-print" value="Palestrantes" style="margin-left: 5px;"
+												 ajax="true" update="fileUpload"/>
+
+
 							</h:panelGroup>
 						</h:panelGrid>
 					</f:facet>
 					<p:ajax event="rowSelect"
 							listener="#{eccBean.onRowSelectEcc}"
-							update="btnEditar btnExcluir btnIncluiDirigentes btnDetalhes btnEncerrar btnImprimirDirigentes" />
+							update="btnEditar btnExcluir btnIncluiDirigentes btnDetalhes btnEncerrar btnImprimirDirigentes btnImprimirEquipes btnImprimirPalestrantes" />
 					<p:column width="30">
 						<f:facet name="header">Número</f:facet>
 						#{ecc.numero}
@@ -552,9 +564,9 @@
 			</div>
 		</p:dialog>
 		<p:dialog widgetVar="exibiPDF" modal="true" draggable="false"
-				  closable="true" resizable="false" showHeader="true" width="1200px" height="620">
+				  closable="true" resizable="false" showHeader="true" width="1200px" height="760">
 			<pe:documentViewer id = "fileUpload"
-								   height="600" url="${eccBean.urlRelatorio}"/>
+								   height="800" url="${eccBean.urlRelatorio}"/>
 		</p:dialog>
 </h:body>
 </html>
