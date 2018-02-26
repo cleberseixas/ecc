@@ -53,6 +53,8 @@ public class EccBean implements Serializable {
 
 	private boolean habilitaBotaoEncerrarEcc = true;
 
+	private boolean habilitaBotaoImprimirCasaisEncontristas = true;
+
 	private boolean habilitaBotaoImprimirDirigentes = true;
 
 	private boolean  habilitaBotaoImprimirEquipes = true;
@@ -220,6 +222,14 @@ public class EccBean implements Serializable {
 		this.habilitaBotaoEncerrarEcc = habilitaBotaoEncerrarEcc;
 	}
 
+	public boolean isHabilitaBotaoImprimirCasaisEncontristas() {
+		return habilitaBotaoImprimirCasaisEncontristas;
+	}
+
+	public void setHabilitaBotaoImprimirCasaisEncontristas(boolean habilitaBotaoImprimirCasaisEncontristas) {
+		this.habilitaBotaoImprimirCasaisEncontristas = habilitaBotaoImprimirCasaisEncontristas;
+	}
+
 	public boolean isHabilitaBotaoImprimirDirigentes() {
 		return habilitaBotaoImprimirDirigentes;
 	}
@@ -330,6 +340,7 @@ public class EccBean implements Serializable {
 
 		habilitaBotaoIncluiDirigentes = false;
 		habilitaBotaoDetalhesEcc = false;
+		habilitaBotaoImprimirCasaisEncontristas = false;
 		habilitaBotaoImprimirDirigentes = false;
 		habilitaBotaoImprimirEquipes = false;
 		habilitaBotaoImprimirPalestrantes = false;
@@ -341,6 +352,7 @@ public class EccBean implements Serializable {
 		habilitaBotaoIncluiDirigentes = false;
 		habilitaBotaoDetalhesEcc = false;
 		habilitaBotaoEncerrarEcc = true;
+		habilitaBotaoImprimirCasaisEncontristas = false;
 		habilitaBotaoImprimirDirigentes = false;
 		habilitaBotaoImprimirEquipes = false;
 		habilitaBotaoImprimirPalestrantes = false;
@@ -511,7 +523,7 @@ public class EccBean implements Serializable {
 	}
 
 	public void removeDirigentesLimbo() {
-		urlRelatorio = Util.retornaURLRelatorio();
+		//urlRelatorio = Util.retornaURLRelatorio();
 		dirigenteEccService.removeDirigenteLimbo();
 	}
 
@@ -526,7 +538,7 @@ public class EccBean implements Serializable {
 
 	public void imprimirDirigentes() throws IOException {
 		try {
-			urlRelatorio += "/rptDirigentes.rptdesign&ecc=" + ecc.getId();
+			urlRelatorio = Util.retornaURLRelatorio()+"/rptDirigentes.rptdesign&ecc=" + ecc.getId();
 			System.out.println(urlRelatorio);
 		} catch (Exception ex) {
 			System.err.println("O arquivo não foi gerado corretamente!");
@@ -535,7 +547,7 @@ public class EccBean implements Serializable {
 
 	public void imprimirEquipes() throws IOException {
 		try {
-			urlRelatorio += "/rptEquipes.rptdesign&ecc=" + ecc.getId();
+			urlRelatorio = Util.retornaURLRelatorio()+"/rptEquipes.rptdesign&ecc=" + ecc.getId();
 			System.out.println(urlRelatorio);
 		} catch (Exception ex) {
 			System.err.println("O arquivo não foi gerado corretamente!");
@@ -544,7 +556,17 @@ public class EccBean implements Serializable {
 
 	public void imprimirPalestrantes() throws IOException {
 		try {
-			urlRelatorio += "/rptPalestrantes.rptdesign&ecc=" + ecc.getId();
+			urlRelatorio = Util.retornaURLRelatorio()+"/rptPalestrantes.rptdesign&ecc=" + ecc.getId();
+			System.out.println(urlRelatorio);
+		} catch (Exception ex) {
+			System.err.println("O arquivo não foi gerado corretamente!");
+		}
+	}
+
+	public void imprimirEncontristas() throws IOException {
+		try {
+
+			urlRelatorio = Util.retornaURLRelatorio()+"/rptEncontristas.rptdesign&ecc=" + ecc.getId();
 			System.out.println(urlRelatorio);
 		} catch (Exception ex) {
 			System.err.println("O arquivo não foi gerado corretamente!");

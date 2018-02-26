@@ -152,7 +152,7 @@
 		</p:toolbar>
 				<p:dataTable id="eccs" value="#{eccBean.listaUltimoEcc}" var="ecc" rowIndexVar="index" selection="#{eccBean.ecc}"
 							 selectionMode="single" rowKey="#{ecc.id}"
-							 emptyMessage="Não há ECCs cadastrados" style="width:1120px;"
+							 emptyMessage="Não há ECCs cadastrados" style="width:1220px;"
 							 paginator="false" paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
 							 rowsPerPageTemplate="14,28,42,56,70" paginatorPosition="top"
 							 currentPageReportTemplate="Registro(s) {startRecord} a {endRecord} de um total de {totalRecords} - Página {currentPage} de {totalPages}">
@@ -197,21 +197,26 @@
 												 process="@this"
 												 update=":listagemEccs:confirmacaoEncerrarDialog"
 												 title="Encerra o ECC selecionado."/>
+								<p:commandButton id="btnImprimirEncontristas" action="#{eccBean.imprimirEncontristas}"
+												 oncomplete="PF('exibiPDF').show()"
+												 disabled="#{eccBean.habilitaBotaoImprimirCasaisEncontristas}"
+												 icon="ui-icon-print" value="Encontristas" style="margin-left: 5px;"
+												 ajax="true" update="exibiPDF"/>
 								<p:commandButton id="btnImprimirDirigentes" action="#{eccBean.imprimirDirigentes}"
 												 oncomplete="PF('exibiPDF').show()"
 												 disabled="#{eccBean.habilitaBotaoImprimirDirigentes}"
 												 icon="ui-icon-print" value="Dirigentes" style="margin-left: 5px;"
-												 ajax="true" update="fileUpload"/>
+												 ajax="true" update="exibiPDF"/>
 								<p:commandButton id="btnImprimirEquipes" action="#{eccBean.imprimirEquipes}"
 												 oncomplete="PF('exibiPDF').show()"
 												 disabled="#{eccBean.habilitaBotaoImprimirEquipes}"
 												 icon="ui-icon-print" value="Equipes" style="margin-left: 5px;"
-												 ajax="true" update="fileUpload"/>
+												 ajax="true" update="exibiPDF"/>
 								<p:commandButton id="btnImprimirPalestrantes" action="#{eccBean.imprimirPalestrantes}"
 												 oncomplete="PF('exibiPDF').show()"
 												 disabled="#{eccBean.habilitaBotaoImprimirPalestrantes}"
 												 icon="ui-icon-print" value="Palestrantes" style="margin-left: 5px;"
-												 ajax="true" update="fileUpload"/>
+												 ajax="true" update="exibiPDF"/>
 
 
 							</h:panelGroup>
@@ -219,7 +224,7 @@
 					</f:facet>
 					<p:ajax event="rowSelect"
 							listener="#{eccBean.onRowSelectEcc}"
-							update="btnEditar btnExcluir btnIncluiDirigentes btnDetalhes btnEncerrar btnImprimirDirigentes btnImprimirEquipes btnImprimirPalestrantes" />
+							update="btnEditar btnExcluir btnIncluiDirigentes btnDetalhes btnEncerrar btnImprimirEncontristas btnImprimirDirigentes btnImprimirEquipes btnImprimirPalestrantes" />
 					<p:column width="30">
 						<f:facet name="header">Número</f:facet>
 						#{ecc.numero}
@@ -563,7 +568,7 @@
 				</div>
 			</div>
 		</p:dialog>
-		<p:dialog widgetVar="exibiPDF" modal="true" draggable="false"
+		<p:dialog widgetVar="exibiPDF" id="exibiPDF" modal="true" draggable="false"
 				  closable="true" resizable="false" showHeader="true" width="1200px" height="760">
 			<pe:documentViewer id = "fileUpload"
 								   height="800" url="${eccBean.urlRelatorio}"/>

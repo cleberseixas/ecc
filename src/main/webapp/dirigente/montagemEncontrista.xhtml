@@ -187,8 +187,8 @@
 								<p:commandButton id="btnImprimirEncontristas" action="#{encontristaEccBean.imprimirEncontristas}"
 												 oncomplete="PF('exibiPDF').show()"
 												 disabled="#{encontristaEccBean.habilitaBotaoImprimirCasaisEncontristas}"
-												 icon="ui-icon-print" value="Imprimir Encontristas" style="margin-left: 5px;"
-												 ajax="true" update="fileUpload">
+												 icon="ui-icon-print" value="Encontristas" style="margin-left: 5px;"
+												 ajax="true" update="fileUpload" rendered="false">
 							</p:commandButton>
 							</h:panelGroup>
 						</h:panelGrid>
