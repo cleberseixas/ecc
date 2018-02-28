@@ -618,7 +618,7 @@
                         <property name="marginTop">0pt</property>
                         <property name="textAlign">center</property>
                         <property name="contentType">auto</property>
-                        <text-property name="content"><![CDATA[ENCONTRISTAS]]></text-property>
+                        <text-property name="content"><![CDATA[E N C O N T R I S T A S]]></text-property>
                     </text>
                     <text id="801">
                         <property name="fontSize">11pt</property>

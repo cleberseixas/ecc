@@ -3,214 +3,30 @@
     <property name="author">44260 - Cleber de Oliveira Seixas</property>
     <property name="comments">Copyright (c) 2007 &lt;&lt;Your Company Name here>></property>
     <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201606072122</property>
-    <text-property name="title">Relatório de Casais por Aptidão</text-property>
+    <text-property name="title">Relatório de Círculos de Estudo</text-property>
     <html-property name="description">Provides instructions for building a customer listing report.</html-property>
+    <list-property name="userProperties">
+        <structure>
+            <property name="name">Data Cube.DSCirculoEstudo.x</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">Data Cube.DSCirculoEstudo.y</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+    </list-property>
+    <property name="Data Cube.DSCirculoEstudo.x">135</property>
+    <property name="Data Cube.DSCirculoEstudo.y">80</property>
     <property name="units">cm</property>
     <text-property name="displayName">Relatório de Casais por Aptidão</text-property>
     <property name="iconFile">/templates/first_report.gif</property>
     <property name="cheatSheet">org.eclipse.birt.report.designer.ui.cheatsheet.firstreport</property>
     <property name="layoutPreference">auto layout</property>
-    <template-parameter-definitions>
-        <template-parameter-definition name="NewTemplateParameterDefinition" id="28">
-            <property name="allowedType">Table</property>
-            <text-property name="description">Customer Listing</text-property>
-            <default>
-                <table id="29">
-                    <property name="width">100%</property>
-                    <property name="pageBreakInterval">50</property>
-                    <column id="49"/>
-                    <column id="50"/>
-                    <column id="51"/>
-                    <column id="52"/>
-                    <header>
-                        <row id="30">
-                            <cell id="31">
-                                <label id="32">
-                                    <property name="fontFamily">sans-serif</property>
-                                    <property name="fontWeight">bold</property>
-                                    <text-property name="text">Contact</text-property>
-                                </label>
-                            </cell>
-                            <cell id="33">
-                                <label id="34">
-                                    <property name="fontFamily">sans-serif</property>
-                                    <property name="fontWeight">bold</property>
-                                    <text-property name="text">First</text-property>
-                                </label>
-                            </cell>
-                            <cell id="35">
-                                <label id="36">
-                                    <property name="fontFamily">sans-serif</property>
-                                    <property name="fontWeight">bold</property>
-                                    <text-property name="text">Last</text-property>
-                                </label>
-                            </cell>
-                            <cell id="37">
-                                <label id="38">
-                                    <property name="fontFamily">sans-serif</property>
-                                    <property name="fontWeight">bold</property>
-                                    <text-property name="text">Phone</text-property>
-                                </label>
-                            </cell>
-                        </row>
-                    </header>
-                    <detail>
-                        <row id="39">
-                            <cell id="40"/>
-                            <cell id="41"/>
-                            <cell id="42"/>
-                            <cell id="43"/>
-                        </row>
-                    </detail>
-                    <footer>
-                        <row id="44">
-                            <cell id="45"/>
-                            <cell id="46"/>
-                            <cell id="47"/>
-                            <cell id="48"/>
-                        </row>
-                    </footer>
-                </table>
-            </default>
-        </template-parameter-definition>
-        <template-parameter-definition name="NewTemplateParameterDefinition1" id="78">
-            <property name="allowedType">Table</property>
-            <text-property name="description">Customer Listing Table</text-property>
-            <default>
-                <table id="79">
-                    <property name="width">100%</property>
-                    <property name="refTemplateParameter">NewTemplateParameterDefinition</property>
-                    <property name="pageBreakInterval">50</property>
-                    <column id="99"/>
-                    <column id="100"/>
-                    <column id="101"/>
-                    <column id="102"/>
-                    <header>
-                        <row id="80">
-                            <cell id="81">
-                                <label id="82">
-                                    <property name="fontFamily">sans-serif</property>
-                                    <property name="fontWeight">bold</property>
-                                    <text-property name="text">Contact</text-property>
-                                </label>
-                            </cell>
-                            <cell id="83">
-                                <label id="84">
-                                    <property name="fontFamily">sans-serif</property>
-                                    <property name="fontWeight">bold</property>
-                                    <text-property name="text">First</text-property>
-                                </label>
-                            </cell>
-                            <cell id="85">
-                                <label id="86">
-                                    <property name="fontFamily">sans-serif</property>
-                                    <property name="fontWeight">bold</property>
-                                    <text-property name="text">Last</text-property>
-                                </label>
-                            </cell>
-                            <cell id="87">
-                                <label id="88">
-                                    <property name="fontFamily">sans-serif</property>
-                                    <property name="fontWeight">bold</property>
-                                    <text-property name="text">Phone</text-property>
-                                </label>
-                            </cell>
-                        </row>
-                    </header>
-                    <detail>
-                        <row id="89">
-                            <cell id="90"/>
-                            <cell id="91"/>
-                            <cell id="92"/>
-                            <cell id="93"/>
-                        </row>
-                    </detail>
-                    <footer>
-                        <row id="94">
-                            <cell id="95"/>
-                            <cell id="96"/>
-                            <cell id="97"/>
-                            <cell id="98"/>
-                        </row>
-                    </footer>
-                </table>
-            </default>
-        </template-parameter-definition>
-        <template-parameter-definition name="NewTemplateParameterDefinition2" id="132">
-            <property name="allowedType">Table</property>
-            <text-property name="description">Customer Listing Table</text-property>
-            <default>
-                <table id="133">
-                    <property name="width">100%</property>
-                    <property name="refTemplateParameter">NewTemplateParameterDefinition1</property>
-                    <property name="pageBreakInterval">50</property>
-                    <column id="157"/>
-                    <column id="158"/>
-                    <column id="159"/>
-                    <column id="160"/>
-                    <header>
-                        <row id="134">
-                            <cell id="135">
-                                <label id="136">
-                                    <property name="fontFamily">sans-serif</property>
-                                    <property name="fontWeight">bold</property>
-                                    <text-property name="text">Contact</text-property>
-                                </label>
-                            </cell>
-                            <cell id="137">
-                                <label id="138">
-                                    <property name="fontFamily">sans-serif</property>
-                                    <property name="fontWeight">bold</property>
-                                    <text-property name="text">First</text-property>
-                                </label>
-                            </cell>
-                            <cell id="139">
-                                <label id="140">
-                                    <property name="fontFamily">sans-serif</property>
-                                    <property name="fontWeight">bold</property>
-                                    <text-property name="text">Last</text-property>
-                                </label>
-                            </cell>
-                            <cell id="141">
-                                <label id="142">
-                                    <property name="fontFamily">sans-serif</property>
-                                    <property name="fontWeight">bold</property>
-                                    <text-property name="text">Phone</text-property>
-                                </label>
-                            </cell>
-                        </row>
-                    </header>
-                    <detail>
-                        <row id="143">
-                            <cell id="144">
-                                <data id="145"/>
-                            </cell>
-                            <cell id="146">
-                                <data id="147"/>
-                            </cell>
-                            <cell id="148">
-                                <data id="149"/>
-                            </cell>
-                            <cell id="150">
-                                <data id="151"/>
-                            </cell>
-                        </row>
-                    </detail>
-                    <footer>
-                        <row id="152">
-                            <cell id="153"/>
-                            <cell id="154"/>
-                            <cell id="155"/>
-                            <cell id="156"/>
-                        </row>
-                    </footer>
-                </table>
-            </default>
-        </template-parameter-definition>
-    </template-parameter-definitions>
     <parameters>
-        <scalar-parameter name="aptidao" id="559">
-            <text-property name="promptText">Aptidão</text-property>
+        <scalar-parameter name="ecc" id="559">
+            <text-property name="promptText">ECC</text-property>
             <property name="valueType">static</property>
             <property name="isRequired">true</property>
             <property name="dataType">decimal</property>
@@ -249,76 +65,175 @@
         </oda-data-source>
     </data-sources>
     <data-sets>
-        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="DSAptidoes" id="249">
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="DSCirculoEstudo" id="249">
             <list-property name="columnHints">
                 <structure>
-                    <property name="columnName">nome_usual</property>
-                    <property name="analysis">dimension</property>
-                    <text-property name="displayName">nome_usual</text-property>
-                    <text-property name="heading">nome_usual</text-property>
+                    <property name="columnName">ecc</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">ecc</text-property>
+                    <text-property name="heading">ecc</text-property>
                 </structure>
                 <structure>
-                    <property name="columnName">telefone_ele</property>
+                    <property name="columnName">numero</property>
                     <property name="analysis">dimension</property>
-                    <text-property name="displayName">telefone_ele</text-property>
-                    <text-property name="heading">telefone_ele</text-property>
+                    <text-property name="displayName">numero</text-property>
+                    <text-property name="heading">numero</text-property>
                 </structure>
                 <structure>
-                    <property name="columnName">telefone_ela</property>
+                    <property name="columnName">tema</property>
                     <property name="analysis">dimension</property>
-                    <text-property name="displayName">telefone_ela</text-property>
-                    <text-property name="heading">telefone_ela</text-property>
+                    <text-property name="displayName">tema</text-property>
+                    <text-property name="heading">tema</text-property>
                 </structure>
                 <structure>
-                    <property name="columnName">descricao</property>
+                    <property name="columnName">data_inicio</property>
                     <property name="analysis">dimension</property>
-                    <text-property name="displayName">descricao</text-property>
-                    <text-property name="heading">descricao</text-property>
+                    <text-property name="displayName">data_inicio</text-property>
+                    <text-property name="heading">data_inicio</text-property>
                 </structure>
                 <structure>
-                    <property name="columnName">endereco</property>
+                    <property name="columnName">data_fim</property>
                     <property name="analysis">dimension</property>
-                    <text-property name="displayName">endereco</text-property>
-                    <text-property name="heading">endereco</text-property>
+                    <text-property name="displayName">data_fim</text-property>
+                    <text-property name="heading">data_fim</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">circulo</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">circulo</text-property>
+                    <text-property name="heading">circulo</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">nome_grupo</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">nome_grupo</text-property>
+                    <text-property name="heading">nome_grupo</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">casal_coordenador</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">casal_coordenador</text-property>
+                    <text-property name="heading">casal_coordenador</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">casais_grupo</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">casais_grupo</text-property>
+                    <text-property name="heading">casais_grupo</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">tema_circulo</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">tema_circulo</text-property>
+                    <text-property name="heading">tema_circulo</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">casal_relator</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">casal_relator</text-property>
+                    <text-property name="heading">casal_relator</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">pergunta1</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">pergunta1</text-property>
+                    <text-property name="heading">pergunta1</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">resposta1</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">resposta1</text-property>
+                    <text-property name="heading">resposta1</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">pergunta2</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">pergunta2</text-property>
+                    <text-property name="heading">pergunta2</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">resposta2</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">resposta2</text-property>
+                    <text-property name="heading">resposta2</text-property>
                 </structure>
             </list-property>
-            <list-property name="parameters">
-                <structure>
-                    <property name="name">aptidao</property>
-                    <property name="paramName">aptidao</property>
-                    <property name="nativeName"></property>
-                    <property name="dataType">integer</property>
-                    <property name="nativeDataType">-5</property>
-                    <property name="position">1</property>
-                    <property name="isInput">true</property>
-                    <property name="isOutput">false</property>
-                </structure>
-            </list-property>
+            <list-property name="parameters"/>
             <structure name="cachedMetaData">
                 <list-property name="resultSet">
                     <structure>
                         <property name="position">1</property>
-                        <property name="name">nome_usual</property>
-                        <property name="dataType">string</property>
+                        <property name="name">ecc</property>
+                        <property name="dataType">decimal</property>
                     </structure>
                     <structure>
                         <property name="position">2</property>
-                        <property name="name">telefone_ele</property>
+                        <property name="name">numero</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">3</property>
-                        <property name="name">telefone_ela</property>
+                        <property name="name">tema</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">4</property>
-                        <property name="name">descricao</property>
-                        <property name="dataType">string</property>
+                        <property name="name">data_inicio</property>
+                        <property name="dataType">date</property>
                     </structure>
                     <structure>
                         <property name="position">5</property>
-                        <property name="name">endereco</property>
+                        <property name="name">data_fim</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">circulo</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">nome_grupo</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">casal_coordenador</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">casais_grupo</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">tema_circulo</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">casal_relator</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">pergunta1</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">resposta1</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">pergunta2</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">resposta2</property>
                         <property name="dataType">string</property>
                     </structure>
                 </list-property>
@@ -328,73 +243,145 @@
             <list-property name="resultSet">
                 <structure>
                     <property name="position">1</property>
-                    <property name="name">nome_usual</property>
-                    <property name="nativeName">nome_usual</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
+                    <property name="name">ecc</property>
+                    <property name="nativeName">ecc</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
                 </structure>
                 <structure>
                     <property name="position">2</property>
-                    <property name="name">telefone_ele</property>
-                    <property name="nativeName">telefone_ele</property>
+                    <property name="name">numero</property>
+                    <property name="nativeName">numero</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
                     <property name="position">3</property>
-                    <property name="name">telefone_ela</property>
-                    <property name="nativeName">telefone_ela</property>
+                    <property name="name">tema</property>
+                    <property name="nativeName">tema</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
                     <property name="position">4</property>
-                    <property name="name">descricao</property>
-                    <property name="nativeName">descricao</property>
+                    <property name="name">data_inicio</property>
+                    <property name="nativeName">data_inicio</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">data_fim</property>
+                    <property name="nativeName">data_fim</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">circulo</property>
+                    <property name="nativeName">circulo</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
-                    <property name="position">5</property>
-                    <property name="name">endereco</property>
-                    <property name="nativeName">endereco</property>
+                    <property name="position">7</property>
+                    <property name="name">nome_grupo</property>
+                    <property name="nativeName">nome_grupo</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">casal_coordenador</property>
+                    <property name="nativeName">casal_coordenador</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">casais_grupo</property>
+                    <property name="nativeName">casais_grupo</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">tema_circulo</property>
+                    <property name="nativeName">tema_circulo</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">casal_relator</property>
+                    <property name="nativeName">casal_relator</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">pergunta1</property>
+                    <property name="nativeName">pergunta1</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">resposta1</property>
+                    <property name="nativeName">resposta1</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">pergunta2</property>
+                    <property name="nativeName">pergunta2</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">resposta2</property>
+                    <property name="nativeName">resposta2</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
             </list-property>
-            <xml-property name="queryText"><![CDATA[SELECT 
-FI.NOME_USUAL, 
-FI.TELEFONE_ELE,
-FI.TELEFONE_ELA,
-EQ.DESCRICAO,
-CONCAT_WS(', ', FI.RUA::TEXT, FI.NUMERO::TEXT, FI.BAIRRO::TEXT) AS ENDERECO
-
-FROM FICHAS FI
-INNER JOIN APTIDOES AP ON AP.FICHA = FI.FICHA
-INNER JOIN EQUIPES EQ ON EQ.EQUIPE = AP.EQUIPE
-WHERE
-  EQ.EQUIPE = ?]]></xml-property>
-            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
-  <Version>2.0</Version>
-  <DataSetParameters>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name></design:name>
-            <design:position>1</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
-          <design:precision>0</design:precision>
-          <design:scale>0</design:scale>
-          <design:nullability>Unknown</design:nullability>
-        </design:attributes>
-      </design:ParameterDefinition>
-    </parameter>
-  </DataSetParameters>
-</model:DesignValues>]]></xml-property>
+            <xml-property name="queryText"><![CDATA[	/* CIRCULOS DE ESTUDO */
+	SELECT EC.ECC, EC.NUMERO, EC.TEMA, EC.DATA_INICIO, EC.DATA_FIM,
+		CI.DESCRICAO AS CIRCULO,
+		CE.NOME_GRUPO, 
+		FI.NOME_USUAL AS CASAL_COORDENADOR,
+		string_agg(CC.NOME_USUAL,', ') AS CASAIS_GRUPO,
+		CEE.TEMA AS TEMA_CIRCULO, FC.NOME_USUAL AS CASAL_RELATOR,
+		CEE.PERGUNTA1, CEE.RESPOSTA1, CEE.PERGUNTA2, CEE.RESPOSTA2
+	FROM 
+	ECCS EC 
+	INNER JOIN CIRCULOS_ECCS CE ON CE.ECC = EC.ECC
+	INNER JOIN CIRCULOS CI ON CI.CIRCULO = CE.CIRCULO
+	INNER JOIN CIRCULOS_ECCS_ENCONTRISTAS CEC ON CEC.CIRCULO_ECC = CE.CIRCULO_ECC
+	INNER JOIN CIRCULOS_ESTUDOS_ECCS CEE ON CEE.ECC = EC.ECC
+	INNER JOIN FICHAS FI ON FI.FICHA = CE.CASAL_COORDENADOR
+	INNER JOIN FICHAS CC ON CC.FICHA = CEC.FICHA
+	INNER JOIN FICHAS FC ON FC.FICHA = CEE.CASAL_RELATOR
+	WHERE 
+	  CEE.CIRCULO = CE.CIRCULO
+	  AND
+	  CEE.ECC = EC.ECC
+	  AND
+	  CEE.ECC = CEC.ECC
+	  AND
+	  CEE.CIRCULO = CEC.CIRCULO
+	  AND
+	  EC.ECC = 2
+GROUP BY EC.ECC, EC.NUMERO, EC.TEMA, EC.DATA_INICIO, EC.DATA_FIM,
+		CI.DESCRICAO,
+		CE.NOME_GRUPO, 
+		FI.NOME_USUAL,
+		CEE.TEMA, FC.NOME_USUAL,
+		CEE.PERGUNTA1, CEE.RESPOSTA1, CEE.PERGUNTA2, CEE.RESPOSTA2
+	ORDER BY 6, 10
+]]></xml-property>
         </oda-data-set>
     </data-sets>
     <styles>
@@ -428,341 +415,387 @@ WHERE
         </style>
     </styles>
     <page-setup>
-        <simple-master-page name="Relatório de Casais por Aptidão" id="2">
+        <simple-master-page name="Relatório de Círculos de Estudo" id="2">
             <property name="type">a4</property>
             <property name="orientation">portrait</property>
-            <property name="topMargin">1in</property>
-            <property name="leftMargin">1.508125cm</property>
-            <property name="bottomMargin">1in</property>
-            <property name="rightMargin">0mm</property>
+            <property name="topMargin">1cm</property>
+            <property name="leftMargin">2cm</property>
+            <property name="bottomMargin">0.5cm</property>
+            <property name="rightMargin">0.5cm</property>
             <property name="showHeaderOnFirst">true</property>
             <page-header>
-                <grid id="270">
-                    <property name="width">100%</property>
-                    <list-property name="boundDataColumns">
-                        <structure>
-                            <property name="name">Column Binding</property>
-                            <expression name="expression" type="javascript">params["aptidao"].value</expression>
-                            <property name="dataType">string</property>
-                            <property name="allowExport">true</property>
-                        </structure>
-                    </list-property>
-                    <column id="272"/>
-                    <row id="192">
-                        <cell id="194">
-                            <text id="201">
-                                <property name="fontSize">12pt</property>
-                                <property name="fontWeight">bold</property>
-                                <property name="marginTop">0pt</property>
-                                <property name="textAlign">center</property>
-                                <property name="contentType">auto</property>
-                                <text-property name="content"><![CDATA[PARÓQUIA SÃO LUIZ GONZAGA]]></text-property>
-                            </text>
-                            <text id="202">
-                                <property name="fontSize">11pt</property>
-                                <property name="fontWeight">bold</property>
-                                <property name="marginTop">0pt</property>
-                                <property name="paddingTop">1pt</property>
-                                <property name="textAlign">center</property>
-                                <property name="contentType">auto</property>
-                                <text-property name="content"><![CDATA[RELATÓRIO DE CASAIS POR APTIDÃO]]></text-property>
-                            </text>
-                            <data id="567">
-                                <property name="fontSize">11pt</property>
-                                <property name="fontWeight">bold</property>
-                                <property name="textUnderline">underline</property>
-                                <property name="textAlign">center</property>
-                                <property name="dataSet">DSAptidoes</property>
-                                <list-property name="boundDataColumns">
-                                    <structure>
-                                        <property name="name">descricao</property>
-                                        <text-property name="displayName">descricao</text-property>
-                                        <expression name="expression" type="javascript">dataSetRow["descricao"]</expression>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                </list-property>
-                                <property name="resultSetColumn">descricao</property>
-                            </data>
-                        </cell>
-                    </row>
-                </grid>
-            </page-header>
-            <page-footer>
-                <grid id="399">
+                <text id="800">
+                    <property name="fontSize">12pt</property>
+                    <property name="fontWeight">bold</property>
                     <property name="marginTop">0pt</property>
-                    <property name="width">100%</property>
-                    <column id="400">
-                        <property name="width">8.9791666667in</property>
-                    </column>
-                    <column id="402"/>
-                    <row id="403">
-                        <cell id="404">
-                            <property name="borderTopColor">#000000</property>
-                            <property name="borderTopStyle">solid</property>
-                            <property name="borderTopWidth">thin</property>
-                            <property name="paddingTop">1pt</property>
-                            <text id="407">
-                                <property name="fontSize">9pt</property>
-                                <property name="textAlign">left</property>
-                                <property name="dataSet">DSAptidoes</property>
-                                <list-property name="boundDataColumns">
-                                    <structure>
-                                        <property name="name">NOME_USUAL</property>
-                                        <expression name="expression">dataSetRow["nome_usual"]</expression>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                </list-property>
-                                <property name="contentType">html</property>
-                                <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
-                            </text>
-                        </cell>
-                        <cell id="406">
-                            <property name="borderTopColor">#000000</property>
-                            <property name="borderTopStyle">solid</property>
-                            <property name="borderTopWidth">thin</property>
-                            <grid id="408">
-                                <property name="width">100%</property>
-                                <column id="409">
-                                    <property name="width">0.90625in</property>
-                                </column>
-                                <column id="410"/>
-                                <column id="411"/>
-                                <row id="412">
-                                    <cell id="413">
-                                        <property name="colSpan">3</property>
-                                        <property name="rowSpan">1</property>
-                                        <grid id="517">
-                                            <property name="width">100%</property>
-                                            <column id="518"/>
-                                            <column id="519"/>
-                                            <column id="520"/>
-                                            <row id="521">
-                                                <cell id="522">
-                                                    <auto-text id="523">
-                                                        <property name="fontSize">9pt</property>
-                                                        <property name="fontWeight">normal</property>
-                                                        <property name="textAlign">right</property>
-                                                        <property name="type">page-number</property>
-                                                    </auto-text>
-                                                </cell>
-                                                <cell id="524">
-                                                    <text id="525">
-                                                        <property name="fontSize">9pt</property>
-                                                        <property name="fontWeight">normal</property>
-                                                        <property name="textAlign">center</property>
-                                                        <property name="contentType">plain</property>
-                                                        <text-property name="content"><![CDATA[de]]></text-property>
-                                                    </text>
-                                                </cell>
-                                                <cell id="526">
-                                                    <auto-text id="527">
-                                                        <property name="fontSize">9pt</property>
-                                                        <property name="fontWeight">normal</property>
-                                                        <property name="textAlign">left</property>
-                                                        <property name="type">total-page</property>
-                                                    </auto-text>
-                                                </cell>
-                                            </row>
-                                        </grid>
-                                    </cell>
-                                </row>
-                            </grid>
-                        </cell>
-                    </row>
-                </grid>
-            </page-footer>
+                    <property name="textAlign">center</property>
+                    <property name="contentType">auto</property>
+                    <text-property name="content"><![CDATA[C Í R C U L O S   D E   E S T U D O]]></text-property>
+                </text>
+            </page-header>
         </simple-master-page>
     </page-setup>
     <body>
+        <text id="801">
+            <property name="fontSize">11pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="marginTop">0pt</property>
+            <property name="paddingTop">1pt</property>
+            <property name="textAlign">center</property>
+            <property name="contentType">auto</property>
+            <text-property name="content"><![CDATA[   ]]></text-property>
+        </text>
+        <text id="869">
+            <property name="fontSize">11pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="marginTop">0pt</property>
+            <property name="paddingTop">1pt</property>
+            <property name="textAlign">center</property>
+            <property name="contentType">auto</property>
+            <text-property name="content"><![CDATA[   ]]></text-property>
+        </text>
         <table id="163">
+            <property name="borderBottomStyle">none</property>
+            <property name="borderLeftStyle">none</property>
+            <property name="borderRightStyle">none</property>
+            <property name="borderTopStyle">none</property>
             <property name="marginTop">0pt</property>
             <property name="height">1.0833333333in</property>
-            <property name="width">7.65625in</property>
-            <property name="dataSet">DSAptidoes</property>
-            <property name="refTemplateParameter">NewTemplateParameterDefinition2</property>
+            <property name="width">7.239583333333333in</property>
+            <property name="dataSet">DSCirculoEstudo</property>
             <list-property name="boundDataColumns">
                 <structure>
-                    <property name="name">telefone_ele</property>
-                    <text-property name="displayName">telefone_ele</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["telefone_ele"]</expression>
+                    <property name="name">tema</property>
+                    <text-property name="displayName">tema</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["tema"]</expression>
                     <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">tema_circulo</property>
+                    <text-property name="displayName">tema_circulo</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["tema_circulo"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">circulo</property>
+                    <text-property name="displayName">circulo</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["circulo"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">nome_grupo</property>
+                    <text-property name="displayName">nome_grupo</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["nome_grupo"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">casal_relator</property>
+                    <text-property name="displayName">casal_relator</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["casal_relator"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">casal_coordenador</property>
+                    <text-property name="displayName">casal_coordenador</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["casal_coordenador"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">pergunta1</property>
+                    <expression name="expression" type="javascript">dataSetRow["pergunta1"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">resposta1</property>
+                    <text-property name="displayName">resposta1</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["resposta1"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">pergunta2</property>
+                    <text-property name="displayName">pergunta2</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["pergunta2"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">resposta2</property>
+                    <text-property name="displayName">resposta2</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["resposta2"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">casais_grupo</property>
+                    <text-property name="displayName">casais_grupo</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["casais_grupo"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">pergunta1_1</property>
+                    <text-property name="displayName">pergunta1</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["pergunta1"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">resposta1_1</property>
+                    <text-property name="displayName">resposta1</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["resposta1"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">pergunta2_1</property>
+                    <text-property name="displayName">pergunta2</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["pergunta2"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">resposta2_1</property>
+                    <text-property name="displayName">resposta2</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["resposta2"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">pergunta</property>
+                    <text-property name="displayName">pergunta1</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["pergunta1"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">Column Binding</property>
-                    <expression name="expression" type="javascript">dataSetRow["nome_usual"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">telefone_ela</property>
-                    <text-property name="displayName">telefone_ela</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["telefone_ela"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">endereco</property>
-                    <text-property name="displayName">endereco</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["endereco"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">nome_usual</property>
-                    <text-property name="displayName">nome_usual</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["nome_usual"]</expression>
+                    <text-property name="displayName">teste</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["resposta1"]</expression>
                     <property name="dataType">string</property>
                     <property name="allowExport">true</property>
                 </structure>
             </list-property>
             <property name="pageBreakInterval">50</property>
             <column id="187">
-                <property name="width">2.3020833333333335in</property>
-            </column>
-            <column id="258">
-                <property name="width">0.9479166666666666in</property>
-            </column>
-            <column id="254">
-                <property name="width">0.8958333333333334in</property>
+                <property name="width">5.34375in</property>
             </column>
             <column id="550">
-                <property name="width">3.5104166666666665in</property>
+                <property name="width">1.8958333333333333in</property>
             </column>
-            <header>
-                <row id="164">
-                    <property name="fontSize">10pt</property>
-                    <cell id="165">
-                        <property name="borderBottomColor">#000000</property>
-                        <property name="borderBottomStyle">solid</property>
-                        <property name="borderBottomWidth">thin</property>
-                        <property name="borderLeftColor">#000000</property>
-                        <property name="borderLeftStyle">solid</property>
-                        <property name="borderLeftWidth">thin</property>
-                        <property name="borderRightColor">#000000</property>
-                        <property name="borderRightStyle">solid</property>
-                        <property name="borderRightWidth">thin</property>
-                        <property name="borderTopColor">#000000</property>
-                        <property name="borderTopStyle">solid</property>
-                        <property name="borderTopWidth">thin</property>
-                        <label id="166">
-                            <property name="fontFamily">serif</property>
-                            <property name="fontSize">10pt</property>
-                            <property name="fontWeight">bold</property>
-                            <property name="marginTop">0pt</property>
-                            <property name="paddingTop">1pt</property>
-                            <property name="textAlign">justify</property>
-                            <text-property name="text">NOME USUAL</text-property>
-                        </label>
-                    </cell>
-                    <cell id="255">
-                        <property name="borderBottomColor">#000000</property>
-                        <property name="borderBottomStyle">solid</property>
-                        <property name="borderBottomWidth">thin</property>
-                        <property name="borderLeftColor">#000000</property>
-                        <property name="borderLeftStyle">solid</property>
-                        <property name="borderLeftWidth">thin</property>
-                        <property name="borderRightColor">#000000</property>
-                        <property name="borderRightStyle">solid</property>
-                        <property name="borderRightWidth">thin</property>
-                        <property name="borderTopColor">#000000</property>
-                        <property name="borderTopStyle">solid</property>
-                        <property name="borderTopWidth">thin</property>
-                        <label id="265">
-                            <property name="fontFamily">serif</property>
-                            <property name="fontSize">10pt</property>
-                            <property name="fontWeight">bold</property>
-                            <property name="paddingTop">1pt</property>
-                            <property name="textAlign">justify</property>
-                            <text-property name="text">TEL.  DELE</text-property>
-                        </label>
-                    </cell>
-                    <cell id="251">
-                        <property name="borderBottomColor">#000000</property>
-                        <property name="borderBottomStyle">solid</property>
-                        <property name="borderBottomWidth">thin</property>
-                        <property name="borderLeftColor">#000000</property>
-                        <property name="borderLeftStyle">solid</property>
-                        <property name="borderLeftWidth">thin</property>
-                        <property name="borderRightColor">#000000</property>
-                        <property name="borderRightStyle">solid</property>
-                        <property name="borderRightWidth">thin</property>
-                        <property name="borderTopColor">#000000</property>
-                        <property name="borderTopStyle">solid</property>
-                        <property name="borderTopWidth">thin</property>
-                        <label id="266">
-                            <property name="fontFamily">serif</property>
-                            <property name="fontSize">10pt</property>
-                            <property name="fontWeight">bold</property>
-                            <property name="textAlign">justify</property>
-                            <text-property name="text">TEL. DELA</text-property>
-                        </label>
-                    </cell>
-                    <cell id="547">
-                        <property name="borderBottomColor">#000000</property>
-                        <property name="borderBottomStyle">solid</property>
-                        <property name="borderBottomWidth">thin</property>
-                        <property name="borderLeftColor">#000000</property>
-                        <property name="borderLeftStyle">solid</property>
-                        <property name="borderLeftWidth">thin</property>
-                        <property name="borderRightColor">#000000</property>
-                        <property name="borderRightStyle">solid</property>
-                        <property name="borderRightWidth">thin</property>
-                        <property name="borderTopColor">#000000</property>
-                        <property name="borderTopStyle">solid</property>
-                        <property name="borderTopWidth">thin</property>
-                        <label id="551">
-                            <property name="fontFamily">serif</property>
-                            <property name="fontSize">10pt</property>
-                            <property name="fontWeight">bold</property>
-                            <property name="textAlign">justify</property>
-                            <text-property name="text">ENDEREÇO</text-property>
-                        </label>
-                    </cell>
-                </row>
-            </header>
-            <detail>
-                <row id="173">
-                    <list-property name="highlightRules">
-                        <structure>
-                            <property name="operator">eq</property>
-                            <property name="backgroundColor">#C0C0C0</property>
-                            <expression name="testExpr">row[0]%2</expression>
-                            <simple-property-list name="value1">
-                                <value>0</value>
-                            </simple-property-list>
-                        </structure>
-                    </list-property>
-                    <cell id="174">
-                        <data id="569">
-                            <property name="fontSize">10pt</property>
-                            <property name="resultSetColumn">nome_usual</property>
-                        </data>
-                    </cell>
-                    <cell id="256">
-                        <data id="560">
-                            <property name="fontSize">10pt</property>
-                            <property name="resultSetColumn">telefone_ele</property>
-                        </data>
-                    </cell>
-                    <cell id="252">
-                        <data id="563">
-                            <property name="fontSize">10pt</property>
-                            <property name="resultSetColumn">telefone_ela</property>
-                        </data>
-                    </cell>
-                    <cell id="548">
-                        <data id="564">
-                            <property name="fontSize">10pt</property>
-                            <property name="resultSetColumn">endereco</property>
-                        </data>
-                    </cell>
-                </row>
-            </detail>
-            <footer>
-                <row id="182">
-                    <cell id="183"/>
-                    <cell id="257"/>
-                    <cell id="253"/>
-                    <cell id="549"/>
-                </row>
-            </footer>
+            <group id="944">
+                <property name="groupName">Círculo</property>
+                <expression name="keyExpr" type="javascript">row["circulo"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["circulo"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <property name="pageBreakAfter">always</property>
+                <header>
+                    <row id="945">
+                        <property name="height">11.694583333333334cm</property>
+                        <cell id="946">
+                            <property name="colSpan">2</property>
+                            <property name="rowSpan">1</property>
+                            <text-data id="873">
+                                <property name="fontWeight">normal</property>
+                                <property name="textAlign">right</property>
+                                <expression name="valueExpr">"&lt;b>COR: &lt;/b>"+row["circulo"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                            <text-data id="984">
+                                <property name="fontWeight">bold</property>
+                                <property name="textAlign">right</property>
+                                <expression name="valueExpr">"   "</expression>
+                                <property name="contentType">auto</property>
+                            </text-data>
+                            <text-data id="952">
+                                <property name="fontWeight">normal</property>
+                                <property name="textAlign">left</property>
+                                <expression name="valueExpr">"&lt;b>TEMA: &lt;/b>"+row["tema_circulo"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                            <text-data id="953">
+                                <property name="fontWeight">normal</property>
+                                <property name="textAlign">left</property>
+                                <expression name="valueExpr">"&lt;b>NOME DO GRUPO: &lt;/b>"+row["nome_grupo"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                            <text-data id="954">
+                                <property name="fontWeight">normal</property>
+                                <property name="textAlign">left</property>
+                                <expression name="valueExpr">"&lt;b>CASAL COORDENADOR : &lt;/b>"+row["casal_coordenador"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                            <text-data id="955">
+                                <property name="fontWeight">normal</property>
+                                <property name="textAlign">left</property>
+                                <expression name="valueExpr">"&lt;b>CASAL RELATOR : &lt;/b>"+row["casal_relator"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                            <text-data id="956">
+                                <property name="fontWeight">normal</property>
+                                <property name="textAlign">justify</property>
+                                <expression name="valueExpr">"&lt;b>NOMES DOS CASAIS QUE INTEGRAM O GRUPO : &lt;/b>"+row["casais_grupo"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                            <text id="962">
+                                <property name="fontSize">11pt</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="marginTop">0pt</property>
+                                <property name="paddingTop">1pt</property>
+                                <property name="textAlign">center</property>
+                                <structure name="toc"/>
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[   ]]></text-property>
+                            </text>
+                            <text-data id="986">
+                                <property name="fontWeight">normal</property>
+                                <property name="borderBottomStyle">none</property>
+                                <property name="borderLeftStyle">none</property>
+                                <property name="borderRightStyle">none</property>
+                                <property name="borderTopStyle">none</property>
+                                <property name="textAlign">justify</property>
+                                <expression name="valueExpr">"&lt;b>PERGUNTA : &lt;/b>"+row["pergunta1"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                            <text-data id="1003">
+                                <property name="fontWeight">normal</property>
+                                <property name="borderBottomStyle">none</property>
+                                <property name="borderLeftStyle">none</property>
+                                <property name="borderRightStyle">none</property>
+                                <property name="borderTopStyle">none</property>
+                                <property name="textAlign">justify</property>
+                                <expression name="valueExpr">"&lt;b>RESPOSTA : &lt;/b>"+row["resposta1"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                            <text id="959">
+                                <property name="fontSize">11pt</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="marginTop">0pt</property>
+                                <property name="paddingTop">1pt</property>
+                                <property name="textAlign">center</property>
+                                <structure name="toc"/>
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[   ]]></text-property>
+                            </text>
+                            <text id="968">
+                                <property name="fontSize">11pt</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="marginTop">0pt</property>
+                                <property name="paddingTop">1pt</property>
+                                <property name="textAlign">center</property>
+                                <structure name="toc"/>
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[   ]]></text-property>
+                            </text>
+                            <text-data id="988">
+                                <property name="fontWeight">normal</property>
+                                <property name="textAlign">justify</property>
+                                <expression name="valueExpr">"&lt;b>PERGUNTA :&lt;b> "+row["pergunta2"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                            <text-data id="990">
+                                <property name="fontWeight">normal</property>
+                                <property name="textAlign">justify</property>
+                                <expression name="valueExpr">"&lt;b>RESPOSTA : &lt;/b>"+row["resposta2"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                        </cell>
+                    </row>
+                </header>
+                <footer>
+                    <row id="948">
+                        <property name="height">11.165416666666665cm</property>
+                        <cell id="949">
+                            <property name="colSpan">2</property>
+                            <property name="rowSpan">1</property>
+                            <text id="982">
+                                <property name="fontSize">11pt</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="marginTop">0pt</property>
+                                <property name="paddingTop">1pt</property>
+                                <property name="textAlign">center</property>
+                                <structure name="toc"/>
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[   ]]></text-property>
+                            </text>
+                            <text id="981">
+                                <property name="fontSize">11pt</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="marginTop">0pt</property>
+                                <property name="paddingTop">1pt</property>
+                                <property name="textAlign">center</property>
+                                <structure name="toc"/>
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[   ]]></text-property>
+                            </text>
+                            <text-data id="991">
+                                <property name="fontWeight">normal</property>
+                                <property name="textAlign">left</property>
+                                <expression name="valueExpr">"&lt;b>TEMA: &lt;/b>"+row["tema_circulo"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                            <text-data id="992">
+                                <property name="fontWeight">normal</property>
+                                <property name="textAlign">left</property>
+                                <expression name="valueExpr">"&lt;b>CASAL RELATOR : &lt;/b>"+row["casal_relator"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                            <text id="983">
+                                <property name="fontSize">11pt</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="marginTop">0pt</property>
+                                <property name="paddingTop">1pt</property>
+                                <property name="textAlign">center</property>
+                                <structure name="toc"/>
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[   ]]></text-property>
+                            </text>
+                            <text-data id="993">
+                                <property name="fontWeight">normal</property>
+                                <property name="textAlign">justify</property>
+                                <expression name="valueExpr">"&lt;b>PERGUNTA : &lt;/b> "+row["pergunta1"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                            <text-data id="994">
+                                <property name="fontWeight">normal</property>
+                                <property name="textAlign">justify</property>
+                                <expression name="valueExpr">"&lt;b>RESPOSTA : &lt;/b> "+row["resposta1"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                            <text id="972">
+                                <property name="fontSize">11pt</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="marginTop">0pt</property>
+                                <property name="paddingTop">1pt</property>
+                                <property name="textAlign">center</property>
+                                <structure name="toc"/>
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[   ]]></text-property>
+                            </text>
+                            <text id="973">
+                                <property name="fontSize">11pt</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="marginTop">0pt</property>
+                                <property name="paddingTop">1pt</property>
+                                <property name="textAlign">center</property>
+                                <structure name="toc"/>
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[   ]]></text-property>
+                            </text>
+                            <text-data id="995">
+                                <property name="fontWeight">normal</property>
+                                <property name="textAlign">justify</property>
+                                <expression name="valueExpr">"&lt;b>PERGUNTA : &lt;/b> "+row["pergunta2"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                            <text-data id="996">
+                                <property name="fontWeight">normal</property>
+                                <property name="textAlign">justify</property>
+                                <expression name="valueExpr">"&lt;b>RESPOSTA : &lt;/b> "+row["resposta2"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                        </cell>
+                    </row>
+                </footer>
+            </group>
         </table>
     </body>
     <list-property name="images">

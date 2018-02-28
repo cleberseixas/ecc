@@ -42,6 +42,9 @@ public class CirculoEcc implements Serializable{
     @NotNull(message="Selecione o Casal Coordenador")
     private Ficha casalCoordenador;
 
+    @Column(name="NOME_GRUPO", length=100)
+    private String nomeGrupo;
+
     @ManyToMany(fetch= FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(name = "CIRCULOS_ECCS_ENCONTRISTAS_ENCONTRISTAS",
             joinColumns = @JoinColumn(name = "CIRCULO_ECC"),
@@ -78,6 +81,14 @@ public class CirculoEcc implements Serializable{
 
     public void setCasalCoordenador(Ficha casalCoordenador) {
         this.casalCoordenador = casalCoordenador;
+    }
+
+    public String getNomeGrupo() {
+        return nomeGrupo;
+    }
+
+    public void setNomeGrupo(String nomeGrupo) {
+        this.nomeGrupo = nomeGrupo;
     }
 
     public List<CirculoEccCasal> getCirculosEccCasais() {

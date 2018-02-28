@@ -123,6 +123,14 @@ public class FichaService implements Serializable {
 		}
 	}
 
+	public List<Ficha> listarCasaisRelatoresEcc(Long ecc, Long circulo){
+		try {
+			return fichaRepository.listarCasaisRelatoresEcc(ecc, circulo);
+		} catch(NegocioException e){
+			FacesMessages.error(e.getMessage());
+			return null;
+		}
+	}
 
 
 	public List<Ficha> filtraFichaSituacaoNomeEleElaENomeUsual(String situacao, String tipoBusca, String valorBusca){

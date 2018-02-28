@@ -6659,7 +6659,7 @@ ORDER BY 11, 17, 18, 13]]></xml-property>
                         <property name="marginTop">0pt</property>
                         <property name="textAlign">center</property>
                         <property name="contentType">auto</property>
-                        <text-property name="content"><![CDATA[EQUIPES DE TRABALHO DESTE ENCONTRO]]></text-property>
+                        <text-property name="content"><![CDATA[E Q U I P E S   D E   T R A B A L H O   D E S T E   E N C O N T R O]]></text-property>
                     </text>
                     <text id="801">
                         <property name="fontSize">11pt</property>

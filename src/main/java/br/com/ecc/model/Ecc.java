@@ -76,6 +76,13 @@ public class Ecc implements Serializable {
     @Column(name="TELEFONE_DIRETOR", length=40, nullable = true)
     private String telefoneDiretor;
 
+    @Temporal(TemporalType.DATE)
+    @Column(name="DATA_DEPOIMENTO", nullable = true)
+    private Date dataDepoimento;
+
+    @Column(name="HORA_DEPOIMENTO", length=20, nullable = true)
+    private String horaDepoimento;
+
 
     //@OneToMany(mappedBy="ecc", fetch=FetchType.EAGER, cascade = CascadeType.ALL)
 
@@ -203,6 +210,22 @@ public class Ecc implements Serializable {
 
     public void setTelefoneDiretor(String telefoneDiretor) {
         this.telefoneDiretor = telefoneDiretor;
+    }
+
+    public Date getDataDepoimento() {
+        return dataDepoimento;
+    }
+
+    public void setDataDepoimento(Date dataDepoimento) {
+        this.dataDepoimento = dataDepoimento;
+    }
+
+    public String getHoraDepoimento() {
+        return horaDepoimento;
+    }
+
+    public void setHoraDepoimento(String horaDepoimento) {
+        this.horaDepoimento = horaDepoimento;
     }
 
     public List<DirigenteEcc> getDirigentes() {

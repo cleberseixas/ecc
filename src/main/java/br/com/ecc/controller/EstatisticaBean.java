@@ -239,7 +239,10 @@ public class EstatisticaBean implements Serializable {
 
 	public String filtraUltimoEcc() {
 		List<Ecc> lista = eccService.listarUltimoEcc();
-		return lista.get(0).getNumero();
+		if (lista.size() > 0) {
+			return lista.get(0).getNumero();
+		} else return "";
+
 	}
 
 	public void indicadoresIniciais() {

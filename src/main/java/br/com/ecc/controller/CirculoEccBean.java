@@ -69,10 +69,10 @@ public class CirculoEccBean implements Serializable {
 	private EccService eccService;
 
 	@Inject
-	private EquipeEccService equipeEccService;
+	private FichaService fichaService;
 
 	@Inject
-	private FichaService fichaService;
+	private EquipeEccService equipeEccService;
 
 	@Inject
 	private DirigenteEccService dirigenteEccService;
@@ -343,25 +343,35 @@ public class CirculoEccBean implements Serializable {
 
 	public void alterarCirculo() {
 		try {
-			if (null == this.getCasalCoordenador()) {
-				FacesMessages.error("Favor informar o Nome do Casal Coordenador");
-				RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
-				return;
-			}
-			if (circuloEccService.casalJaExisteEccCoordenadorCirculo(circuloEcc.getEcc().getId(), this.getCasalCoordenador().getId())) {
-				FacesMessages.error("Casal já é Coordenador de outro círculo neste ECC.");
-				RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
-				return;
-			} else if (dirigenteEccService.casalJaExisteEccDirigente(circuloEcc.getEcc().getId(), this.casalCoordenador.getId(), 0L)) {
+			if (null != this.getCasalCoordenador()) {
+//				FacesMessages.error("Favor informar o Nome do Casal Coordenador");
+//				RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+//				return;
+				if (!this.getCasalCoordenador().getId().equals(circuloEcc.getCasalCoordenador().getId())) {
+					if (circuloEccService.casalJaExisteEccCoordenadorCirculo(circuloEcc.getEcc().getId(), this.getCasalCoordenador().getId())) {
+						FacesMessages.error("Casal já é Coordenador de outro círculo neste ECC.");
+						RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
+						return;
+					} else if (dirigenteEccService.casalJaExisteEccDirigente(circuloEcc.getEcc().getId(), this.casalCoordenador.getId(), 0L)) {
 						FacesMessages.error("Casal já faz parte da Equipe de Dirigentes neste ECC.");
 						RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
 						return;
 					} else {
-							this.circuloEcc.setCasalCoordenador(this.casalCoordenador);
-							circuloEccService.alterar(this.circuloEcc);
-							this.listaUltimoCirculo = circuloEccService.listaUltimoCirculoEcc();
-							this.casalCoordenador = new Ficha();
-							}
+						this.circuloEcc.setCasalCoordenador(this.casalCoordenador);
+						circuloEccService.alterar(this.circuloEcc);
+						this.listaUltimoCirculo = circuloEccService.listaUltimoCirculoEcc();
+						this.casalCoordenador = new Ficha();
+					}
+				} else {
+					circuloEccService.alterar(this.circuloEcc);
+					this.listaUltimoCirculo = circuloEccService.listaUltimoCirculoEcc();
+					this.casalCoordenador = new Ficha();
+				}
+			} else {
+				circuloEccService.alterar(this.circuloEcc);
+				this.listaUltimoCirculo = circuloEccService.listaUltimoCirculoEcc();
+				this.casalCoordenador = new Ficha();
+			}
 
 		} catch (Exception e) {
 			FacesMessages.error(e.getMessage());

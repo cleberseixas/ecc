@@ -226,6 +226,9 @@
 										style="width:20px; height:20px; float: right;" title="Foto dele"/>
 
 					</p:column>
+					<p:column headerText="Nome do Grupo" width="290">
+						<p:outputLabel value="#{circuloEcc.nomeGrupo}"/>
+					</p:column>
 					<p:column headerText="Total" width="20">
 						<p:outputLabel value="#{circuloEcc.circulo.totalCasais}"/>
 					</p:column>
@@ -236,7 +239,7 @@
 		<!-- ======================================================================= -->
 		<!-- Caixa de diálogo para confirmar exclusão do Círculo			         -->
 		<!-- ======================================================================= -->
-		<p:confirmDialog header="Excluir Equipe"
+		<p:confirmDialog header="Excluir Círculo"
 						 message="Confirmar a exclusão do Círculo #{circuloEccBean.circuloEcc.circulo.descricao}?"
 						 widgetVar="confirmacaoExclusao" id="confirmacaoExclusaoDialog">
 			<p:commandButton value="Sim"
@@ -252,7 +255,7 @@
 		<p:dialog id="dialogNovoCirculoEcc" header="Lançar novo Círculo"
 				  modal="true" widgetVar="dlgNovoCirculoEcc"
 				  style="background-color:#EBF3FE" resizable="false" width="590px"
-				  height="255px">
+				  height="310px">
 
 			<h:form id="cadNovoCirculoEcc">
 				<p:panel id="panelDadosCirculoEcc" style="background-color: #ffffe6">
@@ -282,6 +285,13 @@
 											   var="circulo" itemValue="#{circulo}"
 											   itemLabel="#{circulo.descricao}" />
 							</p:selectOneMenu>
+						</h:panelGrid>
+						<h:panelGrid columns="1">
+							<h:outputLabel value="Nome do Grupo" for="nomeGrupo" />
+							<p:inputText id="nomeGrupo" value="#{circuloEccBean.circuloEcc.nomeGrupo}"
+										 required="false" requiredMessage="O campo Nome dele é obrigatório"
+										 maxlength="100" style="width:520px;">
+							</p:inputText>
 						</h:panelGrid>
 						<h:panelGrid id="fotoEleEla" columns="2">
 							<p:outputLabel value="Homem" styleClass="negrito" rendered="#{circuloEccBean.casalCoordenador.fotoEle.length() > 0}"
@@ -321,12 +331,12 @@
 		<p:dialog id="dialogEditarCirculoEcc" header="Alterar Círculo"
 				  modal="true" widgetVar="dlgEditarCirculoEcc"
 				  style="background-color:#EBF3FE" resizable="false" width="590px"
-				  height="275px">
+				  height="325px">
 			<h:form id="cadEditarCirculoEcc">
-				<p:panel id="panelEditarEquipeEcc" style="background-color: #ffffe6">
+				<p:panel id="panelEditarCirculoEcc" style="background-color: #ffffe6">
 					<h:message />
 					<h:inputHidden value="#{circuloEccBean.circuloEcc.id}" />
-					<p:focus for="ecc" />
+					<p:focus for="nomeGrupo" />
 					<h:panelGrid columns="2">
 						<h:outputLabel value="ECC" for="ecc" />
 						<h:outputLabel value="Círculo" for="circulo"/>
@@ -350,6 +360,13 @@
 										   var="circulo" itemValue="#{circulo}"
 										   itemLabel="#{circulo.descricao}" />
 						</p:selectOneMenu>
+					</h:panelGrid>
+					<h:panelGrid columns="1">
+						<h:outputLabel value="Nome do Grupo" for="nomeGrupo" />
+						<p:inputText id="nomeGrupo" value="#{circuloEccBean.circuloEcc.nomeGrupo}"
+									 required="false" requiredMessage="O campo Nome dele é obrigatório"
+									 maxlength="100" style="width:520px;">
+						</p:inputText>
 					</h:panelGrid>
 					<h:panelGrid id="fotoEleEla" columns="2">
 						<p:outputLabel value="Homem" styleClass="negrito" rendered="#{circuloEccBean.casalCoordenador.fotoEle.length() > 0}"

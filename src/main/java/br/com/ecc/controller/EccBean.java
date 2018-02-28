@@ -53,6 +53,10 @@ public class EccBean implements Serializable {
 
 	private boolean habilitaBotaoEncerrarEcc = true;
 
+	private boolean habilitaBotaoImprimirConvites = true;
+
+	private boolean habilitaBotaoImprimirPreces = true;
+
 	private boolean habilitaBotaoImprimirCasaisEncontristas = true;
 
 	private boolean habilitaBotaoImprimirDirigentes = true;
@@ -60,6 +64,13 @@ public class EccBean implements Serializable {
 	private boolean  habilitaBotaoImprimirEquipes = true;
 
 	private boolean  habilitaBotaoImprimirPalestrantes = true;
+
+	private boolean  habilitaBotaoImprimirDesenhos = true;
+
+	private boolean  habilitaBotaoImprimirHarmoniaEParabola = true;
+
+	private boolean  habilitaBotaoImprimirSemeador = true;
+
 
 	private Ecc idEcc;
 
@@ -222,6 +233,22 @@ public class EccBean implements Serializable {
 		this.habilitaBotaoEncerrarEcc = habilitaBotaoEncerrarEcc;
 	}
 
+	public boolean isHabilitaBotaoImprimirConvites() {
+		return habilitaBotaoImprimirConvites;
+	}
+
+	public void setHabilitaBotaoImprimirConvites(boolean habilitaBotaoImprimirConvites) {
+		this.habilitaBotaoImprimirConvites = habilitaBotaoImprimirConvites;
+	}
+
+	public boolean isHabilitaBotaoImprimirPreces() {
+		return habilitaBotaoImprimirPreces;
+	}
+
+	public void setHabilitaBotaoImprimirPreces(boolean habilitaBotaoImprimirPreces) {
+		this.habilitaBotaoImprimirPreces = habilitaBotaoImprimirPreces;
+	}
+
 	public boolean isHabilitaBotaoImprimirCasaisEncontristas() {
 		return habilitaBotaoImprimirCasaisEncontristas;
 	}
@@ -252,6 +279,30 @@ public class EccBean implements Serializable {
 
 	public void setHabilitaBotaoImprimirPalestrantes(boolean habilitaBotaoImprimirPalestrantes) {
 		this.habilitaBotaoImprimirPalestrantes = habilitaBotaoImprimirPalestrantes;
+	}
+
+	public boolean isHabilitaBotaoImprimirDesenhos() {
+		return habilitaBotaoImprimirDesenhos;
+	}
+
+	public void setHabilitaBotaoImprimirDesenhos(boolean habilitaBotaoImprimirDesenhos) {
+		this.habilitaBotaoImprimirDesenhos = habilitaBotaoImprimirDesenhos;
+	}
+
+	public boolean isHabilitaBotaoImprimirHarmoniaEParabola() {
+		return habilitaBotaoImprimirHarmoniaEParabola;
+	}
+
+	public void setHabilitaBotaoImprimirHarmoniaEParabola(boolean habilitaBotaoImprimirHarmoniaEParabola) {
+		this.habilitaBotaoImprimirHarmoniaEParabola = habilitaBotaoImprimirHarmoniaEParabola;
+	}
+
+	public boolean isHabilitaBotaoImprimirSemeador() {
+		return habilitaBotaoImprimirSemeador;
+	}
+
+	public void setHabilitaBotaoImprimirSemeador(boolean habilitaBotaoImprimirSemeador) {
+		this.habilitaBotaoImprimirSemeador = habilitaBotaoImprimirSemeador;
 	}
 
 	public Ecc getIdEcc() {
@@ -340,10 +391,15 @@ public class EccBean implements Serializable {
 
 		habilitaBotaoIncluiDirigentes = false;
 		habilitaBotaoDetalhesEcc = false;
+		habilitaBotaoImprimirConvites = false;
+		habilitaBotaoImprimirPreces = false;
 		habilitaBotaoImprimirCasaisEncontristas = false;
 		habilitaBotaoImprimirDirigentes = false;
 		habilitaBotaoImprimirEquipes = false;
 		habilitaBotaoImprimirPalestrantes = false;
+		habilitaBotaoImprimirDesenhos = false;
+		habilitaBotaoImprimirHarmoniaEParabola = false;
+		habilitaBotaoImprimirSemeador = false;
 	}
 
 	private void desabilitaTodosBotoesEcc() {
@@ -352,10 +408,15 @@ public class EccBean implements Serializable {
 		habilitaBotaoIncluiDirigentes = false;
 		habilitaBotaoDetalhesEcc = false;
 		habilitaBotaoEncerrarEcc = true;
+		habilitaBotaoImprimirConvites = false;
+		habilitaBotaoImprimirPreces = false;
 		habilitaBotaoImprimirCasaisEncontristas = false;
 		habilitaBotaoImprimirDirigentes = false;
 		habilitaBotaoImprimirEquipes = false;
 		habilitaBotaoImprimirPalestrantes = false;
+		habilitaBotaoImprimirDesenhos = false;
+		habilitaBotaoImprimirHarmoniaEParabola = false;
+		habilitaBotaoImprimirSemeador = false;
 	}
 
 	//Incluir as regras para salvar o Ecc (Equipes)
@@ -563,6 +624,26 @@ public class EccBean implements Serializable {
 		}
 	}
 
+	public void imprimirConvites() throws IOException {
+		try {
+
+			urlRelatorio = Util.retornaURLRelatorio()+"/rptConvites.rptdesign&ecc=" + ecc.getId();
+			System.out.println(urlRelatorio);
+		} catch (Exception ex) {
+			System.err.println("O arquivo não foi gerado corretamente!");
+		}
+	}
+
+	public void imprimirPreces() throws IOException {
+		try {
+
+			urlRelatorio = Util.retornaURLRelatorio()+"/rptPrece.rptdesign";
+			System.out.println(urlRelatorio);
+		} catch (Exception ex) {
+			System.err.println("O arquivo não foi gerado corretamente!");
+		}
+	}
+
 	public void imprimirEncontristas() throws IOException {
 		try {
 
@@ -572,4 +653,36 @@ public class EccBean implements Serializable {
 			System.err.println("O arquivo não foi gerado corretamente!");
 		}
 	}
+
+	public void imprimirHarmoniaEParabola() throws IOException {
+		try {
+
+			urlRelatorio = Util.retornaURLRelatorio()+"/rptCirculosEstudos.rptdesign&ecc=" + ecc.getId();
+			System.out.println(urlRelatorio);
+		} catch (Exception ex) {
+			System.err.println("O arquivo não foi gerado corretamente!");
+		}
+	}
+
+	public void imprimirDesenhos() throws IOException {
+		try {
+
+			urlRelatorio = Util.retornaURLRelatorio()+"/rptDesenhos.rptdesign&ecc=" + ecc.getId();;
+			System.out.println(urlRelatorio);
+		} catch (Exception ex) {
+			System.err.println("O arquivo não foi gerado corretamente!");
+		}
+	}
+
+	public void imprimirSemeador() throws IOException {
+		try {
+
+			urlRelatorio = Util.retornaURLRelatorio()+"/rptSemeador.rptdesign";
+			System.out.println(urlRelatorio);
+		} catch (Exception ex) {
+			System.err.println("O arquivo não foi gerado corretamente!");
+		}
+	}
+
+
 }

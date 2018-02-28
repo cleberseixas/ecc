@@ -56,6 +56,21 @@ public class FichaRepository {
 		return query.getResultList();
 	}
 
+	public List<Ficha> listarCasaisRelatoresEcc(Long ecc, Long circulo) {
+		TypedQuery<Ficha> query = manager.createQuery("from Ficha fi "+
+				" where fi.ativo=true "+
+//				" and fi.situacao = 'ENCONTRISTA'"+
+				" and fi.id in ("+
+				" select ce.ficha.id from CirculoEccCasal ce "+
+				" where ce.ecc.id =:ECC and ce.circulo.id =:CIRCULO) order by fi.nomeUsual", Ficha.class);
+
+		if (ecc != null && circulo != null) {
+			query.setParameter("ECC", ecc);
+			query.setParameter("CIRCULO", circulo);
+			return query.getResultList();
+		} else return null;
+	}
+
 	/**
 	 * Método utilizado para filtrar as fichas
 	 * Por padrão tras todas as fichas (ativas/inativas) com situação TODAS

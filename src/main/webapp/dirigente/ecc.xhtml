@@ -96,6 +96,11 @@
 								margin-left:10px; margin-top:8px; margin-right:9px;"
 											name="montagemCirculos.png" /><a
 								href="../dirigente/montagemCirculo.xhtml">Círculos</a></li>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="montagemCirculosEstudos.png" /><a
+								href="../dirigente/montagemCirculoEstudo.xhtml">Círculos de Estudo</a></li>
 
 					</ul>
 				</li>
@@ -152,7 +157,7 @@
 		</p:toolbar>
 				<p:dataTable id="eccs" value="#{eccBean.listaUltimoEcc}" var="ecc" rowIndexVar="index" selection="#{eccBean.ecc}"
 							 selectionMode="single" rowKey="#{ecc.id}"
-							 emptyMessage="Não há ECCs cadastrados" style="width:1220px;"
+							 emptyMessage="Não há ECCs cadastrados" style="width:1414px;"
 							 paginator="false" paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
 							 rowsPerPageTemplate="14,28,42,56,70" paginatorPosition="top"
 							 currentPageReportTemplate="Registro(s) {startRecord} a {endRecord} de um total de {totalRecords} - Página {currentPage} de {totalPages}">
@@ -177,7 +182,7 @@
 												 onclick="PF('dlgEditarEcc').show()" update=":cadEditarEcc"
 												 title="Altera as informações do ECC selecionado."
 												 disabled="#{eccBean.habilitaBotaoEditarEcc}"/>
-								<p:commandButton id="btnExcluir" value="Excluir"
+								<p:commandButton id="btnExcluir" value="Excluir" rendered="false"
 												 icon="ui-icon-trash" style="margin-left: 5px;"
 												 disabled="#{eccBean.habilitaBotaoExcluirEcc}"
 												 title="Remove o ECC selecionado."
@@ -190,51 +195,92 @@
 												 onclick="PF('dlgNovosDirigentes').show()" update=":cadNovosDirigentes"
 												 title="Adiciona dirigentes ao ECC selecionado."
 												 disabled="#{eccBean.habilitaBotaoIncluiDirigentes}"/>
-								<p:commandButton id="btnEncerrar" value="Encerrar ECC"
+								<p:commandButton id="btnEncerrar" value="Encerrar"
 												 icon="ui-icon-locked" style="margin-left: 5px;"
 												 disabled="#{eccBean.habilitaBotaoEncerrarEcc}"
 												 oncomplete="PF('confirmacaoEncerrar').show()" immediate="true"
 												 process="@this"
 												 update=":listagemEccs:confirmacaoEncerrarDialog"
 												 title="Encerra o ECC selecionado."/>
+							</h:panelGroup>
+						</h:panelGrid>
+						<br />
+						<h:panelGrid columns="2" styleClass="semBordaInterna"
+									 columnClasses="tituloGridSolicitacao, botoesGridSolicitacao">
+						<p:outputLabel value="Relatórios para o Quadrante"
+									   style="float:left;" />
+							<h:panelGroup style="float:right;">
+								<p:commandButton id="btnImprimirConvite" action="#{eccBean.imprimirConvites}"
+												 oncomplete="PF('exibiPDF').show()"
+												 disabled="#{eccBean.habilitaBotaoImprimirConvites}"
+												 icon="ui-icon-print" value="Anexo21" style="margin-left: 5px;"
+												 title="Imprime os Convites."
+												 ajax="true" update="exibiPDF"/>
+								<p:commandButton id="btnImprimirPrece" action="#{eccBean.imprimirPreces}"
+												 oncomplete="PF('exibiPDF').show()"
+												 disabled="#{eccBean.habilitaBotaoImprimirPreces}"
+												 icon="ui-icon-print" value="Anexo22" style="margin-left: 5px;"
+												 title="Imprime as Preces."
+												 ajax="true" update="exibiPDF"/>
 								<p:commandButton id="btnImprimirEncontristas" action="#{eccBean.imprimirEncontristas}"
 												 oncomplete="PF('exibiPDF').show()"
 												 disabled="#{eccBean.habilitaBotaoImprimirCasaisEncontristas}"
-												 icon="ui-icon-print" value="Encontristas" style="margin-left: 5px;"
+												 icon="ui-icon-print" value="Anexo23" style="margin-left: 5px;"
+												 title="Imprime a relação dos Casais Encontristas."
+												 ajax="true" update="exibiPDF"/>
+								<p:commandButton id="btnImprimirHarmoniaEParabola" action="#{eccBean.imprimirHarmoniaEParabola}"
+												 oncomplete="PF('exibiPDF').show()"
+												 disabled="#{eccBean.habilitaBotaoImprimirHarmoniaEParabola}"
+												 icon="ui-icon-print" value="Anexo24" style="margin-left: 5px;"
+												 title="Imprime o Círculo de Estudo HARMONIA CONJUGAL E PARÁBOLA DO FILHO PRÓDIGO."
+												 ajax="true" update="exibiPDF"/>
+								<p:commandButton id="btnImprimirDesenhos" action="#{eccBean.imprimirDesenhos}"
+												 oncomplete="PF('exibiPDF').show()"
+												 disabled="#{eccBean.habilitaBotaoImprimirDesenhos}"
+												 icon="ui-icon-print" value="Anexo25" style="margin-left: 5px;"
+												 title="Imprime o desenho dos Cartazes."
+												 ajax="true" update="exibiPDF"/>
+								<p:commandButton id="btnImprimirSemeador" action="#{eccBean.imprimirSemeador}"
+												 oncomplete="PF('exibiPDF').show()"
+												 disabled="#{eccBean.habilitaBotaoImprimirSemeador}"
+												 icon="ui-icon-print" value="Anexo26" style="margin-left: 5px;"
+												 title="Imprime o Círculo de Estudo O SEMEADOR."
 												 ajax="true" update="exibiPDF"/>
 								<p:commandButton id="btnImprimirDirigentes" action="#{eccBean.imprimirDirigentes}"
 												 oncomplete="PF('exibiPDF').show()"
 												 disabled="#{eccBean.habilitaBotaoImprimirDirigentes}"
-												 icon="ui-icon-print" value="Dirigentes" style="margin-left: 5px;"
+												 icon="ui-icon-print" value="Anexo27" style="margin-left: 5px;"
+												 title="Imprime a relação dos Dirigentes.."
 												 ajax="true" update="exibiPDF"/>
 								<p:commandButton id="btnImprimirEquipes" action="#{eccBean.imprimirEquipes}"
 												 oncomplete="PF('exibiPDF').show()"
 												 disabled="#{eccBean.habilitaBotaoImprimirEquipes}"
-												 icon="ui-icon-print" value="Equipes" style="margin-left: 5px;"
+												 icon="ui-icon-print" value="Anexo27" style="margin-left: 5px;"
+												 title="Imprime a relação das Equipes."
 												 ajax="true" update="exibiPDF"/>
 								<p:commandButton id="btnImprimirPalestrantes" action="#{eccBean.imprimirPalestrantes}"
 												 oncomplete="PF('exibiPDF').show()"
 												 disabled="#{eccBean.habilitaBotaoImprimirPalestrantes}"
-												 icon="ui-icon-print" value="Palestrantes" style="margin-left: 5px;"
+												 icon="ui-icon-print" value="Anexo28" style="margin-left: 5px;"
+												 title="Imprime a relação dos Palestrantes."
 												 ajax="true" update="exibiPDF"/>
-
-
 							</h:panelGroup>
 						</h:panelGrid>
+
 					</f:facet>
 					<p:ajax event="rowSelect"
 							listener="#{eccBean.onRowSelectEcc}"
-							update="btnEditar btnExcluir btnIncluiDirigentes btnDetalhes btnEncerrar btnImprimirEncontristas btnImprimirDirigentes btnImprimirEquipes btnImprimirPalestrantes" />
+							update="btnEditar btnExcluir btnIncluiDirigentes btnDetalhes btnEncerrar btnImprimirConvite btnImprimirPrece btnImprimirEncontristas btnImprimirDirigentes btnImprimirEquipes btnImprimirPalestrantes btnImprimirDesenhos btnImprimirHarmoniaEParabola btnImprimirSemeador" />
 					<p:column width="30">
 						<f:facet name="header">Número</f:facet>
 						#{ecc.numero}
 						<h:graphicImage library="imagens" name="cadeado.png" width="15" height="15" rendered="#{ecc.situacao eq 'ENCERRADO'}"
 										style="float: right;" title="Encerrado"/>
 					</p:column>
-					<p:column headerText="Tema" width="350">
+					<p:column headerText="Tema" width="300">
 						<p:outputLabel value="#{ecc.tema}"/>
 					</p:column>
-					<p:column headerText="Local" width="150">
+					<p:column headerText="Local" width="100">
 						<p:outputLabel value="#{ecc.local}"/>
 					</p:column>
 					<p:column headerText="Diretor Espiritual" width="150">
@@ -292,7 +338,7 @@
 		<p:dialog id="dialogNovoEcc" header="Lançar novo ECC"
 				  modal="true" widgetVar="dlgNovoEcc"
 				  style="background-color:#EBF3FE" resizable="false" width="560px"
-				  height="320px">
+				  height="364px">
 			<h:form id="cadNovoEcc">
 				<p:panel id="panelDadosEcc" style="background-color: #ffffe6">
 						<h:message />
@@ -363,6 +409,18 @@
 							<p:selectBooleanCheckbox value="#{eccBean.ecc.automatico}" itemLabel="Automático?" style="margin-left:5px;" />
 						</h:panelGrid>
 						<h:panelGrid columns="2">
+							<h:outputLabel value="Data Depoimento" for="dataDepoimento" />
+							<h:outputLabel value="Hora" for="horaDepoimento" />
+							<p:calendar id="dataDepoimento" mask="99/99/9999"
+										required="true" requiredMessage="O Campo Data do Depoimento é obrigatório"
+										value="#{eccBean.ecc.dataDepoimento}"
+										pattern="dd/MM/yyyy"/>
+							<p:inputText id="horaDepoimento" value="#{eccBean.ecc.horaDepoimento}"
+										 required="true" requiredMessage="O campo Hora do Depoimento é obrigatório"
+										 maxlength="7" style="width:50px;">
+							</p:inputText>
+						</h:panelGrid>
+						<h:panelGrid columns="2">
 							<h:outputLabel value="" />
 							<p:commandButton value="Salvar" action="#{eccBean.salvarEcc()}"
 											 update=":listagemEccs @form" oncomplete="if(!args.validationFailed){PF('dlgNovoEcc').hide();}"
@@ -378,7 +436,7 @@
 		<p:dialog id="dialogEditarEcc" header="Alterar ECC"
 				  modal="true" widgetVar="dlgEditarEcc"
 				  style="background-color:#EBF3FE" resizable="false" width="560px"
-				  height="322px">
+				  height="364px">
 			<h:form id="cadEditarEcc">
 				<p:panel id="panelEditarEcc" style="background-color: #ffffe6">
 						<h:message />
@@ -448,14 +506,26 @@
 							</p:selectOneMenu>
 							<p:selectBooleanCheckbox value="#{eccBean.ecc.automatico}" itemLabel="Automático?" style="margin-left:5px;" />
 						</h:panelGrid>
-						<h:panelGrid columns="2">
-							<h:outputLabel value="" />
-							<p:commandButton value="Alterar" style="margin-left: 10px;"
-											 action="#{eccBean.alterarEcc()}" icon="ui-icon-check"
-											 update=":listagemEccs @form" process="@form"
-											 oncomplete="if(!args.validationFailed){PF('dlgEditarEcc').hide();}" />
-						</h:panelGrid>
-					</p:panel>
+					<h:panelGrid columns="2">
+						<h:outputLabel value="Data Depoimento" for="dataDepoimento" />
+						<h:outputLabel value="Hora" for="horaDepoimento" />
+						<p:calendar id="dataDepoimento" mask="99/99/9999"
+									required="true" requiredMessage="O Campo Data do Depoimento é obrigatório"
+									value="#{eccBean.ecc.dataDepoimento}"
+									pattern="dd/MM/yyyy"/>
+						<p:inputText id="horaDepoimento" value="#{eccBean.ecc.horaDepoimento}"
+									 required="true" requiredMessage="O campo Hora do Depoimento é obrigatório"
+									 maxlength="7" style="width:50px;">
+						</p:inputText>
+					</h:panelGrid>
+					<h:panelGrid columns="2">
+						<h:outputLabel value="" />
+						<p:commandButton value="Alterar" style="margin-left: 10px;"
+										 action="#{eccBean.alterarEcc()}" icon="ui-icon-check"
+										 update=":listagemEccs @form" process="@form"
+										 oncomplete="if(!args.validationFailed){PF('dlgEditarEcc').hide();}" />
+					</h:panelGrid>
+				</p:panel>
 			</h:form>
 		</p:dialog>
 		<!-- ==================================================================================== -->

@@ -3,227 +3,27 @@
     <property name="author">44260 - Cleber de Oliveira Seixas</property>
     <property name="comments">Copyright (c) 2007 &lt;&lt;Your Company Name here>></property>
     <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201606072122</property>
-    <text-property name="title">Relatório de Casais por Aptidão</text-property>
+    <text-property name="title">Relatório de Círculos de Estudo</text-property>
     <html-property name="description">Provides instructions for building a customer listing report.</html-property>
+    <list-property name="userProperties">
+        <structure>
+            <property name="name">Data Cube.DSCirculoEstudo.x</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">Data Cube.DSCirculoEstudo.y</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+    </list-property>
+    <property name="Data Cube.DSCirculoEstudo.x">135</property>
+    <property name="Data Cube.DSCirculoEstudo.y">80</property>
     <property name="units">cm</property>
     <text-property name="displayName">Relatório de Casais por Aptidão</text-property>
     <property name="iconFile">/templates/first_report.gif</property>
     <property name="cheatSheet">org.eclipse.birt.report.designer.ui.cheatsheet.firstreport</property>
     <property name="layoutPreference">auto layout</property>
-    <template-parameter-definitions>
-        <template-parameter-definition name="NewTemplateParameterDefinition" id="28">
-            <property name="allowedType">Table</property>
-            <text-property name="description">Customer Listing</text-property>
-            <default>
-                <table id="29">
-                    <property name="width">100%</property>
-                    <property name="pageBreakInterval">50</property>
-                    <column id="49"/>
-                    <column id="50"/>
-                    <column id="51"/>
-                    <column id="52"/>
-                    <header>
-                        <row id="30">
-                            <cell id="31">
-                                <label id="32">
-                                    <property name="fontFamily">sans-serif</property>
-                                    <property name="fontWeight">bold</property>
-                                    <text-property name="text">Contact</text-property>
-                                </label>
-                            </cell>
-                            <cell id="33">
-                                <label id="34">
-                                    <property name="fontFamily">sans-serif</property>
-                                    <property name="fontWeight">bold</property>
-                                    <text-property name="text">First</text-property>
-                                </label>
-                            </cell>
-                            <cell id="35">
-                                <label id="36">
-                                    <property name="fontFamily">sans-serif</property>
-                                    <property name="fontWeight">bold</property>
-                                    <text-property name="text">Last</text-property>
-                                </label>
-                            </cell>
-                            <cell id="37">
-                                <label id="38">
-                                    <property name="fontFamily">sans-serif</property>
-                                    <property name="fontWeight">bold</property>
-                                    <text-property name="text">Phone</text-property>
-                                </label>
-                            </cell>
-                        </row>
-                    </header>
-                    <detail>
-                        <row id="39">
-                            <cell id="40"/>
-                            <cell id="41"/>
-                            <cell id="42"/>
-                            <cell id="43"/>
-                        </row>
-                    </detail>
-                    <footer>
-                        <row id="44">
-                            <cell id="45"/>
-                            <cell id="46"/>
-                            <cell id="47"/>
-                            <cell id="48"/>
-                        </row>
-                    </footer>
-                </table>
-            </default>
-        </template-parameter-definition>
-        <template-parameter-definition name="NewTemplateParameterDefinition1" id="78">
-            <property name="allowedType">Table</property>
-            <text-property name="description">Customer Listing Table</text-property>
-            <default>
-                <table id="79">
-                    <property name="width">100%</property>
-                    <property name="refTemplateParameter">NewTemplateParameterDefinition</property>
-                    <property name="pageBreakInterval">50</property>
-                    <column id="99"/>
-                    <column id="100"/>
-                    <column id="101"/>
-                    <column id="102"/>
-                    <header>
-                        <row id="80">
-                            <cell id="81">
-                                <label id="82">
-                                    <property name="fontFamily">sans-serif</property>
-                                    <property name="fontWeight">bold</property>
-                                    <text-property name="text">Contact</text-property>
-                                </label>
-                            </cell>
-                            <cell id="83">
-                                <label id="84">
-                                    <property name="fontFamily">sans-serif</property>
-                                    <property name="fontWeight">bold</property>
-                                    <text-property name="text">First</text-property>
-                                </label>
-                            </cell>
-                            <cell id="85">
-                                <label id="86">
-                                    <property name="fontFamily">sans-serif</property>
-                                    <property name="fontWeight">bold</property>
-                                    <text-property name="text">Last</text-property>
-                                </label>
-                            </cell>
-                            <cell id="87">
-                                <label id="88">
-                                    <property name="fontFamily">sans-serif</property>
-                                    <property name="fontWeight">bold</property>
-                                    <text-property name="text">Phone</text-property>
-                                </label>
-                            </cell>
-                        </row>
-                    </header>
-                    <detail>
-                        <row id="89">
-                            <cell id="90"/>
-                            <cell id="91"/>
-                            <cell id="92"/>
-                            <cell id="93"/>
-                        </row>
-                    </detail>
-                    <footer>
-                        <row id="94">
-                            <cell id="95"/>
-                            <cell id="96"/>
-                            <cell id="97"/>
-                            <cell id="98"/>
-                        </row>
-                    </footer>
-                </table>
-            </default>
-        </template-parameter-definition>
-        <template-parameter-definition name="NewTemplateParameterDefinition2" id="132">
-            <property name="allowedType">Table</property>
-            <text-property name="description">Customer Listing Table</text-property>
-            <default>
-                <table id="133">
-                    <property name="width">100%</property>
-                    <property name="refTemplateParameter">NewTemplateParameterDefinition1</property>
-                    <property name="pageBreakInterval">50</property>
-                    <column id="157"/>
-                    <column id="158"/>
-                    <column id="159"/>
-                    <column id="160"/>
-                    <header>
-                        <row id="134">
-                            <cell id="135">
-                                <label id="136">
-                                    <property name="fontFamily">sans-serif</property>
-                                    <property name="fontWeight">bold</property>
-                                    <text-property name="text">Contact</text-property>
-                                </label>
-                            </cell>
-                            <cell id="137">
-                                <label id="138">
-                                    <property name="fontFamily">sans-serif</property>
-                                    <property name="fontWeight">bold</property>
-                                    <text-property name="text">First</text-property>
-                                </label>
-                            </cell>
-                            <cell id="139">
-                                <label id="140">
-                                    <property name="fontFamily">sans-serif</property>
-                                    <property name="fontWeight">bold</property>
-                                    <text-property name="text">Last</text-property>
-                                </label>
-                            </cell>
-                            <cell id="141">
-                                <label id="142">
-                                    <property name="fontFamily">sans-serif</property>
-                                    <property name="fontWeight">bold</property>
-                                    <text-property name="text">Phone</text-property>
-                                </label>
-                            </cell>
-                        </row>
-                    </header>
-                    <detail>
-                        <row id="143">
-                            <cell id="144">
-                                <data id="145"/>
-                            </cell>
-                            <cell id="146">
-                                <data id="147"/>
-                            </cell>
-                            <cell id="148">
-                                <data id="149"/>
-                            </cell>
-                            <cell id="150">
-                                <data id="151"/>
-                            </cell>
-                        </row>
-                    </detail>
-                    <footer>
-                        <row id="152">
-                            <cell id="153"/>
-                            <cell id="154"/>
-                            <cell id="155"/>
-                            <cell id="156"/>
-                        </row>
-                    </footer>
-                </table>
-            </default>
-        </template-parameter-definition>
-    </template-parameter-definitions>
-    <parameters>
-        <scalar-parameter name="aptidao" id="559">
-            <text-property name="promptText">Aptidão</text-property>
-            <property name="valueType">static</property>
-            <property name="isRequired">true</property>
-            <property name="dataType">decimal</property>
-            <property name="distinct">true</property>
-            <list-property name="selectionList"/>
-            <property name="paramType">simple</property>
-            <property name="concealValue">false</property>
-            <property name="controlType">text-box</property>
-            <structure name="format">
-                <property name="category">Unformatted</property>
-            </structure>
-        </scalar-parameter>
-    </parameters>
     <data-sources>
         <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="248">
             <list-property name="privateDriverProperties">
@@ -249,76 +49,175 @@
         </oda-data-source>
     </data-sources>
     <data-sets>
-        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="DSAptidoes" id="249">
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="DSCirculoEstudo" id="249">
             <list-property name="columnHints">
                 <structure>
-                    <property name="columnName">nome_usual</property>
-                    <property name="analysis">dimension</property>
-                    <text-property name="displayName">nome_usual</text-property>
-                    <text-property name="heading">nome_usual</text-property>
+                    <property name="columnName">ecc</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">ecc</text-property>
+                    <text-property name="heading">ecc</text-property>
                 </structure>
                 <structure>
-                    <property name="columnName">telefone_ele</property>
+                    <property name="columnName">numero</property>
                     <property name="analysis">dimension</property>
-                    <text-property name="displayName">telefone_ele</text-property>
-                    <text-property name="heading">telefone_ele</text-property>
+                    <text-property name="displayName">numero</text-property>
+                    <text-property name="heading">numero</text-property>
                 </structure>
                 <structure>
-                    <property name="columnName">telefone_ela</property>
+                    <property name="columnName">local</property>
                     <property name="analysis">dimension</property>
-                    <text-property name="displayName">telefone_ela</text-property>
-                    <text-property name="heading">telefone_ela</text-property>
+                    <text-property name="displayName">local</text-property>
+                    <text-property name="heading">local</text-property>
                 </structure>
                 <structure>
-                    <property name="columnName">descricao</property>
-                    <property name="analysis">dimension</property>
-                    <text-property name="displayName">descricao</text-property>
-                    <text-property name="heading">descricao</text-property>
+                    <property name="columnName">total</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">total</text-property>
+                    <text-property name="heading">total</text-property>
                 </structure>
                 <structure>
-                    <property name="columnName">endereco</property>
+                    <property name="columnName">tema</property>
                     <property name="analysis">dimension</property>
-                    <text-property name="displayName">endereco</text-property>
-                    <text-property name="heading">endereco</text-property>
+                    <text-property name="displayName">tema</text-property>
+                    <text-property name="heading">tema</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">automatico</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">automatico</text-property>
+                    <text-property name="heading">automatico</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">data_inicio</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">data_inicio</text-property>
+                    <text-property name="heading">data_inicio</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">data_fim</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">data_fim</text-property>
+                    <text-property name="heading">data_fim</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">situacao</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">situacao</text-property>
+                    <text-property name="heading">situacao</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ativo</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">ativo</text-property>
+                    <text-property name="heading">ativo</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">data_encerramento</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">data_encerramento</text-property>
+                    <text-property name="heading">data_encerramento</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">usuario_encerrou</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">usuario_encerrou</text-property>
+                    <text-property name="heading">usuario_encerrou</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">diretor_espiritual</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">diretor_espiritual</text-property>
+                    <text-property name="heading">diretor_espiritual</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">endereco_diretor</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">endereco_diretor</text-property>
+                    <text-property name="heading">endereco_diretor</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">telefone_diretor</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">telefone_diretor</text-property>
+                    <text-property name="heading">telefone_diretor</text-property>
                 </structure>
             </list-property>
-            <list-property name="parameters">
-                <structure>
-                    <property name="name">aptidao</property>
-                    <property name="paramName">aptidao</property>
-                    <property name="nativeName"></property>
-                    <property name="dataType">integer</property>
-                    <property name="nativeDataType">-5</property>
-                    <property name="position">1</property>
-                    <property name="isInput">true</property>
-                    <property name="isOutput">false</property>
-                </structure>
-            </list-property>
+            <list-property name="parameters"/>
             <structure name="cachedMetaData">
                 <list-property name="resultSet">
                     <structure>
                         <property name="position">1</property>
-                        <property name="name">nome_usual</property>
-                        <property name="dataType">string</property>
+                        <property name="name">ecc</property>
+                        <property name="dataType">decimal</property>
                     </structure>
                     <structure>
                         <property name="position">2</property>
-                        <property name="name">telefone_ele</property>
+                        <property name="name">numero</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">3</property>
-                        <property name="name">telefone_ela</property>
+                        <property name="name">local</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">4</property>
-                        <property name="name">descricao</property>
-                        <property name="dataType">string</property>
+                        <property name="name">total</property>
+                        <property name="dataType">decimal</property>
                     </structure>
                     <structure>
                         <property name="position">5</property>
-                        <property name="name">endereco</property>
+                        <property name="name">tema</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">automatico</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">data_inicio</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">data_fim</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">situacao</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">ativo</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">data_encerramento</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">usuario_encerrou</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">diretor_espiritual</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">endereco_diretor</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">telefone_diretor</property>
                         <property name="dataType">string</property>
                     </structure>
                 </list-property>
@@ -328,73 +227,111 @@
             <list-property name="resultSet">
                 <structure>
                     <property name="position">1</property>
-                    <property name="name">nome_usual</property>
-                    <property name="nativeName">nome_usual</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
+                    <property name="name">ecc</property>
+                    <property name="nativeName">ecc</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
                 </structure>
                 <structure>
                     <property name="position">2</property>
-                    <property name="name">telefone_ele</property>
-                    <property name="nativeName">telefone_ele</property>
+                    <property name="name">numero</property>
+                    <property name="nativeName">numero</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
                     <property name="position">3</property>
-                    <property name="name">telefone_ela</property>
-                    <property name="nativeName">telefone_ela</property>
+                    <property name="name">local</property>
+                    <property name="nativeName">local</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
                     <property name="position">4</property>
-                    <property name="name">descricao</property>
-                    <property name="nativeName">descricao</property>
+                    <property name="name">total</property>
+                    <property name="nativeName">total</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">tema</property>
+                    <property name="nativeName">tema</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
-                    <property name="position">5</property>
-                    <property name="name">endereco</property>
-                    <property name="nativeName">endereco</property>
+                    <property name="position">6</property>
+                    <property name="name">automatico</property>
+                    <property name="nativeName">automatico</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">-7</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">data_inicio</property>
+                    <property name="nativeName">data_inicio</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">data_fim</property>
+                    <property name="nativeName">data_fim</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">situacao</property>
+                    <property name="nativeName">situacao</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">ativo</property>
+                    <property name="nativeName">ativo</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">-7</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">data_encerramento</property>
+                    <property name="nativeName">data_encerramento</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">usuario_encerrou</property>
+                    <property name="nativeName">usuario_encerrou</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">diretor_espiritual</property>
+                    <property name="nativeName">diretor_espiritual</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">endereco_diretor</property>
+                    <property name="nativeName">endereco_diretor</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">telefone_diretor</property>
+                    <property name="nativeName">telefone_diretor</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
             </list-property>
-            <xml-property name="queryText"><![CDATA[SELECT 
-FI.NOME_USUAL, 
-FI.TELEFONE_ELE,
-FI.TELEFONE_ELA,
-EQ.DESCRICAO,
-CONCAT_WS(', ', FI.RUA::TEXT, FI.NUMERO::TEXT, FI.BAIRRO::TEXT) AS ENDERECO
-
-FROM FICHAS FI
-INNER JOIN APTIDOES AP ON AP.FICHA = FI.FICHA
-INNER JOIN EQUIPES EQ ON EQ.EQUIPE = AP.EQUIPE
-WHERE
-  EQ.EQUIPE = ?]]></xml-property>
-            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
-  <Version>2.0</Version>
-  <DataSetParameters>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name></design:name>
-            <design:position>1</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
-          <design:precision>0</design:precision>
-          <design:scale>0</design:scale>
-          <design:nullability>Unknown</design:nullability>
-        </design:attributes>
-      </design:ParameterDefinition>
-    </parameter>
-  </DataSetParameters>
-</model:DesignValues>]]></xml-property>
+            <xml-property name="queryText"><![CDATA[SELECT * FROM ECCS WHERE ECC = 0]]></xml-property>
         </oda-data-set>
     </data-sets>
     <styles>
@@ -428,342 +365,204 @@ WHERE
         </style>
     </styles>
     <page-setup>
-        <simple-master-page name="Relatório de Casais por Aptidão" id="2">
+        <simple-master-page name="Relatório de Círculos de Estudo" id="2">
             <property name="type">a4</property>
             <property name="orientation">portrait</property>
-            <property name="topMargin">1in</property>
-            <property name="leftMargin">1.508125cm</property>
-            <property name="bottomMargin">1in</property>
-            <property name="rightMargin">0mm</property>
+            <property name="topMargin">1cm</property>
+            <property name="leftMargin">2cm</property>
+            <property name="bottomMargin">0.5cm</property>
+            <property name="rightMargin">0.5cm</property>
             <property name="showHeaderOnFirst">true</property>
             <page-header>
-                <grid id="270">
-                    <property name="width">100%</property>
-                    <list-property name="boundDataColumns">
-                        <structure>
-                            <property name="name">Column Binding</property>
-                            <expression name="expression" type="javascript">params["aptidao"].value</expression>
-                            <property name="dataType">string</property>
-                            <property name="allowExport">true</property>
-                        </structure>
-                    </list-property>
-                    <column id="272"/>
-                    <row id="192">
-                        <cell id="194">
-                            <text id="201">
-                                <property name="fontSize">12pt</property>
-                                <property name="fontWeight">bold</property>
-                                <property name="marginTop">0pt</property>
-                                <property name="textAlign">center</property>
-                                <property name="contentType">auto</property>
-                                <text-property name="content"><![CDATA[PARÓQUIA SÃO LUIZ GONZAGA]]></text-property>
-                            </text>
-                            <text id="202">
-                                <property name="fontSize">11pt</property>
-                                <property name="fontWeight">bold</property>
-                                <property name="marginTop">0pt</property>
-                                <property name="paddingTop">1pt</property>
-                                <property name="textAlign">center</property>
-                                <property name="contentType">auto</property>
-                                <text-property name="content"><![CDATA[RELATÓRIO DE CASAIS POR APTIDÃO]]></text-property>
-                            </text>
-                            <data id="567">
-                                <property name="fontSize">11pt</property>
-                                <property name="fontWeight">bold</property>
-                                <property name="textUnderline">underline</property>
-                                <property name="textAlign">center</property>
-                                <property name="dataSet">DSAptidoes</property>
-                                <list-property name="boundDataColumns">
-                                    <structure>
-                                        <property name="name">descricao</property>
-                                        <text-property name="displayName">descricao</text-property>
-                                        <expression name="expression" type="javascript">dataSetRow["descricao"]</expression>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                </list-property>
-                                <property name="resultSetColumn">descricao</property>
-                            </data>
-                        </cell>
-                    </row>
-                </grid>
-            </page-header>
-            <page-footer>
-                <grid id="399">
+                <text id="800">
+                    <property name="fontSize">12pt</property>
+                    <property name="fontWeight">bold</property>
                     <property name="marginTop">0pt</property>
-                    <property name="width">100%</property>
-                    <column id="400">
-                        <property name="width">8.9791666667in</property>
-                    </column>
-                    <column id="402"/>
-                    <row id="403">
-                        <cell id="404">
-                            <property name="borderTopColor">#000000</property>
-                            <property name="borderTopStyle">solid</property>
-                            <property name="borderTopWidth">thin</property>
-                            <property name="paddingTop">1pt</property>
-                            <text id="407">
-                                <property name="fontSize">9pt</property>
-                                <property name="textAlign">left</property>
-                                <property name="dataSet">DSAptidoes</property>
-                                <list-property name="boundDataColumns">
-                                    <structure>
-                                        <property name="name">NOME_USUAL</property>
-                                        <expression name="expression">dataSetRow["nome_usual"]</expression>
-                                        <property name="dataType">string</property>
-                                    </structure>
-                                </list-property>
-                                <property name="contentType">html</property>
-                                <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
-                            </text>
-                        </cell>
-                        <cell id="406">
-                            <property name="borderTopColor">#000000</property>
-                            <property name="borderTopStyle">solid</property>
-                            <property name="borderTopWidth">thin</property>
-                            <grid id="408">
-                                <property name="width">100%</property>
-                                <column id="409">
-                                    <property name="width">0.90625in</property>
-                                </column>
-                                <column id="410"/>
-                                <column id="411"/>
-                                <row id="412">
-                                    <cell id="413">
-                                        <property name="colSpan">3</property>
-                                        <property name="rowSpan">1</property>
-                                        <grid id="517">
-                                            <property name="width">100%</property>
-                                            <column id="518"/>
-                                            <column id="519"/>
-                                            <column id="520"/>
-                                            <row id="521">
-                                                <cell id="522">
-                                                    <auto-text id="523">
-                                                        <property name="fontSize">9pt</property>
-                                                        <property name="fontWeight">normal</property>
-                                                        <property name="textAlign">right</property>
-                                                        <property name="type">page-number</property>
-                                                    </auto-text>
-                                                </cell>
-                                                <cell id="524">
-                                                    <text id="525">
-                                                        <property name="fontSize">9pt</property>
-                                                        <property name="fontWeight">normal</property>
-                                                        <property name="textAlign">center</property>
-                                                        <property name="contentType">plain</property>
-                                                        <text-property name="content"><![CDATA[de]]></text-property>
-                                                    </text>
-                                                </cell>
-                                                <cell id="526">
-                                                    <auto-text id="527">
-                                                        <property name="fontSize">9pt</property>
-                                                        <property name="fontWeight">normal</property>
-                                                        <property name="textAlign">left</property>
-                                                        <property name="type">total-page</property>
-                                                    </auto-text>
-                                                </cell>
-                                            </row>
-                                        </grid>
-                                    </cell>
-                                </row>
-                            </grid>
-                        </cell>
-                    </row>
-                </grid>
-            </page-footer>
+                    <property name="textAlign">center</property>
+                    <property name="contentType">auto</property>
+                    <text-property name="content"><![CDATA[C Í R C U L O S   D E   E S T U D O]]></text-property>
+                </text>
+            </page-header>
         </simple-master-page>
     </page-setup>
     <body>
-        <table id="163">
+        <text id="801">
+            <property name="fontSize">11pt</property>
+            <property name="fontWeight">bold</property>
             <property name="marginTop">0pt</property>
-            <property name="height">1.0833333333in</property>
-            <property name="width">7.65625in</property>
-            <property name="dataSet">DSAptidoes</property>
-            <property name="refTemplateParameter">NewTemplateParameterDefinition2</property>
-            <list-property name="boundDataColumns">
-                <structure>
-                    <property name="name">telefone_ele</property>
-                    <text-property name="displayName">telefone_ele</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["telefone_ele"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">Column Binding</property>
-                    <expression name="expression" type="javascript">dataSetRow["nome_usual"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">telefone_ela</property>
-                    <text-property name="displayName">telefone_ela</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["telefone_ela"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">endereco</property>
-                    <text-property name="displayName">endereco</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["endereco"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">nome_usual</property>
-                    <text-property name="displayName">nome_usual</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["nome_usual"]</expression>
-                    <property name="dataType">string</property>
-                    <property name="allowExport">true</property>
-                </structure>
-            </list-property>
-            <property name="pageBreakInterval">50</property>
-            <column id="187">
-                <property name="width">2.3020833333333335in</property>
-            </column>
-            <column id="258">
-                <property name="width">0.9479166666666666in</property>
-            </column>
-            <column id="254">
-                <property name="width">0.8958333333333334in</property>
-            </column>
-            <column id="550">
-                <property name="width">3.5104166666666665in</property>
-            </column>
-            <header>
-                <row id="164">
-                    <property name="fontSize">10pt</property>
-                    <cell id="165">
-                        <property name="borderBottomColor">#000000</property>
-                        <property name="borderBottomStyle">solid</property>
-                        <property name="borderBottomWidth">thin</property>
-                        <property name="borderLeftColor">#000000</property>
-                        <property name="borderLeftStyle">solid</property>
-                        <property name="borderLeftWidth">thin</property>
-                        <property name="borderRightColor">#000000</property>
-                        <property name="borderRightStyle">solid</property>
-                        <property name="borderRightWidth">thin</property>
-                        <property name="borderTopColor">#000000</property>
-                        <property name="borderTopStyle">solid</property>
-                        <property name="borderTopWidth">thin</property>
-                        <label id="166">
-                            <property name="fontFamily">serif</property>
-                            <property name="fontSize">10pt</property>
-                            <property name="fontWeight">bold</property>
-                            <property name="marginTop">0pt</property>
-                            <property name="paddingTop">1pt</property>
-                            <property name="textAlign">justify</property>
-                            <text-property name="text">NOME USUAL</text-property>
-                        </label>
-                    </cell>
-                    <cell id="255">
-                        <property name="borderBottomColor">#000000</property>
-                        <property name="borderBottomStyle">solid</property>
-                        <property name="borderBottomWidth">thin</property>
-                        <property name="borderLeftColor">#000000</property>
-                        <property name="borderLeftStyle">solid</property>
-                        <property name="borderLeftWidth">thin</property>
-                        <property name="borderRightColor">#000000</property>
-                        <property name="borderRightStyle">solid</property>
-                        <property name="borderRightWidth">thin</property>
-                        <property name="borderTopColor">#000000</property>
-                        <property name="borderTopStyle">solid</property>
-                        <property name="borderTopWidth">thin</property>
-                        <label id="265">
-                            <property name="fontFamily">serif</property>
-                            <property name="fontSize">10pt</property>
-                            <property name="fontWeight">bold</property>
-                            <property name="paddingTop">1pt</property>
-                            <property name="textAlign">justify</property>
-                            <text-property name="text">TEL.  DELE</text-property>
-                        </label>
-                    </cell>
-                    <cell id="251">
-                        <property name="borderBottomColor">#000000</property>
-                        <property name="borderBottomStyle">solid</property>
-                        <property name="borderBottomWidth">thin</property>
-                        <property name="borderLeftColor">#000000</property>
-                        <property name="borderLeftStyle">solid</property>
-                        <property name="borderLeftWidth">thin</property>
-                        <property name="borderRightColor">#000000</property>
-                        <property name="borderRightStyle">solid</property>
-                        <property name="borderRightWidth">thin</property>
-                        <property name="borderTopColor">#000000</property>
-                        <property name="borderTopStyle">solid</property>
-                        <property name="borderTopWidth">thin</property>
-                        <label id="266">
-                            <property name="fontFamily">serif</property>
-                            <property name="fontSize">10pt</property>
-                            <property name="fontWeight">bold</property>
-                            <property name="textAlign">justify</property>
-                            <text-property name="text">TEL. DELA</text-property>
-                        </label>
-                    </cell>
-                    <cell id="547">
-                        <property name="borderBottomColor">#000000</property>
-                        <property name="borderBottomStyle">solid</property>
-                        <property name="borderBottomWidth">thin</property>
-                        <property name="borderLeftColor">#000000</property>
-                        <property name="borderLeftStyle">solid</property>
-                        <property name="borderLeftWidth">thin</property>
-                        <property name="borderRightColor">#000000</property>
-                        <property name="borderRightStyle">solid</property>
-                        <property name="borderRightWidth">thin</property>
-                        <property name="borderTopColor">#000000</property>
-                        <property name="borderTopStyle">solid</property>
-                        <property name="borderTopWidth">thin</property>
-                        <label id="551">
-                            <property name="fontFamily">serif</property>
-                            <property name="fontSize">10pt</property>
-                            <property name="fontWeight">bold</property>
-                            <property name="textAlign">justify</property>
-                            <text-property name="text">ENDEREÇO</text-property>
-                        </label>
-                    </cell>
-                </row>
-            </header>
-            <detail>
-                <row id="173">
-                    <list-property name="highlightRules">
-                        <structure>
-                            <property name="operator">eq</property>
-                            <property name="backgroundColor">#C0C0C0</property>
-                            <expression name="testExpr">row[0]%2</expression>
-                            <simple-property-list name="value1">
-                                <value>0</value>
-                            </simple-property-list>
-                        </structure>
-                    </list-property>
-                    <cell id="174">
-                        <data id="569">
-                            <property name="fontSize">10pt</property>
-                            <property name="resultSetColumn">nome_usual</property>
-                        </data>
-                    </cell>
-                    <cell id="256">
-                        <data id="560">
-                            <property name="fontSize">10pt</property>
-                            <property name="resultSetColumn">telefone_ele</property>
-                        </data>
-                    </cell>
-                    <cell id="252">
-                        <data id="563">
-                            <property name="fontSize">10pt</property>
-                            <property name="resultSetColumn">telefone_ela</property>
-                        </data>
-                    </cell>
-                    <cell id="548">
-                        <data id="564">
-                            <property name="fontSize">10pt</property>
-                            <property name="resultSetColumn">endereco</property>
-                        </data>
-                    </cell>
-                </row>
-            </detail>
-            <footer>
-                <row id="182">
-                    <cell id="183"/>
-                    <cell id="257"/>
-                    <cell id="253"/>
-                    <cell id="549"/>
-                </row>
-            </footer>
-        </table>
+            <property name="paddingTop">1pt</property>
+            <property name="textAlign">center</property>
+            <property name="contentType">auto</property>
+            <text-property name="content"><![CDATA[   ]]></text-property>
+        </text>
+        <text id="869">
+            <property name="fontSize">11pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="marginTop">0pt</property>
+            <property name="paddingTop">1pt</property>
+            <property name="textAlign">center</property>
+            <property name="contentType">auto</property>
+            <text-property name="content"><![CDATA[   ]]></text-property>
+        </text>
+        <text-data id="952">
+            <property name="fontWeight">normal</property>
+            <property name="textAlign">left</property>
+            <expression name="valueExpr">"&lt;b>TEMA: &lt;/b>"+'"O Semeador" - Mc 4,2-9, Lc 8,9-15'</expression>
+            <property name="contentType">html</property>
+        </text-data>
+        <text id="986">
+            <property name="fontSize">11pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="marginTop">0pt</property>
+            <property name="paddingTop">1pt</property>
+            <property name="textAlign">center</property>
+            <property name="contentType">auto</property>
+            <text-property name="content"><![CDATA[   ]]></text-property>
+        </text>
+        <text id="987">
+            <property name="fontSize">11pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="marginTop">0pt</property>
+            <property name="paddingTop">1pt</property>
+            <property name="textAlign">center</property>
+            <property name="contentType">auto</property>
+            <text-property name="content"><![CDATA[   ]]></text-property>
+        </text>
+        <text-data id="985">
+            <property name="fontWeight">normal</property>
+            <property name="textAlign">justify</property>
+            <expression name="valueExpr">'"Ensinava-lhes muitas coisas por meio de parábolas. Ensinando, dizia-lhes: ´Ouviu. Saiu o semador para semear. Enquanto semeava, uma parte das sementes caiu à margem do caminho. Vieram as aves e comeram-nas. Outra parte caiu em terreno pedregoso, onde não havia muita terra. Nasceram logo, por que a terra não era profunda, mas quando o sol se levantou, queimaram-se e, porque não tinham raízes, secaram. Outra parte caiu entre os espinhos. Cresceram os espinhos e sufocaram-nas; por isso não deram fruto. Outra parte, enfim, caiu em terra boa. Germinou, cresceu e deu fruto. Umas produziram 30, outras 60; e outras, cem por um.´ E acrescentava: Quem tem ouvidos para ouvir, ouça."'+" (Mc 4,2-9)"</expression>
+            <property name="contentType">html</property>
+        </text-data>
+        <text id="988">
+            <property name="fontSize">11pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="marginTop">0pt</property>
+            <property name="paddingTop">1pt</property>
+            <property name="textAlign">center</property>
+            <property name="contentType">auto</property>
+            <text-property name="content"><![CDATA[   ]]></text-property>
+        </text>
+        <text id="989">
+            <property name="fontSize">11pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="marginTop">0pt</property>
+            <property name="paddingTop">1pt</property>
+            <property name="textAlign">center</property>
+            <property name="contentType">auto</property>
+            <text-property name="content"><![CDATA[   ]]></text-property>
+        </text>
+        <text-data id="990">
+            <property name="fontWeight">normal</property>
+            <property name="textAlign">justify</property>
+            <expression name="valueExpr">"&lt;b>Pergunta : &lt;/b>"+"A quem se dirige este texto do Evangelho?"</expression>
+            <property name="contentType">html</property>
+        </text-data>
+        <text-data id="992">
+            <property name="fontWeight">normal</property>
+            <property name="textAlign">justify</property>
+            <expression name="valueExpr">"&lt;b>R : &lt;/b>"+"À multidão que buscava ouvir e conhecer JESUS."</expression>
+            <property name="contentType">html</property>
+        </text-data>
+        <text id="993">
+            <property name="fontSize">11pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="marginTop">0pt</property>
+            <property name="paddingTop">1pt</property>
+            <property name="textAlign">center</property>
+            <property name="contentType">auto</property>
+            <text-property name="content"><![CDATA[   ]]></text-property>
+        </text>
+        <text-data id="994">
+            <property name="fontWeight">normal</property>
+            <property name="textAlign">justify</property>
+            <expression name="valueExpr">"&lt;b>Pergunta : &lt;/b>"+"De que semente se trata?"</expression>
+            <property name="contentType">html</property>
+        </text-data>
+        <text-data id="995">
+            <property name="fontWeight">normal</property>
+            <property name="textAlign">justify</property>
+            <expression name="valueExpr">"&lt;b>R : &lt;/b>"+"Da palavra de Deus, que deseja que todos recebam o Evangelho."</expression>
+            <property name="contentType">html</property>
+        </text-data>
+        <text id="996">
+            <property name="fontSize">11pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="marginTop">0pt</property>
+            <property name="paddingTop">1pt</property>
+            <property name="textAlign">center</property>
+            <property name="contentType">auto</property>
+            <text-property name="content"><![CDATA[   ]]></text-property>
+        </text>
+        <text-data id="997">
+            <property name="fontWeight">normal</property>
+            <property name="textAlign">justify</property>
+            <expression name="valueExpr">"&lt;b>Pergunta : &lt;/b>"+"Quem é o semeador?"</expression>
+            <property name="contentType">html</property>
+        </text-data>
+        <text-data id="998">
+            <property name="fontWeight">normal</property>
+            <property name="textAlign">justify</property>
+            <expression name="valueExpr">"&lt;b>R : &lt;/b>"+"É o próprio Cristo, que ainda continua lançando a sementre através de muitos meios. Será o Encontro mais uma semente a cair no campo de nosso coração, nos acontecimentos de nossa vida de casal."</expression>
+            <property name="contentType">html</property>
+        </text-data>
+        <text id="999">
+            <property name="fontSize">11pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="marginTop">0pt</property>
+            <property name="paddingTop">1pt</property>
+            <property name="textAlign">center</property>
+            <property name="contentType">auto</property>
+            <text-property name="content"><![CDATA[   ]]></text-property>
+        </text>
+        <text-data id="1000">
+            <property name="fontWeight">normal</property>
+            <property name="textAlign">justify</property>
+            <expression name="valueExpr">"&lt;b>Pergunta : &lt;/b>"+"Como se aplica?"</expression>
+            <property name="contentType">html</property>
+        </text-data>
+        <text-data id="1001">
+            <property name="fontWeight">normal</property>
+            <property name="textAlign">justify</property>
+            <expression name="valueExpr">"&lt;b>R : &lt;/b>"+"Se não damos oportunidade, para que a semente penetre no solo de nossos corações, somos terrenos que nem sequer damos ensejo a que germine e ela é levada pelo vento e comida pelos pássaros. Ou somos solo pedregoso e não demos tempo, para que a semente possa amadurecer, ou não cultivamos dando mais importância às coisas transitórias. Não será uma das inversões de valores hoje tão comuns? Ou permitimos que as coisas adversas como a dor e ou sofrimento afoguem a pujança da semente? Mais uma inversão de valores."</expression>
+            <property name="contentType">html</property>
+        </text-data>
+        <text id="1002">
+            <property name="fontSize">11pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="marginTop">0pt</property>
+            <property name="paddingTop">1pt</property>
+            <property name="textAlign">center</property>
+            <property name="contentType">auto</property>
+            <text-property name="content"><![CDATA[   ]]></text-property>
+        </text>
+        <text-data id="1003">
+            <property name="fontWeight">normal</property>
+            <property name="textAlign">justify</property>
+            <expression name="valueExpr">"&lt;b>Pergunta : &lt;/b>"+"E daí? O que vamos fazer?"</expression>
+            <property name="contentType">html</property>
+        </text-data>
+        <text-data id="1004">
+            <property name="fontWeight">normal</property>
+            <property name="textAlign">justify</property>
+            <expression name="valueExpr">"&lt;b>R : &lt;/b>"+"conclusão lógica:"</expression>
+            <property name="contentType">html</property>
+        </text-data>
+        <text-data id="1005">
+            <property name="fontWeight">normal</property>
+            <property name="textAlign">justify</property>
+            <expression name="valueExpr">"Ser terra boa, dipsondo-nos a ouvir a palavra salvadora de Cristo, procurando conhecê-la melhor, fazendo que seja elemento importante em nossa vida de cada dia, de cada momento."</expression>
+            <property name="contentType">html</property>
+        </text-data>
+        <text id="1007">
+            <property name="fontSize">11pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="marginTop">0pt</property>
+            <property name="paddingTop">1pt</property>
+            <property name="textAlign">center</property>
+            <property name="contentType">auto</property>
+            <text-property name="content"><![CDATA[   ]]></text-property>
+        </text>
     </body>
     <list-property name="images">
         <structure>
