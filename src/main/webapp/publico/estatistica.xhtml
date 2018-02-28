@@ -113,8 +113,14 @@
 											style="width:30px; height:30px;
 								margin-left:10px; margin-top:8px; margin-right:9px;"
 											name="montagemCirculos.png" />
-							<a href="../dirigente/montagemCirculo.xhtml">Círculos</a></li>
-
+							<a href="../dirigente/montagemCirculo.xhtml">Círculos</a>
+						</li>
+						<li><h:graphicImage library="imagens/menu"
+											style="width:30px; height:30px;
+								margin-left:10px; margin-top:8px; margin-right:9px;"
+											name="montagemCirculosEstudos.png" /><a
+								href="../dirigente/montagemCirculoEstudo.xhtml">Círculos de Estudo</a>
+						</li>
 					</ul>
 				</li>
 			</ul>
@@ -239,9 +245,9 @@
 			<!-- DIV APTIDÕES -->
 			<div id="divEstatisticaAptidaoSuperiorDireita">
 					<div id="divEstatisticaAptiaoDireita_01">
-						<div class="caixa caixa-laranja" style="width: 320px;">
+						<div class="caixa caixa-laranja" style="width: 423px;">
 							<p:selectOneMenu id="aptidao" value="#{estatisticaBean.aptidaoFiltro}"
-											 style="width:250px;margin-left:5px;display: inline-table">
+											 style="width:220px;margin-left:5px;display: inline-table">
 								<f:selectItem itemLabel="TODAS"/>
 								<f:selectItems value="#{equipeBean.lista}"
 											   var="aptidao" itemValue="#{aptidao.descricao}"
@@ -249,6 +255,15 @@
 								</f:selectItems>
 								<p:ajax listener="#{estatisticaBean.filtraPorAptidao()}"
 										event="change" update="tabelaAptidoes btnImprimirAptidao"/>
+							</p:selectOneMenu>
+							<p:selectOneMenu id="ecc3" value="#{estatisticaBean.eccFiltro}"
+											 style="width:80px;margin-left:24px;display: inline-table">
+								<f:selectItem itemLabel="TODOS"/>
+								<f:selectItems value="#{eccBean.listaEcc}"
+											   var="ecc" itemValue="#{ecc.numero}"
+											   itemLabel="#{ecc.numero}" />
+								<p:ajax listener="#{estatisticaBean.filtraPorAptidao()}"
+										event="change" update="tabelaAptidoes btnImprimirAptidao" />
 							</p:selectOneMenu>
 							<p:commandButton id="btnImprimirAptidao" actionListener="#{estatisticaBean.imprimirCasalPorAptidao}"
 										   oncomplete="PF('exibiPDF').show()" icon="ui-icon-print" style="margin-left: 5px;"

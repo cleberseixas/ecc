@@ -234,7 +234,7 @@ public class EstatisticaBean implements Serializable {
 	}
 
 	public void setarURLBirtNosRelatorios() {
-		urlRelatorio = Util.retornaURLRelatorio();
+		//urlRelatorio = Util.retornaURLRelatorio();
 	}
 
 	public String filtraUltimoEcc() {
@@ -258,8 +258,8 @@ public class EstatisticaBean implements Serializable {
 		listaDasAptidoes = aptidaoService.totalPorAptidao();
 		listaDasAptidoesAuxiliar = listaDasAptidoes;
 
-		listaDasAtividades = atividadeService.totalPorAtividade();
-		listaDasAtividadesAuxiliar = listaDasAtividades;
+//		listaDasAtividades = atividadeService.totalPorAtividade();
+//		listaDasAtividadesAuxiliar = listaDasAtividades;
 
 		listaDosCirculos = circuloEccService.listar();
 		listaDosCirculosAuxiliar = listaDosCirculos;
@@ -271,6 +271,7 @@ public class EstatisticaBean implements Serializable {
 		this.filtroEncontrista = this.eccFiltro;
 		//this.eccFiltro= filtraUltimoEcc();
 		filtraPorEcc();
+		filtraPorAptidao();
 		filtraPorEquipes();
 		filtraPorEncontristasCirculos();
 
@@ -292,14 +293,42 @@ public class EstatisticaBean implements Serializable {
 		}
 
 	}
+//
+//	public void filtraPorAptidao() {
+//		List<Aptidao> aux = new ArrayList<Aptidao>();
+//		listaDasAptidoes = listaDasAptidoesAuxiliar;
+//		if (null != aptidaoFiltro) {
+//			if (!aptidaoFiltro.equals("")) {
+//				for (Aptidao aptidao : listaDasAptidoes) {
+//					//ID da aptidao
+//					if (aptidao.getAptidao().equals(aptidaoFiltro)) {
+//						aux.add(aptidao);
+//					}
+//				}
+//				listaDasAptidoes = aux;
+//			}
+//		}
+//
+//	}
 
 	public void filtraPorAptidao() {
 		List<Aptidao> aux = new ArrayList<Aptidao>();
 		listaDasAptidoes = listaDasAptidoesAuxiliar;
+		if (null != eccFiltro) {
+			if (!eccFiltro.equals("")) {
+				for (Aptidao aptidao : listaDasAptidoes) {
+					if (aptidao.getEcc().equals(eccFiltro)) {
+						aux.add(aptidao);
+					}
+				}
+				listaDasAptidoes = aux;
+			}
+		}
+
 		if (null != aptidaoFiltro) {
 			if (!aptidaoFiltro.equals("")) {
+				aux = new ArrayList<Aptidao>();
 				for (Aptidao aptidao : listaDasAptidoes) {
-					//ID da aptidao
 					if (aptidao.getAptidao().equals(aptidaoFiltro)) {
 						aux.add(aptidao);
 					}
@@ -431,7 +460,8 @@ public class EstatisticaBean implements Serializable {
 
 			int aptidao = (int) param_01.getValue();
 
-			urlRelatorio += "/rptAptidoes.rptdesign&aptidao="+aptidao;
+			urlRelatorio = Util.retornaURLRelatorio()+"/rptAptidoes.rptdesign&aptidao="+aptidao;
+			System.out.println(urlRelatorio);
 			//FacesContext.getCurrentInstance().getExternalContext().redirect(urlRelatorio);
 		} catch (Exception ex) {
 			System.err.println("O arquivo não foi gerado corretamente!");

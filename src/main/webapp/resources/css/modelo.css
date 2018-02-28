@@ -29,7 +29,7 @@ body { overflow-x: hidden; }
 }
 
 #divEstatisticaAptidaoSuperiorDireita {
-	width: 330px;
+	width: 438px;
 	height: 306px;
 	float: left;
 	margin-right: 10px;
@@ -2270,7 +2270,7 @@ position: relative;
 }
 
 #divBoxAptidao {
-	width: 325px;
+	width: 428px;
 	height: 43px;
 	float: left;
 	position: relative;
@@ -2280,7 +2280,7 @@ position: relative;
 }
 
 #divDadosAptidao {
-	width: 325px;
+	width: 428px;
 	height: 204px;
 	float: left;
 	overflow: auto;

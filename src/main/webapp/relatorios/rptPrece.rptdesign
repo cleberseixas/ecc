@@ -467,10 +467,10 @@
                 <row id="1016">
                     <cell id="1017">
                         <image id="1011">
-                            <property name="height">413px</property>
-                            <property name="width">367px</property>
+                            <property name="height">399px</property>
+                            <property name="width">295px</property>
                             <property name="source">file</property>
-                            <expression name="uri" type="constant">/home/cleber/Desenvolvimento/workspaces/workspaceGTI/ecc/src/main/webapp/resources/imagens/prece.jpg</expression>
+                            <expression name="uri" type="constant">http://179.155.225.37:9970/ecc/javax.faces.resource/prece.jpg.xhtml?ln=imagens</expression>
                         </image>
                     </cell>
                     <cell id="1027"/>
@@ -562,10 +562,10 @@
                     <cell id="1044"/>
                     <cell id="1045">
                         <image id="1047">
-                            <property name="height">337px</property>
-                            <property name="width">256px</property>
+                            <property name="height">410px</property>
+                            <property name="width">282px</property>
                             <property name="source">file</property>
-                            <expression name="uri" type="constant">/home/cleber/Desenvolvimento/workspaces/workspaceGTI/ecc/src/main/webapp/resources/imagens/ramos.jpg</expression>
+                            <expression name="uri" type="constant">http://179.155.225.37:9970/ecc/javax.faces.resource/ramos.jpg.xhtml?ln=imagens</expression>
                         </image>
                     </cell>
                 </row>

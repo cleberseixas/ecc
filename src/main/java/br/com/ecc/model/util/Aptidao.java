@@ -2,6 +2,7 @@ package br.com.ecc.model.util;
 
 public class Aptidao {
 	private Integer idAptidao;
+	private String ecc;
 	private String aptidao;
 	private Integer quantidade;
 
@@ -11,6 +12,14 @@ public class Aptidao {
 
 	public void setIdAptidao(Integer idAptidao) {
 		this.idAptidao = idAptidao;
+	}
+
+	public String getEcc() {
+		return ecc;
+	}
+
+	public void setEcc(String ecc) {
+		this.ecc = ecc;
 	}
 
 	public String getAptidao() {
