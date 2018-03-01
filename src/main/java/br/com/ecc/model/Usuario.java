@@ -29,18 +29,25 @@ public class Usuario implements Serializable {
 	@Column(name="NOME", length=50)
 	private String nome;
 
-	@Column(length=20)
+	@Column(name="login", length=50)
 	private String login;
-	
+
+	@Column(name="SENHA", length=255)
 	private String senha;
+
+	@Column(name="ATIVO", nullable = false)
 	private boolean ativo;
+
+	@Column(name="EMAIL", length=255)
 	private String email;
-	
+
+	@Column(name="PERFIL", length=50)
 	private String perfil;
 	
-	@Column(length=40)
+	@Column(name="PERMISSAO", length=40)
 	private String permissao;
 
+	@Column(name="DIRIGENTE", nullable = false)
 	private boolean dirigente;
 	
 

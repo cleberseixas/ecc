@@ -29,7 +29,7 @@ public class UsuarioService implements Serializable {
 	private UsuarioRepository usuarioRepository;
 
 	@Transactional
-	public void salvar(Usuario usuario){
+	public void salvar(Usuario usuario, boolean flag){
 		try{
 			if (usuario.getPerfil().equals("Administrador")) {
 				usuario.setPermissao("ROLE_ADMINISTRADOR");
@@ -37,9 +37,13 @@ public class UsuarioService implements Serializable {
 				usuario.setPermissao("ROLE_USUARIO");
 			} else if (usuario.getPerfil().equals("Dirigente")) {
 				usuario.setPermissao("ROLE_DIRIGENTE");
+			} else if (usuario.getPerfil().equals("Secretária")) {
+				usuario.setPermissao("ROLE_SECRETARIA");
 			}
   			this.usuarioRepository.salvar(usuario);
-			FacesMessages.info("Usuário cadastrado");
+			if (flag) {
+				FacesMessages.info("Usuário cadastrado");
+			}
 		}catch(NegocioException e){
 			FacesMessages.error(e.getMessage());
 		}	
@@ -72,8 +76,7 @@ public class UsuarioService implements Serializable {
 			FacesMessages.error(e.getMessage());
 			return null;
 		}
-	}	
-
+	}
 
 	public List<Usuario> listarUsuarios(){
 		try {
@@ -100,6 +103,24 @@ public class UsuarioService implements Serializable {
 			FacesMessages.error(e.getMessage());
 			return null;
 		}
-	}	
+	}
+
+	public Usuario buscaPorEmail(String email) {
+		try {
+			return usuarioRepository.buscarPorEmail(email);
+		} catch(NegocioException e){
+			FacesMessages.error(e.getMessage());
+			return null;
+		}
+	}
+
+	public boolean verificaUsuarioJaCadastrado(String login, String email) {
+		try {
+			return usuarioRepository.verificaUsuarioJaCadastrado(login, email);
+		} catch (NegocioException e) {
+			FacesMessages.error(e.getMessage());
+			return true;
+		}
+	}
 
 }

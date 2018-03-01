@@ -63,7 +63,27 @@ public class Util {
 		}
 		return valido;
 	}
-	
+
+	/**
+	 * Retorna a data e hora atuais.
+	 *
+	 * @return Date
+	 * @since 01.03.2018
+	 */
+	public static Date dataHoraAtual() {
+		return new Date();
+	}
+	/**
+	 * Retorna a data e hora atuais no formato dd.MM.yyyy HH:mm.
+	 *
+	 * @return String
+	 * @since 01.03.2018
+	 */
+	public static String formataDataHoraAtualComPonto() {
+		SimpleDateFormat formatador = new SimpleDateFormat("dd.MM.yyyy HH:mm");
+		return formatador.format(dataHoraAtual());
+	}
+
 	public static Integer diasEntreDatas(Date dataInicial, Date dataFinal) {
 		DateTime dI = new DateTime(dataInicial);
 		DateTime dF = new DateTime(dataFinal);
@@ -254,4 +274,39 @@ public class Util {
 		System.out.println("URL DO RELATÓRIO : " + urlRelatorio);
 		return urlRelatorio;
 	}
+
+	/**
+	 * Valida email passado como argumento.
+	 *
+	 * @param email
+	 * @return boolean
+	 * @since 26.07.2016
+	 */
+	public static boolean validaEnderecoDeEmail(String email) {
+		if (!StringUtil.contemNulo(email)) {
+			return RegexUtil.valida(email, RegexUtil.EMAIL_PATTERN, false);
+		}
+		return false;
+	}
+
+	// =======================================================
+	// Adiciona assinatura padrão à mensagem de email.
+	// =======================================================
+	public static void incluiAssinaturaNaMensagem(StringBuffer mensagem) {
+		if (null != mensagem) {
+			mensagem.append("\n\n=======================================================\n");
+			mensagem.append("Paróquia São Luiz Gonzaga");
+			mensagem.append("\n");
+			mensagem.append("ECC-SLG");
+			mensagem.append("\nMensagem enviada em ");
+			mensagem.append(Util. formataDataHoraAtualComPonto());
+			mensagem.append("\nNão é necessário responder esta mensagem. ");
+			mensagem.append("Em caso de dúvidas, contacte:\n");
+			mensagem.append("Cleber de Oliveira Seixas\n");
+			mensagem.append("e-mail: cleber.malu@gmail.com\n");
+			mensagem.append("Celular: (69) 98104-3796\n");
+			mensagem.append("\n=============================++==========================");
+		}
+	}
+
 }

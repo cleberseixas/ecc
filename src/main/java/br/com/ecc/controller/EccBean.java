@@ -79,6 +79,9 @@ public class EccBean implements Serializable {
 	private String urlRelatorio;
 
 	@Inject
+	private ContextoBean contextoBean;
+
+	@Inject
 	private EccService eccService;
 
 	@Inject
@@ -403,7 +406,10 @@ public class EccBean implements Serializable {
 	}
 
 	private void desabilitaTodosBotoesEcc() {
-		habilitaBotaoEditarEcc = true;
+		if (contextoBean.getUsuarioLogado().getPerfil().equals("Administrador")) {
+			habilitaBotaoEditarEcc = false;
+		} else habilitaBotaoEditarEcc = true;
+
 		habilitaBotaoExcluirEcc = true;
 		habilitaBotaoIncluiDirigentes = false;
 		habilitaBotaoDetalhesEcc = false;

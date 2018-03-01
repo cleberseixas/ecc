@@ -56,7 +56,7 @@
 												style="width:30px; height:30px;
 								margin-left:10px; margin-top:8px; margin-right:9px;"
 												name="usuarios.png" /><a
-									href="usuario.xhtml">Usuários</a>
+									href="../administrador/usuario.xhtml">Usuários</a>
 							</li>
 						</ul>
 					</li>
@@ -157,7 +157,7 @@
 		</p:toolbar>
 				<p:dataTable id="eccs" value="#{eccBean.listaUltimoEcc}" var="ecc" rowIndexVar="index" selection="#{eccBean.ecc}"
 							 selectionMode="single" rowKey="#{ecc.id}"
-							 emptyMessage="Não há ECCs cadastrados" style="width:1414px;"
+							 emptyMessage="Não há ECCs cadastrados" style="width:100%;"
 							 paginator="false" paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
 							 rowsPerPageTemplate="14,28,42,56,70" paginatorPosition="top"
 							 currentPageReportTemplate="Registro(s) {startRecord} a {endRecord} de um total de {totalRecords} - Página {currentPage} de {totalPages}">

@@ -3,20 +3,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:p="http://primefaces.org/ui"
-	xmlns:c="http://java.sun.com/jsp/jstl/core">
+	xmlns:sec="http://www.springframework.org/security/facelets/tags"
+	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
 	<title>ECC-SLG</title>
 	<link rel="shortcut icon" href="../resources/imagens/SLG.ico" />
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
-	<h:outputScript library="js" name="locale-primefaces.js" />
-	<h:outputScript library="js" name="bootstrap.min.js" />
-
 	<h:outputStylesheet library="css" name="modelo.css" />
 	<h:outputStylesheet library="css" name="menu.css" />
 	<h:outputStylesheet library="css" name="AdminLTE.css" />
-	<h:outputStylesheet library="css" name="font-awesome.min.css" />
 </h:head>
 
 <h:body style="background-color:#EBF3FE">
@@ -46,15 +41,15 @@
 						<li><h:graphicImage library="imagens/menu"
 											style="width:30px; height:30px;
 								margin-left:10px; margin-top:8px; margin-right:9px;"
-											name="equipes.png" />
-							<a style="color: #808080; background: #a0c0de; opacity: 1;
-							filter: alpha(opacity = 100); border-bottom: 3px solid #b1b1b1;">Equipes</a>
+											name="equipes.png" /><a
+								href="equipe.xhtml">Equipes</a>
 						</li>
 						<li><h:graphicImage library="imagens/menu"
 											style="width:30px; height:30px;
 								margin-left:10px; margin-top:8px; margin-right:9px;"
-											name="usuarios.png" /><a
-								href="../administrador/usuario.xhtml">Usuários</a>
+											name="usuarios.png" />
+							<a style="color: #808080; background: #a0c0de; opacity: 1;
+							filter: alpha(opacity = 100); border-bottom: 3px solid #b1b1b1;">Usuários</a>
 						</li>
 					</ul>
 				</li>
@@ -102,13 +97,15 @@
 				</li>
 			</ul>
 		</div>
+		<br />
+		<br />
 		<div id="status" style="...">
 			<div id="ico">
 				<h1>
-					<h:graphicImage library="imagens/menu" name="equipes.png"
+					<h:graphicImage library="imagens/menu" name="usuarios.png"
 									width="25px" height="25px" />
 					<h5>
-						<b>Equipes</b>
+						<b>Usuários</b>
 					</h5>
 					<p:commandButton type="button" value="Sair" icon="ui-icon-extlink"
 									 style="float: right; margin-right:5px; margin-top: -5px;"
@@ -124,123 +121,126 @@
 			</div>
 		</div>
 		<br />
-		<p:growl id="growl" showDetail="true" sticky="false" life="2000" showSummary="false" autoUpdate="true" />
-		<br />	
-		<center>	
-		<p:panel header="Cadastro de Equipes"
-			style="width:616px; background:#F1F2F5;">
-			<h:message />
-			<h:inputHidden value="#{equipeBean.equipe.id}" />
-			<h:panelGrid columns="5">
-				<h:outputLabel value="Descrição" for="descricao" />
-				<h:outputLabel value="Sigla" for="sigla"/>
-				<h:outputLabel value="Mínimo" for="minimoCasal" />
-				<h:outputLabel value="Máximo" for="maximoCasal" />
-				<h:outputLabel value="Ordem" for="ordemImpressao" />
-				<p:inputText id="descricao" value="#{equipeBean.equipe.descricao}"
-					required="true" requiredMessage="O campo Descrição é obrigatório"
-					maxlength="100" style="width:350px;">
-					<p:focus for="descricao" />
+
+		<p:growl id="growl" showDetail="false" life="2000" />
+		<h:inputHidden value="#{usuarioBean.usuario.id}" />
+		<h:inputHidden value="#{usuarioBean.usuario.ativo}" />
+		<h:inputHidden value="#{usuarioBean.destinoSalvar}" />
+		<h:inputHidden value="#{usuarioBean.senhaCriptografada}" />
+		<p:panel header="Cadastro de Usuários"
+			style="width:620px; background:#F1F2F5;">
+			<h:panelGrid columns="2">
+				<h:outputLabel value="Nome:" for="nome" />
+				<p:inputText id="nome" label="Nome"
+					value="#{usuarioBean.usuario.nome}" size="50"
+					maxlength="50" required="true"
+					requiredMessage="O campo Nome é obrigatório" style="width:270px;">
+					<f:validateLength minimum="5" maximum="50" />
+					<p:focus for="nome" />
 				</p:inputText>
-				<p:inputText id="sigla" value="#{equipeBean.equipe.sigla}"
-							 required="true" requiredMessage="O campo Sigla é obrigatório"
-							 maxlength="5" style="width:45px;">
+				<h:outputLabel value="E-Mail:" for="email" />
+				<p:inputText id="email" label="E-Mail"
+							 value="#{usuarioBean.usuario.email}" size="50"
+							 maxlength="50" required="true"
+							 requiredMessage="O campo E-Mail é obrigatório" style="width:270px;">
+					<f:validateLength minimum="5" maximum="50" />
 				</p:inputText>
-				<p:inputText id="minimoCasal" value="#{equipeBean.equipe.minimoCasal}"
-							 required="true" requiredMessage="O campo Mínimo de Casais é obrigatório"
-							 maxlength="10" style="width:45px;">
-				</p:inputText>
-				<p:inputText id="maximoCasal" value="#{equipeBean.equipe.maximoCasal}"
-							 required="true" requiredMessage="O campo Máximo de Casais é obrigatório"
-							 maxlength="10" style="width:45px;">
-				</p:inputText>
-				<p:inputText id="ordemImpressao" value="#{equipeBean.equipe.ordemImpressao}"
-							 required="false" requiredMessage="O campo Ordem de Impressão é obrigatório"
-							 maxlength="3" style="width:45px;">
+				<h:outputLabel value="Perfil:" for="perfil" />
+				<h:panelGroup>
+					<p:selectOneMenu id="perfil"
+						value="#{usuarioBean.usuario.perfil}" required="true"
+						requiredMessage="O campo Perfil é obrigatório" style="width:130px;">
+						<f:selectItem itemLabel="Selecione" noSelectionOption="true" />
+						<f:selectItem itemValue="Administrador" itemLabel="Administrador" />
+						<f:selectItem itemValue="Dirigente" itemLabel="Dirigente" />
+						<f:selectItem itemValue="Secretária" itemLabel="Secretária" />
+					</p:selectOneMenu>
+					<p:selectBooleanCheckbox value="#{usuarioBean.usuario.dirigente}" itemLabel="Dirigente?" style="margin-left:5px;" />
+				</h:panelGroup>
+				<h:outputLabel value="Login:" for="login" />
+				<p:inputText id="login" label="Login"
+					value="#{usuarioBean.usuario.login}" size="60"
+					maxlength="60" style="width:146px;" required="true"
+					requiredMessage="O campo Login é obrigatório">
+					<f:validateLength minimum="5" maximum="60" />
 				</p:inputText>
 
-			</h:panelGrid>
-			<h:panelGrid columns="4">
-				<p:selectBooleanCheckbox value="#{equipeBean.equipe.automatica}" itemLabel="Automática?" style="margin-left:5px;" />
-				<p:selectBooleanCheckbox value="#{equipeBean.equipe.coordenador}" itemLabel="Coordenador?" style="margin-left:5px;" />
-				<p:selectBooleanCheckbox value="#{equipeBean.equipe.palestrante}" itemLabel="Palestrante?" style="margin-left:5px;" />
-				<p:selectBooleanCheckbox value="#{equipeBean.equipe.aptidao}" itemLabel="Aptidão?" style="margin-left:5px;" />
-			</h:panelGrid>
-			<h:panelGrid columns="2">
 				<h:outputLabel value="" />
-				<p:commandButton value="Salvar" action="#{equipeBean.salvar()}"
-					icon="ui-icon-disk" process="@form" update=":listagem :edicao">
+				<p:commandButton value="Salvar" action="#{usuarioBean.salvar}"
+					icon="ui-icon-check" update=":edicao :listagem">
 				</p:commandButton>
 			</h:panelGrid>
 		</p:panel>
-		</center>
 	</h:form>
 	<br />
+
 	<h:form id="listagem">
-		<center>
-		<p:dataTable value="#{equipeBean.lista}" var="equipe"
-			rendered="#{!empty equipeBean.lista}" style="width:620px;">
-			<p:column headerText="Descrição" width="180">
-				<p:outputLabel value="#{equipe.descricao}"/>
-				<h:graphicImage library="imagens" name="automatica#{equipe.automatica}.png" width="15" height="15"
-								style="float: right;" title="Automática - #{equipe.automatica}"/>
-				<h:graphicImage library="imagens" name="aptidao.png" width="15" height="15" rendered="#{equipe.aptidao}"
-								style="float: right;" title="Aptidão"/>
+		<p:panel style="width:893px; background-color:#d9d9d9">
+			<h:panelGrid columns="5" styleClass="semBordaInterna">
+				<h:outputLabel value="Usuários do ECC" styleClass="negrito" />
+				<p:inputText id="txtPesquisa"  
+					value="#{usuarioBean.pesquisaUsuario}" style="width:150px; margin-left:550px;"
+					placeholder="Pesquisar Usuários"/>
+				<p:commandButton icon="ui-icon-search" style="margin-top:1px;" action="#{usuarioBean.pesquisar()}" update="tabelaUsuarios"/>
+			</h:panelGrid>
+		</p:panel>	
+	
+		<p:dataTable value="#{usuarioBean.lista}" var="usuario" id="tabelaUsuarios"
+			paginator="false" paginatorPosition="bottom" rows="20"
+			rendered="#{!empty usuarioBean.lista}" style="width:900px;">
 
-			</p:column>
-			<p:column width="20">
-				<f:facet name="header">Sigla</f:facet>
-				#{equipe.sigla}
-			</p:column>
-			<p:column width="30">
-				<f:facet name="header">Máximo</f:facet>
-				#{equipe.maximoCasal}
-			</p:column>
-			<p:column width="30">
-				<f:facet name="header">Ordem</f:facet>
-				#{equipe.ordemImpressao}
+			<p:column headerText="Nome" width="180">
+				<p:outputLabel value="#{usuario.nome}"/>
+				<h:graphicImage library="imagens" name="dirigente.png" width="15" height="15" rendered="#{usuario.dirigente}"
+				style="float: right;" title="Dirigente"/>
 			</p:column>
 
+			<p:column styleClass="Gildasio" headerText="Login" width="50">
+				 #{usuario.login}
+			</p:column>
+			<p:column styleClass="Gildasio" headerText="E-Mail" width="130">
+				#{usuario.email}
+			</p:column>
+			<p:column headerText="Perfil" width="80">
+				<center>#{usuario.perfil}</center>
+			</p:column>
 
 			<p:column width="50">
 				<f:facet name="header">Ativo</f:facet>
 				<center>
-					<h:commandLink action="#{equipeBean.ativarInativar}">
+					<h:commandLink action="#{usuarioBean.ativar}">
 						<f:ajax execute="@this" render=":listagem" />
 						<h:graphicImage library="imagens"
-										name="#{equipe.ativo}.png" />
+							name="#{usuario.ativo}.png" />
 						<f:setPropertyActionListener
-								target="#{equipeBean.equipe}" value="#{equipe}" />
-					</h:commandLink>
-				</center>
-			</p:column>
-			<p:column width="40" headerText="Editar">
-				<center>
-					<h:commandLink>
-						<f:ajax execute="@this" render=":edicao" />
-						<h:graphicImage library="imagens" name="alterar.png" />
-						<f:setPropertyActionListener target="#{equipeBean.equipe}"
-							value="#{equipe}" />
+							target="#{usuarioBean.usuario}" value="#{usuario}" />
 					</h:commandLink>
 				</center>
 			</p:column>
 
-			<p:column width="40" headerText="Excluir">
+			<p:column headerText="Editar" width="50">
 				<center>
-					<h:commandLink action="#{equipeBean.excluir}"
-						onclick="if (!confirm('Confirma a exclusão da Equipe #{equipe.id}?')) return false;">
-						<f:ajax execute="@this" render=":listagem" />
-						<h:graphicImage library="imagens" name="remover.png" />
-						<f:setPropertyActionListener target="#{equipeBean.equipe}"
-							value="#{equipe}" />
+					<h:commandLink>
+						<f:ajax execute="@this" render=":edicao" />
+						<h:graphicImage library="imagens" name="alterar.png" />
+						<f:setPropertyActionListener
+							target="#{usuarioBean.usuario}" value="#{usuario}" />
 					</h:commandLink>
 				</center>
 			</p:column>
-			<f:facet name="footer">
-				<p:outputLabel value="Quantidade de Equipes: #{equipeBean.lista.size()}"/>
-			</f:facet>
+
+			<p:column headerText="Excluir" width="50">
+				<center>
+					<h:commandLink action="#{usuarioBean.excluir}"
+						onclick="if (!confirm('Confirma a exclusão do usuário #{usuario.nome}?')) return false;">
+						<f:ajax execute="@this" render=":listagem" />
+						<h:graphicImage library="imagens" name="remover.png" />
+						<f:setPropertyActionListener
+							target="#{usuarioBean.usuario}" value="#{usuario}" />
+					</h:commandLink>
+				</center>
+			</p:column>
 		</p:dataTable>
-		</center>
 	</h:form>
 </h:body>
 </html>

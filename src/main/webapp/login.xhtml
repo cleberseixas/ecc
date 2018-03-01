@@ -49,15 +49,61 @@
 								</div>
 							</div>
 							<div class="form-group last">
+
 								<div class="col-sm-offset-3 col-sm-9">
-									<input type="submit" value="Entrar"
-										class="btn btn-success btn-sm" />
+									<h:panelGrid columns="2">
+										<input type="submit" value="Entrar"
+											class="btn btn-success btn-sm" />
+										<input type="button" value="Recuperar Senha" onclick="PF('dlgRecuperarSenha').show()"
+										class="btn btn-warning btn-sm" />
+									</h:panelGrid>
 								</div>
+
 							</div>
 						</form>
+
 					</div>
 					<div class="panel-footer">Paróquia São Luiz Gonzaga</div>
+<!--
+					<h:form id="formEqueciSenha">
+						<h:panelGrid columns="2">
+							<p:outputLabel value="Deseja Recuperar a Senha? " style="font-size:10pt"/>
+								<h:graphicImage library="imagens" name="ausenciaJustificada.png"
+												onclick="PF('dlgRecuperarSenha').show()" update=":cadRecuperarSenha"
+												title="Clique Aqui"	style="margin-left:10px;"/>
+						</h:panelGrid>
+					</h:form>
+-->
 				</div>
+				<!-- ==================================================================================== -->
+				<!-- ========================= Diálogo para Recuperar SENHA ============================= -->
+				<!-- ==================================================================================== -->
+				<p:dialog id="dialogRecuperarSenha" header="Recuperar Senha"
+						  modal="true" widgetVar="dlgRecuperarSenha"
+						  style="background-color:#EBF3FE" resizable="false" width="490px"
+						  height="130px">
+					<h:form id="cadRecuperarSenha">
+						<p:panel id="panelRecuperarSenha" style="background-color: #ffffe6">
+							<h:message />
+							<h:panelGrid columns="1">
+								<h:outputLabel value="E-Mail" for="email" />
+								<p:inputText id="email" value="#{usuarioBean.email}"
+											 required="false" requiredMessage="O campo E-Mail é obrigatório"
+											 maxlength="120" style="width:420px;">
+									<p:focus for="email" />
+								</p:inputText>
+							</h:panelGrid>
+							<br />
+							<h:panelGrid columns="2">
+								<h:outputLabel value="" />
+								<p:commandButton value="Recuperar Senha" style="margin-left: 10px;"
+												 action="#{usuarioBean.recuperaSenha()}" icon="ui-icon-check"
+												 update="@form" process="@form"
+												 oncomplete="if(!args.validationFailed){PF('dlgRecuperarSenha').hide();}" />
+							</h:panelGrid>
+						</p:panel>
+					</h:form>
+				</p:dialog>
 			</div>
 		</div>
 	</div>

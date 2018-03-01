@@ -21,10 +21,10 @@ public class UsuarioRepository {
 	}
 	
 	public void salvar(Usuario usuario) {
-		if (usuario.getId() == null)
-			manager.persist(usuario);
-		else
-			manager.merge(usuario);
+//		if (usuario.getId() == null)
+//			manager.persist(usuario);
+//		else
+		manager.merge(usuario);
 	}
 
 	public void excluir(Usuario usuario) {
@@ -48,13 +48,21 @@ public class UsuarioRepository {
 		return null;
 	}
 
+	public Usuario buscarPorEmail(String email) {
+		TypedQuery<Usuario> query = manager.createQuery("from Usuario where email = :email", Usuario.class);
+		query.setParameter("email", email);
+		if (query.getResultList().size() > 0)
+			return query.getSingleResult();
+		return null;
+	}
+
 	@SuppressWarnings("rawtypes")
 	public List<Usuario> listarUsuarios(String nome) {
 		List<Usuario> listAux = new ArrayList<Usuario>();
 		Query query = null;
 		query = manager.createNativeQuery("select usuario, ativo, email, login, nome, perfil, senha, permissao "
-				+ "from Usuario "
-				+ "where special_like(nome, :nome) ");
+				+ "from usuarios "
+				+ "where nome like  :nome");
 		query.setParameter("nome", "%"+nome+"%");
 		List lst = query.getResultList();
 		Iterator iter = lst.iterator();
@@ -69,10 +77,25 @@ public class UsuarioRepository {
 			usuario.setNome(obj[4].toString());
 			usuario.setPerfil(obj[5].toString());
 			usuario.setSenha(obj[6].toString());
-			usuario.setPermissao(obj[8].toString());
+			usuario.setPermissao(obj[7].toString());
 			listAux.add(usuario);
 		}
 		return listAux;
 	}
-	
+
+	/**
+	 * Método que verifica se já existe usuário Cadastrado com esse login e e-mail
+	 * @param login - login do usuário
+	 * @param email - email do usuário
+	 * @return
+	 */
+	public boolean verificaUsuarioJaCadastrado(String login, String email) {
+		TypedQuery<Long> query = manager.createQuery("select count(id) from Usuario  " +
+				" where " +
+				" login = :LOGIN ", Long.class);
+		//" login = :LOGIN and email =:EMAIL", Long.class);
+		query.setParameter("LOGIN", login);
+//		query.setParameter("EMAIL", email);
+		return (query.getSingleResult() > 0 ? true : false);
+	}
 }
