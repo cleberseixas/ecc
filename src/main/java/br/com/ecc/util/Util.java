@@ -19,6 +19,27 @@ public class Util {
 		return calendar.get(Calendar.YEAR);
 	}
 
+	/**
+	 * Retorna nova data com a soma da data e o número de dias informados.
+	 *
+	 * @param data
+	 * @param dias
+	 * @return LocalDateTime
+	 * @since 08.06.2016
+	 */
+//	public static LocalDateTime adicionaDias(LocalDateTime data, long dias) {
+//		if (null != data) {
+//			LocalDateTime novaData = data.plusDays(dias);
+//			return novaData;
+//		}
+//		return data;
+
+//	import java.time.LocalDateTime;
+//	import java.time.LocalDateTime;
+
+//	}
+
+
 	public static int retornaAnoAnterior() {
 		return Util.getAno(new Date()) - 1;
 	}

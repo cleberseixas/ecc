@@ -412,11 +412,11 @@
 							<h:outputLabel value="Data Depoimento" for="dataDepoimento" />
 							<h:outputLabel value="Hora" for="horaDepoimento" />
 							<p:calendar id="dataDepoimento" mask="99/99/9999"
-										required="true" requiredMessage="O Campo Data do Depoimento é obrigatório"
+										required="false" requiredMessage="O Campo Data do Depoimento é obrigatório"
 										value="#{eccBean.ecc.dataDepoimento}"
 										pattern="dd/MM/yyyy"/>
 							<p:inputText id="horaDepoimento" value="#{eccBean.ecc.horaDepoimento}"
-										 required="true" requiredMessage="O campo Hora do Depoimento é obrigatório"
+										 required="false" requiredMessage="O campo Hora do Depoimento é obrigatório"
 										 maxlength="7" style="width:50px;">
 							</p:inputText>
 						</h:panelGrid>
@@ -641,7 +641,8 @@
 		<p:dialog widgetVar="exibiPDF" id="exibiPDF" modal="true" draggable="false"
 				  closable="true" resizable="false" showHeader="true" width="1200px" height="760">
 			<pe:documentViewer id = "fileUpload"
-								   height="800" url="${eccBean.urlRelatorio}"/>
+								   height="800" url="${eccBean.urlRelatorio}">
+			</pe:documentViewer>
 		</p:dialog>
 </h:body>
 </html>

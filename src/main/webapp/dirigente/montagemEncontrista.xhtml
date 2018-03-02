@@ -3,8 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:p="http://primefaces.org/ui"
-  	xmlns:pe="http://primefaces.org/ui/extensions">
+	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
 	<title>ECC-SLG</title>
@@ -361,11 +360,5 @@
 				</div>
 			</div>
 		</p:dialog>
-		<p:dialog widgetVar="exibiPDF" modal="true" draggable="false"
-				  closable="true" resizable="false" showHeader="true" width="1200px" height="760">
-			<pe:documentViewer id = "fileUpload"
-							   height="800" url="${eccBean.urlRelatorio}"/>
-		</p:dialog>
-
 </h:body>
 </html>

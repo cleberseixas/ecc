@@ -13,6 +13,7 @@ import javax.inject.Named;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -465,6 +466,13 @@ public class EccBean implements Serializable {
 //				RequestContext.getCurrentInstance().addCallbackParam("validationFailed", true);
 //				return;
 //			}
+			if (this.ecc.getSituacao().equals("ENCERRADO")) {
+				this.ecc.setUsuarioEncerrou(contextoBean.getUsuarioLogado().getLogin());
+				this.ecc.setDataEncerramento(new Date());
+			} else {
+				this.ecc.setUsuarioEncerrou(null);
+				this.ecc.setDataEncerramento(null);
+			}
 			eccService.alterar(this.ecc);
 			desabilitaTodosBotoesEcc();
 		} catch (Exception e) {
