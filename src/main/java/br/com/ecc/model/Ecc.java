@@ -81,7 +81,7 @@ public class Ecc implements Serializable {
     private Date dataDepoimento;
 
     @Column(name="HORA_DEPOIMENTO", length=20, nullable = true)
-    private String horaDepoimento;
+    private String horaDepoimento = "20:00";
 
 
     //@OneToMany(mappedBy="ecc", fetch=FetchType.EAGER, cascade = CascadeType.ALL)

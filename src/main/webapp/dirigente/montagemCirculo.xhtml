@@ -224,9 +224,9 @@
 					</p:column>
 					<p:column headerText="Casal Coordenador" width="200">
 						<p:outputLabel value="#{circuloEcc.casalCoordenador.primeiraEtapa} - #{circuloEcc.casalCoordenador.nomeUsual}"/>
-						<h:graphicImage library="imagens" value="/image?imagem=#{circuloEcc.casalCoordenador.fotoEla}" rendered="#{circuloEcc.casalCoordenador.fotoEla.length() > 0}"
+						<h:graphicImage library="imagens" value="/image?imagem=#{circuloEcc.casalCoordenador.fotoEla}" rendered="#{circuloEcc.ecc.situacao eq 'ANDAMENTO'}"
 										style="width:20px; height:20px; float: right;" title="Foto dela"/>
-						<h:graphicImage library="imagens" value="/image?imagem=#{circuloEcc.casalCoordenador.fotoEle}" rendered="#{circuloEcc.casalCoordenador.fotoEle.length() > 0}"
+						<h:graphicImage library="imagens" value="/image?imagem=#{circuloEcc.casalCoordenador.fotoEle}" rendered="#{circuloEcc.ecc.situacao eq 'ANDAMENTO'}"
 										style="width:20px; height:20px; float: right;" title="Foto dele"/>
 
 					</p:column>
@@ -482,9 +482,9 @@
 							</f:facet>
 							<p:column headerText="Casal" width="200">
 								<p:outputLabel value="#{casal.ficha.nomeUsual}" />
-								<h:graphicImage library="imagens" value="/image?imagem=#{casal.ficha.fotoEla}" rendered="#{casal.ficha.fotoEla.length() > 0}"
+								<h:graphicImage library="imagens" value="/image?imagem=#{casal.ficha.fotoEla}" rendered="#{circuloEccBean.circuloEcc.ecc.situacao eq 'ANDAMENTO'}"
 												style="width:20px; height:20px; float: right;" title="Foto dela"/>
-								<h:graphicImage library="imagens" value="/image?imagem=#{casal.ficha.fotoEle}" rendered="#{casal.ficha.fotoEle.length() > 0}"
+								<h:graphicImage library="imagens" value="/image?imagem=#{casal.ficha.fotoEle}" rendered="#{circuloEccBean.circuloEcc.ecc.situacao eq 'ANDAMENTO'}"
 												style="width:20px; height:20px; float: right;" title="Foto dele"/>
 							</p:column>
 							<p:column headerText="Excluir" styleClass="Gildasio" width="40" rendered="#{circuloEccBean.circuloEcc.ecc.situacao eq 'ANDAMENTO'}">

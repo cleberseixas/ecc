@@ -209,11 +209,17 @@
 					</p:column>
 					<p:column headerText="Casal Coordenador" width="200">
 						<p:outputLabel value="#{equipeEcc.casalCoordenador.primeiraEtapa} - #{equipeEcc.casalCoordenador.nomeUsual}"/>
+						<!--
 						<h:graphicImage library="imagens" value="/image?imagem=#{equipeEcc.casalCoordenador.fotoEla}" rendered="#{equipeEcc.casalCoordenador.fotoEla.length() > 0}"
+						-->
+						<h:graphicImage library="imagens" value="/image?imagem=#{equipeEcc.casalCoordenador.fotoEla}" rendered="#{equipeEcc.ecc.situacao eq 'ANDAMENTO'}"
 										style="width:20px; height:20px; float: right;" title="Foto dela"/>
-						<h:graphicImage library="imagens" value="/image?imagem=#{equipeEcc.casalCoordenador.fotoEle}" rendered="#{equipeEcc.casalCoordenador.fotoEle.length() > 0}"
+						<h:graphicImage library="imagens" value="/image?imagem=#{equipeEcc.casalCoordenador.fotoEle}" rendered="#{equipeEcc.ecc.situacao eq 'ANDAMENTO'}"
 										style="width:20px; height:20px; float: right;" title="Foto dele"/>
-
+						<!--
+						<h:graphicImage library="imagens" name="foto.png" rendered="#{equipeEcc.ecc.situacao eq 'ENCERRADO' and equipeEcc.casalCoordenador.fotoEle.length() > 0 and equipeEcc.casalCoordenador.fotoEla.length() > 0}"
+										width="15" height="15" style="float: right;" title="Clique Aqui" onclick="PF('dlgExibeFoto').show()"/>
+						-->
 					</p:column>
 					<p:column headerText="Total" width="20">
 						<p:outputLabel value="#{equipeEcc.equipe.maximoCasal}"/>
@@ -403,11 +409,11 @@
 					<h:panelGrid id="fotoCasalEleEla" columns="2">
 						<p:outputLabel value="Homem" styleClass="negrito" rendered="#{equipeEccBean.casal.fotoEle.length() > 0}"
 									   style="margin-left:10px;" />
-						<p:outputLabel value="Mulher" styleClass="negrito" rendered="#{equipeEccBean.casal.fotoEla.length() > 0}"
+						<p:outputLabel value="Mulher" styleClass="negrito" rendered="#{equipeEccBean.casal.fotoEle.length() > 0}"
 									   style="margin-left:10px;" />
 						<h:graphicImage library="imagens" value="/image?imagem=#{equipeEccBean.casal.fotoEle}" rendered="#{equipeEccBean.casal.fotoEle.length() > 0}"
 										style="width:80px; height:80px;" />
-						<h:graphicImage library="imagens" value="/image?imagem=#{equipeEccBean.casal.fotoEla}" rendered="#{equipeEccBean.casal.fotoEla.length() > 0}"
+						<h:graphicImage library="imagens" value="/image?imagem=#{equipeEccBean.casal.fotoEla}" rendered="#{equipeEccBean.casal.fotoEle.length() > 0}"
 										style="width:80px; height:80px;" />
 					</h:panelGrid>
 					<h:panelGrid columns="2">
@@ -450,9 +456,9 @@
 							</f:facet>
 							<p:column headerText="Casal" width="200">
 								<p:outputLabel value="#{casal.ficha.primeiraEtapa} - #{casal.ficha.nomeUsual}" />
-								<h:graphicImage library="imagens" value="/image?imagem=#{casal.ficha.fotoEla}" rendered="#{casal.ficha.fotoEla.length() > 0}"
+								<h:graphicImage library="imagens" value="/image?imagem=#{casal.ficha.fotoEla}" rendered="#{equipeEccBean.equipeEcc.ecc.situacao eq 'ANDAMENTO'}"
 												style="width:20px; height:20px; float: right;" title="Foto dela"/>
-								<h:graphicImage library="imagens" value="/image?imagem=#{casal.ficha.fotoEle}" rendered="#{casal.ficha.fotoEle.length() > 0}"
+								<h:graphicImage library="imagens" value="/image?imagem=#{casal.ficha.fotoEle}" rendered="#{equipeEccBean.equipeEcc.ecc.situacao eq 'ANDAMENTO'}"
 												style="width:20px; height:20px; float: right;" title="Foto dele"/>
 							</p:column>
 							<p:column headerText="Excluir" styleClass="Gildasio" width="40" rendered="#{equipeEccBean.equipeEcc.ecc.situacao eq 'ANDAMENTO'}">
@@ -469,6 +475,36 @@
 				</p:panel>
 			</h:form>
 		</p:dialog>
+		<!-- ==================================================================================== -->
+		<!-- ====================== Diálogo para exibir as fotos ================================ -->
+		<!-- ==================================================================================== -->
+	<!--
+            <p:dialog id="dialogExibeFoto" header="Foto do casal"
+                      modal="true" widgetVar="dlgExibeFoto"
+                      style="background-color:#EBF3FE" resizable="false" width="590px"
+                      height="255px">
+                <h:form id="cadExibeFoto">
+                    <h:inputHidden value="#{equipeEccBean.equipeEcc.id}" />
+                    <p:panel id="panelFotos" style="background-color: #ffffe6">
+                        <h:outputLabel value="Casal Coordenador: "/>
+                        <p:outputLabel value="#{equipeEccBean.equipeEcc.casalCoordenador.nomeUsual}" styleClass="negrito"/>
+                        <h:panelGrid id="fotoDoCasal" columns="2">
+                            <p:outputLabel value="Homem" styleClass="negrito"
+                                           style="margin-left:10px;" />
+                            <p:outputLabel value="Mulher" styleClass="negrito"
+                                           style="margin-left:10px;" />
+
+                            <h:graphicImage library="imagens" value="/image?imagem=#{equipeEccBean.equipeEcc.casalCoordenador.fotoEle}"
+                                            style="width:80px; height:80px;" />
+                            <h:graphicImage library="imagens" value="/image?imagem=#{equipeEccBean.equipeEcc.casalCoordenador.fotoEla}"
+                                            style="width:80px; height:80px;" />
+					</h:panelGrid>
+				</p:panel>
+			</h:form>
+		</p:dialog>
+                    -->
+
+
 		<p:dialog widgetVar="statusDialog" modal="true" draggable="false"
 				  closable="false" resizable="false" showHeader="false" width="250px">
 			<div id="divLoadingFora">

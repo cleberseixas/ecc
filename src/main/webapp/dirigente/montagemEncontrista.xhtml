@@ -199,12 +199,23 @@
 					<p:ajax event="rowSelect"
 							listener="#{encontristaEccBean.onRowSelectEncontristaEcc}"
 							update="btnExcluir btnIncluiCasaisEncontristas btnImprimirEncontristas" />
+					<p:column width="30">
+						<f:facet name="header">Número</f:facet>
+						#{encontristaEcc.ecc.numero}
+						<h:graphicImage library="imagens" name="cadeado.png" width="15" height="15" rendered="#{encontristaEcc.ecc.situacao eq 'ENCERRADO'}"
+										style="float: right;" title="Encerrado"/>
+					</p:column>
+					<p:column headerText="Tema" width="300">
+						<p:outputLabel value="#{encontristaEcc.ecc.tema}"/>
+					</p:column>
+					<!--
 					<p:column width="200">
 						<f:facet name="header">ECC</f:facet>
 						#{encontristaEcc.ecc.numero} - #{encontristaEcc.ecc.tema}
 						<h:graphicImage library="imagens" name="cadeado.png" width="15" height="15" rendered="#{encontristaEcc.ecc.situacao eq 'ENCERRADO'}"
 										style="float: right;" title="Encerrado"/>
 					</p:column>
+					-->
 					<p:column headerText="Total" width="20">
 						<p:outputLabel value="#{encontristaEcc.ecc.total}"/>
 					</p:column>

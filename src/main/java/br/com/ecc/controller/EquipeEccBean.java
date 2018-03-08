@@ -422,7 +422,7 @@ public class EquipeEccBean implements Serializable {
 
 	public void onChangeCasalCoordenador(AjaxBehaviorEvent event) {
 //		this.casalCoordenador = (Ficha) event.getSource();
-		System.out.println("Photo :"+this.casalCoordenador.getFotoEle());
+		//System.out.println("Photo :"+this.casalCoordenador.getFotoEle());
 	}
 
 	public void filtraEquipeEcc() {

@@ -7,15 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4f27b79-4439-4b09-81a0-92c5d0903466" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/ecc_war_exploded.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EccBean.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EccBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/Util.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/util/Util.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/dirigente/ecc.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/dirigente/ecc.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EquipeEccBean.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EquipeEccBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ecc.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ecc.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemCirculo.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemCirculo.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemCirculoEstudo.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemCirculoEstudo.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemEncontrista.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemEncontrista.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemEquipe.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemEquipe.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemFicha.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemFicha.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemPalestrante.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/dirigente/montagemPalestrante.xhtml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,33 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="montagemCirculoEstudo.xhtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemCirculoEstudo.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-              <folding>
-                <marker date="1519994721160" expanded="true" signature="1607:1691" ph="{...}" />
-                <marker date="1519994721160" expanded="true" signature="1873:1957" ph="{...}" />
-                <marker date="1519994721160" expanded="true" signature="2141:2225" ph="{...}" />
-                <marker date="1519994721160" expanded="true" signature="2403:2487" ph="{...}" />
-                <marker date="1519994721160" expanded="true" signature="2849:2933" ph="{...}" />
-                <marker date="1519994721160" expanded="true" signature="3078:3162" ph="{...}" />
-                <marker date="1519994721160" expanded="true" signature="3324:3408" ph="{...}" />
-                <marker date="1519994721160" expanded="true" signature="3593:3677" ph="{...}" />
-                <marker date="1519994721160" expanded="true" signature="3871:3955" ph="{...}" />
-                <marker date="1519994721160" expanded="true" signature="4142:4226" ph="{...}" />
-                <marker date="1519994721160" expanded="true" signature="4407:4491" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ecc.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/ecc.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+            <state relative-caret-position="0">
+              <caret line="281" column="31" lean-forward="false" selection-start-line="279" selection-start-column="20" selection-end-line="281" selection-end-column="31" />
               <folding>
                 <marker date="1519994512806" expanded="true" signature="1641:1725" ph="{...}" />
                 <marker date="1519994512806" expanded="true" signature="1907:1991" ph="{...}" />
@@ -72,24 +48,56 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="montagemEncontrista.xhtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemEncontrista.xhtml">
+      <file leaf-file-name="montagemCirculo.xhtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemCirculo.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="7290">
+              <caret line="486" column="0" lean-forward="false" selection-start-line="486" selection-start-column="0" selection-end-line="486" selection-end-column="0" />
               <folding>
-                <marker date="1519994907535" expanded="true" signature="1603:1687" ph="{...}" />
-                <marker date="1519994907535" expanded="true" signature="1869:1953" ph="{...}" />
-                <marker date="1519994907535" expanded="true" signature="2137:2221" ph="{...}" />
-                <marker date="1519994907535" expanded="true" signature="2399:2483" ph="{...}" />
-                <marker date="1519994907535" expanded="true" signature="2845:2929" ph="{...}" />
-                <marker date="1519994907535" expanded="true" signature="3074:3158" ph="{...}" />
-                <marker date="1519994907535" expanded="true" signature="3319:3403" ph="{...}" />
-                <marker date="1519994907535" expanded="true" signature="3575:3659" ph="{...}" />
-                <marker date="1519994907535" expanded="true" signature="3936:4020" ph="{...}" />
-                <marker date="1519994907535" expanded="true" signature="4207:4291" ph="{...}" />
-                <marker date="1519994907535" expanded="true" signature="4472:4556" ph="{...}" />
+                <marker date="1520431679631" expanded="true" signature="1600:1684" ph="{...}" />
+                <marker date="1520431679631" expanded="true" signature="1866:1950" ph="{...}" />
+                <marker date="1520431679631" expanded="true" signature="2134:2218" ph="{...}" />
+                <marker date="1520431679631" expanded="true" signature="2396:2480" ph="{...}" />
+                <marker date="1520431679631" expanded="true" signature="2842:2926" ph="{...}" />
+                <marker date="1520431679631" expanded="true" signature="3071:3155" ph="{...}" />
+                <marker date="1520431679631" expanded="true" signature="3317:3401" ph="{...}" />
+                <marker date="1520431679631" expanded="true" signature="3586:3670" ph="{...}" />
+                <marker date="1520431679631" expanded="true" signature="3864:3948" ph="{...}" />
+                <marker date="1520431679631" expanded="true" signature="4135:4219" ph="{...}" />
+                <marker date="1520431679631" expanded="true" signature="4493:4577" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="montagemEquipe.xhtml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemEquipe.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="506" column="0" lean-forward="true" selection-start-line="506" selection-start-column="0" selection-end-line="506" selection-end-column="0" />
+              <folding>
+                <marker date="1520526270725" expanded="true" signature="1599:1683" ph="{...}" />
+                <marker date="1520526270725" expanded="true" signature="1865:1949" ph="{...}" />
+                <marker date="1520526270725" expanded="true" signature="2133:2217" ph="{...}" />
+                <marker date="1520526270725" expanded="true" signature="2395:2479" ph="{...}" />
+                <marker date="1520526270725" expanded="true" signature="2841:2925" ph="{...}" />
+                <marker date="1520526270725" expanded="true" signature="3070:3154" ph="{...}" />
+                <marker date="1520526270725" expanded="true" signature="3307:3391" ph="{...}" />
+                <marker date="1520526270725" expanded="true" signature="3662:3746" ph="{...}" />
+                <marker date="1520526270725" expanded="true" signature="3940:4024" ph="{...}" />
+                <marker date="1520526270725" expanded="true" signature="4211:4295" ph="{...}" />
+                <marker date="1520526270725" expanded="true" signature="4476:4560" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EquipeEccBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EquipeEccBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="424" column="10" lean-forward="false" selection-start-line="424" selection-start-column="10" selection-end-line="424" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -97,112 +105,72 @@
       <file leaf-file-name="montagemPalestrante.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemPalestrante.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+            <state relative-caret-position="3090">
+              <caret line="206" column="24" lean-forward="false" selection-start-line="206" selection-start-column="24" selection-end-line="206" selection-end-column="24" />
               <folding>
-                <marker date="1519994695708" expanded="true" signature="1601:1685" ph="{...}" />
-                <marker date="1519994695708" expanded="true" signature="1867:1951" ph="{...}" />
-                <marker date="1519994695708" expanded="true" signature="2135:2219" ph="{...}" />
-                <marker date="1519994695708" expanded="true" signature="2397:2481" ph="{...}" />
-                <marker date="1519994695708" expanded="true" signature="2843:2927" ph="{...}" />
-                <marker date="1519994695708" expanded="true" signature="3072:3156" ph="{...}" />
-                <marker date="1519994695708" expanded="true" signature="3309:3393" ph="{...}" />
-                <marker date="1519994695708" expanded="true" signature="3557:3641" ph="{...}" />
-                <marker date="1519994695708" expanded="true" signature="3835:3919" ph="{...}" />
-                <marker date="1519994695708" expanded="true" signature="4201:4285" ph="{...}" />
-                <marker date="1519994695708" expanded="true" signature="4466:4550" ph="{...}" />
+                <marker date="1520431375239" expanded="true" signature="1601:1685" ph="{...}" />
+                <marker date="1520431375239" expanded="true" signature="1867:1951" ph="{...}" />
+                <marker date="1520431375239" expanded="true" signature="2135:2219" ph="{...}" />
+                <marker date="1520431375239" expanded="true" signature="2397:2481" ph="{...}" />
+                <marker date="1520431375239" expanded="true" signature="2843:2927" ph="{...}" />
+                <marker date="1520431375239" expanded="true" signature="3072:3156" ph="{...}" />
+                <marker date="1520431375239" expanded="true" signature="3309:3393" ph="{...}" />
+                <marker date="1520431375239" expanded="true" signature="3557:3641" ph="{...}" />
+                <marker date="1520431375239" expanded="true" signature="3835:3919" ph="{...}" />
+                <marker date="1520431375239" expanded="true" signature="4201:4285" ph="{...}" />
+                <marker date="1520431375239" expanded="true" signature="4466:4550" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="montagemEquipe.xhtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemEquipe.xhtml">
+      <file leaf-file-name="montagemFicha.xhtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemFicha.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+            <state relative-caret-position="244">
+              <caret line="536" column="36" lean-forward="true" selection-start-line="536" selection-start-column="36" selection-end-line="536" selection-end-column="36" />
               <folding>
-                <marker date="1519994709324" expanded="true" signature="1599:1683" ph="{...}" />
-                <marker date="1519994709324" expanded="true" signature="1865:1949" ph="{...}" />
-                <marker date="1519994709324" expanded="true" signature="2133:2217" ph="{...}" />
-                <marker date="1519994709324" expanded="true" signature="2395:2479" ph="{...}" />
-                <marker date="1519994709324" expanded="true" signature="2841:2925" ph="{...}" />
-                <marker date="1519994709324" expanded="true" signature="3070:3154" ph="{...}" />
-                <marker date="1519994709324" expanded="true" signature="3307:3391" ph="{...}" />
-                <marker date="1519994709324" expanded="true" signature="3662:3746" ph="{...}" />
-                <marker date="1519994709324" expanded="true" signature="3940:4024" ph="{...}" />
-                <marker date="1519994709324" expanded="true" signature="4211:4295" ph="{...}" />
-                <marker date="1519994709324" expanded="true" signature="4476:4560" ph="{...}" />
+                <marker date="1520515863346" expanded="true" signature="1767:1851" ph="{...}" />
+                <marker date="1520515863346" expanded="true" signature="2033:2117" ph="{...}" />
+                <marker date="1520515863346" expanded="true" signature="2301:2385" ph="{...}" />
+                <marker date="1520515863346" expanded="true" signature="2563:2647" ph="{...}" />
+                <marker date="1520515863346" expanded="true" signature="3009:3093" ph="{...}" />
+                <marker date="1520515863346" expanded="true" signature="3239:3323" ph="{...}" />
+                <marker date="1520515863346" expanded="true" signature="3585:3669" ph="{...}" />
+                <marker date="1520515863346" expanded="true" signature="3841:3925" ph="{...}" />
+                <marker date="1520515863346" expanded="true" signature="4119:4203" ph="{...}" />
+                <marker date="1520515863346" expanded="true" signature="4383:4467" ph="{...}" />
+                <marker date="1520515863346" expanded="true" signature="4648:4732" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="montagemCirculo.xhtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemCirculo.xhtml">
+      <file leaf-file-name="exibeFoto.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/servlet/exibeFoto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-              <folding>
-                <marker date="1519994729497" expanded="true" signature="1600:1684" ph="{...}" />
-                <marker date="1519994729497" expanded="true" signature="1866:1950" ph="{...}" />
-                <marker date="1519994729497" expanded="true" signature="2134:2218" ph="{...}" />
-                <marker date="1519994729497" expanded="true" signature="2396:2480" ph="{...}" />
-                <marker date="1519994729497" expanded="true" signature="2842:2926" ph="{...}" />
-                <marker date="1519994729497" expanded="true" signature="3071:3155" ph="{...}" />
-                <marker date="1519994729497" expanded="true" signature="3317:3401" ph="{...}" />
-                <marker date="1519994729497" expanded="true" signature="3586:3670" ph="{...}" />
-                <marker date="1519994729497" expanded="true" signature="3864:3948" ph="{...}" />
-                <marker date="1519994729497" expanded="true" signature="4135:4219" ph="{...}" />
-                <marker date="1519994729497" expanded="true" signature="4493:4577" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EncontristaEccBean.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EncontristaEccBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="237" column="9" lean-forward="true" selection-start-line="237" selection-start-column="9" selection-end-line="237" selection-end-column="9" />
+            <state relative-caret-position="275">
+              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <file leaf-file-name="Util.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/util/Util.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="41" lean-forward="false" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
-              <folding>
-                <marker date="1519996413439" expanded="true" signature="100692:100943" ph="..." />
-                <marker date="1519996413439" expanded="true" signature="100692:100958" ph="..." />
-                <marker date="1519996413439" expanded="true" signature="100692:100972" ph="..." />
-                <marker date="1519996413439" expanded="true" signature="100692:100987" ph="..." />
-                <marker date="1519996413439" expanded="true" signature="100738:100923" ph="..." />
-                <marker date="1519996413439" expanded="true" signature="100778:100889" ph="..." />
-                <marker date="1519996413439" expanded="true" signature="100799:100867" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ecc_war.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/artifacts/ecc_war.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+            <state relative-caret-position="825">
+              <caret line="68" column="43" lean-forward="false" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ecc_war_exploded.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/artifacts/ecc_war_exploded.xml">
+      <file leaf-file-name="Constantes.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/util/Constantes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="98" column="12" lean-forward="false" selection-start-line="98" selection-start-column="12" selection-end-line="98" selection-end-column="12" />
+            <state relative-caret-position="180">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -212,22 +180,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dirigente.p</find>
-      <find>salvar</find>
-      <find>Laudus</find>
-      <find>usuario.p</find>
-      <find>usuarios</find>
-      <find>usua</find>
-      <find>Usuário</find>
-      <find>Usuar</find>
-      <find>Editar</find>
-      <find>dlgedi</find>
-      <find>dlgEditarEcc</find>
-      <find>PF</find>
-      <find>&lt;/br</find>
-      <find>loginB</find>
-      <find>own</find>
-      <find>diretor</find>
       <find>Diretor</find>
       <find>dataDe</find>
       <find>adicion</find>
@@ -242,6 +194,22 @@
       <find>1_</find>
       <find>h:include</find>
       <find>pe</find>
+      <find>fotoEle</find>
+      <find>Casal Coord</find>
+      <find>EDITAR</find>
+      <find>dlgEditarFicha</find>
+      <find>RENDERED</find>
+      <find>CASAIS</find>
+      <find>DLGnOVOScASAIS</find>
+      <find>show</find>
+      <find>dlgNovaEquipeEcc</find>
+      <find>foto</find>
+      <find>dlgUpload</find>
+      <find>Casal</find>
+      <find>dlgedi</find>
+      <find>e</find>
+      <find>Casal Cor</find>
+      <find>EquipeEcc</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -262,7 +230,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/PalestraRepository.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/model/CirculoEcc.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/converter/CirculoEstudoEccConverter.java" />
@@ -275,7 +242,6 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/service/FichaService.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/FichaRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/CirculoEstudoEccBean.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ecc.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/model/util/Aptidao.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/css/modelo.css" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/AptidaoRepository.java" />
@@ -290,7 +256,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/administrador/circulo.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/administrador/equipe.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/administrador/palestra.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/dirigente/montagemFicha.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/login.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/repository/UsuarioRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/util/EmailUtil.java" />
@@ -307,12 +272,15 @@
         <option value="$PROJECT_DIR$/.idea/compiler.xml" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/dirigente/ecc.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/dirigente/montagemPalestrante.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/dirigente/montagemEquipe.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/dirigente/montagemCirculoEstudo.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/dirigente/montagemCirculo.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/dirigente/montagemEncontrista.xhtml" />
         <option value="$PROJECT_DIR$/.idea/artifacts/ecc_war_exploded.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ecc.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/dirigente/montagemEncontrista.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/dirigente/montagemPalestrante.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/dirigente/montagemCirculo.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/dirigente/montagemFicha.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EquipeEccBean.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/dirigente/montagemEquipe.xhtml" />
       </list>
     </option>
   </component>
@@ -355,8 +323,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -391,7 +359,39 @@
               <item name="ecc" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ecc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ecc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ecc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ecc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ecc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ecc" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ecc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ecc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ecc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ecc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="administrador" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ecc" type="b2602c69:ProjectViewProjectNode" />
@@ -685,12 +685,15 @@
       <workItem from="1519733785764" duration="4979000" />
       <workItem from="1519748634942" duration="17705000" />
       <workItem from="1519837498236" duration="31022000" />
-      <workItem from="1519989422045" duration="7079000" />
+      <workItem from="1519989422045" duration="7478000" />
+      <workItem from="1520249574105" duration="1814000" />
+      <workItem from="1520272830718" duration="13066000" />
+      <workItem from="1520514003854" duration="8341000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183596000" />
+    <option name="totallyTimeSpent" value="207216000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1917" y="0" width="1606" height="878" extended-state="6" />
@@ -707,7 +710,7 @@
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4481383" sideWeight="0.490991" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17952128" sideWeight="0.490991" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32845744" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -717,10 +720,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.4903475" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22207446" sideWeight="0.4929215" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26190478" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19015957" sideWeight="0.4929215" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27348778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -729,7 +733,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -748,7 +751,7 @@
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4481383" sideWeight="0.490991" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4481383" sideWeight="0.490991" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32845744" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -757,11 +760,11 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.4903475" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32978722" sideWeight="0.4903475" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22207446" sideWeight="0.4929215" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19015957" sideWeight="0.4929215" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26190478" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27348778" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -819,12 +822,6 @@
           <line>90</line>
           <properties />
           <option name="timeStamp" value="52" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EquipeEccBean.java</url>
-          <line>432</line>
-          <properties />
-          <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EquipeEccBean.java</url>
@@ -922,26 +919,18 @@
           <properties />
           <option name="timeStamp" value="115" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/ecc/servlet/exibeFoto.java</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="119" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="116" />
+      <option name="time" value="120" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/4.3.11.Final/hibernate-core-4.3.11.Final-sources.jar!/org/hibernate/service/internal/ConcurrentServiceBinding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/4.3.11.Final/hibernate-core-4.3.11.Final-sources.jar!/org/hibernate/service/internal/AbstractServiceRegistryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="150" column="0" lean-forward="false" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final-sources.jar!/javax/persistence/EntityManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -978,11 +967,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-          <folding>
-            <element signature="e#425#426#0" expanded="false" />
-            <element signature="e#450#451#0" expanded="false" />
-            <marker date="1518727259923" expanded="true" signature="2015:2123" ph="UPDATE ECCS " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1019,9 +1003,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="94" column="65" lean-forward="true" selection-start-line="93" selection-start-column="32" selection-end-line="94" selection-end-column="65" />
-          <folding>
-            <marker date="1519737012249" expanded="true" signature="5343:5429" ph="UPDATE FICHA... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1029,39 +1010,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="200" column="73" lean-forward="false" selection-start-line="200" selection-start-column="73" selection-end-line="200" selection-end-column="73" />
-          <folding>
-            <marker date="1519849187534" expanded="true" signature="1267:1351" ph="{...}" />
-            <marker date="1519849187534" expanded="true" signature="1510:1594" ph="{...}" />
-            <marker date="1519849187534" expanded="true" signature="1756:1840" ph="{...}" />
-            <marker date="1519849187534" expanded="true" signature="1996:2080" ph="{...}" />
-            <marker date="1519849187534" expanded="true" signature="2507:2591" ph="{...}" />
-            <marker date="1519849187534" expanded="true" signature="2741:2825" ph="{...}" />
-            <marker date="1519849187534" expanded="true" signature="2991:3075" ph="{...}" />
-            <marker date="1519849187534" expanded="true" signature="3252:3336" ph="{...}" />
-            <marker date="1519849187534" expanded="true" signature="3530:3614" ph="{...}" />
-            <marker date="1519849187534" expanded="true" signature="3807:3891" ph="{...}" />
-            <marker date="1519849187534" expanded="true" signature="4072:4156" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/administrador/equipe.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="56" column="55" lean-forward="false" selection-start-line="56" selection-start-column="55" selection-end-line="56" selection-end-column="55" />
-          <folding>
-            <marker date="1519849623984" expanded="true" signature="1534:1618" ph="{...}" />
-            <marker date="1519849623984" expanded="true" signature="1777:1861" ph="{...}" />
-            <marker date="1519849623984" expanded="true" signature="2023:2107" ph="{...}" />
-            <marker date="1519849623984" expanded="true" signature="2371:2455" ph="{...}" />
-            <marker date="1519849623984" expanded="true" signature="2792:2876" ph="{...}" />
-            <marker date="1519849623984" expanded="true" signature="3026:3110" ph="{...}" />
-            <marker date="1519849623984" expanded="true" signature="3276:3360" ph="{...}" />
-            <marker date="1519849623984" expanded="true" signature="3537:3621" ph="{...}" />
-            <marker date="1519849623984" expanded="true" signature="3815:3899" ph="{...}" />
-            <marker date="1519849623984" expanded="true" signature="4092:4176" ph="{...}" />
-            <marker date="1519849623984" expanded="true" signature="4357:4441" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1069,19 +1017,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="57" column="55" lean-forward="false" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
-          <folding>
-            <marker date="1519849631760" expanded="true" signature="1534:1618" ph="{...}" />
-            <marker date="1519849631760" expanded="true" signature="1778:1862" ph="{...}" />
-            <marker date="1519849631760" expanded="true" signature="2130:2214" ph="{...}" />
-            <marker date="1519849631760" expanded="true" signature="2370:2454" ph="{...}" />
-            <marker date="1519849631760" expanded="true" signature="2786:2870" ph="{...}" />
-            <marker date="1519849631760" expanded="true" signature="3020:3104" ph="{...}" />
-            <marker date="1519849631760" expanded="true" signature="3270:3354" ph="{...}" />
-            <marker date="1519849631760" expanded="true" signature="3531:3615" ph="{...}" />
-            <marker date="1519849631760" expanded="true" signature="3809:3893" ph="{...}" />
-            <marker date="1519849631760" expanded="true" signature="4086:4170" ph="{...}" />
-            <marker date="1519849631760" expanded="true" signature="4351:4435" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1089,15 +1024,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-167">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1519677728303" expanded="true" signature="1919:2003" ph="{...}" />
-            <marker date="1519677728303" expanded="true" signature="2153:2237" ph="{...}" />
-            <marker date="1519677728303" expanded="true" signature="2403:2487" ph="{...}" />
-            <marker date="1519677728303" expanded="true" signature="2664:2748" ph="{...}" />
-            <marker date="1519677728303" expanded="true" signature="2942:3026" ph="{...}" />
-            <marker date="1519677728303" expanded="true" signature="3206:3290" ph="{...}" />
-            <marker date="1519677728303" expanded="true" signature="3471:3555" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1105,19 +1031,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="63" column="75" lean-forward="true" selection-start-line="63" selection-start-column="75" selection-end-line="63" selection-end-column="75" />
-          <folding>
-            <marker date="1519849591820" expanded="true" signature="1534:1618" ph="{...}" />
-            <marker date="1519849591820" expanded="true" signature="1878:1962" ph="{...}" />
-            <marker date="1519849591820" expanded="true" signature="2124:2208" ph="{...}" />
-            <marker date="1519849591820" expanded="true" signature="2364:2448" ph="{...}" />
-            <marker date="1519849591820" expanded="true" signature="2780:2864" ph="{...}" />
-            <marker date="1519849591820" expanded="true" signature="3014:3098" ph="{...}" />
-            <marker date="1519849591820" expanded="true" signature="3264:3348" ph="{...}" />
-            <marker date="1519849591820" expanded="true" signature="3525:3609" ph="{...}" />
-            <marker date="1519849591820" expanded="true" signature="3803:3887" ph="{...}" />
-            <marker date="1519849591820" expanded="true" signature="4080:4164" ph="{...}" />
-            <marker date="1519849591820" expanded="true" signature="4345:4429" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1190,55 +1103,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemFicha.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="178" column="99" lean-forward="false" selection-start-line="178" selection-start-column="99" selection-end-line="178" selection-end-column="118" />
-          <folding>
-            <marker date="1519849712769" expanded="true" signature="1767:1851" ph="{...}" />
-            <marker date="1519849712769" expanded="true" signature="2033:2117" ph="{...}" />
-            <marker date="1519849712769" expanded="true" signature="2301:2385" ph="{...}" />
-            <marker date="1519849712769" expanded="true" signature="2563:2647" ph="{...}" />
-            <marker date="1519849712769" expanded="true" signature="3009:3093" ph="{...}" />
-            <marker date="1519849712769" expanded="true" signature="3239:3323" ph="{...}" />
-            <marker date="1519849712769" expanded="true" signature="3585:3669" ph="{...}" />
-            <marker date="1519849712769" expanded="true" signature="3841:3925" ph="{...}" />
-            <marker date="1519849712769" expanded="true" signature="4119:4203" ph="{...}" />
-            <marker date="1519849712769" expanded="true" signature="4383:4467" ph="{...}" />
-            <marker date="1519849712769" expanded="true" signature="4648:4732" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EquipeEccBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="242" column="17" lean-forward="false" selection-start-line="242" selection-start-column="17" selection-end-line="242" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/META-INF/context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="55" lean-forward="false" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ecc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1246,19 +1114,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
           <caret line="66" column="13" lean-forward="false" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/util/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="2" lean-forward="false" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2155#2156#0" expanded="false" />
-            <element signature="e#2179#2180#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1266,10 +1121,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
           <caret line="85" column="84" lean-forward="false" selection-start-line="85" selection-start-column="84" selection-end-line="85" selection-end-column="84" />
-          <folding>
-            <element signature="e#3890#3891#0" expanded="true" />
-            <element signature="e#3911#3912#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1277,18 +1128,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="25" column="46" lean-forward="false" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EccBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5775">
-          <caret line="469" column="58" lean-forward="false" selection-start-line="469" selection-start-column="58" selection-end-line="469" selection-end-column="58" />
-          <folding>
-            <element signature="e#4114#4115#0" expanded="true" />
-            <element signature="e#4141#4142#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1296,7 +1135,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1312,7 +1150,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
           <caret line="23" column="55" lean-forward="true" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1326,32 +1163,91 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="41" lean-forward="false" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+        <state relative-caret-position="270">
+          <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/webContexts.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemCirculoEstudo.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/artifacts/ecc_war_exploded.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1470">
+          <caret line="98" column="12" lean-forward="false" selection-start-line="98" selection-start-column="12" selection-end-line="98" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/artifacts/ecc_war.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EncontristaEccBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2970">
+          <caret line="244" column="31" lean-forward="false" selection-start-line="244" selection-start-column="31" selection-end-line="244" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EccBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="28" column="14" lean-forward="false" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/META-INF/context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemEncontrista.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="293" column="124" lean-forward="false" selection-start-line="293" selection-start-column="117" selection-end-line="293" selection-end-column="124" />
           <folding>
-            <marker date="1519996413439" expanded="true" signature="100692:100943" ph="..." />
-            <marker date="1519996413439" expanded="true" signature="100692:100958" ph="..." />
-            <marker date="1519996413439" expanded="true" signature="100692:100972" ph="..." />
-            <marker date="1519996413439" expanded="true" signature="100692:100987" ph="..." />
-            <marker date="1519996413439" expanded="true" signature="100738:100923" ph="..." />
-            <marker date="1519996413439" expanded="true" signature="100778:100889" ph="..." />
-            <marker date="1519996413439" expanded="true" signature="100799:100867" ph="..." />
+            <marker date="1520427069438" expanded="true" signature="1603:1687" ph="{...}" />
+            <marker date="1520427069438" expanded="true" signature="1869:1953" ph="{...}" />
+            <marker date="1520427069438" expanded="true" signature="2137:2221" ph="{...}" />
+            <marker date="1520427069438" expanded="true" signature="2399:2483" ph="{...}" />
+            <marker date="1520427069438" expanded="true" signature="2845:2929" ph="{...}" />
+            <marker date="1520427069438" expanded="true" signature="3074:3158" ph="{...}" />
+            <marker date="1520427069438" expanded="true" signature="3319:3403" ph="{...}" />
+            <marker date="1520427069438" expanded="true" signature="3575:3659" ph="{...}" />
+            <marker date="1520427069438" expanded="true" signature="3936:4020" ph="{...}" />
+            <marker date="1520427069438" expanded="true" signature="4207:4291" ph="{...}" />
+            <marker date="1520427069438" expanded="true" signature="4472:4556" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/webContexts.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/model/Ecc.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        <state relative-caret-position="405">
+          <caret line="33" column="21" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/ecc.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+        <state relative-caret-position="0">
+          <caret line="281" column="31" lean-forward="false" selection-start-line="279" selection-start-column="20" selection-end-line="281" selection-end-column="31" />
           <folding>
             <marker date="1519994512806" expanded="true" signature="1641:1725" ph="{...}" />
             <marker date="1519994512806" expanded="true" signature="1907:1991" ph="{...}" />
@@ -1368,127 +1264,135 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/util/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="68" column="43" lean-forward="false" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/util/Constantes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemPalestrante.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+        <state relative-caret-position="3090">
+          <caret line="206" column="24" lean-forward="false" selection-start-line="206" selection-start-column="24" selection-end-line="206" selection-end-column="24" />
           <folding>
-            <marker date="1519994695708" expanded="true" signature="1601:1685" ph="{...}" />
-            <marker date="1519994695708" expanded="true" signature="1867:1951" ph="{...}" />
-            <marker date="1519994695708" expanded="true" signature="2135:2219" ph="{...}" />
-            <marker date="1519994695708" expanded="true" signature="2397:2481" ph="{...}" />
-            <marker date="1519994695708" expanded="true" signature="2843:2927" ph="{...}" />
-            <marker date="1519994695708" expanded="true" signature="3072:3156" ph="{...}" />
-            <marker date="1519994695708" expanded="true" signature="3309:3393" ph="{...}" />
-            <marker date="1519994695708" expanded="true" signature="3557:3641" ph="{...}" />
-            <marker date="1519994695708" expanded="true" signature="3835:3919" ph="{...}" />
-            <marker date="1519994695708" expanded="true" signature="4201:4285" ph="{...}" />
-            <marker date="1519994695708" expanded="true" signature="4466:4550" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemEquipe.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-          <folding>
-            <marker date="1519994709324" expanded="true" signature="1599:1683" ph="{...}" />
-            <marker date="1519994709324" expanded="true" signature="1865:1949" ph="{...}" />
-            <marker date="1519994709324" expanded="true" signature="2133:2217" ph="{...}" />
-            <marker date="1519994709324" expanded="true" signature="2395:2479" ph="{...}" />
-            <marker date="1519994709324" expanded="true" signature="2841:2925" ph="{...}" />
-            <marker date="1519994709324" expanded="true" signature="3070:3154" ph="{...}" />
-            <marker date="1519994709324" expanded="true" signature="3307:3391" ph="{...}" />
-            <marker date="1519994709324" expanded="true" signature="3662:3746" ph="{...}" />
-            <marker date="1519994709324" expanded="true" signature="3940:4024" ph="{...}" />
-            <marker date="1519994709324" expanded="true" signature="4211:4295" ph="{...}" />
-            <marker date="1519994709324" expanded="true" signature="4476:4560" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemCirculoEstudo.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-          <folding>
-            <marker date="1519994721160" expanded="true" signature="1607:1691" ph="{...}" />
-            <marker date="1519994721160" expanded="true" signature="1873:1957" ph="{...}" />
-            <marker date="1519994721160" expanded="true" signature="2141:2225" ph="{...}" />
-            <marker date="1519994721160" expanded="true" signature="2403:2487" ph="{...}" />
-            <marker date="1519994721160" expanded="true" signature="2849:2933" ph="{...}" />
-            <marker date="1519994721160" expanded="true" signature="3078:3162" ph="{...}" />
-            <marker date="1519994721160" expanded="true" signature="3324:3408" ph="{...}" />
-            <marker date="1519994721160" expanded="true" signature="3593:3677" ph="{...}" />
-            <marker date="1519994721160" expanded="true" signature="3871:3955" ph="{...}" />
-            <marker date="1519994721160" expanded="true" signature="4142:4226" ph="{...}" />
-            <marker date="1519994721160" expanded="true" signature="4407:4491" ph="{...}" />
+            <marker date="1520431375239" expanded="true" signature="1601:1685" ph="{...}" />
+            <marker date="1520431375239" expanded="true" signature="1867:1951" ph="{...}" />
+            <marker date="1520431375239" expanded="true" signature="2135:2219" ph="{...}" />
+            <marker date="1520431375239" expanded="true" signature="2397:2481" ph="{...}" />
+            <marker date="1520431375239" expanded="true" signature="2843:2927" ph="{...}" />
+            <marker date="1520431375239" expanded="true" signature="3072:3156" ph="{...}" />
+            <marker date="1520431375239" expanded="true" signature="3309:3393" ph="{...}" />
+            <marker date="1520431375239" expanded="true" signature="3557:3641" ph="{...}" />
+            <marker date="1520431375239" expanded="true" signature="3835:3919" ph="{...}" />
+            <marker date="1520431375239" expanded="true" signature="4201:4285" ph="{...}" />
+            <marker date="1520431375239" expanded="true" signature="4466:4550" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemCirculo.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+        <state relative-caret-position="7290">
+          <caret line="486" column="0" lean-forward="false" selection-start-line="486" selection-start-column="0" selection-end-line="486" selection-end-column="0" />
           <folding>
-            <marker date="1519994729497" expanded="true" signature="1600:1684" ph="{...}" />
-            <marker date="1519994729497" expanded="true" signature="1866:1950" ph="{...}" />
-            <marker date="1519994729497" expanded="true" signature="2134:2218" ph="{...}" />
-            <marker date="1519994729497" expanded="true" signature="2396:2480" ph="{...}" />
-            <marker date="1519994729497" expanded="true" signature="2842:2926" ph="{...}" />
-            <marker date="1519994729497" expanded="true" signature="3071:3155" ph="{...}" />
-            <marker date="1519994729497" expanded="true" signature="3317:3401" ph="{...}" />
-            <marker date="1519994729497" expanded="true" signature="3586:3670" ph="{...}" />
-            <marker date="1519994729497" expanded="true" signature="3864:3948" ph="{...}" />
-            <marker date="1519994729497" expanded="true" signature="4135:4219" ph="{...}" />
-            <marker date="1519994729497" expanded="true" signature="4493:4577" ph="{...}" />
+            <marker date="1520431679631" expanded="true" signature="1600:1684" ph="{...}" />
+            <marker date="1520431679631" expanded="true" signature="1866:1950" ph="{...}" />
+            <marker date="1520431679631" expanded="true" signature="2134:2218" ph="{...}" />
+            <marker date="1520431679631" expanded="true" signature="2396:2480" ph="{...}" />
+            <marker date="1520431679631" expanded="true" signature="2842:2926" ph="{...}" />
+            <marker date="1520431679631" expanded="true" signature="3071:3155" ph="{...}" />
+            <marker date="1520431679631" expanded="true" signature="3317:3401" ph="{...}" />
+            <marker date="1520431679631" expanded="true" signature="3586:3670" ph="{...}" />
+            <marker date="1520431679631" expanded="true" signature="3864:3948" ph="{...}" />
+            <marker date="1520431679631" expanded="true" signature="4135:4219" ph="{...}" />
+            <marker date="1520431679631" expanded="true" signature="4493:4577" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/artifacts/ecc_war_exploded.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemFicha.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="98" column="12" lean-forward="false" selection-start-line="98" selection-start-column="12" selection-end-line="98" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/artifacts/ecc_war.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemEncontrista.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="244">
+          <caret line="536" column="36" lean-forward="true" selection-start-line="536" selection-start-column="36" selection-end-line="536" selection-end-column="36" />
           <folding>
-            <marker date="1519994907535" expanded="true" signature="1603:1687" ph="{...}" />
-            <marker date="1519994907535" expanded="true" signature="1869:1953" ph="{...}" />
-            <marker date="1519994907535" expanded="true" signature="2137:2221" ph="{...}" />
-            <marker date="1519994907535" expanded="true" signature="2399:2483" ph="{...}" />
-            <marker date="1519994907535" expanded="true" signature="2845:2929" ph="{...}" />
-            <marker date="1519994907535" expanded="true" signature="3074:3158" ph="{...}" />
-            <marker date="1519994907535" expanded="true" signature="3319:3403" ph="{...}" />
-            <marker date="1519994907535" expanded="true" signature="3575:3659" ph="{...}" />
-            <marker date="1519994907535" expanded="true" signature="3936:4020" ph="{...}" />
-            <marker date="1519994907535" expanded="true" signature="4207:4291" ph="{...}" />
-            <marker date="1519994907535" expanded="true" signature="4472:4556" ph="{...}" />
+            <marker date="1520515863346" expanded="true" signature="1767:1851" ph="{...}" />
+            <marker date="1520515863346" expanded="true" signature="2033:2117" ph="{...}" />
+            <marker date="1520515863346" expanded="true" signature="2301:2385" ph="{...}" />
+            <marker date="1520515863346" expanded="true" signature="2563:2647" ph="{...}" />
+            <marker date="1520515863346" expanded="true" signature="3009:3093" ph="{...}" />
+            <marker date="1520515863346" expanded="true" signature="3239:3323" ph="{...}" />
+            <marker date="1520515863346" expanded="true" signature="3585:3669" ph="{...}" />
+            <marker date="1520515863346" expanded="true" signature="3841:3925" ph="{...}" />
+            <marker date="1520515863346" expanded="true" signature="4119:4203" ph="{...}" />
+            <marker date="1520515863346" expanded="true" signature="4383:4467" ph="{...}" />
+            <marker date="1520515863346" expanded="true" signature="4648:4732" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EncontristaEccBean.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/administrador/equipe.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="237" column="9" lean-forward="true" selection-start-line="237" selection-start-column="9" selection-end-line="237" selection-end-column="9" />
+        <state relative-caret-position="388">
+          <caret line="214" column="25" lean-forward="true" selection-start-line="214" selection-start-column="25" selection-end-line="214" selection-end-column="25" />
+          <folding>
+            <marker date="1519849623984" expanded="true" signature="1534:1618" ph="{...}" />
+            <marker date="1519849623984" expanded="true" signature="1777:1861" ph="{...}" />
+            <marker date="1519849623984" expanded="true" signature="2023:2107" ph="{...}" />
+            <marker date="1519849623984" expanded="true" signature="2371:2455" ph="{...}" />
+            <marker date="1519849623984" expanded="true" signature="2792:2876" ph="{...}" />
+            <marker date="1519849623984" expanded="true" signature="3026:3110" ph="{...}" />
+            <marker date="1519849623984" expanded="true" signature="3276:3360" ph="{...}" />
+            <marker date="1519849623984" expanded="true" signature="3537:3621" ph="{...}" />
+            <marker date="1519849623984" expanded="true" signature="3815:3899" ph="{...}" />
+            <marker date="1519849623984" expanded="true" signature="4092:4176" ph="{...}" />
+            <marker date="1519849623984" expanded="true" signature="4357:4441" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/servlet/exibeFoto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/ecc/controller/EquipeEccBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="424" column="10" lean-forward="false" selection-start-line="424" selection-start-column="10" selection-end-line="424" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/dirigente/montagemEquipe.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="506" column="0" lean-forward="true" selection-start-line="506" selection-start-column="0" selection-end-line="506" selection-end-column="0" />
+          <folding>
+            <marker date="1520526270725" expanded="true" signature="1599:1683" ph="{...}" />
+            <marker date="1520526270725" expanded="true" signature="1865:1949" ph="{...}" />
+            <marker date="1520526270725" expanded="true" signature="2133:2217" ph="{...}" />
+            <marker date="1520526270725" expanded="true" signature="2395:2479" ph="{...}" />
+            <marker date="1520526270725" expanded="true" signature="2841:2925" ph="{...}" />
+            <marker date="1520526270725" expanded="true" signature="3070:3154" ph="{...}" />
+            <marker date="1520526270725" expanded="true" signature="3307:3391" ph="{...}" />
+            <marker date="1520526270725" expanded="true" signature="3662:3746" ph="{...}" />
+            <marker date="1520526270725" expanded="true" signature="3940:4024" ph="{...}" />
+            <marker date="1520526270725" expanded="true" signature="4211:4295" ph="{...}" />
+            <marker date="1520526270725" expanded="true" signature="4476:4560" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
