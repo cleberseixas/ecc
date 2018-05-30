@@ -162,7 +162,7 @@
 		</p:toolbar>
 				<p:dataTable id="circulosEcc" value="#{circuloEccBean.listaUltimoCirculo}" var="circuloEcc" rowIndexVar="index" selection="#{circuloEccBean.circuloEcc}"
 							 selectionMode="single" rowKey="#{circuloEcc.id}"
-							 emptyMessage="Não há Círculos cadastrados" style="width:1120px;"
+							 emptyMessage="Não há Círculos cadastrados" style="width:100%;"
 							 paginator="false" paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
 							 rowsPerPageTemplate="14,28,42,56,70" paginatorPosition="top"
 							 currentPageReportTemplate="Registro(s) {startRecord} a {endRecord} de um total de {totalRecords} - Página {currentPage} de {totalPages}">
@@ -207,7 +207,7 @@
 						<h:graphicImage library="imagens" name="cadeado.png" width="15" height="15" rendered="#{circuloEcc.ecc.situacao eq 'ENCERRADO'}"
 										style="float: right;" title="Encerrado"/>
 					</p:column>
-					<p:column headerText="Círculo" width="190">
+					<p:column headerText="Círculo" width="140">
 						<p:outputLabel value="#{circuloEcc.circulo.descricao}"/>
 						<h:graphicImage library="imagens" name="green.png" width="15" height="15" rendered="#{circuloEcc.circulo.descricao eq 'VERDE'}"
 										style="float: right;" title="Verde"/>
@@ -222,8 +222,8 @@
 						<h:graphicImage library="imagens" name="orange.png" width="15" height="15" rendered="#{circuloEcc.circulo.descricao eq 'LARANJA'}"
 										style="float: right;" title="Laranja"/>
 					</p:column>
-					<p:column headerText="Casal Coordenador" width="200">
-						<p:outputLabel value="#{circuloEcc.casalCoordenador.primeiraEtapa} - #{circuloEcc.casalCoordenador.nomeUsual}"/>
+					<p:column headerText="Casal Coordenador" width="300">
+						<p:outputLabel value="#{circuloEcc.casalCoordenador.primeiraEtapa} - #{circuloEcc.casalCoordenador.nomeUsual} - #{circuloEcc.casalCoordenador.telefoneEle}/#{circuloEcc.casalCoordenador.telefoneEla}"/>
 						<h:graphicImage library="imagens" value="/image?imagem=#{circuloEcc.casalCoordenador.fotoEla}" rendered="#{circuloEcc.ecc.situacao eq 'ANDAMENTO'}"
 										style="width:20px; height:20px; float: right;" title="Foto dela"/>
 						<h:graphicImage library="imagens" value="/image?imagem=#{circuloEcc.casalCoordenador.fotoEle}" rendered="#{circuloEcc.ecc.situacao eq 'ANDAMENTO'}"

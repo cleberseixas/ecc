@@ -155,7 +155,7 @@
 		</p:toolbar>
 				<p:dataTable id="palestrantes" value="#{palestranteBean.listaUltimoPalestrante}" var="palestrante" rowIndexVar="index" selection="#{palestranteBean.palestrante}"
 							 selectionMode="single" rowKey="#{palestrante.id}"
-							 emptyMessage="Não há Palestrantes cadastrados" style="width:1120px;"
+							 emptyMessage="Não há Palestrantes cadastrados" style="width:100%;"
 							 paginator="false" paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
 							 rowsPerPageTemplate="14,28,42,56,70" paginatorPosition="top"
 							 currentPageReportTemplate="Registro(s) {startRecord} a {endRecord} de um total de {totalRecords} - Página {currentPage} de {totalPages}">

@@ -577,7 +577,7 @@ ORDER BY EQ.ORDEM, FI.NOME_ELE]]></xml-property>
                         <property name="marginTop">0pt</property>
                         <property name="textAlign">center</property>
                         <property name="contentType">auto</property>
-                        <text-property name="content"><![CDATA[E Q U I P E  D E  D I R I G E N T E  D O  E C C  N A  P A R Ó Q U I A]]></text-property>
+                        <text-property name="content"><![CDATA[E Q U I P E   D E   D I R I G E N T E   D O   E C C   N A   P A R Ó Q U I A]]></text-property>
                     </text>
                     <text id="801">
                         <property name="fontSize">11pt</property>

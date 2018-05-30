@@ -162,9 +162,15 @@
 					value="#{usuarioBean.usuario.login}" size="60"
 					maxlength="60" style="width:146px;" required="true"
 					requiredMessage="O campo Login é obrigatório">
-					<f:validateLength minimum="5" maximum="60" />
+					<f:validateLength minimum="3" maximum="60" />
 				</p:inputText>
-
+				<h:outputLabel value="Senha:" for="senha" rendered="#{usuarioBean.usuario.id eq null}"/>
+				<p:password id="senha" label="senha" rendered="#{usuarioBean.usuario.id eq null}"
+							 value="#{usuarioBean.usuario.senha}" size="60"
+							 maxlength="60" style="width:146px;" required="true"
+							 requiredMessage="O campo Senha é é obrigatório">
+					<f:validateLength minimum="3" maximum="20" />
+				</p:password>
 				<h:outputLabel value="" />
 				<p:commandButton value="Salvar" action="#{usuarioBean.salvar}"
 					icon="ui-icon-check" update=":edicao :listagem">

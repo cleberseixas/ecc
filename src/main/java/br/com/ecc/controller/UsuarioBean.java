@@ -64,7 +64,7 @@ public class UsuarioBean implements Serializable {
 			} else {
 				this.usuario.setAtivo(true);
 				if (this.usuario.getId() == null) {
-					this.usuario.setSenha("123");
+					//this.usuario.setSenha("123");
 					String senha = this.usuario.getSenha();
 					String senhaCripto = DigestUtils.md5DigestAsHex(senha.getBytes());
 					this.usuario.setSenha(senhaCripto);
