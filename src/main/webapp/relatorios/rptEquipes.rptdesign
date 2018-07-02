@@ -4490,7 +4490,7 @@ ORDER BY 11, 17, 18, 13]]></xml-property>
 		  WHEN EQ.EQUIPE = 1 THEN ''
 		  WHEN EQ.EQUIPE = 13 THEN 'CASAL RECEPÇÃO DE PALESTRANTES'
 		ELSE
-		 'COORDENADOR'
+		 '(COORDENADOR)'
 		END AS CASAL,
 		FI.NOME_ELE||' - '||FI.NOME_USUAL_ELE AS ELE,
 		FI.NOME_ELA||' - '||FI.NOME_USUAL_ELA AS ELA,
@@ -4551,42 +4551,6 @@ ORDER BY 11, 17, 18, 13]]></xml-property>
 	  
 ORDER BY 11, 17, 18, 13
 ]]></xml-property>
-            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
-  <Version>2.0</Version>
-  <DataSetParameters>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name></design:name>
-            <design:position>1</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
-          <design:precision>0</design:precision>
-          <design:scale>0</design:scale>
-          <design:nullability>Unknown</design:nullability>
-        </design:attributes>
-      </design:ParameterDefinition>
-    </parameter>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name></design:name>
-            <design:position>2</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
-          <design:precision>0</design:precision>
-          <design:scale>0</design:scale>
-          <design:nullability>Unknown</design:nullability>
-        </design:attributes>
-      </design:ParameterDefinition>
-    </parameter>
-  </DataSetParameters>
-</model:DesignValues>]]></xml-property>
         </oda-data-set>
         <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="DSEquipeOrdemLimpeza" id="1250">
             <property name="nullsOrdering">nulls lowest</property>
@@ -8134,23 +8098,33 @@ ORDER BY 11, 17, 18, 13]]></xml-property>
                 </structure>
                 <structure>
                     <property name="name">ele11111_CubeRow11111/clubeRownum_coluna11111/colnum</property>
-                    <expression name="expression">measure["ele11111"]</expression>
                     <property name="dataType">string</property>
                     <simple-property-list name="aggregateOn">
                         <value>CubeRow11111/clubeRownum</value>
                         <value>coluna11111/colnum</value>
                     </simple-property-list>
                     <property name="aggregateFunction">FIRST</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">measure["ela11111"]</expression>
+                        </structure>
+                    </list-property>
                 </structure>
                 <structure>
                     <property name="name">ela11111_CubeRow11111/clubeRownum_coluna11111/colnum</property>
-                    <expression name="expression">measure["ela11111"]</expression>
                     <property name="dataType">string</property>
                     <simple-property-list name="aggregateOn">
                         <value>CubeRow11111/clubeRownum</value>
                         <value>coluna11111/colnum</value>
                     </simple-property-list>
                     <property name="aggregateFunction">FIRST</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">measure["ele11111"]</expression>
+                        </structure>
+                    </list-property>
                 </structure>
                 <structure>
                     <property name="name">endereco11111_CubeRow11111/clubeRownum_coluna11111/colnum</property>

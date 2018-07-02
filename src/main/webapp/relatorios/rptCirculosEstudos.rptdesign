@@ -158,7 +158,18 @@
                     <text-property name="heading">resposta2</text-property>
                 </structure>
             </list-property>
-            <list-property name="parameters"/>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">ecc</property>
+                    <property name="paramName">ecc</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                    <property name="position">1</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
             <structure name="cachedMetaData">
                 <list-property name="resultSet">
                     <structure>
@@ -373,7 +384,7 @@
 	  AND
 	  CEE.CIRCULO = CEC.CIRCULO
 	  AND
-	  EC.ECC = 2
+	  EC.ECC = ?
 GROUP BY EC.ECC, EC.NUMERO, EC.TEMA, EC.DATA_INICIO, EC.DATA_FIM,
 		CI.DESCRICAO,
 		CE.NOME_GRUPO, 
@@ -382,6 +393,27 @@ GROUP BY EC.ECC, EC.NUMERO, EC.TEMA, EC.DATA_INICIO, EC.DATA_FIM,
 		CEE.PERGUNTA1, CEE.RESPOSTA1, CEE.PERGUNTA2, CEE.RESPOSTA2
 	ORDER BY 6, 10
 ]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <DataSetParameters>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>1</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+  </DataSetParameters>
+</model:DesignValues>]]></xml-property>
         </oda-data-set>
     </data-sets>
     <styles>

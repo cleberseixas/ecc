@@ -244,7 +244,7 @@
         </style>
         <style name="image" id="1010">
             <property name="backgroundAttachment">scroll</property>
-            <property name="backgroundImage">http://179.155.225.37:9970/ecc/javax.faces.resource/pergaminho.jpg.xhtml?ln=imagens</property>
+            <property name="backgroundImage">http://iplocal.ddns.net:9970/ecc/javax.faces.resource/pergaminho.jpg.xhtml?ln=imagens</property>
             <property name="backgroundPositionX">center</property>
             <property name="backgroundPositionY">center</property>
             <property name="backgroundRepeat">no-repeat</property>

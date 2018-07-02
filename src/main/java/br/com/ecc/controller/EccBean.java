@@ -651,7 +651,7 @@ public class EccBean implements Serializable {
 	public void imprimirPreces() throws IOException {
 		try {
 
-			urlRelatorio = Util.retornaURLRelatorio()+"/rptPrece.rptdesign";
+			urlRelatorio = Util.retornaURLRelatorio()+"/rptPrece.rptdesign&ecc=" + ecc.getId();
 			System.out.println(urlRelatorio);
 		} catch (Exception ex) {
 			System.err.println("O arquivo não foi gerado corretamente!");

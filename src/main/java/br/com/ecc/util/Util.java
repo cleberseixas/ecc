@@ -288,7 +288,7 @@ public class Util {
 		System.out.println("C A M I N H O  D A  A P L I C A Ç Ã O : " + urlAplicacao);
 
 		if (urlAplicacao.contains("179.155.225.37") || (urlAplicacao.contains("ip.bragasoft.com.br")) ||
-				(urlAplicacao.contains("ip.ddns.net"))) {
+				(urlAplicacao.contains("iplocal.ddns.net"))) {
 			urlRelatorio = Constantes.URL_BIRT_SERVER;
 		} else {
 			urlRelatorio = Constantes.URL_BIRT_LOCAL;

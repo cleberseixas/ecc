@@ -20,7 +20,7 @@ public class Constantes {
 	//public static final String URL_BIRT = 	"http://179.155.225.37:9970/birt/run?__format=pdf&__report=relatorios";
 
 	public static final String URL_BIRT_LOCAL = 	"http://localhost:9970/birt/run?__format=pdf&__report=report";
-	public static final String URL_BIRT_SERVER = 	"http://ip.ddns.net:9970/birt/run?__format=pdf&__report=report";
+	public static final String URL_BIRT_SERVER = 	"http://iplocal.ddns.net:9970/birt/run?__format=pdf&__report=report";
 	//public static final String URL_BIRT_SERVER = 	"http://179.155.225.37:9970/birt/run?__format=pdf&__report=report";
 	//public static final String URL_BIRT_SERVER = 	"http://ip.bragasoft.com.br:9970/birt/run?__format=pdf&__report=report";
 
