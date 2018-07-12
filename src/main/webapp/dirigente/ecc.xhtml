@@ -210,6 +210,12 @@
 						<p:outputLabel value="Relatórios para o Quadrante"
 									   style="float:left;" />
 							<h:panelGroup style="float:right;">
+								<p:commandButton id="btnImprimirCapa" action="#{eccBean.imprimirCapa}"
+												 oncomplete="PF('exibiPDF').show()"
+												 disabled="#{eccBean.habilitaBotaoImprimirCapa}"
+												 icon="ui-icon-print" value="Anexo20" style="margin-left: 5px;"
+												 title="Imprime a Capa do Quadrante."
+												 ajax="true" update="exibiPDF"/>
 								<p:commandButton id="btnImprimirConvite" action="#{eccBean.imprimirConvites}"
 												 oncomplete="PF('exibiPDF').show()"
 												 disabled="#{eccBean.habilitaBotaoImprimirConvites}"
@@ -270,7 +276,7 @@
 					</f:facet>
 					<p:ajax event="rowSelect"
 							listener="#{eccBean.onRowSelectEcc}"
-							update="btnEditar btnExcluir btnIncluiDirigentes btnDetalhes btnEncerrar btnImprimirConvite btnImprimirPrece btnImprimirEncontristas btnImprimirDirigentes btnImprimirEquipes btnImprimirPalestrantes btnImprimirDesenhos btnImprimirHarmoniaEParabola btnImprimirSemeador" />
+							update="btnEditar btnExcluir btnIncluiDirigentes btnDetalhes btnEncerrar btnImprimirCapa btnImprimirConvite btnImprimirPrece btnImprimirEncontristas btnImprimirDirigentes btnImprimirEquipes btnImprimirPalestrantes btnImprimirDesenhos btnImprimirHarmoniaEParabola btnImprimirSemeador" />
 					<p:column width="30">
 						<f:facet name="header">Número</f:facet>
 						#{ecc.numero}

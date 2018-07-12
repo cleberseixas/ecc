@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.17" id="1">
+    <list-property name="configVars">
+        <structure>
+            <property name="name">__isdisplay__dataInicial_419_0</property>
+            <property name="value">01/01/2008</property>
+        </structure>
+        <structure>
+            <property name="name">__isdisplay__dataFinal_420_1</property>
+            <property name="value">31/12/2009</property>
+        </structure>
+        <structure>
+            <property name="name">__isdisplay__tipoEnvio_535_2</property>
+            <property name="value">ENTREGUE EM MÃOS - EM</property>
+        </structure>
+        <structure>
+            <property name="name">__isdisplay__destinatario_545_3</property>
+            <property name="value">CARTORIO JUDICIARIO DO MP - PORTO VELHO/RO - CAJ</property>
+        </structure>
+        <structure>
+            <property name="name">tipoEnvio_535_4</property>
+            <property name="value">161</property>
+        </structure>
+        <structure>
+            <property name="name">tipoEnvio_535_type_</property>
+            <property name="value">decimal</property>
+        </structure>
+        <structure>
+            <property name="name">tipoEnvio_535_expr_</property>
+            <property name="value">dataSetRow["TIPO_ENVIO"]</property>
+        </structure>
+        <structure>
+            <property name="name">dataFinal_420_5</property>
+            <property name="value">31/12/2009</property>
+        </structure>
+        <structure>
+            <property name="name">dataFinal_420_type_</property>
+            <property name="value">string</property>
+        </structure>
+        <structure>
+            <property name="name">dataInicial_419_6</property>
+            <property name="value">01/01/2008</property>
+        </structure>
+        <structure>
+            <property name="name">dataInicial_419_type_</property>
+            <property name="value">string</property>
+        </structure>
+        <structure>
+            <property name="name">destinatario_545_7</property>
+            <property name="value">27787</property>
+        </structure>
+        <structure>
+            <property name="name">destinatario_545_type_</property>
+            <property name="value">decimal</property>
+        </structure>
+        <structure>
+            <property name="name">destinatario_545_expr_</property>
+            <property name="value">dataSetRow["IDENTIDADE"]</property>
+        </structure>
+    </list-property>
+</report>

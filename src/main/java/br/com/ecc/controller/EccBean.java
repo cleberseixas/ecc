@@ -54,6 +54,8 @@ public class EccBean implements Serializable {
 
 	private boolean habilitaBotaoEncerrarEcc = true;
 
+	private boolean habilitaBotaoImprimirCapa = true;
+
 	private boolean habilitaBotaoImprimirConvites = true;
 
 	private boolean habilitaBotaoImprimirPreces = true;
@@ -237,6 +239,14 @@ public class EccBean implements Serializable {
 		this.habilitaBotaoEncerrarEcc = habilitaBotaoEncerrarEcc;
 	}
 
+	public boolean isHabilitaBotaoImprimirCapa() {
+		return habilitaBotaoImprimirCapa;
+	}
+
+	public void setHabilitaBotaoImprimirCapa(boolean habilitaBotaoImprimirCapa) {
+		this.habilitaBotaoImprimirCapa = habilitaBotaoImprimirCapa;
+	}
+
 	public boolean isHabilitaBotaoImprimirConvites() {
 		return habilitaBotaoImprimirConvites;
 	}
@@ -395,6 +405,7 @@ public class EccBean implements Serializable {
 
 		habilitaBotaoIncluiDirigentes = false;
 		habilitaBotaoDetalhesEcc = false;
+		habilitaBotaoImprimirCapa = false;
 		habilitaBotaoImprimirConvites = false;
 		habilitaBotaoImprimirPreces = false;
 		habilitaBotaoImprimirCasaisEncontristas = false;
@@ -413,6 +424,7 @@ public class EccBean implements Serializable {
 
 		habilitaBotaoExcluirEcc = true;
 		habilitaBotaoIncluiDirigentes = false;
+		habilitaBotaoImprimirCapa = false;
 		habilitaBotaoDetalhesEcc = false;
 		habilitaBotaoEncerrarEcc = true;
 		habilitaBotaoImprimirConvites = false;
@@ -610,6 +622,17 @@ public class EccBean implements Serializable {
 			listaUltimoEcc = eccService.filtraEccPorEccStatus(0L, statusEcc);
 		}
 	}
+
+	public void imprimirCapa() throws IOException {
+		try {
+
+			urlRelatorio = Util.retornaURLRelatorio()+"/rptCapa.rptdesign&ecc=" + ecc.getId();
+			System.out.println(urlRelatorio);
+		} catch (Exception ex) {
+			System.err.println("O arquivo não foi gerado corretamente!");
+		}
+	}
+
 
 	public void imprimirDirigentes() throws IOException {
 		try {
