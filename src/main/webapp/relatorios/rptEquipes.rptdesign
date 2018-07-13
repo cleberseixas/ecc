@@ -6836,6 +6836,18 @@ ORDER BY 11, 17, 18, 13]]></xml-property>
             <property name="marginTop">0pt</property>
             <property name="textAlign">center</property>
             <property name="contentType">auto</property>
+            <text-property name="content"><![CDATA[    ]]></text-property>
+        </text>
+        <text id="1742">
+            <property name="fontSize">12pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="borderBottomStyle">none</property>
+            <property name="borderLeftStyle">none</property>
+            <property name="borderRightStyle">none</property>
+            <property name="borderTopStyle">none</property>
+            <property name="marginTop">0pt</property>
+            <property name="textAlign">center</property>
+            <property name="contentType">auto</property>
             <text-property name="content"><![CDATA[EQUIPE DE SALA]]></text-property>
         </text>
         <extended-item extensionName="Crosstab" extensionVersion="3.7.0" id="996">
@@ -7081,6 +7093,18 @@ ORDER BY 11, 17, 18, 13]]></xml-property>
             </list-property>
         </extended-item>
         <text id="1120">
+            <property name="fontSize">12pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="borderBottomStyle">none</property>
+            <property name="borderLeftStyle">none</property>
+            <property name="borderRightStyle">none</property>
+            <property name="borderTopStyle">none</property>
+            <property name="marginTop">0pt</property>
+            <property name="textAlign">center</property>
+            <property name="contentType">auto</property>
+            <text-property name="content"><![CDATA[    ]]></text-property>
+        </text>
+        <text id="1741">
             <property name="fontSize">12pt</property>
             <property name="fontWeight">bold</property>
             <property name="borderBottomStyle">none</property>
@@ -7342,6 +7366,18 @@ ORDER BY 11, 17, 18, 13]]></xml-property>
             </list-property>
         </extended-item>
         <text id="1197">
+            <property name="fontSize">12pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="borderBottomStyle">none</property>
+            <property name="borderLeftStyle">none</property>
+            <property name="borderRightStyle">none</property>
+            <property name="borderTopStyle">none</property>
+            <property name="marginTop">0pt</property>
+            <property name="textAlign">center</property>
+            <property name="contentType">auto</property>
+            <text-property name="content"><![CDATA[    ]]></text-property>
+        </text>
+        <text id="1740">
             <property name="fontSize">12pt</property>
             <property name="fontWeight">bold</property>
             <property name="borderBottomStyle">none</property>

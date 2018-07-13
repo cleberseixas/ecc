@@ -8,7 +8,7 @@
 
 	<http access-denied-page="/publico/negado.xhtml">
 		
-		<intercept-url  pattern="/restrito/**" access="ROLE_USUARIO,ROLE_ADMINISTRADOR,ROLE_DIRIGENTE" />
+		<intercept-url  pattern="/restrito/**" access="ROLE_USUARIO,ROLE_ADMINISTRADOR,ROLE_DIRIGENTE,ROLE_SECRETARIA" />
 		<intercept-url pattern="/administrador/**" access="ROLE_ADMINISTRADOR"/>
 		<intercept-url pattern="/usuario/**" access="ROLE_USUARIO"/>
 		<intercept-url pattern="/dirigente/**" access="ROLE_DIRIGENTE, ROLE_ADMINISTRADOR, ROLE_SECRETARIA"/>

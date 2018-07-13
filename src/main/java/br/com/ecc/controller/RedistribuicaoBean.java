@@ -22,12 +22,10 @@ public class RedistribuicaoBean implements Serializable {
 	public String distribui() {
 		//pega o perfil do usuário logado e direciona para a página correta
 		String perfil = this.contextoBean.getUsuarioLogado().getPerfil();
-		if (perfil.equals("Dirigente"))
+		if (perfil.equals("Dirigente") || perfil.equals("Secretária"))
 			return "/dirigente/menuDirigente";
 		else if (perfil.equals("Administrador")) 
 			return "/administrador/menuAdministrador";
-//		else if (perfil.equals("Analista"))
-//			return "/analista/parecerAnalise";
 //		else if (perfil.equals("Usuário"))
 //			return "/usuario/solicitaParecer";
 //		else if (perfil.equals("Gestor"))
