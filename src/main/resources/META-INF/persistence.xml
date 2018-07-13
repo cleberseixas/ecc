@@ -21,9 +21,10 @@
 
 			<!-- Acesso servidor LOCAL -->
 			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost/ecc_bd" />
+
 			<!-- Acesso servidor BRAGA
-			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://179.155.225.37:5400/ecc_bd" />
- 			-->
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://iplocal.ddns.net:5400/ecc_bd" />
+			-->
 			<property name="javax.persistence.jdbc.user" value="postgres" />
 				<property name="javax.persistence.jdbc.password" value="postgres" />
 
