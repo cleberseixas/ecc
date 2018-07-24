@@ -409,8 +409,8 @@ FROM ECCS
                         <image id="1011">
                             <property name="height">835px</property>
                             <property name="width">741px</property>
-                            <property name="source">embed</property>
-                            <property name="imageName">capa.jpg</property>
+                            <property name="source">file</property>
+                            <expression name="uri" type="constant">http://iplocal.ddns.net:9970/ecc/javax.faces.resource/capa.jpg.xhtml?ln=imagen</expression>
                         </image>
                     </cell>
                 </row>
