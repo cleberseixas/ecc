@@ -460,6 +460,73 @@
 	  EC.ECC = ?
 ORDER BY EQ.ORDEM, FI.NOME_ELE]]></xml-property>
         </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="DSDirigenteNacional" id="901">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">tipo</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">tipo</text-property>
+                    <text-property name="heading">tipo</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">descricao</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">descricao</text-property>
+                    <text-property name="heading">descricao</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">ecc</property>
+                    <property name="paramName">ecc</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                    <property name="position">1</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">tipo</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">descricao</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="rowFetchLimit">0</property>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">tipo</property>
+                    <property name="nativeName">tipo</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">descricao</property>
+                    <property name="nativeName">descricao</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[	SELECT TIPO, DESCRICAO
+	FROM 
+	DIRIGENTES_NACIONAIS_ECCS
+	WHERE 
+	ECC = ?
+        ORDER BY ORDEM]]></xml-property>
+        </oda-data-set>
     </data-sets>
     <cubes>
         <tabular-cube name="Data Cube - DSEncontristas" id="630">
@@ -497,31 +564,59 @@ ORDER BY EQ.ORDEM, FI.NOME_ELE]]></xml-property>
         </style>
     </styles>
     <page-setup>
-        <simple-master-page name="Relatório de Encontristas" id="2">
-            <property name="type">a4</property>
+        <simple-master-page name="Relatório de Dirigentes" id="2">
+            <property name="type">custom</property>
             <property name="orientation">portrait</property>
             <property name="topMargin">0.5291666666666667cm</property>
             <property name="leftMargin">2cm</property>
             <property name="bottomMargin">0.5cm</property>
             <property name="rightMargin">0.5cm</property>
-            <property name="height">11in</property>
-            <property name="width">8.5in</property>
+            <property name="height">597mm</property>
+            <property name="width">210mm</property>
             <property name="showHeaderOnFirst">true</property>
-            <property name="headerHeight">0cm</property>
+            <property name="headerHeight">4%</property>
             <property name="footerHeight">1.5cm</property>
             <page-header>
                 <grid id="588">
-                    <property name="height">0.2708333333333333in</property>
-                    <property name="width">8.385416666666666in</property>
-                    <column id="589"/>
+                    <property name="height">0.9166666666666666in</property>
+                    <property name="width">7.1875in</property>
+                    <column id="589">
+                        <property name="width">18.25625cm</property>
+                    </column>
                     <row id="590">
-                        <property name="height">0.2708333333333333in</property>
+                        <property name="height">0.9166666666666666in</property>
                         <cell id="591">
-                            <text id="592">
+                            <text id="1096">
+                                <property name="fontSize">12pt</property>
+                                <property name="fontWeight">bold</property>
                                 <property name="marginTop">0pt</property>
-                                <property name="pageBreakAfter">always</property>
+                                <property name="textAlign">center</property>
                                 <property name="contentType">auto</property>
-                                <text-property name="content"><![CDATA[  ]]></text-property>
+                                <text-property name="content"><![CDATA[PARÓQUIA SÃO LUIZ GONZAGA]]></text-property>
+                            </text>
+                            <data id="1104">
+                                <property name="fontSize">12pt</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="textAlign">center</property>
+                                <property name="dataSet">DSDirigentes</property>
+                                <list-property name="boundDataColumns">
+                                    <structure>
+                                        <property name="name">numero</property>
+                                        <text-property name="displayName">DATA ENCONTRO</text-property>
+                                        <expression name="expression" type="javascript">dataSetRow["numero"]+ ' ENCONTRO DE CASAIS COM CRISTO - '+dataSetRow["inicio"]+', '+dataSetRow["meio"]+' E '+dataSetRow["fim"]+' DE '+dataSetRow["mes"]+' DE '+dataSetRow["ano"]</expression>
+                                        <property name="dataType">string</property>
+                                        <property name="allowExport">true</property>
+                                    </structure>
+                                </list-property>
+                                <property name="resultSetColumn">numero</property>
+                            </data>
+                            <text id="1100">
+                                <property name="fontSize">12pt</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="marginTop">0pt</property>
+                                <property name="textAlign">center</property>
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[E Q U I P E   D E   D I R I G E N T E   D O   E C C   N A   P A R Ó Q U I A]]></text-property>
                             </text>
                         </cell>
                     </row>
@@ -533,52 +628,60 @@ ORDER BY EQ.ORDEM, FI.NOME_ELE]]></xml-property>
         <grid id="791">
             <column id="792"/>
             <row id="793">
-                <cell id="794">
-                    <text id="201">
-                        <property name="fontSize">12pt</property>
-                        <property name="fontWeight">bold</property>
-                        <property name="marginTop">0pt</property>
-                        <property name="textAlign">center</property>
-                        <property name="contentType">auto</property>
-                        <text-property name="content"><![CDATA[PARÓQUIA SÃO LUIZ GONZAGA]]></text-property>
-                    </text>
-                </cell>
+                <cell id="794"/>
             </row>
             <row id="795">
                 <cell id="796">
-                    <data id="799">
-                        <property name="fontSize">12pt</property>
-                        <property name="fontWeight">bold</property>
-                        <property name="textAlign">center</property>
-                        <property name="dataSet">DSDirigentes</property>
+                    <table id="902">
+                        <property name="dataSet">DSDirigenteNacional</property>
                         <list-property name="boundDataColumns">
                             <structure>
-                                <property name="name">numero</property>
-                                <text-property name="displayName">DATA ENCONTRO</text-property>
-                                <expression name="expression" type="javascript">dataSetRow["numero"]+ ' ENCONTRO DE CASAIS COM CRISTO - '+dataSetRow["inicio"]+', '+dataSetRow["meio"]+' E '+dataSetRow["fim"]+' DE '+dataSetRow["mes"]+' DE '+dataSetRow["ano"]</expression>
+                                <property name="name">tipo</property>
+                                <text-property name="displayName">tipo</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["tipo"]</expression>
                                 <property name="dataType">string</property>
-                                <property name="allowExport">true</property>
+                            </structure>
+                            <structure>
+                                <property name="name">descricao</property>
+                                <text-property name="displayName">descricao</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["descricao"]</expression>
+                                <property name="dataType">string</property>
                             </structure>
                         </list-property>
-                        <property name="resultSetColumn">numero</property>
-                    </data>
-                    <text id="798">
-                        <property name="fontSize">11pt</property>
-                        <property name="fontWeight">bold</property>
-                        <property name="marginTop">0pt</property>
-                        <property name="paddingTop">1pt</property>
-                        <property name="textAlign">center</property>
-                        <property name="contentType">auto</property>
-                        <text-property name="content"><![CDATA[   ]]></text-property>
-                    </text>
-                    <text id="800">
-                        <property name="fontSize">12pt</property>
-                        <property name="fontWeight">bold</property>
-                        <property name="marginTop">0pt</property>
-                        <property name="textAlign">center</property>
-                        <property name="contentType">auto</property>
-                        <text-property name="content"><![CDATA[E Q U I P E   D E   D I R I G E N T E   D O   E C C   N A   P A R Ó Q U I A]]></text-property>
-                    </text>
+                        <column id="916"/>
+                        <header>
+                            <row id="903">
+                                <cell id="904"/>
+                            </row>
+                        </header>
+                        <detail>
+                            <row id="908">
+                                <cell id="909">
+                                    <data id="910">
+                                        <property name="fontWeight">bold</property>
+                                        <property name="textAlign">left</property>
+                                        <property name="resultSetColumn">tipo</property>
+                                    </data>
+                                    <data id="912">
+                                        <property name="resultSetColumn">descricao</property>
+                                    </data>
+                                    <text id="918">
+                                        <property name="fontFamily">serif</property>
+                                        <property name="fontSize">15pt</property>
+                                        <property name="textAlign">left</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[   ]]></text-property>
+                                    </text>
+                                </cell>
+                            </row>
+                        </detail>
+                        <footer>
+                            <row id="913">
+                                <property name="pageBreakAfter">always</property>
+                                <cell id="914"/>
+                            </row>
+                        </footer>
+                    </table>
                     <text id="801">
                         <property name="fontSize">11pt</property>
                         <property name="fontWeight">bold</property>
